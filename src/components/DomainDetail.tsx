@@ -21,15 +21,6 @@ export default function DomainDetail({ number }: { number: number }) {
 
   return (
     <section className="domain-split" data-domain={domain.number}>
-      <div className="domain-head">
-        <div>
-          <span className="kicker">{domain.kicker}</span>
-          <h2>{domain.name}</h2>
-          <p className="domain-orig">{domain.nameOrig}</p>
-        </div>
-        <span className="weight-badge">{domain.weight}</span>
-      </div>
-
       <div className="domain-split-body">
         <aside className="domain-sidebar">
           {domain.subsections.map((ss) => (
@@ -53,6 +44,15 @@ export default function DomainDetail({ number }: { number: number }) {
         </aside>
 
         <div className="domain-split-panel">
+          <div className="domain-head">
+            <div>
+              <span className="kicker">{domain.kicker}</span>
+              <h2>{domain.name}</h2>
+              <p className="domain-orig">{domain.nameOrig}</p>
+            </div>
+            <span className="weight-badge">{domain.weight}</span>
+          </div>
+
           {activeId ? <GlossaryEntryContent id={activeId} /> : <p>Este dominio no tiene bullets.</p>}
         </div>
       </div>

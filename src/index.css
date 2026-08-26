@@ -286,7 +286,7 @@
   section[data-domain="5"] { --dcolor: var(--d5); --dbg: var(--d5-bg); }
 
   /* Domain detail: sidebar (subsections/bullets) + right-hand explanation panel */
-  .domain-split { margin-top: 2.75rem; }
+  .domain-split { margin-top: calc(2.75rem + 60px); }
   .domain-split-body {
     display: flex;
     gap: 2rem;
@@ -294,14 +294,17 @@
     align-items: flex-start;
   }
   .domain-sidebar {
-    flex: 0 0 320px;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    position: sticky;
+    position: fixed;
     top: 60px;
-    max-height: calc(100vh - 60px);
+    left: 2rem;
+    width: 320px;
+    height: calc(100vh - 60px);
     overflow-y: auto;
+    overflow-anchor: none;
+    padding-top: 1.25rem;
     padding-right: 0.5rem;
     padding-bottom: 1.5rem;
   }
@@ -347,11 +350,12 @@
   .domain-split-panel {
     flex: 1;
     min-width: 0;
+    margin-left: calc(320px + 2rem);
   }
   .domain-split-panel .gloss-group { margin-top: 0; }
 
   /* Scope appendix */
-  section.scope { margin-top: 3.25rem; }
+  section.scope { margin-top: calc(3.25rem + 60px); }
   .scope-note {
     color: var(--ink-soft);
     font-size: 0.92rem;
@@ -397,8 +401,8 @@
   }
 
   /* Glossary */
-  section.glossary { margin-top: 3.25rem; }
-  .gloss-group { margin-top: 1.6rem; }
+  section.glossary { margin-top: calc(3.25rem + 60px); }
+  .gloss-group { margin-top: 1.6rem; scroll-margin-top: 80px; }
   .gloss-group-head {
     font-family: 'IBM Plex Mono', monospace;
     font-size: 0.78rem;
@@ -505,7 +509,7 @@
 
   /* Resources + footer */
   section.resources {
-    margin-top: 3.25rem;
+    margin-top: calc(3.25rem + 60px);
     padding-top: 1.75rem;
     border-top: 1px solid var(--border);
   }
@@ -541,13 +545,14 @@
 
   /* Quick-jump bar */
   .quickjump {
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     z-index: 5;
     display: flex;
     align-items: center;
     gap: 1.1rem;
-    margin: 0 -2rem 2rem;
     padding: 0.75rem 2rem;
     background: rgba(249,249,244,0.92);
     backdrop-filter: blur(4px);

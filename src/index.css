@@ -584,6 +584,26 @@
     font-weight: 600;
   }
 
+  .theme-toggle {
+    position: fixed;
+    top: 12px;
+    right: 20px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    padding: 0;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    color: var(--ink-soft);
+    cursor: pointer;
+    box-shadow: var(--shadow);
+  }
+  .theme-toggle:hover { color: var(--ink); border-color: var(--ink-faint); }
+
   /* Landing */
   .landing-hint {
     color: var(--ink-faint);

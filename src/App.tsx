@@ -5,10 +5,12 @@ import ServiceScopePage from './components/ServiceScopePage.tsx';
 import GlossaryPage from './components/GlossaryPage.tsx';
 import ResourcesPage from './components/ResourcesPage.tsx';
 import Footer from './components/Footer.tsx';
+import ThemeToggle from './components/ThemeToggle.tsx';
 
 export default function App() {
   return (
     <HashRouter>
+      <ThemeToggle />
       <div className="wrap">
         <Routes>
           <Route path="/" element={<Landing />} />

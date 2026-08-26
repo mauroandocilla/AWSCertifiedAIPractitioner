@@ -5,7 +5,7 @@ export default function Resources() {
       <section className="resources" id="resources">
         <span className="eyebrow">Fuentes y cómo seguir estudiando</span>
         <h2 style={{marginTop: '0.4rem', fontSize: '1.4rem'}}>Todo esto sí está documentado oficialmente</h2>
-        <p className="scope-note">Confirmado: la guía del examen AIF-C01 está completa y publicada por AWS, con los 5 dominios, sus 15 task statements, y las listas de servicios dentro/fuera de alcance. Este documento es un resumen fiel de esas páginas; para la letra exacta o cambios futuros, estos son los originales:</p>
+        <p className="scope-note">Confirmado: la guía del examen AIF-C01 está completa y publicada por AWS, con los 5 dominios, sus 14 task statements, y las listas de servicios dentro/fuera de alcance. Este documento es un resumen fiel de esas páginas; para la letra exacta o cambios futuros, estos son los originales:</p>
 
         <div className="res-list">
           <div className="res-item"><a href="https://docs.aws.amazon.com/aws-certification/latest/ai-practitioner-01/ai-practitioner-01.html" target="_blank" rel="noopener">Guía oficial del examen (AIF-C01)</a><span className="desc">dominios, pesos, tipos de pregunta</span></div>

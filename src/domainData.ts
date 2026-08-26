@@ -84,7 +84,7 @@ export const domains: DomainData[] = [
             "glossId": "gloss-d1-t3-b3"
           },
           {
-            "text": "Identificar los servicios y funciones de AWS relevantes en cada etapa del pipeline de IA/ML (Amazon Bedrock, Amazon Q, Amazon Quick, Kiro, SageMaker AI).",
+            "text": "Identificar los servicios y funciones de AWS relevantes en cada etapa del pipeline de IA/ML (Amazon Bedrock, Amazon Quick, Kiro, SageMaker AI).",
             "glossId": "gloss-d1-t3-b4"
           },
           {
@@ -327,7 +327,7 @@ export const domains: DomainData[] = [
             "glossId": "gloss-d4-t1-b6"
           },
           {
-            "text": "Describir herramientas para detectar y monitorear el sesgo, la confiabilidad y la veracidad (análisis de calidad de etiquetas, auditorías humanas, análisis de subgrupos, Amazon Augmented AI / A2I).",
+            "text": "Describir herramientas para detectar y monitorear el sesgo, la confiabilidad y la veracidad (análisis de calidad de etiquetas, auditorías humanas, análisis de subgrupos).",
             "glossId": "gloss-d4-t1-b7"
           }
         ]
@@ -394,7 +394,7 @@ export const domains: DomainData[] = [
         "title": "Reconocer regulaciones de gobernanza y cumplimiento para sistemas de IA",
         "bullets": [
           {
-            "text": "Identificar los servicios y funciones de AWS que ayudan con la gobernanza y el cumplimiento normativo (AWS Config, Amazon Inspector, AWS Audit Manager, AWS Artifact, AWS CloudTrail, AWS Trusted Advisor).",
+            "text": "Identificar los servicios y funciones de AWS que ayudan con la gobernanza y el cumplimiento normativo (AWS Config, Amazon Inspector, AWS Artifact, AWS CloudTrail, AWS Trusted Advisor).",
             "glossId": "gloss-d5-t2-b1"
           },
           {

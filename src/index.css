@@ -286,7 +286,7 @@
   section[data-domain="5"] { --dcolor: var(--d5); --dbg: var(--d5-bg); }
 
   /* Domain detail: sidebar (subsections/bullets) + right-hand explanation panel */
-  .domain-split { margin-top: calc(2.75rem + 60px); }
+  .domain-split { margin-top: 2.75rem; }
   .domain-split-body {
     display: flex;
     gap: 2rem;
@@ -355,7 +355,7 @@
   .domain-split-panel .gloss-group { margin-top: 0; }
 
   /* Scope appendix */
-  section.scope { margin-top: calc(3.25rem + 60px); }
+  section.scope { margin-top: 3.25rem; }
   .scope-note {
     color: var(--ink-soft);
     font-size: 0.92rem;
@@ -401,7 +401,7 @@
   }
 
   /* Glossary */
-  section.glossary { margin-top: calc(3.25rem + 60px); }
+  section.glossary { margin-top: 3.25rem; }
   .gloss-group { margin-top: 1.6rem; scroll-margin-top: 80px; }
   .gloss-group-head {
     font-family: 'IBM Plex Mono', monospace;
@@ -509,7 +509,7 @@
 
   /* Resources + footer */
   section.resources {
-    margin-top: calc(3.25rem + 60px);
+    margin-top: 3.25rem;
     padding-top: 1.75rem;
     border-top: 1px solid var(--border);
   }

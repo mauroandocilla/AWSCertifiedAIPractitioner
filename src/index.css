@@ -89,7 +89,7 @@
   .wrap {
     width: 100%;
     margin: 0 auto;
-    padding: 3rem 2rem 5rem;
+    padding: 3rem 2rem 1.5rem;
   }
 
   code, .mono { font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, monospace; }

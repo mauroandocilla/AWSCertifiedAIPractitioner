@@ -350,6 +350,7 @@
   .domain-split-panel {
     flex: 1;
     min-width: 0;
+    min-height: calc(100vh - 60px);
     margin-left: calc(320px + 2rem);
   }
   .domain-split-panel .gloss-group { margin-top: 0; }

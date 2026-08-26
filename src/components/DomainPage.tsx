@@ -1,25 +1,14 @@
-import type { ComponentType } from 'react';
 import { useParams } from 'react-router-dom';
 import QuickJumpBar from './QuickJumpBar.tsx';
-import Domain1 from './Domain1.tsx';
-import Domain2 from './Domain2.tsx';
-import Domain3 from './Domain3.tsx';
-import Domain4 from './Domain4.tsx';
-import Domain5 from './Domain5.tsx';
-
-const DOMAIN_COMPONENTS: Record<string, ComponentType> = {
-  '1': Domain1,
-  '2': Domain2,
-  '3': Domain3,
-  '4': Domain4,
-  '5': Domain5,
-};
+import DomainDetail from './DomainDetail.tsx';
+import { domainByNumber } from '../domainData.ts';
 
 export default function DomainPage() {
   const { n } = useParams<{ n: string }>();
-  const DomainComponent = (n && DOMAIN_COMPONENTS[n]) || null;
+  const number = Number(n);
+  const domain = domainByNumber[number];
 
-  if (!DomainComponent) {
+  if (!domain) {
     return (
       <>
         <QuickJumpBar current="" />
@@ -30,8 +19,8 @@ export default function DomainPage() {
 
   return (
     <>
-      <QuickJumpBar current={`d${n}`} />
-      <DomainComponent />
+      <QuickJumpBar current={`d${number}`} />
+      <DomainDetail number={number} />
     </>
   );
 }

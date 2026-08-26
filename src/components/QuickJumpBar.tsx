@@ -9,6 +9,7 @@ const ITEMS = [
   { key: 'servicios', label: 'Servicios', to: '/servicios' },
   { key: 'glosario', label: 'Glosario', to: '/glosario' },
   { key: 'estudiar', label: 'Cómo estudiarlo', to: '/como-estudiarlo' },
+  { key: 'formato', label: 'Formato del examen', to: '/formato-examen' },
 ];
 
 export default function QuickJumpBar({ current }: { current: string }) {

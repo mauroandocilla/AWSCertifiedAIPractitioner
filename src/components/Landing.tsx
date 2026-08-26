@@ -49,6 +49,12 @@ export default function Landing() {
           <div className="landing-card-name">Cómo estudiarlo</div>
           <div className="landing-card-meta">fuentes oficiales y plan</div>
         </Link>
+
+        <Link to="/formato-examen" className="landing-card ref">
+          <div className="landing-card-top"><span className="mono">GUÍA</span></div>
+          <div className="landing-card-name">Formato del examen</div>
+          <div className="landing-card-meta">tipos de pregunta y estrategia de puntaje</div>
+        </Link>
       </div>
     </>
   );

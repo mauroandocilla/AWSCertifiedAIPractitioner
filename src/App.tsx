@@ -4,6 +4,7 @@ import DomainPage from './components/DomainPage.tsx';
 import ServiceScopePage from './components/ServiceScopePage.tsx';
 import GlossaryPage from './components/GlossaryPage.tsx';
 import ResourcesPage from './components/ResourcesPage.tsx';
+import ExamFormatPage from './components/ExamFormatPage.tsx';
 import Footer from './components/Footer.tsx';
 import ThemeToggle from './components/ThemeToggle.tsx';
 
@@ -18,6 +19,7 @@ export default function App() {
           <Route path="/servicios" element={<ServiceScopePage />} />
           <Route path="/glosario" element={<GlossaryPage />} />
           <Route path="/como-estudiarlo" element={<ResourcesPage />} />
+          <Route path="/formato-examen" element={<ExamFormatPage />} />
         </Routes>
         <Footer />
       </div>

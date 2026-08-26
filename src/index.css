@@ -561,6 +561,7 @@
     gap: 0.4rem;
     font-size: 0.85rem;
     color: var(--accent);
+    text-decoration: none;
     flex: none;
   }
   .quickjump-pills {
@@ -571,6 +572,7 @@
   .quickjump-pill {
     font-size: 0.78rem;
     color: var(--ink-soft);
+    text-decoration: none;
     padding: 0.35rem 0.7rem;
     border-radius: 999px;
   }

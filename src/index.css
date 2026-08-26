@@ -524,8 +524,8 @@
   .res-item span.desc { color: var(--ink-faint); font-size: 0.84rem; }
 
   footer {
-    margin-top: 3rem;
-    padding-top: 1.5rem;
+    margin-top: 1.5rem;
+    padding-top: 0.85rem;
     border-top: 1px solid var(--border);
     color: var(--ink-faint);
     font-size: 0.8rem;

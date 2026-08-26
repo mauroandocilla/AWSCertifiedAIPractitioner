@@ -294,19 +294,10 @@
     align-items: flex-start;
   }
   .domain-sidebar {
+    flex: 0 0 320px;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    position: fixed;
-    top: 60px;
-    left: 2rem;
-    width: 320px;
-    height: calc(100vh - 60px);
-    overflow-y: auto;
-    overflow-anchor: none;
-    padding-top: 1.25rem;
-    padding-right: 0.5rem;
-    padding-bottom: 1.5rem;
   }
   .ds-subtitle {
     font-family: 'IBM Plex Sans', sans-serif;
@@ -350,8 +341,6 @@
   .domain-split-panel {
     flex: 1;
     min-width: 0;
-    min-height: calc(100vh - 60px);
-    margin-left: calc(320px + 2rem);
   }
   .domain-split-panel .gloss-group { margin-top: 0; }
 
@@ -539,9 +528,6 @@
     justify-content: space-between;
     gap: 0.5rem;
   }
-  /* On domain pages the sidebar is fixed and can sit taller than the
-     panel's content, so keep the footer clear of its column. */
-  .domain-split + footer { margin-left: calc(320px + 2rem); }
 
   @media (min-width: 640px) {
     .scope-grid { grid-template-columns: 1fr 1fr; }

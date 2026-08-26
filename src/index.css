@@ -299,8 +299,8 @@
     flex-direction: column;
     gap: 1.5rem;
     position: sticky;
-    top: 60px;
-    max-height: calc(100vh - 60px);
+    top: 92px;
+    max-height: calc(100vh - 92px);
     overflow-y: auto;
     padding-right: 0.5rem;
     padding-bottom: 1.5rem;

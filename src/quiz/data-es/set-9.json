@@ -1,7 +1,7 @@
 {
   "setNumber": 9,
   "sourceFile": "Practice_Set_9.html",
-  "questionCount": 57,
+  "questionCount": 54,
   "questions": [
     {
       "id": "9-1",
@@ -127,31 +127,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>Soporte multilingüe</p>\n\t\t\t\t\t\t<p>El soporte multilingüe se refiere a la capacidad del modelo para entender, procesar y generar respuestas en múltiples idiomas. Cuando desarrollas un chatbot multilingüe, es crucial elegir un modelo que soporte una amplia gama de idiomas. Esto asegura que el chatbot pueda interactuar sin problemas con usuarios de diferentes orígenes lingüísticos. Los modelos multilingües, como aquellos basados en transformers (por ejemplo, BERT, GPT), están pre-entrenados en conjuntos de datos diversos en muchos idiomas, permitiendo que el chatbot cambie entre idiomas sin dificultad. Además, un buen soporte multilingüe minimiza la necesidad de desarrollar modelos separados para cada idioma, ahorrando tiempo y recursos. Seleccionar un modelo sin capacidades multilingües adecuadas podría resultar en experiencias de usuario pobres y requerir trabajo significativo adicional para soportar todos los idiomas necesarios para el chatbot.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>Costo del modelo</p>\n\t\t\t\t\t\t<p>Aunque el costo siempre es un factor en aplicaciones de IA, no es la consideración principal cuando se requiere soporte multilingüe. Un modelo más económico podría no ofrecer capacidades multilingües robustas.</p>\n\t\t\t\t\t\t<p>Latencia de inferencia</p>\n\t\t\t\t\t\t<p>La latencia es importante, pero no es el factor más crítico cuando el enfoque es el soporte multilingüe. Un modelo más rápido sin flexibilidad de idiomas no cumplirá con el requisito principal de la aplicación.</p>\n\t\t\t\t\t\t<p>Complejidad del modelo</p>\n\t\t\t\t\t\t<p>La complejidad del modelo se refiere a lo sofisticada que es la arquitectura subyacente. Si bien afecta el rendimiento, es menos relevante que la capacidad multilingüe para este caso de uso.</p>"
-    },
-    {
-      "id": "9-6",
-      "number": 6,
-      "text": "Sos responsable de asegurar la infraestructura de un sistema de IA que utiliza instancias de Amazon EC2. Para prevenir acceso no autorizado a estas instancias y proteger la infraestructura en general, ¿cuál es la mejor práctica de seguridad que deberías implementar?",
-      "options": [
-        {
-          "text": "Almacenar claves de encriptación en texto plano en la instancia EC2",
-          "correct": false
-        },
-        {
-          "text": "Usar security groups públicamente accesibles para todas las instancias EC2",
-          "correct": false
-        },
-        {
-          "text": "Deshabilitar el logging para reducir la carga del sistema",
-          "correct": false
-        },
-        {
-          "text": "Usar políticas IAM para restringir el acceso de los usuarios a las instancias EC2",
-          "correct": true
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>Usar políticas IAM para restringir el acceso de los usuarios a las instancias EC2</p>\n\t\t\t\t\t\t<p>Utilizar políticas de AWS Identity and Access Management (IAM) para restringir el acceso de los usuarios a instancias EC2 es una práctica de seguridad fundamental. IAM te permite definir quién tiene acceso a las instancias EC2 y qué acciones puede realizar. Al crear políticas específicas y asignarlas a usuarios o roles, garantizas que solo el personal autorizado pueda acceder y administrar las instancias, siguiendo el principio de menor privilegio. Esto minimiza el riesgo de acceso no autorizado y ayuda a proteger la infraestructura.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>Almacenar claves de encriptación en texto plano en la instancia EC2</p>\n\t\t\t\t\t\t<p>Almacenar claves de encriptación en texto plano es altamente inseguro y debe evitarse. Las claves deben guardarse de forma segura utilizando servicios como AWS KMS.</p>\n\t\t\t\t\t\t<p>Usar security groups públicamente accesibles para todas las instancias EC2</p>\n\t\t\t\t\t\t<p>Los security groups públicamente accesibles exponen las instancias EC2 a internet, aumentando el riesgo de acceso no autorizado. Lo mejor es limitar el acceso solo a direcciones IP de confianza.</p>\n\t\t\t\t\t\t<p>Deshabilitar el logging para reducir la carga del sistema</p>\n\t\t\t\t\t\t<p>Deshabilitar el logging no es una práctica de seguridad recomendada, ya que los logs proporcionan información valiosa para monitorear y resolver posibles incidentes de seguridad.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html</a>\n\t\t\t\t\t\t</p>"
     },
     {
       "id": "9-7",
@@ -962,31 +937,6 @@
       "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>Ofreciendo servicios completamente administrados con modelos pre-entrenados y sin necesidad de experiencia en machine learning.</p>\n\t\t\t\t\t\t<p>Los servicios de IA generativa de AWS, como Amazon Bedrock, proporcionan modelos pre-entrenados que pueden ajustarse fácilmente para casos de uso específicos sin requerir experiencia profunda en machine learning. Estos servicios ofrecen infraestructura completamente administrada, permitiendo a los desarrolladores enfocarse en su aplicación en lugar de las complejidades de construir y entrenar modelos desde cero. Esto reduce significativamente la barrera de entrada para equipos pequeños o startups, facilitando el despliegue de soluciones de IA generativa.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>Proporcionando infraestructura pre-construida para desplegar aplicaciones en múltiples regiones.</p>\n\t\t\t\t\t\t<p>Si bien AWS ofrece infraestructura para desplegar aplicaciones globalmente, esta característica no aborda específicamente la necesidad de simplificar el desarrollo de modelos de IA generativa.</p>\n\t\t\t\t\t\t<p>Reduciendo costos a través de contratos de uso a largo plazo.</p>\n\t\t\t\t\t\t<p>Reducir costos mediante contratos a largo plazo está relacionado con la estrategia de precios pero no ayuda directamente con los desafíos de desarrollar o administrar modelos de IA generativa para equipos sin experiencia.</p>\n\t\t\t\t\t\t<p>Ofreciendo control total sobre despliegues on-premises para los modelos de IA.</p>\n\t\t\t\t\t\t<p>AWS se enfoca en soluciones basadas en la nube, y ofrecer control sobre despliegues on-premises no reduce directamente la barrera de entrada para equipos que buscan usar servicios administrados para IA generativa.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://docs.aws.amazon.com/bedrock\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/bedrock</a>\n\t\t\t\t\t\t</p>"
     },
     {
-      "id": "9-39",
-      "number": 39,
-      "text": "Una empresa global de comercio electrónico está desarrollando un sistema de IA para detección de fraude y debe garantizar que el sistema cumpla con regulaciones internacionales. ¿Cuál marco de cumplimiento sería más adecuado para que la organización lo adopte y asegure que su sistema mantiene la integridad de datos y la confianza del cliente?",
-      "options": [
-        {
-          "text": "PCI DSS",
-          "correct": false
-        },
-        {
-          "text": "ISO 14001",
-          "correct": false
-        },
-        {
-          "text": "ISO 9001",
-          "correct": false
-        },
-        {
-          "text": "SOC 2",
-          "correct": true
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>SOC 2</p>\n\t\t\t\t\t\t<p>SOC 2 (System and Organization Controls) es un marco ampliamente reconocido para garantizar la seguridad, disponibilidad, integridad del procesamiento, confidencialidad y privacidad de los datos del cliente. Es particularmente adecuado para sistemas de IA que manejan transacciones financieras sensibles, como la detección de fraude en comercio electrónico. El cumplimiento de SOC 2 ayuda a las organizaciones a generar confianza del cliente demostrando que sus sistemas son seguros y que los datos del cliente se están manejando con cuidado. Este marco también garantiza que las operaciones y servicios de la empresa cumplan con los requisitos regulatorios internacionales para la integridad de datos, lo que lo hace muy relevante para una empresa global de comercio electrónico.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>ISO 9001</p>\n\t\t\t\t\t\t<p>ISO 9001 es una norma de gestión de calidad que se enfoca en mejorar los procesos empresariales, pero no está diseñada específicamente para la integridad de datos o la seguridad de la información.</p>\n\t\t\t\t\t\t<p>PCI DSS</p>\n\t\t\t\t\t\t<p>PCI DSS (Payment Card Industry Data Security Standard) se aplica específicamente a organizaciones que manejan transacciones con tarjetas de crédito. No es un marco completo para la detección general de fraude en sistemas de IA.</p>\n\t\t\t\t\t\t<p>ISO 14001</p>\n\t\t\t\t\t\t<p>ISO 14001 se enfoca en sistemas de gestión ambiental y no es relevante para la seguridad de datos o la detección de fraude en un sistema de IA de comercio electrónico.</p>"
-    },
-    {
       "id": "9-40",
       "number": 40,
       "text": "Estás desarrollando un sistema de aprobación de préstamos impulsado por IA. Tu equipo está preocupado de que el modelo podría favorecer inadecuadamente a solicitantes de ciertas regiones basándose en datos históricos de préstamos. ¿Cuál es el principio de IA responsable que deberías considerar abordar para garantizar equidad en el proceso de aprobación de préstamos?",
@@ -1410,31 +1360,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>Pre-training</p>\n\t\t\t\t\t\t<p>Pre-training hace referencia a la etapa inicial del entrenamiento de un modelo donde se entrena desde cero con un corpus grande de datos de texto para aprender patrones generales del lenguaje, como gramática, vocabulario y estructuras comunes. En esta etapa, el modelo adquiere conocimiento amplio sobre el idioma, que luego puede ajustarse para tareas específicas. Pre-training permite que el modelo desarrolle habilidades fundamentales que se pueden adaptar a diferentes dominios o aplicaciones, lo que lo convierte en un componente clave en el desarrollo de foundation models como GPT, BERT y otros. Después del pre-training, el modelo se puede refinar aún más usando conjuntos de datos más pequeños específicos de la tarea para adaptar su desempeño a casos de uso particulares.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>Few-shot learning</p>\n\t\t\t\t\t\t<p>Few-shot learning implica entrenar un modelo con un número limitado de ejemplos para una tarea específica. No se utiliza para la etapa de aprendizaje inicial amplio de un modelo.</p>\n\t\t\t\t\t\t<p>Transfer learning</p>\n\t\t\t\t\t\t<p>Transfer learning implica aplicar conocimiento adquirido de una tarea a otra, típicamente usando un modelo pre-entrenado y ajustándolo para una tarea nueva y específica. Viene después del pre-training, no durante la fase de entrenamiento inicial.</p>\n\t\t\t\t\t\t<p>Fine-tuning</p>\n\t\t\t\t\t\t<p>Fine-tuning es el proceso de adaptar un modelo pre-entrenado a tareas específicas mediante su entrenamiento en conjuntos de datos específicos de la tarea. Esto ocurre después del pre-training, no durante la etapa inicial.</p>"
-    },
-    {
-      "id": "9-57",
-      "number": 57,
-      "text": "Tu equipo necesita analizar grandes volúmenes de datos para detectar fraude en transacciones financieras. La solución debe involucrar procesamiento distribuido de big data y también debe soportar frameworks como Apache Spark y Hadoop. ¿Cuál servicio de AWS recomendarías?",
-      "options": [
-        {
-          "text": "Amazon Redshift",
-          "correct": false
-        },
-        {
-          "text": "AWS Glue DataBrew",
-          "correct": false
-        },
-        {
-          "text": "Amazon EMR",
-          "correct": true
-        },
-        {
-          "text": "Amazon OpenSearch Service",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>Amazon EMR</p>\n\t\t\t\t\t\t<p>Amazon EMR (Elastic MapReduce) es el mejor servicio para procesar grandes volúmenes de datos utilizando frameworks distribuidos como Apache Spark y Hadoop. Está específicamente diseñado para análisis de big data, permitiendo a los equipos procesar rápida y económicamente cantidades masivas de datos para detectar fraude en transacciones financieras. EMR simplifica la configuración, administración y escalabilidad de frameworks de big data, y es ideal para casos de uso que requieren procesamiento en tiempo real y por lotes con análisis de datos distribuido.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>Amazon OpenSearch Service</p>\n\t\t\t\t\t\t<p>Amazon OpenSearch Service se utiliza para cargas de trabajo de búsqueda y análisis, pero no está diseñado para procesamiento distribuido de big data con frameworks como Spark o Hadoop.</p>\n\t\t\t\t\t\t<p>Amazon Redshift</p>\n\t\t\t\t\t\t<p>Amazon Redshift es una solución de data warehousing que permite consultar grandes volúmenes de datos, pero no soporta nativamente frameworks distribuidos como Spark o Hadoop para procesamiento de big data en tiempo real.</p>\n\t\t\t\t\t\t<p>AWS Glue DataBrew</p>\n\t\t\t\t\t\t<p>AWS Glue DataBrew es una herramienta de preparación de datos que ayuda a limpiar y transformar datos, pero no soporta procesamiento distribuido a gran escala como lo hace EMR con Spark y Hadoop.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://aws.amazon.com/emr\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/emr</a>\n\t\t\t\t\t\t</p>"
     }
   ]
 }

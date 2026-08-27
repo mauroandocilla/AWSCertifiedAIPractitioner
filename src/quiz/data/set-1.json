@@ -1,7 +1,7 @@
 {
   "setNumber": 1,
   "sourceFile": "Practice_Set_1.html",
-  "questionCount": 54,
+  "questionCount": 44,
   "questions": [
     {
       "id": "1-1",
@@ -204,31 +204,6 @@
       "explanationHtml": "<p>The curse of dimensionality refers to the phenomenon where high-dimensional spaces complicate data analysis and model performance.</p>"
     },
     {
-      "id": "1-9",
-      "number": 9,
-      "text": "How does AWS support responsible AI through education?",
-      "options": [
-        {
-          "text": "By offering comprehensive training on bias mitigation, privacy, and explainability",
-          "correct": true
-        },
-        {
-          "text": "By providing only technical training",
-          "correct": false
-        },
-        {
-          "text": "By limiting access to AI technologies",
-          "correct": false
-        },
-        {
-          "text": "By avoiding public engagement",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>AWS offers comprehensive training on bias mitigation, privacy, and explainability to support responsible AI.</p>"
-    },
-    {
       "id": "1-10",
       "number": 10,
       "text": "Which practice helps optimize the performance of foundation models in Amazon Bedrock?",
@@ -277,31 +252,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>AWS addresses the societal impact of AI by prioritizing fairness, privacy, and safety.</p>"
-    },
-    {
-      "id": "1-12",
-      "number": 12,
-      "text": "How does Amazon SageMaker Feature Store improve generative AI development?",
-      "options": [
-        {
-          "text": "By automating model deployment",
-          "correct": false
-        },
-        {
-          "text": "By reducing model complexity",
-          "correct": false
-        },
-        {
-          "text": "By providing a centralized repository for managing features",
-          "correct": true
-        },
-        {
-          "text": "By enhancing data encryption",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>SageMaker Feature Store provides a centralized repository for managing features, aiding in efficient model development.</p>"
     },
     {
       "id": "1-13",
@@ -404,31 +354,6 @@
       "explanationHtml": "<p>Ensemble learning refers to combining multiple models to improve predictive performance.</p>"
     },
     {
-      "id": "1-17",
-      "number": 17,
-      "text": "How can administrators control the behavior of Amazon Q Business?",
-      "options": [
-        {
-          "text": "By setting up IP restrictions",
-          "correct": false
-        },
-        {
-          "text": "By configuring guardrails and keywords",
-          "correct": true
-        },
-        {
-          "text": "By disabling the service for certain users",
-          "correct": false
-        },
-        {
-          "text": "By setting up separate networks",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>\n\t\t\t\t\t\t\t<span>Guardrails and keywords are powerful tools that allow administrators to define the boundaries of Amazon Q Business’s responses, ensuring that it stays within the desired parameters.</span><span>By carefully crafting these guidelines, administrators can control the topics Amazon Q Business discusses, the tone it adopts, and even the specific information it shares.</span> This granular control is essential for maintaining brand consistency, protecting sensitive information, and ensuring that Amazon Q Business aligns with organizational goals.\n\t\t\t\t\t\t</p>"
-    },
-    {
       "id": "1-18",
       "number": 18,
       "text": "Which method is commonly used to handle imbalanced datasets?",
@@ -452,31 +377,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>\n\t\t\t\t\t\t\t<b><span>Random over-sampling of the minority class</span></b><span> is a commonly used technique to handle imbalanced datasets.</span><span>&nbsp;</span>Here’s how it works:\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ol>\n\t\t\t\t\t\t\t<li><b>Identify the minority class:</b> Determine the class with fewer samples.</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b><span>Randomly sample:</span></b><span> Randomly select samples from the minority class with replacement and add them to the training dataset.</span><span> &nbsp;</span>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li><b>Balance the dataset:</b> Repeat the sampling process until the number of samples in the minority class is equal to or close to the number of samples in the majority class.</li>\n\t\t\t\t\t\t</ol>\n\t\t\t\t\t\t<p><span>This technique helps to balance the dataset and prevent the model from being biased towards the majority class.</span><span>&nbsp;</span>Other techniques for handling imbalanced datasets include:</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b><span>Undersampling the majority class:</span></b><span> Randomly removing samples from the majority class.</span><span> &nbsp;</span>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b><span>Using a combination of oversampling and undersampling techniques.</span></b><span>&nbsp;</span>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b><span>Using advanced techniques like SMOTE (Synthetic Minority Over-sampling Technique).</span></b><span>&nbsp; &nbsp;</span><b>Adjusting the class weights in the model.</b>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>The best technique to use depends on the specific dataset and the problem at hand. It’s important to experiment with different techniques and evaluate their performance using appropriate metrics like F1-score, precision, and recall.</p>"
-    },
-    {
-      "id": "1-19",
-      "number": 19,
-      "text": "What is the role of Amazon Q Apps in Amazon Q Business?",
-      "options": [
-        {
-          "text": "To provide hardware configurations",
-          "correct": false
-        },
-        {
-          "text": "To monitor application performance",
-          "correct": false
-        },
-        {
-          "text": "To create and share generative AI-powered apps",
-          "correct": true
-        },
-        {
-          "text": "To develop new AWS services",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>The role of Amazon Q Apps in Amazon Q Business is:</p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>To create and share generative AI-powered apps</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<span>Amazon Q Apps empowers employees to easily create and share custom generative AI applications within their organization.</span>\n\t\t\t\t\t\t\t<span>These apps can automate tasks, improve workflows, and boost overall productivity.</span><span> &nbsp;</span>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p>Here’s a breakdown of how Q Apps achieve this:</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b><span>Simplified App Creation:</span></b><span> Employees can describe the desired app functionality in natural language, and Q Apps leverages AI to generate the application based on their requirements.</span><span>&nbsp;</span>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b>No-Code/Low-Code Approach:</b>\n\t\t\t\t\t\t\t\t<span>Q Apps minimizes the need for extensive coding knowledge, making it accessible to a broader range of employees.</span><span>&nbsp;</span>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b><span>Enterprise Focus:</span></b><span> Q Apps are built with enterprise security and compliance in mind, ensuring that sensitive data remains protected.</span>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b><span>Shared App Library:</span></b><span> Created apps can be shared within the organization, allowing other employees to benefit from and reuse these custom applications.</span><span> &nbsp;</span>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<span>By enabling employees to easily create and share AI-powered apps, Amazon Q Apps aims to democratize access to generative AI technology and drive innovation within businesses.</span>\n\t\t\t\t\t\t</p>"
     },
     {
       "id": "1-20",
@@ -627,31 +527,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p><b>bedrock-runtime</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>The <b><code>bedrock-runtime</code> API</b> is the correct Amazon Bedrock API used for <b>making inference requests</b>. </li>\n\t\t\t\t\t\t\t<li>It allows developers to send prompts to foundation models hosted on Bedrock and receive responses.</li>\n\t\t\t\t\t\t\t<li>This API is specifically designed for inference workloads, such as text generation, summarization, or question answering.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p><b>bedrock-agent-runtime</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>This API is used for <b>running Bedrock Agents</b>, which orchestrate tasks and workflows using foundation models.</li>\n\t\t\t\t\t\t\t<li>It is not intended for direct inference requests to models.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>bedrock</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>This is not a valid API name.</li>\n\t\t\t\t\t\t\t<li>It may refer to the overall service (Amazon Bedrock), but it does not represent the specific API used for inference.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>bedrock-agent</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>This API is related to <b>creating and managing Bedrock Agents</b>, not for inference requests.</li>\n\t\t\t\t\t\t\t<li>Agents extend model capabilities but are not the direct interface for inference.</li>\n\t\t\t\t\t\t</ul>"
-    },
-    {
-      "id": "1-26",
-      "number": 26,
-      "text": "Which AWS service can help with the secure integration of Bedrock into an enterprise system?",
-      "options": [
-        {
-          "text": "Amazon CloudFront",
-          "correct": false
-        },
-        {
-          "text": "AWS Lambda",
-          "correct": false
-        },
-        {
-          "text": "Amazon S3",
-          "correct": false
-        },
-        {
-          "text": "AWS IAM Identity Center",
-          "correct": true
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p><b>AWS IAM Identity Center</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Correct because <b>IAM Identity Center</b> (formerly AWS SSO) provides <b>centralized identity and access management</b>.</li>\n\t\t\t\t\t\t\t<li>It ensures secure integration of <b>Amazon Bedrock</b> into enterprise systems by managing authentication, authorization, and role‑based access.</li>\n\t\t\t\t\t\t\t<li>This aligns with AWS best practices for secure integration, especially when connecting enterprise users and applications to Bedrock.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p><b>Amazon CloudFront</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because CloudFront is a <b>content delivery network (CDN)</b> used for caching and distributing content globally.</li>\n\t\t\t\t\t\t\t<li>It does not provide identity or access management for secure integration with Bedrock.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>AWS Lambda</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because Lambda is a <b>serverless compute service</b> used to run code in response to events.</li>\n\t\t\t\t\t\t\t<li>While Lambda can orchestrate workflows with Bedrock, it does not directly provide secure integration or identity management.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>Amazon S3</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because S3 is a <b>storage service</b> for objects and data.</li>\n\t\t\t\t\t\t\t<li>It can store inputs/outputs for Bedrock models but does not handle secure integration or access control.</li>\n\t\t\t\t\t\t</ul>"
     },
     {
       "id": "1-27",
@@ -827,31 +702,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>The Amazon Bedrock console allows for testing agents.</p>"
-    },
-    {
-      "id": "1-34",
-      "number": 34,
-      "text": "How can Amazon Bedrock Studio help developers?",
-      "options": [
-        {
-          "text": "By providing hardware maintenance",
-          "correct": false
-        },
-        {
-          "text": "By managing financial transactions",
-          "correct": false
-        },
-        {
-          "text": "By monitoring network traffic",
-          "correct": false
-        },
-        {
-          "text": "By offering a rapid prototyping environment",
-          "correct": true
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>Bedrock Studio provides a rapid prototyping environment for AI applications.</p>"
     },
     {
       "id": "1-35",
@@ -1079,31 +929,6 @@
       "explanationHtml": "<p>Decision trees are commonly used for both regression and classification tasks.</p>"
     },
     {
-      "id": "1-44",
-      "number": 44,
-      "text": "What type of responses does Amazon Q Business generate?",
-      "options": [
-        {
-          "text": "Responses based on enterprise data and permissions",
-          "correct": true
-        },
-        {
-          "text": "General internet search results",
-          "correct": false
-        },
-        {
-          "text": "Randomized content",
-          "correct": false
-        },
-        {
-          "text": "Only predefined templates",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>Amazon Q Business generates responses based on enterprise data and user permissions.</p>"
-    },
-    {
       "id": "1-45",
       "number": 45,
       "text": "Which evaluation metric is suitable for imbalanced classification problems?",
@@ -1152,31 +977,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Amazon SageMaker Clarify helps evaluate and compare AI models for responsible use.</p>"
-    },
-    {
-      "id": "1-47",
-      "number": 47,
-      "text": "How can AWS Step Functions be used in generative AI development?",
-      "options": [
-        {
-          "text": "To manage data storage",
-          "correct": false
-        },
-        {
-          "text": "To orchestrate machine learning workflows",
-          "correct": true
-        },
-        {
-          "text": "To convert text to speech",
-          "correct": false
-        },
-        {
-          "text": "To automate real-time data streaming",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>AWS Step Functions orchestrate ML workflows, which is essential for complex generative AI applications.</p>"
     },
     {
       "id": "1-48",
@@ -1279,31 +1079,6 @@
       "explanationHtml": "<p>Bedrock creates a private, customized copy of the model for your data.</p>"
     },
     {
-      "id": "1-52",
-      "number": 52,
-      "text": "How does AWS Shield protect AI solutions?",
-      "options": [
-        {
-          "text": "By managing user authentication",
-          "correct": false
-        },
-        {
-          "text": "By increasing storage capacity",
-          "correct": false
-        },
-        {
-          "text": "By providing DDoS protection",
-          "correct": true
-        },
-        {
-          "text": "By monitoring API calls",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>AWS Shield provides DDoS protection for AI solutions.</p>"
-    },
-    {
       "id": "1-53",
       "number": 53,
       "text": "How does Amazon SageMaker JumpStart accelerate ML development?",
@@ -1327,31 +1102,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>SageMaker JumpStart accelerates ML development by providing access to pre-built models and solutions.</p>"
-    },
-    {
-      "id": "1-54",
-      "number": 54,
-      "text": "What is the function of AWS AI Service Cards?",
-      "options": [
-        {
-          "text": "To provide transparency about AI services",
-          "correct": true
-        },
-        {
-          "text": "To enhance data storage",
-          "correct": false
-        },
-        {
-          "text": "To manage network security",
-          "correct": false
-        },
-        {
-          "text": "To automate data processing",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>AWS AI Service Cards provide transparency about the intended use, limitations</p>"
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "setNumber": 20,
   "sourceFile": "Practice_Set_20.html",
-  "questionCount": 54,
+  "questionCount": 40,
   "questions": [
     {
       "id": "20-1",
@@ -27,31 +27,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>In the deployment of AI models on AWS, maintaining robust security involves different strategies. Threat detection is a proactive security measure focusing on the real-time monitoring and identification of active threats to quickly respond to them. Vulnerability management, on the other hand, revolves around the processes of systematically identifying, evaluating, treating, and reporting on security vulnerabilities in a system. Both are crucial for a comprehensive security strategy but serve different purposes in protecting the AI environment. </p>"
-    },
-    {
-      "id": "20-2",
-      "number": 2,
-      "text": "In the context of AWS, how can Amazon VPC be utilized to ensure network isolation for machine learning workflows?",
-      "options": [
-        {
-          "text": "Using an Internet Gateway with strict routing rules to control traffic between models in different subnets.",
-          "correct": false
-        },
-        {
-          "text": "Creating a public subnet for each model to ensure they are accessible over the internet.",
-          "correct": false
-        },
-        {
-          "text": "Implementing private subnets and security groups to restrict access to machine learning models and associated data processing.",
-          "correct": true
-        },
-        {
-          "text": "Utilizing AWS Direct Connect to link external data sources directly to the VPC without going over the internet.",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>Amazon Virtual Private Cloud (VPC) is crucial for creating a secure and isolated network space on AWS. It enables users to define a virtual network similar to a traditional network that you‘d operate in your own data center, but with the benefits of using scalable infrastructure from AWS. For machine learning workflows, network isolation is typically achieved through the use of private subnets, which are not directly accessible over the internet, and security groups, which act as a virtual firewall to control inbound and outbound traffic at the instance level. This setup ensures that ML models and data are accessed only through defined and secure channels. </p>"
     },
     {
       "id": "20-3",
@@ -254,56 +229,6 @@
       "explanationHtml": "<p>Amazon SageMaker Clarify is specifically designed to help increase the fairness and transparency of machine learning models by providing tools to identify, measure, and mitigate bias in both pre-training data and post-training model predictions. This functionality is crucial for applications in sensitive domains like financial services, where biased decisions can have significant ethical and legal implications. Detailed documentation about SageMaker Clarify‘s features and capabilities can be found at the AWS official documentation site. </p>"
     },
     {
-      "id": "20-11",
-      "number": 11,
-      "text": "You are a data analyst tasked with creating an executive dashboard using Amazon QuickSight for your company‘s quarterly sales data. The goal is to provide a visual summary that highlights areas of financial growth and concern. Which of the following types of visualizations would be most effective for achieving this objective in Amazon QuickSight?",
-      "options": [
-        {
-          "text": "Utilize line charts to display the correlation between weather patterns and sales data",
-          "correct": false
-        },
-        {
-          "text": "Use KPI (Key Performance Indicator) widgets to highlight significant changes in revenue and profit margins",
-          "correct": true
-        },
-        {
-          "text": "Create a pie chart to represent the number of new vs. returning customers",
-          "correct": false
-        },
-        {
-          "text": "Implement scatter plots to show the distribution of customer feedback ratings",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>In the context of creating an executive dashboard in Amazon QuickSight, the use of appropriate visualization tools plays a critical role in effectively communicating key data insights. KPI widgets are particularly suited for dashboards aimed at executives due to their straightforward presentation of critical data, which helps in making quick yet informed decisions. Amazon QuickSight provides various visualization types that cater to different data presentation needs, and choosing the right type is crucial in achieving the objective of the dashboard. </p>"
-    },
-    {
-      "id": "20-12",
-      "number": 12,
-      "text": "A customer service company is planning to enhance its AI-powered chatbot. They are considering using Reinforcement Learning from Human Feedback (RLHF) versus Amazon Augmented AI (A2I). What are the primary differences between these approaches that could influence their decision?",
-      "options": [
-        {
-          "text": "RLHF requires substantial initial data inputs, whereas A2I functions effectively with minimal data.",
-          "correct": false
-        },
-        {
-          "text": "RLHF uses a model of continuously integrating human feedback to train AI, whereas A2I allows specific instances of AI predictions to be reviewed and annotated by human workers.",
-          "correct": true
-        },
-        {
-          "text": "RLHF automates data labeling for training datasets, while A2I is utilized mainly in unsupervised learning tasks.",
-          "correct": false
-        },
-        {
-          "text": "RLHF is exclusively for natural language processing tasks, while A2I is tailored for image and text analysis.",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>Reinforcement Learning from Human Feedback (RLHF) is a training methodology where AI models are refined continually through human feedback integration, making it suitable for dynamic environments where continuous improvement is desired. Amazon Augmented AI (A2I) provides a mechanism for humans to step in and make judgement calls on predictions made by AI models, ensuring accuracy and reliability for crucial decisions. These attributes make RLHF ideal for iterative learning, while A2I excels in precision and reliability through human oversight. </p>"
-    },
-    {
       "id": "20-13",
       "number": 13,
       "text": "The development team at a company needs to select the most appropriate large language model (LLM) for the company‘s flagship application. Given the vast array of LLMs available, the team is uncertain about the best choice. Additionally, since the application will be publicly accessible, the team has concerns about the possibility of generating harmful or inappropriate content. Which AWS solutions should the team implement to address both the selection of the appropriate model and the mitigation of harmful content generation? (Select two).",
@@ -358,56 +283,6 @@
       "explanationHtml": "<p>To mitigate overfitting in machine learning models, especially in sensitive fields like financial services, simplifying the model and utilizing methodologies like cross-validation is advisable. These strategies help the model to generalize better to new, unseen data rather than just performing well on the training dataset. This is particularly important in AWS machine learning solutions where scalable and efficient models are crucial for handling large volumes of data and making accurate predictions. </p>"
     },
     {
-      "id": "20-15",
-      "number": 15,
-      "text": "An organization utilizes both its on-premises data center and AWS Cloud services for their IT deployment. Which term best describes this type of infrastructure setup?",
-      "options": [
-        {
-          "text": "Cloud-native deployment",
-          "correct": false
-        },
-        {
-          "text": "Multi-cloud deployment",
-          "correct": false
-        },
-        {
-          "text": "Hybrid deployment",
-          "correct": true
-        },
-        {
-          "text": "Private deployment",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>A hybrid deployment is the integration of on-premises data centers with public cloud services. This type of implementation allows businesses to maintain a controlled, secure IT infrastructure for sensitive tasks or legacy applications, while also benefiting from the scalability, availability, and cost-effectiveness of the cloud for other parts of their operations.</p>"
-    },
-    {
-      "id": "20-16",
-      "number": 16,
-      "text": "An AI practitioner is orchestrating a machine learning model training workflow using AWS Step Functions. The workflow involves preprocessing data, training the model, and evaluating its performance. If the model‘s performance on the evaluation step does not meet the desired threshold, the model should be retrained with different parameters. Which AWS service integration should be used in the AWS Step Functions to conditionally decide if the model needs retraining?",
-      "options": [
-        {
-          "text": "Amazon EC2",
-          "correct": false
-        },
-        {
-          "text": "Amazon S3",
-          "correct": false
-        },
-        {
-          "text": "Amazon RDS",
-          "correct": false
-        },
-        {
-          "text": "AWS Lambda",
-          "correct": true
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>AWS Step Functions integrates with various AWS services to orchestrate workflows. When a workflow requires conditional logic based on the outcome of a process, such as deciding whether a machine learning model needs to be retrained based on performance metrics, AWS Lambda is an appropriate choice. AWS Lambda can execute custom code that assesses the model‘s performance and dictates the workflow‘s direction in AWS Step Functions, making it ideal for tasks that require conditional logic and custom computation. This integration allows practitioners to build complex ML orchestration workflows effectively. </p>"
-    },
-    {
       "id": "20-17",
       "number": 17,
       "text": "A media company wants to automatically categorize thousands of archived videos by detecting objects, scenes, and activities in each video. They need a highly scalable solution that can process videos stored in Amazon S3 and integrate easily with other AWS services for further processing and data handling. Which Amazon service is most suitable for this requirement?",
@@ -458,35 +333,6 @@
       "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Utilize pre-compiled, standardized benchmark datasets designed for bias testing.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p><b>Minimizes Administrative Effort:</b> Standardized benchmark datasets (like those used for fairness testing in LLMs, such as <b>StereoSet</b> or <b>CrowS-Pairs</b>) are readily available and require <b>minimal setup or manual processing</b> compared to generating new data or manually reviewing outputs.</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p><b>Reliable Insights:</b> These datasets are specifically <b>designed and validated by researchers</b> to systematically test for known biases (e.g., gender, racial, or religious bias) in a controlled and consistent manner. They provide <b>reproducible, objective metrics</b> for fairness and bias.</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p><b>Crucial for Continuous Evaluation:</b> They allow for quick, automated checks after model updates or during continuous integration/continuous deployment (CI/CD), ensuring bias hasn’t been re-introduced without heavy manual overhead.</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Employ randomly chosen samples from actual users‘ data for model outputs evaluation.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>While using real data is essential for general performance evaluation, <b>random sampling is inefficient</b> and unreliable for bias detection. Biased events or inputs often represent a <b>small, rare subset</b> of overall data. Relying on random samples would likely miss these subtle but critical cases, requiring much larger (and more administratively complex) sample sizes to achieve reliable insights.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Use human-monitored benchmarking by having reviewers manually assess the model outputs.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>This approach is highly effective for qualitative analysis but <b>maximizes administrative effort</b>. It requires significant time, budget, and resources to hire and train human reviewers for continuous assessment, directly contradicting the requirement to minimize administrative overhead. It is best used for targeted, periodic auditing, not for continuous, low-overhead evaluation.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Generate internal synthetic data tailored to test specific scenarios for bias.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>While synthetic data is valuable for filling data gaps, <b>generating high-quality, non-biased synthetic data</b> that systematically tests for bias is a <b>time-consuming and administratively heavy task</b>. It requires expert knowledge to avoid introducing new biases during the generation process, which undermines the goal of minimizing administrative effort. Standardized benchmarks (Option D) offer the same systematic testing capability without the development overhead. </p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>"
     },
     {
-      "id": "20-19",
-      "number": 19,
-      "text": "A software development company is exploring Amazon Q Developer to enhance its internal tools and workflows. The company is particularly interested in leveraging the platform‘s capabilities to automate code generation, improve task automation, and integrate machine learning features into its applications. To understand how Amazon Q Developer can support these objectives, the development team needs a clear overview of its core functionalities. Which of the following represents the capabilities of Amazon Q Developer? (Select two)",
-      "options": [
-        {
-          "text": "Understand and manage your cloud infrastructure on AWS",
-          "correct": true
-        },
-        {
-          "text": "Visualize your AWS account-specific cost-related data in Amazon Q Developer",
-          "correct": false
-        },
-        {
-          "text": "Get answers to your AWS account-specific cost-related questions using natural language",
-          "correct": true
-        },
-        {
-          "text": "Modify your AWS resources to achieve cost-optimization",
-          "correct": false
-        },
-        {
-          "text": "Deploy your cloud infrastructure on AWS",
-          "correct": false
-        }
-      ],
-      "multiSelect": true,
-      "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p>Amazon Q Developer is a generative AI–powered assistant designed specifically for software development and IT-related tasks. Its core capabilities, as defined by AWS for the AIF-C01 exam, center on code, troubleshooting, and using natural language to interact with your AWS environment.</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<b>Understand and manage your cloud infrastructure on AWS:</b>&nbsp;This is correct. A primary function of Amazon Q Developer is to help developers understand and interact with their AWS resources. You can use natural language to ask questions like, “Why is my Lambda function failing?” or “How do I configure my API Gateway?”, and it will provide explanations and code snippets to help you manage your infrastructure.\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>Get answers to your AWS account-specific cost-related questions using natural language:</b>&nbsp;This is correct. Amazon Q Developer can connect to your AWS environment (with proper permissions) to provide contextual, account-specific answers. This includes asking cost-related questions such as, “What is my largest cost service this month?” or “How can I reduce my S3 costs?”.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Visualize your AWS account-specific cost-related data in Amazon Q Developer</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p>This is incorrect. While Amazon Q Developer can <em>answer questions about costs</em>&nbsp;using natural language, it is not a data visualization tool. For visualizing cost data, you would use dedicated services like&nbsp;<b>AWS Cost Explorer</b>&nbsp;or the&nbsp;<b>AWS Billing &amp; Cost Management console</b>. Amazon Q provides insights and answers, not charts or graphs. </p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Modify your AWS resources to achieve cost-optimization</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p>This is incorrect and describes an action beyond the assistant’s scope. Amazon Q Developer can <em>suggest</em>&nbsp;code (e.g., a script to delete unused EBS volumes) or&nbsp;<em>recommend</em>&nbsp;best practices for cost optimization. However, it does not have the ability to directly modify or provision AWS resources. A developer must review, approve, and execute the code it provides.</p>\n\t\t\t\t\t\t<p><b>Deploy your cloud infrastructure on AWS</b></p>\n\t\t\t\t\t\t<p>This is incorrect. Deploying infrastructure is the function of AWS services like <b>AWS CloudFormation</b>,&nbsp;<b>AWS CodeDeploy</b>, or the&nbsp;<b>AWS Copilot CLI</b>. Amazon Q Developer can help you&nbsp;<em>write</em>&nbsp;Infrastructure as Code (IaC) templates (e.g., for CloudFormation) or troubleshoot deployment issues, but it does not perform the deployment action itself. </p>"
-    },
-    {
       "id": "20-20",
       "number": 20,
       "text": "A financial services company is setting up a highly compliant ML deployment pipeline using Amazon SageMaker. To meet strict audit requirements, they need a detailed, immutable record of all control plane actions (like creating a model) and all data plane actions (like reading training data) related to their ML resources. How can AWS CloudTrail be configured to ensure this comprehensive, auditable tracking?",
@@ -512,31 +358,6 @@
       "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Configure CloudTrail to log Data Events for the Amazon S3 buckets that store the ML training, testing, and model artifact data.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p><b>AWS CloudTrail</b> logs two main types of events: <b>Management Events</b> and <b>Data Events</b>.</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p><b>Management Events</b> (Control Plane): These log actions performed <i>on</i> AWS resources (e.g., <code>CreateTrainingJob</code>, <code>DeleteModel</code>, <code>UpdateEndpoint</code> in SageMaker). These are typically logged by default and cover the SageMaker API calls.</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p><b>Data Events</b> (Data Plane): These log actions performed <i>within</i> or <i>on</i> the data in a resource (e.g., <code>GetObject</code>, <code>PutObject</code> in Amazon S3).</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>For a financial company with <b>strict compliance/audit requirements</b>, auditing the <b>access to the ML data</b> is critical. You must be able to track who accessed the training data in S3, when they did it, and what they did. This level of auditing requires explicitly enabling <b>Data Events</b> for the relevant S3 buckets in CloudTrail, providing the most <b>comprehensive, auditable record</b> of the entire ML workflow. </p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p>Rely solely on CloudTrail’s default Management Events, which automatically include all API calls to Amazon SageMaker.</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>While CloudTrail’s default setting logs <b>Management Events</b> (all API calls to SageMaker, covering control plane activities), it <i>does not</i> include <b>Data Events</b> for S3 buckets by default. Without logging Data Events, the audit trail is incomplete, missing critical information about who accessed the sensitive training data, which is a major compliance gap for financial services. </p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>Use CloudTrail to continuously monitor and log real-time operational metrics like CPU utilization and latency for SageMaker endpoints.</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>CloudTrail’s purpose is <b>Auditing, Governance, and Compliance</b> (tracking <i>who</i> did <i>what</i> and <i>when</i>). <b>Real-time operational metrics</b> like CPU and latency are the domain of <b>Amazon CloudWatch</b>. CloudWatch is used for monitoring the health and performance of resources, not for creating an auditable log of user and resource API actions. </p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>Enable CloudTrail to track all EC2 instance state changes but exclude all actions from managed services like Amazon SageMaker.</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>This contradicts the core requirement of auditing ML activities. Amazon SageMaker is a managed service, and CloudTrail is designed to log the API calls made to <b>all</b> AWS services, including managed services. Excluding SageMaker API calls would prevent auditing of key activities like starting a training job or deploying a model, making the audit record useless for ML compliance. </p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>"
     },
     {
-      "id": "20-21",
-      "number": 21,
-      "text": "A financial analytics firm needs to allow multiple teams to access specific AWS resources such as S3 buckets, DynamoDB tables, and EC2 instances, but wants to ensure that each team only has access to the resources necessary for their projects. What is the best way to manage these permissions to minimize potential security risks?",
-      "options": [
-        {
-          "text": "Disable all permissions and manually approve every access request to AWS resources on a case-by-case basis.",
-          "correct": false
-        },
-        {
-          "text": "Use IAM roles and assign them to IAM groups corresponding to each team, applying policies that restrict access to only necessary resources.",
-          "correct": true
-        },
-        {
-          "text": "Implement IAM users for each individual and assign permissions directly to each user based on their needs.",
-          "correct": false
-        },
-        {
-          "text": "Create a single IAM role with access to all resources and share the credentials across all teams.",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Use IAM roles and assign them to IAM groups corresponding to each team, applying policies that restrict access to only necessary resources.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p>This is a core AWS security best practice known as the <b>principle of least privilege</b>. The approach is both scalable and secure: </p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>IAM Groups:</b>&nbsp;Creating a group for each team (e.g., “DataScienceTeam,” “EngineeringTeam”) allows for easy management. Instead of assigning permissions to individual users, you assign users to groups.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>IAM Roles &amp; Policies:</b>&nbsp;You attach an IAM policy to each group. This policy is finely tuned to grant permissions&nbsp;<em>only</em>&nbsp;to the specific S3 buckets, DynamoDB tables, and EC2 instances required for that team’s projects. This minimizes the “blast radius” if credentials are compromised and prevents accidental access to sensitive resources.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Disable all permissions and manually approve every access request to AWS resources on a case-by-case basis.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p>While this seems secure in theory, it is operationally unsustainable and violates the cloud principle of agility. It creates a significant bottleneck, hindering productivity as teams must wait for manual approval for every single task. It is not a scalable or efficient way to manage permissions in a dynamic environment and is prone to human error.</p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Implement IAM users for each individual and assign permissions directly to each user based on their needs.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p>This is a poor practice from a management and security perspective. While it applies least privilege at the user level, it is incredibly difficult to scale and audit. If you have 100 users, you would have to manage 100 individual permission sets. When a team’s access needs change, you would have to manually update every user in that team, which is error-prone and inefficient. Using groups, as in option B, is the AWS-recommended method. </p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Create a single IAM role with access to all resources and share the credentials across all teams.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p>This is the <b>antithesis of security best practices</b>&nbsp;and would maximize, not minimize, security risks. It completely violates the principle of least privilege. If the shared credentials are compromised, every resource in the account is at risk. There is no accountability, as you cannot track which team or user performed an action. This approach is strongly discouraged by AWS. </p>"
-    },
-    {
       "id": "20-22",
       "number": 22,
       "text": "In the context of building an AI-driven inventory management system for a retail company using AWS services, how do the foundational goals of image processing and computer vision fundamentally differ?",
@@ -560,31 +381,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Image processing manipulates and enhances images for visual quality or analysis, while computer vision interprets and analyzes the content of images to make decisions.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p>This option correctly distinguishes the sequential relationship and different objectives of these two fields, which is a key foundational concept for AI on AWS.</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<b>Image Processing:</b>&nbsp;This is a foundational step. It works on the pixel level to improve an image’s quality or to transform it for further analysis. Its goal is not to “understand” the image but to prepare it. In an AWS context, you might use general-purpose services or custom code to perform tasks like cropping, noise reduction, or contrast adjustment on images from store cameras before they are fed into a computer vision model.\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<b>Computer Vision (CV):</b>&nbsp;This is a higher-level field that aims to derive meaning and understanding from images. It uses models to identify patterns and objects. The output is not a modified image, but information, a decision, or an action. On AWS,&nbsp;<b>Amazon Rekognition</b>&nbsp;is the primary service for CV, as it can take an image (which may have been pre-processed) and return data such as product labels, stock counts, or whether a shelf is empty.\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>In a pipeline, image processing often serves as a pre-processing step to improve the accuracy of a subsequent computer vision model.</p>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Computer vision and image processing are the same; both use machine learning to interpret image content for business decisions.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p>This is incorrect because it conflates two distinct disciplines. While modern computer vision heavily relies on machine learning, traditional image processing often uses deterministic, mathematical operations (like filters and transformations) that do not involve ML. The core purpose of image processing is not to “interpret” content but to manipulate the image data itself. Stating they are the same demonstrates a fundamental misunderstanding of AI concepts. </p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Image processing is a subset of computer vision focused solely on identifying and cataloging objects.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p>This statement reverses the relationship and misattributes the function. Identifying and cataloging objects is the core task of <b>computer vision</b>, not image processing. While image processing can be&nbsp;<em>used within</em>&nbsp;a computer vision pipeline, it is not a “subset” of it; they are related but separate fields. Image processing has many applications outside of CV, such as in medical imaging or photography. </p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Computer vision is primarily about enhancing image resolution, whereas image processing identifies objects based on pre-defined criteria.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p>This option completely swaps the definitions. Enhancing image resolution (e.g., upscaling, sharpening) is a classic task of <b>image processing</b>. Conversely, while early CV systems used pre-defined criteria, modern computer vision on AWS (powered by services like Rekognition) uses sophisticated, pre-trained deep learning models to identify objects, going far beyond simple, pre-defined rules. </p>"
-    },
-    {
-      "id": "20-23",
-      "number": 23,
-      "text": "A retail company wants to utilize AWS services to create dynamic, interactive dashboards and visualizations for monitoring their sales performance in real-time. Which AWS service would be the most appropriate to fulfill this requirement?",
-      "options": [
-        {
-          "text": "Amazon SageMaker Data Wrangler",
-          "correct": false
-        },
-        {
-          "text": "Amazon QuickSight",
-          "correct": true
-        },
-        {
-          "text": "Amazon SageMaker Canvas",
-          "correct": false
-        },
-        {
-          "text": "Amazon CloudWatch Dashboards",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<div>\n\t\t\t\t\t\t\t<p><strong>Correct</strong></p>\n\t\t\t\t\t\t\t<p><b>(Amazon QuickSight):</b> Amazon QuickSight is AWS’s fully managed BI service designed specifically for creating interactive dashboards and real-time visualizations from various data sources, including sales performance metrics.</p>\n\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t<strong>Incorrect</strong>\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t<b>(Amazon SageMaker Data Wrangler):</b> Data preparation tool for ML workflows; focuses on cleaning/transforming data, not dashboard creation.\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t<b>(Amazon SageMaker Canvas):</b> No-code ML model building interface; generates predictions, not interactive sales dashboards.\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t<b>(Amazon CloudWatch Dashboards):</b> Monitors AWS infrastructure metrics and logs; unsuitable for business sales performance visualization.\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t</div>"
     },
     {
       "id": "20-24",
@@ -924,31 +720,6 @@
       "explanationHtml": "<p>For real-time predictions in financial trading, the efficiency of a machine learning model is crucial. Average Latency, as a measure of response time, becomes very important. It ensures that the model's output delivery is fast enough to make timely decisions, which is essential for trading based on stock market trends. Timely and rapid predictions can significantly impact the effectiveness of trading strategies in highly volatile environments. </p>"
     },
     {
-      "id": "20-37",
-      "number": 37,
-      "text": "You are working as a data engineer and require ongoing analysis of large datasets stored in AWS S3 using SQL queries. You need a service that allows you to run queries directly on the data in S3 without having to load them into a database first. What is the most suitable AWS service to use for this requirement?",
-      "options": [
-        {
-          "text": "Amazon Athena",
-          "correct": true
-        },
-        {
-          "text": "AWS Data Pipeline",
-          "correct": false
-        },
-        {
-          "text": "Amazon Redshift",
-          "correct": false
-        },
-        {
-          "text": "Amazon RDS",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>Amazon Athena is designed specifically for running interactive queries against data stored in Amazon S3 using standard SQL. It is serverless, so there‘s no infrastructure to manage, and you pay only for the queries you run, making it cost-effective and efficient for scenarios where data needs to be analyzed directly in S3, as described in the question. For more information, visit: <a href=\"https://aws.amazon.com/athena/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/athena/</a>\n\t\t\t\t\t\t</p>"
-    },
-    {
       "id": "20-38",
       "number": 38,
       "text": "In the context of a video streaming company that is developing machine learning models to recommend content and analyze user interactions, identify which neural network type is best suited for modeling sequential data such as video frames.",
@@ -1049,81 +820,6 @@
       "explanationHtml": "<p>Amazon Translate‘s custom terminology feature is critical for businesses needing precise translations involving specific terminology or jargon unique to a particular field or industry. This feature allows users to create custom dictionaries that control how names, brands, technical terms, and other proprietary expressions should be translated, ensuring that translations are both accurate and contextually appropriate for business-specific communications. Custom terminology supports maintaining consistency and accuracy vital for effective international communication and documentation. </p>"
     },
     {
-      "id": "20-42",
-      "number": 42,
-      "text": "An IoT company requires the deployment of ML models on edge devices for applications such as predictive maintenance and anomaly detection. Considering the need for real-time data processing with minimal latency, which approach should the company adopt to optimize performance and maintain low-latency inference on these devices?",
-      "options": [
-        {
-          "text": "Deploy an optimized small language model (SLM) directly on each edge device.",
-          "correct": true
-        },
-        {
-          "text": "Use a central API connected to a small language model (SLM) with an asynchronous inference endpoint.",
-          "correct": false
-        },
-        {
-          "text": "Use a central API connected to a large language model (LLM) with an asynchronous inference endpoint.",
-          "correct": false
-        },
-        {
-          "text": "Deploy an optimized large language model (LLM) directly on each edge device.",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>In scenarios where real-time analytics and minimal latency are crucial, deploying an optimized small language model directly on the edge devices is the most efficient approach. This setup minimizes latency by processing data locally and reduces dependencies on network bandwidth and central processing points, which are critical in time-sensitive applications like predictive maintenance and anomaly detection. For further details, AWS provides various resources on edge computing and machine learning, such as the AWS IoT and AWS Greengrass services. </p>"
-    },
-    {
-      "id": "20-43",
-      "number": 43,
-      "text": "You are managing a project that involves building several machine learning models for a healthcare company. The models need to be frequently updated and tested for performance before being deployed. Given the constraints on time and resource management, what AWS service would be most appropriate for automating the building and testing of these ML artifacts?",
-      "options": [
-        {
-          "text": "Use AWS CodeBuild to automate the build and testing of ML models.",
-          "correct": true
-        },
-        {
-          "text": "Utilize Amazon S3 to automate the ML model builds.",
-          "correct": false
-        },
-        {
-          "text": "Implement AWS Lambda for continuous testing and deployment.",
-          "correct": false
-        },
-        {
-          "text": "Deploy AWS CodeCommit for the automation process.",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>AWS CodeBuild is the suitable service for automating the building and testing of machine learning models due to its features that support compilation, testing, and packaging of software artifacts. This service not only automates these workflows but also integrates well with other AWS services, setting a streamlined pipeline for ML model development and deployment. This ensures models are consistently built, tested, and ready for production. More information can be found at <a href=\"https://aws.amazon.com/codebuild/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/codebuild/</a>\n\t\t\t\t\t\t</p>"
-    },
-    {
-      "id": "20-44",
-      "number": 44,
-      "text": "As a Data Engineer, you are tasked with managing and preprocessing large datasets from differing sources for later use in machine learning models. Your process needs to be scalable, serverless, and easy to manage. How can AWS Glue, particularly the AWS Glue ETL service, best be utilized to meet these requirements?",
-      "options": [
-        {
-          "text": "Only use AWS Glue Catalog to store metadata and handle transformations manually using AWS Lambda functions.",
-          "correct": false
-        },
-        {
-          "text": "Utilize AWS Glue ETL jobs to automate data transformation processes, orchestrating data workflow with Apache Airflow on EC2.",
-          "correct": false
-        },
-        {
-          "text": "Employ AWS Glue ETL to create, run, and monitor data integration and transformation pipelines entirely managed and scaled by AWS.",
-          "correct": true
-        },
-        {
-          "text": "Use AWS Glue DataBrew to visually explore and clean data, but manually code transformations in an EC2 instance.",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>AWS Glue ETL service is a valuable tool for data engineers overseeing large-scale data operations, particularly when flexibility, manageability, scalability, and serverless options are imperative. It allows for the creation and management of data transformation workflows in a fully managed environment, negating the need for manual coding or resource management, thus maximizing efficiency and reducing error. AWS Glue automates the tasks related to ETL work, providing a robust solution suited to a variety of data preparation and loading needs. More information about AWS Glue can be found on the AWS official documentation: <a href=\"https://docs.aws.amazon.com/glue/latest/dg/what-is-glue.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/glue/latest/dg/what-is-glue.html</a>\n\t\t\t\t\t\t</p>"
-    },
-    {
       "id": "20-45",
       "number": 45,
       "text": "A retail company is planning to enhance their customer segmentation system by using machine learning algorithms and has considered the use of K-Means and K-Nearest Neighbors (KNN). What is the primary difference between K-Means and KNN that could affect the decision on which algorithm to use for customer segmentation?",
@@ -1147,31 +843,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Understanding the difference between supervised and unsupervised learning is crucial in selecting the right algorithm for specific tasks such as customer segmentation. K-Means, an unsupervised learning algorithm, organizes data into clusters without prior labels, making it suitable for discovering inherent grouping in data. KNN, on the other hand, is a supervised algorithm that necessitates labeled data to predict the classification of new points based on the known labels of nearest neighbors. Hence, the choice depends on the nature of the data available and the specific requirements of the system to be developed. </p>"
-    },
-    {
-      "id": "20-46",
-      "number": 46,
-      "text": "You are an AI engineer tasked with deploying a machine learning model for high-traffic online retail during the holiday season. The model should automatically scale to handle sudden surges in user requests, while also being cost-effective during off-peak times. Which AWS service feature should you use to efficiently manage the scaling of ML model resources for both training and inference?",
-      "options": [
-        {
-          "text": "Set up a fixed number of EC2 instances that are estimated to handle peak loads.",
-          "correct": false
-        },
-        {
-          "text": "Utilize AWS Auto Scaling with predefined scaling policies based on CPU and memory utilization.",
-          "correct": true
-        },
-        {
-          "text": "Configure Amazon RDS to auto-scale according to the database load, aiding the ML model's performance indirectly.",
-          "correct": false
-        },
-        {
-          "text": "Employ AWS Lambda for automatic resource scaling, activating more instances as traffic increases.",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>AWS Auto Scaling is the appropriate service to manage scaling of resources for ML modelsparticularly during variable loads like those experienced by online retail during holidays. This service dynamically adjusts resources based on actual usage metrics, such as CPU and memory, allowing for efficient and cost-effective scaling. This is essential for maintaining service availability and performance during high traffic and minimizing costs during quieter periods. </p>"
     },
     {
       "id": "20-47",
@@ -1222,31 +893,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Machine learning is a method of data analysis that automates analytical model building. It is a branch of artificial intelligence based on the idea that systems can learn from data, identify patterns, and make decisions with minimal human intervention. This technology is invaluable for tasks like credit scoring and fraud detection in financial services, where it can quickly analyze vast amounts of data to identify potentially fraudulent activities or creditworthiness. For more information, visit: <a href=\"https://aws.amazon.com/machine-learning/what-is-machine-learning/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/machine-learning/what-is-machine-learning/</a>\n\t\t\t\t\t\t</p>"
-    },
-    {
-      "id": "20-49",
-      "number": 49,
-      "text": "As an AI practitioner, you are tasked with monitoring the performance and infrastructure of a deployed machine learning model using AWS CloudWatch. Which of the following is the most effective method for utilizing Amazon CloudWatch to facilitate proactive issue resolution and enhance the model‘s reliability?",
-      "options": [
-        {
-          "text": "Store log files from your model in Amazon S3 and manually review them weekly for any unusual activity.",
-          "correct": false
-        },
-        {
-          "text": "Only enable CloudWatch logs during the model‘s peak usage times to conserve resources and reduce costs.",
-          "correct": false
-        },
-        {
-          "text": "Utilize CloudWatch Events to trigger AWS Lambda functions for auto-scaling resources based on demand forecasts.",
-          "correct": false
-        },
-        {
-          "text": "Set up high-resolution alarms to monitor the model more frequently and react quicker to performance issues.",
-          "correct": true
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>Proactive and effective monitoring of machine learning models in production is crucial to ensure their reliability and efficiency. Amazon CloudWatch provides various services for real-time monitoring and operational health assessment. High-resolution alarms specifically allow for quicker detection of and reaction to performance anomalies or infrastructure issues, ensuring high availability and reliability of the ML models. For more information on Amazon CloudWatch‘s features and best practices, visit <a href=\"https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html</a>\n\t\t\t\t\t\t</p>"
     },
     {
       "id": "20-50",

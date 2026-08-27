@@ -1,7 +1,7 @@
 {
   "setNumber": 11,
   "sourceFile": "Practice_Set_11.html",
-  "questionCount": 60,
+  "questionCount": 55,
   "questions": [
     {
       "id": "11-1",
@@ -202,31 +202,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>Inexactitud</p>\n\t\t\t\t\t\t<p>La inexactitud se refiere a que el modelo de IA produce salidas incorrectas o incompletas. En el caso de resumir reseñas de clientes, el modelo podría perder detalles importantes o malinterpretar el contexto, lo que genera resúmenes incompletos o incorrectos. Esto sucede porque los modelos de IA generativa a veces tienen dificultades para captar con precisión información matizada o compleja, especialmente si los datos de entrenamiento o el algoritmo no son perfectamente adecuados para la tarea. Garantizar la exactitud generalmente requiere hacer fine-tuning del modelo y mejorar la calidad de los datos.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>Simplicidad</p>\n\t\t\t\t\t\t<p>Simplicidad sugeriría que la IA genera respuestas demasiado básicas o superficiales. Sin embargo, el problema aquí es la incorreción u omisión de información clave, no la simplicidad de los resúmenes.</p>\n\t\t\t\t\t\t<p>Capacidad de respuesta</p>\n\t\t\t\t\t\t<p>La capacidad de respuesta mide qué tan rápido puede responder la IA. Este problema no está relacionado con la velocidad de la respuesta, sino con la corrección de la información generada.</p>\n\t\t\t\t\t\t<p>Determinismo</p>\n\t\t\t\t\t\t<p>El determinismo se refiere a la capacidad del modelo de producir la misma salida de forma consistente para la misma entrada. Si bien el determinismo puede ser relevante en otros casos, este problema está relacionado con la exactitud de los resúmenes, no con la consistencia de las respuestas.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://aws.amazon.com/what-is/machine-learning\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/what-is/machine-learning</a>\n\t\t\t\t\t\t</p>"
-    },
-    {
-      "id": "11-9",
-      "number": 9,
-      "text": "Una empresa de medios necesita un servicio para almacenar y buscar grandes volúmenes de datos no estructurados generados por usuarios. El servicio debe proporcionar la capacidad de buscar datos de manera eficiente usando funciones como búsqueda de texto completo y análisis en tiempo real. ¿Cuál servicio de AWS se debe utilizar?",
-      "options": [
-        {
-          "text": "Amazon Redshift",
-          "correct": false
-        },
-        {
-          "text": "AWS Glue",
-          "correct": false
-        },
-        {
-          "text": "Amazon Textract",
-          "correct": false
-        },
-        {
-          "text": "Amazon OpenSearch Service",
-          "correct": true
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>Opciones correctas:</p>\n\t\t\t\t\t\t<p><b>Amazon OpenSearch Service</b></p>\n\t\t\t\t\t\t<p>Amazon OpenSearch Service (anteriormente conocido como Amazon Elasticsearch Service) está diseñado para almacenar y buscar grandes volúmenes de datos no estructurados. Ofrece capacidades de búsqueda potentes como búsqueda de texto completo, consultas estructuradas y análisis en tiempo real, lo que lo hace ideal para casos de uso donde una empresa de medios necesita recuperar rápidamente información específica de grandes conjuntos de datos. OpenSearch puede indexar texto, datos numéricos y datos geoespaciales, lo que lo hace muy versátil para una amplia variedad de tipos de datos. También se integra con machine learning e incluye Kibana integrado para visualización de datos y análisis en tiempo real. Este servicio está optimizado para búsqueda y consultas de alta velocidad, lo que lo convierte en la opción perfecta para manejar datos no estructurados generados por usuarios.</p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<img alt=\"\" decoding=\"async\" src=\"https://skillcertpro.com/wp-content/uploads/2024/11/word-image-352744-3.png\" sizes=\"(max-width: 1600px) 100vw, 1600px\" srcset=\"\n                    https://skillcertpro.com/wp-content/uploads/2024/11/word-image-352744-3.png          1600w,\n                    https://skillcertpro.com/wp-content/uploads/2024/11/word-image-352744-3-300x120.png   300w,\n                    https://skillcertpro.com/wp-content/uploads/2024/11/word-image-352744-3-1024x410.png 1024w,\n                    https://skillcertpro.com/wp-content/uploads/2024/11/word-image-352744-3-768x307.png   768w,\n                    https://skillcertpro.com/wp-content/uploads/2024/11/word-image-352744-3-1536x614.png 1536w,\n                    https://skillcertpro.com/wp-content/uploads/2024/11/word-image-352744-3-600x240.png   600w,\n                    https://skillcertpro.com/wp-content/uploads/2024/11/word-image-352744-3-64x26.png      64w\n                  \" width=\"1600\" height=\"640\">\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p><strong>Incorrectas</strong></p>\n\t\t\t\t\t\t<p><b>Amazon Redshift</b></p>\n\t\t\t\t\t\t<p>Amazon Redshift es un servicio de almacenamiento de datos diseñado para datos estructurados y consultas OLAP. Aunque puede manejar grandes conjuntos de datos, está optimizado para datos relacionales y no es ideal para buscar datos no estructurados como texto o contenido multimedia.</p>\n\t\t\t\t\t\t<p><b>AWS Glue</b></p>\n\t\t\t\t\t\t<p>AWS Glue es un servicio ETL (Extracción, Transformación, Carga) completamente administrado que ayuda a preparar y transformar datos estructurados y semiestructurados. No está diseñado para buscar datos no estructurados ni proporcionar capacidades de búsqueda en tiempo real.</p>\n\t\t\t\t\t\t<p><b>Amazon Textract</b></p>\n\t\t\t\t\t\t<p>Amazon Textract extrae automáticamente texto, escritura manual y otros datos de documentos escaneados. No proporciona búsqueda de texto completo ni análisis en tiempo real para grandes volúmenes de datos no estructurados.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<a href=\"https://docs.aws.amazon.com/opensearch-service/latest/developerguide/what-is.html\" target=\"_blank\" rel=\"noopener\">https://docs.aws.amazon.com/opensearch-service/latest/developerguide/what-is.html</a>\n\t\t\t\t\t\t</p>"
     },
     {
       "id": "11-10",
@@ -454,31 +429,6 @@
       "explanationHtml": "<p><strong>Correcta</strong></p>\n\t\t\t\t\t\t<p>Hijacking</p>\n\t\t\t\t\t\t<p>Hijacking se refiere a la manipulación de un sistema de IA donde los usuarios ingresan frases o prompts específicos para modificar el comportamiento previsto del modelo. En este caso, los usuarios utilizan entradas específicas para que el sistema de soporte de IA genere respuestas políticamente sesgadas. Este tipo de manipulación de prompts secuestra el propósito original del sistema, lo que puede llevar a resultados dañinos o sesgados. Para prevenir esto, los desarrolladores deben aplicar un fuerte filtrado de entradas, validación de prompts y monitoreo en tiempo real de las interacciones del sistema de IA.</p>\n\t\t\t\t\t\t<p><strong>Incorrectas</strong></p>\n\t\t\t\t\t\t<p>Model poisoning</p>\n\t\t\t\t\t\t<p>Model poisoning implica la alteración de los datos de entrenamiento utilizados para entrenar un modelo de IA, lo que puede resultar en un desempeño degradado o resultados sesgados. No está directamente relacionado con la manipulación de prompts durante el uso.</p>\n\t\t\t\t\t\t<p>Overfitting</p>\n\t\t\t\t\t\t<p>Overfitting ocurre cuando un modelo se entrena demasiado específicamente en un conjunto de datos particular, lo que causa un desempeño deficiente en nuevos datos. Este es un problema de entrenamiento y no está relacionado con la manipulación en tiempo real por parte de los usuarios.</p>\n\t\t\t\t\t\t<p>Exposure</p>\n\t\t\t\t\t\t<p>Exposure se refiere al riesgo de que información del modelo sensible o datos sean accesibles a usuarios no autorizados. No describe la manipulación del resultado del modelo mediante entradas específicas del usuario.</p>"
     },
     {
-      "id": "11-19",
-      "number": 19,
-      "text": "Tu empresa necesita crear y compartir reportes de inteligencia de negocios, y quieres asegurar que la herramienta seleccionada se integre bien con los servicios de AWS y proporcione visualizaciones de datos con dashboards. ¿Cuál servicio de AWS se ajustaría mejor a tus necesidades?",
-      "options": [
-        {
-          "text": "Amazon QuickSight",
-          "correct": true
-        },
-        {
-          "text": "Amazon Redshift",
-          "correct": false
-        },
-        {
-          "text": "AWS Glue DataBrew",
-          "correct": false
-        },
-        {
-          "text": "Amazon EMR",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>Amazon QuickSight</p>\n\t\t\t\t\t\t<p>Amazon QuickSight es un servicio de inteligencia de negocios (BI) que permite crear y compartir dashboards e informes interactivos. Se integra sin problemas con varios servicios de AWS como Amazon S3, Amazon Redshift y Amazon RDS, lo que te permite visualizar fácilmente los datos almacenados en el ecosistema de AWS. Con QuickSight, los usuarios pueden crear visualizaciones ricas, realizar análisis avanzados y compartir dashboards en toda la organización. Admite características como insights de machine learning, consultas en lenguaje natural (a través de QuickSight Q) y dashboards adaptados para dispositivos móviles. Esto lo convierte en la opción ideal para generar y compartir reportes de BI en un entorno nativo de la nube.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>Amazon EMR</p>\n\t\t\t\t\t\t<p>Amazon EMR es un servicio para procesar grandes volúmenes de datos utilizando marcos de computación distribuida como Apache Spark y Hadoop. Está diseñado para análisis de big data y no proporciona características para crear o compartir reportes de inteligencia de negocios.</p>\n\t\t\t\t\t\t<p>AWS Glue DataBrew</p>\n\t\t\t\t\t\t<p>AWS Glue DataBrew es una herramienta de preparación de datos que se utiliza para limpiar y transformar datos. Se enfoca en preparar datos para análisis y machine learning, no en generar reportes visuales de BI o dashboards.</p>\n\t\t\t\t\t\t<p>Amazon Redshift</p>\n\t\t\t\t\t\t<p>Amazon Redshift es un servicio completamente administrado de almacén de datos diseñado para ejecutar consultas complejas en grandes conjuntos de datos. Aunque puede almacenar y analizar datos para BI, no proporciona características de visualización o dashboarding por sí mismo. QuickSight se utilizaría para visualizar datos almacenados en Redshift.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://docs.aws.amazon.com/quicksight/latest/user/welcome.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/quicksight/latest/user/welcome.html</a>\n\t\t\t\t\t\t</p>"
-    },
-    {
       "id": "11-20",
       "number": 20,
       "text": "Te encargan asegurar un sistema de IA que procesa información confidencial, y hay preocupaciones sobre posibles ataques de prompt injection. ¿Qué medida de seguridad deberías implementar para mitigar el riesgo de prompt injection?",
@@ -581,31 +531,6 @@
       ],
       "multiSelect": true,
       "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>Reinforcement learning para aprender rutas óptimas a lo largo del tiempo</p>\n\t\t\t\t\t\t<p>Reinforcement learning (RL) es ideal para este caso de uso porque permite que el sistema aprenda las mejores decisiones (rutas) a lo largo del tiempo. En el contexto de optimización de rutas, un modelo de RL puede observar los resultados basados en acciones pasadas (como patrones de tráfico o tiempos de entrega) y ajustar su estrategia para encontrar los caminos más eficientes. Esta técnica es especialmente útil en entornos dinámicos donde las condiciones de tráfico cambian frecuentemente, ya que mejora continuamente al recibir retroalimentación (recompensas o penalizaciones) basada en las rutas elegidas.</p>\n\t\t\t\t\t\t<p>Supervised learning con regresión para predicciones en tiempo real</p>\n\t\t\t\t\t\t<p>Supervised learning con regresión puede predecir condiciones de tráfico futuras basándose en datos históricos y en tiempo real. Al entrenar con datos de tráfico pasado y factores actuales (por ejemplo, clima, hora del día), los modelos de regresión pueden predecir retrasos esperados o tiempos de viaje, ayudando al sistema a elegir la mejor ruta de entrega. Este enfoque es clave para manejar cambios en tiempo real y hacer predicciones rápidas para optimizar eficientemente los horarios y rutas de entrega.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>Supervised learning con algoritmos de clasificación</p>\n\t\t\t\t\t\t<p>La clasificación se utiliza para categorizar datos en clases distintas, como si el tráfico es intenso o ligero. Sin embargo, este método no predice valores específicos como el tiempo de viaje, que es esencial para la optimización de rutas.</p>\n\t\t\t\t\t\t<p>Unsupervised learning con clustering para categorización de datos</p>\n\t\t\t\t\t\t<p>El clustering agrupa datos similares, lo que no es directamente relevante para predecir rutas más cortas o condiciones en tiempo real. Si bien el clustering puede ayudar a identificar patrones, no ofrece directamente soluciones de optimización de rutas.</p>\n\t\t\t\t\t\t<p>Batch inferencing con datos de series de tiempo etiquetados</p>\n\t\t\t\t\t\t<p>Batch inferencing procesa datos en lotes, lo que no es ideal para predicciones en tiempo real. Esta opción podría ayudar con el análisis de datos históricos, pero no funcionaría bien para la optimización de rutas en vivo.</p>"
-    },
-    {
-      "id": "11-24",
-      "number": 24,
-      "text": "Tu organización quiere asegurar que los modelos de IA que implementas cumplan con los estándares de gobernanza y que se realicen auditorías de cumplimiento regularmente. ¿Cuál servicio de AWS te ayudará a automatizar las verificaciones de cumplimiento y proporcionar documentación para auditorías?",
-      "options": [
-        {
-          "text": "Amazon Macie",
-          "correct": false
-        },
-        {
-          "text": "AWS CloudTrail",
-          "correct": false
-        },
-        {
-          "text": "AWS Trusted Advisor",
-          "correct": false
-        },
-        {
-          "text": "AWS Audit Manager",
-          "correct": true
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>AWS Audit Manager</p>\n\t\t\t\t\t\t<p>AWS Audit Manager ayuda a automatizar el proceso de recopilación de evidencia necesaria para auditorías. Monitorea continuamente tu entorno para recopilar datos, generar reportes y mantener el cumplimiento con diversas regulaciones o estándares, como GDPR o HIPAA. Simplifica el proceso de auditoría al mapear automáticamente los datos recopilados con los requisitos de cumplimiento, reduciendo así el esfuerzo manual necesario para las auditorías. Esta herramienta también ayuda a asegurar que tus modelos de IA se adhieran a los estándares de gobernanza al rastrear y documentar su cumplimiento a lo largo del tiempo. AWS Audit Manager respalda a las organizaciones proporcionando una vista integral de su estado de cumplimiento, asegurando que las auditorías regulares se realicen eficientemente.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>AWS Trusted Advisor</p>\n\t\t\t\t\t\t<p>AWS Trusted Advisor ofrece recomendaciones para mejorar el rendimiento, la seguridad y la optimización de costos de tu entorno de AWS. Sin embargo, no se enfoca en auditorías de cumplimiento o en la recopilación de evidencia para estándares regulatorios, así que no es la herramienta correcta para automatizar verificaciones de cumplimiento.</p>\n\t\t\t\t\t\t<p>Amazon Macie</p>\n\t\t\t\t\t\t<p>Amazon Macie está diseñado para identificar y proteger datos sensibles, como información de identificación personal (PII). No se enfoca en automatizar auditorías de cumplimiento ni en rastrear requisitos de gobernanza para modelos de IA.</p>\n\t\t\t\t\t\t<p>AWS CloudTrail</p>\n\t\t\t\t\t\t<p>AWS CloudTrail registra la actividad de API en tu cuenta de AWS y es esencial para auditorías de seguridad y operacionales. Sin embargo, no automatiza verificaciones de cumplimiento ni proporciona la documentación necesaria para auditorías regulatorias.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://docs.aws.amazon.com/audit-manager/latest/userguide/what-is.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/audit-manager/latest/userguide/what-is.html</a>\n\t\t\t\t\t\t</p>"
     },
     {
       "id": "11-25",
@@ -756,31 +681,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p><b>Despliegue del modelo</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Esta es la respuesta correcta porque una vez que el modelo está entrenado, el siguiente paso es el <b>despliegue</b> — poner el modelo disponible para predicciones en tiempo real o por lotes.</li>\n\t\t\t\t\t\t\t<li>El despliegue implica integrar el modelo en aplicaciones o servicios para que pueda procesar datos en vivo y generar resultados.</li>\n\t\t\t\t\t\t\t<li>En este escenario, la empresa ya está usando el modelo para <b>predicciones en tiempo real</b>, lo que claramente indica la fase de despliegue.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p><b>Recopilación de datos</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrecto porque la recopilación de datos ocurre al principio del ciclo de vida del ML, donde se reúnen datos sin procesar para el entrenamiento.</li>\n\t\t\t\t\t\t\t<li>La empresa ya ha entrenado el modelo y lo está usando, así que esta fase ya pasó.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>Evaluación del modelo</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrecto porque la evaluación se refiere a probar la precisión, exactitud, recall u otras métricas del modelo antes del despliegue.</li>\n\t\t\t\t\t\t\t<li>Si bien la evaluación es importante, el escenario describe el <b>uso activo en producción</b>, no pruebas.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>Ingeniería de características</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrecto porque la ingeniería de características es el proceso de transformar datos sin procesar en características significativas para el entrenamiento.</li>\n\t\t\t\t\t\t\t<li>Esto ocurre antes del entrenamiento, no durante el uso de predicciones en tiempo real.</li>\n\t\t\t\t\t\t</ul>"
-    },
-    {
-      "id": "11-31",
-      "number": 31,
-      "text": "Un equipo está desarrollando un sistema de detección de fraude en tiempo real para transacciones de tarjetas de crédito. La solución debe detectar anomalías y activar alertas en tiempo real. ¿Cuál es el servicio de AWS más apropiado para este caso de uso de machine learning?",
-      "options": [
-        {
-          "text": "Amazon Fraud Detector",
-          "correct": true
-        },
-        {
-          "text": "Amazon Bedrock",
-          "correct": false
-        },
-        {
-          "text": "Amazon Textract",
-          "correct": false
-        },
-        {
-          "text": "Amazon Polly",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>Opciones correctas:</p>\n\t\t\t\t\t\t<p><b>Amazon Fraud Detector</b></p>\n\t\t\t\t\t\t<p>Amazon Fraud Detector es un servicio de machine learning completamente administrado que está específicamente diseñado para identificar actividades fraudulentas potenciales en línea, como fraude de tarjetas de crédito, en tiempo real. Utiliza modelos de machine learning construidos a partir de datos históricos de transacciones para detectar anomalías y comportamientos sospechosos. El servicio permite a los equipos crear modelos de detección de fraude sin necesidad de experiencia profunda en ML, y puede activar alertas cuando se detecta actividad fraudulenta, lo que lo convierte en la solución más apropiada para la detección de fraude en tiempo real en transacciones de tarjetas de crédito. </p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<img alt=\"\" decoding=\"async\" src=\"https://skillcertpro.com/wp-content/uploads/2024/11/word-image-352744-2.png\" sizes=\"(max-width: 1600px) 100vw, 1600px\" srcset=\"\n                    https://skillcertpro.com/wp-content/uploads/2024/11/word-image-352744-2.png          1600w,\n                    https://skillcertpro.com/wp-content/uploads/2024/11/word-image-352744-2-300x93.png    300w,\n                    https://skillcertpro.com/wp-content/uploads/2024/11/word-image-352744-2-1024x316.png 1024w,\n                    https://skillcertpro.com/wp-content/uploads/2024/11/word-image-352744-2-768x237.png   768w,\n                    https://skillcertpro.com/wp-content/uploads/2024/11/word-image-352744-2-1536x474.png 1536w,\n                    https://skillcertpro.com/wp-content/uploads/2024/11/word-image-352744-2-600x185.png   600w,\n                    https://skillcertpro.com/wp-content/uploads/2024/11/word-image-352744-2-64x20.png      64w\n                  \" width=\"1600\" height=\"494\">\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p><strong>Incorrectas</strong></p>\n\t\t\t\t\t\t<p><b>Amazon Textract</b></p>\n\t\t\t\t\t\t<p>Amazon Textract es un servicio de IA que extrae texto y datos de documentos escaneados, como formularios e invoices. No está diseñado para detección de fraude o detección de anomalías.</p>\n\t\t\t\t\t\t<p><b>Amazon Polly</b></p>\n\t\t\t\t\t\t<p>Amazon Polly es un servicio de conversión de texto a voz que convierte texto escrito en voz con sonido natural. No se utiliza para detección de fraude o alertas en tiempo real.</p>\n\t\t\t\t\t\t<p><b>Amazon Bedrock</b></p>\n\t\t\t\t\t\t<p>Amazon Bedrock es un servicio para construir y escalar aplicaciones de IA generativa usando foundation models. Si bien es potente para aplicaciones impulsadas por IA, no está especializado en casos de uso de detección de fraude en tiempo real como Amazon Fraud Detector.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<a href=\"https://aws.amazon.com/fraud-detector\" target=\"_blank\" rel=\"noopener\">https://aws.amazon.com/fraud-detector</a>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<a href=\"https://docs.aws.amazon.com/frauddetector/latest/ug/what-is-frauddetector.html\" target=\"_blank\" rel=\"noopener\">https://docs.aws.amazon.com/frauddetector/latest/ug/what-is-frauddetector.html</a>\n\t\t\t\t\t\t</p>"
     },
     {
       "id": "11-32",
@@ -1210,31 +1110,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p><strong>Correcta</strong></p>\n\t\t\t\t\t\t<p>Usar Amazon SageMaker Model Cards para rastrear la procedencia y licencia de los datasets utilizados.</p>\n\t\t\t\t\t\t<p>Amazon SageMaker Model Cards ayudan a garantizar transparencia al permitir a los usuarios documentar y rastrear detalles clave sobre los datasets utilizados, incluyendo la procedencia y licencia de los datos. Al usar Model Cards, la startup de IA puede documentar claramente de dónde provienen los datos y bajo qué términos legales se están utilizando, ayudándoles a evitar problemas legales relacionados con licencias de datos. Esto asegura que todos los datos utilizados en su sistema de reconocimiento facial cumplan con los requisitos de licencia.</p>\n\t\t\t\t\t\t<p><strong>Incorrectas</strong></p>\n\t\t\t\t\t\t<p>Asegurar que los datos se recopilen de diversas fuentes para evitar sesgos.</p>\n\t\t\t\t\t\t<p>Si bien recopilar datos diversos es importante para prevenir sesgos, esta opción se enfoca en abordar el sesgo en lugar de garantizar el licenciamiento adecuado de datos. La diversidad de datos no resuelve directamente los problemas de licencia.</p>\n\t\t\t\t\t\t<p>Usar un modelo de caja negra que no dependa de la transparencia de datos.</p>\n\t\t\t\t\t\t<p>Un modelo de caja negra no soluciona las preocupaciones sobre licencias de datos. De hecho, la transparencia respecto al uso de datos es esencial, independientemente del tipo de modelo.</p>\n\t\t\t\t\t\t<p>Evitar usar cualquier dato proveniente de bases de datos de código abierto.</p>\n\t\t\t\t\t\t<p>No todas las bases de datos de código abierto son problemáticas, siempre que sus términos de licencia se respeten correctamente. Lo clave es entender los términos de licencia específicos, no evitar datos de código abierto en general.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://docs.aws.amazon.com/sagemaker/latest/dg/model-cards.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/sagemaker/latest/dg/model-cards.html</a>\n\t\t\t\t\t\t</p>"
-    },
-    {
-      "id": "11-49",
-      "number": 49,
-      "text": "Una empresa de desarrollo de IA debe cumplir con estándares internacionales para gestionar y proteger información sensible. Buscan un estándar que proporcione un marco para gestionar riesgos de seguridad de la información, incluyendo privacidad de datos e integridad del sistema. ¿Cuál de los siguientes estándares deberían adoptar?",
-      "options": [
-        {
-          "text": "ISO 9001",
-          "correct": false
-        },
-        {
-          "text": "PCI DSS",
-          "correct": false
-        },
-        {
-          "text": "SOC 1",
-          "correct": false
-        },
-        {
-          "text": "ISO 27001",
-          "correct": true
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>ISO 27001</p>\n\t\t\t\t\t\t<p>ISO 27001 es un estándar internacional que proporciona un marco sólido para establecer, implementar, mantener y mejorar continuamente un sistema de gestión de seguridad de la información (ISMS). Está diseñado para ayudar a las organizaciones a gestionar riesgos de seguridad de la información, incluyendo la protección de datos sensibles, garantizar la privacidad de datos y mantener la integridad del sistema. Para una empresa de desarrollo de IA, ISO 27001 es esencial para asegurar los datos y reducir el riesgo de brechas de seguridad. Este estándar cubre todo, desde evaluaciones de riesgos hasta la implementación de controles de seguridad y monitoreo de sistemas, lo que lo convierte en una solución integral para gestionar la seguridad de la información en sistemas de IA.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>SOC 1</p>\n\t\t\t\t\t\t<p>SOC 1 se enfoca en controles de informes financieros más que en gestión de seguridad de la información. No es adecuado para gestionar privacidad de datos o integridad del sistema en sistemas de IA.</p>\n\t\t\t\t\t\t<p>ISO 9001</p>\n\t\t\t\t\t\t<p>ISO 9001 es un estándar de gestión de calidad enfocado en mejorar los procesos organizacionales, no específicamente en seguridad de la información o gestión de riesgos.</p>\n\t\t\t\t\t\t<p>PCI DSS</p>\n\t\t\t\t\t\t<p>PCI DSS está diseñado específicamente para organizaciones que manejan datos de tarjetas de crédito. Aunque es importante para la seguridad de pagos, no proporciona un marco amplio de gestión de seguridad de la información como ISO 27001.</p>"
     },
     {
       "id": "11-50",

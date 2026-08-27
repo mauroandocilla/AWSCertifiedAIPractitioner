@@ -1,7 +1,7 @@
 {
   "setNumber": 4,
   "sourceFile": "Practice_Set_4.html",
-  "questionCount": 52,
+  "questionCount": 39,
   "questions": [
     {
       "id": "4-1",
@@ -27,31 +27,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Batch transform en Amazon SageMaker te permite ejecutar inferencia en conjuntos de datos grandes de una sola vez, en lugar de procesar los datos en tiempo real. Esto puede reducir significativamente los costos al utilizar los recursos de forma eficiente durante las horas de menor demanda.</p>"
-    },
-    {
-      "id": "4-2",
-      "number": 2,
-      "text": "¿Cómo crear un modelo en Amazon SageMaker usando AWS CLI?",
-      "options": [
-        {
-          "text": "aws sagemaker deploy-model --name --container",
-          "correct": false
-        },
-        {
-          "text": "aws sagemaker create-model --model-name --primary-container",
-          "correct": true
-        },
-        {
-          "text": "aws sagemaker start-model --name --container",
-          "correct": false
-        },
-        {
-          "text": "aws sagemaker register-model --model --container",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>El comando aws sagemaker create-model crea un nuevo modelo en Amazon SageMaker. Necesitás especificar el nombre del modelo y el primary container que contiene los artefactos del modelo y el código de inferencia usando los flags –model-name y –primary-container.</p>"
     },
     {
       "id": "4-3",
@@ -202,31 +177,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>SageMaker Ground Truth proporciona capacidades de etiquetado de datos que ayudan a crear conjuntos de datos de entrenamiento de alta calidad para aprendizaje supervisado aprovechando etiquetadores humanos, etiquetado automatizado y aprendizaje activo.</p>"
-    },
-    {
-      "id": "4-9",
-      "number": 9,
-      "text": "Al implementar un modelo de machine learning para inferencia en AWS Lambda, ¿cuál es una consideración clave para garantizar un rendimiento eficiente?",
-      "options": [
-        {
-          "text": "Usar tamaños de batch más grandes",
-          "correct": false
-        },
-        {
-          "text": "El tamaño del modelo debe ser minimizado",
-          "correct": true
-        },
-        {
-          "text": "Aumentar la asignación de memoria de Lambda",
-          "correct": false
-        },
-        {
-          "text": "Usar múltiples funciones Lambda para inferencia",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>Al implementar un modelo de machine learning para inferencia en AWS Lambda, es crucial minimizar el tamaño del modelo para que quepa dentro de los límites de memoria y almacenamiento del entorno de ejecución de Lambda. Los modelos más pequeños se cargan más rápido y utilizan menos recursos, lo que garantiza un rendimiento eficiente.</p>"
     },
     {
       "id": "4-10",
@@ -429,31 +379,6 @@
       "explanationHtml": "<p>Amazon SageMaker es un servicio completamente administrado que brinda a desarrolladores y científicos de datos la capacidad de construir, entrenar e implementar modelos de machine learning (ML) rápidamente. Se integra con otros servicios de AWS y proporciona herramientas para etiquetar, construir, entrenar e implementar modelos, lo que lo convierte en el servicio preferido para proyectos de ML.</p>"
     },
     {
-      "id": "4-18",
-      "number": 18,
-      "text": "En un flujo de trabajo de machine learning en AWS, ¿cuál es el propósito de usar AWS Data Pipeline?",
-      "options": [
-        {
-          "text": "Crear visualizaciones de datos",
-          "correct": false
-        },
-        {
-          "text": "Desplegar modelos de machine learning",
-          "correct": false
-        },
-        {
-          "text": "Almacenar grandes conjuntos de datos",
-          "correct": false
-        },
-        {
-          "text": "Automatizar el movimiento y transformación de datos",
-          "correct": true
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>AWS Data Pipeline es un servicio web que ayuda a automatizar el movimiento y transformación de datos. Se utiliza comúnmente en flujos de trabajo de machine learning para preparar y procesar datos para el entrenamiento y evaluación de modelos.</p>"
-    },
-    {
       "id": "4-19",
       "number": 19,
       "text": "¿Cuál es la métrica más comúnmente utilizada para evaluar el rendimiento de un modelo de regresión?",
@@ -477,31 +402,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Mean Squared Error (MSE) es una métrica común para evaluar el rendimiento de modelos de regresión, ya que mide el promedio de las diferencias al cuadrado entre los valores predichos y los valores reales.</p>"
-    },
-    {
-      "id": "4-20",
-      "number": 20,
-      "text": "¿Cuál comando usarías para crear una nueva instancia de notebook en Amazon SageMaker con un tipo de instancia específico y un rol de IAM?",
-      "options": [
-        {
-          "text": "aws sagemaker create-notebook-instance --instance-type --role-name",
-          "correct": false
-        },
-        {
-          "text": "aws sagemaker create-notebook-instance --instance-type --role-arn",
-          "correct": true
-        },
-        {
-          "text": "aws sagemaker create-notebook --instance-type --role",
-          "correct": false
-        },
-        {
-          "text": "aws sagemaker create-notebook --type --iam-role",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>El comando <code>aws sagemaker create-notebook-instance</code> se usa para crear una nueva instancia de notebook en Amazon SageMaker. El flag <code>--instance-type</code> especifica el tipo de instancia, y el flag <code>--role-arn</code> especifica el rol de IAM que usará la instancia de notebook.</p>"
     },
     {
       "id": "4-21",
@@ -704,31 +604,6 @@
       "explanationHtml": "<p>RAG significa Retrieval-Augmented Generation.</p>"
     },
     {
-      "id": "4-29",
-      "number": 29,
-      "text": "¿Cuál es el propósito de usar plugins en Amazon Q Business?",
-      "options": [
-        {
-          "text": "Crear políticas de seguridad de red",
-          "correct": false
-        },
-        {
-          "text": "Realizar acciones en sistemas empresariales y consultar datos",
-          "correct": true
-        },
-        {
-          "text": "Mejorar el procesamiento de imágenes",
-          "correct": false
-        },
-        {
-          "text": "Desarrollar aplicaciones móviles",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>Los plugins en Amazon Q Business se utilizan para realizar acciones en sistemas empresariales y consultar datos.</p>"
-    },
-    {
       "id": "4-30",
       "number": 30,
       "text": "¿Cuál es la técnica utilizada para reducir la dimensionalidad de los datos?",
@@ -754,106 +629,6 @@
       "explanationHtml": "<p>Principal Component Analysis (PCA) se utiliza para reducir la dimensionalidad de los datos.</p>"
     },
     {
-      "id": "4-31",
-      "number": 31,
-      "text": "¿Cómo optimiza Amazon SageMaker Neo el despliegue de modelos?",
-      "options": [
-        {
-          "text": "Automatizando el etiquetado de datos",
-          "correct": false
-        },
-        {
-          "text": "Reduciendo el tamaño del conjunto de datos",
-          "correct": false
-        },
-        {
-          "text": "Compilando modelos para hardware específico",
-          "correct": true
-        },
-        {
-          "text": "Simplificando la arquitectura del modelo",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>SageMaker Neo compila modelos para optimizarlos según el hardware específico, mejorando la eficiencia del despliegue.</p>"
-    },
-    {
-      "id": "4-32",
-      "number": 32,
-      "text": "¿Cómo maneja Amazon Q Business los permisos y el control de acceso?",
-      "options": [
-        {
-          "text": "Permitiendo acceso abierto a todos los datos",
-          "correct": false
-        },
-        {
-          "text": "Integrándose con AWS IAM Identity Center",
-          "correct": true
-        },
-        {
-          "text": "Aplicando solo listas blancas de IP",
-          "correct": false
-        },
-        {
-          "text": "Usando solo claves públicas",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>AWS IAM Identity Center se utiliza para administrar de manera segura los permisos y el control de acceso en Amazon Q Business.</p>"
-    },
-    {
-      "id": "4-33",
-      "number": 33,
-      "text": "¿Cuál es un beneficio clave de usar SageMaker Autopilot para el desarrollo de modelos de IA generativa?",
-      "options": [
-        {
-          "text": "Proporciona traducción en tiempo real",
-          "correct": false
-        },
-        {
-          "text": "Requiere ajuste manual de parámetros",
-          "correct": false
-        },
-        {
-          "text": "Utiliza templates predefinidos",
-          "correct": false
-        },
-        {
-          "text": "Simplifica la implementación de modelos",
-          "correct": true
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>SageMaker Autopilot automatiza el entrenamiento y tuning de modelos de IA generativa.</p>"
-    },
-    {
-      "id": "4-34",
-      "number": 34,
-      "text": "¿Cómo se puede acceder a Amazon Q Business de forma programática?",
-      "options": [
-        {
-          "text": "Solo a través de AWS CLI",
-          "correct": false
-        },
-        {
-          "text": "Usando la API de Amazon Q Business",
-          "correct": true
-        },
-        {
-          "text": "Codificando manualmente cada función",
-          "correct": false
-        },
-        {
-          "text": "Usando AWS CloudFormation",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>La API de Amazon Q Business proporciona acceso programático al servicio.</p>"
-    },
-    {
       "id": "4-35",
       "number": 35,
       "text": "¿Qué tipo de aplicación de IA se puede desarrollar utilizando Amazon Personalize?",
@@ -877,31 +652,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Amazon Personalize se utiliza para desarrollar aplicaciones que proporcionan recomendaciones personalizadas.</p>"
-    },
-    {
-      "id": "4-36",
-      "number": 36,
-      "text": "¿De qué manera Amazon SageMaker Studio respalda el desarrollo colaborativo de IA generativa?",
-      "options": [
-        {
-          "text": "Proporcionando un IDE compartido con herramientas integradas",
-          "correct": true
-        },
-        {
-          "text": "Automatizando el preprocesamiento de datos",
-          "correct": false
-        },
-        {
-          "text": "Gestionando el tráfico de red",
-          "correct": false
-        },
-        {
-          "text": "Mejorando el cifrado de datos",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>SageMaker Studio ofrece un IDE compartido, lo que facilita que los equipos colaboren en proyectos de IA generativa.</p>"
     },
     {
       "id": "4-37",
@@ -977,56 +727,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Active learning es una técnica en la que el modelo identifica los puntos de datos más informativos que necesitan etiquetado. Al enfocarse en estos puntos de datos, Amazon SageMaker Ground Truth puede reducir la cantidad de datos etiquetados requeridos, disminuyendo así el costo general del proceso de etiquetado.</p>"
-    },
-    {
-      "id": "4-40",
-      "number": 40,
-      "text": "¿Cuál es el beneficio de usar Amazon SageMaker Feature Store en el desarrollo de IA generativa?",
-      "options": [
-        {
-          "text": "Proporciona un repositorio centralizado para el almacenamiento y gestión de features",
-          "correct": true
-        },
-        {
-          "text": "Mejora los protocolos de seguridad",
-          "correct": false
-        },
-        {
-          "text": "Simplifica la arquitectura del modelo",
-          "correct": false
-        },
-        {
-          "text": "Automatiza el etiquetado de datos",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>SageMaker Feature Store proporciona un repositorio centralizado para gestionar features, lo que ayuda en el desarrollo de IA generativa.</p>"
-    },
-    {
-      "id": "4-41",
-      "number": 41,
-      "text": "¿Cuál es el servicio de AWS que se utiliza para data warehousing escalable?",
-      "options": [
-        {
-          "text": "Amazon RDS",
-          "correct": false
-        },
-        {
-          "text": "Amazon Aurora",
-          "correct": false
-        },
-        {
-          "text": "Amazon DynamoDB",
-          "correct": false
-        },
-        {
-          "text": "Amazon Redshift",
-          "correct": true
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>Amazon Redshift es un servicio de data warehouse completamente administrado que te permite ejecutar consultas complejas sobre petabytes de datos estructurados. Está diseñado para alta escalabilidad y rendimiento, lo que lo hace ideal para data warehousing y análisis de big data.</p>"
     },
     {
       "id": "4-42",
@@ -1227,31 +927,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Amazon SageMaker Clarify ofrece herramientas para detectar sesgos en los datos y en los modelos de aprendizaje automático, y proporciona explicabilidad del modelo, ayudando a garantizar que los modelos sean justos y transparentes.</p>"
-    },
-    {
-      "id": "4-50",
-      "number": 50,
-      "text": "¿Cuál es el uso principal de Amazon Forecast?",
-      "options": [
-        {
-          "text": "Análisis de video en tiempo real",
-          "correct": false
-        },
-        {
-          "text": "Pronóstico de series de tiempo",
-          "correct": true
-        },
-        {
-          "text": "Almacenamiento de datos",
-          "correct": false
-        },
-        {
-          "text": "Análisis de sentimiento",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>Amazon Forecast es un servicio completamente administrado que utiliza machine learning para proporcionar pronósticos altamente precisos. Se puede usar para predecir valores futuros basándose en datos históricos, lo que lo hace útil para aplicaciones como planificación de demanda, planificación financiera y optimización de recursos.</p>"
     },
     {
       "id": "4-51",

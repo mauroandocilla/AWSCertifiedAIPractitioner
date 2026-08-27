@@ -1,7 +1,7 @@
 {
   "setNumber": 10,
   "sourceFile": "Practice_Set_10.html",
-  "questionCount": 59,
+  "questionCount": 51,
   "questions": [
     {
       "id": "10-1",
@@ -77,56 +77,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p>Model selection</p>\n\t\t\t\t\t\t<p>Model selection is the stage where the institution chooses the most appropriate model architecture and algorithms that meet their specific requirements, such as scalability with increasing data and low latency for real-time fraud detection. By focusing on model selection, they can evaluate different models to find one that efficiently processes large datasets and delivers quick predictions, which is critical in fraud detection scenarios where timely responses are essential. Selecting the right model ensures that the system can handle growth in data volume without compromising on performance.</p>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p>Data selection</p>\n\t\t\t\t\t\t<p>Data selection involves choosing the appropriate datasets for training and validating the model. While having high-quality and relevant data is crucial for model performance, data selection does not directly address concerns related to the model‘s ability to scale with increasing data or ensure low latency. This stage focuses on what data is used, not on how the model processes the data.</p>\n\t\t\t\t\t\t<p>Fine-tuning</p>\n\t\t\t\t\t\t<p>Fine-tuning is the process of adapting a pre-trained model to a specific task by training it further on task-specific data. While fine-tuning can improve a model‘s accuracy for a particular application, it does not primarily address issues of scalability or latency. Fine-tuning adjusts model parameters for better performance on a task but doesn‘t fundamentally change the model‘s capacity to handle larger datasets or reduce prediction latency.</p>\n\t\t\t\t\t\t<p>Feedback</p>\n\t\t\t\t\t\t<p>Feedback involves collecting user inputs or system performance data after deployment to improve the model iteratively. While incorporating feedback is important for ongoing improvement, it does not directly address the initial concerns of selecting a model that scales and provides low latency. Feedback mechanisms are more about post-deployment refinement rather than initial model selection for performance characteristics.</p>\n\t\t\t\t\t\t<p>References:</p>\n\t\t\t\t\t\t<p><a href=\"https://docs.aws.amazon.com/sagemaker/latest/dg/algorithms-choose.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/sagemaker/latest/dg/algorithms-choose.html</a>\n\t\t\t\t\t\t</p>"
-    },
-    {
-      "id": "10-4",
-      "number": 4,
-      "text": "Your AI system is collecting real-time data from IoT devices for analysis. To ensure compliance and maintain system integrity, you need to continuously monitor the data streams for anomalies and irregularities. Which data governance strategy is most relevant to this task?",
-      "options": [
-        {
-          "text": "Data Monitoring",
-          "correct": true
-        },
-        {
-          "text": "Data Lifecycle Management",
-          "correct": false
-        },
-        {
-          "text": "Data Retention",
-          "correct": false
-        },
-        {
-          "text": "Data Logging",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p>Data Monitoring</p>\n\t\t\t\t\t\t<p>Data monitoring involves continuously observing data streams, transactions, or activities to detect anomalies, irregularities, or suspicious patterns in real-time. For an AI system collecting real-time data from IoT devices, monitoring ensures that the data being analyzed remains accurate, secure, and compliant with relevant regulations. By identifying unusual behavior or potential breaches, data monitoring helps maintain the system‘s integrity and ensures timely responses to any issues that arise, enhancing the overall reliability of the AI system.</p>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p>Data Logging</p>\n\t\t\t\t\t\t<p>Data logging records data access and actions taken on the data, but it focuses on tracking past activities rather than real-time monitoring for anomalies.</p>\n\t\t\t\t\t\t<p>Data Lifecycle Management</p>\n\t\t\t\t\t\t<p>Data lifecycle management governs how data is handled throughout its lifespan, from creation to deletion. While important for compliance, it is not focused on real-time anomaly detection.</p>\n\t\t\t\t\t\t<p>Data Retention</p>\n\t\t\t\t\t\t<p>Data retention defines how long data is stored before being archived or deleted. It ensures compliance with storage regulations but doesn't address real-time monitoring of data streams.</p>\n\t\t\t\t\t\t<p>References:</p>\n\t\t\t\t\t\t<p><a href=\"https://docs.aws.amazon.com/data-exchange/latest/userguide/monitoring-overview.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/data-exchange/latest/userguide/monitoring-overview.html</a>\n\t\t\t\t\t\t</p>"
-    },
-    {
-      "id": "10-5",
-      "number": 5,
-      "text": "Your organization is developing an AI system for predictive maintenance in the manufacturing industry. To ensure the system adheres to governance protocols, the team must conduct periodic reviews of compliance with industry standards. Which AWS service would best help manage compliance and audit requirements?",
-      "options": [
-        {
-          "text": "Amazon SageMaker Clarify",
-          "correct": false
-        },
-        {
-          "text": "Amazon Macie",
-          "correct": false
-        },
-        {
-          "text": "AWS Audit Manager",
-          "correct": true
-        },
-        {
-          "text": "AWS Config",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p>AWS Audit Manager</p>\n\t\t\t\t\t\t<p>AWS Audit Manager helps automate the process of collecting evidence and managing compliance with industry standards and regulations. It allows teams to continuously monitor, assess, and document their system‘s compliance with relevant governance protocols. For an AI system in the manufacturing industry, AWS Audit Manager can be used to simplify audits by mapping AWS resources to specific industry standards and generating detailed reports. This ensures that the organization can easily meet regulatory requirements and maintain continuous compliance with minimal manual effort.</p>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p>AWS Config</p>\n\t\t\t\t\t\t<p>AWS Config helps monitor and assess AWS resource configurations but is focused on configuration management rather than comprehensive compliance auditing.</p>\n\t\t\t\t\t\t<p>Amazon Macie</p>\n\t\t\t\t\t\t<p>Amazon Macie is a security service that helps identify and protect sensitive data. It is not designed for managing audits or compliance.</p>\n\t\t\t\t\t\t<p>Amazon SageMaker Clarify</p>\n\t\t\t\t\t\t<p>Amazon SageMaker Clarify is used to detect bias in machine learning models and improve explainability, but it is not focused on audit management or compliance.</p>\n\t\t\t\t\t\t<p>References:</p>\n\t\t\t\t\t\t<p><a href=\"https://aws.amazon.com/audit-manager\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/audit-manager</a>\n\t\t\t\t\t\t</p>"
     },
     {
       "id": "10-6",
@@ -608,31 +558,6 @@
       "explanationHtml": "<p>The most direct and significant risk the company is exposing itself to when its AI customer service model generates responses containing fabricated facts is <b>Loss of customer trust</b>. </p>\n\t\t\t\t\t\t<p>Here’s why:</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li><b>Loss of customer trust:</b> If customers receive incorrect information from the AI model and act upon it, leading to negative consequences or unmet needs, their trust in the company will erode. This can lead to decreased customer loyalty, negative word-of-mouth, and ultimately, a decline in business.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>Let’s look at why the other options are less directly the primary risk in this scenario:</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>Hallucinations:</b> While “hallucinations” is the technical term for AI models generating fabricated information, it’s the <em>cause</em> of the problem, not the primary risk the company faces due to these fabrications.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>Biased model outputs:</b> Biased model outputs refer to the model consistently favoring certain demographics or viewpoints unfairly. While this is a serious issue, the scenario specifically describes the generation of <em>fabricated facts</em>, which is a different type of error. A model can hallucinate without being inherently biased in the traditional sense.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>Intellectual property infringement:</b> This risk typically arises when an AI model uses copyrighted material without permission in its training data or generated content. While possible in some AI applications, it’s not the direct and immediate risk stemming from a customer service model providing fabricated <em>factual</em> information.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>In summary, the core danger of an AI customer service model providing incorrect, made-up information is the damage it inflicts on the company’s relationship with its customers, leading to a loss of trust.</b>\n\t\t\t\t\t\t</p>"
     },
     {
-      "id": "10-25",
-      "number": 25,
-      "text": "A development team is building an AI application on AWS, and they need to ensure that each user has the appropriate level of access based on their role in the organization. Which AWS feature helps implement least privilege by defining permissions based on roles?",
-      "options": [
-        {
-          "text": "AWS IAM Role",
-          "correct": true
-        },
-        {
-          "text": "AWS IAM User",
-          "correct": false
-        },
-        {
-          "text": "AWS IAM Access Key",
-          "correct": false
-        },
-        {
-          "text": "AWS IAM Group",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p><b>AWS IAM Role</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t\t\t<span>An </span><b><span>IAM Role</span></b><span> is an identity that you can create in your account with specific permissions policies.</span> <span>Unlike an IAM user, an IAM role is </span><b><span>not permanently associated with one person</span></b><span>.</span> <span>Instead, it is an identity that anyone (a person, an application, or an AWS service) can </span><b><span>assume</span></b><span> to get temporary security credentials.</span>\n\t\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>This mechanism is central to the principle of <b>least privilege</b> because: </p>\n\t\t\t\t\t\t\t\t\t\t<ol start=\"1\">\n\t\t\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t<b><span>Temporary Credentials:</span></b><span> The user/service only has the permissions granted by the role for a limited session duration.</span>\n\t\t\t\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t\t\t<p><b>Role-Based Access:</b> You can define a single, precise set of permissions (the “least privilege”) for a specific job function (e.g., an “ML Training Role” or “App Deployment Role”) and grant that to anyone who needs to perform that job, without giving them permanent, excessive permissions.</p>\n\t\t\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t\t</ol>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>Incorrect</p>\n\t\t\t\t\t\t<p>AWS IAM User</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<span>An </span><b><span>IAM User</span></b><span> is a permanent entity and long-term identity that represents a person or application within your AWS account.</span> While you can attach permission policies to a user, the user is the <b>identity itself</b>. <span>Roles (Option A) are the primary mechanism used for granting </span><b><span>temporary, task-specific, least privilege</span></b><span> permissions to users or services who might otherwise have different or higher permanent permissions.</span>\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>AWS IAM Access Key</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<span>An </span><b><span>IAM Access Key</span></b><span> (which consists of an Access Key ID and a Secret Access Key) is a </span><b><span>credential</span></b><span> used for making programmatic requests to AWS.</span> It is not an identity or a container for permissions; it is simply the key used to authenticate an <b>IAM User</b> or a set of <b>temporary role credentials</b>. <span>The permissions are defined by the associated policy on the user or role.</span>\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>AWS IAM Group</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<span>An </span><b><span>IAM Group</span></b><span> is a collection of IAM users.</span> It is used to specify permissions for multiple users simultaneously (e.g., all “AI Developers” are in one group and share the same base permissions). While groups help simplify management, the <b>permissions themselves</b> (the embodiment of least privilege) are defined on the policies attached to the role or user, not the group itself. <span>The </span><b><span>Role</span></b><span> is the feature designed for temporary, task-specific permission granting.</span>\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>"
-    },
-    {
       "id": "10-26",
       "number": 26,
       "text": "A development team is building an AI application that must meet stringent security and compliance requirements. They need a tool to provide security and compliance reports, including SOC reports, on demand. Which AWS service can provide these reports?",
@@ -656,31 +581,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p><b>Correct Answer</b></p>\n\t\t\t\t\t\t<p><b>AWS Artifact</b></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>AWS Artifact</b>&nbsp;is AWS’s central resource for&nbsp;<b>compliance-related information</b>. It is specifically designed to provide on-demand access to AWS security and compliance documents, such as&nbsp;<b>SOC reports (SOC 1, SOC 2, SOC 3)</b>, PCI reports, and ISO certifications. When a development team needs these official reports to demonstrate compliance for their AI application to auditors or stakeholders, AWS Artifact is the direct and correct service to use.\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p><b>Incorrect Answers</b></p>\n\t\t\t\t\t\t<p><b>Amazon Inspector</b></p>\n\t\t\t\t\t\t<p>Amazon Inspector is an <b>automated vulnerability management service</b>&nbsp;that scans EC2 instances and container images for software vulnerabilities and network exposure. It is a tool for improving your own security posture, not for retrieving AWS’s internal compliance reports like SOC. </p>\n\t\t\t\t\t\t<p><b>AWS Trusted Advisor</b></p>\n\t\t\t\t\t\t<p>AWS Trusted Advisor is an automated service that provides <b>real-time guidance and best practice recommendations</b>&nbsp;to optimize your AWS environment across cost, performance, security, fault tolerance, and service limits. It does not provide official, third-party audited compliance reports. </p>\n\t\t\t\t\t\t<p><b>AWS Config</b></p>\n\t\t\t\t\t\t<p>AWS Config is a service for <b>auditing and assessing the configuration of your AWS resources</b>. It helps you ensure that your resource configurations comply with internal policies and external regulations by tracking configuration changes and evaluating them against rules. However, it does not provide the official compliance reports issued by auditors about the AWS platform itself. </p>"
-    },
-    {
-      "id": "10-27",
-      "number": 27,
-      "text": "Your company is developing an AI system for financial data processing. To ensure the system is secure and meets the necessary governance requirements, the team needs to identify an international standard that offers guidelines for the management of information security. Which standard should the company adopt?",
-      "options": [
-        {
-          "text": "SOC 2",
-          "correct": false
-        },
-        {
-          "text": "ISO 27001",
-          "correct": true
-        },
-        {
-          "text": "GDPR",
-          "correct": false
-        },
-        {
-          "text": "HIPAA",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>ISO 27001</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p>ISO/IEC 27001 is an internationally recognized standard that provides a comprehensive framework for establishing, implementing, maintaining, and continually improving an Information Security Management System (ISMS). It directly addresses governance, risk management, and security controls, making it well suited for securing AI systems that process sensitive financial data. </p>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>SOC 2</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p>SOC 2 is an auditing standard focused on service organizations and their controls related to security, availability, and confidentiality. It is not an international standard and does not provide a formal, globally recognized management framework like ISO 27001. </p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>GDPR</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p>GDPR is a data protection regulation focused on personal data privacy and individual rights within the European Union. While important for compliance, it is not a standard for managing information security governance across an organization. </p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>HIPAA</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p>HIPAA is a U.S. regulation specific to protecting healthcare information. It is not applicable to general financial data processing and does not provide a universal information security management framework. </p>"
     },
     {
       "id": "10-28",
@@ -731,31 +631,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p><b>Amazon SageMaker</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Correct because <b>Amazon SageMaker</b> is the fully managed AWS service for building, training, and deploying machine learning models.</li>\n\t\t\t\t\t\t\t<li>It allows models to be deployed as <b>endpoints</b> that can be accessed via <b>REST APIs</b> for real‑time predictions. </li>\n\t\t\t\t\t\t\t<li>This directly meets the requirement of hosting the model and making it accessible through an API.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p><b>Amazon Lex</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because <b>Lex</b> is used for building conversational interfaces (chatbots and voice assistants).</li>\n\t\t\t\t\t\t\t<li>It does not host arbitrary ML models for prediction.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>Amazon Transcribe</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because <b>Transcribe</b> is a speech‑to‑text service.</li>\n\t\t\t\t\t\t\t<li>It is specialized for audio transcription, not general ML model deployment.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>Amazon Translate</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because <b>Translate</b> is a machine translation service.</li>\n\t\t\t\t\t\t\t<li>It converts text between languages but does not provide a platform for hosting custom ML models.</li>\n\t\t\t\t\t\t</ul>"
-    },
-    {
-      "id": "10-30",
-      "number": 30,
-      "text": "A generative AI project requires storing and retrieving complex multi‑dimensional data such as embeddings and vectors. Which AWS service provides a managed database solution optimized for this purpose?",
-      "options": [
-        {
-          "text": "Amazon RDS",
-          "correct": false
-        },
-        {
-          "text": "AWS Lambda",
-          "correct": false
-        },
-        {
-          "text": "Amazon Neptune",
-          "correct": true
-        },
-        {
-          "text": "Amazon DocumentDB",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p><b>Amazon Neptune</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li><strong>Correct</strong> because <b>Amazon Neptune</b> is a fully managed graph database service optimized for handling highly connected, multi‑dimensional data.</li>\n\t\t\t\t\t\t\t<li>It supports <b>property graphs and RDF data models</b>, which are well‑suited for embeddings, relationships, and vector‑like structures. </li>\n\t\t\t\t\t\t\t<li>In generative AI use cases, Neptune can store and query embeddings efficiently, enabling semantic search and recommendation systems.</li>\n\t\t\t\t\t\t\t<li>This makes it the right AWS service for managing complex multi‑dimensional data.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p><b>Amazon RDS</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because RDS is a <b>relational database service</b> optimized for structured tabular data. </li>\n\t\t\t\t\t\t\t<li>It is not designed for storing or querying embeddings or vectors efficiently.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>AWS Lambda</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because Lambda is a <b>serverless compute service</b>, not a database. </li>\n\t\t\t\t\t\t\t<li>It can process data but cannot store or manage embeddings or vectors directly.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>Amazon DocumentDB</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because DocumentDB is a <b>NoSQL document database</b> compatible with MongoDB. </li>\n\t\t\t\t\t\t\t<li>It is optimized for JSON‑like documents, not for graph or vector data structures.</li>\n\t\t\t\t\t\t</ul>"
     },
     {
       "id": "10-31",
@@ -881,31 +756,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p>Data Retention</p>\n\t\t\t\t\t\t<p>Data retention refers to the policies and practices governing how long data is stored before being deleted or archived. When a company needs to comply with regulations about how long data can be stored, it is addressing data retention. Different regulations, like the GDPR, often mandate specific timeframes for keeping certain types of data. Having a clear data retention policy helps organizations avoid penalties by ensuring they delete or archive data after the required period, maintaining compliance and protecting customer privacy.</p>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p>Data Observation</p>\n\t\t\t\t\t\t<p>Data observation involves monitoring and tracking data in real-time to understand patterns or behavior. While useful for real-time insights, it does not directly address the length of time data is stored.</p>\n\t\t\t\t\t\t<p>Data Residency</p>\n\t\t\t\t\t\t<p>Data residency deals with where data is stored geographically to comply with local regulations. It is unrelated to how long the data is stored.</p>\n\t\t\t\t\t\t<p>Data Encryption</p>\n\t\t\t\t\t\t<p>Data encryption is about securing data by converting it into an unreadable format, protecting it from unauthorized access. It does not address the storage duration or data lifecycle management.</p>\n\t\t\t\t\t\t<p>References:</p>\n\t\t\t\t\t\t<p><a href=\"https://aws.amazon.com/compliance/data-privacy\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/compliance/data-privacy</a>\n\t\t\t\t\t\t</p>"
-    },
-    {
-      "id": "10-36",
-      "number": 36,
-      "text": "You are a data scientist working with an organization that needs to manage data from multiple third-party vendors for market analysis. You are tasked with finding a service that allows you to subscribe to and manage data sets from external providers within the AWS ecosystem. Which AWS service would you choose to achieve this goal?",
-      "options": [
-        {
-          "text": "Amazon QuickSight",
-          "correct": false
-        },
-        {
-          "text": "Amazon EMR",
-          "correct": false
-        },
-        {
-          "text": "Amazon Redshift",
-          "correct": false
-        },
-        {
-          "text": "AWS Data Exchange",
-          "correct": true
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p>AWS Data Exchange</p>\n\t\t\t\t\t\t<p>AWS Data Exchange is the ideal service for subscribing to and managing datasets from third-party vendors. It allows organizations to securely find, subscribe to, and use external data directly within the AWS ecosystem. Data Exchange provides a wide variety of data sources, including financial, demographic, and market analysis datasets, which are crucial for market research. The service also ensures easy integration with AWS services, allowing data to be used seamlessly for analysis and insights.</p>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p>Amazon Redshift</p>\n\t\t\t\t\t\t<p>Amazon Redshift is a data warehousing service that is great for storing and querying large datasets, but it's not designed for subscribing to or managing third-party data sets.</p>\n\t\t\t\t\t\t<p>Amazon QuickSight</p>\n\t\t\t\t\t\t<p>Amazon QuickSight is a business intelligence tool used for visualizing and analyzing data. It helps in generating reports and insights but does not manage external data subscriptions.</p>\n\t\t\t\t\t\t<p>Amazon EMR</p>\n\t\t\t\t\t\t<p>Amazon EMR is a service for processing large amounts of data using big data frameworks like Apache Hadoop and Spark. It‘s not suited for subscribing to third-party datasets.</p>\n\t\t\t\t\t\t<p>References:</p>\n\t\t\t\t\t\t<p><a href=\"https://aws.amazon.com/data-exchange\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/data-exchange</a>\n\t\t\t\t\t\t</p>"
     },
     {
       "id": "10-37",
@@ -1056,31 +906,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p>Amazon Neptune</p>\n\t\t\t\t\t\t<p>Amazon Neptune is a fully managed graph database service optimized for storing and navigating highly connected data, such as knowledge graphs. It supports popular graph models like Property Graph and W3C‘s RDF, along with their respective query languages, Apache TinkerPop Gremlin and SPARQL. For a research team needing a highly scalable and graph-optimized database to store embeddings from a machine learning model, Neptune is an ideal choice. It is designed to handle billions of relationships and can process queries with millisecond latency. Neptune‘s architecture allows it to scale seamlessly, ensuring high performance even as the dataset grows. Additionally, it integrates well with other AWS services, making it easier to build and deploy complex applications that detect relationships between entities.</p>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p>Amazon RDS for MySQL</p>\n\t\t\t\t\t\t<p>Amazon RDS for MySQL is a managed relational database service optimized for structured data and transactional workloads. It doesn‘t natively support graph data models, making it less suitable for storing and querying complex relationships in knowledge graphs.</p>\n\t\t\t\t\t\t<p>AWS Lambda</p>\n\t\t\t\t\t\t<p>AWS Lambda is a serverless compute service that lets you run code without provisioning servers. It is not a database service and cannot be used to store data like embeddings or manage relationships in a graph structure.</p>\n\t\t\t\t\t\t<p>Amazon DynamoDB</p>\n\t\t\t\t\t\t<p>Amazon DynamoDB is a fast and flexible NoSQL database service for single-digit millisecond performance at any scale. While it excels at key-value and document storage, it isn‘t optimized for graph queries or storing complex relationships inherent in knowledge graphs.</p>\n\t\t\t\t\t\t<p>References:</p>\n\t\t\t\t\t\t<p><a href=\"https://aws.amazon.com/neptune\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/neptune</a>\n\t\t\t\t\t\t</p>"
-    },
-    {
-      "id": "10-43",
-      "number": 43,
-      "text": "You are tasked with deploying a generative AI application that requires running multiple containers orchestrated across a cluster. Which AWS service provides a managed Kubernetes solution to run containerized applications?",
-      "options": [
-        {
-          "text": "AWS Glue DataBrew",
-          "correct": false
-        },
-        {
-          "text": "Amazon Elastic Container Service (Amazon ECS)",
-          "correct": false
-        },
-        {
-          "text": "Amazon Elastic Kubernetes Service (Amazon EKS)",
-          "correct": true
-        },
-        {
-          "text": "Amazon S3 Glacier",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p>Amazon Elastic Kubernetes Service (Amazon EKS)</p>\n\t\t\t\t\t\t<p>Amazon EKS is a fully managed Kubernetes service that simplifies running Kubernetes on AWS without having to manage the underlying infrastructure. It provides a scalable solution to deploy, manage, and scale containerized applications, making it ideal for orchestrating multiple containers across a cluster. EKS integrates seamlessly with AWS services like IAM for security and Elastic Load Balancing for handling traffic, ensuring that your generative AI applications can run efficiently and scale as needed. Kubernetes also allows flexibility in managing containerized applications with tools like Helm, making EKS perfect for AI workloads.</p>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p>AWS Glue DataBrew</p>\n\t\t\t\t\t\t<p>AWS Glue DataBrew is a data preparation tool designed to clean and normalize data for analysis and machine learning. It is not related to running or orchestrating containerized applications.</p>\n\t\t\t\t\t\t<p>Amazon S3 Glacier</p>\n\t\t\t\t\t\t<p>Amazon S3 Glacier is a storage service for archiving and long-term data retention at a low cost. It does not manage or orchestrate containers or handle real-time applications.</p>\n\t\t\t\t\t\t<p>Amazon Elastic Container Service (Amazon ECS)</p>\n\t\t\t\t\t\t<p>Amazon ECS is another AWS service for running containerized applications, but it is not a Kubernetes solution. It provides container orchestration using Docker rather than Kubernetes. If you need Kubernetes, EKS is the right choice.</p>\n\t\t\t\t\t\t<p>References:</p>\n\t\t\t\t\t\t<p><a href=\"https://aws.amazon.com/eks\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/eks</a>\n\t\t\t\t\t\t</p>"
     },
     {
       "id": "10-44",
@@ -1335,35 +1160,6 @@
       ],
       "multiSelect": true,
       "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p>Transformer-based large language models (LLMs)</p>\n\t\t\t\t\t\t<p>Transformer-based LLMs are key to creating AI systems that generate customer support responses. These models are highly effective for understanding and generating human-like text in various languages. They use attention mechanisms to process long sequences of words, allowing them to capture the context and meaning of the input query. By training these models on multilingual datasets, the system can generate accurate responses in different languages, adapting to the needs of diverse customers. LLMs like GPT and BERT are widely used for this purpose.</p>\n\t\t\t\t\t\t<p>Tokens and embeddings</p>\n\t\t\t\t\t\t<p>Tokens and embeddings are fundamental concepts in generative AI. A token represents a unit of text, such as a word or a character, while embeddings are vector representations of these tokens in a continuous space. Embeddings help the AI system understand the meaning and relationships between words. By using tokens and embeddings, the system can convert language into a numerical form that the model can process. This is crucial for generating coherent and context-aware responses, regardless of the language being used.</p>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p>Rule-based systems</p>\n\t\t\t\t\t\t<p>Rule-based systems rely on predefined logic and are not adaptive to language variations or complex queries. They are rigid and less effective for dynamic or multilingual customer support responses.</p>\n\t\t\t\t\t\t<p>Multi-modal models</p>\n\t\t\t\t\t\t<p>Multi-modal models process multiple types of data (like images, text, or sound) simultaneously. While useful in certain contexts, they are not necessary for generating text-based customer support responses.</p>\n\t\t\t\t\t\t<p>Classical machine learning algorithms</p>\n\t\t\t\t\t\t<p>Classical machine learning algorithms, like decision trees or SVMs, are not designed for text generation or language understanding. They are more suited for structured data and do not handle natural language tasks as efficiently as transformer-based models.</p>\n\t\t\t\t\t\t<p>References:</p>\n\t\t\t\t\t\t<p><a href=\"https://aws.amazon.com/what-is/generative-ai\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/what-is/generative-ai</a>\n\t\t\t\t\t\t</p>"
-    },
-    {
-      "id": "10-54",
-      "number": 54,
-      "text": "A video game company wants to use generative AI to automatically create realistic 3D models of characters and environments, speeding up the development process. Which of the following generative AI methods would be best for this use case? (Select TWO.)",
-      "options": [
-        {
-          "text": "Reinforcement learning to create game environments",
-          "correct": false
-        },
-        {
-          "text": "Generative Adversarial Networks (GANs) for creating 3D models",
-          "correct": true
-        },
-        {
-          "text": "Clustering algorithms for model generation",
-          "correct": false
-        },
-        {
-          "text": "Diffusion models for generating high-quality images",
-          "correct": true
-        },
-        {
-          "text": "Transformer-based language models for text generation",
-          "correct": false
-        }
-      ],
-      "multiSelect": true,
-      "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p>Diffusion models for generating high-quality images</p>\n\t\t\t\t\t\t<p>Diffusion models are a type of generative AI that can produce high-quality, detailed images, making them suitable for generating realistic 3D textures and visual components in game development. While these models are more commonly used for generating 2D images, they can be adapted for generating components that contribute to 3D model creation, such as textures for characters and environments, leading to visually realistic outputs.</p>\n\t\t\t\t\t\t<p>Generative Adversarial Networks (GANs) for creating 3D models</p>\n\t\t\t\t\t\t<p>Generative Adversarial Networks (GANs) are highly effective for creating realistic 3D models. GANs consist of two neural networks (a generator and a discriminator) that work together to produce realistic data. In the context of video game development, GANs can generate detailed 3D models of characters, landscapes, and environments by learning from large datasets of 3D assets. This method accelerates the development process by automating the creation of complex and realistic models.</p>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p>Reinforcement learning to create game environments</p>\n\t\t\t\t\t\t<p>Reinforcement learning is useful for training AI agents to interact with environments but is not designed for generating 3D models or characters. It focuses on decision-making and learning through actions rather than content generation.</p>\n\t\t\t\t\t\t<p>Transformer-based language models for text generation</p>\n\t\t\t\t\t\t<p>Transformer-based language models are optimized for text generation and understanding. While powerful for dialogue systems or game narratives, they are not suitable for generating 3D models or visual content.</p>\n\t\t\t\t\t\t<p>Clustering algorithms for model generation</p>\n\t\t\t\t\t\t<p>Clustering algorithms group similar data points but are not used for generating new 3D models. They do not have the capability to create new assets, making them irrelevant to this use case.</p>\n\t\t\t\t\t\t<p>References:</p>\n\t\t\t\t\t\t<p><a href=\"https://aws.amazon.com/blogs/machine-learning/safe-image-generation-and-diffusion-models-with-amazon-ai-content-moderation-services\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/blogs/machine-learning/safe-image-generation-and-diffusion-models-with-amazon-ai-content-moderation-services</a></p>\n\t\t\t\t\t\t<p><a href=\"https://aws.amazon.com/what-is/gan\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/what-is/gan</a>\n\t\t\t\t\t\t</p>"
     },
     {
       "id": "10-55",

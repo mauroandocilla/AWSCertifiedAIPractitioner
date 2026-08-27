@@ -1,7 +1,7 @@
 {
   "setNumber": 2,
   "sourceFile": "Practice_Set_2.html",
-  "questionCount": 54,
+  "questionCount": 43,
   "questions": [
     {
       "id": "2-1",
@@ -56,56 +56,6 @@
       ],
       "multiSelect": true,
       "explanationHtml": "<p>Ensuring data privacy and detecting and mitigating bias are key practices for responsible AI.</p>"
-    },
-    {
-      "id": "2-3",
-      "number": 3,
-      "text": "What is a key advantage of using Amazon Bedrock Studio for generative AI development?",
-      "options": [
-        {
-          "text": "It requires no authentication",
-          "correct": false
-        },
-        {
-          "text": "It provides a collaborative environment for developers",
-          "correct": true
-        },
-        {
-          "text": "It eliminates the need for data preprocessing",
-          "correct": false
-        },
-        {
-          "text": "It guarantees 100% accuracy",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>Amazon Bedrock Studio provides a collaborative environment for developers to work on generative AI solutions.</p>"
-    },
-    {
-      "id": "2-4",
-      "number": 4,
-      "text": "What is the benefit of wrapping instructions in a single tagged section in prompts?",
-      "options": [
-        {
-          "text": "It prevents the model from revealing the salted sequence",
-          "correct": true
-        },
-        {
-          "text": "It simplifies model training",
-          "correct": false
-        },
-        {
-          "text": "It enhances data storage",
-          "correct": false
-        },
-        {
-          "text": "It reduces API call costs",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>Wrapping instructions in a single tagged section prevents the model from revealing the salted sequence.</p>"
     },
     {
       "id": "2-5",
@@ -206,56 +156,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Amazon Bedrock ensures data privacy by creating a private copy of the foundation model.</p>"
-    },
-    {
-      "id": "2-9",
-      "number": 9,
-      "text": "Which AWS offering enables users to find, buy, and immediately start using software solutions in their AWS environment?",
-      "options": [
-        {
-          "text": "AWS Config",
-          "correct": false
-        },
-        {
-          "text": "AWS OpsWorks",
-          "correct": false
-        },
-        {
-          "text": "AWS Marketplace",
-          "correct": true
-        },
-        {
-          "text": "AWS SDK",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>AWS Marketplace is a digital catalog with thousands of software listings from independent software vendors.</p>"
-    },
-    {
-      "id": "2-10",
-      "number": 10,
-      "text": "Which feature allows Amazon Q Business to handle complex natural language queries?",
-      "options": [
-        {
-          "text": "Predefined response templates",
-          "correct": false
-        },
-        {
-          "text": "Semantic document retriever",
-          "correct": true
-        },
-        {
-          "text": "Regular expressions",
-          "correct": false
-        },
-        {
-          "text": "Basic keyword matching",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>The semantic document retriever enables Amazon Q Business to handle complex natural language queries effectively.</p>"
     },
     {
       "id": "2-11",
@@ -383,31 +283,6 @@
       "explanationHtml": "<p>Amazon Bedrock agents can be tested through the Bedrock console or via API calls.</p>"
     },
     {
-      "id": "2-16",
-      "number": 16,
-      "text": "How can Amazon GuardDuty enhance the security of AI applications?",
-      "options": [
-        {
-          "text": "By storing encryption keys",
-          "correct": false
-        },
-        {
-          "text": "By detecting threats and monitoring malicious activities",
-          "correct": true
-        },
-        {
-          "text": "By reducing model training time",
-          "correct": false
-        },
-        {
-          "text": "By increasing data storage capacity",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>Amazon GuardDuty enhances security by detecting threats and monitoring malicious activities.</p>"
-    },
-    {
       "id": "2-17",
       "number": 17,
       "text": "How does Amazon Bedrock ensure the security of sensitive data in prompts?",
@@ -456,31 +331,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>SageMaker Pipelines automates and manages end-to-end ML workflows, improving efficiency and reliability.</p>"
-    },
-    {
-      "id": "2-19",
-      "number": 19,
-      "text": "How does Managed Spot Training reduce costs in SageMaker?",
-      "options": [
-        {
-          "text": "By providing data encryption",
-          "correct": false
-        },
-        {
-          "text": "By increasing model complexity",
-          "correct": false
-        },
-        {
-          "text": "By using EC2 Spot Instances",
-          "correct": true
-        },
-        {
-          "text": "By extending training duration",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>Managed Spot Training reduces costs by using EC2 Spot Instances.</p>"
     },
     {
       "id": "2-20",
@@ -858,56 +708,6 @@
       "explanationHtml": "<p>Amazon Bedrock offers access to high-performing foundation models (FMs).</p>"
     },
     {
-      "id": "2-35",
-      "number": 35,
-      "text": "Which AWS service can be integrated with Amazon Bedrock for enhanced search capabilities?",
-      "options": [
-        {
-          "text": "Amazon Kendra",
-          "correct": true
-        },
-        {
-          "text": "Amazon S3",
-          "correct": false
-        },
-        {
-          "text": "Amazon Polly",
-          "correct": false
-        },
-        {
-          "text": "Amazon RDS",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>Amazon Kendra can be integrated with Amazon Bedrock for enhanced search capabilities.</p>"
-    },
-    {
-      "id": "2-36",
-      "number": 36,
-      "text": "Which AWS service would simplify the migration of a database to AWS?",
-      "options": [
-        {
-          "text": "AWS Storage Gateway",
-          "correct": false
-        },
-        {
-          "text": "AWS Database Migration Service (AWS DMS)",
-          "correct": true
-        },
-        {
-          "text": "Amazon AppStream 2.0",
-          "correct": false
-        },
-        {
-          "text": "Amazon EC2",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>AWS Database Migration Service (AWS DMS) is specifically designed to facilitate the migration of databases to AWS.</p>"
-    },
-    {
       "id": "2-37",
       "number": 37,
       "text": "What is overfitting in machine learning?",
@@ -1033,31 +833,6 @@
       "explanationHtml": "<p>Optimizing prompt phrasing enhances the performance of generative AI solutions.</p>"
     },
     {
-      "id": "2-42",
-      "number": 42,
-      "text": "What is the primary function of Amazon Q Business?",
-      "options": [
-        {
-          "text": "Provide answers and automate tasks using enterprise data",
-          "correct": true
-        },
-        {
-          "text": "Perform financial audits",
-          "correct": false
-        },
-        {
-          "text": "Generate marketing campaigns",
-          "correct": false
-        },
-        {
-          "text": "Monitor network traffic",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>Amazon Q Business uses generative AI to provide answers and automate tasks based on enterprise data.</p>"
-    },
-    {
       "id": "2-43",
       "number": 43,
       "text": "Which type of learning involves adjusting actions based on rewards and penalties?",
@@ -1158,31 +933,6 @@
       "explanationHtml": "<p>Amazon SageMaker Clarify is used for detecting and measuring bias in AI models.</p>"
     },
     {
-      "id": "2-47",
-      "number": 47,
-      "text": "What is the function of Amazon Cognito in securing AI solutions?",
-      "options": [
-        {
-          "text": "To create machine learning models",
-          "correct": false
-        },
-        {
-          "text": "To provide user authentication and access control",
-          "correct": true
-        },
-        {
-          "text": "To manage data storage",
-          "correct": false
-        },
-        {
-          "text": "To monitor network traffic",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>Amazon Cognito provides user authentication and access control for applications.</p>"
-    },
-    {
       "id": "2-48",
       "number": 48,
       "text": "Which AWS service can be used for sentiment analysis of customer feedback?",
@@ -1281,31 +1031,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>The primary difference is the use of labeled data in supervised learning.</p>"
-    },
-    {
-      "id": "2-52",
-      "number": 52,
-      "text": "How does AWS PrivateLink enhance the security of data transfers?",
-      "options": [
-        {
-          "text": "By providing private connectivity between VPCs and AWS services",
-          "correct": true
-        },
-        {
-          "text": "By disabling encryption",
-          "correct": false
-        },
-        {
-          "text": "By increasing data storage capacity",
-          "correct": false
-        },
-        {
-          "text": "By using public internet",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>AWS PrivateLink provides private connectivity between VPCs and AWS services.</p>"
     },
     {
       "id": "2-53",

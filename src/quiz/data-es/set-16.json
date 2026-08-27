@@ -1,7 +1,7 @@
 {
   "setNumber": 16,
   "sourceFile": "Practice_Set_16.html",
-  "questionCount": 60,
+  "questionCount": 57,
   "questions": [
     {
       "id": "16-1",
@@ -533,56 +533,6 @@
       "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>Amazon Comprehend</p>\n\t\t\t\t\t\t<p>Amazon Comprehend utiliza procesamiento de lenguaje natural (NLP) para analizar datos de texto no estructurado. Puede identificar el sentimiento (positivo, negativo, neutral o mixto) a partir de reseñas de clientes, tickets de soporte, publicaciones en redes sociales y más. Al usar Amazon Comprehend, las empresas pueden obtener información en tiempo real sobre las opiniones de los clientes, lo que ayuda a mejorar la experiencia del cliente, potenciar productos y optimizar los procesos de atención al cliente. Además, Amazon Comprehend puede extraer frases clave, entidades y temas, convirtiéndola en una herramienta versátil para análisis de texto. Esto la hace ideal para aplicaciones que necesitan análisis de sentimientos y otras tareas de comprensión de texto.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>Amazon Transcribe</p>\n\t\t\t\t\t\t<p>Amazon Transcribe convierte voz a texto. Se usa principalmente para tareas de transcripción, como convertir audio en texto. No realiza análisis de sentimientos, pero puede utilizarse junto con otros servicios como Amazon Comprehend para analítica de texto.</p>\n\t\t\t\t\t\t<p>Amazon Lex</p>\n\t\t\t\t\t\t<p>Amazon Lex es un servicio de AWS para construir interfaces conversacionales como chatbots y asistentes de voz. Aunque ayuda a entender voz y texto, no está específicamente diseñado para análisis de sentimientos de datos de texto como reseñas de clientes.</p>\n\t\t\t\t\t\t<p>Amazon Kendra</p>\n\t\t\t\t\t\t<p>Amazon Kendra es un servicio de búsqueda inteligente que usa machine learning para proporcionar resultados de búsqueda más relevantes. Está optimizado para consultas de búsqueda dentro del contenido de una organización, pero no se enfoca en análisis de sentimientos.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://docs.aws.amazon.com/comprehend/latest/dg/what-is.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/comprehend/latest/dg/what-is.html</a>\n\t\t\t\t\t\t</p>"
     },
     {
-      "id": "16-22",
-      "number": 22,
-      "text": "Una institución financiera desea mejorar la detección de fraude aprovechando la IA. Tienen un gran conjunto de datos de transacciones históricas y necesitan una solución que pueda identificar automáticamente actividades potencialmente fraudulentas. ¿Cuál es el servicio de AWS más adecuado para esta tarea?",
-      "options": [
-        {
-          "text": "AWS Glue",
-          "correct": false
-        },
-        {
-          "text": "Amazon Fraud Detector",
-          "correct": true
-        },
-        {
-          "text": "Amazon Polly",
-          "correct": false
-        },
-        {
-          "text": "Amazon Comprehend",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>Amazon Fraud Detector</p>\n\t\t\t\t\t\t<p>Amazon Fraud Detector está diseñado específicamente para ayudar a identificar posibles fraudes usando aprendizaje automático. El servicio puede detectar automáticamente actividades fraudulentas en tiempo real analizando datos de transacciones históricas y utilizando modelos de detección de fraude preestablecidos. Esto permite que las instituciones financieras prevengan fraudes de manera más efectiva sin necesidad de tener experiencia profunda en aprendizaje automático. Es altamente personalizable y funciona bien con una amplia variedad de conjuntos de datos, lo que lo hace ideal para casos de uso de detección de fraude.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>Amazon Comprehend</p>\n\t\t\t\t\t\t<p>Amazon Comprehend es un servicio de procesamiento de lenguaje natural (NLP) que te ayuda a extraer información y patrones de datos de texto. No está diseñado para detección de fraude y no sería adecuado para analizar datos de transacciones o identificar fraude.</p>\n\t\t\t\t\t\t<p>Amazon Polly</p>\n\t\t\t\t\t\t<p>Amazon Polly convierte texto en voz con sonido natural. Es irrelevante para la detección de fraude, ya que no analiza datos ni identifica patrones fraudulentos.</p>\n\t\t\t\t\t\t<p>AWS Glue</p>\n\t\t\t\t\t\t<p>AWS Glue es un servicio de integración de datos que prepara datos para su análisis realizando operaciones ETL (extracción, transformación, carga). Ayuda a mover y limpiar datos, pero no tiene capacidades de detección de fraude.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://aws.amazon.com/fraud-detector\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/fraud-detector</a>\n\t\t\t\t\t\t</p>"
-    },
-    {
-      "id": "16-23",
-      "number": 23,
-      "text": "Tu equipo está desarrollando una solución de IA para una empresa de retail que necesita cumplir con estándares de cumplimiento internacional como los de la International Organization for Standardization (ISO) y System and Organization Controls (SOC). Necesitas automatizar el proceso de seguimiento y auditoría de cumplimiento en el ambiente de AWS. ¿Qué servicio de AWS deberías usar para ayudar con la automatización y auditoría de cumplimiento?",
-      "options": [
-        {
-          "text": "AWS Audit Manager",
-          "correct": true
-        },
-        {
-          "text": "Amazon Macie",
-          "correct": false
-        },
-        {
-          "text": "AWS Lambda",
-          "correct": false
-        },
-        {
-          "text": "AWS Artifact",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>AWS Audit Manager</p>\n\t\t\t\t\t\t<p>AWS Audit Manager está diseñado para simplificar y automatizar el proceso de seguimiento del cumplimiento con diversas regulaciones y estándares de la industria como ISO, SOC y GDPR. Te ayuda a recopilar evidencia de forma continua, evaluarla contra frameworks predefinidos, y generar automáticamente reportes listos para auditoría. Este servicio simplifica el complejo proceso de auditoría al rastrear las actividades de cumplimiento dentro de tu ambiente de AWS, reduciendo esfuerzos manuales y proporcionando documentación consistente. Audit Manager es particularmente útil cuando tu equipo desarrolla soluciones de IA para industrias como retail, donde el cumplimiento con estándares internacionales es crítico. Al automatizar los procesos de auditoría, puedes garantizar que tu organización se mantenga en cumplimiento con los estándares necesarios y tenga registros precisos para presentar durante auditorías regulatorias.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>AWS Artifact</p>\n\t\t\t\t\t\t<p>AWS Artifact es un repositorio de documentos relacionados con cumplimiento como reportes y acuerdos. Si bien proporciona acceso a las propias certificaciones y atestaciones de AWS para cumplimiento, no automatiza el seguimiento y auditoría del estado de cumplimiento de tu ambiente específico.</p>\n\t\t\t\t\t\t<p>Amazon Macie</p>\n\t\t\t\t\t\t<p>Amazon Macie es un servicio de seguridad que ayuda a proteger datos sensibles usando machine learning, pero no está específicamente diseñado para automatizar el seguimiento o auditoría de cumplimiento con estándares como ISO o SOC.</p>\n\t\t\t\t\t\t<p>AWS Lambda</p>\n\t\t\t\t\t\t<p>AWS Lambda es un servicio de compute usado para ejecutar código sin gestionar servidores. Si bien puede usarse para diversas tareas de automatización, no proporciona características integradas para rastrear o auditar el cumplimiento con estándares internacionales.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://docs.aws.amazon.com/audit-manager/latest/userguide/what-is.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/audit-manager/latest/userguide/what-is.html</a>\n\t\t\t\t\t\t</p>"
-    },
-    {
       "id": "16-24",
       "number": 24,
       "text": "Una empresa está desarrollando un sistema de IA que aún se encuentra en fase de desarrollo, y el equipo de desarrolladores ha identificado vulnerabilidades relacionadas con inyecciones de datos externos durante la fase de generación de prompts. ¿Qué preocupación de seguridad debería abordarse para proteger el sistema de entradas maliciosas?",
@@ -1093,31 +1043,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>Prompts basados en contexto e instrucciones</p>\n\t\t\t\t\t\t<p>Enfocarse en prompts basados en contexto e instrucciones es esencial para mejorar la capacidad del asistente virtual de entender y responder completamente a las solicitudes de los usuarios. Este concepto de ingeniería de prompts implica proporcionar al modelo instrucciones claras y el contexto necesario para que pueda interpretar mejor las consultas del usuario y entregar respuestas más precisas y completas. En el caso de un asistente de reserva de viajes, agregar contexto adicional, como especificar que el usuario busca tanto vuelos como hoteles o añadir detalles sobre la ubicación y las fechas, ayudará al modelo a generar respuestas más completas y relevantes. Al redactar prompts detallados y ricos en contexto, te aseguras de que el asistente tenga toda la información que necesita para cumplir con la solicitud del usuario.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>Prompts negativos</p>\n\t\t\t\t\t\t<p>Los prompts negativos se utilizan para instruir al modelo a evitar tipos específicos de respuestas o contenido, pero no son directamente útiles para mejorar la comprensión del modelo sobre el contexto en este escenario.</p>\n\t\t\t\t\t\t<p>Exploración del espacio latente</p>\n\t\t\t\t\t\t<p>La exploración del espacio latente se refiere a examinar cómo se representan los datos dentro de las estructuras internas del modelo y no está directamente relacionada con mejorar la comprensión contextual o la ingeniería de prompts.</p>\n\t\t\t\t\t\t<p>Complejidad del modelo</p>\n\t\t\t\t\t\t<p>La complejidad del modelo se ocupa de la arquitectura o el tamaño del modelo, pero no aborda la necesidad de instrucciones más claras o contexto para mejorar la completitud de las respuestas en el asistente virtual.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://aws.amazon.com/what-is/prompt-engineering\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/what-is/prompt-engineering</a>\n\t\t\t\t\t\t</p>"
-    },
-    {
-      "id": "16-44",
-      "number": 44,
-      "text": "Tu organización está implementando un modelo de IA generativa para documentación legal que debe cumplir con regulaciones estrictas de cumplimiento, incluyendo certificaciones ISO y SOC. ¿Cuál combinación de servicios de AWS te ayudará mejor a lograr y mantener estos estándares de cumplimiento?",
-      "options": [
-        {
-          "text": "AWS Audit Manager para rastrear cumplimiento, Amazon CloudTrail para registrar actividades, y AWS Config para monitorear cambios.",
-          "correct": true
-        },
-        {
-          "text": "Amazon Inspector para monitorear cumplimiento, Amazon SageMaker Clarify para detección de sesgos, y Amazon Macie para escaneo de PII.",
-          "correct": false
-        },
-        {
-          "text": "AWS IAM para gestionar roles, Amazon SageMaker para entrenar el modelo, y Amazon DynamoDB para almacenamiento de datos.",
-          "correct": false
-        },
-        {
-          "text": "Amazon CloudWatch para monitoreo en tiempo real, AWS Glue para transformación de datos, y Amazon Redshift para almacenar datos de cumplimiento.",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>AWS Audit Manager para rastrear cumplimiento, Amazon CloudTrail para registrar actividades, y AWS Config para monitorear cambios.</p>\n\t\t\t\t\t\t<p>Usar AWS Audit Manager, Amazon CloudTrail y AWS Config en conjunto es el mejor enfoque para lograr y mantener regulaciones de cumplimiento estrictas como certificaciones ISO y SOC. AWS Audit Manager te ayuda a auditar continuamente tu uso de AWS y automatiza la recopilación de evidencia, facilitando la evaluación del riesgo y el cumplimiento con regulaciones. Simplifica el proceso de recopilar y organizar la evidencia requerida para auditorías, ahorrando tiempo y reduciendo esfuerzo manual. Amazon CloudTrail registra todas las llamadas API de AWS y actividades de usuarios dentro de tu cuenta de AWS. Proporciona registro exhaustivo, que es esencial para análisis forense, monitoreo de seguridad y auditoría de cumplimiento. AWS Config monitorea y registra continuamente las configuraciones de tus recursos de AWS y te permite automatizar la evaluación de configuraciones registradas contra configuraciones deseadas. Ayuda a detectar desvíos de configuración y asegura que tus recursos permanezcan cumpliendo normativas a lo largo del tiempo. Juntos, estos servicios proporcionan un marco sólido para rastrear cumplimiento, registrar actividades y monitorear cambios, que son críticos para cumplir y mantener estándares de cumplimiento como ISO y SOC.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>AWS IAM para gestionar roles, Amazon SageMaker para entrenar el modelo, y Amazon DynamoDB para almacenamiento de datos.</p>\n\t\t\t\t\t\t<p>Aunque AWS IAM, SageMaker y DynamoDB son esenciales para control de acceso, entrenamiento de modelos y almacenamiento de datos, no abordan específicamente el rastreo de cumplimiento o auditoría necesaria para certificaciones ISO y SOC.</p>\n\t\t\t\t\t\t<p>Amazon Inspector para monitorear cumplimiento, Amazon SageMaker Clarify para detección de sesgos, y Amazon Macie para escaneo de PII.</p>\n\t\t\t\t\t\t<p>Amazon Inspector se enfoca en evaluaciones de seguridad, SageMaker Clarify ayuda a detectar sesgos en modelos, y Amazon Macie identifica datos sensibles. Estos servicios son valiosos pero no proporcionan la gestión exhaustiva de cumplimiento requerida para certificaciones.</p>\n\t\t\t\t\t\t<p>Amazon CloudWatch para monitoreo en tiempo real, AWS Glue para transformación de datos, y Amazon Redshift para almacenar datos de cumplimiento.</p>\n\t\t\t\t\t\t<p>Estos servicios están orientados hacia monitoreo de rendimiento, procesamiento de datos y análisis. No ofrecen las herramientas específicas necesarias para auditoría de cumplimiento y mantener certificaciones como ISO y SOC.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://docs.aws.amazon.com/audit-manager/latest/userguide/what-is.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/audit-manager/latest/userguide/what-is.html</a></p>\n\t\t\t\t\t\t<p><a href=\"https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-user-guide.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-user-guide.html</a></p>\n\t\t\t\t\t\t<p><a href=\"https://docs.aws.amazon.com/config/latest/developerguide/WhatIsConfig.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/config/latest/developerguide/WhatIsConfig.html</a>\n\t\t\t\t\t\t</p>"
     },
     {
       "id": "16-45",

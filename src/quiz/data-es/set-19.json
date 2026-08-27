@@ -1,33 +1,8 @@
 {
   "setNumber": 19,
   "sourceFile": "Practice_Set_19.html",
-  "questionCount": 57,
+  "questionCount": 38,
   "questions": [
-    {
-      "id": "19-1",
-      "number": 1,
-      "text": "Como ingeniero de DevOps en una empresa de software, te encargaron configurar un pipeline de Integración Continua/Despliegue Continuo (CI/CD) para un nuevo modelo de machine learning (ML). El modelo recibirá actualizaciones y mejoras continuas. Necesitás garantizar que estos cambios, incluyendo el entrenamiento y despliegue de nuevas versiones del modelo, se automaticen de manera eficiente con mínima intervención manual. ¿Cuál es el servicio de AWS más adecuado para automatizar estas actualizaciones y despliegues del modelo de ML?",
-      "options": [
-        {
-          "text": "Amazon S3",
-          "correct": false
-        },
-        {
-          "text": "AWS Lambda",
-          "correct": false
-        },
-        {
-          "text": "Amazon EC2",
-          "correct": false
-        },
-        {
-          "text": "AWS CodePipeline",
-          "correct": true
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>AWS CodePipeline está específicamente diseñado para automatizar las fases de un workflow de CI/CD, lo que lo convierte en la opción ideal para gestionar actualizaciones y despliegues de modelos de machine learning. Este servicio facilita la entrega continua de cambios al ejecutar automáticamente cada paso del pipeline cuando se detectan cambios en el código, manejando de manera eficiente las complejidades relacionadas con el despliegue y actualizaciones de modelos de ML. Al integrarse con otros servicios de AWS como AWS CodeBuild para servicios de compilación y AWS CodeDeploy para automatización de despliegues, permite crear un pipeline altamente eficiente, automatizado y reproducible. Más información sobre AWS CodePipeline y su uso en workflows de ML se puede encontrar en la <a href=\"https://docs.aws.amazon.com/codepipeline/latest/userguide/welcome.html\" rel=\"noopener\" target=\"_blank\">documentación de AWS CodePipeline</a>.</p>"
-    },
     {
       "id": "19-2",
       "number": 2,
@@ -52,56 +27,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Amazon Polly proporciona una función de síntesis asincrónica que está especialmente diseñada para gestionar y procesar grandes volúmenes de texto de manera eficiente. Esto es particularmente útil en aplicaciones como audiolibros donde textos extensos necesitan convertirse en voz. Esta función permite que las tareas se procesen en segundo plano y que los archivos de audio se almacenen o se recuperen desde un bucket de S3, lo que la hace eficiente y escalable para aplicaciones con textos largos.</p>"
-    },
-    {
-      "id": "19-3",
-      "number": 3,
-      "text": "Una empresa almacena grandes volúmenes de datos en Amazon S3 y planea realizar consultas y análisis puntuales directamente sobre estos archivos sin aplicar transformaciones ni procesos ETL. Necesitan un servicio sin servidor, escalable, que permita consultas SQL sobre estos datos. ¿Cuál es el servicio de AWS más adecuado para este requisito?",
-      "options": [
-        {
-          "text": "Amazon DynamoDB",
-          "correct": false
-        },
-        {
-          "text": "Amazon Athena",
-          "correct": true
-        },
-        {
-          "text": "Amazon RDS",
-          "correct": false
-        },
-        {
-          "text": "Amazon Redshift",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>Amazon Athena está diseñado específicamente para realizar consultas SQL directamente sobre datos almacenados en Amazon S3 sin necesidad de provisionar servidores ni cargar datos, lo que lo hace muy apropiado para análisis puntuales rápidos y consultas complejas sobre grandes volúmenes de información. Con una arquitectura sin servidor, Athena se escala automáticamente y cobra a los usuarios por consulta según la cantidad de datos escaneados. Esto hace que Athena sea no solo eficiente, sino también rentable para cargas de trabajo analíticas.</p>"
-    },
-    {
-      "id": "19-4",
-      "number": 4,
-      "text": "En el contexto de usar AWS para aplicaciones de inteligencia artificial, ¿en qué categoría de servicio se clasifica Amazon Elastic Compute Cloud (EC2)?",
-      "options": [
-        {
-          "text": "Infrastructure as a Service (IaaS)",
-          "correct": true
-        },
-        {
-          "text": "Software as a Service (SaaS)",
-          "correct": false
-        },
-        {
-          "text": "Platform as a Service (PaaS)",
-          "correct": false
-        },
-        {
-          "text": "Network as a Service (NaaS)",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>Amazon Elastic Compute Cloud (EC2) forma parte del modelo Infrastructure as a Service (IaaS), que proporciona recursos informáticos físicos virtualizados a través de Internet. EC2 permite a los usuarios lanzar servidores virtuales, configurar seguridad y redes, y administrar almacenamiento, lo que lo convierte en una base flexible para implementar aplicaciones de IA a gran escala. Este servicio se clasifica en la categoría IaaS porque proporciona recursos informáticos fundamentales en lugar de software o plataformas.</p>"
     },
     {
       "id": "19-5",
@@ -152,31 +77,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>En los servicios de machine learning de AWS, particularmente cuando se trabaja con modelos de lenguaje, controlar el tamaño de la salida es crucial para gestionar recursos y garantizar un comportamiento predecible. El parámetro 'Max tokens' está específicamente diseñado para limitar la cantidad de tokens que el modelo puede generar, lo que lo convierte en una opción apropiada para controlar el tamaño de la salida. Esto puede ser particularmente útil en escenarios como la generación automática de contenido, donde el tamaño de la salida necesita estar acotado para ajustarse a formatos o casos de uso particulares.</p>"
-    },
-    {
-      "id": "19-7",
-      "number": 7,
-      "text": "En el contexto de AWS, ¿cómo ayuda específicamente el servicio AWS Trusted Advisor a optimizar la utilización de recursos y asegurar sistemas de machine learning?",
-      "options": [
-        {
-          "text": "Corrige automáticamente vulnerabilidades de seguridad en modelos de machine learning.",
-          "correct": false
-        },
-        {
-          "text": "Proporciona recomendaciones para mejoras de seguridad y optimización de recursos basadas en patrones de uso.",
-          "correct": true
-        },
-        {
-          "text": "Gestiona directamente workflows de ML, configurando y optimizándolos automáticamente.",
-          "correct": false
-        },
-        {
-          "text": "Ofrece monitoreo en tiempo real y análisis predictivos para modelos de ML.",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>AWS Trusted Advisor es una herramienta que ayuda a los usuarios de AWS a seguir mejores prácticas al proporcionar información sobre sus ambientes de AWS, enfocándose en áreas como optimización de costos, seguridad, tolerancia a fallos, rendimiento y límites de servicio. No gestiona ni monitorea modelos de ML directamente, pero proporciona orientación valiosa que puede mejorar la seguridad y eficiencia de los recursos utilizados por estos modelos.</p>"
     },
     {
       "id": "19-8",
@@ -327,31 +227,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>AWS CloudTrail es crucial para hacer seguimiento de las acciones del usuario y el uso de API en AWS, incluyendo ambientes de machine learning. Captura todas las llamadas a API de SageMaker y otros servicios de ML como eventos, incluyendo llamadas desde la consola de SageMaker y llamadas de código a las APIs de SageMaker, funcionando así como la mejor herramienta para auditoría en escenarios de cumplimiento y monitoreo. Esto ayuda a las organizaciones a garantizar el cumplimiento operativo y normativo de manera efectiva. Para más información, puedes visitar la documentación oficial de AWS CloudTrail en: <a href=\"https://aws.amazon.com/cloudtrail/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/cloudtrail/</a>\n\t\t\t\t\t\t</p>"
-    },
-    {
-      "id": "19-14",
-      "number": 14,
-      "text": "Una empresa multinacional quiere mejorar sus capacidades de inteligencia de negocios y está considerando usar Amazon QuickSight para visualizar datos de desempeño en todas sus operaciones globales. ¿Cuál de las siguientes características permitiría mejor la agregación dinámica de datos, consultas interactivas y actualizaciones automáticas de visualizaciones en Amazon QuickSight?",
-      "options": [
-        {
-          "text": "Integrar con Amazon SageMaker para desplegar modelos de machine learning directamente dentro de los dashboards de QuickSight.",
-          "correct": false
-        },
-        {
-          "text": "Configurar un data warehouse de Amazon Redshift para almacenar datos históricos para reportes periódicos dentro de QuickSight.",
-          "correct": false
-        },
-        {
-          "text": "Usar el motor SPICE de QuickSight para realizar cálculos de datos rápidos en memoria y renderizar actualizaciones visuales de manera eficiente.",
-          "correct": true
-        },
-        {
-          "text": "Habilitar ML Insights para el descubrimiento automático de patrones y anomalías en los datos.",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>El motor SPICE de Amazon QuickSight está diseñado para mejorar el análisis de negocios al permitir procesamiento de datos rápido en memoria que respalda consultas interactivas y actualizaciones automáticas de visualizaciones. Esto permite a los usuarios ver datos actualizados de forma dinámica sin intervención manual, lo que lo convierte en una solución ideal para visualización de datos en tiempo real en un ambiente empresarial global. Para obtener más información, visita la documentación de AWS sobre QuickSight SPICE: <a href=\"https://docs.aws.amazon.com/quicksight/latest/user/welcome.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/quicksight/latest/user/welcome.html</a>\n\t\t\t\t\t\t</p>"
     },
     {
       "id": "19-15",
@@ -579,31 +454,6 @@
       "explanationHtml": "<p>Deep learning mejora la navegación robótica al permitir que el sistema de IA aprenda y generalice a partir de diversas entradas ambientales. El método clave utilizado es backpropagation, donde el modelo se entrena con grandes cantidades de datos y ajusta repetidamente sus parámetros internos para minimizar los errores de predicción. Esto resulta en una mejora de la capacidad del modelo para tomar decisiones en tiempo real en condiciones variables.</p>"
     },
     {
-      "id": "19-24",
-      "number": 24,
-      "text": "Una empresa de atención médica está considerando migrar su infraestructura local a AWS Cloud para mejorar la gestión de datos, aumentar la escalabilidad y reducir costos operacionales. El equipo de liderazgo desea entender el concepto básico de computación en la nube según la define AWS. ¿Cuál es la definición precisa de computación en la nube según AWS?",
-      "options": [
-        {
-          "text": "La computación en la nube es el proceso de usar un único servidor local para almacenar y procesar datos.",
-          "correct": false
-        },
-        {
-          "text": "La computación en la nube es la práctica de usar software de código abierto para todas las necesidades informáticas.",
-          "correct": false
-        },
-        {
-          "text": "La computación en la nube implica gestionar manualmente centros de datos físicos y hardware de red.",
-          "correct": false
-        },
-        {
-          "text": "La computación en la nube se refiere a la entrega bajo demanda de recursos e aplicaciones de TI a través de Internet con un modelo de precios de pago por lo que uses.",
-          "correct": true
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>La computación en la nube, según la define AWS, es la entrega de servicios informáticos, incluyendo servidores, almacenamiento, bases de datos, redes, software, análisis e inteligencia, a través de Internet (\"la nube\") para ofrecer innovación más rápida, recursos flexibles y economías de escala. Normalmente pagas solo por los servicios en la nube que utilizas, lo que ayuda a reducir costos operacionales, ejecutar la infraestructura de manera más eficiente y escalar según cambien las necesidades de tu negocio.</p>"
-    },
-    {
       "id": "19-25",
       "number": 25,
       "text": "Una empresa consultora global planea usar Amazon Translate para proporcionar servicios de traducción en tiempo real a sus clientes en diferentes países. La empresa desea asegurar seguridad de nivel superior para los datos traducidos en tránsito. ¿Cuál de las siguientes características deberían usar?",
@@ -691,31 +541,6 @@
       "explanationHtml": "<p>Analicemos los servicios de IA de AWS y cuáles son adecuados para realizar análisis de sentimiento en reseñas de clientes:</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b>Amazon Comprehend:</b>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>Es un servicio de procesamiento de lenguaje natural (NLP) que puede realizar análisis de sentimiento, reconocimiento de entidades, modelado de temas y detección de idiomas. Está específicamente diseñado para analizar datos de texto. Por lo tanto, es una excelente opción.</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b>Amazon Bedrock:</b>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>Amazon Bedrock es un servicio que ofrece una variedad de foundation models de alto desempeño de empresas líderes en IA a través de una API, junto con un amplio conjunto de capacidades que necesitas para construir aplicaciones de IA generativa, simplificando el desarrollo mientras mantienes privacidad y seguridad.<sup> 1 </sup> Puede usarse para análisis de sentimiento a través de sus foundation models, lo que la convierte en una opción correcta.<span>&nbsp;</span>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b>Amazon Textract:</b>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>Este servicio extrae texto y datos de documentos escaneados. No está directamente relacionado con el análisis de sentimiento.</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b>Amazon Rekognition:</b>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>Este servicio realiza análisis de imágenes y videos. No es aplicable para análisis de sentimiento basado en texto.</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b>Amazon Personalize:</b>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>Este servicio crea recomendaciones personalizadas para clientes. No analiza sentimiento.</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>Por lo tanto, los dos servicios de IA de AWS recomendados son:</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li><b>Amazon Comprehend</b></li>\n\t\t\t\t\t\t\t<li><b>Amazon Bedrock</b></li>\n\t\t\t\t\t\t</ul>"
     },
     {
-      "id": "19-28",
-      "number": 28,
-      "text": "Una empresa está implementando un modelo de machine learning en AWS y desea asegurar que gestiona sus costos de manera efectiva. ¿Cuál es la característica de AWS Cost Explorer que se debe usar para monitorear y gestionar los costos asociados con los servicios de machine learning de AWS?",
-      "options": [
-        {
-          "text": "Utilizar la API de Cost Explorer para consultar de forma programática datos de gasto por servicio y vincularlos a proyectos específicos de machine learning.",
-          "correct": true
-        },
-        {
-          "text": "Usar AWS Budgets para configurar alarmas cuando el gasto en servicios de machine learning supera umbrales predefinidos.",
-          "correct": false
-        },
-        {
-          "text": "Configurar AWS CloudTrail para rastrear el uso de API y los costos asociados con los servicios de machine learning de AWS.",
-          "correct": false
-        },
-        {
-          "text": "Habilitar Detailed Billing Reports para itemizar registros de transacciones diarias y por hora para servicios de ML.",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Utilizar la API de Cost Explorer para consultar de forma programática datos de gasto por servicio y vincularlos a proyectos específicos de machine learning.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p><b>Cost Explorer</b> es el servicio principal para <b>analizar costos históricos y previstos</b> y uso.</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>La <b>API de Cost Explorer</b> proporciona acceso programático a estos datos granulares, permitiendo a la empresa construir dashboards personalizados, integrar con herramientas financieras internas y, lo más importante, consultar costos utilizando <b>Cost Allocation Tags</b> (por ejemplo, <code>Project: ML-Fraud-Detection</code>).</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>Esta capacidad de consulta programática basada en tags es esencial para gestionar y atribuir costos de manera precisa a <b>proyectos y servicios específicos de machine learning</b> (como Amazon SageMaker o Amazon Bedrock), que es el requisito central de la pregunta.</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>Incorrecto</p>\n\t\t\t\t\t\t<p>Usar AWS Budgets para configurar alarmas cuando el gasto en servicios de machine learning supera umbrales predefinidos.</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>AWS Budgets</b> es la herramienta para <b>control proactivo de costos</b> (establecer umbrales y generar alertas). Si bien es crucial para la gestión de costos, es un servicio <i>separado</i> de AWS Cost Explorer. La pregunta específicamente solicita una característica de <b>AWS Cost Explorer</b>.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>Configurar AWS CloudTrail para rastrear el uso de API y los costos asociados con los servicios de machine learning de AWS.</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>AWS CloudTrail</b> es un servicio de <b>auditoría y gobernanza</b> que registra llamadas a API (quién hizo qué, cuándo). Si bien esta información de uso puede relacionarse indirectamente con costos, CloudTrail <b>no</b> es el servicio dedicado para calcular, visualizar, analizar y gestionar los <b>costos monetarios</b>. Esa es la función de la suite de Gestión de Costos de AWS (Cost Explorer, Budgets).</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>Habilitar Detailed Billing Reports para itemizar registros de transacciones diarias y por hora para servicios de ML.</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>El <b>AWS Cost and Usage Report (CUR)</b>, a veces referido como Detailed Billing Report, proporciona el nivel más granular de datos crudos de uso y costos. Sin embargo, estos datos se entregan como archivo(s) masivo(s) en un bucket S3 y requieren herramientas externas (como Amazon Athena o QuickSight) para consultar y analizar. <b>AWS Cost Explorer</b> es el servicio de AWS fácil de usar e interactivo construido específicamente para <b>visualizar, comprender y gestionar</b> estos datos sin requerir procesamiento externo, lo que lo convierte en la característica más directa y apropiada para monitorear costos.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>"
-    },
-    {
       "id": "19-29",
       "number": 29,
       "text": "Una empresa de servicios financieros está explorando Amazon Bedrock para simplificar el desarrollo de IA en casos de uso como detección de fraude, servicio personalizado al cliente y reportes automatizados. La empresa está particularmente interesada en entender las características clave y beneficios de Amazon Bedrock, incluyendo su capacidad para simplificar el acceso a modelos base poderosos, soportar personalizaciones e integrarse con servicios AWS existentes. Para tomar una decisión informada, la empresa necesita identificar cuál de las siguientes opciones se aplica correctamente a Amazon Bedrock y sus capacidades (Selecciona dos)",
@@ -772,81 +597,6 @@
       ],
       "multiSelect": true,
       "explanationHtml": "<p>Los modelos de machine learning transparentes y explicables son particularmente valiosos en campos como la salud, donde entender cómo se hacen las predicciones es crucial para la confianza, el cumplimiento normativo y la responsabilidad. Estos modelos facilitan la depuración y optimización más sencillas, y ayudan a fomentar la confianza y seguridad en las predicciones del modelo al hacer que el proceso de toma de decisiones sea claro. Para más información: <a href=\"https://aws.amazon.com/machine-learning/explainable-ai/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/machine-learning/explainable-ai/</a>\n\t\t\t\t\t\t</p>"
-    },
-    {
-      "id": "19-31",
-      "number": 31,
-      "text": "Como arquitecto trabajando en una aplicación global, decidís implementar AWS Translate para proporcionar soporte multiidioma en tiempo real. Es fundamental que la integración soporte tanto traducciones de alto volumen como que mantenga los requisitos de localización de datos. ¿Cuál es la característica de AWS Translate que deberías aprovechar para garantizar el cumplimiento de las leyes de localización de datos?",
-      "options": [
-        {
-          "text": "Implementar AWS Translate con deployments multi-región para mantener el procesamiento de datos dentro de límites geográficos.",
-          "correct": true
-        },
-        {
-          "text": "Usar AWS Translate Text Translation Jobs para procesar grandes volúmenes de archivos de texto.",
-          "correct": false
-        },
-        {
-          "text": "Utilizar AWS Translate Custom Terminology para mejorar la calidad de la traducción con vocabulario específico del dominio.",
-          "correct": false
-        },
-        {
-          "text": "Activar traducciones streaming en tiempo real para satisfacer demandas de alto volumen.",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>AWS Translate puede configurarse para deployments multi-región, una configuración esencial para aplicaciones que necesitan cumplir con leyes de localización de datos. Esta configuración asegura que los datos permanezcan dentro de los límites geográficos especificados durante los procesos de traducción, cumpliendo así con requisitos legales específicos de soberanía de datos. AWS proporciona directrices y configuraciones para facilitar deployments multi-región, garantizando que los datos no crucen fronteras regionales innecesariamente. Para más información, podés consultar la documentación de AWS Translate sobre configuraciones multi-región (<a href=\"https://aws.amazon.com/translate/documentation/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/translate/documentation/</a>). </p>"
-    },
-    {
-      "id": "19-32",
-      "number": 32,
-      "text": "Una empresa minorista busca optimizar su gestión de la cadena de suministro mediante pronósticos de demanda y requisitos de inventario en múltiples ubicaciones de tiendas. ¿Cuál es el servicio de AWS más apropiado para satisfacer su necesidad de pronósticos precisos impulsados por machine learning?",
-      "options": [
-        {
-          "text": "Amazon Forecast",
-          "correct": true
-        },
-        {
-          "text": "Amazon Lex",
-          "correct": false
-        },
-        {
-          "text": "Amazon Personalize",
-          "correct": false
-        },
-        {
-          "text": "Amazon Rekognition",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>Amazon Forecast es la opción óptima para este escenario, ya que aprovecha el machine learning para generar pronósticos altamente precisos, que pueden ser particularmente efectivos en aplicaciones como predicción de demanda y planificación de inventario en contextos minoristas. Entender las tendencias y patrones de datos históricos permite a las empresas prepararse adecuadamente para la demanda futura, optimizando así sus operaciones de la cadena de suministro. Puedes encontrar más detalles en la página oficial de Amazon Forecast: <a href=\"https://aws.amazon.com/forecast/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/forecast/</a>\n\t\t\t\t\t\t</p>"
-    },
-    {
-      "id": "19-33",
-      "number": 33,
-      "text": "Como Chief AI Officer supervisando la infraestructura de ML y la gobernanza en una corporación multinacional, has implementado AWS CloudTrail para auditar y monitorear las actividades y pipelines de machine learning. ¿Cuál servicio de AWS deberías integrar con AWS CloudTrail para mejorar el análisis de seguridad en tiempo real y la respuesta automatizada ante posibles amenazas?",
-      "options": [
-        {
-          "text": "AWS Security Hub",
-          "correct": true
-        },
-        {
-          "text": "Amazon S3",
-          "correct": false
-        },
-        {
-          "text": "Amazon QuickSight",
-          "correct": false
-        },
-        {
-          "text": "AWS Lambda",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>AWS CloudTrail es fundamental para la gobernanza y auditoría en un entorno de AWS, ya que registra todas las actividades de API en tus cuentas de AWS. Al integrarlo con AWS Security Hub, mejoras la capacidad de tu organización para responder rápidamente ante posibles amenazas de seguridad, proporcionando verificaciones de seguridad automatizadas, recopilación integral de datos e insights accionables. Esta integración combina el registro detallado de AWS CloudTrail con las capacidades avanzadas de análisis y alertas de AWS Security Hub, formando una parte esencial de una estrategia de seguridad sólida en entornos en la nube.</p>"
     },
     {
       "id": "19-34",
@@ -949,31 +699,6 @@
       "explanationHtml": "<p>En el contexto de controlar la aleatoriedad y creatividad de la salida de un Large Language Model, ajustar el parámetro temperature es el método más directo y efectivo. Este parámetro escala los logits de la capa de salida antes de aplicar softmax, influyendo así en qué tan determinística o probabilística se vuelve la selección de cada palabra. Una temperatura más alta aumenta la aleatoriedad, mientras que una más baja hace que las salidas sean más predecibles y menos variadas, lo cual sería ideal para los requisitos de la empresa en este escenario.</p>"
     },
     {
-      "id": "19-38",
-      "number": 38,
-      "text": "Cuando usás AWS Cost Explorer para gestionar los costos asociados con soluciones de machine learning, ¿qué característica te permite visualizar el uso específico de recursos como CPU, memoria y almacenamiento alineados con tus modelos de machine learning?",
-      "options": [
-        {
-          "text": "Configurar un presupuesto con AWS Budgets",
-          "correct": false
-        },
-        {
-          "text": "Habilitar monitoreo detallado en instancias Amazon EC2",
-          "correct": false
-        },
-        {
-          "text": "Implementar modelos de machine learning usando Amazon SageMaker",
-          "correct": false
-        },
-        {
-          "text": "Usar Cost Allocation Tags para agrupar y visualizar costos por recursos individuales.",
-          "correct": true
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>La característica Cost Allocation Tags de AWS Cost Explorer ayuda a rastrear costos de manera más efectiva permitiendo a los usuarios etiquetar recursos de AWS. Al usar estas tags, los profesionales de machine learning pueden categorizar y analizar los costos asociados con recursos específicos como instancias EC2 o buckets S3 utilizados por sus modelos de machine learning. Este seguimiento granular de costos es vital para la gestión financiera detallada y la optimización en entornos en la nube.</p>"
-    },
-    {
       "id": "19-39",
       "number": 39,
       "text": "Una empresa de salud está utilizando Amazon SageMaker para desarrollar diversos modelos de machine learning para tareas como predecir resultados de pacientes y analizar imágenes médicas. Están buscando una solución dentro de SageMaker que proporcione una interfaz unificada para gestionar, monitorear y rastrear todos estos modelos de manera eficiente. ¿Cuál es la característica de Amazon SageMaker que deberían utilizar para satisfacer estas necesidades?",
@@ -999,56 +724,6 @@
       "explanationHtml": "<p>Amazon SageMaker Model Dashboard ofrece una vista integral y capacidades de gestión para los modelos de machine learning creados dentro de Amazon SageMaker. Ayuda a rastrear, gestionar y monitorear de manera eficiente múltiples modelos en toda la cuenta de AWS de una empresa, mejorando así la gobernanza del modelo y la eficiencia operativa. Esta característica es ideal para situaciones donde empresas como la del caso necesitan una solución de gestión centralizada para sus diversos proyectos de machine learning.</p>"
     },
     {
-      "id": "19-40",
-      "number": 40,
-      "text": "En un escenario donde necesitas procesar datos en streaming desde múltiples fuentes para análisis en tiempo real e integrarlos en modelos de machine learning usando AWS, ¿cuál servicio de Amazon Kinesis usarías principalmente para recopilar, procesar y analizar estos flujos de datos en tiempo real?",
-      "options": [
-        {
-          "text": "Amazon Kinesis Data Analytics",
-          "correct": false
-        },
-        {
-          "text": "Amazon Kinesis Data Firehose",
-          "correct": false
-        },
-        {
-          "text": "Amazon Kinesis Video Streams",
-          "correct": false
-        },
-        {
-          "text": "Amazon Kinesis Data Streams",
-          "correct": true
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>Amazon Kinesis Data Streams es el servicio de AWS que se utiliza principalmente para capturar, procesar y almacenar continuamente flujos de datos en tiempo real de hasta terabytes por hora desde miles de fuentes. Esto permite análisis inmediatos y reacciones a los datos en streaming, lo cual es esencial para casos de uso como actualizaciones de dashboards en tiempo real, generación de métricas e integración de datos en modelos de machine learning para predicciones instantáneas. Puedes encontrar más información en la documentación de AWS: <a href=\"https://aws.amazon.com/kinesis/data-streams/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/kinesis/data-streams/</a>\n\t\t\t\t\t\t</p>"
-    },
-    {
-      "id": "19-41",
-      "number": 41,
-      "text": "Una empresa de análisis financiero utiliza Amazon SageMaker dentro de una nube privada virtual (VPC) para análisis de datos sensibles. La VPC no tiene acceso a internet, pero su modelo en SageMaker requiere acceso regular a datos en Amazon S3. ¿Qué configuración debe usar la empresa para habilitar la transferencia segura de datos entre SageMaker y S3 sin usar internet público?",
-      "options": [
-        {
-          "text": "Implementar un endpoint de inferencia de SageMaker que habilite acceso directo a S3.",
-          "correct": false
-        },
-        {
-          "text": "Configurar un NAT Gateway para habilitar acceso saliente desde la VPC a S3.",
-          "correct": false
-        },
-        {
-          "text": "Configurar un VPC endpoint para Amazon S3 para permitir conexiones privadas desde la VPC a S3.",
-          "correct": true
-        },
-        {
-          "text": "Usar un Internet Gateway para facilitar la conexión desde la VPC a S3.",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>Usar un VPC endpoint para Amazon S3 es la solución recomendada para transferencias seguras de datos en escenarios donde el acceso directo a internet está restringido o no es deseado dentro de una VPC. Garantiza que el tráfico de datos entre Amazon SageMaker y Amazon S3 permanezca dentro de la red de AWS, adhiriéndose a políticas de seguridad que requieren no exponerse a internet público.</p>"
-    },
-    {
       "id": "19-42",
       "number": 42,
       "text": "En el contexto del cumplimiento normativo en AWS, ¿cuál es la distinción principal entre residencia de datos y retención de datos en relación con la gestión de datos del cliente?",
@@ -1072,31 +747,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Entender la distinción entre residencia de datos y retención de datos es fundamental para garantizar el cumplimiento de regulaciones locales e internacionales sobre gobernanza de datos en AWS. La residencia de datos requiere que los datos se almacenen físicamente en ubicaciones específicas para cumplir con las leyes que rigen el flujo de datos transfronterizo. Por el contrario, la retención de datos define cuánto tiempo deben conservarse los datos, lo cual generalmente está establecido por requisitos legales y regulatorios. Ambos conceptos son esenciales para construir sistemas de gobernanza de datos, como los implementados en entornos AWS, que cumplan con diversas regulaciones.</p>"
-    },
-    {
-      "id": "19-43",
-      "number": 43,
-      "text": "Eres un Arquitecto de Soluciones implementando un sistema para desplegar automáticamente versiones actualizadas de modelos de machine learning de análisis de sentimiento de clientes en un ambiente de producción en AWS. La estrategia de despliegue necesita garantizar cero downtime y debe validar la nueva versión del modelo antes del despliegue completo. ¿Cuál servicio de AWS cumpliría más efectivamente estos requisitos?",
-      "options": [
-        {
-          "text": "Desplegar usando AWS Lambda para actualizaciones incrementales.",
-          "correct": false
-        },
-        {
-          "text": "Aplicar AWS Elastic Beanstalk con despliegues Rolling.",
-          "correct": false
-        },
-        {
-          "text": "Integrar AWS OpsWorks con recetas personalizadas de Chef para el despliegue.",
-          "correct": false
-        },
-        {
-          "text": "Usar AWS CodeDeploy con una configuración de despliegue Blue/Green.",
-          "correct": true
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>AWS CodeDeploy está diseñado específicamente para el despliegue automatizado de aplicaciones incluyendo modelos de machine learning, soportando despliegues Blue/Green que garantizan cero downtime y validación efectiva. Esto lo convierte en una opción adecuada para desplegar modelos validados y listos para producción de manera eficiente y segura, asegurando continuidad y confiabilidad del servicio. Más información sobre estas estrategias de despliegue se puede leer en la documentación oficial de AWS: <a href=\"https://aws.amazon.com/codedeploy/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/codedeploy/</a>\n\t\t\t\t\t\t</p>"
     },
     {
       "id": "19-44",
@@ -1199,31 +849,6 @@
       "explanationHtml": "<p>Fine-tuning es crucial para refinar el desempeño de un foundation model en tareas o conjuntos de datos específicos mediante el ajuste de sus pesos, sin necesidad de reentrenar el modelo desde cero. Este enfoque no solo mejora la precisión, sino que también mantiene la escalabilidad fundamental para aplicaciones a gran escala como las recomendaciones de productos en comercio electrónico. Se alinea con las necesidades de una plataforma de comercio electrónico global que busca mejorar la eficiencia y precisión de su sistema de recomendaciones.</p>"
     },
     {
-      "id": "19-48",
-      "number": 48,
-      "text": "Una organización quiere asegurarse de que sus recursos de AWS solo sean accedidos por su equipo de machine learning, que es responsable de gestionar servicios de AWS AI. Están considerando usar AWS Identity and Access Management (IAM) para controlar el acceso. ¿Cuál de las siguientes características de IAM deberían usar para cumplir estos requisitos?",
-      "options": [
-        {
-          "text": "Usar IAM roles para otorgar al equipo de machine learning acceso administrativo a todos los servicios de AWS.",
-          "correct": false
-        },
-        {
-          "text": "Habilitar autenticación multifactor (MFA) de IAM para todos los usuarios sin configuraciones de permisos adicionales.",
-          "correct": false
-        },
-        {
-          "text": "Implementar un usuario de IAM para cada miembro del equipo con políticas individuales adaptadas a sus funciones específicas.",
-          "correct": false
-        },
-        {
-          "text": "Usar grupos de IAM para organizar al equipo de machine learning y aplicar una política de IAM que otorgue acceso solo a los servicios de AWS AI.",
-          "correct": true
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>Usar grupos de IAM para organizar usuarios según su rol y responsabilidades, y aplicar políticas de IAM específicas, es una forma escalable y segura de gestionar el acceso en AWS. Este enfoque se adhiere al principio del menor privilegio, asegurando que los permisos sean tan restrictivos como sea necesario, reduciendo el riesgo de acceso no autorizado o acciones no permitidas. Este método gestiona eficientemente los permisos para equipos con necesidades de acceso específicas, como un equipo de machine learning que requiere acceso solo a los servicios de AWS AI.</p>"
-    },
-    {
       "id": "19-49",
       "number": 49,
       "text": "Una empresa de medios quiere usar Amazon Rekognition para generar automáticamente metadatos a partir de sus archivos de video, que incluyen una gran cantidad de material histórico. Los metadatos deben categorizar el contenido según los objetos, personas y actividades reconocibles en los videos. ¿Cuál sería la característica de Amazon Rekognition más efectiva para este propósito?",
@@ -1247,56 +872,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Amazon Rekognition ofrece dos servicios principales: Rekognition Image y Rekognition Video. Rekognition Video está especialmente diseñado para analizar archivos de video, lo que lo hace ideal para extraer metadatos del contenido de video al reconocer objetos, personas y actividades dentro de esos archivos. Esta capacidad es fundamental para empresas de medios que desean categorizar y buscar en archivos masivos de manera eficiente. Para obtener información más detallada sobre las características de Rekognition Video, visita la documentación oficial de Amazon Web Services.</p>"
-    },
-    {
-      "id": "19-50",
-      "number": 50,
-      "text": "Cuando usas AWS CodeBuild para la construcción automatizada de artefactos de ML, ¿cuál es la característica que te permite mejorar la seguridad de los proyectos de compilación al definir quién puede acceder a los outputs y logs de la compilación?",
-      "options": [
-        {
-          "text": "Aplicar políticas basadas en recursos a buckets de S3",
-          "correct": true
-        },
-        {
-          "text": "Integración con AWS CloudTrail para registrar el acceso",
-          "correct": false
-        },
-        {
-          "text": "Utilizar AWS Key Management Service para encriptación",
-          "correct": false
-        },
-        {
-          "text": "Uso de múltiples VPCs dentro de cada proyecto de compilación",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>En AWS CodeBuild, la seguridad y el control de acceso se pueden mejorar mediante una gestión cuidadosa de permisos, particularmente usando buckets de Amazon S3 para almacenar outputs y logs. Las políticas basadas en recursos en estos buckets ofrecen control preciso sobre quién puede acceder a recursos específicos, asegurando así que solo entidades autorizadas puedan ver o modificar los artefactos de compilación o los logs. Esta forma de gestión de acceso es fundamental para mantener la integridad y seguridad del proceso de compilación de software en un entorno de integración continua.</p>"
-    },
-    {
-      "id": "19-51",
-      "number": 51,
-      "text": "Una empresa de comercio electrónico está adoptando AWS para reducir el tiempo de lanzamiento al mercado de aplicaciones escalables y ágiles. ¿Cuál es el servicio de AWS diseñado principalmente para gestionar recursos organizacionales mientras se limita el acceso de los usuarios a servicios específicos de AWS?",
-      "options": [
-        {
-          "text": "AWS Identity and Access Management (IAM)",
-          "correct": true
-        },
-        {
-          "text": "Amazon RDS",
-          "correct": false
-        },
-        {
-          "text": "Amazon EC2",
-          "correct": false
-        },
-        {
-          "text": "AWS Elastic Beanstalk",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>AWS Identity and Access Management (IAM) está diseñado para ayudarte a controlar de forma segura el acceso a los servicios y recursos de AWS para tus usuarios. Proporciona las herramientas para administrar permisos de manera granular y también auditar quién accedió a qué. IAM es fundamental en la gestión de derechos de acceso, lo que lo hace esencial para aplicaciones que requieren controles de acceso rigurosos, especialmente en entornos multiusuario.</p>"
     },
     {
       "id": "19-52",
@@ -1349,31 +924,6 @@
       "explanationHtml": "<p>Los Foundation Models, como los utilizados en los servicios de IA, son ventajosos para las empresas que desean implementar soluciones de IA que cubran un amplio rango de tareas. Estos modelos están extensamente pre-entrenados en conjuntos de datos grandes y diversos, lo que les permite generalizar bien en varios dominios con entrenamiento adicional mínimo. Esto hace que los Foundation Models sean particularmente útiles para aplicaciones que necesitan capacidades en áreas como generación de texto, reconocimiento de imágenes y comprensión del lenguaje natural sin un ajuste específico de tarea extensivo.</p>"
     },
     {
-      "id": "19-54",
-      "number": 54,
-      "text": "Una firma de servicios financieros está adoptando Amazon QuickSight para mejorar sus procesos de toma de decisiones con información basada en datos. Para una implementación efectiva, ¿cuál servicio de AWS debería aprovecharse para gestionar el acceso de usuarios de forma segura, asegurando el nivel correcto de permisos en diferentes departamentos para interactuar con los dashboards e informes de QuickSight?",
-      "options": [
-        {
-          "text": "Amazon Cognito",
-          "correct": false
-        },
-        {
-          "text": "AWS Security Hub",
-          "correct": false
-        },
-        {
-          "text": "AWS Organizations",
-          "correct": false
-        },
-        {
-          "text": "AWS IAM (Identity and Access Management)",
-          "correct": true
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>AWS IAM (Identity and Access Management) es la mejor herramienta para gestionar el acceso a los servicios de AWS de manera granular, incluyendo Amazon QuickSight. Proporciona herramientas completas para administrar permisos, garantizando que solo los usuarios o roles autorizados tengan el acceso necesario para realizar acciones específicas, lo que respalda la gestión segura y eficiente del acceso a recursos y servicios dentro de AWS. Esta capacidad es esencial para una firma de servicios financieros que busca gestionar permisos en diferentes departamentos y mantener cumplimiento de gobierno y seguridad.</p>"
-    },
-    {
       "id": "19-55",
       "number": 55,
       "text": "Un equipo de desarrollo en una empresa de medios quiere implementar un modelo Transformer para tareas de generación de contenido y traducción de idiomas. ¿Cuál de los siguientes modelos de IA es un ejemplo de arquitectura Transformer adecuada para estas aplicaciones?",
@@ -1397,31 +947,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Los modelos Transformer son particularmente efectivos para tareas de procesamiento de lenguaje natural gracias a su capacidad para manejar datos secuenciales y sus mecanismos de atención que consideran el contexto de toda la secuencia de entrada. Entre las opciones proporcionadas, ChatGPT destaca por estar específicamente diseñado con arquitectura Transformer, lo que lo hace ideal para aplicaciones como generación de contenido y traducción de idiomas.</p>"
-    },
-    {
-      "id": "19-56",
-      "number": 56,
-      "text": "Una empresa está desarrollando un modelo de machine learning para predecir tendencias del mercado financiero y tiene requisitos estrictos de aislamiento de red para garantizar la seguridad de los datos propios. Utilizan AWS y desean aprovechar Amazon VPC para una seguridad mejorada. ¿Cuál es la configuración que mejor garantiza el aislamiento de red para sus flujos de trabajo de ML?",
-      "options": [
-        {
-          "text": "Implementar el modelo de ML directamente en una instancia EC2 aislada sin configurar una VPC.",
-          "correct": false
-        },
-        {
-          "text": "Utilizar una subnet pública dentro de una VPC predeterminada para alojar el modelo de ML y acceder a él a través de internet.",
-          "correct": false
-        },
-        {
-          "text": "Utilizar AWS Direct Connect para asegurar que el modelo de ML esté alojado en las instalaciones locales, eliminando la necesidad de Amazon VPC.",
-          "correct": false
-        },
-        {
-          "text": "Configurar una subnet privada en una VPC personalizada, utilizando Network Access Control Lists y Security Groups para controlar estrictamente el tráfico entrante y saliente.",
-          "correct": true
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>Amazon VPC proporciona aislamiento de red mejorado y seguridad para aplicaciones basadas en la nube, incluidos flujos de trabajo de machine learning. Dentro de una VPC, las subnets privadas no son directamente accesibles a través de internet y el tráfico puede controlarse estrictamente mediante Network Access Control Lists (NACLs) y Security Groups, asegurando que solo el tráfico autorizado pueda acceder a los recursos. Esta configuración es crucial para aplicaciones que manejan datos sensibles donde se requiere máxima seguridad e aislamiento. Para más información sobre Amazon VPC y sus características: <a href=\"https://aws.amazon.com/vpc/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/vpc/</a>\n\t\t\t\t\t\t</p>"
     },
     {
       "id": "19-57",

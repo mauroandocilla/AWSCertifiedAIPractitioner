@@ -1,7 +1,7 @@
 {
   "setNumber": 23,
   "sourceFile": "Practice_Set_23.html",
-  "questionCount": 50,
+  "questionCount": 40,
   "questions": [
     {
       "id": "23-1",
@@ -54,31 +54,6 @@
       "explanationHtml": "<p>AWS Identity and Access Management (IAM) permite la creación y gestión de usuarios y grupos de AWS, y el uso de permisos para permitir y denegar su acceso a recursos de AWS. Los roles de IAM ofrecen una forma de delegar acceso con permisos definidos, lo cual es más seguro y manejable en comparación con asignar permisos directamente a usuarios o compartir credenciales con privilegios más altos. Este enfoque respalda la práctica recomendada de AWS de seguir el principio del menor privilegio, donde los usuarios y roles reciben solo los permisos necesarios para realizar sus tareas.</p>"
     },
     {
-      "id": "23-3",
-      "number": 3,
-      "text": "Una empresa de tecnología está utilizando AWS Auto Scaling para gestionar eficientemente los recursos de entrenamiento de modelos de machine learning conforme cambian los tamaños de los conjuntos de datos. Necesita mantener la eficiencia de costos mientras se asegura de que la asignación de recursos se escale automáticamente con la creciente complejidad de las tareas de entrenamiento. ¿Cuál configuración cumplirá mejor con los requisitos de la empresa?",
-      "options": [
-        {
-          "text": "Usar una acción de escalado programado para agregar recursos solo durante el horario comercial, independientemente de la carga del sistema o los requisitos de la tarea.",
-          "correct": false
-        },
-        {
-          "text": "Configurar una política de escalado de seguimiento de objetivos para ajustar la cantidad de instancias EC2 según el promedio de utilización de CPU.",
-          "correct": true
-        },
-        {
-          "text": "Establecer un número fijo de instancias EC2 para todas las tareas de entrenamiento sin importar su complejidad o tamaño del conjunto de datos.",
-          "correct": false
-        },
-        {
-          "text": "Deshabilitar el escalado y ajustar manualmente las instancias EC2 según el presupuesto mensual.",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>AWS Auto Scaling está diseñado para ajustar automáticamente la cantidad de recursos computacionales en función de la demanda actual observada. Al utilizar una política de escalado de seguimiento de objetivos, los recursos pueden alinearse dinámicamente con la carga y complejidad de las tareas, lo que mejora la eficiencia de costos y la capacidad de respuesta del sistema. Este enfoque es particularmente beneficioso en entornos con necesidades computacionales variables, como el entrenamiento de modelos de machine learning, donde los recursos computacionales requeridos pueden fluctuar en función del tamaño y la complejidad de los conjuntos de datos y modelos. Encontrá más información sobre AWS Auto Scaling en la documentación oficial de AWS: <a href=\"https://aws.amazon.com/autoscaling/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/autoscaling/</a>\n\t\t\t\t\t\t</p>"
-    },
-    {
       "id": "23-4",
       "number": 4,
       "text": "En el contexto de la adopción de AI en las operaciones empresariales, ¿cómo se relacionan el machine learning (ML) y la inteligencia artificial (AI) entre sí, y qué roles distintos desempeñan?",
@@ -127,31 +102,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>La respuesta correcta es computer vision, que se especializa específicamente en la interpretación y comprensión del contenido de imágenes para realizar acciones o tomar decisiones, como analizar imágenes de estantes de tiendas para gestionar el inventario de manera efectiva. A diferencia de image processing simple o image enhancement, computer vision puede analizar patrones, reconocer objetos y tomar decisiones basándose en los datos visuales, lo que respalda directamente las necesidades de la empresa de retail en este escenario.</p>"
-    },
-    {
-      "id": "23-6",
-      "number": 6,
-      "text": "En el contexto de AWS Identity and Access Management (IAM), ¿cuál es la opción que mejor garantiza que los permisos se administren de forma segura y efectiva cuando varios equipos de una organización necesitan acceso a diferentes recursos de AWS?",
-      "options": [
-        {
-          "text": "Desactivar IAM y usar exclusivamente EC2 Security Groups para administrar el acceso.",
-          "correct": false
-        },
-        {
-          "text": "Otorgar permisos administrativos a cada equipo para asegurar acceso completo.",
-          "correct": false
-        },
-        {
-          "text": "Usar un único usuario IAM compartido para todos los equipos para simplificar la administración.",
-          "correct": false
-        },
-        {
-          "text": "Usar IAM roles y permission boundaries para definir y limitar el acceso de cada equipo.",
-          "correct": true
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>Los IAM roles y permission boundaries ofrecen una forma segura y escalable de administrar permisos para diferentes equipos dentro de una organización. Permiten asegurar que el acceso a servicios y recursos de AWS se controle precisamente siguiendo el principio del menor privilegio. Usar estas características de IAM mantiene la eficiencia operativa y mejora la seguridad al limitar los derechos de acceso solo a lo necesario para cada rol. Para una comprensión más profunda, consulta la documentación de AWS sobre IAM roles y permission boundaries: <a href=\"https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_boundaries.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_boundaries.html</a>\n\t\t\t\t\t\t</p>"
     },
     {
       "id": "23-7",
@@ -231,56 +181,6 @@
       ],
       "multiSelect": true,
       "explanationHtml": "<p>Para garantizar la precisión continua del modelo y el cumplimiento de estándares regulatorios, la empresa de servicios financieros debe utilizar Amazon SageMaker Model Monitor y Amazon Augmented AI (Amazon A2I). SageMaker Model Monitor monitorea continuamente los modelos de machine learning para detectar data drift y model drift, mientras que A2I facilita la revisión humana de las predicciones del modelo, asegurando alta precisión y cumplimiento normativo. Más información: <a href=\"https://aws.amazon.com/sagemaker/model-monitor/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/sagemaker/model-monitor/</a>, <a href=\"https://aws.amazon.com/augmented-ai/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/augmented-ai/</a></p>"
-    },
-    {
-      "id": "23-10",
-      "number": 10,
-      "text": "¿Cuál es la definición de computación en la nube según AWS, especialmente valiosa para una empresa de salud que considera migrar a la nube?",
-      "options": [
-        {
-          "text": "La computación en la nube es el proceso de usar un único servidor local para almacenar y procesar todos los datos.",
-          "correct": false
-        },
-        {
-          "text": "La computación en la nube implica administrar manualmente centros de datos físicos y hardware de redes para almacenamiento y procesamiento de datos.",
-          "correct": false
-        },
-        {
-          "text": "La computación en la nube es la práctica de usar solo software de código abierto para todas las necesidades informáticas.",
-          "correct": false
-        },
-        {
-          "text": "La computación en la nube se refiere a la entrega bajo demanda de recursos de TI y aplicaciones a través de internet con precios de pago por uso.",
-          "correct": true
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>La computación en la nube, según se define en AWS, ofrece la entrega bajo demanda de potencia de cálculo, almacenamiento de bases de datos, aplicaciones y otros recursos de TI a través de internet con precios de pago por uso. Este modelo permite que las empresas de salud se adapten y escalen rápidamente según las necesidades cambiantes sin el gasto de capital de poseer y mantener servidores físicos y centros de datos. Es particularmente beneficioso para empresas de salud que buscan mejorar la gestión de datos, aumentar la escalabilidad y reducir los costos operativos.</p>"
-    },
-    {
-      "id": "23-11",
-      "number": 11,
-      "text": "Una empresa de IoT necesita implementar modelos de machine learning en dispositivos edge para procesar datos en tiempo real. ¿Cuál es el enfoque más efectivo para lograr inferencia de baja latencia directamente en estos dispositivos?",
-      "options": [
-        {
-          "text": "Usar un modelo centralizado basado en la nube para realizar inferencia, conectando dispositivos edge a través de protocolos IoT.",
-          "correct": false
-        },
-        {
-          "text": "Emplear un modelo híbrido donde el procesamiento inicial de datos se realiza en el edge, y los análisis más complejos se manejan en la nube.",
-          "correct": false
-        },
-        {
-          "text": "Implementar un modelo de lenguaje grande (LLM) directamente en el dispositivo para procesamiento intensivo en tiempo real.",
-          "correct": false
-        },
-        {
-          "text": "Implementar un modelo ligero optimizado para edge computing, asegurando un tiempo de respuesta mínimo para la inferencia.",
-          "correct": true
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>En escenarios que requieren procesamiento inmediato de datos en dispositivos IoT, como mantenimiento predictivo o detección de anomalías, es vital usar modelos que funcionen eficientemente dentro de las limitaciones del edge computing. Los modelos ligeros son los más adecuados para este entorno, ya que proporcionan la velocidad y eficiencia necesarias para inferencia en tiempo real directamente en los dispositivos sin las altas demandas de recursos de modelos más grandes. Optimizar estos modelos para implementación en edge asegura que se ejecuten eficientemente, mantengan baja latencia y soporten toma de decisiones rápida directamente en los dispositivos edge.</p>"
     },
     {
       "id": "23-12",
@@ -433,31 +333,6 @@
       "explanationHtml": "<p>La IA generativa se considera importante en aplicaciones tecnológicas modernas por su capacidad de generar autónomamente resultados de datos novedosos y complejos. Esta capacidad mejora la creatividad y la innovación, lo que la hace altamente valiosa para industrias como medios, entretenimiento y más allá. Las tecnologías de IA generativa pueden transformar la creación de contenido al proporcionar enfoques diversos e innovadores, lo que ayuda a elaborar materiales variados y atractivos.</p>"
     },
     {
-      "id": "23-18",
-      "number": 18,
-      "text": "Como una organización que maneja datos sensibles, necesitás asegurar la seguridad y el cumplimiento normativo de tus claves de cifrado usando servicios de AWS. ¿Cuál es la característica de AWS Key Management Service (KMS) que mejor se adapta para rotar automáticamente tus customer master keys (CMKs) y mejorar la seguridad?",
-      "options": [
-        {
-          "text": "Crear CMKs duplicadas en diferentes regiones con fines de backup y rotación.",
-          "correct": false
-        },
-        {
-          "text": "Habilitar la integración de AWS CloudHSM para la gestión directa de CMKs.",
-          "correct": false
-        },
-        {
-          "text": "Implementar funciones de AWS Lambda para rotar claves manualmente de forma periódica.",
-          "correct": false
-        },
-        {
-          "text": "Usar la característica de rotación automática de claves de AWS KMS.",
-          "correct": true
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>AWS Key Management Service (KMS) proporciona una característica de rotación automática de claves para customer master keys (CMKs), que ayuda a gestionar el ciclo de vida de las claves de cifrado y mejora la seguridad rotando automáticamente las claves cada 365 días. Esta característica te permite cumplir con las mejores prácticas de seguridad y los requisitos normativos sin intervención manual, lo que la hace ideal para organizaciones que manejan datos sensibles y regulados. Podés encontrar más detalles en la documentación de AWS: <a href=\"https://docs.aws.amazon.com/kms/latest/developerguide/rotate-keys.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/kms/latest/developerguide/rotate-keys.html</a>\n\t\t\t\t\t\t</p>"
-    },
-    {
       "id": "23-19",
       "number": 19,
       "text": "Una empresa de comercio electrónico está evaluando Amazon Bedrock para mejorar sus capacidades de IA para recomendaciones personalizadas de productos y chatbots de atención al cliente. El equipo quiere comprender las características únicas de Amazon Bedrock, incluyendo capacidades de personalización e integración. ¿Cuáles de las siguientes afirmaciones describen correctamente la funcionalidad de Amazon Bedrock? (Elige dos.)",
@@ -587,56 +462,6 @@
       "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p><b>Amazon Rekognition</b></p>\n\t\t\t\t\t\t<p>Amazon Rekognition es el servicio de AWS para tareas de computer vision (CV). Cumple perfectamente con los requisitos al ofrecer: </p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<b>Modelos Preentrenados:</b>&nbsp;Proporciona un amplio conjunto de APIs listas para usar en tareas de CV como detección de objetos (para inventario), detección de personas y monitoreo de actividades sospechosas (para seguridad), que abordan directamente los casos de uso.\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<b>Capacidad de Personalización:</b>&nbsp;A través de Amazon Rekognition Custom Labels, el servicio te permite entrenar un modelo de CV personalizado usando tus propias imágenes etiquetadas. Esto realiza un fine-tuning de un modelo preentrenado para tus necesidades específicas (por ejemplo, identificar un producto único de la tienda o un escenario de seguridad particular) sin necesidad de construir un modelo desde cero.\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p><b>Amazon SageMaker</b></p>\n\t\t\t\t\t\t<p>Aunque Amazon SageMaker es un servicio potente para construir, entrenar e implementar <em>cualquier</em>&nbsp;tipo de modelo de machine learning, incluyendo modelos de computer vision personalizados, no es principalmente un servicio de&nbsp;<b>modelos preentrenados</b>. Usar SageMaker para esta tarea requeriría que la empresa encuentre o construya una arquitectura de modelo, prepare conjuntos de datos extensos y maneje todo el ciclo de vida del entrenamiento por su cuenta. Esto es mucho más complejo e intensivo en recursos que aprovechar un servicio especializado y preentrenado como Rekognition que además ofrece personalización. </p>\n\t\t\t\t\t\t<p><b>Amazon DeepRacer</b></p>\n\t\t\t\t\t\t<p>Amazon DeepRacer es un servicio enfocado exclusivamente en aprendizaje por refuerzo para el propósito específico de carreras autónomas. Es una herramienta educativa y divertida para aprender conceptos de ML pero no está diseñada para tareas generales de computer vision como gestión de inventario o seguridad en tienda. No proporciona modelos de CV preentrenados para estas aplicaciones comerciales. </p>\n\t\t\t\t\t\t<p><b>Amazon Textract</b></p>\n\t\t\t\t\t\t<p>Amazon Textract es un servicio altamente especializado para <b>análisis de texto en documentos</b>. Sus modelos preentrenados están diseñados para extraer texto, escritura a mano y datos de documentos escaneados, PDFs y formularios. No es un servicio de computer vision de propósito general y no puede usarse para monitoreo visual, detección de objetos en una tienda o mejora de seguridad mediante análisis de video. </p>"
     },
     {
-      "id": "23-24",
-      "number": 24,
-      "text": "Un equipo de análisis de datos quiere aprovechar AWS Glue para sus necesidades de ETL. Tienen datasets grandes y variados que necesitan limpieza y transformación antes del análisis. ¿Qué característica de AWS Glue debe usarse principalmente para descubrir automáticamente las propiedades de los datos, clasificarlos y sugerir schemas?",
-      "options": [
-        {
-          "text": "AWS Glue Data Catalog",
-          "correct": true
-        },
-        {
-          "text": "AWS Glue Studio",
-          "correct": false
-        },
-        {
-          "text": "AWS Glue Workflow",
-          "correct": false
-        },
-        {
-          "text": "AWS Glue Job Script",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p><b>AWS Glue Data Catalog</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>El <b>Data Catalog</b> es el repositorio central de metadatos en AWS Glue.</li>\n\t\t\t\t\t\t\t<li>Descubre automáticamente las propiedades de los datos, clasifica datasets y sugiere schemas utilizando <b>crawlers</b>.</li>\n\t\t\t\t\t\t\t<li>Esto permite que los analistas consulten y transformen datos de manera eficiente, ya que el catálogo proporciona una vista estructurada de los datasets.</li>\n\t\t\t\t\t\t\t<li>Coincide con el requisito del examen: <em>\"descubrir automáticamente las propiedades de los datos, clasificarlos y sugerir schemas.\"</em>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p><b>AWS Glue Studio</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Proporciona una <b>interfaz visual</b> para crear, ejecutar y monitorear trabajos de ETL.</li>\n\t\t\t\t\t\t\t<li>Es útil para construir y gestionar trabajos, pero no realiza <b>descubrimiento automático de schemas</b>.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>AWS Glue Workflow</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Se utiliza para <b>orquestar múltiples trabajos de ETL</b> y gestionar dependencias.</li>\n\t\t\t\t\t\t\t<li>Se enfoca en la secuencia de trabajos y automatización, no en descubrimiento de schemas o clasificación.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>AWS Glue Job Script</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Se refiere a los <b>scripts de PySpark o Scala</b> que definen las transformaciones de ETL.</li>\n\t\t\t\t\t\t\t<li>Estos scripts ejecutan transformaciones pero no clasifican ni sugieren schemas automáticamente.</li>\n\t\t\t\t\t\t</ul>"
-    },
-    {
-      "id": "23-25",
-      "number": 25,
-      "text": "Eres un Analista de Datos trabajando en la optimización de reportes de desempeño usando servicios de AWS. Planeas utilizar Amazon QuickSight para visualización y análisis de datos. Dado que necesitas reportes interactivos que puedan ser accedidos por múltiples stakeholders, ¿cuál es la característica más efectiva de Amazon QuickSight que deberías aprovechar?",
-      "options": [
-        {
-          "text": "Incrustar dashboards en aplicaciones",
-          "correct": true
-        },
-        {
-          "text": "Usar SPICE para manejar conjuntos de datos grandes de manera efectiva",
-          "correct": false
-        },
-        {
-          "text": "Reportes por correo electrónico programados desde QuickSight",
-          "correct": false
-        },
-        {
-          "text": "QuickSight ML Insights para análisis predictivo",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Incrustar dashboards en aplicaciones</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b>Correcto porque:</b>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>Amazon QuickSight permite <b>incrustar dashboards directamente en aplicaciones, portales o sitios web</b>, permitiendo que múltiples stakeholders accedan a reportes interactivos de manera fluida.</li>\n\t\t\t\t\t\t\t\t\t<li>Esta característica soporta <b>compartición segura y escalable</b> sin requerir que cada stakeholder inicie sesión en QuickSight por separado.</li>\n\t\t\t\t\t\t\t\t\t<li>Es la forma más efectiva de entregar <b>insights interactivos y en tiempo real</b> a una audiencia amplia, alineándose perfectamente con el requisito del escenario.</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Usar SPICE para manejar conjuntos de datos grandes de manera efectiva</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrecto porque aunque <b>SPICE (Super-fast, Parallel, In-memory Calculation Engine)</b> mejora el desempeño y escalabilidad para conjuntos de datos grandes, se enfoca en <b>eficiencia en el procesamiento de datos</b>, no en acceso de stakeholders o compartición interactiva.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Reportes por correo electrónico programados desde QuickSight</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrecto porque los reportes por correo electrónico programados proporcionan <b>snapshots estáticos</b> de datos, no dashboards interactivos.</li>\n\t\t\t\t\t\t\t<li>Esto no cumple con el requisito de <b>reportes interactivos accesibles por múltiples stakeholders</b>.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>QuickSight ML Insights para análisis predictivo</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrecto porque ML Insights proporciona <b>análisis predictivo y detección de anomalías</b>, que son valiosos para análisis avanzado pero no abordan directamente la necesidad de <b>acceso interactivo para stakeholders</b>.</li>\n\t\t\t\t\t\t</ul>"
-    },
-    {
       "id": "23-26",
       "number": 26,
       "text": "Una empresa de tecnología está implementando una solución de IA para mejorar el soporte al cliente utilizando Retrieval-Augmented Generation (RAG) con Amazon Bedrock. Esta aplicación requiere una base de datos que pueda realizar búsquedas de índices rápidas y búsquedas de similitud en un conjunto de datos grande para recuperar y clasificar eficazmente documentos relevantes según la entrada del usuario. ¿Cuál servicio de base de datos de AWS debería utilizar la empresa?",
@@ -660,56 +485,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Amazon OpenSearch Service es la opción más adecuada para una aplicación de IA que requiere recuperación rápida y clasificación basada en relevancia de documentos. Este servicio no solo ofrece capacidades de búsqueda de texto completo a gran escala, sino que también cuenta con características como indexación en tiempo real y control ajustado sobre la puntuación de relevancia, que son vitales para aplicaciones de Retrieval-Augmented Generation. Esto garantiza que la solución implementada sea eficiente al proporcionar respuestas contextualmente relevantes basadas en las consultas del usuario. Para obtener más información sobre las capacidades de Amazon OpenSearch Service, visita: <a href=\"https://aws.amazon.com/opensearch-service/the-elk-stack/what-is-opensearch/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/opensearch-service/the-elk-stack/what-is-opensearch/</a>\n\t\t\t\t\t\t</p>"
-    },
-    {
-      "id": "23-27",
-      "number": 27,
-      "text": "En el contexto de implementaciones de IA en AWS, ¿cuál sería la preocupación principal de un comité de admisiones de una universidad Ivy League si descubriera que los solicitantes están utilizando herramientas de IA generativa para redactar sus ensayos de aplicación?",
-      "options": [
-        {
-          "text": "Costos elevados asociados con las herramientas de IA",
-          "correct": false
-        },
-        {
-          "text": "Insuficiencia de herramientas tecnológicas",
-          "correct": false
-        },
-        {
-          "text": "Originalidad y autenticidad de los envíos",
-          "correct": true
-        },
-        {
-          "text": "Uso de tecnologías de IA obsoletas",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>El uso de IA generativa en la redacción de ensayos de aplicación presenta un desafío significativo en términos de mantener la integridad académica. Este escenario toca particularmente el uso ético de la IA, asegurando que los envíos sean representaciones genuinas de las capacidades del solicitante. El comité de admisiones de la universidad Ivy League busca prevenir posibles tergiversaciones, asegurando que todos los ensayos sean redactados por los propios solicitantes, sin intervención de IA.</p>"
-    },
-    {
-      "id": "23-28",
-      "number": 28,
-      "text": "Una empresa de tecnología está aprovechando servicios de AI y ML en AWS para mejorar sus recomendaciones de productos y predecir comportamientos de usuarios. Necesitan un servicio que les proporcione orientación optimizada para sus deployments en AWS, enfocándose en costo, rendimiento y seguridad. ¿Cuál servicio de AWS deberían usar para obtener recomendaciones automatizadas sobre sus recursos existentes?",
-      "options": [
-        {
-          "text": "AWS Trusted Advisor",
-          "correct": true
-        },
-        {
-          "text": "AWS Audit Manager",
-          "correct": false
-        },
-        {
-          "text": "AWS Config",
-          "correct": false
-        },
-        {
-          "text": "AWS CloudTrail",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>AWS Trusted Advisor es el servicio más apropiado para el escenario descrito, ya que proporciona insights y recomendaciones que ayudan a mejorar la eficiencia de los deployments en AWS. Esto se alinea con el objetivo de la empresa de potenciar sus entornos de AI en términos de costo, rendimiento y seguridad. Los chequeos de Trusted Advisor ayudan a identificar capacidad excedente, recursos subutilizados y brechas de seguridad, lo cual es crucial para desplegar soluciones de AI eficientes y seguras.</p>"
     },
     {
       "id": "23-29",
@@ -1185,31 +960,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>El servicio Neural Text-to-Speech (NTTS) de Amazon Polly ofrece una selección de voces realistas y admite múltiples idiomas, lo que lo hace ideal para aplicaciones como audiolibros donde la voz de alta calidad y sonido natural es crucial. Las voces NTTS utilizan aprendizaje profundo para producir voz que puede transmitir diversas emociones y estilos de habla, mejorando la experiencia del oyente.</p>"
-    },
-    {
-      "id": "23-48",
-      "number": 48,
-      "text": "Una empresa fintech busca mejorar su ciclo de desarrollo adoptando soluciones en la nube para innovar rápidamente y desplegar de manera eficiente. ¿Cuál servicio de AWS facilita principalmente el desarrollo acelerado, testing y lanzamiento de aplicaciones con menos sobrecarga de gestión?",
-      "options": [
-        {
-          "text": "Amazon EC2",
-          "correct": false
-        },
-        {
-          "text": "Amazon S3",
-          "correct": false
-        },
-        {
-          "text": "AWS Lambda",
-          "correct": false
-        },
-        {
-          "text": "AWS Elastic Beanstalk",
-          "correct": true
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>AWS Elastic Beanstalk respalda el desarrollo, testing y despliegue rápido de aplicaciones al manejar varios aspectos de la automatización de despliegue, tales como aprovisionamiento de entornos, escalabilidad y monitoreo, lo que libera a los desarrolladores para enfocarse en su código. Está específicamente diseñado para acelerar los ciclos de despliegue en la nube, lo que lo convierte en una opción ideal para empresas que buscan innovar rápidamente con una gestión de infraestructura mínima.</p>"
     },
     {
       "id": "23-49",

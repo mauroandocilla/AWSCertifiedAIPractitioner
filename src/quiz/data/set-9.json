@@ -1,7 +1,7 @@
 {
   "setNumber": 9,
   "sourceFile": "Practice_Set_9.html",
-  "questionCount": 57,
+  "questionCount": 54,
   "questions": [
     {
       "id": "9-1",
@@ -127,31 +127,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p>Multilingual support</p>\n\t\t\t\t\t\t<p>Multilingual support refers to the model's capability to understand, process, and generate responses in multiple languages. When developing a multilingual chatbot, it is crucial to choose a model that supports a wide range of languages. This ensures that the chatbot can interact with users from different linguistic backgrounds seamlessly. Multilingual models, like those based on transformers (e.g., BERT, GPT), are pre-trained on diverse datasets across many languages, allowing the chatbot to switch between languages effortlessly. Additionally, good multilingual support minimizes the need for developing separate models for each language, saving time and resources. Selecting a model without proper multilingual abilities could result in poor user experiences and require significant additional work to support all the languages needed for the chatbot.</p>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p>Cost of the model</p>\n\t\t\t\t\t\t<p>While cost is always a factor in AI applications, it is not the primary consideration when multilingual support is required. A cheaper model may not offer robust multilingual capabilities.</p>\n\t\t\t\t\t\t<p>Latency of inference</p>\n\t\t\t\t\t\t<p>Latency is important but not the most critical factor when focusing on multilingual support. A faster model without language flexibility will not fulfill the application‘s main requirement.</p>\n\t\t\t\t\t\t<p>Model complexity</p>\n\t\t\t\t\t\t<p>Model complexity refers to how sophisticated the underlying architecture is. While it affects performance, it‘s less relevant than multilingual capability for this use case. </p>"
-    },
-    {
-      "id": "9-6",
-      "number": 6,
-      "text": "You are responsible for securing the infrastructure of an AI system that uses Amazon EC2 instances. To prevent unauthorized access to these instances and protect the overall infrastructure, which security best practice should you implement?",
-      "options": [
-        {
-          "text": "Store encryption keys in plaintext on the EC2 instance",
-          "correct": false
-        },
-        {
-          "text": "Use publicly accessible security groups for all EC2 instances",
-          "correct": false
-        },
-        {
-          "text": "Disable logging to reduce system overhead",
-          "correct": false
-        },
-        {
-          "text": "Use IAM policies to restrict user access to the EC2 instances",
-          "correct": true
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p>Use IAM policies to restrict user access to the EC2 instances</p>\n\t\t\t\t\t\t<p>Using AWS Identity and Access Management (IAM) policies to restrict user access to EC2 instances is a critical security best practice. IAM allows you to define who has access to the EC2 instances and what actions they can perform. By creating specific policies and assigning them to users or roles, you ensure that only authorized personnel can access and manage the instances, adhering to the principle of least privilege. This minimizes the risk of unauthorized access and helps secure the infrastructure.</p>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p>Store encryption keys in plaintext on the EC2 instance</p>\n\t\t\t\t\t\t<p>Storing encryption keys in plaintext is highly insecure and should be avoided. Keys should be securely stored using services like AWS KMS.</p>\n\t\t\t\t\t\t<p>Use publicly accessible security groups for all EC2 instances</p>\n\t\t\t\t\t\t<p>Publicly accessible security groups expose EC2 instances to the internet, increasing the risk of unauthorized access. It's best to limit access to only trusted IP addresses.</p>\n\t\t\t\t\t\t<p>Disable logging to reduce system overhead</p>\n\t\t\t\t\t\t<p>Disabling logging is not a recommended security practice, as logs provide valuable insights for monitoring and troubleshooting potential security incidents.</p>\n\t\t\t\t\t\t<p>References:</p>\n\t\t\t\t\t\t<p><a href=\"https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html</a>\n\t\t\t\t\t\t</p>"
     },
     {
       "id": "9-7",
@@ -962,31 +937,6 @@
       "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p>By offering fully managed services with pre-trained models and no need for machine learning expertise.</p>\n\t\t\t\t\t\t<p>AWS generative AI services, such as Amazon Bedrock, provide pre-trained models that can be easily fine-tuned for specific use cases without requiring deep machine learning expertise. These services offer fully managed infrastructure, allowing developers to focus on their application rather than the complexities of building and training models from scratch. This significantly low0ers the barrier to entry for small teams or startups, making it easier to deploy generative AI solutions.</p>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p>By providing pre-built infrastructure for deploying applications in multiple regions.</p>\n\t\t\t\t\t\t<p>While AWS offers infrastructure to deploy applications globally, this feature does not specifically address the need for simplifying generative AI model development.</p>\n\t\t\t\t\t\t<p>By reducing costs through long-term usage contracts.</p>\n\t\t\t\t\t\t<p>Reducing costs through long-term contracts is related to pricing strategy but does not directly help with the challenges of developing or managing generative AI models for teams lacking expertise.</p>\n\t\t\t\t\t\t<p>By offering full control over on-premises deployments for the AI models.</p>\n\t\t\t\t\t\t<p>AWS focuses on cloud-based solutions, and offering control over on-premises deployments does not directly lower the barrier to entry for teams looking to use managed services for generative AI.</p>\n\t\t\t\t\t\t<p>References:</p>\n\t\t\t\t\t\t<p><a href=\"https://docs.aws.amazon.com/bedrock\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/bedrock</a>\n\t\t\t\t\t\t</p>"
     },
     {
-      "id": "9-39",
-      "number": 39,
-      "text": "A global e-commerce company is developing an AI system for fraud detection and must ensure that the system complies with international regulations. Which compliance framework would be most suitable for the organization to adopt to ensure that its system maintains data integrity and customer trust?",
-      "options": [
-        {
-          "text": "PCI DSS",
-          "correct": false
-        },
-        {
-          "text": "ISO 14001",
-          "correct": false
-        },
-        {
-          "text": "ISO 9001",
-          "correct": false
-        },
-        {
-          "text": "SOC 2",
-          "correct": true
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p>SOC 2</p>\n\t\t\t\t\t\t<p>SOC 2 (System and Organization Controls) is a widely recognized framework for ensuring the security, availability, processing integrity, confidentiality, and privacy of customer data. It is particularly suitable for AI systems handling sensitive financial transactions, such as fraud detection in e-commerce. SOC 2 compliance helps organizations build customer trust by demonstrating that their systems are secure and that customer data is being handled with care. This framework also ensures that the company‘s operations and services meet international regulatory requirements for data integrity, making it highly relevant for a global e-commerce company.</p>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p>ISO 9001</p>\n\t\t\t\t\t\t<p>ISO 9001 is a quality management standard that focuses on improving business processes but is not specifically designed for data integrity or information security.</p>\n\t\t\t\t\t\t<p>PCI DSS</p>\n\t\t\t\t\t\t<p>PCI DSS (Payment Card Industry Data Security Standard) applies specifically to organizations that handle credit card transactions. It is not a comprehensive framework for overall fraud detection in AI systems.</p>\n\t\t\t\t\t\t<p>ISO 14001</p>\n\t\t\t\t\t\t<p>ISO 14001 focuses on environmental management systems and is not relevant to data security or fraud detection in an e-commerce AI system. </p>"
-    },
-    {
       "id": "9-40",
       "number": 40,
       "text": "You are developing an AI-driven loan approval system. Your team is concerned that the model could unintentionally favor applicants from certain regions based on historical loan data. Which responsible AI principle should you consider addressing to ensure fairness in the loan approval process?",
@@ -1410,31 +1360,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p>Pre-training</p>\n\t\t\t\t\t\t<p>Pre-training refers to the initial stage of model training where the model is trained from scratch on a large corpus of text data to learn general language patterns, such as grammar, vocabulary, and common structures. In this stage, the model gains broad knowledge about the language, which can later be fine-tuned for specific tasks. Pre-training allows the model to develop foundational skills that can be adapted to different domains or applications, making it a key component in the development of foundation models like GPT, BERT, and others. After pre-training, the model can be further refined using smaller, task-specific datasets to tailor its performance for particular use cases.</p>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p>Few-shot learning</p>\n\t\t\t\t\t\t<p>Few-shot learning involves training a model with a limited number of examples for a specific task. It is not used for the broad initial learning stage of a model.</p>\n\t\t\t\t\t\t<p>Transfer learning</p>\n\t\t\t\t\t\t<p>Transfer learning involves applying knowledge gained from one task to another, typically using a pre-trained model and fine-tuning it for a new, specific task. It comes after pre-training, not during the initial training phase.</p>\n\t\t\t\t\t\t<p>Fine-tuning</p>\n\t\t\t\t\t\t<p>Fine-tuning is the process of adapting a pre-trained model to specific tasks by training it on task-specific datasets. This happens after pre-training, not during the initial stage. </p>"
-    },
-    {
-      "id": "9-57",
-      "number": 57,
-      "text": "Your team needs to analyze large-scale data to detect fraud in financial transactions. The solution should involve distributed processing of big data and also support frameworks like Apache Spark and Hadoop. Which AWS service should you recommend?",
-      "options": [
-        {
-          "text": "Amazon Redshift",
-          "correct": false
-        },
-        {
-          "text": "AWS Glue DataBrew",
-          "correct": false
-        },
-        {
-          "text": "Amazon EMR",
-          "correct": true
-        },
-        {
-          "text": "Amazon OpenSearch Service",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p>Amazon EMR</p>\n\t\t\t\t\t\t<p>Amazon EMR (Elastic MapReduce) is the best service for processing large-scale data using distributed frameworks like Apache Spark and Hadoop. It is specifically designed for big data analytics, enabling teams to quickly and cost-effectively process vast amounts of data to detect fraud in financial transactions. EMR simplifies the setup, management, and scaling of big data frameworks and is ideal for use cases requiring real-time and batch processing with distributed data analysis.</p>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p>Amazon OpenSearch Service</p>\n\t\t\t\t\t\t<p>Amazon OpenSearch Service is used for search and analytics workloads but is not designed for big data distributed processing frameworks like Spark or Hadoop.</p>\n\t\t\t\t\t\t<p>Amazon Redshift</p>\n\t\t\t\t\t\t<p>Amazon Redshift is a data warehousing solution that allows for querying large datasets but does not natively support distributed frameworks like Spark or Hadoop for real-time big data processing.</p>\n\t\t\t\t\t\t<p>AWS Glue DataBrew</p>\n\t\t\t\t\t\t<p>AWS Glue DataBrew is a data preparation tool that helps clean and transform data but does not support large-scale distributed processing like EMR does with Spark and Hadoop.</p>\n\t\t\t\t\t\t<p>References:</p>\n\t\t\t\t\t\t<p><a href=\"https://aws.amazon.com/emr\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/emr</a>\n\t\t\t\t\t\t</p>"
     }
   ]
 }

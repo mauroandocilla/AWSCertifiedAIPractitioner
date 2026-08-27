@@ -1,7 +1,7 @@
 {
   "setNumber": 13,
   "sourceFile": "Practice_Set_13.html",
-  "questionCount": 57,
+  "questionCount": 53,
   "questions": [
     {
       "id": "13-1",
@@ -58,31 +58,6 @@
       "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>Ingreso promedio por usuario</p>\n\t\t\t\t\t\t<p>El ingreso promedio por usuario (ARPU) mide la cantidad de ingresos generados por cada usuario durante un período específico. Para el equipo de marketing, esta métrica es muy relevante porque muestra directamente cuántos ingresos generan los usuarios después de recibir los emails de marketing generados por IA. Al enfocarse en ARPU, el equipo puede evaluar el impacto financiero de sus campañas de email, lo que les ayuda a entender la efectividad de la IA en la generación de ingresos a través de los esfuerzos de marketing.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>Eficiencia</p>\n\t\t\t\t\t\t<p>La eficiencia se enfoca en qué tan rápida y eficazmente la IA genera emails. Aunque es importante para el desempeño operativo, no proporciona información sobre los ingresos generados por los usuarios después de recibir los emails.</p>\n\t\t\t\t\t\t<p>Valor de vida del cliente (CLV)</p>\n\t\t\t\t\t\t<p>CLV mide los ingresos totales que se espera que genere un cliente a lo largo de toda su relación con la empresa. Aunque es útil para la vinculación a largo plazo, no aborda directamente el impacto inmediato en los ingresos de los emails generados por IA.</p>\n\t\t\t\t\t\t<p>Tasa de conversión</p>\n\t\t\t\t\t\t<p>La tasa de conversión rastrea el porcentaje de usuarios que realizan una acción específica, como hacer clic en un enlace en un email. Aunque es importante para evaluar la vinculación, no mide cuántos ingresos genera cada usuario, que es el enfoque de ARPU.</p>"
     },
     {
-      "id": "13-3",
-      "number": 3,
-      "text": "La aplicación de IA de tu empresa interactúa con varios sistemas internos y necesita protección contra ataques basados en red. ¿Cuál servicio o característica de AWS deberías usar para proteger la infraestructura de tu sistema de IA del acceso no autorizado?",
-      "options": [
-        {
-          "text": "Amazon Rekognition",
-          "correct": false
-        },
-        {
-          "text": "AWS Shield",
-          "correct": true
-        },
-        {
-          "text": "Amazon Macie",
-          "correct": false
-        },
-        {
-          "text": "AWS CloudTrail",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>AWS Shield</p>\n\t\t\t\t\t\t<p>AWS Shield es un servicio administrado de protección contra ataques Distributed Denial of Service (DDoS) que resguarda tu infraestructura de ataques basados en red. Proporciona protecciones automáticas que minimizan el riesgo de acceso no autorizado o interrupciones causadas por tráfico malicioso. AWS Shield ayuda a proteger tu sistema de IA de ataques comunes como DDoS, asegurando que tu aplicación de IA y sistemas internos permanezcan seguros y disponibles.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>AWS CloudTrail</p>\n\t\t\t\t\t\t<p>AWS CloudTrail registra llamadas a API y actividad de usuarios dentro de los servicios de AWS para auditoría y monitoreo, pero no proporciona protección directa contra ataques basados en red.</p>\n\t\t\t\t\t\t<p>Amazon Macie</p>\n\t\t\t\t\t\t<p>Amazon Macie ayuda a identificar y proteger datos sensibles, como información de identificación personal (PII), pero no protege tu infraestructura de ataques de red.</p>\n\t\t\t\t\t\t<p>Amazon Rekognition</p>\n\t\t\t\t\t\t<p>Amazon Rekognition es un servicio de IA para análisis de imágenes y videos. No proporciona características de seguridad para proteger la infraestructura de ataques de red.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://docs.aws.amazon.com/waf/latest/developerguide/shield-chapter.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/waf/latest/developerguide/shield-chapter.html</a>\n\t\t\t\t\t\t</p>"
-    },
-    {
       "id": "13-4",
       "number": 4,
       "text": "Una institución financiera está utilizando un modelo de IA generativa para proporcionar recomendaciones de inversión. Sin embargo, el equipo tiene dificultades para entender cómo el modelo llega a sugerencias específicas, lo que dificulta garantizar el cumplimiento de los estándares regulatorios. ¿Cuáles son las desventajas de la IA generativa que están enfrentando?",
@@ -131,31 +106,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>Data lineage</p>\n\t\t\t\t\t\t<p>Data lineage se refiere al proceso de registrar el origen, movimiento y transformaciones de los datos mientras avanzan por las diferentes etapas de un sistema. En un sistema de IA con protocolos de gobernanza estrictos, data lineage ayuda a documentar el recorrido de los datos, lo que permite rastrear cada paso desde su origen hasta su forma final. Esto incluye el seguimiento de transformaciones de datos, proporciona información sobre cómo se procesan los datos, asegura su precisión y facilita el cumplimiento normativo. Data lineage es esencial para la transparencia, auditoría y mantenimiento de la integridad de los datos a lo largo de su ciclo de vida.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>Validación de datos</p>\n\t\t\t\t\t\t<p>La validación de datos es el proceso de asegurar que los datos sean precisos y cumplan con estándares de calidad antes de su procesamiento, pero no registra las transformaciones o los orígenes de los datos.</p>\n\t\t\t\t\t\t<p>Aumento de datos</p>\n\t\t\t\t\t\t<p>El aumento de datos se refiere a técnicas utilizadas para expandir conjuntos de datos creando versiones modificadas de datos existentes, pero no implica el seguimiento de transformaciones o data lineage.</p>\n\t\t\t\t\t\t<p>Encriptación de datos</p>\n\t\t\t\t\t\t<p>La encriptación de datos protege la información codificándola para prevenir acceso no autorizado, pero no registra las transformaciones o el movimiento de datos a través de un sistema.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://docs.aws.amazon.com/sagemaker/latest/dg/lineage-tracking-entities.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/sagemaker/latest/dg/lineage-tracking-entities.html</a>\n\t\t\t\t\t\t</p>"
-    },
-    {
-      "id": "13-6",
-      "number": 6,
-      "text": "Una organización quiere mejorar la confiabilidad de su modelo de IA, que automatiza diagnósticos médicos. Planean realizar una auditoría manual para verificar la calidad y confiabilidad de las predicciones del modelo. ¿Cuál servicio de AWS puede facilitar la revisión manual de predicciones de modelos de IA para garantizar su confiabilidad?",
-      "options": [
-        {
-          "text": "Amazon SageMaker Clarify",
-          "correct": false
-        },
-        {
-          "text": "Amazon Rekognition",
-          "correct": false
-        },
-        {
-          "text": "Amazon SageMaker Model Monitor",
-          "correct": false
-        },
-        {
-          "text": "Amazon Augmented AI (A2I)",
-          "correct": true
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p><strong>Correcta</strong></p>\n\t\t\t\t\t\t<p>Amazon Augmented AI (A2I)</p>\n\t\t\t\t\t\t<p>Amazon Augmented AI (A2I) permite integrar revisiones manuales en flujos de trabajo de aprendizaje automático para mayor precisión. Permite a los desarrolladores enviar predicciones de baja confianza de modelos de IA a revisores manuales para validación o corrección. Esto asegura mayor precisión en tareas como procesamiento de documentos, análisis de sentimientos y moderación de contenido, mientras optimiza la colaboración entre humanos y máquinas. A2I soporta integración con servicios de IA de Amazon como Textract, Comprehend y Rekognition, y permite crear flujos de trabajo personalizados.</p>\n\t\t\t\t\t\t<p>En este escenario, donde la organización quiere realizar una auditoría manual para diagnósticos médicos, A2I proporciona las herramientas necesarias para involucrar revisores manuales en la verificación y evaluación de las predicciones del modelo. Permite crear flujos de trabajo donde las predicciones realizadas por el sistema de IA pueden ser enviadas a expertos manuales para revisión, asegurando que los resultados del modelo sean confiables y precisos, especialmente en aplicaciones sensibles como la salud.</p>\n\t\t\t\t\t\t<p><strong>Incorrectas</strong></p>\n\t\t\t\t\t\t<p>Amazon SageMaker Model Monitor</p>\n\t\t\t\t\t\t<p>SageMaker Model Monitor está diseñado para monitoreo continuo de modelos en producción, detectando problemas como desviación de datos o sesgos en el tiempo, pero no facilita la revisión manual de predicciones.</p>\n\t\t\t\t\t\t<p>Amazon Rekognition</p>\n\t\t\t\t\t\t<p>Amazon Rekognition es un servicio para análisis de imágenes y videos, como reconocimiento facial, pero no está relacionado con auditorías manuales de predicciones de modelos de IA para confiabilidad.</p>\n\t\t\t\t\t\t<p>Amazon SageMaker Clarify</p>\n\t\t\t\t\t\t<p>SageMaker Clarify se usa para detectar sesgos y explicar predicciones de modelos, pero no soporta revisión manual de predicciones como Amazon A2I.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://aws.amazon.com/augmented-ai\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/augmented-ai</a>\n\t\t\t\t\t\t</p>"
     },
     {
       "id": "13-7",
@@ -210,31 +160,6 @@
       ],
       "multiSelect": true,
       "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>Amazon Transcribe</p>\n\t\t\t\t\t\t<p>Amazon Transcribe convierte el audio en texto, lo que lo hace ideal para procesar datos de audio de llamadas de atención al cliente. Una vez que el audio se transforma en texto, la empresa puede usar otros servicios de AWS, como Amazon Comprehend, para analizar el texto en busca de sentimiento y temas. Transcribe garantiza que el contenido de audio se convierta con precisión en texto para un análisis posterior, lo cual es un paso crucial para analizar llamadas de atención al cliente.</p>\n\t\t\t\t\t\t<p>Amazon Comprehend</p>\n\t\t\t\t\t\t<p>Amazon Comprehend es un servicio de procesamiento de lenguaje natural (NLP) que puede detectar automáticamente el sentimiento de las conversaciones, extraer temas clave e identificar entidades en texto. Utiliza machine learning para analizar texto y ayudar a la empresa a obtener información de las llamadas de atención al cliente, identificando las emociones expresadas y los temas principales discutidos. Comprehend puede analizar texto en documentos, correos electrónicos o transcripciones de conversaciones habladas, lo que lo hace perfecto para este escenario.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>Amazon Rekognition</p>\n\t\t\t\t\t\t<p>Amazon Rekognition es un servicio para analizar imágenes y videos. No maneja tareas de procesamiento de lenguaje natural como análisis de sentimiento o extracción de temas clave de conversaciones.</p>\n\t\t\t\t\t\t<p>Amazon Translate</p>\n\t\t\t\t\t\t<p>Amazon Translate es un servicio de traducción de idiomas. Si bien es útil para traducir texto entre idiomas, no está diseñado para análisis de sentimiento o identificación de temas clave en conversaciones.</p>\n\t\t\t\t\t\t<p>Amazon Polly</p>\n\t\t\t\t\t\t<p>Amazon Polly es un servicio de conversión de texto a voz. Convierte texto escrito en voz natural, pero no realiza análisis ni detección de sentimiento en conversaciones.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://docs.aws.amazon.com/transcribe/latest/dg/what-is.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/transcribe/latest/dg/what-is.html</a></p>\n\t\t\t\t\t\t<p><a href=\"https://docs.aws.amazon.com/comprehend/latest/dg/what-is.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/comprehend/latest/dg/what-is.html</a>\n\t\t\t\t\t\t</p>"
-    },
-    {
-      "id": "13-9",
-      "number": 9,
-      "text": "Se está implementando un sistema de IA y el equipo de seguridad quiere hacer seguimiento de toda la actividad de API con fines de auditoría y cumplimiento normativo. ¿Cuál servicio de AWS les ayudará a mantener un historial completo de las llamadas de API realizadas en su entorno?",
-      "options": [
-        {
-          "text": "AWS Config",
-          "correct": false
-        },
-        {
-          "text": "Amazon Inspector",
-          "correct": false
-        },
-        {
-          "text": "AWS CloudTrail",
-          "correct": true
-        },
-        {
-          "text": "AWS Trusted Advisor",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>AWS CloudTrail</p>\n\t\t\t\t\t\t<p>AWS CloudTrail te ayuda a monitorear y registrar toda la actividad de API dentro de tu entorno de AWS. Captura y registra detalles sobre cada acción realizada por usuarios, servicios o aplicaciones, lo que facilita el seguimiento de cambios y garantiza el cumplimiento normativo. Con CloudTrail, el equipo de seguridad puede revisar los logs para ver quién accedió a qué, cuándo y desde dónde, lo que les ayuda a identificar actividad sospechosa o violaciones de seguridad. Este historial completo de llamadas de API es vital para auditoría, resolución de problemas e investigaciones forenses. CloudTrail se integra con otros servicios de AWS, proporcionando monitoreo en tiempo real y alertas para comportamiento inusual. Es esencial para mantener un entorno de AWS seguro y conforme.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>AWS Trusted Advisor</p>\n\t\t\t\t\t\t<p>AWS Trusted Advisor proporciona recomendaciones para optimizar tu infraestructura de AWS en términos de costo, seguridad, rendimiento y tolerancia a fallos. Sin embargo, no registra ni hace seguimiento de la actividad de API.</p>\n\t\t\t\t\t\t<p>Amazon Inspector</p>\n\t\t\t\t\t\t<p>Amazon Inspector es una herramienta de evaluación de seguridad que verifica vulnerabilidades en tus aplicaciones y entornos. No hace seguimiento de la actividad de API, pero se enfoca en mejorar la postura de seguridad de tus recursos.</p>\n\t\t\t\t\t\t<p>AWS Config</p>\n\t\t\t\t\t\t<p>AWS Config monitorea y registra los cambios de configuración en tu entorno. Si bien hace seguimiento del historial de configuración de recursos, no proporciona logs detallados de llamadas de API como CloudTrail.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-user-guide.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-user-guide.html</a>\n\t\t\t\t\t\t</p>"
     },
     {
       "id": "13-10",
@@ -435,31 +360,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>Algorithm Accountability Laws</p>\n\t\t\t\t\t\t<p>Las leyes de responsabilidad de algoritmos se enfocan en garantizar transparencia, equidad y responsabilidad en cómo los algoritmos toman decisiones. Para una institución financiera que usa IA para calificación automática de crédito, estas leyes son cruciales porque aseguran que las decisiones del sistema sean justas, no discriminatorias y explicables. Al cumplir con estas leyes, la empresa puede asegurar que su sistema de IA pueda ser auditado y puede proporcionar explicaciones claras para las decisiones de calificación de crédito. La responsabilidad de algoritmos es especialmente importante en el sector financiero, donde sistemas de IA sesgados u opacos pueden tener impactos significativos en las oportunidades financieras de las personas.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>SOC 2</p>\n\t\t\t\t\t\t<p>SOC 2 se enfoca en seguridad, disponibilidad e integridad de datos para organizaciones de servicios, pero no está específicamente diseñado para asegurar la responsabilidad de algoritmos.</p>\n\t\t\t\t\t\t<p>ISO 9001</p>\n\t\t\t\t\t\t<p>ISO 9001 es un estándar de gestión de calidad orientado a mejorar los procesos organizacionales y la satisfacción del cliente, no directamente relacionado con la responsabilidad de algoritmos o la gobernanza de IA.</p>\n\t\t\t\t\t\t<p>General Data Protection Regulation (GDPR)</p>\n\t\t\t\t\t\t<p>GDPR rige la privacidad y protección de datos, pero no aborda específicamente el uso ético o la responsabilidad de algoritmos en calificación de crédito.</p>"
-    },
-    {
-      "id": "13-18",
-      "number": 18,
-      "text": "Tu sistema de IA se ejecuta en AWS y necesitas detectar amenazas y vulnerabilidades antes de que impacten tu infraestructura. ¿Cuál servicio de AWS usarías para monitoreo continuo de posibles amenazas de seguridad en tu sistema de IA?",
-      "options": [
-        {
-          "text": "Amazon S3",
-          "correct": false
-        },
-        {
-          "text": "AWS CloudTrail",
-          "correct": false
-        },
-        {
-          "text": "AWS PrivateLink",
-          "correct": false
-        },
-        {
-          "text": "AWS GuardDuty",
-          "correct": true
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>AWS GuardDuty</p>\n\t\t\t\t\t\t<p>AWS GuardDuty es un servicio de detección de amenazas que monitorea continuamente tu entorno de AWS para identificar actividad maliciosa y comportamiento no autorizado. Utiliza machine learning, detección de anomalías e inteligencia de amenazas integrada para identificar posibles amenazas de seguridad antes de que impacten tu infraestructura. Para sistemas de IA, GuardDuty puede monitorear tráfico de red, actividad de cuenta en AWS y otras fuentes de datos para detectar vulnerabilidades y alertarte sobre actividad sospechosa, ayudando a mantener la seguridad e integridad de tu infraestructura de IA.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>AWS CloudTrail</p>\n\t\t\t\t\t\t<p>AWS CloudTrail registra y rastrea la actividad de usuarios y llamadas a API en tus servicios de AWS, proporcionando un registro de auditoría, pero no detecta activamente amenazas o vulnerabilidades.</p>\n\t\t\t\t\t\t<p>AWS PrivateLink</p>\n\t\t\t\t\t\t<p>AWS PrivateLink permite conexiones privadas seguras entre VPCs y servicios de AWS, pero no se utiliza para detección de amenazas o monitoreo de seguridad.</p>\n\t\t\t\t\t\t<p>Amazon S3</p>\n\t\t\t\t\t\t<p>Amazon S3 es un servicio de almacenamiento escalable. Si bien puede almacenar datos de forma segura, no proporciona capacidades continuas de detección de amenazas o monitoreo.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://docs.aws.amazon.com/guardduty/latest/ug/what-is-guardduty.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/guardduty/latest/ug/what-is-guardduty.html</a>\n\t\t\t\t\t\t</p>"
     },
     {
       "id": "13-19",

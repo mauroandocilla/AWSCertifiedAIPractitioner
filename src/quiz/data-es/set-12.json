@@ -1,7 +1,7 @@
 {
   "setNumber": 12,
   "sourceFile": "Practice_Set_12.html",
-  "questionCount": 59,
+  "questionCount": 56,
   "questions": [
     {
       "id": "12-1",
@@ -52,31 +52,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>Amazon Macie</p>\n\t\t\t\t\t\t<p>Amazon Macie utiliza machine learning para descubrir, clasificar y proteger automáticamente datos sensibles, como información de identificación personal (PII). Para modelos de IA entrenados con datos de clientes, garantizar el cumplimiento de regulaciones de privacidad es crítico, y Macie está diseñado específicamente para este propósito. Escanea datos almacenados en buckets de Amazon S3, identifica cualquier PII y proporciona información sobre cómo se accede o se almacena esta información. Macie ayuda a las organizaciones a monitorear y proteger información sensible, permitiéndoles manejar PII de forma segura y cumplir con regulaciones como GDPR o HIPAA.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>Amazon Rekognition</p>\n\t\t\t\t\t\t<p>Amazon Rekognition proporciona análisis de imágenes y video, como reconocimiento facial y detección de objetos. No está diseñado para identificar PII en datos basados en texto ni para gestionar privacidad de datos.</p>\n\t\t\t\t\t\t<p>Amazon Textract</p>\n\t\t\t\t\t\t<p>Amazon Textract extrae texto e información de documentos escaneados. Aunque puede extraer información de documentos estructurados, no se especializa en detectar o asegurar PII.</p>\n\t\t\t\t\t\t<p>Amazon Polly</p>\n\t\t\t\t\t\t<p>Amazon Polly convierte texto en voz con sonido natural. No se ocupa de seguridad de datos o cumplimiento de privacidad y no es relevante para identificar o gestionar PII en conjuntos de datos.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://docs.aws.amazon.com/macie/latest/user/what-is-macie.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/macie/latest/user/what-is-macie.html</a>\n\t\t\t\t\t\t</p>"
-    },
-    {
-      "id": "12-3",
-      "number": 3,
-      "text": "Tu organización quiere empaquetar e implementar un modelo de IA generativa usando entornos containerizados. ¿Cuál servicio de AWS utilizarías para administrar y escalar aplicaciones containerizadas?",
-      "options": [
-        {
-          "text": "Amazon ECS",
-          "correct": true
-        },
-        {
-          "text": "AWS Key Management Service (KMS)",
-          "correct": false
-        },
-        {
-          "text": "Amazon CloudFront",
-          "correct": false
-        },
-        {
-          "text": "Amazon RDS",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>Amazon ECS</p>\n\t\t\t\t\t\t<p>Amazon Elastic Container Service (ECS) es un servicio completamente administrado de orquestación de contenedores que te permite ejecutar, administrar y escalar aplicaciones containerizadas, incluidos modelos de IA generativa. ECS es compatible con contenedores Docker, lo que facilita empaquetar tus modelos de IA y todas sus dependencias en contenedores, garantizando consistencia en diferentes entornos. Se integra sin problemas con otros servicios de AWS como Elastic Load Balancing e AWS Identity and Access Management (IAM) para un escalado seguro. ECS ofrece dos tipos de lanzamiento: Fargate (sin servidor) y EC2, brindándote la flexibilidad de elegir el nivel de control que necesitas para administrar la infraestructura.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>Amazon RDS</p>\n\t\t\t\t\t\t<p>Amazon RDS es un servicio de base de datos relacional administrado y no está diseñado para ejecutar o administrar aplicaciones containerizadas. Su propósito es manejar datos estructurados usando bases de datos SQL, no orquestación de contenedores.</p>\n\t\t\t\t\t\t<p>Amazon CloudFront</p>\n\t\t\t\t\t\t<p>Amazon CloudFront es un servicio de Red de Distribución de Contenidos (CDN) utilizado para entregar contenido a usuarios de forma global con baja latencia. No administra ni escala aplicaciones containerizadas; en cambio, optimiza la distribución de contenido.</p>\n\t\t\t\t\t\t<p>AWS Key Management Service (KMS)</p>\n\t\t\t\t\t\t<p>AWS KMS es un servicio para crear y administrar claves de cifrado, garantizando la seguridad de datos en servicios de AWS. No está diseñado para administrar o escalar aplicaciones containerizadas, pero puede usarse para asegurar datos en esas aplicaciones.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://aws.amazon.com/ecs\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/ecs</a>\n\t\t\t\t\t\t</p>"
     },
     {
       "id": "12-4",
@@ -502,31 +477,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p><strong>Correcta</strong></p>\n\t\t\t\t\t\t<p>Garantizar soporte multilingüe y baja latencia durante la inferencia</p>\n\t\t\t\t\t\t<p>Para un foundation model multilingüe que necesita proporcionar traducciones y respuestas en tiempo real, es crucial garantizar tanto el soporte multilingüe como la baja latencia durante la inferencia. El soporte multilingüe permite que el modelo maneje una amplia gama de idiomas, lo cual es vital para consultas de clientes en diferentes lenguas. La baja latencia asegura que el modelo pueda proporcionar respuestas rápidamente, lo que es esencial para aplicaciones en tiempo real. Priorizar estas dos consideraciones de diseño garantiza que el modelo pueda manejar eficientemente múltiples idiomas mientras entrega respuestas rápidas y precisas, crítico para una experiencia de usuario óptima en entornos de comunicación en tiempo real.</p>\n\t\t\t\t\t\t<p><strong>Incorrectas</strong></p>\n\t\t\t\t\t\t<p>Realizar fine-tuning del modelo en un idioma específico</p>\n\t\t\t\t\t\t<p>El fine-tuning en un idioma específico mejora el rendimiento para ese idioma en particular, pero limita la versatilidad del modelo para manejar múltiples idiomas, lo cual es necesario para este caso de uso.</p>\n\t\t\t\t\t\t<p>Pre-entrenar el modelo desde cero</p>\n\t\t\t\t\t\t<p>Pre-entrenar un modelo desde cero es un proceso que consume muchos recursos y no siempre es necesario para mejorar la traducción y el rendimiento en tiempo real. Es preferible utilizar modelos pre-entrenados y hacer fine-tuning para casos de uso específicos.</p>\n\t\t\t\t\t\t<p>Utilizar chain-of-thought prompting para mejorar la precisión de la traducción</p>\n\t\t\t\t\t\t<p>El chain-of-thought prompting puede ayudar con tareas de razonamiento complejo, pero no es necesario para traducción. El rendimiento en tiempo real depende más de la velocidad y del soporte de idiomas preciso que de razonar a través de prompts de múltiples pasos.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://aws.amazon.com/blogs/machine-learning/build-a-multi-lingual-document-translation-workflow-with-domain-specific-and-language-specific-customization\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/blogs/machine-learning/build-a-multi-lingual-document-translation-workflow-with-domain-specific-and-language-specific-customization</a>\n\t\t\t\t\t\t</p>"
-    },
-    {
-      "id": "12-21",
-      "number": 21,
-      "text": "Como parte de la construcción de un sistema de IA en AWS, tu equipo necesita asegurar que solo usuarios autorizados puedan acceder a datasets sensibles. ¿Cuál sería la mejor práctica para implementar el control de acceso a datos para diferentes usuarios dentro del equipo?",
-      "options": [
-        {
-          "text": "Control de acceso a datos",
-          "correct": true
-        },
-        {
-          "text": "Ofuscación de datos",
-          "correct": false
-        },
-        {
-          "text": "Normalización de datos",
-          "correct": false
-        },
-        {
-          "text": "Encriptación de datos",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>Control de acceso a datos</p>\n\t\t\t\t\t\t<p>El control de acceso a datos es la mejor práctica para asegurar que solo usuarios autorizados puedan acceder a datasets sensibles. Al implementar control de acceso a datos, puedes definir quién dentro de tu equipo tiene permiso para ver, modificar o usar datasets específicos. En AWS, esto se realiza típicamente usando servicios como AWS Identity and Access Management (IAM), donde puedes crear políticas y roles que otorguen diferentes niveles de acceso a usuarios según sus roles o responsabilidades. Esto asegura que los datos sensibles permanezcan protegidos y solo sean accesibles por aquellos con los permisos apropiados.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>Ofuscación de datos</p>\n\t\t\t\t\t\t<p>La ofuscación de datos implica oscurecer o anonimizar datos para proteger información sensible, pero no gestiona ni restringe quién puede acceder a los datos.</p>\n\t\t\t\t\t\t<p>Encriptación de datos</p>\n\t\t\t\t\t\t<p>La encriptación de datos asegura los datos codificándolos para prevenir acceso no autorizado, pero no controla qué usuarios tienen acceso a los datos.</p>\n\t\t\t\t\t\t<p>Normalización de datos</p>\n\t\t\t\t\t\t<p>La normalización de datos es el proceso de organizar datos en un formato consistente, pero no está relacionada con el control de acceso de usuarios a datasets sensibles.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://docs.aws.amazon.com/machine-learning/latest/dg/controlling-access-to-amazon-ml-resources-by-using-iam.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/machine-learning/latest/dg/controlling-access-to-amazon-ml-resources-by-using-iam.html</a>\n\t\t\t\t\t\t</p>"
     },
     {
       "id": "12-22",
@@ -1435,31 +1385,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>Reducir la complejidad del modelo para disminuir el tiempo de inferencia</p>\n\t\t\t\t\t\t<p>Reducir la complejidad del modelo ayuda a disminuir el tiempo de inferencia, que es el tiempo que tarda el modelo en proporcionar una respuesta. En aplicaciones de atención médica que requieren análisis en tiempo real de reportes médicos, la velocidad es crítica. Al simplificar el modelo (por ejemplo, reduciendo la cantidad de capas o parámetros), puedes asegurar resultados más rápidos sin sacrificar demasiada precisión. Esta consideración de diseño es particularmente importante en entornos sensibles al tiempo como la atención médica, donde una demora en la respuesta podría impactar la calidad del servicio o la toma de decisiones. Equilibrar complejidad y rendimiento es clave para mantener tanto velocidad como precisión.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>Soporte de modalidad para diferentes tipos de datos</p>\n\t\t\t\t\t\t<p>Aunque soportar varios tipos de datos (por ejemplo, texto, imágenes, datos estructurados) es importante, no impacta directamente el rendimiento en tiempo real. Esto es más relevante para la versatilidad del modelo que para su velocidad o eficiencia.</p>\n\t\t\t\t\t\t<p>Aumentar la temperatura para resultados más creativos</p>\n\t\t\t\t\t\t<p>Aumentar la temperatura introduce más aleatoriedad, lo cual es útil para tareas creativas. Sin embargo, en aplicaciones de atención médica, la precisión y confiabilidad son más importantes que la creatividad, y esto no ayudará con el rendimiento en tiempo real.</p>\n\t\t\t\t\t\t<p>Usar Retrieval-Augmented Generation (RAG) para integrar fuentes externas</p>\n\t\t\t\t\t\t<p>RAG implica obtener información de fuentes externas durante la inferencia del modelo. Aunque es útil para mejorar el conocimiento, puede ralentizar el proceso, lo cual podría no ser ideal para aplicaciones en tiempo real donde la velocidad es una prioridad.</p>"
-    },
-    {
-      "id": "12-58",
-      "number": 58,
-      "text": "Una empresa está construyendo una aplicación de IA generativa que operará en múltiples regiones y debe cumplir con las leyes locales de protección de datos. ¿Cómo ayuda la infraestructura de AWS a la empresa a garantizar la residencia de datos y el cumplimiento normativo en diferentes regiones geográficas?",
-      "options": [
-        {
-          "text": "AWS encripta automáticamente todos los datos para eludir los requisitos de cumplimiento regional.",
-          "correct": false
-        },
-        {
-          "text": "AWS proporciona infraestructura global con opciones regionales, permitiendo a los usuarios almacenar datos en regiones específicas para cumplir con las leyes locales.",
-          "correct": true
-        },
-        {
-          "text": "AWS requiere que los usuarios administren y garanticen por sí mismos el cumplimiento de la residencia de datos.",
-          "correct": false
-        },
-        {
-          "text": "AWS permite almacenar datos en cualquier lugar sin restricciones sobre la residencia regional de datos.",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>AWS proporciona infraestructura global con opciones regionales, permitiendo a los usuarios almacenar datos en regiones específicas para cumplir con las leyes locales.</p>\n\t\t\t\t\t\t<p>AWS ofrece una infraestructura de nube global con zonas de disponibilidad en múltiples regiones, permitiendo a las empresas elegir dónde almacenan y procesan sus datos. Esta flexibilidad es crucial para cumplir con las leyes locales de protección de datos, ya que las empresas pueden garantizar la residencia de datos seleccionando regiones específicas que cumplan con las regulaciones locales. AWS también proporciona herramientas como Amazon S3 y AWS CloudFormation para respaldar el almacenamiento y la administración de datos en estas regiones, facilitando que las empresas cumplan con los requisitos de residencia de datos y cumplimiento normativo en diferentes ubicaciones geográficas.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>AWS requiere que los usuarios administren y garanticen por sí mismos el cumplimiento de la residencia de datos.</p>\n\t\t\t\t\t\t<p>AWS proporciona herramientas y opciones para ayudar a los usuarios a almacenar datos en regiones específicas, facilitando el cumplimiento normativo.</p>\n\t\t\t\t\t\t<p>AWS permite almacenar datos en cualquier lugar sin restricciones sobre la residencia regional de datos.</p>\n\t\t\t\t\t\t<p>AWS ofrece opciones regionales que permiten a los usuarios controlar dónde se almacenan los datos para cumplir con los requisitos de cumplimiento.</p>\n\t\t\t\t\t\t<p>AWS encripta automáticamente todos los datos para eludir los requisitos de cumplimiento regional.</p>\n\t\t\t\t\t\t<p>El encriptado no elude los requisitos de cumplimiento. Las leyes de residencia de datos a menudo requieren que los datos se almacenen en regiones específicas, y el encriptado por sí solo no cumple estos requisitos.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://aws.amazon.com/compliance/data-protection\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/compliance/data-protection</a></p>\n\t\t\t\t\t\t<p><a href=\"https://aws.amazon.com/about-aws/global-infrastructure\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/about-aws/global-infrastructure</a>\n\t\t\t\t\t\t</p>"
     },
     {
       "id": "12-59",

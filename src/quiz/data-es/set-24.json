@@ -1,7 +1,7 @@
 {
   "setNumber": 24,
   "sourceFile": "Practice_Set_24.html",
-  "questionCount": 25,
+  "questionCount": 16,
   "questions": [
     {
       "id": "24-1",
@@ -54,31 +54,6 @@
       "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Amazon SageMaker Studio</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Amazon SageMaker Studio</b> es un <b>entorno de desarrollo integrado (IDE) unificado basado en web</b> para machine learning que proporciona un <b>único punto de vista</b> para todo el flujo de trabajo de ML. Es el servicio más adecuado para proporcionar una <b>vista centralizada para rastrear, gestionar y monitorear múltiples modelos de machine learning de manera efectiva</b> porque ofrece capacidades exhaustivas en todo el ciclo de vida de ML, incluyendo:\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li><b>Gestión de Experimentos:</b> Seguimiento de ejecuciones de entrenamiento de modelos, hiperparámetros y métricas de rendimiento.</li>\n\t\t\t\t\t\t\t<li><b>Registro de Modelos:</b> Un repositorio centralizado para catalogar modelos, rastrear versiones y gestionar su estado (por ejemplo, aprobado para implementación).</li>\n\t\t\t\t\t\t\t<li><b>Pipelines:</b> Orquestación y gestión de flujos de trabajo de ML de extremo a extremo.</li>\n\t\t\t\t\t\t\t<li><b>Integración de Monitoreo:</b> Si bien Model Monitor realiza la detección real de desviaciones, Studio proporciona la interfaz para ver y gestionar estos trabajos de monitoreo y sus resultados de forma centralizada.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>En esencia, SageMaker Studio actúa como el centro neurálgico para que los profesionales de ML organicen, gestionen y observen sus diversos modelos a lo largo de su ciclo de vida.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Amazon SageMaker Clarify</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p><b>Amazon SageMaker Clarify</b> está diseñado para ayudar a detectar posible <b>sesgo</b> en modelos de machine learning y para <b>explicar predicciones</b>. Aunque es crucial para la equidad y transparencia del modelo, no proporciona una solución centralizada para rastrear, gestionar y monitorear en general múltiples modelos a lo largo de su ciclo de vida. Su enfoque está en aspectos específicos del entendimiento y responsabilidad del modelo.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Amazon SageMaker Model Monitor</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Amazon SageMaker Model Monitor</b> es un servicio enfocado específicamente en <b>monitorear el rendimiento de modelos de machine learning implementados en producción</b>. Ayuda a detectar problemas como desviación de datos y desviación de calidad del modelo. Si bien es parte del \"monitoreo\" de modelos, generalmente se usa para modelos <i>ya implementados</i> y se centra más en detectar problemas <i>después de</i> la implementación en lugar de proporcionar una vista centralizada de gestión y rastreo para modelos en todas las etapas de su ciclo de vida. SageMaker Studio se integra con Model Monitor para mostrar estos resultados de monitoreo.\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Amazon SageMaker Ground Truth</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p><b>Amazon SageMaker Ground Truth</b> es un servicio que te ayuda a <b>construir conjuntos de datos de entrenamiento de alta calidad</b> para machine learning proporcionando herramientas para etiquetado de datos humano. Su propósito es preparar datos para el entrenamiento de modelos, no para gestionar, rastrear o monitorear los modelos de machine learning en sí.</p>"
     },
     {
-      "id": "24-3",
-      "number": 3,
-      "text": "En el contexto de AWS, ¿cuál modelo de servicio de computación en la nube ejemplifica Amazon Elastic Compute Cloud (EC2)?",
-      "options": [
-        {
-          "text": "Network as a Service (NaaS)",
-          "correct": false
-        },
-        {
-          "text": "Platform as a Service (PaaS)",
-          "correct": false
-        },
-        {
-          "text": "Software as a Service (SaaS)",
-          "correct": false
-        },
-        {
-          "text": "Infrastructure as a Service (IaaS)",
-          "correct": true
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Infrastructure as a Service (IaaS)</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p>Amazon Elastic Compute Cloud (EC2) es un ejemplo de <b>Infrastructure as a Service (IaaS)</b>. En el modelo IaaS, los proveedores de nube ofrecen recursos de computación fundamentales a través de internet, incluyendo máquinas virtuales (como instancias de EC2), almacenamiento y redes. Con EC2, los usuarios tienen un control significativo sobre el sistema operativo, las aplicaciones y los datos en sus servidores virtuales, mientras que AWS gestiona la infraestructura física subyacente, el software de virtualización y la red. Esto permite una gran flexibilidad y control, lo que la convierte en un componente fundamental para muchas implementaciones en la nube.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Network as a Service (NaaS)</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p>Aunque los componentes de red (como Amazon VPC y Security Groups) son esenciales para EC2, <b>Network as a Service (NaaS)</b> es un modelo de servicio en la nube más especializado que se enfoca principalmente en proporcionar infraestructura y servicios de red como servicio (por ejemplo, VPNs, balanceo de carga, firewalls). La oferta principal de EC2 es computación, no solo redes.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Platform as a Service (PaaS)</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Platform as a Service (PaaS)</b> proporciona un entorno completo de desarrollo e implementación en la nube, incluyendo sistemas operativos, entornos de ejecución de lenguajes de programación, bases de datos y servidores web. Los usuarios gestionan sus aplicaciones y datos, pero el proveedor gestiona la infraestructura subyacente y el software de plataforma. EC2 no ofrece esta abstracción de nivel superior; los usuarios son responsables de gestionar el sistema operativo e instalar los runtimes de aplicación en sus instancias de EC2. Servicios de AWS como Elastic Beanstalk o AWS Lambda son mejores ejemplos de PaaS.\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Software as a Service (SaaS)</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Software as a Service (SaaS)</b> proporciona aplicaciones de software listas para usar a través de internet sobre una base de suscripción. Los usuarios simplemente acceden y utilizan la aplicación, mientras que el proveedor gestiona toda la infraestructura subyacente, plataformas y software. EC2 no ofrece una aplicación completa lista para usar; proporciona la potencia de computación sin procesar sobre la cual los usuarios implementan y ejecutan sus propias aplicaciones. Ejemplos de SaaS incluyen Gmail, Salesforce o Microsoft 365.\n\t\t\t\t\t\t</p>"
-    },
-    {
       "id": "24-4",
       "number": 4,
       "text": "Al desarrollar un modelo de machine learning para predecir resultados de pacientes a partir de datos médicos históricos, ¿qué método combatiría mejor el problema del overfitting?",
@@ -129,31 +104,6 @@
       "explanationHtml": "<p>Chain-of-thought prompting es efectivo para tareas complejas ya que guía al modelo de IA a considerar y articular cada paso involucrado en la resolución de un problema. Esta técnica ayuda a crear flujos claros y lógicos, especialmente útil para generar reportes exhaustivos o procesos comerciales estructurados. Para más detalles sobre técnicas de prompt engineering, se puede consultar documentación oficial de modelos de IA o papers de investigación en IA.</p>"
     },
     {
-      "id": "24-6",
-      "number": 6,
-      "text": "Estás desarrollando un modelo de machine learning para una empresa de servicios financieros que requiere cumplimiento estricto con regulaciones de seguridad de datos. El modelo debe estar aislado de otras redes para evitar cualquier exposición no autorizada de datos. ¿Cuál característica de Amazon VPC deberías usar para asegurar el nivel más alto de aislamiento de red en tus workflows de machine learning?",
-      "options": [
-        {
-          "text": "Utilizar VPC peering para conectar con otras VPCs",
-          "correct": false
-        },
-        {
-          "text": "Crear una VPC completamente aislada sin ninguna puerta de enlace o conexión a internet",
-          "correct": true
-        },
-        {
-          "text": "Implementar el modelo en una VPC con subnets públicas y privadas",
-          "correct": false
-        },
-        {
-          "text": "Configurar Security Groups y NACLs con reglas estrictas de entrada y salida",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>Para lograr el nivel más alto de aislamiento de red en Amazon VPC, especialmente para aplicaciones que manejan datos altamente sensibles como en servicios financieros, crear una VPC completamente aislada sin internet gateway ni conectividad externa es el método más efectivo. Este enfoque asegura que el entorno esté completamente segregado de internet público y de cualquier otra red, lo cual es crucial para cumplir con estándares estrictos de seguridad de datos. Consulta la documentación de AWS para orientación más detallada sobre cómo configurar VPCs aisladas: <a href=\"https://aws.amazon.com/vpc/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/vpc/</a>\n\t\t\t\t\t\t</p>"
-    },
-    {
       "id": "24-7",
       "number": 7,
       "text": "En el contexto del desarrollo de un modelo de IA generativa para la generación automática de texto en atención al cliente, ¿cuál de las siguientes opciones diferencia correctamente los parámetros del modelo de los hiperparámetros?",
@@ -177,31 +127,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Entender la diferencia entre parámetros del modelo e hiperparámetros es esencial para entrenar modelos de IA de manera efectiva. Los parámetros del modelo son los pesos y sesgos que se ajustan a través del proceso de entrenamiento en función de los datos de entrada, con el objetivo de minimizar el error del modelo. Los hiperparámetros, como la tasa de aprendizaje o el número de épocas, se establecen antes de que comience el entrenamiento y determinan la estructura y la dinámica del proceso de entrenamiento. El ajuste adecuado de los hiperparámetros puede afectar significativamente el rendimiento y la eficiencia del modelo.</p>"
-    },
-    {
-      "id": "24-8",
-      "number": 8,
-      "text": "Eres un ingeniero de Machine Learning encargado de garantizar el aislamiento de red para diferentes modelos de machine learning que se están desarrollando en tu empresa. Los modelos están alojados en AWS y requieren interacción segura dentro de grupos específicos y acceso restringido desde internet público. ¿Cuál es la mejor manera de lograr aislamiento de red usando Amazon VPC mientras se gestionan diversas configuraciones de red para flujos de trabajo de machine learning?",
-      "options": [
-        {
-          "text": "Usar un grupo de seguridad compartido para todos los modelos dentro de la misma VPC para simplificar la gestión de red y reducir la cantidad de configuraciones.",
-          "correct": false
-        },
-        {
-          "text": "Desplegar cada modelo en una Amazon VPC separada, usar VPC peering para la comunicación necesaria entre modelos.",
-          "correct": false
-        },
-        {
-          "text": "Usar subnets separadas dentro de una única Amazon VPC para cada modelo, aplicando ACLs de red y grupos de seguridad para control de acceso granular.",
-          "correct": true
-        },
-        {
-          "text": "Conectar los modelos directamente a internet para asegurar que puedan gestionar independientemente sus configuraciones de red sin restricciones de VPC.",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>En el contexto de Amazon VPC, usar subnets separadas para diferentes modelos de machine learning dentro de la misma VPC ofrece un enfoque equilibrado para el aislamiento de red y la capacidad de gestión. Permite que configuraciones de red específicas se adapten a cada modelo, mejorando la seguridad a través del acceso controlado que proporcionan los ACLs de red y los grupos de seguridad. Este método asegura que cada modelo funcione dentro de un entorno seguro y aislado, de acuerdo con sus requisitos específicos de red y seguridad.</p>"
     },
     {
       "id": "24-9",
@@ -258,31 +183,6 @@
       "explanationHtml": "<p>Cuando es necesario controlar el tamaño de la salida de un modelo, ajustar el parámetro 'Max Tokens' es el enfoque adecuado. Esta configuración limita directamente la cantidad máxima de tokens que el modelo puede generar, proporcionando una forma sencilla de controlar la longitud de la salida. Esto es especialmente útil en aplicaciones donde la brevedad de la respuesta es crítica, o cuando las limitaciones del sistema restringen el tamaño aceptable de las respuestas.</p>"
     },
     {
-      "id": "24-11",
-      "number": 11,
-      "text": "Una empresa de servicios financieros está integrando Amazon QuickSight para mejorar su análisis de datos y toma de decisiones. ¿Cuál servicio de AWS debe usarse para gestionar permisos de usuarios de forma efectiva, asegurando acceso seguro y escalable entre diferentes departamentos?",
-      "options": [
-        {
-          "text": "AWS Organizations",
-          "correct": false
-        },
-        {
-          "text": "Amazon Cognito",
-          "correct": false
-        },
-        {
-          "text": "AWS IAM (Identity and Access Management)",
-          "correct": true
-        },
-        {
-          "text": "Amazon S3 bucket policies",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>AWS IAM (Identity and Access Management) es la opción óptima para gestionar el acceso de usuarios y la seguridad dentro de Amazon QuickSight. Permite definir roles de usuario y permisos con controles de acceso granulares que son esenciales para proteger datos financieros sensibles y asegurar que el personal apropiado tenga los niveles de acceso correspondientes. IAM se integra sin problemas con QuickSight, lo que la convierte en una solución robusta para la gestión de usuarios y seguridad a nivel empresarial.</p>"
-    },
-    {
       "id": "24-12",
       "number": 12,
       "text": "Al utilizar Amazon SageMaker Autopilot para un proyecto de aprendizaje automático automatizado, ¿cuál es el impacto de ajustar el atributo objetivo hacia la predicción del modelo?",
@@ -331,31 +231,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>El desafío principal en la implementación de machine learning para mejorar la segmentación de clientes y personalizar campañas de marketing es recopilar y preparar datos de alta calidad. La calidad de los datos es crucial para entrenar modelos de machine learning precisos y efectivos. AWS ofrece servicios como AWS Glue para operaciones ETL de datos y Amazon SageMaker para construir, entrenar e implementar modelos de machine learning, lo que ayuda a superar algunos de los desafíos relacionados con el procesamiento de datos y el entrenamiento de modelos.</p>"
-    },
-    {
-      "id": "24-14",
-      "number": 14,
-      "text": "Como profesional de IA que supervisa implementaciones de ML en AWS, deseas optimizar costos sin comprometer el rendimiento mediante un monitoreo efectivo. ¿Cuál es la herramienta de AWS que deberías utilizar principalmente para analizar, identificar y optimizar patrones de costos específicamente relacionados con tus cargas de trabajo de ML?",
-      "options": [
-        {
-          "text": "AWS Cost Explorer con enfoque específico en servicios de ML",
-          "correct": true
-        },
-        {
-          "text": "AWS Budgets para establecer límites estrictos en el gasto de ML",
-          "correct": false
-        },
-        {
-          "text": "AWS Trusted Advisor para recomendaciones amplias de optimización de costos",
-          "correct": false
-        },
-        {
-          "text": "AWS CloudTrail para auditoría y registro de todas las acciones en servicios de ML",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>AWS Cost Explorer está diseñado específicamente para analizar y gestionar costos y uso de AWS. Para implementaciones de ML, ofrece información detallada sobre los costos asociados con varios servicios de ML, ayudando a los usuarios a identificar los impulsores de costos y recursos subutilizados. Permite tomar decisiones sobre dónde se pueden hacer optimizaciones sin comprometer el rendimiento del servicio, lo que la convierte en la mejor herramienta entre las opciones para la gestión de costos dirigida en escenarios de ML. Puedes encontrar más información en la documentación oficial de AWS en <a href=\"https://aws.amazon.com/aws-cost-management/aws-cost-explorer/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/aws-cost-management/aws-cost-explorer/</a>. </p>"
     },
     {
       "id": "24-15",
@@ -408,31 +283,6 @@
       "explanationHtml": "<p>El modelo Transformer, representado aquí por BERT, utiliza mecanismos de self-attention para procesar palabras en relación con todas las otras palabras en una oración, a diferencia de los modelos tradicionales que procesan las palabras de forma secuencial. Esta arquitectura la hace poderosa para aplicaciones que requieren comprender el contexto y las relaciones en el texto, como la traducción de idiomas y la generación de contenido. Para obtener más detalles sobre BERT y sus aplicaciones en NLP, consulta: <a href=\"https://arxiv.org/abs/1810.04805\" rel=\"noopener\" target=\"_blank\">https://arxiv.org/abs/1810.04805</a>\n\t\t\t\t\t\t</p>"
     },
     {
-      "id": "24-17",
-      "number": 17,
-      "text": "En el contexto de desplegar modelos de machine learning usando AWS CodePipeline, ¿cuál opción facilita mejor la automatización de flujos de trabajo de despliegue de modelos en diferentes ambientes como testing, staging y producción?",
-      "options": [
-        {
-          "text": "Definir variables de entorno en AWS CodePipeline para cambiar dinámicamente los destinos de despliegue",
-          "correct": true
-        },
-        {
-          "text": "Aplicar aprobaciones manuales al final del pipeline",
-          "correct": false
-        },
-        {
-          "text": "Depender únicamente de funciones de AWS Lambda dentro del pipeline para tareas de despliegue",
-          "correct": false
-        },
-        {
-          "text": "Usar pipelines separados para cada modelo sin etapas de integración",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>Utilizar variables de entorno dentro de AWS CodePipeline proporciona una forma flexible y eficiente de ajustar las configuraciones de despliegue dinámicamente según el ambiente objetivo. Este enfoque mejora las capacidades de automatización del pipeline, haciéndolo adecuado para flujos de trabajo de integración continua y despliegue continuo (CI/CD) en el despliegue de modelos de machine learning en múltiples ambientes (testing, staging, producción). Esto ayuda a mantener consistencia, reducir errores de despliegue y asegurar que los diferentes requisitos de cada ambiente se cumplan eficientemente.</p>"
-    },
-    {
       "id": "24-18",
       "number": 18,
       "text": "En el contexto de desplegar modelos de IA en un ambiente de healthcare con Amazon SageMaker, ¿cuál es la distinción principal entre SageMaker Model Cards y AI Service Cards?",
@@ -483,31 +333,6 @@
       "explanationHtml": "<p>AWS CloudTrail es un servicio esencial para cumplimiento normativo y gobernanza, que proporciona un registro detallado de eventos de todos los cambios y actividades de usuarios en tu cuenta de AWS. Ayuda a garantizar visibilidad en acciones a nivel de API, incluyendo quién realizó qué llamadas a qué servicios desde qué dirección IP de origen, lo que lo convierte en una herramienta imprescindible para auditar pipelines de ML y otros recursos de AWS. Encontrarás más detalles en la documentación de AWS: <a href=\"https://aws.amazon.com/cloudtrail/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/cloudtrail/</a>\n\t\t\t\t\t\t</p>"
     },
     {
-      "id": "24-20",
-      "number": 20,
-      "text": "Como Analista de Datos trabajando con grandes volúmenes de datos almacenados en Amazon S3, necesitás realizar consultas ad-hoc y análisis de datos usando Amazon Athena. ¿Cuál es la mejor práctica para mejorar el desempeño al consultar grandes datasets con Amazon Athena?",
-      "options": [
-        {
-          "text": "Particionar los datos según las columnas consultadas frecuentemente y convertir los datos a formatos columnares como Parquet u ORC.",
-          "correct": true
-        },
-        {
-          "text": "Usar Amazon Redshift para todas las consultas de datos para garantizar recursos de computación de alto desempeño.",
-          "correct": false
-        },
-        {
-          "text": "Aumentar la cantidad de funciones de AWS Lambda para manejar más consultas concurrentes de Athena.",
-          "correct": false
-        },
-        {
-          "text": "Almacenar datos en formato JSON y realizar consultas directamente sin ninguna transformación.",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>Para un desempeño óptimo al consultar grandes datasets con Amazon Athena, lo mejor es particionar los datos y usar formatos de almacenamiento columnar como Parquet u ORC. Estas técnicas ayudan a minimizar la cantidad de datos que Athena necesita escanear, reduciendo así los tiempos de ejecución y los costos de las consultas. El particionamiento permite gestionar los datasets de manera más eficiente al organizar los datos en una estructura de directorios que corresponde a los valores de las columnas y permite que Athena omita particiones irrelevantes. Los formatos columnares almacenan los datos por columnas, lo que hace más rápida la recuperación de solo las columnas necesarias durante las consultas. Encontrás más detalles en la documentación de AWS sobre optimización de consultas de Athena: <a href=\"https://docs.aws.amazon.com/athena/latest/ug/partitioning.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/athena/latest/ug/partitioning.html</a>\n\t\t\t\t\t\t</p>"
-    },
-    {
       "id": "24-21",
       "number": 21,
       "text": "Una empresa de comercio electrónico está desarrollando un chatbot para manejar consultas de clientes, que incluyen tanto descripciones de texto como imágenes, como fotos de productos o capturas de pantalla de problemas. ¿Cuál es el servicio AWS o modelo de aprendizaje automático más apropiado para permitir que el chatbot procese efectivamente estas entradas multi-modales?",
@@ -556,56 +381,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Las redes neuronales son un componente fundamental del deep learning, diseñadas para imitar la funcionalidad del cerebro humano. Aprenden a partir de grandes cantidades de datos ajustando los pesos de las conexiones (sinapsis) entre nodos (neuronas) basándose en la entrada que reciben, lo que les permite hacer predicciones o decisiones informadas. Esta arquitectura las hace exceptcionalmente buenas en el reconocimiento de patrones, lo cual es crucial para tareas como la detección de fraude en tiempo real en transacciones financieras.</p>"
-    },
-    {
-      "id": "24-23",
-      "number": 23,
-      "text": "Como ingeniero DevOps, debes desplegar una actualización de modelo de machine learning en AWS. Necesitas alta confiabilidad con tiempo de inactividad mínimo. ¿Qué configuración de despliegue de AWS CodeDeploy deberías utilizar?",
-      "options": [
-        {
-          "text": "Despliegue rolling en AWS ECS.",
-          "correct": false
-        },
-        {
-          "text": "Despliegue all-at-once en AWS EC2.",
-          "correct": false
-        },
-        {
-          "text": "Despliegue blue/green en AWS Elastic Compute Cloud (EC2).",
-          "correct": true
-        },
-        {
-          "text": "Despliegue in-place con AWS Lambda.",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>En el contexto de AWS, emplear despliegue blue/green al desplegar un modelo de machine learning en EC2 permite disponibilizar una nueva versión para pruebas antes de redirigir el tráfico hacia ella, reduciendo significativamente el tiempo de inactividad e incrementando la confiabilidad del sistema durante las actualizaciones. Este método destaca en escenarios donde la continuidad del servicio y la confiabilidad son primordiales. Puedes encontrar más información sobre métodos de despliegue en AWS en la documentación de AWS CodeDeploy: [link to AWS CodeDeploy documentation] </p>"
-    },
-    {
-      "id": "24-24",
-      "number": 24,
-      "text": "Una empresa de análisis financiero ha implementado un modelo de machine learning usando Amazon SageMaker en una VPC sin acceso a internet para analizar datos sensibles de clientes. ¿Cuál es el método que se debe implementar para garantizar un acceso seguro y directo a Amazon S3 para la recuperación de datos sin exponer el tráfico a internet público?",
-      "options": [
-        {
-          "text": "Configurar un VPC endpoint para Amazon S3 para facilitar conexiones privadas entre la VPC y Amazon S3.",
-          "correct": true
-        },
-        {
-          "text": "Establecer una conexión VPN entre la VPC y Amazon S3 para acceso a datos seguro.",
-          "correct": false
-        },
-        {
-          "text": "Utilizar un Internet Gateway para habilitar acceso público directo desde la VPC a Amazon S3.",
-          "correct": false
-        },
-        {
-          "text": "Desplegar un NAT Gateway para permitir acceso saliente a internet desde la VPC a Amazon S3.",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>Los VPC endpoints son esenciales para permitir conexiones privadas a los servicios de AWS desde dentro de una VPC sin pasar por internet público. Este método se ajusta a las directrices de seguridad más estrictas y garantiza un flujo eficiente de datos entre los servicios implementados en una VPC y Amazon S3. Esta configuración es preferible para escenarios donde la sensibilidad de los datos y la seguridad son primordiales. Para más detalles, consulta la documentación de AWS sobre VPC endpoints: <a href=\"https://docs.aws.amazon.com/vpc/latest/privatelink/vpc-endpoints.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/vpc/latest/privatelink/vpc-endpoints.html</a>\n\t\t\t\t\t\t</p>"
     },
     {
       "id": "24-25",

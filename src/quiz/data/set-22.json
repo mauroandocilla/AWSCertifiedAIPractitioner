@@ -1,7 +1,7 @@
 {
   "setNumber": 22,
   "sourceFile": "Practice_Set_22.html",
-  "questionCount": 54,
+  "questionCount": 34,
   "questions": [
     {
       "id": "22-1",
@@ -162,81 +162,6 @@
       "explanationHtml": "<p>To ensure AI models are fair, transparent, and free from bias, the healthcare technology company should utilize Amazon SageMaker Clarify and Amazon SageMaker Model Monitor. SageMaker Clarify helps detect bias and provides explanations for model predictions, while SageMaker Model Monitor continuously monitors model quality and detects data drift. These tools support Responsible AI practices, ensuring ethical standards are met. More info: <a href=\"https://aws.amazon.com/sagemaker/clarify/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/sagemaker/clarify/</a>, <a href=\"https://aws.amazon.com/sagemaker/model-monitor/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/sagemaker/model-monitor/</a>\n\t\t\t\t\t\t</p>"
     },
     {
-      "id": "22-7",
-      "number": 7,
-      "text": "You are a DevOps engineer working on deploying an AI-driven application. You need a CI/CD service that will seamlessly manage and scale deployments from code development to production, specifically for AI models integrated within your application. Which AWS service is ideally suited for automating CI/CD pipelines, with capabilities to handle features relevant to AI and machine learning model deployments?",
-      "options": [
-        {
-          "text": "AWS CodeBuild",
-          "correct": false
-        },
-        {
-          "text": "AWS CodePipeline",
-          "correct": true
-        },
-        {
-          "text": "AWS Lambda",
-          "correct": false
-        },
-        {
-          "text": "AWS Elastic Beanstalk",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>The optimal solution for automating CI/CD processes for AI model integrated applications is AWS CodePipeline. It is designed to manage the development to production workflow, allowing for continuous integration and delivery specifically tailored for scenarios that include AI models. AWS CodePipeline facilitates the automation of build, test, and deployment phases, which are crucial for the integration of machine learning models into production environments. More info: <a href=\"https://aws.amazon.com/codepipeline/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/codepipeline/</a>\n\t\t\t\t\t\t</p>"
-    },
-    {
-      "id": "22-8",
-      "number": 8,
-      "text": "In the AWS shared responsibility model, which of the following best illustrates the division of responsibilities between AWS and the customer?",
-      "options": [
-        {
-          "text": "AWS is responsible for the security ‘of‘ the cloud, including the infrastructure, hardware, and software, while the customer is responsible for security ‘in‘ the cloud, including data, applications, and access management.",
-          "correct": true
-        },
-        {
-          "text": "Customers are responsible for ensuring the physical security of AWS data centers, while AWS is responsible for network traffic monitoring and managing user identities.",
-          "correct": false
-        },
-        {
-          "text": "AWS is responsible for configuring and managing the security settings of the customer‘s applications, while the customer handles the underlying hardware infrastructure.",
-          "correct": false
-        },
-        {
-          "text": "AWS manages all aspects of security including data encryption, user access management, and application security, while the customer only needs to manage their virtual machines.",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>The AWS shared responsibility model is a fundamental aspect of using AWS services, where security and compliance responsibilities are divided between AWS and the customer. AWS is responsible for ‘security of the cloud‘ securing the infrastructure components such as hardware, software, networking, and facilities. The customer is responsible for ‘security in the cloud‘managing security configurations, data protection, access controls, and other security measures as they relate to their AWS resources. </p>"
-    },
-    {
-      "id": "22-9",
-      "number": 9,
-      "text": "As a Machine Learning Engineer managing costs for various ML projects, you want to utilize AWS Cost Explorer to effectively monitor and control the expenses of your ML solutions deployed on AWS. What is the most effective method to analyze and manage the costs associated with specific ML services like Amazon SageMaker using AWS Cost Explorer?",
-      "options": [
-        {
-          "text": "Set up a single comprehensive budget for all AWS services and monitor total spending in a consolidated view.",
-          "correct": false
-        },
-        {
-          "text": "Use the AWS free tier for all services indiscriminately to minimize costs without monitoring.",
-          "correct": false
-        },
-        {
-          "text": "Utilize tagging to categorize costs by project or ML service, allowing detailed filtering and insights specific to Amazon SageMaker usage.",
-          "correct": true
-        },
-        {
-          "text": "Ignore individual service breakdowns and focus on reducing the usage of the most expensive AWS resources overall.",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>Monitoring AWS costs effectively, especially for machine learning solutions, requires a detailed breakdown of expenses. AWS Cost Explorer is highly effective when combined with tagging to monitor costs related to specific projects or services like Amazon SageMaker. This granularity allows for precise cost management and optimization strategies, making it indispensable for budgeting and financial planning in ML projects. More info: <a href=\"https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html</a>\n\t\t\t\t\t\t</p>"
-    },
-    {
       "id": "22-10",
       "number": 10,
       "text": "What is a key advantage of deploying generative AI models using AWS for a healthcare company aiming to enhance data analysis and patient care?",
@@ -260,56 +185,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>The primary advantage of using generative AI in the AWS cloud environment, especially for healthcare organizations, is the ability to automate and enhance data processes. Generative AI models are capable of learning from existing datasets to generate new, synthetic data, which can be critical in scenarios like simulating patient responses to treatments. AWS provides the necessary infrastructure and scalability to efficiently integrate these AI models into healthcare workflows, dealing with large volumes of sensitive data securely. This can lead to improved diagnostic tools, personalized medicine, and ultimately, enhanced patient care. </p>"
-    },
-    {
-      "id": "22-11",
-      "number": 11,
-      "text": "As a Machine Learning Engineer, you are tasked with automating the build process for ML artifacts using AWS CodeBuild. Your goal is to ensure efficient build times and error handling. Which configuration would best leverage AWS CodeBuild for continuous integration and delivery of machine learning artifacts?",
-      "options": [
-        {
-          "text": "Leverage AWS CodeBuild without any additional configuration, relying on default settings for all build processes.",
-          "correct": false
-        },
-        {
-          "text": "Configure AWS CodeBuild with a standard environment image and manual triggers for each build.",
-          "correct": false
-        },
-        {
-          "text": "Use multiple CodeBuild projects for each part of the ML model separately, configured to run sequentially.",
-          "correct": false
-        },
-        {
-          "text": "Utilize AWS CodeBuild with a custom Docker image tailored to the machine learning framework and libraries used, and set up webhook triggers for automatic builds upon source code changes.",
-          "correct": true
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>AWS CodeBuild is a fully managed build service that compiles source code, runs tests, and produces software packages that are ready to deploy. For machine learning projects, utilizing custom Docker images in AWS CodeBuild allows for a customized environment that caters to specific ML frameworks and libraries, enhancing compatibility and efficiency. The use of webhook triggers automates the build process, facilitating continuous integration and delivery, which is crucial for iterative ML model development. This setup ensures that new changes are efficiently integrated and artifacts are built automatically, reducing manual effort and potential human errors. More info: [AWS CodeBuild Documentation](<a href=\"https://docs.aws.amazon.com/codebuild/latest/userguide/what-is-codebuild.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/codebuild/latest/userguide/what-is-codebuild.html</a>) </p>"
-    },
-    {
-      "id": "22-12",
-      "number": 12,
-      "text": "A company leverages AWS for their machine learning model training and is concerned about optimizing costs without affecting the security and performance of their systems. They are considering utilizing AWS Trusted Advisor to help with these optimizations. Which AWS Trusted Advisor check would be most effective in reducing costs while maintaining or enhancing security specifically for machine learning systems?",
-      "options": [
-        {
-          "text": "Implement service limits review to prevent system over-provisioning.",
-          "correct": false
-        },
-        {
-          "text": "Activate Amazon EC2 Reserved Instance optimization recommendations.",
-          "correct": false
-        },
-        {
-          "text": "Enable Amazon RDS Reserved Instance optimization recommendations.",
-          "correct": false
-        },
-        {
-          "text": "Utilize the ‘Underutilized Amazon EC2 Instances‘ check for scaling down or terminating resources that are not fully utilized.",
-          "correct": true
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>Choosing the ‘Underutilized Amazon EC2 Instances‘ check is effective in managing costs by identifying EC2 instances that are not fully utilized. This allows for right-sizing or decommissioning, ensuring that resources are allocated efficiently without excess spending. It‘s particularly effective in machine learning scenarios where instances might be provisioned for intensive training but not always fully used. This optimization contributes both to cost management and environmental sustainability without impairing the security or operational capabilities of machine learning systems. More info: <a href=\"https://aws.amazon.com/premiumsupport/technology/trusted-advisor/best-practice-checklist/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/premiumsupport/technology/trusted-advisor/best-practice-checklist/</a>\n\t\t\t\t\t\t</p>"
     },
     {
       "id": "22-13",
@@ -360,31 +235,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Transformer models are distinguished by their self-attention mechanism, which intelligently assigns context-aware importance to different words in the input sequence. This mechanism allows the Transformer to be effective in tasks like language translation and text generation by understanding the sentence structure and semantics beyond just the proximity of words. This is crucial for performing well in complex NLP tasks and is pivotal in state-of-the-art models such as those based on the Transformer architecture like BERT and GPT series. For more detailed information about Transformer models, you can visit the introductory paper by Vaswani et al., 2017 named ‘Attention is All You Need‘. </p>"
-    },
-    {
-      "id": "22-15",
-      "number": 15,
-      "text": "As an AWS Certified AI Practitioner, you are tasked to implement a deployment workflow using AWS CodeDeploy for rolling out a new machine learning model. Which deployment config best ensures minimum downtime and allows for monitoring and validation stages during the deployment?",
-      "options": [
-        {
-          "text": "In-place deployment with a HalfAtATime configuration.",
-          "correct": false
-        },
-        {
-          "text": "Blue/green deployment using ECS.",
-          "correct": true
-        },
-        {
-          "text": "Lambda-backed custom deployment.",
-          "correct": false
-        },
-        {
-          "text": "In-place deployment with the AllAtOnce configuration.",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>Blue/green deployments are highly recommended for rolling out new versions of applications or models with minimal impact on the existing system. It allows a safe environment to validate updates before switching traffic, which is crucial for high availability and minimal service interruption. More info: <a href=\"https://docs.aws.amazon.com/codedeploy/latest/userguide/deployment-configurations.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/codedeploy/latest/userguide/deployment-configurations.html</a>\n\t\t\t\t\t\t</p>"
     },
     {
       "id": "22-16",
@@ -460,31 +310,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>When guiding an AI model using prompts, it is essential to provide clear Instructions, relevant Context, the necessary Input data, and set accurate Output expectations. These components ensure that the AI understands the task accurately and can generate the desired content effectively. Context is particularly important as it shapes the AI‘s understanding and response to the prompts, making it a crucial aspect of prompt engineering. </p>"
-    },
-    {
-      "id": "22-19",
-      "number": 19,
-      "text": "As an AI data engineer working on data transformation and preprocessing for machine learning projects at a financial services company, you are tasked with designing an ETL solution using AWS Glue. What is the key advantage of using AWS Glue for dynamic frame creation when handling incompatible schema data sources?",
-      "options": [
-        {
-          "text": "AWS Glue allows automatic schema detection and auto resolves schema mismatches using the ApplyMapping class.",
-          "correct": true
-        },
-        {
-          "text": "AWS Glue uses AI to predict and modify data schemas in real-time without any intervention.",
-          "correct": false
-        },
-        {
-          "text": "AWS Glue strictly requires manual schema alignment before data is processed to ensure data quality.",
-          "correct": false
-        },
-        {
-          "text": "AWS Glue provides managed Spark clusters that can automatically preprocess data without schema configuration.",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>AWS Glue‘s ability to handle schema mismatches automatically is particularly valuable in environments where data integration and cleaning are required from various sources with evolving schemas. DynamicFrames in AWS Glue provide a way to manage and resolve schema mismatches that often occur in data lakes, making ETL processes more flexible and less prone to errors due to schema inconsistencies. More info: <a href=\"https://docs.aws.amazon.com/glue/latest/dg/populate-dynamic-frames.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/glue/latest/dg/populate-dynamic-frames.html</a>\n\t\t\t\t\t\t</p>"
     },
     {
       "id": "22-20",
@@ -570,31 +395,6 @@
       "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Use Amazon API Gateway to receive feedback, store it in Amazon S3, and trigger an AWS Lambda function to invoke Amazon Comprehend.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p>This architecture represents a standard, serverless, and highly scalable best practice for automating real-time data ingestion and analysis on AWS.</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>Amazon API Gateway:</b>&nbsp;Provides a secure and managed endpoint to receive the customer feedback data from applications or websites in real-time.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>Amazon S3:</b>&nbsp;Acts as the durable, cost-effective storage layer, preserving the original feedback data for auditability, further analysis, or to retrain models.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>AWS Lambda:</b>&nbsp;Serves as the orchestration glue. It is automatically triggered when a new feedback object is stored in S3. The Lambda function’s code then calls the&nbsp;<b>Amazon Comprehend</b>&nbsp;API (e.g.,&nbsp;<code>DetectSentiment</code>&nbsp;and&nbsp;<code>DetectKeyPhrases</code>) to perform the analysis on the text.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>Amazon Comprehend:</b>&nbsp;The core AI service that performs the natural language processing (sentiment and key phrase detection) as required.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>This pattern is efficient, cost-effective, and fully managed, aligning perfectly with AWS best practices.</p>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Configure Amazon SQS to queue messages that contain feedback, which are then processed by Amazon EC2 instances running sentiment analysis algorithms.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p>This option is incorrect because it bypasses the chosen service, <b>Amazon Comprehend</b>. The company has already decided to use Comprehend, a fully managed service that provides pre-trained sentiment analysis. Building and running custom algorithms on Amazon EC2 instances is a complex, expensive, and maintenance-heavy approach that defeats the purpose of using a managed AI service. While SQS is a valid service for decoupling, the use of EC2 for custom analysis makes this the wrong choice. </p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Enable Amazon Kinesis Data Firehose to stream data directly into Amazon Comprehend without storing data.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p>This is incorrect because <b>Amazon Comprehend does not have a native, direct integration as a destination for Kinesis Data Firehose</b>. Kinesis Data Firehose can deliver streaming data to destinations like S3, Redshift, and OpenSearch, but not to Comprehend. Furthermore, for auditing and compliance, storing the original customer feedback is typically a business requirement, which this option explicitly avoids. </p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Integrate Amazon Comprehend directly with Amazon RDS to analyze stored feedback without intermediate storage.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p>This is not a standard or efficient integration path. While you could write custom application code to read text from an RDS database and call the Comprehend API, this is a manual process and not a built-in, automated “integration.” It would require significant custom development to poll the database and manage the analysis workflow. The serverless pattern described in option <b>B</b>&nbsp;is the recommended, more scalable, and more cost-effective approach for automating this task. </p>"
     },
     {
-      "id": "22-23",
-      "number": 23,
-      "text": "An AI-focused healthcare company aims to enhance its sustainability by selecting the most energy-efficient Amazon EC2 instance type for processing extensive machine learning workloads related to patient outcomes analysis and research. Which EC2 instance type should the company choose to reduce its environmental impact while maintaining top-notch performance capabilities for training complex AI models?",
-      "options": [
-        {
-          "text": "Accelerated Computing G type instances",
-          "correct": false
-        },
-        {
-          "text": "AWS Trainium instances",
-          "correct": true
-        },
-        {
-          "text": "Compute Optimized C type instances",
-          "correct": false
-        },
-        {
-          "text": "Accelerated Computing P type instances",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p><b>AWS Trainium instances</b></p>\n\t\t\t\t\t\t<p>For the specific use case of <b>training</b>&nbsp;“complex AI models” with a focus on “energy efficiency” and “sustainability,” AWS Trainium instances are the optimal choice. Trainium is a purpose-built machine learning accelerator designed by AWS specifically for high-performance, cost-effective, and&nbsp;<b>energy-efficient</b>&nbsp;training of deep learning models. It offers up to 50% lower cost-to-train and provides the best performance per watt for training workloads in the cloud compared to other alternatives, directly supporting the company’s goal to reduce its environmental impact. </p>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p><b>Accelerated Computing G type instances</b></p>\n\t\t\t\t\t\t<p>G instances are powered by AWS Graviton processors. While Graviton processors are highly energy-efficient for general-purpose and compute-optimized workloads, they are <b>not specialized accelerators for ML training</b>. They lack the dedicated hardware (like the Trainium chips) that provides the highest performance and energy efficiency for the computationally intensive task of training complex models. They are better suited for inference or general-purpose applications. </p>\n\t\t\t\t\t\t<p><b>Compute Optimized C type instances</b></p>\n\t\t\t\t\t\t<p>Compute Optimized instances (C-type) are designed for compute-intensive workloads that benefit from high-performance processors. However, they use general-purpose CPUs. Training complex AI models on CPUs is extremely inefficient in terms of both time and energy consumption compared to using purpose-built hardware accelerators like Trainium or GPUs. This would be the least sustainable and slowest option for this specific task.</p>\n\t\t\t\t\t\t<p><b>Accelerated Computing P type instances</b></p>\n\t\t\t\t\t\t<p>P instances are powered by NVIDIA GPUs (like the V100 or A100) and were the previous standard for high-performance ML training. While they are powerful and can train models effectively, they are <b>not the most energy-efficient option</b>. The AWS Trainium chip was designed to outperform GPU-based instances (like the P-type) specifically on performance-per-watt metrics for training, making it a more sustainable choice. Therefore, for a company prioritizing environmental impact, Trainium is the superior recommendation. </p>"
-    },
-    {
       "id": "22-24",
       "number": 24,
       "text": "A media company is evaluating AWS services for accelerating AI and machine learning workflows. They need to understand the differences between Amazon SageMaker JumpStart and Amazon Bedrock in terms of access to pre-trained models and customization options. Which service best meets these needs?",
@@ -618,81 +418,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Amazon SageMaker JumpStart provides a comprehensive suite of pre-trained models and customization flexibility, whereas Amazon Bedrock focuses on no-code solutions for data science.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li><b>SageMaker JumpStart</b>: Offers a catalog of pre-trained models and solutions that can be fine‑tuned and customized. Developers can integrate these into end‑to‑end ML workflows with full control over training, deployment, and pipelines.</li>\n\t\t\t\t\t\t\t<li><b>Amazon Bedrock</b>: Provides access to foundation models via API without requiring infrastructure management or ML expertise. It is designed for <b>no‑code/low‑code use cases</b>, making it easier for rapid prototyping but with less customization compared to SageMaker.</li>\n\t\t\t\t\t\t\t<li>This option correctly distinguishes between <b>customization flexibility (JumpStart)</b> and <b>no‑code simplicity (Bedrock)</b>. </li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Amazon Bedrock offers extensive customization for data processing pipelines, while Amazon SageMaker JumpStart offers limited pre-built models with no customization.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Misleading: Bedrock does not provide extensive customization of pipelines; it focuses on API access to foundation models.</li>\n\t\t\t\t\t\t\t<li>SageMaker JumpStart does allow customization of pre-trained models.</li>\n\t\t\t\t\t\t\t<li>Incorrect because it reverses the roles of the two services.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Both Amazon Bedrock and Amazon SageMaker JumpStart provide equal access to pre-trained models and customization, focusing on accelerating deployment with minimal differences.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Not true: Bedrock emphasizes simplicity and API‑based access, while JumpStart emphasizes customization and integration into ML workflows.</li>\n\t\t\t\t\t\t\t<li>Incorrect because it ignores the fundamental differences in customization capabilities.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Amazon Bedrock provides a vast library of pre-trained models and customization options, whereas Amazon SageMaker JumpStart is more suited for beginners with minimal configuration.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Bedrock does provide access to foundation models but does not offer deep customization.</li>\n\t\t\t\t\t\t\t<li>JumpStart is not just for beginners; it is intended for professionals who want to accelerate ML development with customizable solutions.</li>\n\t\t\t\t\t\t\t<li>Incorrect because it misrepresents JumpStart’s role and overstates Bedrock’s customization.</li>\n\t\t\t\t\t\t</ul>"
-    },
-    {
-      "id": "22-25",
-      "number": 25,
-      "text": "A Data Analyst using Amazon QuickSight needs to build a performance dashboard to facilitate quick insights into two distinct metrics: monthly revenue changes (in dollars) and expense allocations (as a percentage) across different departments. What single-visual best practice should be implemented in QuickSight to efficiently compare these two measures on the same temporal dimension?",
-      "options": [
-        {
-          "text": "Build a Combo Chart with Dual Y-Axes, using bars for the Revenue amount and a line graph for the Expense Ratio/Percentage.",
-          "correct": true
-        },
-        {
-          "text": "Utilize a Pie Chart to represent monthly revenue changes and expenses per department.",
-          "correct": false
-        },
-        {
-          "text": "Create two separate visuals: a Line Chart for monthly revenue and a Bar Chart for department expenses.",
-          "correct": false
-        },
-        {
-          "text": "Implement a Heat Map to represent the monthly revenue and department expenses.",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Build a Combo Chart with Dual Y‑Axes, using bars for the Revenue amount and a line graph for the Expense Ratio/Percentage</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li><strong>Correct</strong> because a <b>Combo Chart with dual Y‑axes</b> allows you to plot two different metrics with different scales (absolute dollars vs. percentage) on the same time dimension.</li>\n\t\t\t\t\t\t\t<li>Bars can represent <b>monthly revenue changes</b>, while a line graph can represent <b>expense ratios</b>.</li>\n\t\t\t\t\t\t\t<li>This is considered a <b>QuickSight best practice</b> for comparing metrics of different units in a single visual, ensuring clarity and efficiency. </li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Utilize a Pie Chart to represent monthly revenue changes and expenses per department</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because pie charts are designed for <b>part‑to‑whole comparisons at a single point in time</b>, not for <b>temporal trends</b>. </li>\n\t\t\t\t\t\t\t<li>They cannot effectively show monthly changes or compare percentages alongside absolute values.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Create two separate visuals: a Line Chart for monthly revenue and a Bar Chart for department expenses</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because while this approach works, it does not meet the requirement of a <b>single‑visual best practice</b>. </li>\n\t\t\t\t\t\t\t<li>Splitting into two visuals reduces efficiency and makes it harder to directly compare metrics on the same timeline.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Implement a Heat Map to represent the monthly revenue and department expenses</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because heat maps are useful for identifying <b>patterns or density across categories</b>, not for comparing two distinct metrics with different scales over time. </li>\n\t\t\t\t\t\t\t<li>They would not provide clear insight into both revenue changes and expense percentages simultaneously.</li>\n\t\t\t\t\t\t</ul>"
-    },
-    {
-      "id": "22-26",
-      "number": 26,
-      "text": "As a data analyst, you are tasked with querying a large, historical dataset stored in Amazon S3 for a retail company to perform a market trend analysis. Which feature of Amazon Athena would best facilitate efficient data querying with a focus on cost optimization?",
-      "options": [
-        {
-          "text": "Implementing Amazon Redshift Spectrum to query data",
-          "correct": false
-        },
-        {
-          "text": "Leveraging columnar storage formats such as ORC or Parquet in Athena",
-          "correct": true
-        },
-        {
-          "text": "Using Amazon Athena with AWS Glue Data Catalog for data partitioning",
-          "correct": true
-        },
-        {
-          "text": "Applying Athena's machine learning capabilities for predictive queries",
-          "correct": false
-        }
-      ],
-      "multiSelect": true,
-      "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Leveraging columnar storage formats such as ORC or Parquet in Athena</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Correct because columnar formats like <b>ORC</b> and <b>Parquet</b> reduce the amount of data scanned by Athena.</li>\n\t\t\t\t\t\t\t<li>Athena charges based on the amount of data scanned, so using these formats significantly improves <b>query efficiency and cost optimization</b>. </li>\n\t\t\t\t\t\t\t<li>They also support compression and predicate pushdown, further reducing query costs.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Using Amazon Athena with AWS Glue Data Catalog for data partitioning</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Correct because <b>partitioning</b> allows Athena to scan only relevant subsets of data instead of the entire dataset.</li>\n\t\t\t\t\t\t\t<li>Combined with the <b>AWS Glue Data Catalog</b>, partitions are managed efficiently, improving query performance and lowering costs.</li>\n\t\t\t\t\t\t\t<li>This is especially effective for large historical datasets where queries often filter by date or category.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Implementing Amazon Redshift Spectrum to query data</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because Redshift Spectrum is a feature of Amazon Redshift, not Athena.</li>\n\t\t\t\t\t\t\t<li>While it can query S3 data, the question specifically asks about <b>Athena features</b>, so this option does not apply.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Applying Athena’s machine learning capabilities for predictive queries</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because Athena does not have built‑in machine learning capabilities.</li>\n\t\t\t\t\t\t\t<li>Athena is a <b>serverless query engine</b> for analyzing data in S3, not for predictive modeling.</li>\n\t\t\t\t\t\t</ul>"
-    },
-    {
-      "id": "22-27",
-      "number": 27,
-      "text": "As an AI practitioner deploying secure AI solutions on AWS, you need to ensure encryption and decryption API calls can handle high throughput and low latency requirements. Which AWS KMS feature should you leverage to meet these operational demands?",
-      "options": [
-        {
-          "text": "Use the default, single-region KMS endpoints.",
-          "correct": false
-        },
-        {
-          "text": "Utilize AWS CloudHSM to manage cryptographic keys.",
-          "correct": false
-        },
-        {
-          "text": "Employ AWS KMS Custom Key Store feature backed by AWS CloudHSM.",
-          "correct": true
-        },
-        {
-          "text": "Implement client-side encryption with your own managed keys.",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Employ AWS KMS Custom Key Store feature backed by AWS CloudHSM</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Correct because the <b>Custom Key Store</b> integrates AWS KMS with <b>AWS CloudHSM</b>, providing dedicated hardware security modules for cryptographic operations. </li>\n\t\t\t\t\t\t\t<li>This setup ensures <b>low latency</b> and <b>high throughput</b> for encryption/decryption API calls, while still being fully managed by AWS.</li>\n\t\t\t\t\t\t\t<li>It meets the exam requirement of secure AI deployments with strong performance guarantees.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Use the default, single-region KMS endpoints</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because while default KMS endpoints provide managed encryption, they are not optimized for <b>high throughput and low latency</b>. </li>\n\t\t\t\t\t\t\t<li>They may introduce bottlenecks in workloads requiring rapid cryptographic operations.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Utilize AWS CloudHSM to manage cryptographic keys</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because using <b>CloudHSM directly</b> requires managing infrastructure and scaling manually. </li>\n\t\t\t\t\t\t\t<li>This contradicts the requirement for a <b>fully managed solution</b> while still needing high performance. </li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Implement client-side encryption with your own managed keys</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because client-side encryption shifts the responsibility to the application layer.</li>\n\t\t\t\t\t\t\t<li>It does not leverage AWS KMS optimizations and introduces complexity in key management, which can reduce scalability and performance.</li>\n\t\t\t\t\t\t</ul>"
     },
     {
       "id": "22-28",
@@ -743,106 +468,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Understanding the difference between labeled and unlabeled data is crucial in machine learning. Labeled data contains defined labels or annotations that indicate the target outcome, crucial for supervised learning techniques like classification and regression. Unlabeled data, missing such labels, is used in unsupervised learning to explore inherent structures or cluster data without predefined outcomes. Choosing the correct type of data is critical for the effectiveness of machine learning models deployed in platforms like AWS. </p>"
-    },
-    {
-      "id": "22-30",
-      "number": 30,
-      "text": "Which AWS service is specifically tailored for transforming medical speech into text and is compliant with healthcare industry standards like HIPAA?",
-      "options": [
-        {
-          "text": "Amazon Rekognition",
-          "correct": false
-        },
-        {
-          "text": "Amazon Polly",
-          "correct": false
-        },
-        {
-          "text": "Amazon Transcribe Medical",
-          "correct": true
-        },
-        {
-          "text": "Amazon Transcribe",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>Amazon Transcribe Medical is the ideal solution for healthcare applications requiring voice-to-text services due to its built-in features that address the industry‘s compliance demands, including HIPAA. It is specifically enhanced to understand medical terminology, which is crucial in clinical and medical environments. More details can be found on the AWS official documentation: <a href=\"https://aws.amazon.com/transcribe/medical/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/transcribe/medical/</a>\n\t\t\t\t\t\t</p>"
-    },
-    {
-      "id": "22-31",
-      "number": 31,
-      "text": "As a Machine Learning Engineer managing cost efficiency for ML deployments, you need to use AWS Cost Explorer to monitor and manage costs associated with various machine learning solutions. Which feature of AWS Cost Explorer would be most beneficial for analyzing and tracking the costs specifically related to your ML solutions over time?",
-      "options": [
-        {
-          "text": "Setting up budget alerts for overall AWS usage",
-          "correct": false
-        },
-        {
-          "text": "Tagging ML resources and filtering cost data based on these tags",
-          "correct": true
-        },
-        {
-          "text": "Consulting the EC2 Instance Recommendation report to optimize instance sizes",
-          "correct": false
-        },
-        {
-          "text": "Using the Reserved Instance Utilization and Coverage reports",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>AWS Cost Explorer is a powerful tool for managing and analyzing AWS costs. For ML solutions, tagging resources related to machine learning and filtering these in Cost Explorer can provide precise insights into spending and usage, helping to optimize costs effectively. This method is aligned with best practices for cost management in an ML context, ensuring that expenditures are tracked and controlled according to specific ML workloads. </p>"
-    },
-    {
-      "id": "22-32",
-      "number": 32,
-      "text": "An AI development team must ensure their ML training and inference workflows are isolated from the public internet while retaining access to necessary AWS services. What would be the most effective Amazon VPC setup to meet this requirement?",
-      "options": [
-        {
-          "text": "Deploy the ML models in a public subnet within the VPC, relying on network ACLs for traffic filtering.",
-          "correct": false
-        },
-        {
-          "text": "Configure a VPC with a NAT gateway for all traffic to ensure all data remains encrypted and secure.",
-          "correct": false
-        },
-        {
-          "text": "Use a VPC with an internet gateway and restrict access with security group rules.",
-          "correct": false
-        },
-        {
-          "text": "Create a VPC without an internet gateway and use VPC endpoints for AWS services.",
-          "correct": true
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>Using Amazon Virtual Private Cloud (VPC), specifically without an internet gateway, effectively isolates the network environment from the public internet. Integration of VPC endpoints facilitates private, secure connections to AWS services without needing to traffic through the internet, which is crucial for maintaining robust security and privacy in ML workflows.</p>"
-    },
-    {
-      "id": "22-33",
-      "number": 33,
-      "text": "As a Data Analyst working with large volumes of log data stored in Amazon S3, you are tasked with running ad-hoc SQL queries to analyze this data. Using Amazon Athena, which option will most effectively help you manage costs while executing these queries?",
-      "options": [
-        {
-          "text": "Enable automatic data compression before querying with Athena.",
-          "correct": false
-        },
-        {
-          "text": "Increase the query execution parallelism settings in Athena to speed up queries and reduce costs.",
-          "correct": false
-        },
-        {
-          "text": "Partition your data based on commonly queried columns or time frames to reduce the amount of data scanned per query.",
-          "correct": true
-        },
-        {
-          "text": "Use Athena to store frequently accessed data in memory for faster querying.",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>Amazon Athena is an interactive query service that allows users to analyze data in Amazon S3 using standard SQL. Costs in Athena are directly correlated with the amount of data it scans to execute a query. Therefore, techniques like partitioning data effectively reduce the scan size, decreasing costs while maintaining query performance. Partitioning involves organizing directory structures and naming files in ways that lead to subsets of data, based on access patterns, which can be very effective for large datasets typically stored in formats like CSV, JSON, or Parquet. </p>"
     },
     {
       "id": "22-34",
@@ -920,31 +545,6 @@
       "explanationHtml": "<p>Amazon Comprehend is the best choice for automatically detecting and redacting sensitive data, such as PII, from documents or text, using natural language processing. This capability is essential in complying with privacy laws and maintaining customer trust when processing support tickets containing sensitive information. Reference: [Amazon Comprehend Features](<a href=\"https://aws.amazon.com/comprehend/features/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/comprehend/features/</a>) </p>"
     },
     {
-      "id": "22-37",
-      "number": 37,
-      "text": "A retail company wants to enable its business analysts to create data-driven dashboards using natural language rather than coding. Which AWS service best supports this requirement by allowing the analysts to generate visual content and reports through natural language queries?",
-      "options": [
-        {
-          "text": "Amazon Comprehend",
-          "correct": false
-        },
-        {
-          "text": "Amazon SageMaker",
-          "correct": false
-        },
-        {
-          "text": "Amazon QuickSight",
-          "correct": true
-        },
-        {
-          "text": "Amazon Lex",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>Amazon QuickSight is the best fit for this scenario as it includes the ‘Q‘ feature, which directly supports natural language queries to generate data visualizations. This service simplifies the process of creating and sharing interactive dashboards, making it accessible to users without technical expertise, such as business analysts. This aligns with the company‘s requirement of empowering analysts to build BI dashboards via a simplified, user-friendly interface. More information on QuickSight‘s capabilities can be found on the official AWS documentation: <a href=\"https://aws.amazon.com/quicksight/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/quicksight/</a>\n\t\t\t\t\t\t</p>"
-    },
-    {
       "id": "22-38",
       "number": 38,
       "text": "A healthcare organization is deploying machine learning models to assist in patient diagnosis and treatment planning. They require a tool to guide proper usage, assess deployment risks, and ensure compliance with healthcare regulations. Which AWS tool best meets these requirements?",
@@ -968,31 +568,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Amazon SageMaker Model Cards is the best tool for this scenario as it helps document and manage machine learning models effectively. By providing essential information about model purpose, performance, and usage guidelines, it supports transparency and aids compliance with healthcare regulations, which is crucial for implementations in sensitive environments. For more details on how Model Cards can be utilized in healthcare and other regulated domains, visit the AWS official documentation. </p>"
-    },
-    {
-      "id": "22-39",
-      "number": 39,
-      "text": "You are a Machine Learning Engineer looking to enhance the scaling capabilities of your AWS model deployments. Specifically, you are focusing on ensuring optimal resource allocation during times of varying load, particularly to manage unexpected spikes in demand efficiently without provisioning excessive resources during low-demand periods. Which AWS service feature allows you to automatically adjust the resources needed for training and inference based on the current demand?",
-      "options": [
-        {
-          "text": "AWS Auto Scaling",
-          "correct": true
-        },
-        {
-          "text": "AWS Lambda with automatic scaling",
-          "correct": false
-        },
-        {
-          "text": "Amazon EC2 Auto Scaling",
-          "correct": false
-        },
-        {
-          "text": "Manual scaling in Amazon SageMaker",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>AWS Auto Scaling is the optimal service for managing the scalability of resources including both machine learning training and inference. It helps dynamically adjust the capacity to maintain consistent, predictable performance, which is crucial for handling load variations in machine learning applications efficiently. AWS Auto Scaling supports various AWS services, making it ideal for scenarios where both computational power and cost efficiency are important. </p>"
     },
     {
       "id": "22-40",
@@ -1153,31 +728,6 @@
       "explanationHtml": "<p>Real-time inference and batch inference serve different purposes and are suited to different use cases. Real-time inference provides immediate predictions with low latency, making it ideal for applications that require quick responses, such as customer interactions. Batch inference processes large volumes of data at once, suitable for tasks where immediate results are not critical, such as end-of-day reports. Understanding these differences helps in choosing the right approach for specific operational needs. More info: <a href=\"https://aws.amazon.com/machine-learning/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/machine-learning/</a>\n\t\t\t\t\t\t</p>"
     },
     {
-      "id": "22-46",
-      "number": 46,
-      "text": "A retail company aims to integrate MLflow with Amazon SageMaker for managing their machine learning experiments. Which of the following best describes the role of MLflow within this integration?",
-      "options": [
-        {
-          "text": "Automatically scale computing resources",
-          "correct": false
-        },
-        {
-          "text": "Train machine learning models",
-          "correct": false
-        },
-        {
-          "text": "Provide a graphical user interface for data scientists",
-          "correct": false
-        },
-        {
-          "text": "Manage machine learning experiments",
-          "correct": true
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>MLflow is an open-source platform for managing the end-to-end machine learning lifecycle. It includes functionalities for experiment tracking, model versioning, and deployment, which can effectively integrate with Amazon SageMaker. This integration allows teams to manage their machine learning projects more efficiently, leveraging SageMaker‘s capabilities to build, train, and deploy machine learning models at scale. This combination is ideal for teams like those in retail companies looking to streamline their machine learning workflows and improve collaboration. </p>"
-    },
-    {
       "id": "22-47",
       "number": 47,
       "text": "A media company wants to enhance their content moderation process by using AI to automatically detect inappropriate content in user-uploaded videos. They are considering using Amazon Rekognition for its video analysis capabilities. Which Amazon Rekognition feature should they primarily use to effectively identify inappropriate content in videos?",
@@ -1201,31 +751,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>For a media company needing to moderate user-uploaded content, Amazon Rekognition‘s content moderation feature is the best choice. This feature automatically detects inappropriate or unsafe content within images and videos, helping businesses maintain content guidelines and improve user experience by filtering out content that may not be suitable for all audiences. More info: <a href=\"https://aws.amazon.com/rekognition/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/rekognition/</a>\n\t\t\t\t\t\t</p>"
-    },
-    {
-      "id": "22-48",
-      "number": 48,
-      "text": "In the context of isolating network traffic for ML models and workflows using Amazon VPC, how can you best ensure that your machine learning workload is properly isolated from other network traffic?",
-      "options": [
-        {
-          "text": "Use a single VPC with default security group settings for all ML workloads.",
-          "correct": false
-        },
-        {
-          "text": "Create dedicated subnets within a VPC and apply strict Network ACLs and security groups specific to the ML workloads.",
-          "correct": true
-        },
-        {
-          "text": "Connect ML workload instances directly to the internet to bypass internal AWS networking.",
-          "correct": false
-        },
-        {
-          "text": "Assign a public IP address to each instance running the ML workload.",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>When it comes to isolating network traffic for ML models and workflows in AWS, leveraging Amazon VPC to create a dedicated virtual network environment is key. Using dedicated subnets allows for precise placement of resources, and strict Network ACLs and security groups offer granular control and enhanced security, critical for sensitive and crucial ML operations. This approach aligns perfectly with best practices for deploying sensitive applications in the cloud, ensuring both functional isolation and security. </p>"
     },
     {
       "id": "22-49",
@@ -1301,31 +826,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>In the AWS environment using Amazon Bedrock for AI-driven tasks like text generation, Top P sampling is an inference parameter used to control the variety and quality of the model‘s output. By adjusting Top P, developers can manage how broad or narrow the selection of possible tokens for each step of text generation is, based on a cumulative probability threshold. This method balances generating diverse outputs while still adhering to likely correct predictions, thus crucial for applications requiring a mix of creativity and accuracy. More details can be found on the AWS official documentation regarding model inference parameters. </p>"
-    },
-    {
-      "id": "22-52",
-      "number": 52,
-      "text": "A company is considering the deployment of AWS Key Management Service (KMS) to manage encryption keys used to secure sensitive financial data in AWS S3 buckets. What is a critical feature of AWS KMS that ensures the security and control over the usage of encryption keys?",
-      "options": [
-        {
-          "text": "KMS provides unlimited storage of encryption keys.",
-          "correct": false
-        },
-        {
-          "text": "KMS automatically shares encryption keys with all AWS users to facilitate easy access.",
-          "correct": false
-        },
-        {
-          "text": "KMS allows you to create and control the encryption keys used to encrypt your data.",
-          "correct": true
-        },
-        {
-          "text": "KMS supports automatic integration with all third-party applications outside of AWS for key management.",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>AWS Key Management Service (KMS) is a managed service that makes it easy for you to create and control the encryption keys used to encrypt your data. The main advantage of using KMS is the secure control it gives over the use of these keys, with centralized management and integration with other AWS services. AWS KMS integrates with other AWS services to simplify the application of security operations on the protected data. More info: <a href=\"https://aws.amazon.com/kms/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/kms/</a>\n\t\t\t\t\t\t</p>"
     },
     {
       "id": "22-53",

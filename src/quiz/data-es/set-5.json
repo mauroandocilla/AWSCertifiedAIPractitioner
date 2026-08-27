@@ -1,33 +1,8 @@
 {
   "setNumber": 5,
   "sourceFile": "Practice_Set_5.html",
-  "questionCount": 56,
+  "questionCount": 36,
   "questions": [
-    {
-      "id": "5-1",
-      "number": 1,
-      "text": "¿Cuál es el comando de AWS CLI que usarías para crear un nuevo trabajo de training en Amazon SageMaker?",
-      "options": [
-        {
-          "text": "aws sagemaker initiate-training-job",
-          "correct": false
-        },
-        {
-          "text": "aws sagemaker launch-training-job",
-          "correct": false
-        },
-        {
-          "text": "aws sagemaker create-training-job",
-          "correct": true
-        },
-        {
-          "text": "aws sagemaker start-training-job",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>El comando aws sagemaker create-training-job se utiliza para iniciar un nuevo trabajo de training en Amazon SageMaker, especificando los parámetros de training y los recursos necesarios.</p>"
-    },
     {
       "id": "5-2",
       "number": 2,
@@ -79,31 +54,6 @@
       "explanationHtml": "<p>Dropout regularization es una técnica utilizada para prevenir overfitting al descartar aleatoriamente unidades de la red neuronal durante el entrenamiento. Esto ayuda al modelo a generalizar mejor en datos no vistos, reduciendo la varianza.</p>"
     },
     {
-      "id": "5-4",
-      "number": 4,
-      "text": "Necesitás desplegar un modelo de machine learning en una configuración multi-AZ para asegurar alta disponibilidad. ¿Cuál característica de servicio de AWS puede ayudarte a lograrlo?",
-      "options": [
-        {
-          "text": "Amazon SageMaker Batch Transform",
-          "correct": false
-        },
-        {
-          "text": "Amazon SageMaker Processing",
-          "correct": false
-        },
-        {
-          "text": "Amazon SageMaker Model Registry",
-          "correct": false
-        },
-        {
-          "text": "Amazon SageMaker Endpoint Configurations",
-          "correct": true
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>Amazon SageMaker Endpoint Configurations te permite desplegar modelos de machine learning en múltiples Availability Zones (AZs) para asegurar alta disponibilidad y tolerancia a fallos. Esta configuración ayuda a mantener la continuidad del servicio en caso de que una AZ falle.</p>"
-    },
-    {
       "id": "5-5",
       "number": 5,
       "text": "¿Cuál es el propósito de usar normalización por lotes en redes neuronales?",
@@ -129,31 +79,6 @@
       "explanationHtml": "<p>La normalización por lotes normaliza la salida de cada capa en una red neuronal, lo que ayuda a estabilizar y acelerar el proceso de entrenamiento reduciendo el cambio covariante interno.</p>"
     },
     {
-      "id": "5-6",
-      "number": 6,
-      "text": "¿Cuál servicio se utiliza para streaming de datos en tiempo real en AWS?",
-      "options": [
-        {
-          "text": "Amazon EMR",
-          "correct": false
-        },
-        {
-          "text": "Amazon RDS",
-          "correct": false
-        },
-        {
-          "text": "Amazon Kinesis",
-          "correct": true
-        },
-        {
-          "text": "AWS Glue",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>Amazon Kinesis es una plataforma para streaming de datos y análisis en tiempo real. Te permite recopilar, procesar y analizar flujos de datos en tiempo real, lo que es útil para aplicaciones que necesitan obtener información inmediata de grandes volúmenes de datos.</p>"
-    },
-    {
       "id": "5-7",
       "number": 7,
       "text": "Te encargaron crear un modelo de detección de anomalías para un proceso de manufactura. ¿Cuál es el algoritmo integrado de Amazon SageMaker más adecuado para esta tarea?",
@@ -177,31 +102,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Random Cut Forest (RCF) es un algoritmo integrado en Amazon SageMaker diseñado específicamente para detección de anomalías. Es ideal para identificar patrones inusuales u outliers en conjuntos de datos, lo que lo hace perfecto para monitorear procesos de manufactura.</p>"
-    },
-    {
-      "id": "5-8",
-      "number": 8,
-      "text": "¿Cuál es la principal ventaja de usar Amazon SageMaker Studio Lab sobre los Jupyter Notebooks tradicionales?",
-      "options": [
-        {
-          "text": "Solo admite el lenguaje de programación Python",
-          "correct": false
-        },
-        {
-          "text": "Solo está disponible para uso académico",
-          "correct": false
-        },
-        {
-          "text": "Proporciona un entorno administrado y seguro con recursos de computación gratuitos",
-          "correct": true
-        },
-        {
-          "text": "No requiere una cuenta de AWS para acceder",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>Amazon SageMaker Studio Lab ofrece un entorno administrado y seguro con recursos de computación gratuitos, lo que lo hace accesible para que los científicos de datos construyan y prueben modelos de machine learning sin necesidad de administrar infraestructura en la nube.</p>"
     },
     {
       "id": "5-9",
@@ -279,81 +179,6 @@
       "explanationHtml": "<p>SageMaker Model Monitor monitorea continuamente la calidad de los modelos de machine learning en producción y detecta data drift y model drift, lo que ayuda a asegurar que los modelos mantengan un alto desempeño y precisión a lo largo del tiempo.</p>"
     },
     {
-      "id": "5-12",
-      "number": 12,
-      "text": "¿Cuál comando te permite actualizar la configuración de un endpoint existente en Amazon SageMaker?",
-      "options": [
-        {
-          "text": "aws sagemaker modify-endpoint --name --config",
-          "correct": false
-        },
-        {
-          "text": "aws sagemaker edit-endpoint --endpoint --config",
-          "correct": false
-        },
-        {
-          "text": "aws sagemaker change-endpoint --name --new-config",
-          "correct": false
-        },
-        {
-          "text": "aws sagemaker update-endpoint --endpoint-name --endpoint-config-name",
-          "correct": true
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>El comando aws sagemaker update-endpoint actualiza la configuración de un endpoint existente en Amazon SageMaker. Necesitas especificar el nombre del endpoint y el nombre de la nueva configuración del endpoint usando los flags –endpoint-name y –endpoint-config-name.</p>"
-    },
-    {
-      "id": "5-13",
-      "number": 13,
-      "text": "¿Cuál es el servicio de AWS recomendado para el entrenamiento distribuido a gran escala de modelos de deep learning?",
-      "options": [
-        {
-          "text": "Amazon ECS",
-          "correct": false
-        },
-        {
-          "text": "AWS Batch",
-          "correct": false
-        },
-        {
-          "text": "AWS ParallelCluster",
-          "correct": true
-        },
-        {
-          "text": "Amazon EMR",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>AWS ParallelCluster es una herramienta de gestión de clusters de código abierto respaldada por AWS que facilita el despliegue y la gestión de clusters de computación de alto rendimiento (HPC). Es adecuada para el entrenamiento distribuido a gran escala de modelos de deep learning, proporcionando la infraestructura y capacidades de gestión necesarias.</p>"
-    },
-    {
-      "id": "5-14",
-      "number": 14,
-      "text": "¿Cuál fue el servicio de AWS que precedió a AWS Glue, proporcionando capacidades de integración de datos y ETL antes de la introducción de AWS Glue?",
-      "options": [
-        {
-          "text": "Amazon Data Pipeline",
-          "correct": true
-        },
-        {
-          "text": "AWS Batch",
-          "correct": false
-        },
-        {
-          "text": "Amazon RDS",
-          "correct": false
-        },
-        {
-          "text": "AWS Step Functions",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>Amazon Data Pipeline fue el precursor de AWS Glue, proporcionando capacidades de integración de datos y ETL antes de que AWS Glue fuera introducido con características mejoradas para la preparación de datos.</p>"
-    },
-    {
       "id": "5-15",
       "number": 15,
       "text": "¿Cuál es la principal ventaja de usar transfer learning en deep learning?",
@@ -427,31 +252,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Amazon EMR (Elastic MapReduce) está diseñado para tareas de procesamiento de datos a gran escala, incluyendo análisis por lotes y preparación de datos para machine learning mediante frameworks de computación distribuida como Apache Hadoop y Spark.</p>"
-    },
-    {
-      "id": "5-18",
-      "number": 18,
-      "text": "Necesitás visualizar la importancia de las características de tu modelo entrenado para los stakeholders. ¿Cuál servicio de AWS podés usar para crear visualizaciones interactivas?",
-      "options": [
-        {
-          "text": "Amazon SageMaker Data Wrangler",
-          "correct": false
-        },
-        {
-          "text": "Amazon QuickSight",
-          "correct": true
-        },
-        {
-          "text": "Amazon SageMaker Clarify",
-          "correct": false
-        },
-        {
-          "text": "Amazon SageMaker Debugger",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p><b>Amazon QuickSight</b> es el servicio de AWS más apropiado para crear visualizaciones interactivas de la importancia de características de tu modelo para los stakeholders.</p>\n\t\t\t\t\t\t<p>Acá está el por qué:</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b><span>Dashboards Interactivos:</span></b><span> QuickSight sobresale en la construcción de dashboards interactivos con diversos tipos de visualización (gráficos de barras, gráficos circulares, mapas de calor, etc.). Esto permite que los stakeholders exploren fácilmente los datos de importancia de características, filtren resultados y obtengan información más profunda.</span>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b>Conectividad de Datos:</b>\n\t\t\t\t\t\t\t\t<span>QuickSight puede conectarse a diversas fuentes de datos, incluyendo aquellas dentro de AWS (como S3, Redshift) y fuentes externas.</span> Podés importar los datos de importancia de características de tu proceso de entrenamiento del modelo en QuickSight.<span> &nbsp;</span>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b>Colaboración y Compartición:</b>\n\t\t\t\t\t\t\t\t<span>QuickSight facilita compartir dashboards e insights con los stakeholders de forma segura a través de mecanismos de compartición y capacidades de análisis integrados.</span><span> &nbsp;</span>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b>Interfaz Amigable:</b>\n\t\t\t\t\t\t\t\t<span>La interfaz intuitiva de QuickSight hace que sea relativamente fácil para usuarios con diferentes niveles de experiencia técnica crear e interactuar con visualizaciones.</span><span>&nbsp;</span>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>Aunque otros servicios como SageMaker Clarify pueden proporcionar información sobre la importancia de características, QuickSight está específicamente diseñado para crear visualizaciones interactivas y compartirlas con una audiencia más amplia.</p>\n\t\t\t\t\t\t<p><b>Consideraciones Clave:</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li><b>Preparación de Datos:</b> Asegurate de que tus datos de importancia de características estén correctamente formateados y preparados para ser ingeridos en QuickSight.</li>\n\t\t\t\t\t\t\t<li><b>Diseño de Visualización:</b> Elegí los tipos de visualización apropiados (por ejemplo, gráficos de barras para las características principales, mapas de calor para interacciones entre características) para comunicar efectivamente los insights a los stakeholders.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>Al aprovechar las capacidades de QuickSight, podés comunicar efectivamente la importancia de las características de tu modelo a los stakeholders de forma clara, concisa y atractiva.</p>"
     },
     {
       "id": "5-19",
@@ -529,31 +329,6 @@
       "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>Usar AWS Glue para ETL</b></p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t\t\t<b>AWS Glue</b> es un servicio serverless y escalable de integración de datos y <b>ETL (Extracción, Transformación y Carga)</b>. Está diseñado para manejar eficientemente <b>procesamiento de datos a gran escala</b>, lo cual es crucial para pasos de preprocesamiento de NLP como tokenización, stemming, lemmatización, eliminación de palabras vacías y conversión de texto a características numéricas (como TF-IDF o embeddings de palabras). Glue escala automáticamente su clúster de procesamiento para gestionar el tamaño y la complejidad de los datos de texto, lo que lo convierte en la herramienta más apropiada y rentable para preparación de datos orientada a lotes.\n\t\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>Incorrecto</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>Usar Amazon Comprehend para procesamiento de texto</b></p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t\t\t<b>Amazon Comprehend</b> es un servicio de AWS que proporciona <b>capacidades de NLP preentrenadas</b> (como análisis de sentimiento, reconocimiento de entidades y extracción de frases clave). Si bien procesa texto, se utiliza para <i>analizar</i> texto y generar información, no para realizar los <b>pasos de preprocesamiento/ETL de bajo nivel</b> (como limpieza, estructuración e ingeniería de características) necesarios para preparar datos de texto sin procesar para un modelo de machine learning personalizado.\n\t\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>Usar Amazon Rekognition</b></p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p><b>Amazon Rekognition</b> es un servicio de AWS dedicado a <b>análisis de imágenes y videos</b> (tareas de visión por computadora, como reconocimiento de objetos y facial). No tiene función alguna relacionada con el procesamiento o preparación de datos de texto para un modelo de NLP, lo que lo hace completamente irrelevante para la pregunta.</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>Usar AWS Lambda para procesamiento en tiempo real</b></p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p><b>AWS Lambda</b> es un servicio de cómputo serverless más adecuado para ejecutar <b>funciones de corta duración impulsadas por eventos</b> o <b>inferencia en tiempo real</b>. <b>No está diseñado ni optimizado</b> para el procesamiento de lotes de <b>conjuntos de datos a gran escala</b> requerido para preprocesamiento general de NLP. Ejecutar un trabajo ETL extenso en petabytes de datos a través de Lambda sería altamente ineficiente y probablemente alcanzaría límites de tiempo de ejecución.</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>"
     },
     {
-      "id": "5-22",
-      "number": 22,
-      "text": "¿Qué comando deberías usar para ver información detallada sobre un trabajo de entrenamiento específico?",
-      "options": [
-        {
-          "text": "aws sagemaker show-training-job --job-name",
-          "correct": false
-        },
-        {
-          "text": "aws sagemaker get-training-job --name",
-          "correct": false
-        },
-        {
-          "text": "aws sagemaker describe-training-job --training-job-name",
-          "correct": true
-        },
-        {
-          "text": "aws sagemaker describe-job --name",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<b>aws sagemaker describe-training-job –training-job-name</b>\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>La interfaz de línea de comandos de AWS (CLI) utiliza consistentemente el prefijo <b><code>describe-</code></b> para obtener información detallada de configuración y estado de un <b>recurso único y específico</b>. En la API de Amazon SageMaker, la operación para esta función es <code>DescribeTrainingJob</code>, y el comando CLI correspondiente es <b><code>aws sagemaker describe-training-job</code></b>. El parámetro requerido para especificar qué trabajo visualizar se llama correctamente <b><code>--training-job-name</code></b>. </p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>Incorrecto</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>aws sagemaker show-training-job –job-name</b></p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>La CLI no utiliza el prefijo <b><code>show-</code></b> para recuperar información detallada de recursos; esta es una convención de nomenclatura no estándar de AWS CLI. Si bien <b><code>--job-name</code></b> es un estilo de parámetro común, el comando principal es incorrecto. </p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>aws sagemaker get-training-job –name</b></p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>La CLI a veces utiliza el prefijo <b><code>get-</code></b> (por ejemplo, <code>get-caller-identity</code>), pero para recuperar el estado y los detalles de configuración de una instancia de recurso específica como un trabajo de SageMaker, la convención <b><code>describe-</code></b> es la estándar y preferida sobre <code>get-</code>. Además, el nombre del parámetro <b><code>--name</code></b> es demasiado genérico para el entrada requerida por este comando. </p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>aws sagemaker describe-job –name</b></p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>Este comando es incorrecto porque es demasiado amplio y no especifica el tipo de recurso dentro de SageMaker. Los servicios de AWS a menudo tienen múltiples tipos de trabajos (por ejemplo, trabajos de entrenamiento, trabajos de procesamiento, trabajos de transformación). El comando debe incluir el tipo de recurso, lo que hace que <b><code>describe-training-job</code></b> sea el formato correcto. Además, <b><code>--name</code></b> generalmente no es el nombre de parámetro específico que requiere esta llamada de API. </p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>"
-    },
-    {
       "id": "5-23",
       "number": 23,
       "text": "Al trabajar con datos de series de tiempo, ¿qué función de Amazon SageMaker utilizarías para asegurar que los datos estén correctamente particionados y alineados?",
@@ -604,106 +379,6 @@
       "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>Logistic Regression</b></p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t\t\t<b><span>Logistic Regression</span></b><span> es un algoritmo de clasificación utilizado para estimar la probabilidad de un resultado discreto dado una variable de entrada.</span> <span>Usa una </span><b><span>función sigmoidea</span></b><span> para mapear valores predichos a una probabilidad entre 0 y 1. Esta probabilidad se interpreta luego para clasificar la entrada en una de dos categorías (por ejemplo, Sí/No, 0/1, Spam/No Spam), lo que la hace la opción más adecuada y eficiente para una </span><b><span>tarea fundamental de clasificación binaria</span></b><span>.</span>\n\t\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>Incorrecto</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>Principal Component Analysis (PCA)</b></p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t\t\t<b><span>PCA</span></b><span> es una </span><b><span>técnica de reducción de dimensionalidad</span></b><span>, no un algoritmo de clasificación.<sup>4</sup></span>\n\t\t\t\t\t\t\t\t\t\t\t<span>Su propósito principal es transformar un conjunto grande de variables en uno más pequeño que aún contiene la mayoría de la información, típicamente utilizado como paso de preprocesamiento antes de entrenar un modelo de machine learning.<sup>5</sup></span> No se puede usar directamente para realizar clasificación.\n\t\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>K-Nearest Neighbors (KNN)</b></p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t\t\t<b><span>K-Nearest Neighbors (KNN)</span></b><span> es un </span><b><span>algoritmo de clasificación no paramétrico</span></b><span> que se puede usar para clasificación binaria.<sup>6</sup></span>\n\t\t\t\t\t\t\t\t\t\t\t<span>Sin embargo, comparado con Logistic Regression, KNN es computacionalmente costoso durante la fase de predicción (ya que debe calcular distancias a todos los puntos de datos de entrenamiento) y es sensible a la escala y dimensionalidad de los datos.<sup>7</sup></span>\n\t\t\t\t\t\t\t\t\t\t\t<b>Logistic Regression es el modelo más simple, fundamental y eficiente</b> específicamente diseñado para el resultado de un resultado binario, lo que la hace la <b>mejor respuesta</b> en un contexto AIF-C01.\n\t\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>K-Means</b></p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t\t\t<b><span>K-Means</span></b><span> es un </span><b><span>algoritmo de clustering no supervisado</span></b><span>.<sup>8</sup></span> Su propósito es agrupar puntos de datos similares en <span>$K$</span> clusters sin usar datos pre-etiquetados. Se usa para tareas como segmentación, no para la tarea de aprendizaje supervisado de <b>clasificación</b> (predecir una etiqueta basada en etiquetas históricas).\n\t\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>"
     },
     {
-      "id": "5-25",
-      "number": 25,
-      "text": "¿Cuál es el comando que te permite iniciar un job de tuning de hiperparámetros en Amazon SageMaker?",
-      "options": [
-        {
-          "text": "aws sagemaker start-hyperparameter-tuning-job",
-          "correct": false
-        },
-        {
-          "text": "aws sagemaker create-tuning-job",
-          "correct": false
-        },
-        {
-          "text": "aws sagemaker create-hyperparameter-tuning-job",
-          "correct": true
-        },
-        {
-          "text": "aws sagemaker start-tuning-job",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p><code>aws sagemaker create-hyperparameter-tuning-job</code></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Es correcto porque el comando de AWS CLI para iniciar un job de tuning de hiperparámetros en SageMaker es <code>create-hyperparameter-tuning-job</code>. </li>\n\t\t\t\t\t\t\t<li>Este comando crea un nuevo job de tuning, especificando la definición del job de entrenamiento, los rangos de hiperparámetros y las métricas objetivas.</li>\n\t\t\t\t\t\t\t<li>La palabra clave es <b>\"create\"</b>, no \"start\", porque los jobs de SageMaker se crean y luego se ejecutan automáticamente una vez definidos.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p><code>aws sagemaker start-hyperparameter-tuning-job</code></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Es incorrecto porque <b>no existe un comando \"start-hyperparameter-tuning-job\"</b> en AWS CLI. </li>\n\t\t\t\t\t\t\t<li>El verbo correcto es <b>\"create\"</b>, no \"start\".</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><code>aws sagemaker create-tuning-job</code></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Es incorrecto porque el comando debe hacer referencia explícitamente a <b>jobs de tuning de hiperparámetros</b>. </li>\n\t\t\t\t\t\t\t<li>\"create-tuning-job\" no es un comando válido de SageMaker CLI.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><code>aws sagemaker start-tuning-job</code></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Es incorrecto porque, de manera similar a la Opción A, no existe un comando \"start-tuning-job\".</li>\n\t\t\t\t\t\t\t<li>Nuevamente, el verbo correcto es <b>\"create\"</b> y el comando completo debe incluir <b>hyperparameter-tuning-job</b>.</li>\n\t\t\t\t\t\t</ul>"
-    },
-    {
-      "id": "5-26",
-      "number": 26,
-      "text": "¿Cuál es el comando que usarías para eliminar una configuración de endpoint de SageMaker?",
-      "options": [
-        {
-          "text": "aws sagemaker delete-config --endpoint-name",
-          "correct": false
-        },
-        {
-          "text": "aws sagemaker delete-endpoint-configuration --endpoint-config-name",
-          "correct": true
-        },
-        {
-          "text": "aws sagemaker remove-endpoint-config --name",
-          "correct": false
-        },
-        {
-          "text": "aws sagemaker delete-endpoint-config --name",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p><code>aws sagemaker delete-endpoint-configuration --endpoint-config-name &lt;config_name&gt;</code></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Es correcto porque el comando de AWS CLI para eliminar una configuración de endpoint de SageMaker es <code>delete-endpoint-configuration</code>.</li>\n\t\t\t\t\t\t\t<li>El parámetro requerido es <code>--endpoint-config-name</code>, que especifica el nombre de la configuración de endpoint a eliminar.</li>\n\t\t\t\t\t\t\t<li>Esta es la sintaxis oficial soportada por AWS CLI.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p><code>aws sagemaker delete-config --endpoint-name &lt;config_name&gt;</code></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Es incorrecto porque no existe un comando <code>delete-config</code> en la CLI de SageMaker.</li>\n\t\t\t\t\t\t\t<li>Además, el parámetro <code>--endpoint-name</code> hace referencia a un endpoint, no a una configuración de endpoint.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><code>aws sagemaker remove-endpoint-config --name &lt;config_name&gt;</code></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Es incorrecto porque <code>remove-endpoint-config</code> no es un comando válido de la CLI de SageMaker.</li>\n\t\t\t\t\t\t\t<li>AWS CLI utiliza <code>delete-endpoint-configuration</code>, no <code>remove</code>.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><code>aws sagemaker delete-endpoint-config --name &lt;config_name&gt;</code></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Es incorrecto porque aunque se parece, el comando correcto es <code>delete-endpoint-configuration</code>.</li>\n\t\t\t\t\t\t\t<li>El parámetro debe ser <code>--endpoint-config-name</code>, no <code>--name</code>.</li>\n\t\t\t\t\t\t</ul>"
-    },
-    {
-      "id": "5-27",
-      "number": 27,
-      "text": "¿Cuál es el comando de AWS CLI que debes usar para ver los logs de un trabajo de entrenamiento en SageMaker?",
-      "options": [
-        {
-          "text": "aws sagemaker get-training-job-logs",
-          "correct": false
-        },
-        {
-          "text": "aws logs get-log-events",
-          "correct": true
-        },
-        {
-          "text": "aws sagemaker describe-training-job",
-          "correct": false
-        },
-        {
-          "text": "aws logs describe-log-groups",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p><code>aws logs get-log-events</code></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Correcto porque los logs de los trabajos de entrenamiento en SageMaker se almacenan en <b>Amazon CloudWatch Logs</b>. </li>\n\t\t\t\t\t\t\t<li>Para verlos, usas el <b>comando de CloudWatch Logs</b>\n\t\t\t\t\t\t\t\t<code>aws logs get-log-events</code>, especificando el grupo de logs y el stream asociados al trabajo de entrenamiento.\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>Esto recupera los eventos de logs reales generados durante el entrenamiento.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p><code>aws sagemaker get-training-job-logs</code></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrecto porque <b>este comando no existe</b> en SageMaker. Los logs no se recuperan directamente desde SageMaker sino desde CloudWatch. </li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><code>aws sagemaker describe-training-job</code></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrecto porque este comando proporciona <b>información sobre el trabajo de entrenamiento</b> (estado, hiperparámetros, configuración de recursos), pero no devuelve logs. </li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><code>aws logs describe-log-groups</code></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrecto porque este comando lista los <b>grupos de logs disponibles</b> en CloudWatch. No recupera los eventos de logs reales de un trabajo de entrenamiento. </li>\n\t\t\t\t\t\t</ul>"
-    },
-    {
-      "id": "5-28",
-      "number": 28,
-      "text": "¿Cuál es el uso principal de AWS DeepLens?",
-      "options": [
-        {
-          "text": "Gestión de canales de datos",
-          "correct": false
-        },
-        {
-          "text": "Edge computing para machine learning",
-          "correct": true
-        },
-        {
-          "text": "Análisis de datos en tiempo real",
-          "correct": false
-        },
-        {
-          "text": "Almacenamiento de conjuntos de datos grandes",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Edge computing para machine learning</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Correcto porque <b>AWS DeepLens</b> es una cámara de video habilitada para deep learning diseñada para <b>edge computing</b>.</li>\n\t\t\t\t\t\t\t<li>Permite que los desarrolladores ejecuten <b>modelos de machine learning localmente en el dispositivo</b>, habilitando tareas de visión por computadora en tiempo real como <b>detección de objetos, reconocimiento facial y reconocimiento de actividades</b> sin necesidad de enviar todos los datos a la nube.</li>\n\t\t\t\t\t\t\t<li>Esto reduce la latencia, mejora el rendimiento y admite escenarios donde la conectividad es limitada.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p><b>Gestión de canales de datos</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrecto porque la gestión de canales de datos se realiza mediante servicios como <b>AWS Data Pipeline</b> o <b>AWS Glue</b>, no DeepLens.</li>\n\t\t\t\t\t\t\t<li>DeepLens se enfoca en <b>inferencia de ML en el edge</b>, no en orquestar o gestionar canales de datos.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>Análisis de datos en tiempo real</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrecto porque el análisis en tiempo real se logra mejor con servicios como <b>Amazon Kinesis</b> o <b>Amazon Redshift</b>.</li>\n\t\t\t\t\t\t\t<li>Aunque DeepLens puede procesar streams de video localmente, su propósito es <b>inferencia de ML en el edge</b>, no pipelines de análisis completos.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>Almacenamiento de conjuntos de datos grandes</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrecto porque DeepLens no es una solución de almacenamiento.</li>\n\t\t\t\t\t\t\t<li>El almacenamiento de grandes conjuntos de datos se maneja con <b>Amazon S3</b> o <b>Amazon EFS</b>, mientras que DeepLens es un dispositivo para ejecutar modelos de ML, no para almacenar datos en volumen.</li>\n\t\t\t\t\t\t</ul>"
-    },
-    {
       "id": "5-29",
       "number": 29,
       "text": "¿Para qué se utiliza la \"cross-validation\" en machine learning?",
@@ -752,31 +427,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>La optimización de hiperparámetros en Amazon SageMaker se puede realizar utilizando varios métodos, incluyendo ajuste manual, búsqueda en cuadrícula y optimización bayesiana. Cada método tiene sus propias ventajas y se puede elegir según los requisitos específicos de la tarea de machine learning.</p>"
-    },
-    {
-      "id": "5-31",
-      "number": 31,
-      "text": "¿Cuál de los siguientes servicios de AWS se utiliza para analizar grandes conjuntos de datos con alta velocidad?",
-      "options": [
-        {
-          "text": "AWS Batch",
-          "correct": false
-        },
-        {
-          "text": "AWS Glue",
-          "correct": false
-        },
-        {
-          "text": "AWS Step Functions",
-          "correct": false
-        },
-        {
-          "text": "Amazon EMR",
-          "correct": true
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>Amazon EMR (Elastic MapReduce) es una plataforma de big data en la nube para procesar grandes volúmenes de datos utilizando herramientas de código abierto como Apache Hadoop y Apache Spark. Permite el procesamiento rápido de grandes conjuntos de datos y se usa comúnmente para análisis de datos, aprendizaje automático y transformación de datos.</p>"
     },
     {
       "id": "5-32",
@@ -929,31 +579,6 @@
       "explanationHtml": "<p>AWS Personalize es un servicio de machine learning que permite a los desarrolladores crear recomendaciones individualizadas para clientes en sus aplicaciones. Se puede utilizar para construir motores de recomendación similares a los que usa Amazon.com.</p>"
     },
     {
-      "id": "5-38",
-      "number": 38,
-      "text": "¿Qué comando usarías para crear una configuración de endpoint en Amazon SageMaker?",
-      "options": [
-        {
-          "text": "aws sagemaker deploy-endpoint-config --name --variants",
-          "correct": false
-        },
-        {
-          "text": "aws sagemaker register-endpoint-config --config-name --variants",
-          "correct": false
-        },
-        {
-          "text": "aws sagemaker create-endpoint-config --endpoint-config-name --production-variants",
-          "correct": true
-        },
-        {
-          "text": "aws sagemaker start-endpoint-config --name --variants",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>El comando aws sagemaker create-endpoint-config crea una nueva configuración de endpoint en Amazon SageMaker. Necesitas especificar el nombre de la configuración del endpoint y las production variants usando los flags –endpoint-config-name y –production-variants.</p>"
-    },
-    {
       "id": "5-39",
       "number": 39,
       "text": "¿Cuál es el beneficio principal de utilizar Amazon SageMaker Neo para optimizar modelos?",
@@ -1054,31 +679,6 @@
       "explanationHtml": "<p>Amazon SageMaker Model Monitor monitorea continuamente los datos que fluyen hacia los modelos implementados y puede detectar cambios en la distribución de datos, conocidos como data drift. Ayuda a mantener el rendimiento del modelo alertándote sobre posibles problemas.</p>"
     },
     {
-      "id": "5-43",
-      "number": 43,
-      "text": "¿Cómo puedes monitorear el estado de un trabajo de batch transform en Amazon SageMaker?",
-      "options": [
-        {
-          "text": "aws sagemaker list-transform-jobs --status",
-          "correct": false
-        },
-        {
-          "text": "aws sagemaker get-transform-job --job-name",
-          "correct": false
-        },
-        {
-          "text": "aws sagemaker describe-transform-job --transform-job-name",
-          "correct": true
-        },
-        {
-          "text": "aws sagemaker show-transform-job --name",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>El comando aws sagemaker describe-transform-job proporciona información detallada sobre un trabajo de batch transform, incluyendo su estado. Necesitas especificar el nombre del trabajo de transform utilizando el flag –transform-job-name.</p>"
-    },
-    {
       "id": "5-44",
       "number": 44,
       "text": "Necesitás implementar un modelo de machine learning para hacer predicciones en tiempo real y asegurar baja latencia. ¿Cuál es el servicio de AWS más indicado para esta tarea?",
@@ -1127,31 +727,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Usar Amazon SageMaker Batch Transform con carga de datos distribuida mejora la escalabilidad y eficiencia de los trabajos de inferencia por lotes al distribuir los datos entre varias instancias, lo que permite el procesamiento paralelo de grandes conjuntos de datos.</p>"
-    },
-    {
-      "id": "5-46",
-      "number": 46,
-      "text": "¿Cuál es la función principal de AWS IoT Core?",
-      "options": [
-        {
-          "text": "Visualización de datos",
-          "correct": false
-        },
-        {
-          "text": "Procesamiento de datos por lotes",
-          "correct": false
-        },
-        {
-          "text": "Entrenamiento de modelos de machine learning",
-          "correct": false
-        },
-        {
-          "text": "Gestión de dispositivos IoT",
-          "correct": true
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>AWS IoT Core es un servicio en la nube administrado que permite que dispositivos conectados interactúen con aplicaciones en la nube y otros dispositivos. Proporciona comunicación bidireccional segura entre dispositivos IoT y la nube de AWS, lo que permite la gestión de dispositivos y la recopilación de datos.</p>"
     },
     {
       "id": "5-47",
@@ -1229,56 +804,6 @@
       "explanationHtml": "<p>Amazon CloudWatch y Amazon SageMaker Debugger se pueden usar juntos para monitorear el desempeño del modelo e identificar problemas. CloudWatch proporciona logging y monitoreo, mientras que SageMaker Debugger ofrece debugging en tiempo real y análisis de trabajos de entrenamiento.</p>"
     },
     {
-      "id": "5-50",
-      "number": 50,
-      "text": "¿Cómo listás todos los modelos en tu cuenta de SageMaker usando la AWS CLI?",
-      "options": [
-        {
-          "text": "aws sagemaker show-models",
-          "correct": false
-        },
-        {
-          "text": "aws sagemaker describe-models",
-          "correct": false
-        },
-        {
-          "text": "aws sagemaker list-models",
-          "correct": true
-        },
-        {
-          "text": "aws sagemaker list-models --all",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>El comando aws sagemaker list-models lista todos los modelos en tu cuenta de SageMaker. Este comando proporciona un resumen de cada modelo, incluyendo el nombre del modelo y la hora de creación.</p>"
-    },
-    {
-      "id": "5-51",
-      "number": 51,
-      "text": "Necesitás detener un job de entrenamiento que está en ejecución en Amazon SageMaker. ¿Cuál comando deberías usar?",
-      "options": [
-        {
-          "text": "aws sagemaker stop-training-job --training-job-name",
-          "correct": true
-        },
-        {
-          "text": "aws sagemaker terminate-training-job --training-job",
-          "correct": false
-        },
-        {
-          "text": "aws sagemaker cancel-training-job --job-name",
-          "correct": false
-        },
-        {
-          "text": "aws sagemaker delete-training-job --name",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>El comando aws sagemaker stop-training-job detiene un job de entrenamiento que está en ejecución en Amazon SageMaker. Necesitás especificar el nombre del job de entrenamiento que querés detener usando el flag –training-job-name.</p>"
-    },
-    {
       "id": "5-52",
       "number": 52,
       "text": "¿Cuál servicio de AWS se puede usar para crear flujos de trabajo de etiquetado automático de datos que incluyan etiquetado humano?",
@@ -1302,31 +827,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Amazon SageMaker Ground Truth proporciona capacidades para crear flujos de trabajo de etiquetado automático de datos que incluyen tanto aprendizaje automático como etiquetado humano. Se integra con Amazon Mechanical Turk y otros proveedores de fuerza laboral para entregar datos etiquetados de alta calidad.</p>"
-    },
-    {
-      "id": "5-53",
-      "number": 53,
-      "text": "¿Qué proporciona principalmente AWS Glue?",
-      "options": [
-        {
-          "text": "Almacenamiento de datos",
-          "correct": false
-        },
-        {
-          "text": "Integración de datos",
-          "correct": true
-        },
-        {
-          "text": "Visualización de datos",
-          "correct": false
-        },
-        {
-          "text": "Cifrado de datos",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>AWS Glue es un servicio de extracción, transformación y carga (ETL) completamente administrado que facilita la preparación e integración de datos para análisis, aprendizaje automático y desarrollo de aplicaciones. Proporciona capacidades de integración de datos para mover y transformar datos desde diversas fuentes.</p>"
     },
     {
       "id": "5-54",

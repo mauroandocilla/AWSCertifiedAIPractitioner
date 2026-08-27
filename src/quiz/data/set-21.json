@@ -1,7 +1,7 @@
 {
   "setNumber": 21,
   "sourceFile": "Practice_Set_21.html",
-  "questionCount": 55,
+  "questionCount": 34,
   "questions": [
     {
       "id": "21-1",
@@ -54,31 +54,6 @@
       "explanationHtml": "<p>In AI content generation using models like those provided by Amazon Bedrock, the ‘Temperature‘ parameter crucially impacts how the model selects its next tokens. A higher ‘Temperature‘ value leads to a higher chance of choosing less likely tokens, making the model‘s output more diverse and creative. This parameter helps customize the level of creativity versus accuracy in generated content, according to the goals of a project. </p>"
     },
     {
-      "id": "21-3",
-      "number": 3,
-      "text": "A data science team is leveraging AWS services for their machine learning projects and wishes to utilize familiar IDEs within Amazon SageMaker Studio to enhance their efficiency and workflow compatibility. Which IDE integration allows teams to utilize R programming language effectively within SageMaker Studio?",
-      "options": [
-        {
-          "text": "JupyterLab",
-          "correct": false
-        },
-        {
-          "text": "RStudio",
-          "correct": true
-        },
-        {
-          "text": "Visual Studio Code",
-          "correct": false
-        },
-        {
-          "text": "Code Editor",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>RStudio is the optimal choice within Amazon SageMaker Studio for teams focusing on R programming due to its specialized environment. It integrates seamlessly, providing effective tools for R code development, which is essential for efficient data science workflows. This integration helps in leveraging the full potential of SageMaker Studio‘s features while providing a familiar and powerful environment for R developers.</p>"
-    },
-    {
       "id": "21-4",
       "number": 4,
       "text": "As a Data Engineer working with legal documents, you are tasked with extracting structured data from scanned documents for an automated compliance check system using AWS. Which Amazon Textract feature should you primarily use to achieve accurate extraction of data like dates, currency amounts, and table content from these documents?",
@@ -102,31 +77,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Amazon Textract‘s Document Analysis feature is specifically designed to handle complex documents where both context and the structured extraction of data such as forms, tables, and other content types are necessary. This capability allows detailed and accurate extraction of specific data types such as dates and currency, which are essential for applications like automated compliance checks. This selection is particularly relevant for extracting structured information precisely and efficiently from legal and other document types. For more information, visit the official AWS Textract documentation: <a href=\"https://aws.amazon.com/textract/features/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/textract/features/</a>\n\t\t\t\t\t\t</p>"
-    },
-    {
-      "id": "21-5",
-      "number": 5,
-      "text": "A company is looking to implement a mechanism in their machine learning workflow to facilitate human oversight and auditing of automated predictions. Which AWS service best supports adding human reviews in a scalable and integrated manner?",
-      "options": [
-        {
-          "text": "Amazon SageMaker Ground Truth",
-          "correct": false
-        },
-        {
-          "text": "Amazon Forecast",
-          "correct": false
-        },
-        {
-          "text": "Amazon Augmented AI (A2I)",
-          "correct": true
-        },
-        {
-          "text": "AWS DeepRacer",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>Amazon Augmented AI (A2I) is the optimal service when companies need to involve human review in their machine learning models. It integrates seamlessly with various AWS services to review predictions from AI systems, thereby allowing finer control and validation of automated decisions by human auditors. This tool is particularly useful for use cases requiring a combination of machine efficiency and human oversight to ensure the accuracy and reliability of AI predictions. </p>"
     },
     {
       "id": "21-6",
@@ -258,56 +208,6 @@
       "explanationHtml": "<p>Model evaluation on Amazon Bedrock involves both human and automatic methods. Human evaluation is critical for assessing qualitative factors such as fairness and interpretability, while automatic evaluation provides quantitative metrics like accuracy and F1 scores. Combining these approaches ensures a comprehensive understanding of model performance. More info: <a href=\"https://aws.amazon.com/bedrock/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/bedrock/</a>\n\t\t\t\t\t\t</p>"
     },
     {
-      "id": "21-11",
-      "number": 11,
-      "text": "As a DevOps engineer, you are configuring AWS Identity and Access Management (IAM) for a new application that needs to access AWS services automatically. What is the most secure way to manage permissions for the application‘s AWS resources access?",
-      "options": [
-        {
-          "text": "Regularly rotate access keys and hardcode them into configuration files.",
-          "correct": false
-        },
-        {
-          "text": "Use IAM roles assigned to the AWS service that the application runs on.",
-          "correct": true
-        },
-        {
-          "text": "Embed access keys directly in the application‘s codebase.",
-          "correct": false
-        },
-        {
-          "text": "Use group permissions for users who then access the application.",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>IAM roles provide a secure and efficient way to grant permissions to AWS services running applications. Unlike static keys, roles are dynamically assigned and managed, reducing the risk of credential leakage and enforcing the principle of least privilege. IAM roles can be assumed by AWS services to interact with other AWS resources securely, providing both flexibility and security. For more details, refer to the AWS IAM documentation at <a href=\"https://aws.amazon.com/iam/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/iam/</a>. </p>"
-    },
-    {
-      "id": "21-12",
-      "number": 12,
-      "text": "Which AWS service among the following is specifically designed to aggregate and display insights from Amazon SageMaker Model Cards, SageMaker Model Monitor, and SageMaker Endpoint services?",
-      "options": [
-        {
-          "text": "Amazon SageMaker Model Dashboard",
-          "correct": true
-        },
-        {
-          "text": "Amazon SageMaker Feature Store",
-          "correct": false
-        },
-        {
-          "text": "Amazon SageMaker JumpStart",
-          "correct": false
-        },
-        {
-          "text": "Amazon SageMaker Data Wrangler",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>Amazon SageMaker Model Dashboard is a unique service that specifically collates and visualizes data from several other services like Amazon SageMaker Model Cards, SageMaker Model Monitor, and SageMaker Endpoint services. It facilitates better insight and management of machine learning models by displaying essential performance metrics and operational information in one unified dashboard. For further details, see the [Amazon SageMaker documentation](<a href=\"https://aws.amazon.com/sagemaker/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/sagemaker/</a>). </p>"
-    },
-    {
       "id": "21-13",
       "number": 13,
       "text": "A customer support system needs to enhance its error logging by filling in missing words in reported error sentences. Which AWS service-based model should be implemented to effectively predict and insert these missing words?",
@@ -356,56 +256,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Amazon Bedrock allows users to build or customize their own AI models built on top of AWS‘s pre-trained models. In this particular case, the best approach is to create a private copy of the pre-existing Foundation Model. This method preserves the integrity and generality of the original model while allowing the company to benefit from a custom model tailored to their specific training dataset, enhancing predictive performance specific to their products and consumer behaviors. This is essential when companies want to leverage the power of big data while maintaining their competitive advantages encapsulated in proprietary data. </p>"
-    },
-    {
-      "id": "21-15",
-      "number": 15,
-      "text": "A healthcare company is looking to automatically extract and analyze health-specific data from unstructured sources like doctor‘s notes and clinical reports across various hospitals. Which AWS service is best suited for processing and extracting meaningful information from these medical texts?",
-      "options": [
-        {
-          "text": "Amazon Comprehend Medical",
-          "correct": true
-        },
-        {
-          "text": "Amazon Rekognition",
-          "correct": false
-        },
-        {
-          "text": "Amazon Comprehend",
-          "correct": false
-        },
-        {
-          "text": "Amazon SageMaker",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>Amazon Comprehend Medical is tailor-made for healthcare applications, equipped to analyze unstructured medical text and extract relevant entities such as medical condition, treatment, dosage, and specific medical data. This makes it highly suitable for healthcare providers looking to leverage data across various documents and reports to improve patient outcomes. More details can be found on the AWS official documentation: [Amazon Comprehend Medical](<a href=\"https://aws.amazon.com/comprehend/medical/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/comprehend/medical/</a>) </p>"
-    },
-    {
-      "id": "21-16",
-      "number": 16,
-      "text": "A machine learning team is planning to automate the build and deployment of their ML models using AWS services. They need a service that can compile source code, run tests, and produce software packages ready for deployment. Which AWS service is specifically designed for compiling source code and running build commands within a managed environment?",
-      "options": [
-        {
-          "text": "AWS CodeBuild",
-          "correct": true
-        },
-        {
-          "text": "Amazon EC2",
-          "correct": false
-        },
-        {
-          "text": "AWS Lambda",
-          "correct": false
-        },
-        {
-          "text": "AWS CodeDeploy",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>AWS CodeBuild is the appropriate choice for compiling source code and running build commands as it provides a pre-configured build environment where you can define custom build steps. This service is ideal for automating builds for machine learning models or any other types of software development projects, which aligns with the needs of a machine learning team looking to automate their development and deployment processes.</p>"
     },
     {
       "id": "21-17",
@@ -508,35 +358,6 @@
       "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Batch inference, allowing multiple inference tasks to be combined and processed at once.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p><b>Cost Efficiency:</b> Amazon Bedrock offers a <b>Batch mode</b> for certain Foundation Models at a <b>significantly lower price</b> (e.g., up to 50% less) compared to On-Demand inference pricing for the same model. This is the <b>most direct way to reduce costs</b> for high-volume, non-time-critical processing.</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p><b>Performance/Delay Balance:</b> Batch inference is inherently asynchronous; you submit a set of prompts in an S3 file and receive the responses later in an S3 output file. This pattern perfectly matches the company’s requirement to <b>tolerate slight delays</b>.</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p><b>High-Volume Processing:</b> Batching tasks together allows for the most efficient use of underlying compute resources, which is ideal for analyzing “vast amounts of user-generated content.”</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Real-time inference for immediate response requirements.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>Real-time inference is designed for <b>low-latency</b> requirements where an immediate response is critical. It is typically the <b>most expensive</b> inference option because it keeps resources ready for immediate execution, directly contradicting the goal of <b>cost reduction</b> for a workload that can tolerate delays. </p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>On-demand inference, providing payment flexibility strictly based on the resources used during each inference computation.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>On-Demand</b> is the default, pay-as-you-go pricing for Bedrock, where you pay per token. While flexible, it is <b>more expensive</b> than the dedicated <b>Batch mode</b> for processing large, non-urgent volumes. On-Demand pricing is best for unpredictable, intermittent traffic or low-volume, time-sensitive API calls, not for maximizing cost efficiency on vast, delay-tolerant volumes.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Serverless inference, which dynamically adjusts computing resources according to demand.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>In the context of <b>Amazon Bedrock</b>, the primary inference options are <b>On-Demand</b> (pay-per-token/pay-as-you-go) and <b>Provisioned Throughput</b> (reserved capacity). Bedrock’s standard On-Demand API model already offers a serverless experience (no infrastructure management), but there is a dedicated <b>Batch</b> option that offers a better cost optimization for this specific use case than the standard token-based On-Demand billing. <i>Note: SageMaker offers “Serverless Inference,” but this question is scoped to Amazon Bedrock.</i>\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>"
     },
     {
-      "id": "21-21",
-      "number": 21,
-      "text": "Which of the following AWS services are regional in scope? (Select two)",
-      "options": [
-        {
-          "text": "AWS Web Application Firewall (AWS WAF)",
-          "correct": false
-        },
-        {
-          "text": "Amazon CloudFront",
-          "correct": false
-        },
-        {
-          "text": "AWS Lambda",
-          "correct": true
-        },
-        {
-          "text": "AWS Identity and Access Management (AWS IAM)",
-          "correct": false
-        },
-        {
-          "text": "Amazon Rekognition",
-          "correct": true
-        }
-      ],
-      "multiSelect": true,
-      "explanationHtml": "<p>\n\t\t\t\t\t\t\t<strong>Correct</strong>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p><b>Regional</b> services are those you provision and manage within a specific AWS Region (e.g., US East 1, Europe Central 1).</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>AWS Lambda:</b> Lambda functions are <b>Regional</b>. When you create a function, it resides in the specific AWS Region you selected and can only be invoked there (unless using features like Lambda@Edge, which is global but runs on CloudFront).</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>Amazon Rekognition:</b> Amazon Rekognition is a machine learning service for image and video analysis. It is <b>Regional</b>; the endpoints and processing occur within the Region where you make the API call, and its availability and specific features can vary by Region.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<strong>Incorrect</strong>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p>These services are <b>Global</b> or have a primary mechanism that is not strictly Regional, as required by the question.</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>AWS Web Application Firewall (AWS WAF):</b> This service is considered <b>Global</b> when associated with <b>Amazon CloudFront</b> edge locations, protecting applications worldwide. It can also be deployed regionally with an Application Load Balancer (ALB) or API Gateway, but its ability to be deployed at edge locations makes it inherently a <b>Global/Hybrid</b> service in scope.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>Amazon CloudFront:</b> This is AWS’s Content Delivery Network (CDN) and is a <b>Global</b> service. Its primary function is to distribute content via <b>Edge Locations</b> worldwide, which are outside of specific AWS Regions.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>AWS Identity and Access Management (AWS IAM):</b> IAM is a <b>Global</b> service. The users, groups, roles, and policies you create are globally available and consistent across all AWS Regions under your account.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>"
-    },
-    {
       "id": "21-22",
       "number": 22,
       "text": "You are a data engineer tasked with using AWS Glue for an ETL process that transforms a large dataset from various sources into a format suitable for machine learning model training. The dataset contains complex and nested JSON data from web logs and relational data from a transactional database. What feature of AWS Glue would be most effective for handling and transforming this diverse and complex data structure?",
@@ -560,81 +381,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p><b>Use AWS Glue DataBrew for preprocessing the data.</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>AWS Glue DataBrew</b> is a visual data preparation tool specifically designed for data analysts and data scientists to <b>clean, normalize, and transform data without writing code</b>.</p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p><b>Complex Data Handling:</b> DataBrew offers over 350 pre-built transformations, including specialized functions like <b>Unnest</b> and <b>Flatten</b> that are highly effective for converting <b>nested JSON structures</b> into a flat, tabular format suitable for ML model training.</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p><b>Diverse Data Handling:</b> It can easily connect to and blend data from various sources, including relational databases (via JDBC) and semi-structured files (JSON, CSV) in S3.</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p><b>ML Focus:</b> DataBrew is ideal for the preprocessing stage of the ML pipeline, as it allows for visual data quality checks, statistical analysis, and feature engineering, which are crucial before training.</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Deploy AWS Lambda functions to preprocess the JSON and relational data.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>While technically possible, using Lambda for <b>large dataset transformations</b> is generally <b>inefficient, complex, and expensive</b>. Lambda has hard limits on execution time and memory, making it unsuitable for a large-scale Extract, Transform, Load (ETL) workload involving <b>several gigabytes of complex data</b>. AWS Glue’s native Spark-based jobs (or DataBrew) are the recommended, scalable solution for this task. </p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Utilize AWS Glue Crawlers to discover the data schema.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>AWS Glue Crawlers</b> are used for <b>data discovery</b>—they scan the data source, infer the schema, and populate the <b>AWS Glue Data Catalog</b> with metadata. They perform <b>discovery (D)</b>, not the heavy <b>transformation (T)</b> required to flatten nested JSON or join diverse data sources. They are a <i>prerequisite</i> for the transformation job, not the tool for the transformation itself.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Implement Amazon Athena for the JSON parsing and transformation.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<b>Amazon Athena</b> is an <b>interactive query service</b> that uses standard SQL to analyze data directly in S3. While it can query and read nested JSON structures, using it to perform <b>large-scale, complex ETL</b> (like repeatedly writing back and reading transformed data) is <b>not its primary purpose</b> and can be less efficient than a dedicated ETL engine like AWS Glue/DataBrew. It’s best used for ad-hoc querying, not full-scale production ETL for model training.\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>"
-    },
-    {
-      "id": "21-23",
-      "number": 23,
-      "text": "A development team is evaluating Amazon Q Developer for enhancing their code quality and productivity. What specific capability does Amazon Q Developer provide that would benefit this objective?",
-      "options": [
-        {
-          "text": "Amazon Q Developer can create Large Language Model (LLM) chatbots, enabling the team to build and manage conversational AI models.",
-          "correct": false
-        },
-        {
-          "text": "Amazon Q Developer can suggest code snippets, providing developers with targeted recommendations based on the context of the code.",
-          "correct": true
-        },
-        {
-          "text": "Amazon Q Developer can deploy applications, automating deployment processes from development through to production.",
-          "correct": false
-        },
-        {
-          "text": "Amazon Q Developer can create SageMaker models, allowing developers to build, train, and deploy machine learning models.",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<div>\n\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t<strong>Correct</strong>\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t<b>(Amazon Q Developer can suggest code snippets, providing developers with targeted recommendations based on the context of the code):</b> Amazon Q Developer provides real-time, context-aware code suggestions, completions, and refactoring recommendations directly in IDEs, significantly improving code quality through intelligent assistance and reducing development time.\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t<strong>Incorrect</strong>\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t<b>(Amazon Q Developer can create Large Language Model (LLM) chatbots):</b> Amazon Q Developer focuses on code generation and developer productivity, not building conversational AI chatbots which fall under Amazon Lex or Bedrock capabilities.\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t<b>(Amazon Q Developer can deploy applications):</b> Deployment automation is handled by AWS CodePipeline/CodeDeploy; Amazon Q Developer assists with code writing, not CI/CD pipeline execution.\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t<b>(Amazon Q Developer can create SageMaker models):</b> SageMaker Studio provides ML model building; Amazon Q Developer supports code for ML workflows but doesn’t create/train/deploy models directly.\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t</div>"
-    },
-    {
-      "id": "21-24",
-      "number": 24,
-      "text": "As an ML Engineer, you are setting up a CI/CD pipeline for ML models using AWS CodePipeline. Your goal is to automate the workflow for building, training, and deploying these models efficiently. Which of the following would be an effective strategy to integrate with AWS CodePipeline to ensure efficient model updates and deployments?",
-      "options": [
-        {
-          "text": "Use AWS CodeBuild to automatically train and build ML models when updates are pushed to the repository, integrating this process within the pipeline.",
-          "correct": true
-        },
-        {
-          "text": "Rely solely on AWS SageMaker to handle all aspects of model training, deployment, and updates without integrating with AWS CodePipeline.",
-          "correct": false
-        },
-        {
-          "text": "Setup a cron job on an EC2 instance to poll for changes in the source repository and trigger the ML model training.",
-          "correct": false
-        },
-        {
-          "text": "Integrate AWS Lambda to manually trigger model training processes after changes are pushed to the source repository.",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<div>\n\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t<strong>Correct</strong>\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t<b>(Use AWS CodeBuild to automatically train and build ML models when updates are pushed to the repository, integrating this process within the pipeline):</b> AWS CodeBuild serves as the build stage in CodePipeline, executing ML training scripts, packaging models as artifacts, and enabling automated MLOps workflows triggered by repository commits.\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t<strong>Incorrect</strong>\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t<b>(Rely solely on AWS SageMaker to handle all aspects of model training, deployment, and updates without integrating with AWS CodePipeline):</b> SageMaker operates independently without CodePipeline orchestration, missing unified CI/CD across ML and application pipelines.\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t<b>(Setup a cron job on an EC2 instance to poll for changes in the source repository and trigger the ML model training):</b> Cron polling wastes resources with constant EC2 runtime and lacks event-driven efficiency provided by CodePipeline webhooks.\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t<b>(Integrate AWS Lambda to manually trigger model training processes after changes are pushed to the source repository):</b> Manual triggers defeat CI/CD automation; CodePipeline requires seamless automated stage progression.\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t</div>"
-    },
-    {
-      "id": "21-25",
-      "number": 25,
-      "text": "As an ML Engineer, you are implementing a machine learning model for predicting customer behavior in an e-commerce platform. You need to ensure that both resource optimization and security are appropriately handled based on AWS recommendations. Which AWS Trusted Advisor check would be most beneficial to ensure that you are following best practices in terms of performance and security for your ML systems?",
-      "options": [
-        {
-          "text": "Review service limits for Amazon SageMaker and adjust based on utilization",
-          "correct": false
-        },
-        {
-          "text": "Enable Multi-Factor Authentication on the root account",
-          "correct": false
-        },
-        {
-          "text": "Decrease the backup retention period for databases",
-          "correct": false
-        },
-        {
-          "text": "Limit open ports on your instance to those used by your ML applications",
-          "correct": true
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Limit open ports on your instance to those used by your ML applications</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Correct because limiting open ports is a <b>Trusted Advisor security check</b>. </li>\n\t\t\t\t\t\t\t<li>It ensures that only necessary ports are accessible, reducing the attack surface of ML workloads.</li>\n\t\t\t\t\t\t\t<li>This directly addresses <b>security best practices</b> for ML systems deployed on AWS. </li>\n\t\t\t\t\t\t\t<li>Key exam concept: <b>Trusted Advisor security checks help enforce least privilege and minimize exposure.</b>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Review service limits for Amazon SageMaker and adjust based on utilization</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because this is a <b>service limits check</b>, which helps with resource availability but does not directly address <b>security</b>. </li>\n\t\t\t\t\t\t\t<li>It ensures you don’t exceed quotas but does not safeguard against unauthorized access.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Enable Multi‑Factor Authentication on the root account</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because while enabling MFA is a critical <b>security best practice</b>, it is not specific to ML workloads or resource optimization. </li>\n\t\t\t\t\t\t\t<li>This check is broader for account protection, not ML system deployment.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Decrease the backup retention period for databases</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because reducing backup retention impacts <b>data durability and compliance</b>, not performance or security optimization for ML systems. </li>\n\t\t\t\t\t\t\t<li>In fact, shorter retention could weaken resilience.</li>\n\t\t\t\t\t\t</ul>"
     },
     {
       "id": "21-26",
@@ -799,56 +545,6 @@
       "explanationHtml": "<p>Guardrails in Amazon Bedrock are particularly vital for controlling AI behavior, especially in sensitive areas such as content generation. They help ensure that the AI does not produce harmful or unwanted outputs and is compliant with data privacy standards concerning PII. This makes them an essential feature for companies looking to deploy safe and reliable AI solutions.</p>"
     },
     {
-      "id": "21-32",
-      "number": 32,
-      "text": "You are deploying a machine learning model that requires real-time streaming of data for predictive analysis. The model must handle large volumes of data and provide timely insights without delay. Which AWS service would be most suitable for streaming data to this machine learning model?",
-      "options": [
-        {
-          "text": "Amazon RDS",
-          "correct": false
-        },
-        {
-          "text": "Amazon EC2",
-          "correct": false
-        },
-        {
-          "text": "Amazon S3",
-          "correct": false
-        },
-        {
-          "text": "Amazon Kinesis Data Streams",
-          "correct": true
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>Amazon Kinesis Data Streams is specifically designed for real-time data streaming applications, providing capabilities to continuously capture, store, and process large streams of data records. This service enables timely and scalable data ingestion, which is crucial for powering real-time predictive analytics in machine learning models. More information about the service can be found at aws.amazon.com/kinesis/data-streams.</p>"
-    },
-    {
-      "id": "21-33",
-      "number": 33,
-      "text": "A healthcare organization needs to manage compliance documents for HIPAA regulations across multiple Independent Software Vendors (ISVs). Which AWS service would best automate the process of notifications for new compliance documents, ensuring the compliance team is timely informed?",
-      "options": [
-        {
-          "text": "AWS Trusted Advisor",
-          "correct": false
-        },
-        {
-          "text": "AWS Config",
-          "correct": false
-        },
-        {
-          "text": "AWS Artifact",
-          "correct": true
-        },
-        {
-          "text": "AWS Audit Manager",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>AWS Artifact is the most suitable AWS service for the scenario described because it offers an extensive archive of compliance certifications and agreements that the organization might find necessary and facilitates the automatic notification process when new compliance documents are added. This is essential for maintaining compliance standards efficiently. AWS Artifact directly supports the requirement for managing compliance document notifications from ISVs. </p>"
-    },
-    {
       "id": "21-34",
       "number": 34,
       "text": "A company needs to extract structured data from scanned documents such as invoices and receipts batch to automate their accounts payable process. Which Amazon Textract feature would be most suitable for extracting key-value pairs and tables from these documents?",
@@ -872,31 +568,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Amazon Textract Document Analysis is the most suitable AWS service for a use case involving extraction of structured data from scanned documents. It enables precise extraction of data like key-value pairs and tables, which are common in business documents such as invoices and receipts. This facilitates the automation of tasks in the accounts payable process by making structured data available for easier processing and integration. </p>"
-    },
-    {
-      "id": "21-35",
-      "number": 35,
-      "text": "You are architecting a secure application in AWS that requires stringent data encryption both at rest and in transit. How can AWS Key Management Service (KMS) be effectively utilized to manage encryption keys for your application?",
-      "options": [
-        {
-          "text": "Use AWS KMS to generate keys, then export them for use outside of AWS services.",
-          "correct": false
-        },
-        {
-          "text": "Rely solely on the default service-managed keys in KMS for all encryption needs.",
-          "correct": false
-        },
-        {
-          "text": "Leverage KMS to automatically rotate the encryption keys every year without intervention.",
-          "correct": true
-        },
-        {
-          "text": "Use a customer-provided key that is managed outside of AWS KMS for better security.",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>AWS Key Management Service (KMS) is a security service that makes it easy for you to create and control the encryption keys used to encrypt your data. The service uses hardware security modules (HSMs) to protect the security of your keys. Automatic key rotation is a feature in KMS that helps manage and rotate keys automatically, providing a balance between security and management ease. More information can be found on the AWS official documentation: <a href=\"https://aws.amazon.com/kms/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/kms/</a>\n\t\t\t\t\t\t</p>"
     },
     {
       "id": "21-36",
@@ -949,31 +620,6 @@
       "explanationHtml": "<p>The ‘Response Length‘ parameter in AI-driven applications like Amazon Bedrock directly impacts the length of the responses generated by the chatbot. It sets limits on the number of tokens that constitute the responses, ensuring that outputs are neither too brief to be unclear nor too lengthy to be cumbersome. This parameter is crucial for tailoring interactions to be concise and relevant, enhancing customer experience.</p>"
     },
     {
-      "id": "21-38",
-      "number": 38,
-      "text": "You are a Data Scientist at a company using AWS for running advanced machine learning models. Management is concerned about the increasing costs and has tasked you with monitoring and analyzing the costs related to ML solutions. Which AWS service feature should you primarily use to accomplish detailed insights into the costs of your ML deployments?",
-      "options": [
-        {
-          "text": "Use AWS Budgets to set hard limits on ML resources to prevent overspending.",
-          "correct": false
-        },
-        {
-          "text": "Rely on AWS Trusted Advisor to automatically adjust resources based on cost-saving recommendations.",
-          "correct": false
-        },
-        {
-          "text": "Utilize AWS Cost Explorer to analyze and visualize the costs of ML resources and identify spending trends.",
-          "correct": true
-        },
-        {
-          "text": "Deploy AWS CloudTrail to track and manage ML service usage and associated costs.",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>AWS Cost Explorer is particularly useful for monitoring and managing AWS costs, providing detailed insights into where costs are being incurred and helping identify trends. It supports detailed analysis, including the ability to view data by specific services, which is crucial for managing the costs associated with machine learning workloads on services such as Amazon SageMaker. More information on AWS Cost Explorer can be found here: <a href=\"https://aws.amazon.com/aws-cost-management/aws-cost-explorer/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/aws-cost-management/aws-cost-explorer/</a>\n\t\t\t\t\t\t</p>"
-    },
-    {
       "id": "21-39",
       "number": 39,
       "text": "The product team at a media company is assessing the potential of integrating AI technologies to enhance their content handling. They require a clear understanding of the fundamental differences between Natural Language Processing (NLP) and Computer Vision. Based on their need to manage distinct content types effectively, what is the correct application for each technology?",
@@ -997,31 +643,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Natural Language Processing (NLP) and Computer Vision each have distinct applications relevant to the data they process. NLP is crucial for dealing with textual and spoken data, aiding in tasks such as sentiment analysis, text generation, and language translation. On the other hand, Computer Vision is tailored to analyze and interpret visual data from sources like photos and videos, used in tasks such as object detection, image classification, and facial recognition. Understanding these differences allows the team to choose the appropriate technology based on content type and required outcome. </p>"
-    },
-    {
-      "id": "21-40",
-      "number": 40,
-      "text": "As an ML engineer, you are setting up AWS CodePipeline for automating CI/CD workflows for your machine learning models. You aim to ensure that new model versions transition smoothly into production without disruptions in existing model performance. Which CodePipeline feature should you utilize to handle the deployment of multiple model versions safely?",
-      "options": [
-        {
-          "text": "Implement Amazon S3 versioning to maintain multiple model versions.",
-          "correct": false
-        },
-        {
-          "text": "Use AWS CodeBuild to automatically build and deploy new model versions.",
-          "correct": false
-        },
-        {
-          "text": "Leverage AWS CodeDeploy‘s Blue/Green deployment feature.",
-          "correct": true
-        },
-        {
-          "text": "Utilize AWS Lambda for deployment automation of machine learning models.",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>In the context of AWS CodePipeline for automating CI/CD of machine learning models, the Blue/Green deployment feature of AWS CodeDeploy is most appropriate. This method allows both versions to be hosted simultaneously, redirecting a small amount of traffic to the new version for testing. Upon successful validation, traffic can be fully switched over, minimizing disruption and risks associated with direct overwrites of production models. </p>"
     },
     {
       "id": "21-41",
@@ -1124,31 +745,6 @@
       "explanationHtml": "<p>Model Cards in Amazon SageMaker are designed primarily to provide detailed, accountable, and transparent documentation for machine learning models. They aim to facilitate better understanding and trust among users by clearly outlining an AI model‘s purpose, performance, training data, and any ethical considerations.</p>"
     },
     {
-      "id": "21-45",
-      "number": 45,
-      "text": "A data engineer at a financial services company needs to process high-volume real-time data streams for a machine learning model that predicts stock prices. The engineer intends to use AWS services for ingesting, processing, and analyzing this data to continuously update the model‘s predictions. Which AWS service is most suitable for ingesting real-time, high-volume data streams that can also integrate with downstream ML pipelines?",
-      "options": [
-        {
-          "text": "Amazon S3",
-          "correct": false
-        },
-        {
-          "text": "Amazon Kinesis",
-          "correct": true
-        },
-        {
-          "text": "AWS Lambda",
-          "correct": false
-        },
-        {
-          "text": "Amazon Redshift",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>Amazon Kinesis is the optimal choice for data engineers needing to handle high-volume, real-time data streams, especially in use cases where the data needs to be ingested and processed quickly for downstream applications like machine learning pipelines. Kinesis allows for rapid data intake and analysis, which is crucial for applications such as predicting stock prices where data changes constantly and rapidly. More details about Amazon Kinesis and its capabilities can be further explored at [Amazon Kinesis Documentation](<a href=\"https://docs.aws.amazon.com/kinesis/index.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/kinesis/index.html</a>). </p>"
-    },
-    {
       "id": "21-46",
       "number": 46,
       "text": "A healthcare analytics company is developing a machine learning model to provide patient risk assessments based on incoming medical data. The team requires a deployment mechanism on Amazon SageMaker that allows for low-latency, real-time predictions during patient check-ins. Which SageMaker service would best meet these requirements by offering persistent endpoints for individual prediction requests?",
@@ -1172,106 +768,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>In the context of a healthcare analytics company needing to make immediate risk assessments during patient check-ins, Amazon SageMaker Real-time Inference is the most fitting service. It ensures that endpoints are always available to handle incoming requests at low latency, providing an immediate response as required by the healthcare scenario. This service is particularly designed to meet the demands for real-time predictions, unlike the other options which are better suited for handling non-immediate batch processing or larger, less time-sensitive inference tasks. </p>"
-    },
-    {
-      "id": "21-47",
-      "number": 47,
-      "text": "As an ML Engineer tasked with orchestrating a multi-step machine learning pipeline using AWS Step Functions, what is the primary reason to design AWS Lambdas and AWS SageMaker tasks in disparate state machines rather than combining into a single state machine during the model training and deployment pipeline?",
-      "options": [
-        {
-          "text": "To simplify the IAM role management by having a single IAM role for all tasks.",
-          "correct": false
-        },
-        {
-          "text": "To increase the execution speed of the state machine by running all steps in parallel.",
-          "correct": false
-        },
-        {
-          "text": "To maximize code reusability and modularization, allowing each function to be independently updated or reused in different workflows.",
-          "correct": true
-        },
-        {
-          "text": "To reduce the cost of using AWS Step Functions since smaller state machines are cheaper to execute.",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>In complex machine learning workflows orchestrated with AWS Step Functions, it is beneficial to separate different tasks (like AWS Lambda for lightweight data processing or data retrieval, and AWS SageMaker for model training and deployment tasks) into distinct state machines. This approach enhances modularity, maintainability, and code reusability. It allows for easier updates or changes in individual components without affecting other parts of the system. Additionally, it supports best practices in cloud architecture to manage scalability and flexibility in deploying machine learning pipelines. </p>"
-    },
-    {
-      "id": "21-48",
-      "number": 48,
-      "text": "Which AWS service is specifically designed to establish and manage a scalable cloud contact center, allowing rapid provisioning for agents and advanced customer service capabilities?",
-      "options": [
-        {
-          "text": "Amazon Lex",
-          "correct": false
-        },
-        {
-          "text": "Amazon Personalize",
-          "correct": false
-        },
-        {
-          "text": "Amazon Connect",
-          "correct": true
-        },
-        {
-          "text": "Amazon SageMaker",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>Amazon Connect is tailored for creating and managing contact centers in the cloud. It supports quick setup and easy provisioning of new agents, enabling businesses to provide customer service at scale. Features include interactive voice response (IVR), automatic call distribution (ACD), and integration with other AWS services like Amazon Lex for enhanced chatbot functionality. This service is pivotal for organizations aiming to enhance their customer service operations efficiently and effectively. </p>"
-    },
-    {
-      "id": "21-49",
-      "number": 49,
-      "text": "A software development company is planning to automate their deployment process for a new AI-powered application that incorporates multiple ML models. They are considering using AWS CodeDeploy for this purpose. What capability of AWS CodeDeploy specifically supports the deployment of applications with minimal downtime using a streamlined rollback strategy if the deployment fails?",
-      "options": [
-        {
-          "text": "Version control integration for automatic deployment on commit",
-          "correct": false
-        },
-        {
-          "text": "Traffic routing and redirection using Amazon Route 53",
-          "correct": false
-        },
-        {
-          "text": "Blue/green deployment",
-          "correct": true
-        },
-        {
-          "text": "Automated scaling of deployment instances based on user load",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>AWS CodeDeploy‘s blue/green deployment feature is especially useful for deploying applications where minimal downtime and safety are crucial. In such deployments, the new version is released alongside the stable running version, allowing a safe, controlled swap or easy rollback if issues arise during the deployment, thereby enhancing deployment stability and reliability. This approach is more conservative and reliable compared to standard direct deployments, as it provides an immediate fallback option. More details on AWS CodeDeploy blue/green deployments can be found in the AWS documentation. </p>"
-    },
-    {
-      "id": "21-50",
-      "number": 50,
-      "text": "A team is using Amazon CloudWatch to monitor the performance of a machine learning model deployed on AWS infrastructure. They need to ensure that they can identify any inefficiencies or anomalies in the model‘s performance promptly. What is the most effective use of Amazon CloudWatch features for this scenario?",
-      "options": [
-        {
-          "text": "Use Amazon CloudWatch Logs to record and store logs generated by the machine learning application for audit and troubleshooting.",
-          "correct": false
-        },
-        {
-          "text": "Set up basic monitoring to check the CPU utilization of the machines running the model.",
-          "correct": false
-        },
-        {
-          "text": "Create custom CloudWatch Metrics and Alarms based on specific performance indicators of the machine learning model.",
-          "correct": true
-        },
-        {
-          "text": "Configure CloudWatch Events to trigger based on changes in associated database performance only.",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>Using Amazon CloudWatch, configuring custom metrics and alarms tailored to the specific needs of a machine learning model is crucial for effective performance monitoring. This approach allows for detailed observation of model behaviors and immediate alerts if performance falls below established thresholds, ensuring any issues can be addressed swiftly to maintain operational efficiency and model accuracy. For more detailed guidance, reference AWS's official documentation on CloudWatch: [Amazon CloudWatch Documentation](<a href=\"https://docs.aws.amazon.com/cloudwatch/index.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/cloudwatch/index.html</a>). </p>"
     },
     {
       "id": "21-51",
@@ -1322,31 +818,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Object detection is a computer vision technique that detects instances of semantic objects of a certain class (like animals, humans, or vehicles) in digital images and videos. It‘s widely used in various applications such as image annotation, vehicle counting, surveillance, and in this case, wildlife monitoring. By using this technique, the organization can accurately identify and categorize each animal species captured in the camera trap images. More information about object detection can be found on AWS documentation and related machine learning resources. </p>"
-    },
-    {
-      "id": "21-53",
-      "number": 53,
-      "text": "You are utilizing Amazon Rekognition to enhance security features by recognizing faces in video streams for a security company. Which of the following is the most effective application of Amazon Rekognition for processing live video streams to detect and match faces in real-time?",
-      "options": [
-        {
-          "text": "Use AWS Kinesis Video Streams for storage only, without the integration of Rekognition.",
-          "correct": false
-        },
-        {
-          "text": "Use Amazon Rekognition Video directly integrated with live video streams for immediate facial recognition and detection.",
-          "correct": true
-        },
-        {
-          "text": "Store video stream data in Amazon S3 and periodically run batch face analysis using Rekognition.",
-          "correct": false
-        },
-        {
-          "text": "Implement AWS Lambda to process video frames manually and then invoke Amazon Rekognition Image for face detection.",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>Amazon Rekognition Video is specifically tailored for video analysis, capable of providing real-time, and highly accurate facial analysis and recognition directly from streaming video. It integrates seamlessly with other AWS services like Kinesis Video Streams and IAM for secure and scalable solutions. This feature allows for several enhancements in security measures by facilitating immediate detection and action on security threats identified through facial recognition. For more details, you can visit the Amazon Rekognition documentation on AWS official site. </p>"
     },
     {
       "id": "21-54",

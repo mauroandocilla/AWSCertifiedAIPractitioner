@@ -1,7 +1,7 @@
 {
   "setNumber": 16,
   "sourceFile": "Practice_Set_16.html",
-  "questionCount": 60,
+  "questionCount": 57,
   "questions": [
     {
       "id": "16-1",
@@ -533,56 +533,6 @@
       "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p>Amazon Comprehend</p>\n\t\t\t\t\t\t<p>Amazon Comprehend uses natural language processing (NLP) to analyze unstructured text data. It can identify the sentiment (positive, negative, neutral, or mixed) from customer reviews, support tickets, social media posts, and more. By using Amazon Comprehend, businesses can gain real-time insights into customer opinions, which helps in improving customer experience, enhancing products, and optimizing customer support processes. Additionally, Amazon Comprehend can extract key phrases, entities, and topics, making it a versatile tool for text analysis. This makes it ideal for applications that need sentiment analysis and other text comprehension tasks.</p>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p>Amazon Transcribe</p>\n\t\t\t\t\t\t<p>Amazon Transcribe converts speech to text. It is primarily used for transcription tasks, such as converting audio into text. It does not perform sentiment analysis but can be used alongside other services like Amazon Comprehend for text analytics.</p>\n\t\t\t\t\t\t<p>Amazon Lex</p>\n\t\t\t\t\t\t<p>Amazon Lex is an AWS service for building conversational interfaces like chatbots and voice assistants. While it helps in understanding speech and text, it is not specifically designed for sentiment analysis of text data like customer reviews.</p>\n\t\t\t\t\t\t<p>Amazon Kendra</p>\n\t\t\t\t\t\t<p>Amazon Kendra is an intelligent search service that uses machine learning to provide more relevant search results. It is optimized for search queries within an organization‘s content but does not focus on sentiment analysis.</p>\n\t\t\t\t\t\t<p>References:</p>\n\t\t\t\t\t\t<p><a href=\"https://docs.aws.amazon.com/comprehend/latest/dg/what-is.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/comprehend/latest/dg/what-is.html</a>\n\t\t\t\t\t\t</p>"
     },
     {
-      "id": "16-22",
-      "number": 22,
-      "text": "A financial institution wants to improve fraud detection by leveraging AI. They have a large dataset of historical transactions and need a solution that can automatically identify potentially fraudulent activities. Which AWS service is most suitable for this task?",
-      "options": [
-        {
-          "text": "AWS Glue",
-          "correct": false
-        },
-        {
-          "text": "Amazon Fraud Detector",
-          "correct": true
-        },
-        {
-          "text": "Amazon Polly",
-          "correct": false
-        },
-        {
-          "text": "Amazon Comprehend",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p>Amazon Fraud Detector</p>\n\t\t\t\t\t\t<p>Amazon Fraud Detector is specifically designed to help identify potential fraud using machine learning. The service can automatically detect fraudulent activities in real-time by analyzing historical transaction data and using pre-built fraud detection models. This allows financial institutions to prevent fraud more effectively without needing deep machine learning expertise. It is highly customizable and works well with a wide variety of datasets, making it ideal for fraud detection use cases.</p>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p>Amazon Comprehend</p>\n\t\t\t\t\t\t<p>Amazon Comprehend is a natural language processing (NLP) service that helps you extract insights and patterns from text data. It is not designed for fraud detection and would not be suitable for analyzing transaction data or identifying fraud.</p>\n\t\t\t\t\t\t<p>Amazon Polly</p>\n\t\t\t\t\t\t<p>Amazon Polly converts text into lifelike speech. It is irrelevant for fraud detection, as it does not analyze data or identify fraudulent patterns.</p>\n\t\t\t\t\t\t<p>AWS Glue</p>\n\t\t\t\t\t\t<p>AWS Glue is a data integration service that prepares data for analysis by performing ETL (extract, transform, load) operations. It helps move and clean data but does not have fraud detection capabilities.</p>\n\t\t\t\t\t\t<p>References:</p>\n\t\t\t\t\t\t<p><a href=\"https://aws.amazon.com/fraud-detector\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/fraud-detector</a>\n\t\t\t\t\t\t</p>"
-    },
-    {
-      "id": "16-23",
-      "number": 23,
-      "text": "Your team is developing an AI solution for a retail company that needs to meet international compliance standards such as the International Organization for Standardization (ISO) and System and Organization Controls (SOC). You need to automate the process of tracking and auditing compliance in the AWS environment. Which AWS service should you use to assist with compliance automation and auditing?",
-      "options": [
-        {
-          "text": "AWS Audit Manager",
-          "correct": true
-        },
-        {
-          "text": "Amazon Macie",
-          "correct": false
-        },
-        {
-          "text": "AWS Lambda",
-          "correct": false
-        },
-        {
-          "text": "AWS Artifact",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p>AWS Audit Manager</p>\n\t\t\t\t\t\t<p>AWS Audit Manager is designed to simplify and automate the process of tracking compliance with various regulations and industry standards such as ISO, SOC, and GDPR. It helps you continuously collect evidence, evaluate it against pre-built frameworks, and automatically generate audit-ready reports. This service streamlines the complex process of auditing by tracking compliance activities within your AWS environment, reducing manual efforts and providing consistent documentation. Audit Manager is particularly useful when your team is developing AI solutions for industries like retail, where compliance with international standards is critical. By automating audit processes, you can ensure that your organization remains compliant with the necessary standards and has accurate records to present during regulatory audits.</p>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p>AWS Artifact</p>\n\t\t\t\t\t\t<p>AWS Artifact is a repository of compliance-related documents such as reports and agreements. While it provides access to AWS's own certifications and attestations for compliance, it does not automate the tracking and auditing of your specific environment's compliance status.</p>\n\t\t\t\t\t\t<p>Amazon Macie</p>\n\t\t\t\t\t\t<p>Amazon Macie is a security service that helps protect sensitive data using machine learning, but it is not specifically designed to automate compliance tracking or auditing for standards like ISO or SOC.</p>\n\t\t\t\t\t\t<p>AWS Lambda</p>\n\t\t\t\t\t\t<p>AWS Lambda is a compute service used to run code without managing servers. While it can be used for various automation tasks, it does not provide built-in features for tracking or auditing compliance with international standards.</p>\n\t\t\t\t\t\t<p>References:</p>\n\t\t\t\t\t\t<p><a href=\"https://docs.aws.amazon.com/audit-manager/latest/userguide/what-is.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/audit-manager/latest/userguide/what-is.html</a>\n\t\t\t\t\t\t</p>"
-    },
-    {
       "id": "16-24",
       "number": 24,
       "text": "A company is developing an AI system that is still under development, and the developer team has noticed vulnerabilities related to external data injections during the prompt generation phase. What security concern should be addressed to protect the system from malicious input?",
@@ -1093,31 +1043,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p>Context and instruction-based prompts</p>\n\t\t\t\t\t\t<p>Focusing on context and instruction-based prompts is essential to improving the virtual assistant‘s ability to understand and respond fully to user requests. This prompt engineering concept involves providing the model with clear instructions and necessary context so it can better interpret the user‘s queries and deliver more accurate and complete responses. In the case of a travel booking assistant, embedding additional contextsuch as specifying that the user is looking for both flights and hotels or adding details about the location and dateswill help the model generate more complete and relevant responses. By crafting detailed, context-rich prompts, you ensure that the assistant has all the information it needs to fulfill the user‘s request.</p>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p>Negative prompts</p>\n\t\t\t\t\t\t<p>Negative prompts are used to instruct the model to avoid specific types of responses or content, but they are not directly useful for improving the model's understanding of context in this scenario.</p>\n\t\t\t\t\t\t<p>Latent space exploration</p>\n\t\t\t\t\t\t<p>Latent space exploration refers to examining how data is represented within the model's internal structures and is not directly related to improving contextual understanding or prompt engineering.</p>\n\t\t\t\t\t\t<p>Model complexity</p>\n\t\t\t\t\t\t<p>Model complexity deals with the architecture or size of the model, but it does not address the need for clearer instructions or context to improve response completeness in the virtual assistant.</p>\n\t\t\t\t\t\t<p>References:</p>\n\t\t\t\t\t\t<p><a href=\"https://aws.amazon.com/what-is/prompt-engineering\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/what-is/prompt-engineering</a>\n\t\t\t\t\t\t</p>"
-    },
-    {
-      "id": "16-44",
-      "number": 44,
-      "text": "Your organization is deploying a generative AI model for legal documentation that must meet stringent compliance regulations, including ISO and SOC certifications. Which combination of AWS services will best assist in achieving and maintaining these compliance standards?",
-      "options": [
-        {
-          "text": "AWS Audit Manager for tracking compliance, Amazon CloudTrail for logging, and AWS Config for monitoring changes.",
-          "correct": true
-        },
-        {
-          "text": "Amazon Inspector for monitoring compliance, Amazon SageMaker Clarify for bias detection, and Amazon Macie for PII scanning.",
-          "correct": false
-        },
-        {
-          "text": "AWS IAM for managing roles, Amazon SageMaker for training the model, and Amazon DynamoDB for data storage.",
-          "correct": false
-        },
-        {
-          "text": "Amazon CloudWatch for real-time monitoring, AWS Glue for data transformation, and Amazon Redshift for storing compliance data.",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p>AWS Audit Manager for tracking compliance, Amazon CloudTrail for logging, and AWS Config for monitoring changes.</p>\n\t\t\t\t\t\t<p>Using AWS Audit Manager, Amazon CloudTrail, and AWS Config together is the best approach to achieve and maintain stringent compliance regulations like ISO and SOC certifications. AWS Audit Manager helps you continuously audit your AWS usage and automates evidence collection, making it easier to assess risk and compliance with regulations. It streamlines the process of collecting and organizing evidence required for audits, saving time and reducing manual effort. Amazon CloudTrail records all AWS API calls and user activities within your AWS account. It provides comprehensive logging, which is essential for forensic analysis, security monitoring, and compliance auditing. AWS Config continuously monitors and records your AWS resource configurations and allows you to automate the evaluation of recorded configurations against desired settings. It helps in detecting configuration drift and ensures that your resources remain compliant over time. Together, these services provide a robust framework for tracking compliance, logging activities, and monitoring changes, which are critical for meeting and maintaining compliance standards like ISO and SOC.</p>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p>AWS IAM for managing roles, Amazon SageMaker for training the model, and Amazon DynamoDB for data storage.</p>\n\t\t\t\t\t\t<p>While AWS IAM, SageMaker, and DynamoDB are essential for access control, model training, and data storage, they do not specifically address compliance tracking or auditing needed for ISO and SOC certifications.</p>\n\t\t\t\t\t\t<p>Amazon Inspector for monitoring compliance, Amazon SageMaker Clarify for bias detection, and Amazon Macie for PII scanning.</p>\n\t\t\t\t\t\t<p>Amazon Inspector focuses on security assessments, SageMaker Clarify helps detect bias in models, and Amazon Macie identifies sensitive data. These services are valuable but do not provide the comprehensive compliance management required for certifications.</p>\n\t\t\t\t\t\t<p>Amazon CloudWatch for real-time monitoring, AWS Glue for data transformation, and Amazon Redshift for storing compliance data.</p>\n\t\t\t\t\t\t<p>These services are geared towards performance monitoring, data processing, and analytics. They don‘t offer the specific tools needed for compliance auditing and maintaining certifications like ISO and SOC.</p>\n\t\t\t\t\t\t<p>References:</p>\n\t\t\t\t\t\t<p><a href=\"https://docs.aws.amazon.com/audit-manager/latest/userguide/what-is.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/audit-manager/latest/userguide/what-is.html</a></p>\n\t\t\t\t\t\t<p><a href=\"https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-user-guide.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-user-guide.html</a></p>\n\t\t\t\t\t\t<p><a href=\"https://docs.aws.amazon.com/config/latest/developerguide/WhatIsConfig.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/config/latest/developerguide/WhatIsConfig.html</a>\n\t\t\t\t\t\t</p>"
     },
     {
       "id": "16-45",

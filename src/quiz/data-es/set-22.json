@@ -1,7 +1,7 @@
 {
   "setNumber": 22,
   "sourceFile": "Practice_Set_22.html",
-  "questionCount": 54,
+  "questionCount": 34,
   "questions": [
     {
       "id": "22-1",
@@ -162,81 +162,6 @@
       "explanationHtml": "<p>Para garantizar que los modelos de IA sean justos, transparentes y estén libres de sesgos, la empresa de tecnología sanitaria debe utilizar Amazon SageMaker Clarify y Amazon SageMaker Model Monitor. SageMaker Clarify ayuda a detectar sesgos y proporciona explicaciones para las predicciones del modelo, mientras que SageMaker Model Monitor monitorea continuamente la calidad del modelo y detecta data drift. Estas herramientas respaldan las prácticas de Responsible AI, garantizando que se cumplan los estándares éticos. Más información: <a href=\"https://aws.amazon.com/sagemaker/clarify/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/sagemaker/clarify/</a>, <a href=\"https://aws.amazon.com/sagemaker/model-monitor/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/sagemaker/model-monitor/</a>\n\t\t\t\t\t\t</p>"
     },
     {
-      "id": "22-7",
-      "number": 7,
-      "text": "Sos un ingeniero DevOps que está desplegando una aplicación impulsada por IA. Necesitás un servicio de CI/CD que administre y escale sin problemas los despliegues desde el desarrollo de código hasta la producción, específicamente para modelos de IA integrados en tu aplicación. ¿Cuál es el servicio AWS más indicado para automatizar pipelines de CI/CD, con capacidades para manejar características relevantes a despliegues de modelos de machine learning?",
-      "options": [
-        {
-          "text": "AWS CodeBuild",
-          "correct": false
-        },
-        {
-          "text": "AWS CodePipeline",
-          "correct": true
-        },
-        {
-          "text": "AWS Lambda",
-          "correct": false
-        },
-        {
-          "text": "AWS Elastic Beanstalk",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>La solución óptima para automatizar procesos de CI/CD en aplicaciones con modelos de IA integrados es AWS CodePipeline. Está diseñado para administrar el flujo de trabajo desde desarrollo hasta producción, permitiendo integración y entrega continua específicamente adaptadas a escenarios que incluyen modelos de IA. AWS CodePipeline facilita la automatización de las fases de build, test y deployment, que son cruciales para la integración de modelos de machine learning en entornos de producción. Más información: <a href=\"https://aws.amazon.com/codepipeline/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/codepipeline/</a>\n\t\t\t\t\t\t</p>"
-    },
-    {
-      "id": "22-8",
-      "number": 8,
-      "text": "En el modelo de responsabilidad compartida de AWS, ¿cuál de las siguientes opciones ilustra mejor la división de responsabilidades entre AWS y el cliente?",
-      "options": [
-        {
-          "text": "AWS es responsable de la seguridad 'de' la nube, que incluye la infraestructura, hardware y software, mientras que el cliente es responsable de la seguridad 'en' la nube, que incluye datos, aplicaciones y gestión de acceso.",
-          "correct": true
-        },
-        {
-          "text": "Los clientes son responsables de garantizar la seguridad física de los centros de datos de AWS, mientras que AWS es responsable de monitorear el tráfico de red y gestionar las identidades de usuario.",
-          "correct": false
-        },
-        {
-          "text": "AWS es responsable de configurar y gestionar los parámetros de seguridad de las aplicaciones del cliente, mientras que el cliente maneja la infraestructura de hardware subyacente.",
-          "correct": false
-        },
-        {
-          "text": "AWS gestiona todos los aspectos de seguridad, incluida la encriptación de datos, la gestión de acceso de usuarios y la seguridad de aplicaciones, mientras que el cliente solo necesita gestionar sus máquinas virtuales.",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>El modelo de responsabilidad compartida de AWS es un aspecto fundamental del uso de servicios de AWS, donde las responsabilidades de seguridad y cumplimiento se dividen entre AWS y el cliente. AWS es responsable de la 'seguridad de la nube', asegurando los componentes de infraestructura como hardware, software, redes e instalaciones. El cliente es responsable de la 'seguridad en la nube', gestionando las configuraciones de seguridad, protección de datos, controles de acceso y otras medidas de seguridad relacionadas con sus recursos de AWS.</p>"
-    },
-    {
-      "id": "22-9",
-      "number": 9,
-      "text": "Como Ingeniero de Machine Learning que gestiona costos para varios proyectos de ML, querés utilizar AWS Cost Explorer para monitorear y controlar efectivamente los gastos de tus soluciones de ML implementadas en AWS. ¿Cuál es el método más efectivo para analizar y gestionar los costos asociados con servicios de ML específicos como Amazon SageMaker usando AWS Cost Explorer?",
-      "options": [
-        {
-          "text": "Configurar un único presupuesto integral para todos los servicios de AWS y monitorear el gasto total en una vista consolidada.",
-          "correct": false
-        },
-        {
-          "text": "Usar el nivel gratuito de AWS para todos los servicios sin discriminación para minimizar costos sin monitoreo.",
-          "correct": false
-        },
-        {
-          "text": "Utilizar etiquetas para categorizar costos por proyecto o servicio de ML, permitiendo filtrado detallado e información específica del uso de Amazon SageMaker.",
-          "correct": true
-        },
-        {
-          "text": "Ignorar los desgloses de servicios individuales y enfocarse en reducir el uso de los recursos de AWS más costosos en general.",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>Para monitorear los costos de AWS de manera efectiva, especialmente para soluciones de machine learning, se necesita un desglose detallado de los gastos. AWS Cost Explorer es altamente efectivo cuando se combina con tagging para monitorear costos relacionados con proyectos específicos o servicios como Amazon SageMaker. Esta granularidad permite gestión de costos precisa y estrategias de optimización, convirtiéndose en algo indispensable para la presupuestación y planificación financiera en proyectos de ML. Más información: <a href=\"https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html</a>\n\t\t\t\t\t\t</p>"
-    },
-    {
       "id": "22-10",
       "number": 10,
       "text": "¿Cuál es una ventaja clave de implementar modelos de IA generativa usando AWS para una empresa de salud que busca mejorar el análisis de datos y la atención al paciente?",
@@ -260,56 +185,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>La ventaja principal de usar IA generativa en el entorno de nube de AWS, especialmente para organizaciones de salud, es la capacidad de automatizar y mejorar los procesos de datos. Los modelos de IA generativa pueden aprender de conjuntos de datos existentes para generar nuevos datos sintéticos, lo cual es crítico en escenarios como la simulación de respuestas de pacientes a tratamientos. AWS proporciona la infraestructura necesaria y la escalabilidad para integrar de manera eficiente estos modelos de IA en flujos de trabajo sanitarios, manejando grandes volúmenes de datos sensibles de forma segura. Esto puede conducir a herramientas diagnósticas mejoradas, medicina personalizada y, en última instancia, a una atención al paciente mejorada.</p>"
-    },
-    {
-      "id": "22-11",
-      "number": 11,
-      "text": "Como Ingeniero de Machine Learning, tu tarea es automatizar el proceso de construcción de artefactos de ML utilizando AWS CodeBuild. El objetivo es garantizar tiempos de construcción eficientes y un manejo adecuado de errores. ¿Cuál configuración aprovecharía mejor AWS CodeBuild para la integración continua y entrega de artefactos de machine learning?",
-      "options": [
-        {
-          "text": "Usar AWS CodeBuild sin configuración adicional, confiando en los valores predeterminados para todos los procesos de construcción.",
-          "correct": false
-        },
-        {
-          "text": "Configurar AWS CodeBuild con una imagen de entorno estándar y triggers manuales para cada construcción.",
-          "correct": false
-        },
-        {
-          "text": "Usar múltiples proyectos de CodeBuild para cada parte del modelo ML por separado, configurados para ejecutarse secuencialmente.",
-          "correct": false
-        },
-        {
-          "text": "Usar AWS CodeBuild con una imagen Docker personalizada adaptada al framework de machine learning y las librerías utilizadas, y configurar webhook triggers para construir automáticamente cuando hay cambios en el código fuente.",
-          "correct": true
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>AWS CodeBuild es un servicio de construcción completamente administrado que compila código fuente, ejecuta pruebas y produce paquetes de software listos para desplegar. Para proyectos de machine learning, utilizar imágenes Docker personalizadas en AWS CodeBuild permite crear un entorno personalizado que se adapte a frameworks y librerías de ML específicas, mejorando la compatibilidad y eficiencia. El uso de webhook triggers automatiza el proceso de construcción, facilitando la integración y entrega continua, lo cual es crucial para el desarrollo iterativo de modelos de ML. Esta configuración asegura que los cambios nuevos se integren de manera eficiente y los artefactos se construyan automáticamente, reduciendo el esfuerzo manual y los posibles errores humanos. Más información: [AWS CodeBuild Documentation](<a href=\"https://docs.aws.amazon.com/codebuild/latest/userguide/what-is-codebuild.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/codebuild/latest/userguide/what-is-codebuild.html</a>)</p>"
-    },
-    {
-      "id": "22-12",
-      "number": 12,
-      "text": "Una empresa utiliza AWS para entrenar modelos de machine learning y le preocupa optimizar costos sin afectar la seguridad y el rendimiento de sus sistemas. Está considerando usar AWS Trusted Advisor para ayudarse con estas optimizaciones. ¿Cuál verificación de AWS Trusted Advisor sería más efectiva para reducir costos manteniendo o mejorando la seguridad específicamente para sistemas de machine learning?",
-      "options": [
-        {
-          "text": "Implementar la revisión de límites de servicio para prevenir el exceso de aprovisionamiento del sistema.",
-          "correct": false
-        },
-        {
-          "text": "Activar recomendaciones de optimización de Amazon EC2 Reserved Instance.",
-          "correct": false
-        },
-        {
-          "text": "Habilitar recomendaciones de optimización de Amazon RDS Reserved Instance.",
-          "correct": false
-        },
-        {
-          "text": "Utilizar la verificación de 'Underutilized Amazon EC2 Instances' para reducir la escala o terminar recursos que no se utilizan completamente.",
-          "correct": true
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>Elegir la verificación de 'Underutilized Amazon EC2 Instances' es efectivo para gestionar costos al identificar instancias de EC2 que no se utilizan completamente. Esto permite ajustar el tamaño o desconectar equipos, asegurando que los recursos se asignen de manera eficiente sin gastos excesivos. Es particularmente efectivo en escenarios de machine learning donde las instancias podrían aprovisionarse para entrenamientos intensivos pero no siempre se usan completamente. Esta optimización contribuye tanto a la gestión de costos como a la sostenibilidad ambiental sin afectar la seguridad o las capacidades operativas de los sistemas de machine learning. Más información: <a href=\"https://aws.amazon.com/premiumsupport/technology/trusted-advisor/best-practice-checklist/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/premiumsupport/technology/trusted-advisor/best-practice-checklist/</a>\n\t\t\t\t\t\t</p>"
     },
     {
       "id": "22-13",
@@ -360,31 +235,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Los modelos Transformer se distinguen por su mecanismo de self-attention, que asigna inteligentemente una importancia contextual a diferentes palabras en la secuencia de entrada. Este mecanismo permite que Transformer sea efectivo en tareas como traducción de idiomas y generación de texto al entender la estructura de oración y la semántica más allá de solo la proximidad de las palabras. Esto es crucial para lograr un buen desempeño en tareas NLP complejas y es fundamental en modelos de última generación basados en la arquitectura Transformer como la serie BERT y GPT. Para obtener información más detallada sobre modelos Transformer, puedes visitar el artículo introductorio de Vaswani et al., 2017 titulado 'Attention is All You Need'.</p>"
-    },
-    {
-      "id": "22-15",
-      "number": 15,
-      "text": "Como AWS Certified AI Practitioner, tienes la tarea de implementar un flujo de deployment usando AWS CodeDeploy para desplegar un nuevo modelo de machine learning. ¿Cuál configuración de deployment asegura mejor el mínimo downtime y permite etapas de monitoreo y validación durante el deployment?",
-      "options": [
-        {
-          "text": "Deployment in-place con configuración HalfAtATime.",
-          "correct": false
-        },
-        {
-          "text": "Deployment blue/green usando ECS.",
-          "correct": true
-        },
-        {
-          "text": "Deployment personalizado respaldado por Lambda.",
-          "correct": false
-        },
-        {
-          "text": "Deployment in-place con configuración AllAtOnce.",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>Los deployments blue/green son altamente recomendados para desplegar nuevas versiones de aplicaciones o modelos con impacto mínimo en el sistema existente. Permite un entorno seguro para validar actualizaciones antes de cambiar el tráfico, lo cual es crucial para alta disponibilidad e interrupción mínima del servicio. Más información: <a href=\"https://docs.aws.amazon.com/codedeploy/latest/userguide/deployment-configurations.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/codedeploy/latest/userguide/deployment-configurations.html</a>\n\t\t\t\t\t\t</p>"
     },
     {
       "id": "22-16",
@@ -460,31 +310,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Al guiar un modelo de IA usando prompts, es esencial proporcionar Instructions claras, Context relevante, los Input data necesarios y establecer Output expectations precisos. Estos componentes aseguran que la IA entienda la tarea correctamente y pueda generar el contenido deseado de manera efectiva. El Context es particularmente importante ya que moldea la comprensión y respuesta del modelo a los prompts, convirtiéndolo en un aspecto crucial del prompt engineering.</p>"
-    },
-    {
-      "id": "22-19",
-      "number": 19,
-      "text": "Como ingeniero de datos de IA que trabaja en transformación y preprocesamiento de datos para proyectos de machine learning en una empresa de servicios financieros, se te encarga diseñar una solución ETL usando AWS Glue. ¿Cuál es la ventaja clave de usar AWS Glue para la creación de dynamic frames al manejar fuentes de datos con esquemas incompatibles?",
-      "options": [
-        {
-          "text": "AWS Glue permite la detección automática de esquemas y resuelve automáticamente las discrepancias de esquemas usando la clase ApplyMapping.",
-          "correct": true
-        },
-        {
-          "text": "AWS Glue usa IA para predecir y modificar esquemas de datos en tiempo real sin necesidad de intervención.",
-          "correct": false
-        },
-        {
-          "text": "AWS Glue requiere estrictamente la alineación manual de esquemas antes de que los datos se procesen para garantizar la calidad de los datos.",
-          "correct": false
-        },
-        {
-          "text": "AWS Glue proporciona clusters Spark gestionados que pueden preprocesar datos automáticamente sin configuración de esquemas.",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>La capacidad de AWS Glue para manejar automáticamente discrepancias de esquemas es particularmente valiosa en entornos donde se requiere integración y limpieza de datos desde diversas fuentes con esquemas en evolución. Los DynamicFrames en AWS Glue proporcionan una forma de gestionar y resolver las discrepancias de esquemas que frecuentemente ocurren en data lakes, haciendo que los procesos ETL sean más flexibles y menos propensos a errores debido a inconsistencias de esquemas. Más información: <a href=\"https://docs.aws.amazon.com/glue/latest/dg/populate-dynamic-frames.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/glue/latest/dg/populate-dynamic-frames.html</a>\n\t\t\t\t\t\t</p>"
     },
     {
       "id": "22-20",
@@ -570,31 +395,6 @@
       "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Usar Amazon API Gateway para recibir comentarios, almacenarlos en Amazon S3 y activar una función de AWS Lambda que invoque Amazon Comprehend.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p>Esta arquitectura representa una práctica recomendada estándar, sin servidor y altamente escalable para automatizar la ingesta y análisis de datos en tiempo real en AWS.</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>Amazon API Gateway:</b>&nbsp;Proporciona un endpoint seguro y administrado para recibir datos de comentarios de clientes desde aplicaciones o sitios web en tiempo real.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>Amazon S3:</b>&nbsp;Actúa como la capa de almacenamiento duradero y rentable, preservando los datos de comentarios originales para auditoría, análisis posterior o reentrenamiento de modelos.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>AWS Lambda:</b>&nbsp;Actúa como el pegamento de orquestación. Se activa automáticamente cuando se almacena un nuevo objeto de comentario en S3. El código de la función Lambda luego invoca la API de <b>Amazon Comprehend</b> (por ejemplo, <code>DetectSentiment</code> y <code>DetectKeyPhrases</code>) para realizar el análisis del texto.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>Amazon Comprehend:</b>&nbsp;El servicio de IA central que realiza el procesamiento de lenguaje natural (detección de sentimiento y frases clave) según lo requerido.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>Este patrón es eficiente, rentable y completamente administrado, alineándose perfectamente con las prácticas recomendadas de AWS.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Configurar Amazon SQS para encolar mensajes que contienen comentarios, que luego son procesados por instancias de Amazon EC2 ejecutando algoritmos de análisis de sentimiento.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p>Esta opción es incorrecta porque omite el servicio elegido, <b>Amazon Comprehend</b>. La empresa ya ha decidido usar Comprehend, un servicio completamente administrado que proporciona análisis de sentimiento preentrenado. Construir y ejecutar algoritmos personalizados en instancias de Amazon EC2 es un enfoque complejo, costoso y que requiere mucho mantenimiento, lo que va en contra del propósito de usar un servicio de IA administrado. Aunque SQS es un servicio válido para desacoplamiento, el uso de EC2 para análisis personalizado hace que esta sea la opción incorrecta.</p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Habilitar Amazon Kinesis Data Firehose para transmitir datos directamente a Amazon Comprehend sin almacenar datos.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p>Esto es incorrecto porque <b>Amazon Comprehend no tiene una integración nativa y directa como destino para Kinesis Data Firehose</b>. Kinesis Data Firehose puede entregar datos de streaming a destinos como S3, Redshift y OpenSearch, pero no a Comprehend. Además, para auditoría y cumplimiento normativo, almacenar los comentarios originales de los clientes es típicamente un requisito comercial, que esta opción evita explícitamente.</p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Integrar Amazon Comprehend directamente con Amazon RDS para analizar comentarios almacenados sin almacenamiento intermedio.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p>Este no es una ruta de integración estándar o eficiente. Si bien podrías escribir código de aplicación personalizado para leer texto de una base de datos RDS e invocar la API de Comprehend, esto es un proceso manual y no una integración automatizada \"integrada\". Requeriría desarrollo personalizado significativo para consultar la base de datos y gestionar el flujo de trabajo de análisis. El patrón sin servidor descrito en la opción <b>B</b> es el enfoque recomendado, más escalable y más rentable para automatizar esta tarea.</p>"
     },
     {
-      "id": "22-23",
-      "number": 23,
-      "text": "Una empresa de atención médica enfocada en IA busca mejorar su sostenibilidad seleccionando el tipo de instancia Amazon EC2 más eficiente energéticamente para procesar grandes cargas de trabajo de machine learning relacionadas con análisis e investigación de resultados de pacientes. ¿Qué tipo de instancia EC2 debería elegir la empresa para reducir su impacto ambiental manteniendo capacidades de rendimiento de primera categoría para entrenar modelos de IA complejos?",
-      "options": [
-        {
-          "text": "Instancias Accelerated Computing tipo G",
-          "correct": false
-        },
-        {
-          "text": "Instancias AWS Trainium",
-          "correct": true
-        },
-        {
-          "text": "Instancias Compute Optimized tipo C",
-          "correct": false
-        },
-        {
-          "text": "Instancias Accelerated Computing tipo P",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p><b>Instancias AWS Trainium</b></p>\n\t\t\t\t\t\t<p>Para el caso de uso específico de <b>entrenar</b>&nbsp;\"modelos de IA complejos\" con enfoque en \"eficiencia energética\" y \"sostenibilidad\", las instancias AWS Trainium son la opción óptima. Trainium es un acelerador de machine learning desarrollado específicamente por AWS para el entrenamiento de modelos de deep learning de alto rendimiento, rentable y <b>eficiente energéticamente</b>. Ofrece hasta 50% menos costo de entrenamiento y proporciona el mejor rendimiento por vatio para cargas de entrenamiento en la nube en comparación con otras alternativas, apoyando directamente el objetivo de la empresa de reducir su impacto ambiental.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p><b>Instancias Accelerated Computing tipo G</b></p>\n\t\t\t\t\t\t<p>Las instancias G están impulsadas por procesadores AWS Graviton. Aunque los procesadores Graviton son altamente eficientes energéticamente para cargas de propósito general y optimizadas para computación, <b>no son aceleradores especializados para entrenamiento de ML</b>. Carecen del hardware dedicado (como los chips Trainium) que proporciona el mayor rendimiento y eficiencia energética para la tarea computacionalmente intensiva de entrenar modelos complejos. Son más adecuadas para inferencia o aplicaciones de propósito general.</p>\n\t\t\t\t\t\t<p><b>Instancias Compute Optimized tipo C</b></p>\n\t\t\t\t\t\t<p>Las instancias Compute Optimized (tipo C) están diseñadas para cargas de trabajo intensivas en computación que se benefician de procesadores de alto rendimiento. Sin embargo, utilizan CPUs de propósito general. Entrenar modelos de IA complejos en CPUs es extremadamente ineficiente tanto en términos de tiempo como de consumo energético en comparación con usar aceleradores de hardware especializados como Trainium o GPUs. Esta sería la opción menos sostenible y más lenta para esta tarea específica.</p>\n\t\t\t\t\t\t<p><b>Instancias Accelerated Computing tipo P</b></p>\n\t\t\t\t\t\t<p>Las instancias P están impulsadas por GPUs NVIDIA (como V100 o A100) y fueron el estándar anterior para entrenamiento de ML de alto rendimiento. Si bien son potentes y pueden entrenar modelos de manera efectiva, <b>no son la opción más eficiente energéticamente</b>. El chip AWS Trainium fue diseñado específicamente para superar a las instancias basadas en GPU (como tipo P) en métricas de rendimiento por vatio para entrenamiento, lo que la convierte en una opción más sostenible. Por lo tanto, para una empresa que prioriza el impacto ambiental, Trainium es la recomendación superior.</p>"
-    },
-    {
       "id": "22-24",
       "number": 24,
       "text": "Una empresa de medios está evaluando servicios de AWS para acelerar flujos de trabajo de AI y machine learning. Necesita entender las diferencias entre Amazon SageMaker JumpStart y Amazon Bedrock en términos de acceso a modelos pre-entrenados y opciones de personalización. ¿Cuál servicio se ajusta mejor a estas necesidades?",
@@ -618,81 +418,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Amazon SageMaker JumpStart proporciona un conjunto completo de modelos pre-entrenados y flexibilidad de personalización, mientras que Amazon Bedrock se enfoca en soluciones sin código para ciencia de datos.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li><b>SageMaker JumpStart</b>: Ofrece un catálogo de modelos pre-entrenados y soluciones que se pueden fine-tuning y personalizar. Los desarrolladores pueden integrarlos en flujos de trabajo de ML end-to-end con control total sobre entrenamiento, implementación y canalizaciones.</li>\n\t\t\t\t\t\t\t<li><b>Amazon Bedrock</b>: Proporciona acceso a modelos base a través de API sin requerir gestión de infraestructura o experiencia en ML. Está diseñado para casos de uso <b>sin código/bajo código</b>, lo que facilita el prototipado rápido pero con menos personalización en comparación con SageMaker.</li>\n\t\t\t\t\t\t\t<li>Esta opción distingue correctamente entre <b>flexibilidad de personalización (JumpStart)</b> y <b>simplicidad sin código (Bedrock)</b>. </li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Amazon Bedrock ofrece personalización extensiva para canalizaciones de procesamiento de datos, mientras que Amazon SageMaker JumpStart ofrece modelos pre-construidos limitados sin personalización.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Engañoso: Bedrock no proporciona personalización extensiva de canalizaciones; se enfoca en acceso por API a modelos base.</li>\n\t\t\t\t\t\t\t<li>SageMaker JumpStart sí permite personalización de modelos pre-entrenados.</li>\n\t\t\t\t\t\t\t<li>Incorrecto porque invierte los roles de los dos servicios.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Tanto Amazon Bedrock como Amazon SageMaker JumpStart proporcionan acceso igual a modelos pre-entrenados y personalización, enfocándose en acelerar la implementación con diferencias mínimas.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>No es correcto: Bedrock enfatiza la simplicidad y el acceso basado en API, mientras que JumpStart enfatiza la personalización e integración en flujos de trabajo de ML.</li>\n\t\t\t\t\t\t\t<li>Incorrecto porque ignora las diferencias fundamentales en capacidades de personalización.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Amazon Bedrock proporciona una vasta biblioteca de modelos pre-entrenados y opciones de personalización, mientras que Amazon SageMaker JumpStart es más adecuado para principiantes con configuración mínima.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Bedrock sí proporciona acceso a modelos base pero no ofrece personalización profunda.</li>\n\t\t\t\t\t\t\t<li>JumpStart no es solo para principiantes; está pensado para profesionales que quieren acelerar desarrollo de ML con soluciones personalizables.</li>\n\t\t\t\t\t\t\t<li>Incorrecto porque tergiversa el rol de JumpStart y exagera la personalización de Bedrock.</li>\n\t\t\t\t\t\t</ul>"
-    },
-    {
-      "id": "22-25",
-      "number": 25,
-      "text": "Un Analista de Datos que usa Amazon QuickSight necesita construir un dashboard de desempeño para obtener insights rápidos sobre dos métricas distintas: cambios de ingresos mensuales (en dólares) y asignaciones de gastos (como porcentaje) en diferentes departamentos. ¿Qué mejor práctica de visualización única debe implementarse en QuickSight para comparar eficientemente estas dos medidas en la misma dimensión temporal?",
-      "options": [
-        {
-          "text": "Construir un Combo Chart con Dual Y-Axes, usando barras para el monto de ingresos y un gráfico de líneas para el Ratio/Porcentaje de gastos.",
-          "correct": true
-        },
-        {
-          "text": "Utilizar un Pie Chart para representar cambios de ingresos mensuales y gastos por departamento.",
-          "correct": false
-        },
-        {
-          "text": "Crear dos visualizaciones separadas: un Line Chart para ingresos mensuales y un Bar Chart para gastos por departamento.",
-          "correct": false
-        },
-        {
-          "text": "Implementar un Heat Map para representar los ingresos mensuales y gastos por departamento.",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Construir un Combo Chart con Dual Y-Axes, usando barras para el monto de ingresos y un gráfico de líneas para el Ratio/Porcentaje de gastos</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li><strong>Correcto</strong> porque un <b>Combo Chart con dual Y-axes</b> te permite graficar dos métricas diferentes con escalas distintas (dólares absolutos vs. porcentaje) en la misma dimensión temporal.</li>\n\t\t\t\t\t\t\t<li>Las barras pueden representar <b>cambios de ingresos mensuales</b>, mientras que un gráfico de líneas puede representar <b>ratios de gastos</b>.</li>\n\t\t\t\t\t\t\t<li>Esta es considerada una <b>mejor práctica de QuickSight</b> para comparar métricas de diferentes unidades en una sola visualización, asegurando claridad y eficiencia.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Utilizar un Pie Chart para representar cambios de ingresos mensuales y gastos por departamento</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrecto porque los pie charts están diseñados para <b>comparaciones de parte-al-todo en un punto único en el tiempo</b>, no para <b>tendencias temporales</b>.</li>\n\t\t\t\t\t\t\t<li>No pueden mostrar efectivamente cambios mensuales ni comparar porcentajes junto a valores absolutos.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Crear dos visualizaciones separadas: un Line Chart para ingresos mensuales y un Bar Chart para gastos por departamento</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrecto porque aunque este enfoque funciona, no cumple con el requisito de una <b>mejor práctica de visualización única</b>.</li>\n\t\t\t\t\t\t\t<li>Dividir en dos visualizaciones reduce la eficiencia y dificulta la comparación directa de métricas en la misma línea de tiempo.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Implementar un Heat Map para representar los ingresos mensuales y gastos por departamento</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrecto porque los heat maps son útiles para identificar <b>patrones o densidad entre categorías</b>, no para comparar dos métricas distintas con diferentes escalas en el tiempo.</li>\n\t\t\t\t\t\t\t<li>No proporcionarían un insight claro de ambos cambios de ingresos y porcentajes de gastos simultáneamente.</li>\n\t\t\t\t\t\t</ul>"
-    },
-    {
-      "id": "22-26",
-      "number": 26,
-      "text": "Como analista de datos, te encargaron consultar un gran conjunto de datos históricos almacenado en Amazon S3 para una empresa de retail y realizar un análisis de tendencias de mercado. ¿Cuál característica de Amazon Athena facilitaría de manera más eficiente las consultas de datos con enfoque en optimización de costos?",
-      "options": [
-        {
-          "text": "Implementar Amazon Redshift Spectrum para consultar datos",
-          "correct": false
-        },
-        {
-          "text": "Aprovechar formatos de almacenamiento columnar como ORC o Parquet en Athena",
-          "correct": true
-        },
-        {
-          "text": "Usar Amazon Athena con AWS Glue Data Catalog para particionamiento de datos",
-          "correct": true
-        },
-        {
-          "text": "Aplicar capacidades de machine learning de Athena para consultas predictivas",
-          "correct": false
-        }
-      ],
-      "multiSelect": true,
-      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Aprovechar formatos de almacenamiento columnar como ORC o Parquet en Athena</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Es correcto porque los formatos columnares como <b>ORC</b> y <b>Parquet</b> reducen la cantidad de datos que Athena debe escanear.</li>\n\t\t\t\t\t\t\t<li>Athena cobra según la cantidad de datos escaneados, así que usar estos formatos mejora significativamente la <b>eficiencia de consultas y optimización de costos</b>. </li>\n\t\t\t\t\t\t\t<li>También soportan compresión y predicate pushdown, reduciendo aún más los costos de consultas.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Usar Amazon Athena con AWS Glue Data Catalog para particionamiento de datos</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Es correcto porque el <b>particionamiento</b> permite a Athena escanear solo los subconjuntos relevantes de datos en lugar de todo el conjunto.</li>\n\t\t\t\t\t\t\t<li>Combinado con <b>AWS Glue Data Catalog</b>, los particiones se administran eficientemente, mejorando el rendimiento de consultas y reduciendo costos.</li>\n\t\t\t\t\t\t\t<li>Esto es especialmente efectivo para conjuntos de datos históricos grandes donde las consultas frecuentemente filtran por fecha o categoría.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Implementar Amazon Redshift Spectrum para consultar datos</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Es incorrecto porque Redshift Spectrum es una característica de Amazon Redshift, no de Athena.</li>\n\t\t\t\t\t\t\t<li>Aunque puede consultar datos en S3, la pregunta específicamente pregunta sobre <b>características de Athena</b>, así que esta opción no aplica.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Aplicar capacidades de machine learning de Athena para consultas predictivas</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Es incorrecto porque Athena no tiene capacidades integradas de machine learning.</li>\n\t\t\t\t\t\t\t<li>Athena es un <b>motor de consultas serverless</b> para analizar datos en S3, no para modelado predictivo.</li>\n\t\t\t\t\t\t</ul>"
-    },
-    {
-      "id": "22-27",
-      "number": 27,
-      "text": "Como profesional de IA implementando soluciones seguras en AWS, necesitas asegurar que las llamadas a la API de cifrado y descifrado puedan manejar requisitos de alto rendimiento y baja latencia. ¿Cuál característica de AWS KMS deberías aprovechar para cumplir estas demandas operacionales?",
-      "options": [
-        {
-          "text": "Usar los endpoints KMS predeterminados de región única.",
-          "correct": false
-        },
-        {
-          "text": "Utilizar AWS CloudHSM para gestionar claves criptográficas.",
-          "correct": false
-        },
-        {
-          "text": "Emplear la característica AWS KMS Custom Key Store respaldada por AWS CloudHSM.",
-          "correct": true
-        },
-        {
-          "text": "Implementar cifrado del lado del cliente con tus propias claves gestionadas.",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Emplear la característica AWS KMS Custom Key Store respaldada por AWS CloudHSM</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Es correcto porque el <b>Custom Key Store</b> integra AWS KMS con <b>AWS CloudHSM</b>, proporcionando módulos de seguridad de hardware dedicados para operaciones criptográficas. </li>\n\t\t\t\t\t\t\t<li>Esta configuración asegura <b>baja latencia</b> y <b>alto rendimiento</b> para llamadas a la API de cifrado/descifrado, mientras sigue siendo completamente gestionada por AWS.</li>\n\t\t\t\t\t\t\t<li>Cumple con el requisito del examen de implementaciones seguras de IA con garantías de rendimiento sólidas.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Usar los endpoints KMS predeterminados de región única</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Es incorrecto porque aunque los endpoints KMS predeterminados proporcionan cifrado gestionado, no están optimizados para <b>alto rendimiento y baja latencia</b>. </li>\n\t\t\t\t\t\t\t<li>Pueden introducir cuellos de botella en cargas de trabajo que requieren operaciones criptográficas rápidas.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Utilizar AWS CloudHSM para gestionar claves criptográficas</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Es incorrecto porque usar <b>CloudHSM directamente</b> requiere gestionar la infraestructura y escalar manualmente. </li>\n\t\t\t\t\t\t\t<li>Esto contradice el requisito de una <b>solución completamente gestionada</b> mientras se sigue necesitando alto rendimiento. </li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Implementar cifrado del lado del cliente con tus propias claves gestionadas</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Es incorrecto porque el cifrado del lado del cliente traslada la responsabilidad a la capa de aplicación.</li>\n\t\t\t\t\t\t\t<li>No aprovecha las optimizaciones de AWS KMS e introduce complejidad en la gestión de claves, lo que puede reducir la escalabilidad y el rendimiento.</li>\n\t\t\t\t\t\t</ul>"
     },
     {
       "id": "22-28",
@@ -743,106 +468,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Entender la diferencia entre datos etiquetados y sin etiquetar es fundamental en aprendizaje automático. Los datos etiquetados contienen etiquetas o anotaciones definidas que indican el resultado esperado, lo cual es esencial para técnicas de aprendizaje supervisado como clasificación y regresión. Los datos sin etiquetar, que carecen de tales etiquetas, se usan en aprendizaje no supervisado para explorar estructuras inherentes o agrupar datos sin resultados predefinidos. Elegir el tipo de dato correcto es crítico para la efectividad de los modelos de aprendizaje automático desplegados en plataformas como AWS. </p>"
-    },
-    {
-      "id": "22-30",
-      "number": 30,
-      "text": "¿Cuál es el servicio AWS específicamente diseñado para convertir voz médica en texto y cumple con los estándares de la industria sanitaria como HIPAA?",
-      "options": [
-        {
-          "text": "Amazon Rekognition",
-          "correct": false
-        },
-        {
-          "text": "Amazon Polly",
-          "correct": false
-        },
-        {
-          "text": "Amazon Transcribe Medical",
-          "correct": true
-        },
-        {
-          "text": "Amazon Transcribe",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>Amazon Transcribe Medical es la solución ideal para aplicaciones de salud que requieren servicios de voz a texto, gracias a sus características integradas que abordan los requisitos de cumplimiento de la industria, incluida HIPAA. Está específicamente optimizado para entender la terminología médica, que es fundamental en entornos clínicos y médicos. Encontrás más detalles en la documentación oficial de AWS: <a href=\"https://aws.amazon.com/transcribe/medical/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/transcribe/medical/</a>\n\t\t\t\t\t\t</p>"
-    },
-    {
-      "id": "22-31",
-      "number": 31,
-      "text": "Como Ingeniero de Machine Learning responsable de la eficiencia de costos en despliegues de ML, necesitas usar AWS Cost Explorer para monitorear y gestionar los costos asociados con varias soluciones de machine learning. ¿Cuál sería la característica más beneficiosa de AWS Cost Explorer para analizar y rastrear los costos específicamente relacionados con tus soluciones de ML a lo largo del tiempo?",
-      "options": [
-        {
-          "text": "Configurar alertas de presupuesto para el uso general de AWS",
-          "correct": false
-        },
-        {
-          "text": "Etiquetar recursos de ML y filtrar datos de costos basándote en estas etiquetas",
-          "correct": true
-        },
-        {
-          "text": "Consultar el informe de Recomendaciones de Instancias EC2 para optimizar tamaños de instancia",
-          "correct": false
-        },
-        {
-          "text": "Utilizar los informes de Cobertura y Utilización de Instancias Reservadas",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>AWS Cost Explorer es una herramienta poderosa para gestionar y analizar costos de AWS. Para soluciones de ML, etiquetar recursos relacionados con machine learning y filtrarlos en Cost Explorer puede proporcionar información precisa sobre el gasto y el uso, ayudando a optimizar costos de manera efectiva. Este método se alinea con las mejores prácticas de gestión de costos en un contexto de ML, asegurando que los gastos se rastreen y controlen según cargas de trabajo específicas de ML.</p>"
-    },
-    {
-      "id": "22-32",
-      "number": 32,
-      "text": "Un equipo de desarrollo de IA debe asegurar que sus workflows de entrenamiento e inferencia de ML estén aislados de internet pública mientras mantienen acceso a los servicios de AWS necesarios. ¿Cuál sería la configuración de Amazon VPC más efectiva para cumplir este requisito?",
-      "options": [
-        {
-          "text": "Desplegar los modelos de ML en una subnet pública dentro de la VPC, confiando en network ACLs para filtrar tráfico.",
-          "correct": false
-        },
-        {
-          "text": "Configurar una VPC con un NAT gateway para todo el tráfico para asegurar que todos los datos permanezcan encriptados y seguros.",
-          "correct": false
-        },
-        {
-          "text": "Usar una VPC con un internet gateway y restringir acceso con reglas de security groups.",
-          "correct": false
-        },
-        {
-          "text": "Crear una VPC sin un internet gateway y usar VPC endpoints para los servicios de AWS.",
-          "correct": true
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>Al usar Amazon Virtual Private Cloud (VPC), específicamente sin un internet gateway, se aísla efectivamente el ambiente de red de internet pública. La integración de VPC endpoints facilita conexiones privadas y seguras a los servicios de AWS sin necesidad de que el tráfico pase por internet, lo cual es crucial para mantener una seguridad y privacidad robustas en workflows de ML.</p>"
-    },
-    {
-      "id": "22-33",
-      "number": 33,
-      "text": "Como Analista de Datos que trabaja con grandes volúmenes de datos de log almacenados en Amazon S3, te encargaron ejecutar consultas SQL ad-hoc para analizar estos datos. Usando Amazon Athena, ¿cuál opción te ayudará de manera más efectiva a gestionar costos mientras ejecutas estas consultas?",
-      "options": [
-        {
-          "text": "Habilitar la compresión automática de datos antes de hacer consultas con Athena.",
-          "correct": false
-        },
-        {
-          "text": "Aumentar la configuración de paralelismo de ejecución de consultas en Athena para acelerar las consultas y reducir costos.",
-          "correct": false
-        },
-        {
-          "text": "Particionar tus datos en función de columnas consultadas frecuentemente o marcos de tiempo para reducir la cantidad de datos escaneados por consulta.",
-          "correct": true
-        },
-        {
-          "text": "Usar Athena para almacenar datos frecuentemente accedidos en memoria para consultas más rápidas.",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>Amazon Athena es un servicio de consultas interactivas que permite a los usuarios analizar datos en Amazon S3 utilizando SQL estándar. Los costos en Athena están directamente correlacionados con la cantidad de datos que escanea para ejecutar una consulta. Por lo tanto, técnicas como particionar datos de manera efectiva reducen el tamaño del escaneo, disminuyendo costos mientras se mantiene el rendimiento de las consultas. La partición implica organizar estructuras de directorios y nombrar archivos de formas que lleven a subconjuntos de datos basados en patrones de acceso, lo que puede ser muy efectivo para grandes conjuntos de datos típicamente almacenados en formatos como CSV, JSON o Parquet.</p>"
     },
     {
       "id": "22-34",
@@ -920,31 +545,6 @@
       "explanationHtml": "<p>Amazon Comprehend es la mejor opción para detectar y eliminar automáticamente datos sensibles, como PII, de documentos o texto, utilizando procesamiento del lenguaje natural. Esta capacidad es esencial para cumplir con leyes de privacidad y mantener la confianza del cliente al procesar tickets de soporte que contienen información sensible. Referencia: [Características de Amazon Comprehend](<a href=\"https://aws.amazon.com/comprehend/features/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/comprehend/features/</a>) </p>"
     },
     {
-      "id": "22-37",
-      "number": 37,
-      "text": "Una empresa minorista quiere permitir que sus analistas de negocio creen dashboards basados en datos usando lenguaje natural en lugar de programación. ¿Cuál es el servicio de AWS que mejor admite este requisito al permitir que los analistas generen contenido visual e informes a través de consultas en lenguaje natural?",
-      "options": [
-        {
-          "text": "Amazon Comprehend",
-          "correct": false
-        },
-        {
-          "text": "Amazon SageMaker",
-          "correct": false
-        },
-        {
-          "text": "Amazon QuickSight",
-          "correct": true
-        },
-        {
-          "text": "Amazon Lex",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>Amazon QuickSight es la opción más adecuada para este escenario, ya que incluye la función 'Q', que admite directamente consultas en lenguaje natural para generar visualizaciones de datos. Este servicio simplifica el proceso de crear y compartir dashboards interactivos, haciéndolos accesibles para usuarios sin experiencia técnica, como analistas de negocio. Esto se alinea con el requisito de la empresa de permitir que los analistas construyan dashboards de BI a través de una interfaz simplificada y fácil de usar. Puedes encontrar más información sobre las capacidades de QuickSight en la documentación oficial de AWS: <a href=\"https://aws.amazon.com/quicksight/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/quicksight/</a>\n\t\t\t\t\t\t</p>"
-    },
-    {
       "id": "22-38",
       "number": 38,
       "text": "Una organización de salud está implementando modelos de machine learning para asistir en el diagnóstico de pacientes y la planificación del tratamiento. Requieren una herramienta que guíe el uso adecuado, evalúe riesgos de implementación y garantice el cumplimiento de regulaciones de salud. ¿Cuál es la herramienta de AWS que mejor satisface estos requisitos?",
@@ -968,31 +568,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Amazon SageMaker Model Cards es la mejor herramienta para este escenario porque ayuda a documentar y gestionar modelos de machine learning de manera efectiva. Al proporcionar información esencial sobre el propósito del modelo, su desempeño y directrices de uso, facilita la transparencia y ayuda con el cumplimiento de regulaciones de salud, algo crucial para implementaciones en entornos sensibles. Para más detalles sobre cómo se pueden utilizar Model Cards en salud y otros ámbitos regulados, consultá la documentación oficial de AWS.</p>"
-    },
-    {
-      "id": "22-39",
-      "number": 39,
-      "text": "Eres un Ingeniero de Machine Learning que busca mejorar las capacidades de escalado de tus deployments de modelos en AWS. Específicamente, te enfocas en garantizar una asignación óptima de recursos durante períodos de carga variable, particularmente para manejar eficientemente picos inesperados de demanda sin provisionar recursos excesivos durante períodos de baja demanda. ¿Cuál es la característica de servicio de AWS que te permite ajustar automáticamente los recursos necesarios para training e inference en función de la demanda actual?",
-      "options": [
-        {
-          "text": "AWS Auto Scaling",
-          "correct": true
-        },
-        {
-          "text": "AWS Lambda con escalado automático",
-          "correct": false
-        },
-        {
-          "text": "Amazon EC2 Auto Scaling",
-          "correct": false
-        },
-        {
-          "text": "Escalado manual en Amazon SageMaker",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>AWS Auto Scaling es el servicio óptimo para gestionar la escalabilidad de recursos, incluyendo tanto training como inference en machine learning. Ayuda a ajustar dinámicamente la capacidad para mantener un desempeño consistente y predecible, lo cual es crucial para manejar eficientemente variaciones de carga en aplicaciones de machine learning. AWS Auto Scaling es compatible con varios servicios de AWS, lo que lo hace ideal para escenarios donde tanto la potencia computacional como la eficiencia de costos son importantes.</p>"
     },
     {
       "id": "22-40",
@@ -1153,31 +728,6 @@
       "explanationHtml": "<p>Inference en tiempo real e inference por lotes cumplen propósitos distintos y son adecuados para casos de uso diferentes. Inference en tiempo real proporciona predicciones inmediatas con baja latencia, lo que la hace ideal para aplicaciones que requieren respuestas rápidas, como interacciones con clientes. Inference por lotes procesa grandes volúmenes de datos de una vez, adecuado para tareas donde los resultados inmediatos no son críticos, como reportes de fin de día. Comprender estas diferencias ayuda a elegir el enfoque correcto para necesidades operacionales específicas. Más información: <a href=\"https://aws.amazon.com/machine-learning/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/machine-learning/</a></p>"
     },
     {
-      "id": "22-46",
-      "number": 46,
-      "text": "Una empresa de retail busca integrar MLflow con Amazon SageMaker para gestionar sus experimentos de machine learning. ¿Cuál de las siguientes opciones describe mejor el rol de MLflow en esta integración?",
-      "options": [
-        {
-          "text": "Escalar automáticamente los recursos de computación",
-          "correct": false
-        },
-        {
-          "text": "Entrenar modelos de machine learning",
-          "correct": false
-        },
-        {
-          "text": "Proporcionar una interfaz gráfica para los científicos de datos",
-          "correct": false
-        },
-        {
-          "text": "Gestionar experimentos de machine learning",
-          "correct": true
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>MLflow es una plataforma de código abierto para gestionar el ciclo de vida completo del machine learning. Incluye funcionalidades para el seguimiento de experimentos, versionado de modelos e implementación, que pueden integrarse efectivamente con Amazon SageMaker. Esta integración permite que los equipos gestionen sus proyectos de machine learning de manera más eficiente, aprovechando las capacidades de SageMaker para construir, entrenar e implementar modelos de machine learning a escala. Esta combinación es ideal para equipos como los de empresas de retail que buscan optimizar sus flujos de trabajo de machine learning y mejorar la colaboración. </p>"
-    },
-    {
       "id": "22-47",
       "number": 47,
       "text": "Una empresa de medios quiere mejorar su proceso de moderación de contenido utilizando IA para detectar automáticamente contenido inapropiado en videos cargados por usuarios. Está considerando usar Amazon Rekognition por sus capacidades de análisis de video. ¿Cuál es la característica de Amazon Rekognition que deberían usar principalmente para identificar efectivamente contenido inapropiado en videos?",
@@ -1201,31 +751,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Para una empresa de medios que necesita moderar contenido cargado por usuarios, la característica de moderación de contenido de Amazon Rekognition es la mejor opción. Esta característica detecta automáticamente contenido inapropiado o inseguro dentro de imágenes y videos, ayudando a las empresas a mantener sus directrices de contenido y mejorar la experiencia del usuario filtrando contenido que podría no ser apropiado para todas las audiencias. Más información: <a href=\"https://aws.amazon.com/rekognition/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/rekognition/</a>\n\t\t\t\t\t\t</p>"
-    },
-    {
-      "id": "22-48",
-      "number": 48,
-      "text": "En el contexto del aislamiento del tráfico de red para modelos y flujos de trabajo de ML usando Amazon VPC, ¿cómo puedes asegurar mejor que tu carga de trabajo de machine learning esté debidamente aislada del resto del tráfico de red?",
-      "options": [
-        {
-          "text": "Usar una única VPC con configuración de grupo de seguridad predeterminada para todas las cargas de trabajo de ML.",
-          "correct": false
-        },
-        {
-          "text": "Crear subnets dedicadas dentro de una VPC y aplicar Network ACLs y grupos de seguridad estrictos específicos para las cargas de trabajo de ML.",
-          "correct": true
-        },
-        {
-          "text": "Conectar las instancias de carga de trabajo de ML directamente a internet para evitar la red interna de AWS.",
-          "correct": false
-        },
-        {
-          "text": "Asignar una dirección IP pública a cada instancia que ejecuta la carga de trabajo de ML.",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>Cuando se trata de aislar el tráfico de red para modelos y flujos de trabajo de ML en AWS, aprovechar Amazon VPC para crear un entorno de red virtual dedicado es fundamental. El uso de subnets dedicadas permite la colocación precisa de recursos, y los Network ACLs y grupos de seguridad estrictos ofrecen control granular y seguridad mejorada, crítica para operaciones de ML sensibles y cruciales. Este enfoque se alinea perfectamente con las mejores prácticas para desplegar aplicaciones sensibles en la nube, garantizando tanto aislamiento funcional como seguridad.</p>"
     },
     {
       "id": "22-49",
@@ -1301,31 +826,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>En el entorno de AWS usando Amazon Bedrock para tareas impulsadas por IA como generación de texto, el muestreo Top P es un parámetro de inferencia utilizado para controlar la variedad y calidad de la salida del modelo. Al ajustar Top P, los desarrolladores pueden gestionar qué tan amplia o estrecha es la selección de tokens posibles en cada paso de la generación de texto, según un umbral de probabilidad acumulada. Este método balancea la generación de salidas diversas mientras se adhiere a predicciones probablemente correctas, siendo así crucial para aplicaciones que requieren una mezcla de creatividad y precisión. Puedes encontrar más detalles en la documentación oficial de AWS sobre parámetros de inferencia del modelo.</p>"
-    },
-    {
-      "id": "22-52",
-      "number": 52,
-      "text": "Una empresa está considerando implementar AWS Key Management Service (KMS) para gestionar las claves de cifrado utilizadas en la seguridad de datos financieros sensibles en buckets de Amazon S3. ¿Cuál es una característica crítica de AWS KMS que garantiza la seguridad y el control sobre el uso de las claves de cifrado?",
-      "options": [
-        {
-          "text": "KMS proporciona almacenamiento ilimitado de claves de cifrado.",
-          "correct": false
-        },
-        {
-          "text": "KMS comparte automáticamente las claves de cifrado con todos los usuarios de AWS para facilitar el acceso.",
-          "correct": false
-        },
-        {
-          "text": "KMS te permite crear y controlar las claves de cifrado utilizadas para cifrar tus datos.",
-          "correct": true
-        },
-        {
-          "text": "KMS admite integración automática con todas las aplicaciones de terceros fuera de AWS para la gestión de claves.",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>AWS Key Management Service (KMS) es un servicio administrado que facilita la creación y control de las claves de cifrado utilizadas para cifrar tus datos. La principal ventaja de usar KMS es el control seguro que ofrece sobre el uso de estas claves, con gestión centralizada e integración con otros servicios de AWS. AWS KMS se integra con otros servicios de AWS para simplificar la aplicación de operaciones de seguridad en los datos protegidos. Más información: <a href=\"https://aws.amazon.com/kms/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/kms/</a>\n\t\t\t\t\t\t</p>"
     },
     {
       "id": "22-53",

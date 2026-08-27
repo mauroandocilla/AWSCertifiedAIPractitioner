@@ -1,7 +1,7 @@
 {
   "setNumber": 23,
   "sourceFile": "Practice_Set_23.html",
-  "questionCount": 50,
+  "questionCount": 40,
   "questions": [
     {
       "id": "23-1",
@@ -54,31 +54,6 @@
       "explanationHtml": "<p>AWS Identity and Access Management (IAM) allows the creation and management of AWS users and groups, and the use of permissions to allow and deny their access to AWS resources. IAM roles offer a way to delegate access with defined permissions, which is more secure and manageable compared to assigning permissions directly to users or sharing higher privilege credentials. This approach supports the AWS best practice of following the principle of least privilege, where users and roles are granted only the permissions necessary to perform their tasks. </p>"
     },
     {
-      "id": "23-3",
-      "number": 3,
-      "text": "A tech company is utilizing AWS Auto Scaling to manage their machine learning model training resources effectively as dataset sizes change. They need to maintain cost efficiency while ensuring that resource allocation scales automatically with the increasing complexity of training tasks. Which configuration will best meet the company‘s requirements?",
-      "options": [
-        {
-          "text": "Use a scheduled scaling action to add resources only during business hours regardless of system load or task requirements.",
-          "correct": false
-        },
-        {
-          "text": "Configure a target tracking scaling policy to adjust the number of EC2 instances based on average CPU utilization.",
-          "correct": true
-        },
-        {
-          "text": "Set a fixed number of EC2 instances for all training tasks regardless of their complexity or dataset size.",
-          "correct": false
-        },
-        {
-          "text": "Disable scaling and manually adjust EC2 instances depending on the monthly budget.",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>AWS Auto Scaling is designed to adjust the amount of computational resources automatically based on the current demand observed. By using a target tracking scaling policy, resources can be aligned to the load/complexity of tasks dynamically, which improves cost efficiency and system responsiveness. This approach particularly benefits environments with variable computational needs, such as machine learning model training where the required computational resources may fluctuate based on the size and complexity of the datasets and models. More info on AWS Auto Scaling can be found on the AWS official documentation: <a href=\"https://aws.amazon.com/autoscaling/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/autoscaling/</a>\n\t\t\t\t\t\t</p>"
-    },
-    {
       "id": "23-4",
       "number": 4,
       "text": "In the context of AI adoption in business operations, how do machine learning (ML) and artificial intelligence (AI) relate to each other, and what distinct roles do they play?",
@@ -127,31 +102,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>The correct answer is computer vision, which specifically pertains to the interpretation and understanding of image content to perform actions or make decisions, such as analyzing store shelf images to manage inventory effectively. Unlike mere image processing or enhancement, computer vision can analyze patterns, recognize objects, and make decisions based on the visual inputs, which directly supports the needs of the retail company in this scenario. </p>"
-    },
-    {
-      "id": "23-6",
-      "number": 6,
-      "text": "In the context of AWS Identity and Access Management (IAM), which option best ensures that permissions are securely and effectively managed when multiple teams in an organization need access to different AWS resources?",
-      "options": [
-        {
-          "text": "Disable IAM and use EC2 Security Groups exclusively to manage access.",
-          "correct": false
-        },
-        {
-          "text": "Grant each team administrative permissions to ensure full access.",
-          "correct": false
-        },
-        {
-          "text": "Use a single shared IAM user for all teams to simplify management.",
-          "correct": false
-        },
-        {
-          "text": "Use IAM roles and permissions boundaries to define and limit each team‘s access.",
-          "correct": true
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>IAM roles and permission boundaries provide a secure and scalable way to manage permissions for different teams within an organization. They help ensure that access to AWS services and resources can be precisely controlled following the principle of least privilege. Using these IAM features maintains operational efficiency and enhances security by limiting access rights to what is necessary for job roles. For more in-depth understanding, refer to the AWS documentation on IAM roles and permission boundaries: <a href=\"https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_boundaries.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_boundaries.html</a>\n\t\t\t\t\t\t</p>"
     },
     {
       "id": "23-7",
@@ -231,56 +181,6 @@
       ],
       "multiSelect": true,
       "explanationHtml": "<p>To ensure continuous model accuracy and compliance with regulatory standards, the financial services company should use Amazon SageMaker Model Monitor and Amazon Augmented AI (Amazon A2I). SageMaker Model Monitor continuously monitors machine learning models for data and model drift, while A2I facilitates human review of model predictions, ensuring high accuracy and compliance. More info: <a href=\"https://aws.amazon.com/sagemaker/model-monitor/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/sagemaker/model-monitor/</a>, <a href=\"https://aws.amazon.com/augmented-ai/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/augmented-ai/</a>\n\t\t\t\t\t\t</p>"
-    },
-    {
-      "id": "23-10",
-      "number": 10,
-      "text": "What is the definition of cloud computing as per AWS, especially valuable for a healthcare company considering migrating to the cloud?",
-      "options": [
-        {
-          "text": "Cloud computing is the process of using a single local server to store and process all data.",
-          "correct": false
-        },
-        {
-          "text": "Cloud computing involves manually managing physical data centers and networking hardware for data storage and processing.",
-          "correct": false
-        },
-        {
-          "text": "Cloud computing is the practice of using only open-source software for all computing needs.",
-          "correct": false
-        },
-        {
-          "text": "Cloud computing refers to the on-demand delivery of IT resources and applications via the internet with pay-as-you-go pricing.",
-          "correct": true
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>Cloud computing, as defined by AWS, offers on-demand delivery of compute power, database storage, applications, and other IT resources via the internet with pay-as-you-go pricing. This model allows healthcare companies to scale and adapt quickly to changing needs without the capital expense of owning and maintaining physical servers and datacenters. It‘s particularly beneficial for healthcare companies looking to enhance data management, improve scalability, and reduce operational costs. </p>"
-    },
-    {
-      "id": "23-11",
-      "number": 11,
-      "text": "An IoT company needs to deploy machine learning models on edge devices for real-time data processing. What is the most effective approach to achieve low-latency inference directly on these devices?",
-      "options": [
-        {
-          "text": "Use a centralized cloud-based model to perform inference, connecting edge devices through IoT protocols.",
-          "correct": false
-        },
-        {
-          "text": "Employ a hybrid model where initial data processing is done at the edge, and more complex analyses are handled in the cloud.",
-          "correct": false
-        },
-        {
-          "text": "Deploy a large language model (LLM) directly on the device for intensive real-time processing.",
-          "correct": false
-        },
-        {
-          "text": "Implement a lightweight model optimized for edge computing, ensuring minimal response time for inference.",
-          "correct": true
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>In scenarios requiring immediate data processing on IoT devices, such as predictive maintenance or anomaly detection, it is vital to use models that can operate efficiently within the constraints of edge computing. Lightweight models are best-suited for this environment as they provide the necessary speed and efficiency for real-time inference directly on devices without the high resource demands of larger models. Optimizing these models for edge deployment ensures they run efficiently, maintain low latency, and support quick decision-making directly on the edge devices. </p>"
     },
     {
       "id": "23-12",
@@ -433,31 +333,6 @@
       "explanationHtml": "<p>Generative AI is considered important in modern technological applications for its ability to autonomously generate novel and complex data outputs. This capability enhances creativity and innovation, making it highly valuable for industries such as media, entertainment, and beyond. Generative AI technologies can transform content creation by providing diverse and innovative approaches, which helps in crafting engaging and varied materials. </p>"
     },
     {
-      "id": "23-18",
-      "number": 18,
-      "text": "As an organization that handles sensitive data, you need to ensure the security and compliance of your data encryption keys using AWS services. Which AWS Key Management Service (KMS) feature is best for automatically rotating your customer master keys (CMKs) for enhanced security?",
-      "options": [
-        {
-          "text": "Creating duplicate CMKs in different regions for backup and rotation purposes.",
-          "correct": false
-        },
-        {
-          "text": "Enabling AWS CloudHSM integration for direct management of CMKs.",
-          "correct": false
-        },
-        {
-          "text": "Implementing AWS Lambda functions to manually rotate keys periodically.",
-          "correct": false
-        },
-        {
-          "text": "Using AWS KMS automatic key rotation feature.",
-          "correct": true
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>AWS Key Management Service (KMS) provides an automatic key rotation feature for customer master keys (CMKs), which helps in managing the lifecycle of encryption keys and enhances security by automatically rotating keys every 365 days. This feature helps in adhering to best security practices and compliance requirements without manual intervention, making it ideal for organizations handling sensitive and regulated data. More details can be found in the AWS documentation: <a href=\"https://docs.aws.amazon.com/kms/latest/developerguide/rotate-keys.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/kms/latest/developerguide/rotate-keys.html</a>\n\t\t\t\t\t\t</p>"
-    },
-    {
       "id": "23-19",
       "number": 19,
       "text": "An e-commerce company is evaluating Amazon Bedrock to enhance its AI capabilities for personalized product recommendations and customer support chatbots. The team wants to understand Amazon Bedrock‘s unique features, including customization and integration capabilities. Which statements correctly describe Amazon Bedrock‘s functionality? (Choose two.)",
@@ -587,56 +462,6 @@
       "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p><b>Amazon Rekognition</b></p>\n\t\t\t\t\t\t<p>Amazon Rekognition is AWS’s service for computer vision (CV) tasks. It perfectly matches the requirement by offering: </p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<b>Pre-trained Models:</b>&nbsp;It provides a wide array of readily usable APIs for CV tasks like object detection (for inventory), person detection, and suspicious activity monitoring (for security), which directly address the use cases.\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<b>Customization Ability:</b>&nbsp;Through Amazon Rekognition Custom Labels, the service allows you to train a custom CV model by using your own labeled images. This “fine-tunes” a pre-trained model for your specific needs (e.g., identifying a unique store product or a specific security scenario) without needing to build a model from scratch.\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p><b>Amazon SageMaker</b></p>\n\t\t\t\t\t\t<p>While Amazon SageMaker is a powerful service for building, training, and deploying <em>any</em>&nbsp;kind of machine learning model, including custom computer vision models, it is not primarily a service of&nbsp;<b>pre-trained models</b>. Using SageMaker for this task would require the company to build or find a model architecture, prepare extensive datasets, and manage the entire training lifecycle themselves. This is far more complex and resource-intensive than leveraging a specialized, pre-trained service like Rekognition that also offers customization. </p>\n\t\t\t\t\t\t<p><b>Amazon DeepRacer</b></p>\n\t\t\t\t\t\t<p>Amazon DeepRacer is a service focused exclusively on reinforcement learning for the specific purpose of autonomous racing. It is a fun, educational tool for learning ML concepts but is not designed for general-purpose computer vision tasks like inventory management or store security. It does not provide pre-trained CV models for these business applications. </p>\n\t\t\t\t\t\t<p><b>Amazon Textract</b></p>\n\t\t\t\t\t\t<p>Amazon Textract is a highly specialized service for <b>document text analysis</b>. Its pre-trained models are designed to extract text, handwriting, and data from scanned documents, PDFs, and forms. It is not a general-purpose computer vision service and cannot be used for visual monitoring, object detection in a store, or security improvement through video analysis. </p>"
     },
     {
-      "id": "23-24",
-      "number": 24,
-      "text": "A data analytics team is looking to leverage AWS Glue for their ETL needs. They have large, varied datasets that need cleansing and transformation before analysis. Which feature of AWS Glue should be primarily used to automatically discover the properties of the data, classify it, and suggest schemas?",
-      "options": [
-        {
-          "text": "AWS Glue Data Catalog",
-          "correct": true
-        },
-        {
-          "text": "AWS Glue Studio",
-          "correct": false
-        },
-        {
-          "text": "AWS Glue Workflow",
-          "correct": false
-        },
-        {
-          "text": "AWS Glue Job Script",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p><b>AWS Glue Data Catalog</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>The <b>Data Catalog</b> is the central metadata repository in AWS Glue. </li>\n\t\t\t\t\t\t\t<li>It automatically discovers data properties, classifies datasets, and suggests schemas using <b>crawlers</b>. </li>\n\t\t\t\t\t\t\t<li>This enables analysts to query and transform data efficiently, as the catalog provides a structured view of the datasets. </li>\n\t\t\t\t\t\t\t<li>Matches the exam requirement: <em>“automatically discover the properties of the data, classify it, and suggest schemas.”</em>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p><b>AWS Glue Studio</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Provides a <b>visual interface</b> to create, run, and monitor ETL jobs. </li>\n\t\t\t\t\t\t\t<li>Useful for building and managing jobs, but it does not perform <b>automatic schema discovery</b>. </li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>AWS Glue Workflow</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Used to <b>orchestrate multiple ETL jobs</b> and manage dependencies. </li>\n\t\t\t\t\t\t\t<li>Focuses on job sequencing and automation, not schema discovery or classification. </li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>AWS Glue Job Script</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Refers to the <b>PySpark or Scala scripts</b> that define ETL transformations. </li>\n\t\t\t\t\t\t\t<li>These scripts execute transformations but do not automatically classify or suggest schemas. </li>\n\t\t\t\t\t\t</ul>"
-    },
-    {
-      "id": "23-25",
-      "number": 25,
-      "text": "You are a Data Analyst working on optimizing performance reports using AWS services. You plan to utilize Amazon QuickSight for data visualization and analysis. Given the need for interactive reports that can be accessed by multiple stakeholders, what is the most effective feature of Amazon QuickSight that should be leveraged?",
-      "options": [
-        {
-          "text": "Embedding dashboards into applications",
-          "correct": true
-        },
-        {
-          "text": "Use of SPICE to handle large datasets effectively",
-          "correct": false
-        },
-        {
-          "text": "Scheduled email reports from QuickSight",
-          "correct": false
-        },
-        {
-          "text": "QuickSight ML Insights for predictive analytics",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Embedding dashboards into applications</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b>Correct because:</b>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>Amazon QuickSight allows dashboards to be <b>embedded directly into applications, portals, or websites</b>, enabling multiple stakeholders to access interactive reports seamlessly. </li>\n\t\t\t\t\t\t\t\t\t<li>This feature supports <b>secure, scalable sharing</b> without requiring each stakeholder to log into QuickSight separately. </li>\n\t\t\t\t\t\t\t\t\t<li>It is the most effective way to deliver <b>interactive, real-time insights</b> to a broad audience, aligning perfectly with the scenario’s requirement. </li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Use of SPICE to handle large datasets effectively</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because while <b>SPICE (Super-fast, Parallel, In-memory Calculation Engine)</b> improves performance and scalability for large datasets, it is focused on <b>data processing efficiency</b>, not stakeholder access or interactive sharing. </li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Scheduled email reports from QuickSight</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because scheduled email reports provide <b>static snapshots</b> of data, not interactive dashboards. </li>\n\t\t\t\t\t\t\t<li>This does not meet the requirement for <b>interactive reports accessible by multiple stakeholders</b>. </li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>QuickSight ML Insights for predictive analytics</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because ML Insights provide <b>predictive analytics and anomaly detection</b>, which are valuable for advanced analysis but do not directly address the need for <b>interactive stakeholder access</b>. </li>\n\t\t\t\t\t\t</ul>"
-    },
-    {
       "id": "23-26",
       "number": 26,
       "text": "A technology company is implementing an AI solution to enhance customer support using Retrieval-Augmented Generation (RAG) with Amazon Bedrock. This application requires a database that can perform fast index lookups and similarity searches in a large dataset to effectively retrieve and rank relevant documents based on user input. Which AWS database service should the company utilize?",
@@ -660,56 +485,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>The Amazon OpenSearch Service is the most suitable choice for an AI application requiring fast retrieval and relevance-based ranking of documents. This service not only supports large-scale full-text search capabilities but also offers features like real-time indexing and fine-tuned control over relevance scoring, which are vital for Retrieval-Augmented Generation applications. This ensures that the deployed solution is efficient in providing the most relevant context-aware responses based on user queries. For more insights on Amazon OpenSearch Service capabilities, visit: <a href=\"https://aws.amazon.com/opensearch-service/the-elk-stack/what-is-opensearch/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/opensearch-service/the-elk-stack/what-is-opensearch/</a>\n\t\t\t\t\t\t</p>"
-    },
-    {
-      "id": "23-27",
-      "number": 27,
-      "text": "In context of AWS AI implementations, what concern might the admissions committee at an Ivy League university have if they discover that applicants are employing generative AI tools to craft their application essays?",
-      "options": [
-        {
-          "text": "High costs associated with AI tools",
-          "correct": false
-        },
-        {
-          "text": "Inadequacy of technological tools",
-          "correct": false
-        },
-        {
-          "text": "Originality and authenticity of submissions",
-          "correct": true
-        },
-        {
-          "text": "Usage of outdated AI technologies",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>The use of generative AI in crafting application essays presents a significant challenge in terms of maintaining academic integrity. This scenario particularly touches upon the ethical use of AI, ensuring submissions are genuine representations of an applicant‘s capabilities. The Ivy League university‘s admissions committee aims to ward off potential misrepresentations by ensuring all essays are authored by the applicants themselves, without AI intervention. </p>"
-    },
-    {
-      "id": "23-28",
-      "number": 28,
-      "text": "A technology company is leveraging AI and ML services on AWS to enhance their product recommendations and predict user behaviors. They need a service to provide optimize guidance for their AWS deployments, focusing on cost, performance, and security. Which AWS service should they use to obtain automated recommendations for their existing resources?",
-      "options": [
-        {
-          "text": "AWS Trusted Advisor",
-          "correct": true
-        },
-        {
-          "text": "AWS Audit Manager",
-          "correct": false
-        },
-        {
-          "text": "AWS Config",
-          "correct": false
-        },
-        {
-          "text": "AWS CloudTrail",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>AWS Trusted Advisor is the most appropriate service for the scenario described as it provides insights and recommendations that help improve the efficiency of AWS deployments. This aligns with the company's goal to enhance their AI environments in terms of cost, performance, and security. Trusted Advisor checks help identify excess capacity, underused resources, and security loopholes, which are crucial for deploying efficient and secure AI solutions. </p>"
     },
     {
       "id": "23-29",
@@ -1185,31 +960,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Amazon Polly‘s Neural Text-to-Speech (NTTS) service provides a selection of lifelike voices and supports multiple languages which makes it ideal for applications such as audiobooks where high-quality, natural sounding speech is crucial. NTTS voices use deep learning to produce speech that can convey various emotions and speaking styles, enhancing the listener‘s experience. </p>"
-    },
-    {
-      "id": "23-48",
-      "number": 48,
-      "text": "A fintech company aims to enhance its development cycle by adopting cloud solutions for rapid innovation and efficient deployment. Which AWS service primarily facilitates the accelerated development, testing, and launching of applications with less management overhead?",
-      "options": [
-        {
-          "text": "Amazon EC2",
-          "correct": false
-        },
-        {
-          "text": "Amazon S3",
-          "correct": false
-        },
-        {
-          "text": "AWS Lambda",
-          "correct": false
-        },
-        {
-          "text": "AWS Elastic Beanstalk",
-          "correct": true
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p>AWS Elastic Beanstalk supports rapid development, testing, and deployment of applications by handling various aspects of deployment automation, such as environment provisioning, scaling, and monitoring, thus freeing developers to focus on their code. It is specifically tailored to accelerate the deployment cycles in the cloud, making it an ideal choice for companies looking to innovate quickly with minimal infrastructure management. </p>"
     },
     {
       "id": "23-49",

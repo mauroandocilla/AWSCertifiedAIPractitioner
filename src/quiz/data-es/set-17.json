@@ -1,7 +1,7 @@
 {
   "setNumber": 17,
   "sourceFile": "Practice_Set_17.html",
-  "questionCount": 30,
+  "questionCount": 29,
   "questions": [
     {
       "id": "17-1",
@@ -556,31 +556,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>Fine-tuning del modelo con datos de usuarios actualizados</p>\n\t\t\t\t\t\t<p>Para asegurar que las recomendaciones de productos generadas por un modelo de IA generativa se mantengan relevantes y precisas con el tiempo, el modelo de IA debe someterse a fine-tuning utilizando datos de usuarios actualizados. El fine-tuning es un proceso donde un modelo ya pre-entrenado se reentrena con datos nuevos o se ajusta en función de información nueva. Esto permite que el modelo se adapte a cambios en las preferencias de usuarios, tendencias y comportamiento. Al incorporar interacciones recientes de usuarios y retroalimentación en el entrenamiento del modelo, las empresas pueden asegurar que las recomendaciones se mantengan altamente personalizadas y relevantes. El fine-tuning regular con datos actualizados es esencial para mantener la precisión de los resultados generados por IA, especialmente en entornos dinámicos como el comercio electrónico, donde el comportamiento de usuarios cambia frecuentemente.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>Los modelos de IA generativa pueden funcionar sin actualizaciones de datos</p>\n\t\t\t\t\t\t<p>Los modelos de IA generativa no mantienen su precisión ni relevancia sin actualizaciones de datos. Con el tiempo, si el comportamiento o las preferencias de los usuarios cambian, un modelo entrenado con datos desactualizados producirá resultados menos efectivos. Por lo tanto, las actualizaciones de datos son cruciales para mantener la precisión.</p>\n\t\t\t\t\t\t<p>Los modelos corrigen automáticamente cualquier sesgo durante la generación</p>\n\t\t\t\t\t\t<p>Los modelos de IA generativa no tienen la capacidad inherente de detectar y corregir sesgos automáticamente. La mitigación de sesgos requiere técnicas específicas durante el entrenamiento, la preparación de datos o el procesamiento posterior. Por lo tanto, esta no es una capacidad de los modelos de IA generativa.</p>\n\t\t\t\t\t\t<p>Los modelos de IA generativa no requieren evaluación continua</p>\n\t\t\t\t\t\t<p>La evaluación continua es necesaria para monitorear el desempeño de los modelos de IA generativa. Sin evaluación, es difícil determinar si las recomendaciones del modelo siguen siendo relevantes, precisas e imparciales. Por lo tanto, la evaluación continua es esencial.</p>"
-    },
-    {
-      "id": "17-23",
-      "number": 23,
-      "text": "Sos responsable de un modelo de IA que procesa información bancaria sensible. Después del despliegue, notás patrones inusuales en las predicciones del modelo, lo que indica un posible ataque de prompt injection. ¿Cuál es el servicio o característica de AWS que puede ayudar a detectar y responder a esta amenaza en tiempo real?",
-      "options": [
-        {
-          "text": "Amazon Macie para escanear la salida del modelo.",
-          "correct": false
-        },
-        {
-          "text": "AWS Identity and Access Management (IAM) para restringir el acceso al modelo.",
-          "correct": false
-        },
-        {
-          "text": "AWS Config para rastrear cambios en los modelos de IA.",
-          "correct": false
-        },
-        {
-          "text": "Amazon GuardDuty para monitorear el tráfico de red y detectar comportamiento sospechoso.",
-          "correct": true
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>Amazon GuardDuty para monitorear el tráfico de red y detectar comportamiento sospechoso.</p>\n\t\t\t\t\t\t<p>Amazon GuardDuty es un servicio de detección de amenazas que monitorea continuamente tus cuentas de AWS y cargas de trabajo para detectar actividades maliciosas y comportamientos no autorizados. Utiliza machine learning, detección de anomalías e inteligencia de amenazas integrada para identificar posibles amenazas. En el contexto de un modelo de IA que procesa información bancaria sensible, GuardDuty puede ayudar a detectar patrones inusuales en el tráfico de red o llamadas a API que puedan indicar un ataque de prompt injection u otras amenazas de seguridad. Al analizar fuentes de datos como VPC Flow Logs, registros de eventos de AWS CloudTrail y registros DNS, GuardDuty puede proporcionar alertas en tiempo real sobre actividades sospechosas. Esto te permite responder rápidamente a posibles amenazas, protegiendo tus datos sensibles y manteniendo la integridad de tu modelo de IA.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>Amazon Macie para escanear la salida del modelo.</p>\n\t\t\t\t\t\t<p>Amazon Macie está diseñado para descubrir y proteger datos sensibles almacenados en Amazon S3. No monitorea las salidas del modelo en tiempo real ni detecta ataques de prompt injection.</p>\n\t\t\t\t\t\t<p>AWS Identity and Access Management (IAM) para restringir el acceso al modelo.</p>\n\t\t\t\t\t\t<p>Si bien IAM controla los permisos de acceso, no proporciona capacidades de detección de amenazas en tiempo real ni de monitoreo necesarias para detectar ataques de prompt injection.</p>\n\t\t\t\t\t\t<p>AWS Config para rastrear cambios en los modelos de IA.</p>\n\t\t\t\t\t\t<p>AWS Config realiza un seguimiento de los cambios de configuración en los recursos de AWS, pero no monitorea las predicciones del modelo en tiempo real ni detecta amenazas de seguridad como ataques de prompt injection.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://aws.amazon.com/guardduty\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/guardduty</a>\n\t\t\t\t\t\t</p>"
     },
     {
       "id": "17-24",

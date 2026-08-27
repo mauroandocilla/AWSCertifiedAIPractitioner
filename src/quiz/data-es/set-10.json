@@ -1,7 +1,7 @@
 {
   "setNumber": 10,
   "sourceFile": "Practice_Set_10.html",
-  "questionCount": 59,
+  "questionCount": 51,
   "questions": [
     {
       "id": "10-1",
@@ -77,56 +77,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>Selección de modelo</p>\n\t\t\t\t\t\t<p>La selección de modelo es la etapa donde la institución elige la arquitectura de modelo y los algoritmos más apropiados que cumplan con sus requisitos específicos, como escalabilidad con el aumento de datos y baja latencia para detección de fraude en tiempo real. Al enfocarse en la selección de modelo, pueden evaluar diferentes modelos para encontrar uno que procese eficientemente grandes volúmenes de datos y entregue predicciones rápidas, lo cual es crítico en escenarios de detección de fraude donde las respuestas oportunas son esenciales. Seleccionar el modelo correcto asegura que el sistema pueda manejar el crecimiento en volumen de datos sin comprometer el desempeño.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>Selección de datos</p>\n\t\t\t\t\t\t<p>La selección de datos implica elegir los conjuntos de datos apropiados para entrenar y validar el modelo. Si bien tener datos de alta calidad y relevantes es crucial para el desempeño del modelo, la selección de datos no aborda directamente las preocupaciones relacionadas con la capacidad del modelo para escalar con el aumento de datos o garantizar baja latencia. Esta etapa se enfoca en qué datos se utilizan, no en cómo el modelo procesa los datos.</p>\n\t\t\t\t\t\t<p>Fine-tuning</p>\n\t\t\t\t\t\t<p>El fine-tuning es el proceso de adaptar un modelo pre-entrenado a una tarea específica entrenándolo además con datos específicos de esa tarea. Aunque el fine-tuning puede mejorar la precisión de un modelo para una aplicación particular, no aborda principalmente problemas de escalabilidad o latencia. El fine-tuning ajusta los parámetros del modelo para mejor desempeño en una tarea pero no cambia fundamentalmente la capacidad del modelo para manejar conjuntos de datos más grandes o reducir la latencia de predicción.</p>\n\t\t\t\t\t\t<p>Feedback</p>\n\t\t\t\t\t\t<p>El feedback implica recopilar información de usuarios o datos de desempeño del sistema después de la implementación para mejorar el modelo de forma iterativa. Aunque incorporar feedback es importante para la mejora continua, no aborda directamente las preocupaciones iniciales de seleccionar un modelo que escale y proporcione baja latencia. Los mecanismos de feedback son más sobre refinamiento posterior a la implementación que sobre la selección inicial de modelo para características de desempeño.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://docs.aws.amazon.com/sagemaker/latest/dg/algorithms-choose.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/sagemaker/latest/dg/algorithms-choose.html</a>\n\t\t\t\t\t\t</p>"
-    },
-    {
-      "id": "10-4",
-      "number": 4,
-      "text": "Tu sistema de IA está recopilando datos en tiempo real desde dispositivos IoT para su análisis. Para garantizar cumplimiento normativo e integridad del sistema, necesitas monitorear continuamente los flujos de datos en busca de anomalías e irregularidades. ¿Cuál es la estrategia de gobernanza de datos más relevante para esta tarea?",
-      "options": [
-        {
-          "text": "Data Monitoring",
-          "correct": true
-        },
-        {
-          "text": "Data Lifecycle Management",
-          "correct": false
-        },
-        {
-          "text": "Data Retention",
-          "correct": false
-        },
-        {
-          "text": "Data Logging",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>Data Monitoring</p>\n\t\t\t\t\t\t<p>Data Monitoring implica observar continuamente flujos de datos, transacciones o actividades para detectar anomalías, irregularidades o patrones sospechosos en tiempo real. Para un sistema de IA que recopila datos en tiempo real desde dispositivos IoT, el monitoreo garantiza que los datos siendo analizados sigan siendo precisos, seguros y cumplan con las regulaciones relevantes. Al identificar comportamientos inusuales o posibles brechas, data monitoring ayuda a mantener la integridad del sistema y asegura respuestas oportunas a cualquier problema que surja, mejorando la confiabilidad general del sistema de IA.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>Data Logging</p>\n\t\t\t\t\t\t<p>Data Logging registra el acceso a datos y las acciones realizadas sobre ellos, pero se enfoca en rastrear actividades pasadas en lugar de monitorear anomalías en tiempo real.</p>\n\t\t\t\t\t\t<p>Data Lifecycle Management</p>\n\t\t\t\t\t\t<p>Data Lifecycle Management rige cómo se manejan los datos a lo largo de su ciclo de vida, desde su creación hasta su eliminación. Aunque es importante para el cumplimiento normativo, no se enfoca en la detección de anomalías en tiempo real.</p>\n\t\t\t\t\t\t<p>Data Retention</p>\n\t\t\t\t\t\t<p>Data Retention define cuánto tiempo se almacenan los datos antes de ser archivados o eliminados. Garantiza cumplimiento con regulaciones de almacenamiento pero no aborda el monitoreo en tiempo real de flujos de datos.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://docs.aws.amazon.com/data-exchange/latest/userguide/monitoring-overview.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/data-exchange/latest/userguide/monitoring-overview.html</a>\n\t\t\t\t\t\t</p>"
-    },
-    {
-      "id": "10-5",
-      "number": 5,
-      "text": "Tu organización está desarrollando un sistema de IA para mantenimiento predictivo en la industria manufacturera. Para asegurar que el sistema cumpla con los protocolos de gobierno, el equipo debe realizar revisiones periódicas de cumplimiento con estándares de la industria. ¿Cuál servicio de AWS ayudaría mejor a gestionar los requisitos de cumplimiento y auditoría?",
-      "options": [
-        {
-          "text": "Amazon SageMaker Clarify",
-          "correct": false
-        },
-        {
-          "text": "Amazon Macie",
-          "correct": false
-        },
-        {
-          "text": "AWS Audit Manager",
-          "correct": true
-        },
-        {
-          "text": "AWS Config",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p><strong>Correcta</strong></p>\n\t\t\t\t\t\t<p>AWS Audit Manager</p>\n\t\t\t\t\t\t<p>AWS Audit Manager ayuda a automatizar el proceso de recopilación de evidencia y la gestión de cumplimiento con estándares de la industria y regulaciones. Permite que los equipos monitoreen continuamente, evalúen y documenten el cumplimiento de su sistema con los protocolos de gobierno relevantes. Para un sistema de IA en la industria manufacturera, AWS Audit Manager se puede usar para simplificar las auditorías al vincular recursos de AWS a estándares específicos de la industria y generar reportes detallados. Esto asegura que la organización pueda cumplir fácilmente con los requisitos regulatorios y mantener cumplimiento continuo con esfuerzo manual mínimo.</p>\n\t\t\t\t\t\t<p><strong>Incorrecta</strong></p>\n\t\t\t\t\t\t<p>AWS Config</p>\n\t\t\t\t\t\t<p>AWS Config ayuda a monitorear y evaluar configuraciones de recursos de AWS, pero se enfoca en gestión de configuración más que en auditoría integral de cumplimiento.</p>\n\t\t\t\t\t\t<p>Amazon Macie</p>\n\t\t\t\t\t\t<p>Amazon Macie es un servicio de seguridad que ayuda a identificar y proteger datos sensibles. No está diseñado para gestionar auditorías ni cumplimiento.</p>\n\t\t\t\t\t\t<p>Amazon SageMaker Clarify</p>\n\t\t\t\t\t\t<p>Amazon SageMaker Clarify se usa para detectar sesgos en modelos de machine learning y mejorar la interpretabilidad, pero no se enfoca en gestión de auditoría ni cumplimiento.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://aws.amazon.com/audit-manager\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/audit-manager</a>\n\t\t\t\t\t\t</p>"
     },
     {
       "id": "10-6",
@@ -608,31 +558,6 @@
       "explanationHtml": "<p>El riesgo más directo y significativo al que se expone la empresa cuando su modelo de IA para servicio al cliente genera respuestas con datos fabricados es la <b>Pérdida de confianza del cliente</b>.</p>\n\t\t\t\t\t\t<p>Esto es por qué:</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li><b>Pérdida de confianza del cliente:</b> Si los clientes reciben información incorrecta del modelo de IA y actúan en función de ella, lo que puede resultar en consecuencias negativas o necesidades insatisfechas, la confianza que tienen en la empresa se erosionará. Esto puede llevar a una disminución de la lealtad del cliente, comentarios negativos de boca en boca y, en última instancia, a un declive en el negocio.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>Veamos por qué las otras opciones son menos directas como riesgo principal en este escenario:</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>Alucinaciones:</b> Aunque \"alucinaciones\" es el término técnico para cuando los modelos de IA generan información fabricada, es la <em>causa</em> del problema, no el riesgo principal al que se enfrenta la empresa por estas fabricaciones.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>Resultados del modelo sesgados:</b> Los resultados sesgados del modelo se refieren a cuando el modelo favorece consistentemente ciertos grupos demográficos o perspectivas de forma injusta. Si bien este es un problema grave, el escenario describe específicamente la generación de <em>datos fabricados</em>, que es un tipo de error diferente. Un modelo puede alucinar sin estar inherentemente sesgado en el sentido tradicional.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>Infracción de propiedad intelectual:</b> Este riesgo típicamente surge cuando un modelo de IA utiliza material protegido por derechos de autor sin permiso en sus datos de entrenamiento o contenido generado. Si bien es posible en algunas aplicaciones de IA, no es el riesgo directo e inmediato que surge de un modelo de servicio al cliente que proporciona información factual fabricada.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>En resumen, el peligro central de un modelo de IA para servicio al cliente que proporciona información incorrecta e inventada es el daño que causa a la relación de la empresa con sus clientes, lo que resulta en una pérdida de confianza.</b>\n\t\t\t\t\t\t</p>"
     },
     {
-      "id": "10-25",
-      "number": 25,
-      "text": "Un equipo de desarrollo está construyendo una aplicación de IA en AWS y necesita asegurar que cada usuario tenga el nivel de acceso apropiado según su rol en la organización. ¿Cuál es la característica de AWS que ayuda a implementar least privilege definiendo permisos basados en roles?",
-      "options": [
-        {
-          "text": "AWS IAM Role",
-          "correct": true
-        },
-        {
-          "text": "AWS IAM User",
-          "correct": false
-        },
-        {
-          "text": "AWS IAM Access Key",
-          "correct": false
-        },
-        {
-          "text": "AWS IAM Group",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p><b>AWS IAM Role</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t\t\t<span>Un </span><b><span>IAM Role</span></b><span> es una identidad que puedes crear en tu cuenta con políticas de permisos específicas.</span> <span>A diferencia de un usuario de IAM, un IAM role </span><b><span>no está permanentemente asociado a una persona</span></b><span>.</span> <span>En su lugar, es una identidad que cualquier persona (una persona, una aplicación o un servicio de AWS) puede </span><b><span>asumir</span></b><span> para obtener credenciales de seguridad temporales.</span>\n\t\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>Este mecanismo es fundamental para el principio de <b>least privilege</b> porque: </p>\n\t\t\t\t\t\t\t\t\t\t<ol start=\"1\">\n\t\t\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t<b><span>Credenciales Temporales:</span></b><span> El usuario o servicio solo tiene los permisos otorgados por el role durante una sesión limitada.</span>\n\t\t\t\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t\t\t<p><b>Acceso Basado en Roles:</b> Puedes definir un único conjunto preciso de permisos (el \"least privilege\") para una función de trabajo específica (por ejemplo, un \"ML Training Role\" o \"App Deployment Role\") y otorgarlo a cualquiera que necesite desempeñar esa tarea, sin darles permisos permanentes y excesivos.</p>\n\t\t\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t\t</ol>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>Incorrecto</p>\n\t\t\t\t\t\t<p>AWS IAM User</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<span>Un </span><b><span>IAM User</span></b><span> es una entidad permanente e identidad de largo plazo que representa a una persona o aplicación dentro de tu cuenta de AWS.</span> Aunque puedes adjuntar políticas de permisos a un usuario, el usuario es la <b>identidad en sí misma</b>. <span>Los roles (Opción A) son el mecanismo principal utilizado para otorgar </span><b><span>permisos temporales, específicos de una tarea y con least privilege</span></b><span> a usuarios o servicios que de otro modo podrían tener permisos permanentes diferentes o más altos.</span>\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>AWS IAM Access Key</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<span>Un </span><b><span>IAM Access Key</span></b><span> (que consta de un Access Key ID y una Secret Access Key) es una </span><b><span>credencial</span></b><span> utilizada para realizar solicitudes programáticas a AWS.</span> No es una identidad ni un contenedor de permisos; es simplemente la clave utilizada para autenticar un <b>usuario de IAM</b> o un conjunto de <b>credenciales de role temporal</b>. <span>Los permisos se definen mediante la política asociada en el usuario o rol.</span>\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>AWS IAM Group</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<span>Un </span><b><span>IAM Group</span></b><span> es una colección de usuarios de IAM.</span> Se utiliza para especificar permisos para múltiples usuarios simultáneamente (por ejemplo, todos los \"AI Developers\" están en un grupo y comparten los mismos permisos base). Aunque los grupos ayudan a simplificar la gestión, los <b>permisos en sí mismos</b> (la encarnación del least privilege) se definen en las políticas adjuntas al rol o usuario, no en el grupo en sí. <span>El </span><b><span>Role</span></b><span> es la característica diseñada para otorgar permisos temporales y específicos de una tarea.</span>\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>"
-    },
-    {
       "id": "10-26",
       "number": 26,
       "text": "Un equipo de desarrollo está construyendo una aplicación de IA que debe cumplir con requisitos rigurosos de seguridad y cumplimiento normativo. Necesitan una herramienta que proporcione reportes de seguridad y cumplimiento normativo, incluyendo reportes SOC, bajo demanda. ¿Cuál servicio de AWS puede proporcionar estos reportes?",
@@ -656,31 +581,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p><b>Respuesta Correcta</b></p>\n\t\t\t\t\t\t<p><b>AWS Artifact</b></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>AWS Artifact</b>&nbsp;es el recurso central de AWS para <b>información relacionada con cumplimiento normativo</b>. Está diseñado específicamente para proporcionar acceso bajo demanda a documentos de seguridad y cumplimiento de AWS, como <b>reportes SOC (SOC 1, SOC 2, SOC 3)</b>, reportes PCI y certificaciones ISO. Cuando un equipo de desarrollo necesita estos reportes oficiales para demostrar cumplimiento normativo de su aplicación de IA ante auditores o stakeholders, AWS Artifact es el servicio directo y correcto a utilizar.\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p><b>Respuestas Incorrectas</b></p>\n\t\t\t\t\t\t<p><b>Amazon Inspector</b></p>\n\t\t\t\t\t\t<p>Amazon Inspector es un <b>servicio automatizado de gestión de vulnerabilidades</b>&nbsp;que escanea instancias EC2 e imágenes de contenedores para identificar vulnerabilidades de software y exposición de red. Es una herramienta para mejorar tu propia postura de seguridad, no para recuperar reportes de cumplimiento interno de AWS como SOC. </p>\n\t\t\t\t\t\t<p><b>AWS Trusted Advisor</b></p>\n\t\t\t\t\t\t<p>AWS Trusted Advisor es un servicio automatizado que proporciona <b>orientación en tiempo real y recomendaciones de mejores prácticas</b>&nbsp;para optimizar tu entorno de AWS en términos de costo, rendimiento, seguridad, tolerancia a fallos y límites de servicio. No proporciona reportes de cumplimiento oficiales auditados por terceros. </p>\n\t\t\t\t\t\t<p><b>AWS Config</b></p>\n\t\t\t\t\t\t<p>AWS Config es un servicio para <b>auditar y evaluar la configuración de tus recursos de AWS</b>. Te ayuda a garantizar que las configuraciones de tus recursos cumplan con políticas internas y regulaciones externas al rastrear cambios de configuración y evaluarlos contra reglas. Sin embargo, no proporciona los reportes de cumplimiento oficiales emitidos por auditores sobre la plataforma AWS en sí. </p>"
-    },
-    {
-      "id": "10-27",
-      "number": 27,
-      "text": "Tu empresa está desarrollando un sistema de IA para procesamiento de datos financieros. Para asegurar que el sistema sea seguro y cumpla con los requisitos de gobierno corporativo necesarios, el equipo necesita identificar un estándar internacional que ofrezca directrices para la gestión de la seguridad de la información. ¿Cuál es el estándar que debería adoptar la empresa?",
-      "options": [
-        {
-          "text": "SOC 2",
-          "correct": false
-        },
-        {
-          "text": "ISO 27001",
-          "correct": true
-        },
-        {
-          "text": "GDPR",
-          "correct": false
-        },
-        {
-          "text": "HIPAA",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>ISO 27001</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p>ISO/IEC 27001 es un estándar reconocido internacionalmente que proporciona un marco integral para establecer, implementar, mantener y mejorar continuamente un Sistema de Gestión de Seguridad de la Información (ISMS). Aborda directamente el gobierno corporativo, la gestión de riesgos y los controles de seguridad, lo que lo hace muy adecuado para proteger sistemas de IA que procesan datos financieros sensibles.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>SOC 2</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p>SOC 2 es un estándar de auditoría enfocado en organizaciones de servicios y sus controles relacionados con seguridad, disponibilidad y confidencialidad. No es un estándar internacional ni proporciona un marco de gestión formal y reconocido globalmente como ISO 27001.</p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>GDPR</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p>GDPR es una regulación de protección de datos enfocada en la privacidad de datos personales y los derechos individuales dentro de la Unión Europea. Aunque es importante para cumplimiento normativo, no es un estándar para gestionar el gobierno corporativo de seguridad de la información en una organización.</p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>HIPAA</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p>HIPAA es una regulación estadounidense específica para proteger información de salud. No es aplicable al procesamiento general de datos financieros ni proporciona un marco universal de gestión de seguridad de la información.</p>"
     },
     {
       "id": "10-28",
@@ -731,31 +631,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p><b>Amazon SageMaker</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Es la opción correcta porque <b>Amazon SageMaker</b> es el servicio completamente administrado de AWS para construir, entrenar e implementar modelos de machine learning.</li>\n\t\t\t\t\t\t\t<li>Permite desplegar modelos como <b>endpoints</b> que se pueden acceder a través de <b>REST APIs</b> para predicciones en tiempo real.</li>\n\t\t\t\t\t\t\t<li>Esto satisface directamente el requisito de alojar el modelo y hacerlo accesible a través de una API.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p><b>Amazon Lex</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Es incorrecto porque <b>Lex</b> se utiliza para construir interfaces conversacionales (chatbots y asistentes de voz).</li>\n\t\t\t\t\t\t\t<li>No aloja modelos arbitrarios de ML para predicciones.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>Amazon Transcribe</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Es incorrecto porque <b>Transcribe</b> es un servicio de conversión de voz a texto.</li>\n\t\t\t\t\t\t\t<li>Está especializado en transcripción de audio, no en la implementación general de modelos de ML.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>Amazon Translate</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Es incorrecto porque <b>Translate</b> es un servicio de traducción automática.</li>\n\t\t\t\t\t\t\t<li>Convierte texto entre idiomas, pero no proporciona una plataforma para alojar modelos de ML personalizados.</li>\n\t\t\t\t\t\t</ul>"
-    },
-    {
-      "id": "10-30",
-      "number": 30,
-      "text": "Un proyecto de IA generativa requiere almacenar y recuperar datos complejos multidimensionales como embeddings y vectores. ¿Cuál servicio de AWS proporciona una solución de base de datos administrada optimizada para este propósito?",
-      "options": [
-        {
-          "text": "Amazon RDS",
-          "correct": false
-        },
-        {
-          "text": "AWS Lambda",
-          "correct": false
-        },
-        {
-          "text": "Amazon Neptune",
-          "correct": true
-        },
-        {
-          "text": "Amazon DocumentDB",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p><b>Amazon Neptune</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li><strong>Correcto</strong> porque <b>Amazon Neptune</b> es un servicio de base de datos de grafos completamente administrado, optimizado para manejar datos altamente conectados y multidimensionales.</li>\n\t\t\t\t\t\t\t<li>Soporta <b>property graphs y modelos de datos RDF</b>, que son ideales para embeddings, relaciones y estructuras tipo vectores.</li>\n\t\t\t\t\t\t\t<li>En casos de uso de IA generativa, Neptune puede almacenar y consultar embeddings de manera eficiente, habilitando búsqueda semántica y sistemas de recomendación.</li>\n\t\t\t\t\t\t\t<li>Esto lo convierte en el servicio de AWS adecuado para gestionar datos complejos multidimensionales.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p><b>Amazon RDS</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrecto porque RDS es un <b>servicio de base de datos relacional</b> optimizado para datos estructurados en formato tabular.</li>\n\t\t\t\t\t\t\t<li>No está diseñado para almacenar o consultar embeddings o vectores de manera eficiente.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>AWS Lambda</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrecto porque Lambda es un <b>servicio de cómputo sin servidor</b>, no una base de datos.</li>\n\t\t\t\t\t\t\t<li>Puede procesar datos, pero no puede almacenar ni gestionar embeddings o vectores directamente.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>Amazon DocumentDB</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrecto porque DocumentDB es una <b>base de datos NoSQL de documentos</b> compatible con MongoDB.</li>\n\t\t\t\t\t\t\t<li>Está optimizada para documentos tipo JSON, no para estructuras de datos de grafos o vectores.</li>\n\t\t\t\t\t\t</ul>"
     },
     {
       "id": "10-31",
@@ -881,31 +756,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>Retención de datos</p>\n\t\t\t\t\t\t<p>La retención de datos se refiere a las políticas y prácticas que rigen cuánto tiempo se almacenan los datos antes de ser eliminados o archivados. Cuando una empresa debe cumplir con regulaciones sobre cuánto tiempo se pueden mantener los datos, está abordando la retención de datos. Diferentes regulaciones, como el GDPR, frecuentemente establecen plazos específicos para conservar ciertos tipos de datos. Tener una política clara de retención de datos ayuda a las organizaciones a evitar sanciones asegurando que eliminen o archiven los datos después del período requerido, manteniendo el cumplimiento y protegiendo la privacidad del cliente.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>Observación de datos</p>\n\t\t\t\t\t\t<p>La observación de datos implica monitorear y rastrear datos en tiempo real para entender patrones o comportamientos. Aunque es útil para obtener información en tiempo real, no aborda directamente el tiempo durante el cual se almacenan los datos.</p>\n\t\t\t\t\t\t<p>Residencia de datos</p>\n\t\t\t\t\t\t<p>La residencia de datos se refiere a dónde se almacenan los datos geográficamente para cumplir con regulaciones locales. No está relacionada con cuánto tiempo se mantienen los datos.</p>\n\t\t\t\t\t\t<p>Cifrado de datos</p>\n\t\t\t\t\t\t<p>El cifrado de datos se trata de proteger la información convirtiéndola en un formato ilegible, protegiéndola del acceso no autorizado. No aborda la duración del almacenamiento ni la gestión del ciclo de vida de los datos.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://aws.amazon.com/compliance/data-privacy\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/compliance/data-privacy</a>\n\t\t\t\t\t\t</p>"
-    },
-    {
-      "id": "10-36",
-      "number": 36,
-      "text": "Eres un científico de datos que trabaja en una organización que necesita gestionar datos de múltiples proveedores terceros para análisis de mercado. Tu tarea es encontrar un servicio que te permita suscribirte y gestionar conjuntos de datos de proveedores externos dentro del ecosistema de AWS. ¿Cuál servicio de AWS elegirías para lograr este objetivo?",
-      "options": [
-        {
-          "text": "Amazon QuickSight",
-          "correct": false
-        },
-        {
-          "text": "Amazon EMR",
-          "correct": false
-        },
-        {
-          "text": "Amazon Redshift",
-          "correct": false
-        },
-        {
-          "text": "AWS Data Exchange",
-          "correct": true
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>AWS Data Exchange</p>\n\t\t\t\t\t\t<p>AWS Data Exchange es el servicio ideal para suscribirse y gestionar conjuntos de datos de proveedores terceros. Te permite descubrir de forma segura, suscribirte y utilizar datos externos directamente en el ecosistema de AWS. Data Exchange proporciona una amplia variedad de fuentes de datos, incluyendo conjuntos financieros, demográficos y de análisis de mercado, que son cruciales para la investigación de mercado. El servicio también garantiza una fácil integración con servicios de AWS, permitiendo que los datos se utilicen sin problemas para análisis e insights.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>Amazon Redshift</p>\n\t\t\t\t\t\t<p>Amazon Redshift es un servicio de almacenamiento de datos que es excelente para almacenar y consultar grandes conjuntos de datos, pero no está diseñado para suscribirse o gestionar conjuntos de datos de terceros.</p>\n\t\t\t\t\t\t<p>Amazon QuickSight</p>\n\t\t\t\t\t\t<p>Amazon QuickSight es una herramienta de inteligencia empresarial utilizada para visualizar y analizar datos. Ayuda a generar reportes e insights, pero no gestiona suscripciones a datos externos.</p>\n\t\t\t\t\t\t<p>Amazon EMR</p>\n\t\t\t\t\t\t<p>Amazon EMR es un servicio para procesar grandes cantidades de datos utilizando frameworks de big data como Apache Hadoop y Spark. No es apropiado para suscribirse a conjuntos de datos de terceros.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://aws.amazon.com/data-exchange\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/data-exchange</a>\n\t\t\t\t\t\t</p>"
     },
     {
       "id": "10-37",
@@ -1056,31 +906,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>Amazon Neptune</p>\n\t\t\t\t\t\t<p>Amazon Neptune es un servicio de base de datos de grafos completamente administrado, optimizado para almacenar y navegar datos altamente conectados, como grafos de conocimiento. Soporta modelos de grafos populares como Property Graph y RDF de W3C, junto con sus lenguajes de consulta respectivos, Apache TinkerPop Gremlin y SPARQL. Para un equipo de investigación que necesita una base de datos altamente escalable y optimizada para grafos para almacenar embeddings de un modelo de machine learning, Neptune es una opción ideal. Está diseñado para manejar miles de millones de relaciones y puede procesar consultas con latencia de milisegundos. La arquitectura de Neptune le permite escalar sin interrupciones, garantizando alto rendimiento incluso cuando el conjunto de datos crece. Además, se integra bien con otros servicios de AWS, lo que facilita crear e implementar aplicaciones complejas que detecten relaciones entre entidades.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>Amazon RDS for MySQL</p>\n\t\t\t\t\t\t<p>Amazon RDS for MySQL es un servicio de base de datos relacional administrado, optimizado para datos estructurados y cargas de trabajo transaccionales. No soporta nativamente modelos de datos de grafos, lo que lo hace menos adecuado para almacenar y consultar relaciones complejas en grafos de conocimiento.</p>\n\t\t\t\t\t\t<p>AWS Lambda</p>\n\t\t\t\t\t\t<p>AWS Lambda es un servicio de computación sin servidores que te permite ejecutar código sin aprovisionar servidores. No es un servicio de base de datos y no puede usarse para almacenar datos como embeddings ni gestionar relaciones en una estructura de grafo.</p>\n\t\t\t\t\t\t<p>Amazon DynamoDB</p>\n\t\t\t\t\t\t<p>Amazon DynamoDB es un servicio de base de datos NoSQL rápido y flexible para rendimiento de milisegundos de un dígito en cualquier escala. Aunque destaca en almacenamiento de clave-valor y documentos, no está optimizado para consultas de grafos ni para almacenar relaciones complejas inherentes a los grafos de conocimiento.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://aws.amazon.com/neptune\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/neptune</a>\n\t\t\t\t\t\t</p>"
-    },
-    {
-      "id": "10-43",
-      "number": 43,
-      "text": "Te encargan desplegar una aplicación de IA generativa que requiere ejecutar múltiples contenedores orquestados en un cluster. ¿Cuál servicio de AWS proporciona una solución Kubernetes administrada para ejecutar aplicaciones containerizadas?",
-      "options": [
-        {
-          "text": "AWS Glue DataBrew",
-          "correct": false
-        },
-        {
-          "text": "Amazon Elastic Container Service (Amazon ECS)",
-          "correct": false
-        },
-        {
-          "text": "Amazon Elastic Kubernetes Service (Amazon EKS)",
-          "correct": true
-        },
-        {
-          "text": "Amazon S3 Glacier",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>Amazon Elastic Kubernetes Service (Amazon EKS)</p>\n\t\t\t\t\t\t<p>Amazon EKS es un servicio Kubernetes completamente administrado que simplifica la ejecución de Kubernetes en AWS sin necesidad de gestionar la infraestructura subyacente. Proporciona una solución escalable para desplegar, administrar y escalar aplicaciones containerizadas, lo que la hace ideal para orquestar múltiples contenedores en un cluster. EKS se integra perfectamente con servicios de AWS como IAM para seguridad y Elastic Load Balancing para manejar tráfico, garantizando que tus aplicaciones de IA generativa se ejecuten eficientemente y se escalen según sea necesario. Kubernetes también permite flexibilidad en la gestión de aplicaciones containerizadas con herramientas como Helm, haciendo que EKS sea perfecta para cargas de trabajo de IA.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>AWS Glue DataBrew</p>\n\t\t\t\t\t\t<p>AWS Glue DataBrew es una herramienta de preparación de datos diseñada para limpiar y normalizar datos para análisis y machine learning. No está relacionada con ejecutar u orquestar aplicaciones containerizadas.</p>\n\t\t\t\t\t\t<p>Amazon S3 Glacier</p>\n\t\t\t\t\t\t<p>Amazon S3 Glacier es un servicio de almacenamiento para archivar y retención de datos a largo plazo con bajo costo. No administra ni orquesta contenedores ni maneja aplicaciones en tiempo real.</p>\n\t\t\t\t\t\t<p>Amazon Elastic Container Service (Amazon ECS)</p>\n\t\t\t\t\t\t<p>Amazon ECS es otro servicio de AWS para ejecutar aplicaciones containerizadas, pero no es una solución Kubernetes. Proporciona orquestación de contenedores utilizando Docker en lugar de Kubernetes. Si necesitas Kubernetes, EKS es la opción correcta.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://aws.amazon.com/eks\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/eks</a>\n\t\t\t\t\t\t</p>"
     },
     {
       "id": "10-44",
@@ -1335,35 +1160,6 @@
       ],
       "multiSelect": true,
       "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>Transformer-based large language models (LLMs)</p>\n\t\t\t\t\t\t<p>Los LLMs basados en Transformers son fundamentales para crear sistemas de IA que generen respuestas de soporte al cliente. Estos modelos son altamente efectivos para entender y generar texto similar al humano en varios idiomas. Utilizan mecanismos de atención para procesar largas secuencias de palabras, lo que les permite captar el contexto y significado de la consulta de entrada. Al entrenar estos modelos con conjuntos de datos multilingües, el sistema puede generar respuestas precisas en diferentes idiomas, adaptándose a las necesidades de clientes diversos. LLMs como GPT y BERT se utilizan ampliamente para este propósito.</p>\n\t\t\t\t\t\t<p>Tokens y embeddings</p>\n\t\t\t\t\t\t<p>Los tokens y embeddings son conceptos fundamentales en IA generativa. Un token representa una unidad de texto, como una palabra o un carácter, mientras que los embeddings son representaciones vectoriales de estos tokens en un espacio continuo. Los embeddings ayudan al sistema de IA a entender el significado y las relaciones entre palabras. Al utilizar tokens y embeddings, el sistema puede convertir el lenguaje en forma numérica que el modelo puede procesar. Esto es crucial para generar respuestas coherentes y conscientes del contexto, independientemente del idioma que se utilice.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>Sistemas basados en reglas</p>\n\t\t\t\t\t\t<p>Los sistemas basados en reglas se basan en lógica predefinida y no se adaptan a variaciones de idioma o consultas complejas. Son rígidos y menos efectivos para respuestas de soporte al cliente dinámicas o multilingües.</p>\n\t\t\t\t\t\t<p>Multi-modal models</p>\n\t\t\t\t\t\t<p>Los multi-modal models procesan múltiples tipos de datos (como imágenes, texto o sonido) simultáneamente. Aunque son útiles en ciertos contextos, no son necesarios para generar respuestas de soporte al cliente basadas en texto.</p>\n\t\t\t\t\t\t<p>Algoritmos de machine learning clásicos</p>\n\t\t\t\t\t\t<p>Los algoritmos de machine learning clásicos, como árboles de decisión o SVMs, no están diseñados para generación de texto o comprensión del lenguaje. Son más adecuados para datos estructurados y no manejan tareas de lenguaje natural con la misma eficiencia que los modelos basados en Transformers.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://aws.amazon.com/what-is/generative-ai\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/what-is/generative-ai</a>\n\t\t\t\t\t\t</p>"
-    },
-    {
-      "id": "10-54",
-      "number": 54,
-      "text": "Una empresa de videojuegos quiere usar IA generativa para crear automáticamente modelos 3D realistas de personajes y entornos, acelerando el proceso de desarrollo. ¿Cuál de los siguientes métodos de IA generativa sería el mejor para este caso de uso? (Selecciona DOS.)",
-      "options": [
-        {
-          "text": "Reinforcement learning para crear entornos de juego",
-          "correct": false
-        },
-        {
-          "text": "Generative Adversarial Networks (GANs) para crear modelos 3D",
-          "correct": true
-        },
-        {
-          "text": "Algoritmos de clustering para generación de modelos",
-          "correct": false
-        },
-        {
-          "text": "Diffusion models para generar imágenes de alta calidad",
-          "correct": true
-        },
-        {
-          "text": "Modelos de lenguaje basados en Transformer para generación de texto",
-          "correct": false
-        }
-      ],
-      "multiSelect": true,
-      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>Diffusion models para generar imágenes de alta calidad</p>\n\t\t\t\t\t\t<p>Los diffusion models son un tipo de IA generativa que pueden producir imágenes detalladas y de alta calidad, lo que los hace adecuados para generar texturas 3D realistas y componentes visuales en desarrollo de videojuegos. Aunque estos modelos se utilizan más comúnmente para generar imágenes 2D, pueden adaptarse para generar componentes que contribuyan a la creación de modelos 3D, como texturas para personajes y entornos, lo que resulta en resultados visualmente realistas.</p>\n\t\t\t\t\t\t<p>Generative Adversarial Networks (GANs) para crear modelos 3D</p>\n\t\t\t\t\t\t<p>Las Generative Adversarial Networks (GANs) son muy efectivas para crear modelos 3D realistas. Los GANs consisten en dos redes neuronales (un generador y un discriminador) que trabajan juntas para producir datos realistas. En el contexto del desarrollo de videojuegos, los GANs pueden generar modelos 3D detallados de personajes, paisajes y entornos aprendiendo de grandes conjuntos de datos de activos 3D. Este método acelera el proceso de desarrollo automatizando la creación de modelos complejos y realistas.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>Reinforcement learning para crear entornos de juego</p>\n\t\t\t\t\t\t<p>El reinforcement learning es útil para entrenar agentes de IA que interactúen con entornos, pero no está diseñado para generar modelos 3D o personajes. Se enfoca en la toma de decisiones y el aprendizaje a través de acciones, no en la generación de contenido.</p>\n\t\t\t\t\t\t<p>Modelos de lenguaje basados en Transformer para generación de texto</p>\n\t\t\t\t\t\t<p>Los modelos de lenguaje basados en Transformer están optimizados para generación y comprensión de texto. Aunque son poderosos para sistemas de diálogo o narrativas de juegos, no son adecuados para generar modelos 3D o contenido visual.</p>\n\t\t\t\t\t\t<p>Algoritmos de clustering para generación de modelos</p>\n\t\t\t\t\t\t<p>Los algoritmos de clustering agrupan puntos de datos similares, pero no se utilizan para generar nuevos modelos 3D. No tienen la capacidad de crear nuevos activos, lo que los hace irrelevantes para este caso de uso.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://aws.amazon.com/blogs/machine-learning/safe-image-generation-and-diffusion-models-with-amazon-ai-content-moderation-services\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/blogs/machine-learning/safe-image-generation-and-diffusion-models-with-amazon-ai-content-moderation-services</a></p>\n\t\t\t\t\t\t<p><a href=\"https://aws.amazon.com/what-is/gan\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/what-is/gan</a>\n\t\t\t\t\t\t</p>"
     },
     {
       "id": "10-55",

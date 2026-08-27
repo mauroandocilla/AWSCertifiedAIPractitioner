@@ -1,7 +1,7 @@
 {
   "setNumber": 14,
   "sourceFile": "Practice_Set_14.html",
-  "questionCount": 59,
+  "questionCount": 57,
   "questions": [
     {
       "id": "14-1",
@@ -1216,31 +1216,6 @@
       "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>Los agents optimizan flujos de trabajo seleccionando y orquestando los modelos apropiados para cada paso en la cadena de tareas.</p>\n\t\t\t\t\t\t<p>En Amazon Bedrock, los agents juegan un papel clave en la optimización de flujos de trabajo seleccionando y orquestando los modelos apropiados para cada paso en una tarea multi-paso como seguimiento de inventario, optimización de rutas y programación de entregas. Garantiza que el modelo correcto se utilice en el momento correcto, coordinando cada tarea en el orden adecuado para lograr el resultado deseado. Esta orquestación permite que la empresa de logística automatice procesos complejos y gestione tareas de manera eficiente sin intervención manual.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>Los agents manejan secuencialmente cada tarea sin necesidad de bases de datos externas.</p>\n\t\t\t\t\t\t<p>Los agents gestionan flujos de trabajo y orquestan tareas, pero dependen de bases de datos y sistemas externos para el manejo de datos. No reemplazan la necesidad de bases de datos.</p>\n\t\t\t\t\t\t<p>Los agents almacenan todos los datos requeridos para las tareas, eliminando la necesidad de sistemas externos.</p>\n\t\t\t\t\t\t<p>Los agents no almacenan datos. Orquestan tareas aprovechando sistemas y modelos externos para procesar los datos, pero el almacenamiento de datos se gestiona por separado.</p>\n\t\t\t\t\t\t<p>Los agents priorizan la recolección de datos sobre otros pasos para mejorar la eficiencia.</p>\n\t\t\t\t\t\t<p>Los agents están diseñados para gestionar flujos de trabajo, asegurando que cada paso se ejecute en el orden correcto. No priorizan un paso sobre otro a menos que se programe explícitamente para hacerlo.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://docs.aws.amazon.com/bedrock/latest/userguide/agents-how.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/bedrock/latest/userguide/agents-how.html</a>\n\t\t\t\t\t\t</p>"
     },
     {
-      "id": "14-49",
-      "number": 49,
-      "text": "Una aplicación de IA generativa que estás desarrollando necesita acceso rápido y escalable a datos estructurados para recomendaciones en tiempo real. ¿Cuál servicio de AWS ofrece una base de datos NoSQL administrada con latencia en milisegundos de un solo dígito, ideal para este escenario?",
-      "options": [
-        {
-          "text": "Amazon Redshift",
-          "correct": false
-        },
-        {
-          "text": "Amazon DynamoDB",
-          "correct": true
-        },
-        {
-          "text": "Amazon RDS",
-          "correct": false
-        },
-        {
-          "text": "Amazon Neptune",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>Amazon DynamoDB</p>\n\t\t\t\t\t\t<p>Amazon DynamoDB es un servicio de base de datos NoSQL completamente administrado que ofrece acceso rápido y escalable a datos estructurados con latencia en milisegundos de un solo dígito. Es ideal para aplicaciones en tiempo real como recomendaciones, videojuegos e IoT, donde el rendimiento y la velocidad son críticos. DynamoDB se escala automáticamente para manejar grandes volúmenes de datos y admite tanto modelos de datos clave-valor como de documentos, lo que lo hace flexible para diversos casos de uso. Su almacenamiento en caché en memoria con DynamoDB Accelerator (DAX) mejora aún más el rendimiento para cargas de trabajo con muchas lecturas, lo que lo hace perfecto para aplicaciones de IA generativa que necesitan acceso rápido a datos para recomendaciones en tiempo real.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>Amazon RDS</p>\n\t\t\t\t\t\t<p>Amazon RDS es un servicio de base de datos relacional administrado diseñado para datos SQL estructurados. Aunque es potente para sistemas transaccionales, no está tan optimizado para acceso rápido y en tiempo real como DynamoDB para datos NoSQL.</p>\n\t\t\t\t\t\t<p>Amazon Redshift</p>\n\t\t\t\t\t\t<p>Amazon Redshift es un servicio de almacén de datos optimizado para análisis de datos a gran escala. Es más adecuado para consultas complejas en grandes conjuntos de datos en lugar del acceso a datos de baja latencia en tiempo real que requieren aplicaciones como motores de recomendación.</p>\n\t\t\t\t\t\t<p>Amazon Neptune</p>\n\t\t\t\t\t\t<p>Amazon Neptune es un servicio de base de datos de gráficos administrado diseñado para consultas complejas de gráficos, no optimizado para acceso a datos NoSQL escalable y de alta velocidad. Es más adecuado para casos de uso que implican relaciones entre puntos de datos, como gráficos de conocimiento.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://aws.amazon.com/dynamodb\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/dynamodb</a>\n\t\t\t\t\t\t</p>"
-    },
-    {
       "id": "14-50",
       "number": 50,
       "text": "Una empresa minorista implementó un foundation model para generar recomendaciones de productos personalizadas. Ahora quieren evaluar si el modelo está contribuyendo a un aumento en las ventas. ¿Cuál es el objetivo empresarial que están evaluando principalmente?",
@@ -1314,31 +1289,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>Model re-training</p>\n\t\t\t\t\t\t<p>Model re-training es el paso siguiente más apropiado cuando un modelo de aprendizaje automático implementado muestra un rendimiento decreciente debido a cambios en los patrones de datos subyacentes, como el cambio de comportamiento de los clientes. Con el tiempo, la distribución de datos puede cambiar, lo que lleva a \"model drift\" o una reducción en la capacidad del modelo para hacer predicciones precisas. Para abordar esto, deben recopilarse nuevos datos que reflejen el comportamiento actual, y el modelo debe re-entrenarse usando este conjunto de datos actualizado. Esto garantiza que el modelo se adapte a nuevas tendencias y continúe funcionando bien en producción. El re-entrenamiento regular es crucial para mantener la relevancia del modelo en entornos dinámicos.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>Feature engineering</p>\n\t\t\t\t\t\t<p>Feature engineering implica crear o modificar características para mejorar el rendimiento del modelo. Si bien esto puede ser importante para mejorar un modelo inicialmente, en el caso de un deterioro de rendimiento debido a data drift, re-entrenar el modelo con datos actualizados es más apropiado que revisar feature engineering.</p>\n\t\t\t\t\t\t<p>Data collection</p>\n\t\t\t\t\t\t<p>Aunque la recopilación de datos es una parte importante del proceso antes del re-entrenamiento, el deterioro del rendimiento aquí sugiere que el enfoque debe estar en re-entrenar el modelo usando datos recién recopilados, en lugar de solo recopilar datos.</p>\n\t\t\t\t\t\t<p>Hyperparameter tuning</p>\n\t\t\t\t\t\t<p>Hyperparameter tuning implica optimizar la configuración del algoritmo de aprendizaje para mejorar el rendimiento. Sin embargo, como el problema aquí está relacionado con cambios en los patrones de datos, re-entrenar con datos actualizados es más apropiado que solo ajustar hyperparameters.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://docs.aws.amazon.com/machine-learning/latest/dg/retraining-models-on-new-data.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/machine-learning/latest/dg/retraining-models-on-new-data.html</a>\n\t\t\t\t\t\t</p>"
-    },
-    {
-      "id": "14-53",
-      "number": 53,
-      "text": "Tu empresa utiliza Amazon SageMaker para desarrollar modelos de machine learning. El equipo quiere asegurar que los modelos y conjuntos de datos cumplan con los estándares organizacionales e industriales. ¿Cuál servicio de AWS te ayudaría a automatizar las verificaciones de cumplimiento y los marcos de gobernanza de los modelos?",
-      "options": [
-        {
-          "text": "Amazon Inspector",
-          "correct": false
-        },
-        {
-          "text": "AWS Audit Manager",
-          "correct": true
-        },
-        {
-          "text": "AWS Glue",
-          "correct": false
-        },
-        {
-          "text": "AWS Secrets Manager",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>AWS Audit Manager</p>\n\t\t\t\t\t\t<p>AWS Audit Manager está diseñado para ayudarte a automatizar el proceso de recopilación de evidencia para auditorías y cumplimiento con estándares industriales y regulaciones. Te permite crear y gestionar marcos de cumplimiento, como políticas organizacionales, monitoreando continuamente y registrando actividades en tu entorno de AWS, incluyendo servicios como Amazon SageMaker. Con AWS Audit Manager, puedes asegurar que tus modelos de machine learning y conjuntos de datos cumplan con los marcos de gobernanza necesarios, proporcionando verificaciones de cumplimiento automatizadas e informes listos para auditoría.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>Amazon Inspector</p>\n\t\t\t\t\t\t<p>Amazon Inspector es un servicio de evaluación de seguridad que ayuda a identificar vulnerabilidades en recursos de AWS, como instancias de EC2, pero no maneja verificaciones de cumplimiento ni marcos de gobernanza para modelos de IA.</p>\n\t\t\t\t\t\t<p>AWS Secrets Manager</p>\n\t\t\t\t\t\t<p>AWS Secrets Manager ayuda a almacenar y gestionar secretos como claves de API o credenciales de bases de datos. No automatiza verificaciones de cumplimiento ni marcos de gobernanza para modelos de machine learning.</p>\n\t\t\t\t\t\t<p>AWS Glue</p>\n\t\t\t\t\t\t<p>AWS Glue es un servicio ETL (extracción, transformación, carga) completamente administrado que ayuda a preparar y transformar datos para análisis. No maneja automatización de cumplimiento ni gobernanza.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://docs.aws.amazon.com/audit-manager/latest/userguide/what-is.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/audit-manager/latest/userguide/what-is.html</a>\n\t\t\t\t\t\t</p>"
     },
     {
       "id": "14-54",

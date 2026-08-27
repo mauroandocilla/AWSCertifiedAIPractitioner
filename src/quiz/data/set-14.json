@@ -1,7 +1,7 @@
 {
   "setNumber": 14,
   "sourceFile": "Practice_Set_14.html",
-  "questionCount": 59,
+  "questionCount": 57,
   "questions": [
     {
       "id": "14-1",
@@ -1216,31 +1216,6 @@
       "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p>Agents optimize workflows by selecting and orchestrating the appropriate models for each step in the task chain.</p>\n\t\t\t\t\t\t<p>In Amazon Bedrock, agents play a key role in optimizing workflows by selecting and orchestrating the appropriate models for each step in a multi-step task like inventory tracking, route optimization, and delivery scheduling. It ensures that the right model is used at the right time, coordinating each task in the correct order to achieve the desired outcome. This orchestration allows the logistics company to automate complex processes and manage tasks efficiently without manual intervention.</p>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p>Agents will sequentially handle each task without the need for external databases.</p>\n\t\t\t\t\t\t<p>Agents manage workflows and orchestrate tasks, but it still rely on external databases and systems for data handling. They do not replace the need for databases.</p>\n\t\t\t\t\t\t<p>Agents store all required data for tasks, eliminating the need for external systems.</p>\n\t\t\t\t\t\t<p>Agents do not store data. It orchestrates tasks by leveraging external systems and models to process the data, but data storage is handled separately.</p>\n\t\t\t\t\t\t<p>Agents prioritize data collection over other steps to improve efficiency.</p>\n\t\t\t\t\t\t<p>Agents is designed to manage workflows, ensuring each step is carried out in the correct order. It does not prioritize one step over another unless explicitly programmed to do so.</p>\n\t\t\t\t\t\t<p>References:</p>\n\t\t\t\t\t\t<p><a href=\"https://docs.aws.amazon.com/bedrock/latest/userguide/agents-how.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/bedrock/latest/userguide/agents-how.html</a>\n\t\t\t\t\t\t</p>"
     },
     {
-      "id": "14-49",
-      "number": 49,
-      "text": "A generative AI application you‘re developing needs fast and scalable access to structured data for real-time recommendations. Which AWS service offers a managed NoSQL database with single-digit millisecond latency, ideal for this scenario?",
-      "options": [
-        {
-          "text": "Amazon Redshift",
-          "correct": false
-        },
-        {
-          "text": "Amazon DynamoDB",
-          "correct": true
-        },
-        {
-          "text": "Amazon RDS",
-          "correct": false
-        },
-        {
-          "text": "Amazon Neptune",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p>Amazon DynamoDB</p>\n\t\t\t\t\t\t<p>Amazon DynamoDB is a fully managed NoSQL database service that offers fast and scalable access to structured data with single-digit millisecond latency. It is ideal for real-time applications such as recommendations, gaming, and IoT, where performance and speed are critical. DynamoDB automatically scales to handle large volumes of data and supports both key-value and document data models, making it flexible for various use cases. Its in-memory caching with DynamoDB Accelerator (DAX) further enhances performance for read-intensive workloads, making it perfect for generative AI applications needing quick data access for real-time recommendations.</p>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p>Amazon RDS</p>\n\t\t\t\t\t\t<p>Amazon RDS is a managed relational database service designed for structured SQL data. While it‘s powerful for transactional systems, it is not as optimized for real-time, high-speed access as DynamoDB for NoSQL data.</p>\n\t\t\t\t\t\t<p>Amazon Redshift</p>\n\t\t\t\t\t\t<p>Amazon Redshift is a data warehousing service optimized for large-scale data analytics. It is best suited for complex queries on large datasets rather than low-latency, real-time data access required for applications like recommendation engines.</p>\n\t\t\t\t\t\t<p>Amazon Neptune</p>\n\t\t\t\t\t\t<p>Amazon Neptune is a managed graph database service designed for complex graph queries, not optimized for high-speed, scalable NoSQL data access. It is more suited for use cases involving relationships between data points, like knowledge graphs.</p>\n\t\t\t\t\t\t<p>References:</p>\n\t\t\t\t\t\t<p><a href=\"https://aws.amazon.com/dynamodb\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/dynamodb</a>\n\t\t\t\t\t\t</p>"
-    },
-    {
       "id": "14-50",
       "number": 50,
       "text": "A retail company implemented a foundation model to generate personalized product recommendations. They now want to evaluate if the model is contributing to an increase in sales. Which business objective are they primarily assessing?",
@@ -1314,31 +1289,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p>Model re-training</p>\n\t\t\t\t\t\t<p>Model re-training is the most appropriate next step when a deployed machine learning model shows declining performance due to changes in underlying data patterns, such as shifting customer behavior. Over time, the data distribution may change, leading to “model drift“ or a reduction in the model‘s ability to make accurate predictions. To address this, new data reflecting the current behavior should be collected, and the model should be re-trained using this updated dataset. This ensures that the model adapts to new trends and continues to perform well in production. Regular re-training is crucial to maintain the model‘s relevance in dynamic environments.</p>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p>Feature engineering</p>\n\t\t\t\t\t\t<p>Feature engineering involves creating or modifying features to improve model performance. While this can be important for improving a model initially, in the case of performance decline due to data drift, re-training the model with updated data is more appropriate than revisiting feature engineering.</p>\n\t\t\t\t\t\t<p>Data collection</p>\n\t\t\t\t\t\t<p>Although data collection is an important part of the process before re-training, the decline in performance here suggests that the focus should be on re-training the model using newly collected data, rather than just collecting data alone.</p>\n\t\t\t\t\t\t<p>Hyperparameter tuning</p>\n\t\t\t\t\t\t<p>Hyperparameter tuning involves optimizing the settings of the learning algorithm to improve performance. However, since the issue here is related to changing data patterns, re-training with updated data is more appropriate than tuning hyperparameters alone.</p>\n\t\t\t\t\t\t<p>References:</p>\n\t\t\t\t\t\t<p><a href=\"https://docs.aws.amazon.com/machine-learning/latest/dg/retraining-models-on-new-data.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/machine-learning/latest/dg/retraining-models-on-new-data.html</a>\n\t\t\t\t\t\t</p>"
-    },
-    {
-      "id": "14-53",
-      "number": 53,
-      "text": "Your company is using Amazon SageMaker to develop machine learning models. The team wants to ensure that the models and datasets are compliant with organizational and industry standards. Which AWS service would help automate compliance checks and governance frameworks for the models?",
-      "options": [
-        {
-          "text": "Amazon Inspector",
-          "correct": false
-        },
-        {
-          "text": "AWS Audit Manager",
-          "correct": true
-        },
-        {
-          "text": "AWS Glue",
-          "correct": false
-        },
-        {
-          "text": "AWS Secrets Manager",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p>AWS Audit Manager</p>\n\t\t\t\t\t\t<p>AWS Audit Manager is designed to help you automate the process of gathering evidence for audits and compliance with industry standards and regulations. It enables you to create and manage compliance frameworks, such as organizational policies, by continuously monitoring and recording activities in your AWS environment, including services like Amazon SageMaker. With AWS Audit Manager, you can ensure that your machine learning models and datasets are compliant with the necessary governance frameworks, providing automated compliance checks and audit-ready reports.</p>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p>Amazon Inspector</p>\n\t\t\t\t\t\t<p>Amazon Inspector is a security assessment service that helps identify vulnerabilities in AWS resources, such as EC2 instances, but it does not handle compliance checks or governance frameworks for AI models.</p>\n\t\t\t\t\t\t<p>AWS Secrets Manager</p>\n\t\t\t\t\t\t<p>AWS Secrets Manager helps store and manage secrets like API keys or database credentials. It does not automate compliance checks or governance frameworks for machine learning models.</p>\n\t\t\t\t\t\t<p>AWS Glue</p>\n\t\t\t\t\t\t<p>AWS Glue is a fully managed ETL (extract, transform, load) service that helps prepare and transform data for analytics. It does not handle compliance or governance automation.</p>\n\t\t\t\t\t\t<p>References:</p>\n\t\t\t\t\t\t<p><a href=\"https://docs.aws.amazon.com/audit-manager/latest/userguide/what-is.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/audit-manager/latest/userguide/what-is.html</a>\n\t\t\t\t\t\t</p>"
     },
     {
       "id": "14-54",

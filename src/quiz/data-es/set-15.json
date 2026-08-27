@@ -1,7 +1,7 @@
 {
   "setNumber": 15,
   "sourceFile": "Practice_Set_15.html",
-  "questionCount": 59,
+  "questionCount": 56,
   "questions": [
     {
       "id": "15-1",
@@ -402,31 +402,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>Evaluación humana</p>\n\t\t\t\t\t\t<p>La evaluación humana implica que evaluadores humanos lean y juzguen las respuestas en función de qué tan natural y coherente se sienten en el contexto de la conversación. Dado que el modelo genera texto destinado a simular una conversación humana, el criterio humano es crucial para evaluar aspectos sutiles como el flujo de la conversación, la relevancia, el tono y si las respuestas generadas tienen sentido en contexto. Aunque las métricas automatizadas (como BLEU o F1) pueden evaluar ciertos aspectos del desempeño, a menudo no capturan los matices del lenguaje natural que los evaluadores humanos pueden identificar. Para agentes conversacionales, la evaluación humana es el estándar de oro para evaluar la calidad general.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>Puntuación F1</p>\n\t\t\t\t\t\t<p>La puntuación F1 se utiliza para medir el desempeño de un modelo basándose en precisión y recall, frecuentemente en tareas de clasificación o recuperación de información. No está diseñada para evaluar la naturalidad o coherencia del texto generado, lo que la hace inapropiada para este contexto.</p>\n\t\t\t\t\t\t<p>Puntuación BLEU</p>\n\t\t\t\t\t\t<p>La puntuación BLEU se utiliza típicamente en tareas de traducción automática y evalúa qué tan estrechamente el texto generado coincide con un texto de referencia. Aunque es útil para ciertas tareas de generación de lenguaje, no captura efectivamente las cualidades subjetivas de naturalidad y coherencia en la conversación.</p>\n\t\t\t\t\t\t<p>Curva ROC</p>\n\t\t\t\t\t\t<p>La curva ROC se utiliza para evaluar el desempeño de clasificadores binarios, particularmente en la evaluación del trade-off entre tasas de verdaderos positivos y falsos positivos. No es aplicable para evaluar la generación de texto o la calidad de una conversación.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://docs.aws.amazon.com/sagemaker/latest/dg/a2i-use-augmented-ai-a2i-human-review-loops.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/sagemaker/latest/dg/a2i-use-augmented-ai-a2i-human-review-loops.html</a>\n\t\t\t\t\t\t</p>"
-    },
-    {
-      "id": "15-17",
-      "number": 17,
-      "text": "Una solución de IA se está implementando en una empresa global de retail para procesar datos de clientes de varias regiones. La empresa debe asegurar que los datos permanezcan en ubicaciones geográficas específicas para cumplir con regulaciones locales. ¿Qué estrategia de gobierno de datos debería adoptar la empresa para cumplir con este requisito?",
-      "options": [
-        {
-          "text": "Data Replication",
-          "correct": false
-        },
-        {
-          "text": "Data Labeling",
-          "correct": false
-        },
-        {
-          "text": "Data Compression",
-          "correct": false
-        },
-        {
-          "text": "Data Residency",
-          "correct": true
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>Data Residency</p>\n\t\t\t\t\t\t<p>Data Residency se refiere al requisito de que los datos deben almacenarse en una ubicación o región geográfica específica debido a las leyes y regulaciones locales. Para una empresa global de retail que maneja datos de clientes de diferentes regiones, data residency es crucial para garantizar el cumplimiento de diversas regulaciones, como el Reglamento General de Protección de Datos (GDPR) en Europa o las leyes de localización de datos en otros países. Adoptar una estrategia de data residency asegura que los datos de los clientes se almacenen y procesen en las regiones geográficas requeridas, ayudando a la empresa a evitar sanciones regulatorias mientras mantiene la confianza del cliente. Servicios de AWS, como Amazon S3 y AWS Regions, permiten a las organizaciones especificar dónde se almacenan los datos, ayudándolas a cumplir con los requisitos de data residency de manera efectiva.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>Data Compression</p>\n\t\t\t\t\t\t<p>Data Compression se utiliza para reducir el tamaño de los datos para mejorar la eficiencia en el almacenamiento y la transferencia. No aborda la ubicación geográfica del almacenamiento de datos, por lo que no es relevante para preocupaciones de data residency.</p>\n\t\t\t\t\t\t<p>Data Replication</p>\n\t\t\t\t\t\t<p>Data Replication implica duplicar datos en múltiples ubicaciones para garantizar disponibilidad y tolerancia a fallos. Aunque mejora la disponibilidad de datos, no garantiza que los datos se almacenen en las ubicaciones geográficas requeridas, lo que la hace inadecuada para data residency.</p>\n\t\t\t\t\t\t<p>Data Labeling</p>\n\t\t\t\t\t\t<p>Data Labeling es el proceso de etiquetar datos para modelos de machine learning supervisado, lo que no tiene relación con la ubicación geográfica del almacenamiento de datos ni con el cumplimiento de requisitos de residencia de datos.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://aws.amazon.com/compliance/data-privacy\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/compliance/data-privacy</a>\n\t\t\t\t\t\t</p>"
     },
     {
       "id": "15-18",
@@ -1029,31 +1004,6 @@
       "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>Utilizar técnicas robustas de validación de inputs y limitar la longitud de los prompts</p>\n\t\t\t\t\t\t<p>La validación de inputs garantiza que los datos proporcionados al sistema de IA cumplan con criterios específicos, reduciendo la probabilidad de que inputs maliciosos o manipulados impacten el desempeño del modelo. Además, limitar la longitud de los prompts ayuda a controlar la cantidad de datos que procesa el modelo, reduciendo el riesgo de inputs excesivamente largos o complejos que podrían manipular las predicciones del modelo. Estas acciones mejoran la seguridad de tu sistema de IA asegurando que solo inputs debidamente formateados y apropiados se utilicen para generar predicciones. Este enfoque es una práctica ampliamente recomendada para mejorar la seguridad y confiabilidad de los sistemas de IA, particularmente cuando se trabaja con inputs no confiables o dinámicos.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>Desactivar el cifrado de los datos de entrada</p>\n\t\t\t\t\t\t<p>Desactivar el cifrado de los datos de entrada no mitigaría los ataques de prompt injection y podría aumentar los riesgos de seguridad exponiendo información sensible. El cifrado debe mantenerse para proteger la confidencialidad de los datos.</p>\n\t\t\t\t\t\t<p>Permitir inputs sin restricciones para proporcionar más diversidad de datos</p>\n\t\t\t\t\t\t<p>Permitir inputs sin restricciones aumenta el riesgo de ataques de prompt injection y otras formas de manipulación de entrada. Las restricciones de input y la validación son esenciales para mantener la seguridad en sistemas de IA.</p>\n\t\t\t\t\t\t<p>Ignorar el problema ya que es un riesgo de seguridad menor</p>\n\t\t\t\t\t\t<p>Prompt injection no es un riesgo de seguridad menor. Los inputs manipulados pueden llevar a predicciones incorrectas, vulnerabilidades del sistema y resultados comprometidos. Ignorar este problema puede generar riesgos de seguridad significativos y mal uso del modelo.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://docs.aws.amazon.com/marketplace/latest/userguide/ml-listing-requirements-and-best-practices.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/marketplace/latest/userguide/ml-listing-requirements-and-best-practices.html</a>\n\t\t\t\t\t\t</p>"
     },
     {
-      "id": "15-42",
-      "number": 42,
-      "text": "Estás desarrollando un modelo de IA que automatiza el procesamiento de documentos para reclamos de seguros. Dado el carácter sensible de los documentos, necesitas una herramienta que permita a revisores humanos validar las decisiones de la IA antes de la aprobación final. ¿Cuál servicio de AWS deberías usar?",
-      "options": [
-        {
-          "text": "Amazon Translate para mejorar la precisión de la traducción de texto.",
-          "correct": false
-        },
-        {
-          "text": "Amazon Polly para mejorar las capacidades de conversión de texto a voz.",
-          "correct": false
-        },
-        {
-          "text": "Amazon Augmented AI (A2I) para habilitar flujos de trabajo de revisión humana en casos sensibles o ambiguos.",
-          "correct": true
-        },
-        {
-          "text": "Amazon SageMaker Ground Truth para etiquetar datos adicionales.",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>Amazon Augmented AI (A2I) para habilitar flujos de trabajo de revisión humana en casos sensibles o ambiguos.</p>\n\t\t\t\t\t\t<p>Amazon Augmented AI (A2I) es el servicio ideal para este escenario, ya que te permite incorporar flujos de trabajo de revisión humana en tus procesos de IA, especialmente en casos sensibles o ambiguos como documentos de reclamos de seguros. A2I permite que los revisores humanos validen las predicciones del modelo de IA antes de la aprobación final, asegurando que las decisiones que involucran información sensible sean precisas y confiables. Ofrece flujos de trabajo integrados para casos de uso comunes como el procesamiento de documentos y se puede personalizar para crear sistemas de revisión específicos a las necesidades de la organización. Al usar A2I, puedes garantizar cumplimiento normativo, reducir errores y generar confianza en el sistema de IA al incorporar supervisión humana en puntos de decisión críticos.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>Amazon SageMaker Ground Truth para etiquetar datos adicionales.</p>\n\t\t\t\t\t\t<p>SageMaker Ground Truth se utiliza principalmente para etiquetar datos y mejorar el entrenamiento del modelo, no para validar decisiones tomadas por un modelo de IA después de que se generan predicciones. No es la herramienta correcta para integrar revisión humana en flujos de trabajo en tiempo real.</p>\n\t\t\t\t\t\t<p>Amazon Translate para mejorar la precisión de la traducción de texto.</p>\n\t\t\t\t\t\t<p>Amazon Translate se utiliza para traducción de idiomas, lo que no es directamente relevante para este escenario de validación humana en flujos de trabajo de procesamiento de documentos.</p>\n\t\t\t\t\t\t<p>Amazon Polly para mejorar las capacidades de conversión de texto a voz.</p>\n\t\t\t\t\t\t<p>Amazon Polly convierte texto a voz y no tiene relación con la necesidad de revisión humana o validación de decisiones generadas por IA en flujos de trabajo de procesamiento de documentos.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://aws.amazon.com/augmented-ai\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/augmented-ai</a>\n\t\t\t\t\t\t</p>"
-    },
-    {
       "id": "15-43",
       "number": 43,
       "text": "Estás construyendo un modelo de generación de texto para escritura creativa que necesita producir resultados variados e imaginativos. Actualmente, el modelo genera respuestas que son demasiado predecibles y repetitivas. ¿Cuál parámetro de inference deberías ajustar para fomentar respuestas más diversas y creativas del modelo?",
@@ -1202,31 +1152,6 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p><strong>Correcta</strong></p>\n\t\t\t\t\t\t<p>Customer Feedback</p>\n\t\t\t\t\t\t<p>Customer Feedback es la métrica de negocio más relevante para captar el impacto a largo plazo del modelo en la satisfacción y retención de clientes. Métricas como reseñas de clientes, encuestas de satisfacción, Net Promoter Scores (NPS) y tasas de clics (CTR) proporcionan información directa sobre cómo los usuarios perciben e interactúan con las recomendaciones. Las recomendaciones de alta calidad pueden mejorar la experiencia del usuario, aumentar la satisfacción y, en última instancia, lograr tasas de retención más altas, que son indicadores clave del éxito del modelo. Al enfocarte en customer feedback, puedes medir qué tan bien el motor de recomendaciones satisface las necesidades de los usuarios y contribuye a objetivos de negocio a largo plazo como la retención y lealtad.</p>\n\t\t\t\t\t\t<p><strong>Incorrecta</strong></p>\n\t\t\t\t\t\t<p>Accuracy</p>\n\t\t\t\t\t\t<p>Accuracy mide con qué frecuencia las predicciones del modelo son correctas, pero no captura la experiencia subjetiva o la satisfacción de los usuarios. En un sistema de recomendaciones, la experiencia y el engagement del usuario son más importantes que la exactitud de las predicciones.</p>\n\t\t\t\t\t\t<p>Area Under the ROC Curve (AUC)</p>\n\t\t\t\t\t\t<p>AUC es útil para evaluar clasificadores binarios y su capacidad para distinguir entre clases, pero no se relaciona directamente con la satisfacción del cliente o la retención a largo plazo, especialmente en un sistema donde el engagement del usuario es crítico.</p>\n\t\t\t\t\t\t<p>F1 Score</p>\n\t\t\t\t\t\t<p>El F1 score equilibra la precisión y el recall, pero es más apropiado para tareas de clasificación. No mide directamente el impacto en el negocio de un sistema sobre la satisfacción o retención de usuarios.</p>"
-    },
-    {
-      "id": "15-49",
-      "number": 49,
-      "text": "Tu sistema de IA se está desarrollando en cumplimiento con los estándares ISO para seguridad de datos y privacidad. Para asegurar que la solución de IA se alinea con estos estándares, necesitas documentar los controles de seguridad y auditar el sistema regularmente. ¿Cuál servicio de AWS puede ayudarte a gestionar estas auditorías de cumplimiento?",
-      "options": [
-        {
-          "text": "Amazon Inspector",
-          "correct": false
-        },
-        {
-          "text": "AWS Audit Manager",
-          "correct": true
-        },
-        {
-          "text": "Amazon EC2",
-          "correct": false
-        },
-        {
-          "text": "AWS CloudFront",
-          "correct": false
-        }
-      ],
-      "multiSelect": false,
-      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>AWS Audit Manager</p>\n\t\t\t\t\t\t<p>AWS Audit Manager está diseñado específicamente para ayudar a las organizaciones a auditar continuamente su uso de AWS y garantizar el cumplimiento con regulaciones y estándares, incluyendo los estándares ISO para seguridad de datos y privacidad. Este servicio ayuda a automatizar la recopilación de evidencia de que los recursos de AWS están operando dentro de los marcos de cumplimiento definidos por la organización. AWS Audit Manager también asiste en la preparación de informes listos para auditoría que se alinean con políticas internas y regulaciones externas. Al mapear las configuraciones y el uso de tus recursos de AWS a requisitos específicos de cumplimiento, la herramienta simplifica el proceso de preparación y ejecución de auditorías de cumplimiento, convirtiéndola en un recurso valioso para empresas que buscan mantener y demostrar adherencia a los estándares ISO.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>Amazon Inspector</p>\n\t\t\t\t\t\t<p>Amazon Inspector es un servicio automatizado de evaluación de seguridad que ayuda a mejorar la seguridad y el cumplimiento de las aplicaciones implementadas en AWS. Evalúa automáticamente las aplicaciones para detectar vulnerabilidades o desviaciones de las mejores prácticas. Aunque es útil para evaluaciones de seguridad, Amazon Inspector se enfoca más en la postura de seguridad de las aplicaciones que en gestionar auditorías de cumplimiento en todo el entorno de AWS.</p>\n\t\t\t\t\t\t<p>AWS CloudFront</p>\n\t\t\t\t\t\t<p>AWS CloudFront es un servicio de red de entrega de contenidos (CDN) que entrega de forma segura datos, videos, aplicaciones e APIs a clientes en todo el mundo con baja latencia y altas velocidades de transferencia. CloudFront está principalmente involucrado en la distribución de contenido y tiene poco que ver directamente con auditorías de cumplimiento o la documentación de controles de seguridad para los estándares ISO.</p>\n\t\t\t\t\t\t<p>Amazon EC2</p>\n\t\t\t\t\t\t<p>Amazon EC2 (Elastic Compute Cloud) proporciona capacidad de informática escalable en la nube de Amazon Web Services (AWS), permitiendo a los usuarios ejecutar y gestionar instancias de servidores. Aunque EC2 es un componente central de muchas implementaciones en AWS, no ayuda específicamente en la gestión de auditorías de cumplimiento. Se trata más bien de proporcionar la infraestructura para ejecutar aplicaciones que de ofrecer herramientas para la gestión de auditorías.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://docs.aws.amazon.com/audit-manager/latest/userguide/what-is.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/audit-manager/latest/userguide/what-is.html</a>\n\t\t\t\t\t\t</p>"
     },
     {
       "id": "15-50",

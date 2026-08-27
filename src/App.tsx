@@ -5,6 +5,8 @@ import ServiceScopePage from './components/ServiceScopePage.tsx';
 import GlossaryPage from './components/GlossaryPage.tsx';
 import ResourcesPage from './components/ResourcesPage.tsx';
 import ExamFormatPage from './components/ExamFormatPage.tsx';
+import QuizListPage from './components/QuizListPage.tsx';
+import QuizSessionPage from './components/QuizSessionPage.tsx';
 import Footer from './components/Footer.tsx';
 import ThemeToggle from './components/ThemeToggle.tsx';
 
@@ -20,6 +22,8 @@ export default function App() {
           <Route path="/glosario" element={<GlossaryPage />} />
           <Route path="/como-estudiarlo" element={<ResourcesPage />} />
           <Route path="/formato-examen" element={<ExamFormatPage />} />
+          <Route path="/quiz" element={<QuizListPage />} />
+          <Route path="/quiz/:setNumber" element={<QuizSessionPage />} />
         </Routes>
         <Footer />
       </div>

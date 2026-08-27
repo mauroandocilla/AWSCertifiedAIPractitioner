@@ -1,0 +1,1332 @@
+{
+  "setNumber": 7,
+  "sourceFile": "Practice_Set_7.html",
+  "questionCount": 53,
+  "questions": [
+    {
+      "id": "7-1",
+      "number": 1,
+      "text": "Para una aplicación basada en microservicios, necesitás gestionar la comunicación entre servicios enfocándote en confiabilidad y escalabilidad. ¿Cuál servicio de AWS usarías?",
+      "options": [
+        {
+          "text": "Amazon SQS (Simple Queue Service)",
+          "correct": true
+        },
+        {
+          "text": "Amazon SNS (Simple Notification Service)",
+          "correct": false
+        },
+        {
+          "text": "Amazon Kinesis Data Streams",
+          "correct": false
+        },
+        {
+          "text": "AWS Step Functions",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon SQS proporciona colas de mensajes confiables y escalables entre microservicios, permitiendo comunicación asincrónica y manejando efectivamente mensajes de servicio a servicio.</p>"
+    },
+    {
+      "id": "7-2",
+      "number": 2,
+      "text": "Con el crecimiento del edge computing, necesitás desplegar y gestionar aplicaciones en el borde de la red para reducir la latencia y mejorar el rendimiento. ¿Cuál sería el servicio de AWS más relevante para este caso de uso?",
+      "options": [
+        {
+          "text": "Amazon CloudFront",
+          "correct": false
+        },
+        {
+          "text": "AWS Snowcone",
+          "correct": false
+        },
+        {
+          "text": "AWS Wavelength",
+          "correct": true
+        },
+        {
+          "text": "AWS Greengrass",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>AWS Wavelength lleva la infraestructura y los servicios de AWS a las redes de telecomunicaciones, habilitando aplicaciones de ultra baja latencia y alto rendimiento en el borde de la red.</p>"
+    },
+    {
+      "id": "7-3",
+      "number": 3,
+      "text": "Necesitás construir un data lake que permita consultar datos en diversos formatos y orígenes. ¿Cuál es el servicio de AWS más adecuado para esta tarea?",
+      "options": [
+        {
+          "text": "Amazon Lake Formation",
+          "correct": true
+        },
+        {
+          "text": "AWS Glue",
+          "correct": false
+        },
+        {
+          "text": "Amazon Athena",
+          "correct": false
+        },
+        {
+          "text": "Amazon Redshift Spectrum",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon Lake Formation facilita la construcción y gestión de data lakes proporcionando herramientas para ingerir, catalogar y asegurar datos provenientes de diversos orígenes y formatos.</p>"
+    },
+    {
+      "id": "7-4",
+      "number": 4,
+      "text": "Una empresa planea migrar su centro de datos local a AWS. La migración involucra numerosas aplicaciones y servicios que requieren tiempo de inactividad mínimo y planificación cuidadosa. ¿Qué servicios y características de AWS se deben utilizar para facilitar una migración exitosa?",
+      "options": [
+        {
+          "text": "AWS Snowball con AWS CodeDeploy, Amazon RDS y AWS Backup",
+          "correct": false
+        },
+        {
+          "text": "AWS CloudEndure Migration con AWS Fargate, Amazon Aurora y AWS Cost Explorer",
+          "correct": false
+        },
+        {
+          "text": "Amazon AppStream 2.0 con AWS DataSync, AWS CodePipeline y Amazon S3",
+          "correct": false
+        },
+        {
+          "text": "AWS Migration Hub con AWS Server Migration Service (SMS), AWS Database Migration Service (DMS) y AWS Application Discovery Service",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>AWS Migration Hub proporciona seguimiento, AWS Server Migration Service se encarga de la migración de servidores, AWS Database Migration Service respalda la migración de bases de datos y AWS Application Discovery Service ayuda a entender las dependencias de las aplicaciones.</p>"
+    },
+    {
+      "id": "7-5",
+      "number": 5,
+      "text": "Para un proyecto que implica ejecutar trabajos por lotes que procesan grandes volúmenes de datos con esquemas variables, ¿cuál servicio de AWS proporcionaría la mejor solución para la transformación y procesamiento de datos?",
+      "options": [
+        {
+          "text": "Amazon RDS",
+          "correct": false
+        },
+        {
+          "text": "AWS Lambda",
+          "correct": false
+        },
+        {
+          "text": "Amazon EMR",
+          "correct": true
+        },
+        {
+          "text": "Amazon Redshift",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon EMR (Elastic MapReduce) está diseñado para procesar grandes volúmenes de datos utilizando frameworks de computación distribuida como Apache Hadoop y Apache Spark, lo que lo hace ideal para el procesamiento por lotes y la transformación de datos.</p>"
+    },
+    {
+      "id": "7-6",
+      "number": 6,
+      "text": "Estás gestionando el sitio web de una empresa que experimenta patrones de tráfico fluctuantes. Para manejar picos de tráfico y garantizar que el sitio web siga siendo responsivo, ¿qué combinación de servicios AWS deberías implementar?",
+      "options": [
+        {
+          "text": "Usar Amazon EC2 con Auto Scaling y Elastic Load Balancing",
+          "correct": true
+        },
+        {
+          "text": "Implementar el sitio web en AWS Lambda con Amazon API Gateway y Amazon S3",
+          "correct": false
+        },
+        {
+          "text": "Alojar el sitio web en Amazon S3 con AWS CloudFormation para escalado automatizado",
+          "correct": false
+        },
+        {
+          "text": "Usar Amazon Lightsail con Amazon CloudFront para distribución de contenido",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon EC2 con Auto Scaling garantiza que la cantidad de instancias se escale hacia arriba o hacia abajo según el tráfico, y Elastic Load Balancing distribuye el tráfico de manera equilibrada entre instancias para mantener la capacidad de respuesta.</p>"
+    },
+    {
+      "id": "7-7",
+      "number": 7,
+      "text": "Necesitás configurar una solución segura de compartición de archivos donde los usuarios puedan subir y descargar archivos desde diferentes ubicaciones geográficas. La solución debe garantizar que los archivos estén encriptados y que el acceso esté controlado. ¿Qué servicios de AWS deberías utilizar?",
+      "options": [
+        {
+          "text": "AWS Secrets Manager con Amazon RDS y AWS Lambda",
+          "correct": false
+        },
+        {
+          "text": "Amazon EFS con AWS Lambda y AWS CodePipeline",
+          "correct": false
+        },
+        {
+          "text": "Amazon S3 con AWS KMS, políticas de AWS IAM y Amazon CloudFront",
+          "correct": true
+        },
+        {
+          "text": "AWS Glue con Amazon Athena y AWS CloudTrail",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon S3 proporciona almacenamiento de archivos escalable, AWS KMS maneja la encriptación, las políticas de AWS IAM controlan el acceso, y Amazon CloudFront entrega contenido globalmente garantizando una compartición segura de archivos.</p>"
+    },
+    {
+      "id": "7-8",
+      "number": 8,
+      "text": "En un escenario donde una empresa necesita asegurar que su aplicación se mantenga operacional durante un aumento repentino de tráfico debido a una campaña de marketing inesperada, ¿cuáles servicios y características de AWS deberían implementarse para manejar esta situación de manera efectiva?",
+      "options": [
+        {
+          "text": "AWS Global Accelerator con Amazon S3 y Amazon Route 53",
+          "correct": false
+        },
+        {
+          "text": "Amazon EC2 con AWS WAF y AWS Shield Advanced",
+          "correct": false
+        },
+        {
+          "text": "Amazon CloudFront con AWS Auto Scaling y Elastic Load Balancer",
+          "correct": true
+        },
+        {
+          "text": "Amazon RDS con AWS Lambda y Amazon Kinesis Data Firehose",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon CloudFront se encarga de la entrega de contenido, AWS Auto Scaling ajusta la capacidad según el tráfico, y Elastic Load Balancer distribuye el tráfico entrante, lo que asegura que la aplicación se mantenga operacional durante picos de tráfico.</p>"
+    },
+    {
+      "id": "7-9",
+      "number": 9,
+      "text": "Para construir una arquitectura resiliente y escalable para una aplicación financiera que requiere detección de fraude y alertas en tiempo real, ¿cuál combinación de servicios de AWS debería utilizarse?",
+      "options": [
+        {
+          "text": "Amazon Kinesis Data Streams con AWS Lambda, Amazon S3 y Amazon SNS",
+          "correct": true
+        },
+        {
+          "text": "Amazon MSK con AWS Fargate, Amazon Aurora y AWS CloudWatch",
+          "correct": false
+        },
+        {
+          "text": "AWS Step Functions con AWS Lambda, Amazon Elasticsearch Service y Amazon CloudFront",
+          "correct": false
+        },
+        {
+          "text": "Amazon Redshift con AWS Glue, Amazon RDS y AWS WAF",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon Kinesis Data Streams gestiona la ingesta de datos en tiempo real, AWS Lambda procesa los datos y dispara alertas, Amazon S3 almacena los datos históricos y Amazon SNS envía notificaciones para la detección de fraude y alertas.</p>"
+    },
+    {
+      "id": "7-10",
+      "number": 10,
+      "text": "Para una aplicación que requiere procesar datasets a gran escala con transformaciones complejas y capacidades de consulta, ¿cuáles servicios de AWS se deben utilizar para manejar tanto el procesamiento de datos en lotes como en tiempo real?",
+      "options": [
+        {
+          "text": "Amazon RDS con AWS Lambda, Amazon DynamoDB y AWS Step Functions",
+          "correct": false
+        },
+        {
+          "text": "Amazon EMR con Apache Spark, Amazon Redshift, Amazon S3 y AWS Glue",
+          "correct": true
+        },
+        {
+          "text": "Amazon S3 con AWS Fargate, Amazon QuickSight y Amazon Kinesis Data Firehose",
+          "correct": false
+        },
+        {
+          "text": "Amazon Kinesis Data Streams con AWS Glue, Amazon Redshift Spectrum y AWS CodeDeploy",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon EMR con Apache Spark maneja transformaciones complejas, Amazon Redshift proporciona capacidades de consulta, Amazon S3 ofrece almacenamiento escalable y AWS Glue gestiona tareas de ETL tanto para procesamiento de datos en lotes como en tiempo real.</p>"
+    },
+    {
+      "id": "7-11",
+      "number": 11,
+      "text": "En una situación donde una empresa necesita proporcionar una puerta de enlace API segura y escalable para integrar con partners externos y servicios, ¿cuáles son los servicios AWS apropiados?",
+      "options": [
+        {
+          "text": "Amazon CloudFront con AWS Shield y AWS Lambda",
+          "correct": false
+        },
+        {
+          "text": "AWS Direct Connect con AWS Global Accelerator y Amazon DynamoDB",
+          "correct": false
+        },
+        {
+          "text": "AWS API Gateway con AWS WAF e AWS IAM",
+          "correct": true
+        },
+        {
+          "text": "Amazon AppSync con AWS Kinesis Data Streams y Amazon S3",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>AWS API Gateway proporciona una solución de puerta de enlace API escalable, AWS WAF protege contra vulnerabilidades web e AWS IAM gestiona el control de acceso, garantizando una integración segura con partners externos.</p>"
+    },
+    {
+      "id": "7-12",
+      "number": 12,
+      "text": "Necesitás configurar una solución para gestionar y procesar de forma segura datos sensibles de clientes que cumpla con las regulaciones de protección de datos. La solución debe garantizar encriptación, control de acceso y monitoreo de datos. ¿Cuáles servicios y características de AWS deberías utilizar?",
+      "options": [
+        {
+          "text": "Amazon DynamoDB con AWS Step Functions y AWS Elastic Beanstalk",
+          "correct": false
+        },
+        {
+          "text": "Amazon CloudFront con AWS Lambda y AWS Config",
+          "correct": false
+        },
+        {
+          "text": "AWS Secrets Manager con Amazon RDS, AWS WAF y AWS Shield Advanced",
+          "correct": false
+        },
+        {
+          "text": "AWS KMS con Amazon S3, AWS IAM y AWS CloudTrail",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>AWS KMS proporciona encriptación, Amazon S3 almacena datos de forma segura, AWS IAM controla el acceso, y AWS CloudTrail monitorea el acceso a los datos y los cambios, asegurando el cumplimiento de las regulaciones de protección de datos.</p>"
+    },
+    {
+      "id": "7-13",
+      "number": 13,
+      "text": "Para una aplicación que requiere alta disponibilidad con failover automático entre regiones, ¿qué feature de AWS deberías habilitar?",
+      "options": [
+        {
+          "text": "Implementaciones Multi-AZ de Amazon RDS",
+          "correct": false
+        },
+        {
+          "text": "Stacks de AWS CloudFormation",
+          "correct": false
+        },
+        {
+          "text": "Amazon Route 53 con health checks y políticas de enrutamiento de failover",
+          "correct": true
+        },
+        {
+          "text": "Replicación cross-region de Amazon S3",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon Route 53 proporciona capacidades de failover de DNS y health checks para enrutar tráfico entre regiones, asegurando alta disponibilidad para las aplicaciones.</p>"
+    },
+    {
+      "id": "7-14",
+      "number": 14,
+      "text": "Necesitás construir un sistema global que procese análisis en tiempo real de datos en streaming con baja latencia y alta disponibilidad. El sistema debe integrarse con distintas fuentes de datos y ofrecer capacidades de visualización. ¿Qué combinación de servicios de AWS deberías usar?",
+      "options": [
+        {
+          "text": "Amazon Kinesis Data Analytics con AWS Global Accelerator, Amazon S3 y Amazon QuickSight",
+          "correct": true
+        },
+        {
+          "text": "AWS AppSync con AWS Fargate, Amazon Elasticsearch Service y Amazon SQS",
+          "correct": false
+        },
+        {
+          "text": "Amazon MSK con Amazon DynamoDB, AWS Lambda y AWS CloudFormation",
+          "correct": false
+        },
+        {
+          "text": "Amazon EMR con Amazon CloudFront, Amazon RDS y AWS CodePipeline",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon Kinesis Data Analytics procesa datos en streaming con baja latencia, AWS Global Accelerator mejora el rendimiento global, Amazon S3 almacena los datos y Amazon QuickSight proporciona las capacidades de visualización.</p>"
+    },
+    {
+      "id": "7-15",
+      "number": 15,
+      "text": "Necesitás desplegar una aplicación web con alta disponibilidad y baja latencia, asegurándote de que permanezca accesible incluso durante períodos de alto tráfico. ¿Qué servicios y características de AWS deberías usar?",
+      "options": [
+        {
+          "text": "AWS Fargate con AWS Step Functions, AWS CodePipeline y Amazon S3",
+          "correct": false
+        },
+        {
+          "text": "Amazon S3 con AWS Lambda, AWS CodeDeploy y AWS CloudFormation",
+          "correct": false
+        },
+        {
+          "text": "Amazon DynamoDB con Amazon Kinesis Data Firehose y AWS Glue",
+          "correct": false
+        },
+        {
+          "text": "Amazon Elastic Load Balancer con AWS Auto Scaling, Amazon CloudFront y Amazon RDS",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon Elastic Load Balancer distribuye el tráfico entrante, AWS Auto Scaling ajusta la capacidad según la demanda, Amazon CloudFront proporciona entrega de contenido con baja latencia y Amazon RDS asegura la disponibilidad de la base de datos.</p>"
+    },
+    {
+      "id": "7-16",
+      "number": 16,
+      "text": "Necesitás desplegar un modelo de machine learning que será utilizado por múltiples aplicaciones para realizar predicciones en tiempo real. El modelo debe ser fácilmente escalable y gestionado sin requerir administración de infraestructura. ¿Qué servicios de AWS deberías utilizar?",
+      "options": [
+        {
+          "text": "Amazon EMR con AWS Fargate y Amazon DynamoDB",
+          "correct": false
+        },
+        {
+          "text": "Amazon SageMaker con Amazon API Gateway y AWS Lambda",
+          "correct": true
+        },
+        {
+          "text": "AWS Lambda con Amazon S3 y AWS Glue",
+          "correct": false
+        },
+        {
+          "text": "Amazon EC2 con Amazon EKS y AWS Step Functions",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon SageMaker proporciona despliegue de modelos de machine learning gestionado, Amazon API Gateway expone el modelo a través de APIs RESTful, y AWS Lambda maneja las predicciones en tiempo real sin requerir administración de infraestructura.</p>"
+    },
+    {
+      "id": "7-17",
+      "number": 17,
+      "text": "Para una aplicación distribuida globalmente con requisitos estrictos de latencia y restricciones de consistencia de datos, ¿cuáles servicios y configuraciones de AWS satisfarían mejor las necesidades de acceso a datos con baja latencia y consistencia fuerte?",
+      "options": [
+        {
+          "text": "Amazon DynamoDB Global Tables con Amazon CloudFront y AWS Global Accelerator",
+          "correct": true
+        },
+        {
+          "text": "Amazon S3 con AWS DataSync y AWS Lambda",
+          "correct": false
+        },
+        {
+          "text": "Amazon Aurora con Global Databases, AWS Step Functions y Amazon S3",
+          "correct": false
+        },
+        {
+          "text": "Amazon RDS Multi-AZ con Amazon ElastiCache y AWS CloudTrail",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon DynamoDB Global Tables proporciona datos completamente replicados en múltiples regiones con consistencia fuerte, Amazon CloudFront garantiza entrega de contenido con baja latencia, y AWS Global Accelerator optimiza las rutas de red para un acceso a datos más rápido.</p>"
+    },
+    {
+      "id": "7-18",
+      "number": 18,
+      "text": "Tu tarea es diseñar un pipeline de procesamiento de datos que necesita integrar información de múltiples fuentes, transformarla y cargarla en un data warehouse para análisis. El pipeline debe manejar grandes volúmenes de datos y escalar según sea necesario. ¿Cuáles son los servicios AWS óptimos para este escenario?",
+      "options": [
+        {
+          "text": "AWS Glue con Amazon Redshift Spectrum, Amazon S3 y Amazon Kinesis Data Firehose",
+          "correct": true
+        },
+        {
+          "text": "AWS DataSync con Amazon RDS, AWS Step Functions y Amazon Athena",
+          "correct": false
+        },
+        {
+          "text": "Amazon EMR con AWS Lambda, Amazon DynamoDB y AWS Data Pipeline",
+          "correct": false
+        },
+        {
+          "text": "Amazon Kinesis Data Analytics con AWS Fargate, Amazon Elasticsearch Service y Amazon QuickSight",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>AWS Glue gestiona tareas ETL, Amazon Redshift Spectrum permite consultar datos en S3, Amazon S3 proporciona almacenamiento escalable, y Amazon Kinesis Data Firehose integra datos de streaming en el pipeline.</p>"
+    },
+    {
+      "id": "7-19",
+      "number": 19,
+      "text": "Tu organización necesita una solución para gestionar cambios de configuración en múltiples entornos de AWS manteniendo cumplimiento normativo y minimizando esfuerzos manuales. ¿Qué servicios y prácticas de AWS deberían implementarse?",
+      "options": [
+        {
+          "text": "Utilizar AWS CloudFormation para la gestión de infraestructura, AWS Systems Manager Automation para la gestión de cambios, y AWS Config Rules para cumplimiento normativo.",
+          "correct": true
+        },
+        {
+          "text": "Usar AWS Systems Manager Parameter Store con AWS CloudFormation para infraestructura como código, y AWS Config para monitoreo de cumplimiento.",
+          "correct": false
+        },
+        {
+          "text": "Implementar AWS CodePipeline para CI/CD, AWS CodeDeploy para despliegues, y AWS CloudTrail para seguimiento de cambios.",
+          "correct": false
+        },
+        {
+          "text": "Desplegar Amazon EC2 con AWS Lambda para automatización, Amazon S3 para almacenamiento de configuración, y AWS CloudWatch para monitoreo.",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>AWS CloudFormation automatiza el aprovisionamiento de infraestructura, AWS Systems Manager Automation gestiona cambios de configuración, y AWS Config Rules asegura cumplimiento normativo en múltiples entornos.</p>"
+    },
+    {
+      "id": "7-20",
+      "number": 20,
+      "text": "Para almacenar y gestionar de forma segura datos sensibles como claves API y contraseñas en tu aplicación, ¿cuál es el servicio de AWS que deberías usar?",
+      "options": [
+        {
+          "text": "AWS Systems Manager Parameter Store",
+          "correct": false
+        },
+        {
+          "text": "AWS IAM Roles",
+          "correct": false
+        },
+        {
+          "text": "AWS Secrets Manager",
+          "correct": true
+        },
+        {
+          "text": "Amazon S3 con cifrado",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><b>AWS Secrets Manager</b></p>\n\t\t\t\t\t\t<p><b>Explicación:</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>AWS Secrets Manager está específicamente diseñado para <b>almacenar, gestionar y rotar información sensible</b> como claves API y contraseñas.</li>\n\t\t\t\t\t\t\t<li>Proporciona <b>rotación automática, almacenamiento seguro y control de acceso granular</b>.</li>\n\t\t\t\t\t\t\t<li>Parameter Store puede almacenar secretos, pero Secrets Manager es preferido para <b>gestión de secretos a nivel de producción</b>.</li>\n\t\t\t\t\t\t\t<li>IAM Roles controlan permisos pero no almacenan secretos.</li>\n\t\t\t\t\t\t\t<li>S3 con cifrado protege los datos en reposo pero <b>no está optimizado para gestión de secretos</b>.</li>\n\t\t\t\t\t\t</ul>"
+    },
+    {
+      "id": "7-21",
+      "number": 21,
+      "text": "Para una aplicación web que necesita manejar autenticación de usuarios, autorización y gestión de datos de usuarios, ¿cuál combinación de servicios de AWS proporcionaría una solución robusta?",
+      "options": [
+        {
+          "text": "Amazon Cognito con AWS IAM y AWS Lambda",
+          "correct": true
+        },
+        {
+          "text": "Amazon API Gateway con AWS WAF y AWS KMS",
+          "correct": false
+        },
+        {
+          "text": "Amazon DynamoDB con AWS CodePipeline y AWS Glue",
+          "correct": false
+        },
+        {
+          "text": "AWS IAM con Amazon RDS y AWS Step Functions",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>Amazon Cognito con AWS IAM y AWS Lambda</b></p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p><b>Amazon Cognito</b><span> es el servicio central para manejar </span><b>autenticación de usuarios</b><span> (registro/inicio de sesión) y </span><b>autorización</b><span>.</span><span> Gestiona directorios de usuarios y emite tokens.</span><span> También puede integrarse con proveedores de identidad social.</span></p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p><b>AWS IAM (Identity and Access Management)</b><span> se utiliza para definir y controlar </span><b>autorización</b><span> (permisos) de los recursos de AWS en el backend que los usuarios autenticados necesitan acceder.</span><span> Cognito frecuentemente se integra con IAM para otorgar credenciales temporales y limitadas a los usuarios.</span></p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p><b>AWS Lambda</b><span> proporciona la capa de compute sin servidor utilizada para gestionar y procesar datos de usuarios (por ejemplo,</span><span> recuperar preferencias del usuario desde una base de datos,</span><span> ejecutar lógica personalizada al momento del registro).</span><span> La combinación crea una solución altamente escalable y segura para la gestión de usuarios.</span></p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>Incorrecto</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>Amazon API Gateway con AWS WAF y AWS KMS</b></p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t\t\t<b>Amazon API Gateway</b><span> gestiona endpoints de API.</span> <b>AWS WAF (Web Application Firewall)</b><span> proporciona protección contra ataques web.</span> <b>AWS KMS (Key Management Service)</b> gestiona claves de cifrado. Esta combinación se enfoca en <b>seguridad y entrega de API</b>, pero <b>no incluye un servicio dedicado para gestión de identidad de usuarios (autenticación y autorización)</b>, que es el requisito principal.\n\t\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<b>Amazon DynamoDB con AWS CodePipeline y AWS Glue</b>\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t\t\t<b>Amazon DynamoDB</b> es una base de datos para almacenar datos de usuarios. <b>AWS CodePipeline</b><span> es un servicio de entrega continua.</span> <b>AWS Glue</b> es un servicio ETL. Esta combinación se enfoca en <b>almacenamiento de datos, despliegue y transformación de datos</b>. Le falta completamente un servicio para manejar <b>autenticación y autorización de usuarios</b> (registro/inicio de sesión), lo que la hace inadecuada para los requisitos de seguridad de front-end.\n\t\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<b>AWS IAM con Amazon RDS y AWS Step Functions</b>\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t\t\t<b>AWS IAM</b> maneja autorización pero <b>no proporciona un directorio de usuarios ni servicio de autenticación</b> (flujo de registro/inicio de sesión) para aplicaciones web. <b>Amazon RDS</b> es una base de datos relacional. <b>AWS Step Functions</b> orquesta flujos de trabajo. Esta combinación se enfoca en <b>almacenamiento de datos de backend y orquestación de flujos de trabajo</b>, no en la solución de autenticación e identidad de usuarios gestionada y orientada al usuario que se requiere.\n\t\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>"
+    },
+    {
+      "id": "7-22",
+      "number": 22,
+      "text": "Necesitas construir un pipeline de procesamiento de datos en tiempo real con múltiples etapas, incluyendo ingesta de datos, procesamiento y análisis. La solución debe manejar alto volumen de datos, proporcionar escalabilidad y soportar procesamiento complejo de eventos. ¿Qué servicios de AWS deberías usar?",
+      "options": [
+        {
+          "text": "Amazon Kinesis Data Streams con Amazon Kinesis Data Firehose, AWS Lambda y Amazon Elasticsearch Service",
+          "correct": true
+        },
+        {
+          "text": "AWS Step Functions con Amazon S3, Amazon Redshift y AWS CodePipeline",
+          "correct": false
+        },
+        {
+          "text": "Amazon RDS con AWS Glue, Amazon QuickSight y AWS CloudWatch",
+          "correct": false
+        },
+        {
+          "text": "Amazon EMR con Apache Kafka, AWS Lambda y Amazon DynamoDB",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<b>Amazon Kinesis Data Streams con Amazon Kinesis Data Firehose, AWS Lambda y Amazon Elasticsearch Service (ahora Amazon OpenSearch Service)</b>\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p><b>Amazon Kinesis Data Streams (KDS)</b> proporciona el componente fundamental para <b>ingesta de datos de alto volumen</b> y <b>en tiempo real</b>. Retiene datos hasta por un año y permite que múltiples consumidores procesen los datos simultáneamente, soportando <b>procesamiento complejo de eventos</b>.</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p><b>AWS Lambda</b> actúa como una capa de cómputo serverless y ligera para procesar datos directamente desde KDS <b>en tiempo real</b> (Etapa de procesamiento), permitiendo análisis o transformación inmediata (por ejemplo, procesamiento complejo de eventos).</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p><b>Amazon Kinesis Data Firehose</b> se usa para capturar y cargar automáticamente los datos de streaming procesados en almacenes de datos o servicios de análisis con mínima administración (Etapa de carga).</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t\t\t<b>Amazon Elasticsearch Service (Amazon OpenSearch Service)</b> es ideal para la <b>etapa de análisis</b>, proporcionando un servicio administrado para búsqueda rápida y escalable, análisis de registros y visualización de datos en tiempo real, cumpliendo con los requisitos de <b>escalabilidad y análisis</b>.\n\t\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>Incorrecto</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<b>AWS Step Functions con Amazon S3, Amazon Redshift y AWS CodePipeline</b>\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>Esta combinación está diseñada para <b>procesamiento por lotes (ETL) y despliegue</b>. <b>Step Functions</b> orquesta flujos de trabajo, pero no es un servicio de ingesta de streaming de alto rendimiento en tiempo real. <b>Amazon Redshift</b> es un almacén de datos para análisis, y <b>AWS CodePipeline</b> maneja entrega continua. Esta opción carece completamente de una capa dedicada de ingesta y procesamiento de datos en tiempo real (como Kinesis o Kafka).</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<b>Amazon RDS con AWS Glue, Amazon QuickSight y AWS CloudWatch</b>\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t\t\t<b>Amazon RDS (Relational Database Service)</b> está diseñado para cargas de trabajo OLTP (transaccionales), no para ingesta de datos de streaming de alto volumen. <b>AWS Glue</b> es un servicio de ETL principalmente usado para transformación de datos por lotes. <b>Amazon QuickSight</b> es una herramienta de BI. Esta combinación es adecuada para <b>análisis por lotes</b> en datos estructurados, pero no puede manejar los requisitos de <b>streaming en tiempo real de alto volumen</b> y procesamiento complejo de eventos.\n\t\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<b>Amazon EMR con Apache Kafka, AWS Lambda y Amazon DynamoDB</b>\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>Esta opción usa el sistema de mensajería <b>Apache Kafka</b>, que es una opción válida, pero la combinación es ineficiente y excesivamente compleja. <b>Amazon EMR (Elastic MapReduce)</b> es un servicio administrado complejo para ejecutar marcos de procesamiento de datos a gran escala (como Spark o Hadoop) y típicamente se usa para <b>procesamiento por lotes</b>, no como controlador principal para un pipeline en tiempo real. Usar EMR para administrar Kafka junto con Lambda para procesamiento, aunque técnicamente es posible, no es la solución estándar, simple y serverless de mejores prácticas que proporcionan los servicios nativos de Kinesis.</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>"
+    },
+    {
+      "id": "7-23",
+      "number": 23,
+      "text": "Se te encarga diseñar una solución rentable para procesar y analizar grandes conjuntos de datos que se ingieren periódicamente desde diversas fuentes. La solución debe minimizar los costos continuos y manejar eficientemente las necesidades de procesamiento esporádico. ¿Cuál combinación de servicios de AWS es la más adecuada?",
+      "options": [
+        {
+          "text": "Amazon S3 con AWS Glue y Amazon Athena",
+          "correct": true
+        },
+        {
+          "text": "Amazon EMR con AWS Batch y Amazon DynamoDB",
+          "correct": false
+        },
+        {
+          "text": "Amazon Redshift con AWS Lambda y Amazon CloudWatch",
+          "correct": false
+        },
+        {
+          "text": "AWS Data Pipeline con Amazon RDS y AWS Step Functions",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>Amazon S3 con AWS Glue y Amazon Athena</b></p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p><b>Amazon S3 (Simple Storage Service):</b> Proporciona almacenamiento altamente duradero y rentable para grandes conjuntos de datos sin procesar (base de data lake). El bajo costo de almacenamiento de S3 es crucial para <b>minimizar costos continuos</b>.</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t\t\t<b>AWS Glue:</b> Un servicio <b>ETL (Extract, Transform, Load)</b> serverless que se cobra solo por el tiempo que el cluster de procesamiento está activo. Esto es ideal para manejar <b>ingestión periódica y necesidades de procesamiento esporádico</b> de manera eficiente, sin el costo de mantener recursos de cómputo siempre activos.\n\t\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p><b>Amazon Athena:</b> Un servicio de consultas interactivo y serverless que permite analizar directamente los datos almacenados en S3 usando SQL estándar. Athena se cobra por consulta (según los datos escaneados), lo que garantiza <b>minimizar costos continuos</b> y es altamente eficiente para <b>necesidades analíticas esporádicas</b>.</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>Incorrecto</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>Amazon EMR con AWS Batch y Amazon DynamoDB</b></p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t\t\t<b>Amazon EMR (Elastic MapReduce)</b> es un servicio complejo que requiere gestionar clusters de EC2, lo que genera <b>costos continuos</b> incluso cuando el cluster está reducido. Aunque es poderoso, EMR no es tan rentable para uso <i>esporádico</i> como Glue serverless. <b>AWS Batch</b> es para procesamiento batch de propósito general, y <b>DynamoDB</b> es una base de datos NoSQL transaccional, no es el destino típico para procesamiento analítico a gran escala de datos ingeridos periódicamente.\n\t\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<b>Amazon Redshift con AWS Lambda y Amazon CloudWatch</b>\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t\t\t<b>Amazon Redshift</b> es un almacén de datos muy poderoso, pero típicamente es un servicio <b>provisionado</b> (a menos que uses la opción Serverless, pero Redshift generalmente es más costoso que Athena). Los clusters Redshift provisionados generan <b>costos continuos</b> las 24/7. Esto lo hace inadecuado para el requisito de <b>minimizar costos continuos</b> y manejar eficientemente <b>necesidades de procesamiento esporádico</b>. Lambda y CloudWatch son servicios auxiliares aquí.\n\t\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<b>AWS Data Pipeline con Amazon RDS y AWS Step Functions</b>\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>Esta combinación es arquitectónicamente inadecuada para procesamiento analítico a gran escala. <b>Amazon RDS (Relational Database Service)</b> está diseñado para cargas de trabajo <b>transaccionales (OLTP)</b>, no para almacenar y analizar grandes conjuntos de datos no estructurados típicos de un data lake. <b>AWS Data Pipeline</b> es una herramienta de orquestación antigua, y <b>Step Functions</b> es un orquestador de flujos de trabajo moderno, pero ninguno aborda el requisito central de almacenamiento y consulta de datos analíticos escalables y rentables.</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>"
+    },
+    {
+      "id": "7-24",
+      "number": 24,
+      "text": "A medida que las regulaciones de privacidad de datos se vuelven más estrictas, necesitas asegurar que los datos sensibles estén encriptados en tránsito y en reposo. ¿Cuál servicio de AWS proporciona soluciones integrales de encriptación para cumplir con estos requisitos?",
+      "options": [
+        {
+          "text": "AWS Shield",
+          "correct": false
+        },
+        {
+          "text": "AWS Security Hub",
+          "correct": false
+        },
+        {
+          "text": "AWS Key Management Service (KMS)",
+          "correct": true
+        },
+        {
+          "text": "AWS IAM",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>AWS Key Management Service (KMS)</b></p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t\t\t<b><span>AWS KMS</span></b><span> es el servicio administrado y centralizado diseñado específicamente para gestionar el ciclo de vida y la seguridad de las claves criptográficas.</span> Lo utilizan casi todos los otros servicios de AWS (como S3, EBS, RDS y DynamoDB) para realizar encriptación. Las claves de KMS encriptan datos <b>en reposo</b> cuando se almacenan en estos servicios y son a menudo fundamentales en el proceso de encriptación de datos <b>en tránsito</b> (por ejemplo, gestionando las claves para encriptación del lado del cliente o integrándose con SSL/TLS). <span>Al proporcionar control sobre las claves, KMS garantiza que los procesos de encriptación cumplan con requisitos estrictos de </span><b><span>privacidad de datos y cumplimiento normativo</span></b><span>.</span>\n\t\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<div>\n\t\t\t\t\t\t\t<p>Incorrecto</p>\n\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t<p><b>AWS Shield</b></p>\n\t\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t\t\t\t<b><span>AWS Shield</span></b><span> es un servicio administrado que proporciona </span><b><span>protección contra ataques de Denegación de Servicio Distribuido (DDoS)</span></b><span>.</span> Su propósito es la resiliencia y disponibilidad de la red, no la encriptación de datos ni la gestión de claves. No proporciona la funcionalidad criptográfica necesaria para encriptar datos sensibles en tránsito o en reposo.\n\t\t\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t<p><b>AWS Security Hub</b></p>\n\t\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t\t\t\t<b><span>AWS Security Hub</span></b><span> es un servicio que proporciona una </span><b><span>vista centralizada de alertas de seguridad y estado de cumplimiento</span></b><span> en múltiples cuentas y servicios de AWS.</span>\n\t\t\t\t\t\t\t\t\t\t\t\t<span>Agrega, organiza y prioriza hallazgos de seguridad.</span> Aunque reporta si se cumplen los estándares de encriptación, es un <b>panel de monitoreo y cumplimiento</b>, no un servicio que <i>realice</i> encriptación ni <i>gestione</i> las claves de encriptación.\n\t\t\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t<p><b>AWS IAM (Identity and Access Management)</b></p>\n\t\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t\t\t\t<b><span>AWS IAM</span></b><span> se utiliza para </span><b><span>autenticación y autorización</span></b><span>—controlando </span><i><span>quién</span></i><span> puede acceder a </span><i><span>qué</span></i><span> recursos y </span><i><span>cómo</span></i><span>.</span> Aunque las políticas de IAM son necesarias para controlar el acceso a las claves de encriptación en KMS, IAM en sí <b>no crea, gestiona ni realiza la encriptación real</b> de datos. Es un servicio de plano de control, no un mecanismo de protección de datos.\n\t\t\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t</div>"
+    },
+    {
+      "id": "7-25",
+      "number": 25,
+      "text": "Para una aplicación de computación de alto rendimiento (HPC) que requiere capacidades de procesamiento paralelo masivo, baja latencia e integración con otros servicios de AWS, ¿cuál es la combinación de servicios de AWS que deberías utilizar?",
+      "options": [
+        {
+          "text": "AWS Batch con Amazon EC2 Spot Instances, Amazon EFS y AWS ParallelCluster",
+          "correct": true
+        },
+        {
+          "text": "Amazon EMR con Amazon EC2 y Amazon RDS",
+          "correct": false
+        },
+        {
+          "text": "Amazon Lightsail con AWS Glue y AWS CodePipeline",
+          "correct": false
+        },
+        {
+          "text": "AWS Lambda con Amazon DynamoDB y Amazon CloudFront",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>AWS Batch con Amazon EC2 Spot Instances, Amazon EFS y AWS ParallelCluster</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<strong>Es correcta</strong> porque esta combinación está específicamente diseñada para <b>cargas de trabajo HPC</b>: <ul>\n\t\t\t\t\t\t\t\t\t<li><b>AWS Batch</b> gestiona y programa trabajos por lotes de manera eficiente.</li>\n\t\t\t\t\t\t\t\t\t<li><b>Amazon EC2 Spot Instances</b> proporcionan poder de cómputo rentable para grandes cargas paralelas.</li>\n\t\t\t\t\t\t\t\t\t<li><b>Amazon EFS (Elastic File System)</b> ofrece almacenamiento compartido escalable con baja latencia.</li>\n\t\t\t\t\t\t\t\t\t<li><b>AWS ParallelCluster</b> simplifica la implementación y gestión de clusters HPC.</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>En conjunto, estos servicios entregan <b>procesamiento paralelo masivo, baja latencia e integración perfecta con AWS</b>, lo que cumple con los requisitos. </li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Amazon EMR con Amazon EC2 y Amazon RDS</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Es incorrecta porque <b>Amazon EMR</b> está optimizado para <b>análisis de datos masivos</b> (Hadoop, Spark), no para cargas HPC.</li>\n\t\t\t\t\t\t\t<li>RDS es un servicio de base de datos relacional, no es adecuado para procesamiento paralelo HPC.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Amazon Lightsail con AWS Glue y AWS CodePipeline</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Es incorrecta porque <b>Lightsail</b> está diseñado para aplicaciones web simples y despliegues pequeños.</li>\n\t\t\t\t\t\t\t<li>AWS Glue es para ETL y CodePipeline es para automatización CI/CD.</li>\n\t\t\t\t\t\t\t<li>Ninguno de estos está diseñado para cargas de trabajo paralelas HPC.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>AWS Lambda con Amazon DynamoDB y Amazon CloudFront</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Es incorrecta porque <b>Lambda</b> es serverless y controlada por eventos, no es adecuada para HPC que requiere cómputo paralelo sostenido.</li>\n\t\t\t\t\t\t\t<li>DynamoDB es una base de datos NoSQL y CloudFront es una CDN — ninguno de los dos soporta requisitos HPC.</li>\n\t\t\t\t\t\t</ul>"
+    },
+    {
+      "id": "7-26",
+      "number": 26,
+      "text": "¿Cuál servicio de AWS te permite automatizar los procesos de despliegue de tus aplicaciones?",
+      "options": [
+        {
+          "text": "Amazon CloudFormation",
+          "correct": false
+        },
+        {
+          "text": "AWS CodePipeline",
+          "correct": true
+        },
+        {
+          "text": "Amazon CloudWatch",
+          "correct": false
+        },
+        {
+          "text": "Amazon EC2",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p><b>AWS CodePipeline</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Es correcto porque <b>AWS CodePipeline</b> es un <b>servicio completamente administrado de integración continua y entrega continua (CI/CD)</b>.</li>\n\t\t\t\t\t\t\t<li>Automatiza las fases de <b>construcción, prueba y despliegue</b> de aplicaciones, garantizando una entrega rápida y confiable de actualizaciones.</li>\n\t\t\t\t\t\t\t<li>Es el servicio específicamente diseñado para <b>flujos de trabajo de automatización de despliegue</b> en AWS.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p><b>Amazon CloudFormation</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Es incorrecto porque CloudFormation automatiza el <b>aprovisionamiento de infraestructura</b> (crear pilas de recursos de AWS), no el proceso de despliegue del código de aplicación.</li>\n\t\t\t\t\t\t\t<li>Es infraestructura como código, no CI/CD.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>Amazon CloudWatch</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Es incorrecto porque CloudWatch es para <b>monitoreo y observabilidad</b> (métricas, logs, alarmas).</li>\n\t\t\t\t\t\t\t<li>No automatiza despliegues.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>Amazon EC2</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Es incorrecto porque EC2 proporciona <b>instancias de computación</b> para ejecutar aplicaciones.</li>\n\t\t\t\t\t\t\t<li>No automatiza procesos de despliegue; solo aloja cargas de trabajo.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>&nbsp;</p>"
+    },
+    {
+      "id": "7-27",
+      "number": 27,
+      "text": "Una empresa necesita implementar una estrategia de backup para sus datos críticos en múltiples servicios de AWS con backups automáticos programados y retención a largo plazo. ¿Cuáles servicios de AWS se deben utilizar?",
+      "options": [
+        {
+          "text": "Amazon S3 con AWS Lambda y AWS CodePipeline",
+          "correct": false
+        },
+        {
+          "text": "Amazon Aurora con AWS Backup y Amazon CloudWatch",
+          "correct": false
+        },
+        {
+          "text": "Amazon RDS con AWS Glue y AWS CloudTrail",
+          "correct": false
+        },
+        {
+          "text": "AWS Backup con Amazon S3 y Amazon RDS",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>AWS Backup con Amazon S3 y Amazon RDS</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Es correcto porque <b>AWS Backup</b> es el servicio nativo diseñado para la gestión centralizada y automatizada de backups en múltiples servicios de AWS.</li>\n\t\t\t\t\t\t\t<li>Admite backups programados, políticas de ciclo de vida y retención a largo plazo.</li>\n\t\t\t\t\t\t\t<li>Combinar AWS Backup con <b>Amazon S3</b> (para almacenamiento duradero) y <b>Amazon RDS</b> (para backups de bases de datos) proporciona una solución completa para la protección de datos críticos.</li>\n\t\t\t\t\t\t\t<li>Esta opción aborda directamente los requisitos: automatización, programación y retención a largo plazo.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Amazon S3 con AWS Lambda y AWS CodePipeline</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Es incorrecto porque, aunque S3 puede almacenar backups y Lambda/CodePipeline pueden automatizar tareas, esta es una <b>solución personalizada</b> en lugar de una estrategia de backup nativa.</li>\n\t\t\t\t\t\t\t<li>Carece de la gestión centralizada de backups, características de cumplimiento y políticas de retención que proporciona AWS Backup.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Amazon Aurora con AWS Backup y Amazon CloudWatch</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Es incorrecto porque esta opción es demasiado limitada.</li>\n\t\t\t\t\t\t\t<li>Aurora es solo un motor de base de datos, no una solución para <b>múltiples servicios de AWS</b>.</li>\n\t\t\t\t\t\t\t<li>CloudWatch proporciona monitoreo y alertas, no programación de backups ni retención.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Amazon RDS con AWS Glue y AWS CloudTrail</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Es incorrecto porque Glue es para operaciones <b>ETL (extracción, transformación y carga)</b>, no para backups.</li>\n\t\t\t\t\t\t\t<li>CloudTrail es para <b>auditar llamadas a API</b>, no para programación de backups o retención.</li>\n\t\t\t\t\t\t\t<li>Esta combinación no cumple con los requisitos de backups automáticos, programados y a largo plazo.</li>\n\t\t\t\t\t\t</ul>"
+    },
+    {
+      "id": "7-28",
+      "number": 28,
+      "text": "Estás diseñando un sistema que necesita ingerir y procesar de manera segura y eficiente datos en streaming desde dispositivos IoT. La solución debe escalar con volúmenes de datos crecientes y garantizar la integridad de los datos. ¿Cuáles son los servicios y configuraciones de AWS más adecuados para este requisito?",
+      "options": [
+        {
+          "text": "Amazon EMR con AWS Fargate y AWS CodeDeploy",
+          "correct": false
+        },
+        {
+          "text": "Amazon MSK con AWS CloudFormation, AWS CodePipeline y AWS Step Functions",
+          "correct": false
+        },
+        {
+          "text": "Amazon Kinesis Data Streams con AWS IoT Core, Amazon S3 y AWS Lambda",
+          "correct": true
+        },
+        {
+          "text": "Amazon SQS con AWS Glue, Amazon RDS y Amazon QuickSight",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon Kinesis Data Streams maneja la ingesta de datos de alto volumen, AWS IoT Core administra la comunicación de dispositivos IoT, Amazon S3 garantiza el almacenamiento de datos y AWS Lambda procesa los datos, asegurando la integridad y escalabilidad de los datos.</p>"
+    },
+    {
+      "id": "7-29",
+      "number": 29,
+      "text": "Necesitás crear una red privada virtual (VPN) entre tu red local y tu ambiente en AWS. ¿Cuál servicio de AWS deberías usar?",
+      "options": [
+        {
+          "text": "Amazon Direct Connect",
+          "correct": false
+        },
+        {
+          "text": "AWS VPC Peering",
+          "correct": false
+        },
+        {
+          "text": "Amazon Route 53",
+          "correct": false
+        },
+        {
+          "text": "AWS VPN",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>AWS VPN te permite establecer una conexión segura y encriptada entre tu red local y tu ambiente en AWS.</p>"
+    },
+    {
+      "id": "7-30",
+      "number": 30,
+      "text": "Una institución financiera necesita asegurar registros financieros sensibles mientras permite que equipos internos accedan y analicen los datos. La solución debe incluir encriptación y controles de acceso granulares. ¿Cuáles servicios de AWS son adecuados?",
+      "options": [
+        {
+          "text": "Amazon S3 con AWS KMS e AWS IAM",
+          "correct": true
+        },
+        {
+          "text": "AWS Secrets Manager con Amazon RDS y AWS CloudTrail",
+          "correct": false
+        },
+        {
+          "text": "AWS Key Management Service (KMS) con Amazon CloudFront y AWS WAF",
+          "correct": false
+        },
+        {
+          "text": "Amazon Aurora con AWS KMS y AWS Shield Advanced",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon S3 proporciona almacenamiento escalable, AWS KMS maneja la encriptación e AWS IAM controla los permisos de acceso, garantizando un acceso seguro y controlado a los registros financieros sensibles.</p>"
+    },
+    {
+      "id": "7-31",
+      "number": 31,
+      "text": "Una empresa necesita implementar un plan de recuperación ante desastres robusto con copias de seguridad automatizadas y recuperación rápida para una aplicación crítica que se ejecuta en AWS. ¿Qué servicios y estrategias de AWS debería usar?",
+      "options": [
+        {
+          "text": "Amazon DynamoDB con AWS CloudFormation y Amazon EC2",
+          "correct": false
+        },
+        {
+          "text": "Amazon Aurora con AWS Fargate y AWS Step Functions",
+          "correct": false
+        },
+        {
+          "text": "Amazon S3 con AWS Lambda y AWS CodeDeploy",
+          "correct": false
+        },
+        {
+          "text": "Amazon RDS con AWS Backup, Amazon CloudWatch y AWS Elastic Disaster Recovery",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon RDS proporciona copias de seguridad automatizadas, AWS Backup centraliza la gestión de copias de seguridad, Amazon CloudWatch monitorea la aplicación y AWS Elastic Disaster Recovery facilita la recuperación rápida, lo que garantiza un plan de recuperación ante desastres robusto.</p>"
+    },
+    {
+      "id": "7-32",
+      "number": 32,
+      "text": "Necesitás implementar una solución de recuperación ante desastres que garantice una pérdida mínima de datos y recuperación rápida para una aplicación crítica en ejecución en AWS. ¿Cuáles son los servicios y estrategias de AWS que deberías usar para lograr esto?",
+      "options": [
+        {
+          "text": "Amazon Aurora con AWS Lambda, AWS CodeDeploy y AWS Step Functions",
+          "correct": false
+        },
+        {
+          "text": "Amazon EC2 con Amazon EBS Snapshots, AWS Glue y Amazon QuickSight",
+          "correct": false
+        },
+        {
+          "text": "Amazon RDS con deployments Multi-AZ, AWS Backup y AWS Elastic Disaster Recovery",
+          "correct": true
+        },
+        {
+          "text": "Amazon S3 con AWS CloudTrail, AWS IAM y Amazon CloudWatch",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Los deployments Multi-AZ de Amazon RDS proporcionan alta disponibilidad, AWS Backup automatiza las copias de seguridad, y AWS Elastic Disaster Recovery facilita la recuperación rápida, garantizando una pérdida mínima de datos y recuperación rápida.</p>"
+    },
+    {
+      "id": "7-33",
+      "number": 33,
+      "text": "Para optimizar costo y rendimiento en tu pipeline de análisis de datos, ¿qué combinación de servicios de AWS usarías para procesamiento de datos por lotes y análisis en tiempo real?",
+      "options": [
+        {
+          "text": "Amazon EMR para procesamiento por lotes y Amazon Kinesis para análisis en tiempo real",
+          "correct": true
+        },
+        {
+          "text": "AWS Lambda con Amazon S3 y Amazon Athena",
+          "correct": false
+        },
+        {
+          "text": "Amazon Redshift con AWS Glue para ETL y Amazon DynamoDB",
+          "correct": false
+        },
+        {
+          "text": "Amazon RDS con read replicas y Amazon CloudFront",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon EMR es adecuado para procesamiento de datos por lotes, mientras que Amazon Kinesis proporciona capacidades de análisis en tiempo real, cubriendo juntos tanto necesidades de datos por lotes como de streaming.</p>"
+    },
+    {
+      "id": "7-34",
+      "number": 34,
+      "text": "Una empresa está implementando una solución sin servidores para procesar cargas de contenido generado por usuarios. La solución debe manejar cargas, procesamiento y notificaciones sin necesidad de administrar servidores. ¿Cuáles servicios de AWS se deben utilizar?",
+      "options": [
+        {
+          "text": "AWS Fargate con Amazon ECS y AWS CloudFormation",
+          "correct": false
+        },
+        {
+          "text": "AWS Step Functions con Amazon RDS y AWS SQS",
+          "correct": false
+        },
+        {
+          "text": "Amazon S3 con AWS Lambda y Amazon SNS",
+          "correct": true
+        },
+        {
+          "text": "Amazon API Gateway con AWS Lambda y Amazon DynamoDB",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon S3 maneja las cargas de archivos, AWS Lambda procesa el contenido de forma sin servidores, y Amazon SNS envía las notificaciones, proporcionando una solución completamente administrada para manejar contenido generado por usuarios.</p>"
+    },
+    {
+      "id": "7-35",
+      "number": 35,
+      "text": "Una empresa necesita construir una arquitectura sin servidores para un pipeline de ingesta de datos que procese datos de diversas fuentes y realice transformaciones antes de almacenarlos. La solución debe ser rentable y escalable. ¿Cuáles servicios de AWS se deben usar?",
+      "options": [
+        {
+          "text": "Amazon EMR con AWS Lambda y AWS CodePipeline",
+          "correct": false
+        },
+        {
+          "text": "Amazon EC2 con AWS Step Functions y Amazon DynamoDB",
+          "correct": false
+        },
+        {
+          "text": "Amazon RDS con AWS Data Pipeline y AWS Fargate",
+          "correct": false
+        },
+        {
+          "text": "AWS Lambda con Amazon Kinesis Data Firehose, Amazon S3 y AWS Glue",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>AWS Lambda proporciona procesamiento de datos sin servidores, Amazon Kinesis Data Firehose maneja la ingesta de datos, Amazon S3 almacena los datos, y AWS Glue realiza las transformaciones, creando una arquitectura rentable y escalable.</p>"
+    },
+    {
+      "id": "7-36",
+      "number": 36,
+      "text": "Una empresa quiere construir un sistema de recomendaciones en tiempo real que utilice datos del comportamiento de los usuarios en su sitio web. El sistema necesita ser altamente escalable y receptivo, con latencia mínima. ¿Qué servicios y arquitectura de AWS se deben utilizar para lograr esto?",
+      "options": [
+        {
+          "text": "Amazon EMR con AWS Fargate y AWS AppSync",
+          "correct": false
+        },
+        {
+          "text": "Amazon Redshift con Amazon RDS y AWS Glue",
+          "correct": false
+        },
+        {
+          "text": "Amazon Kinesis Data Streams con AWS Lambda, Amazon DynamoDB y Amazon Personalize",
+          "correct": true
+        },
+        {
+          "text": "Amazon SQS con AWS Lambda y Amazon Elasticsearch Service",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon Kinesis Data Streams maneja la ingesta de datos en tiempo real, AWS Lambda procesa los datos, Amazon DynamoDB almacena los datos del usuario y Amazon Personalize proporciona servicios de recomendación escalables con latencia mínima.</p>"
+    },
+    {
+      "id": "7-37",
+      "number": 37,
+      "text": "Necesitás desplegar una aplicación web con dependencias complejas y asegurar que cumpla con las mejores prácticas de seguridad. La aplicación debe desplegarse de manera que aisle diferentes componentes mientras se garantiza una comunicación segura entre ellos. ¿Cuáles son los servicios y características de AWS más adecuados para este escenario?",
+      "options": [
+        {
+          "text": "Usar Amazon ECS con AWS Fargate para containers, Amazon VPC para aislamiento, y AWS Secrets Manager para gestionar información sensible.",
+          "correct": true
+        },
+        {
+          "text": "Desplegar la aplicación en instancias Amazon EC2 con Security Groups, Amazon S3 para activos estáticos, y AWS CloudTrail para monitoreo.",
+          "correct": false
+        },
+        {
+          "text": "Desplegar la aplicación en AWS Elastic Beanstalk con Amazon RDS, y usar AWS CloudFormation como infraestructura como código.",
+          "correct": false
+        },
+        {
+          "text": "Usar AWS Lambda con Amazon API Gateway para microservicios, Amazon RDS para la base de datos, y AWS WAF para seguridad.",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon ECS con AWS Fargate aísla containers, Amazon VPC proporciona aislamiento de red, y AWS Secrets Manager gestiona de manera segura la información sensible, alineándose con las mejores prácticas de seguridad.</p>"
+    },
+    {
+      "id": "7-38",
+      "number": 38,
+      "text": "Una empresa está desarrollando una nueva aplicación que implica procesamiento de datos sensibles y requiere auditoría robusta, seguimiento detallado de actividades de usuarios y notificaciones en tiempo real. ¿Cuáles son los servicios y configuraciones de AWS que deberían usarse para satisfacer estas necesidades?",
+      "options": [
+        {
+          "text": "AWS Shield Advanced con Amazon RDS, AWS Lambda y Amazon CloudFront",
+          "correct": false
+        },
+        {
+          "text": "AWS CloudTrail con Amazon CloudWatch, AWS Config y Amazon SNS",
+          "correct": true
+        },
+        {
+          "text": "Amazon S3 con AWS KMS, AWS WAF y Amazon QuickSight",
+          "correct": false
+        },
+        {
+          "text": "Amazon Athena con AWS Glue, AWS Batch y Amazon CloudWatch",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>AWS CloudTrail proporciona auditoría detallada, Amazon CloudWatch ofrece seguimiento en tiempo real y notificaciones, AWS Config monitorea cambios de configuración y Amazon SNS envía notificaciones, asegurando un monitoreo y procesamiento de datos integral.</p>"
+    },
+    {
+      "id": "7-39",
+      "number": 39,
+      "text": "Necesitás diseñar una solución para procesar streams de datos de alta velocidad provenientes de dispositivos IoT manteniendo baja latencia e integridad de datos. ¿Cuáles son los servicios y características de AWS más adecuados para este escenario?",
+      "options": [
+        {
+          "text": "Amazon Kinesis Data Streams con AWS IoT Core y Amazon S3",
+          "correct": true
+        },
+        {
+          "text": "Amazon MSK con AWS IoT Greengrass y Amazon RDS",
+          "correct": false
+        },
+        {
+          "text": "Amazon SQS con AWS Lambda y Amazon DynamoDB",
+          "correct": false
+        },
+        {
+          "text": "Amazon Kinesis Data Firehose con AWS Glue y AWS Step Functions",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon Kinesis Data Streams procesa streams de datos de alta velocidad, AWS IoT Core administra la comunicación de dispositivos IoT y Amazon S3 proporciona almacenamiento escalable y duradero para garantizar la integridad de los datos.</p>"
+    },
+    {
+      "id": "7-40",
+      "number": 40,
+      "text": "Necesitás diseñar una solución para gestionar y distribuir certificados digitales de forma segura en una aplicación global. La solución debe garantizar alta disponibilidad y escalabilidad mientras se mantiene el cumplimiento de estándares de seguridad. ¿Qué servicios de AWS deberías usar?",
+      "options": [
+        {
+          "text": "AWS IAM con AWS Shield Advanced y AWS Config",
+          "correct": false
+        },
+        {
+          "text": "Amazon RDS con AWS Fargate y AWS CodeDeploy",
+          "correct": false
+        },
+        {
+          "text": "AWS Secrets Manager con AWS KMS y Amazon Route 53",
+          "correct": false
+        },
+        {
+          "text": "AWS Certificate Manager con Amazon CloudFront y AWS WAF",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>AWS Certificate Manager gestiona y distribuye certificados digitales, Amazon CloudFront asegura alta disponibilidad y escalabilidad, y AWS WAF protege contra vulnerabilidades web, manteniendo el cumplimiento de estándares de seguridad.</p>"
+    },
+    {
+      "id": "7-41",
+      "number": 41,
+      "text": "Para una tarea de análisis de datos que requiere ejecutar consultas en grandes conjuntos de datos con joins y agregaciones complejas, ¿cuál es el servicio de AWS más apropiado?",
+      "options": [
+        {
+          "text": "Amazon Athena",
+          "correct": true
+        },
+        {
+          "text": "Amazon RDS",
+          "correct": false
+        },
+        {
+          "text": "Amazon DynamoDB",
+          "correct": false
+        },
+        {
+          "text": "Amazon S3",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon Athena es un servicio de consultas interactivo que te permite analizar grandes conjuntos de datos almacenados en Amazon S3 usando consultas SQL estándar.</p>"
+    },
+    {
+      "id": "7-42",
+      "number": 42,
+      "text": "Para implementar una arquitectura serverless en tu aplicación sin gestión de servidores y con escalado automático, ¿cuál de los siguientes servicios de AWS es más apropiado?",
+      "options": [
+        {
+          "text": "Amazon ECS con AWS Fargate",
+          "correct": false
+        },
+        {
+          "text": "Amazon Lightsail con Amazon RDS",
+          "correct": false
+        },
+        {
+          "text": "Amazon EC2 con Auto Scaling y Elastic Load Balancing",
+          "correct": false
+        },
+        {
+          "text": "AWS Lambda con Amazon API Gateway",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>AWS Lambda te permite ejecutar código sin gestionar servidores, y Amazon API Gateway puede exponer estas funciones Lambda a través de APIs, proporcionando una solución completamente serverless con escalado automático.</p>"
+    },
+    {
+      "id": "7-43",
+      "number": 43,
+      "text": "Necesitás implementar una solución serverless para procesar y analizar datos en streaming provenientes de dispositivos IoT, con requisitos de análisis en tiempo real y escalabilidad. ¿Cuál es la arquitectura y los servicios de AWS que deberías utilizar?",
+      "options": [
+        {
+          "text": "Amazon EMR con Amazon Kinesis Data Firehose y AWS Glue",
+          "correct": false
+        },
+        {
+          "text": "Amazon Redshift con Amazon MSK, AWS Lambda y Amazon S3",
+          "correct": false
+        },
+        {
+          "text": "Amazon RDS con Amazon Aurora y AWS Step Functions",
+          "correct": false
+        },
+        {
+          "text": "Amazon Kinesis Data Analytics con Kinesis Data Streams, AWS Lambda y Amazon DynamoDB",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon Kinesis Data Analytics realiza análisis en tiempo real sobre datos en streaming, Kinesis Data Streams se encarga de la ingesta de datos, AWS Lambda procesa los datos, y Amazon DynamoDB almacena los resultados procesados con alto rendimiento.</p>"
+    },
+    {
+      "id": "7-44",
+      "number": 44,
+      "text": "Para una aplicación simple que requiere un servicio de base de datos administrado con copias de seguridad automáticas y escalado, ¿cuál es el servicio de AWS más apropiado?",
+      "options": [
+        {
+          "text": "Amazon Aurora",
+          "correct": false
+        },
+        {
+          "text": "Amazon RDS",
+          "correct": true
+        },
+        {
+          "text": "Amazon DynamoDB",
+          "correct": false
+        },
+        {
+          "text": "Amazon Redshift",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon RDS es un servicio de base de datos administrado que proporciona copias de seguridad automáticas, escalado y varios motores de bases de datos, lo que lo hace ideal para aplicaciones simples que necesitan características de base de datos administrada.</p>"
+    },
+    {
+      "id": "7-45",
+      "number": 45,
+      "text": "Estás trabajando en un proyecto que implica analizar comentarios de clientes almacenados en archivos de texto distribuidos en varios buckets de Amazon S3. ¿Cuál sería el servicio de AWS más apropiado para analizar estos datos de texto no estructurados?",
+      "options": [
+        {
+          "text": "Amazon SageMaker",
+          "correct": false
+        },
+        {
+          "text": "Amazon Redshift",
+          "correct": false
+        },
+        {
+          "text": "Amazon Athena",
+          "correct": false
+        },
+        {
+          "text": "Amazon Comprehend",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon Comprehend es un servicio de procesamiento de lenguaje natural (NLP) que puede analizar datos de texto no estructurados, como comentarios de clientes, para extraer insights y análisis de sentimiento.</p>"
+    },
+    {
+      "id": "7-46",
+      "number": 46,
+      "text": "Estás construyendo un pipeline de procesamiento de datos que requiere ingerir datos en tiempo real desde múltiples fuentes, procesarlos y almacenar los resultados para análisis. La solución debe manejar alto rendimiento con latencia mínima. ¿Qué servicios y arquitectura de AWS deberías usar?",
+      "options": [
+        {
+          "text": "Amazon SQS con AWS Lambda, Amazon EMR y Amazon Elasticsearch Service",
+          "correct": false
+        },
+        {
+          "text": "Amazon S3 con AWS Glue, Amazon Athena y Amazon RDS",
+          "correct": false
+        },
+        {
+          "text": "Amazon Kinesis Data Streams con AWS Lambda, Amazon S3 y Amazon Redshift",
+          "correct": true
+        },
+        {
+          "text": "Amazon MSK con AWS Step Functions, Amazon DynamoDB y Amazon QuickSight",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon Kinesis Data Streams maneja la ingesta de datos en tiempo real, AWS Lambda procesa los datos, Amazon S3 almacena los resultados intermedios y Amazon Redshift proporciona capacidades de análisis con latencia mínima.</p>"
+    },
+    {
+      "id": "7-47",
+      "number": 47,
+      "text": "Estás ejecutando un sitio web estático y necesitas almacenar y servir sus assets. ¿Cuál sería el servicio de AWS más rentable para este propósito?",
+      "options": [
+        {
+          "text": "Amazon S3",
+          "correct": true
+        },
+        {
+          "text": "Amazon EBS",
+          "correct": false
+        },
+        {
+          "text": "Amazon RDS",
+          "correct": false
+        },
+        {
+          "text": "Amazon EC2",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon S3 está diseñado para almacenar y servir contenido estático a bajo costo, lo que lo convierte en el servicio más adecuado para alojar los assets de un sitio web estático.</p>"
+    },
+    {
+      "id": "7-48",
+      "number": 48,
+      "text": "Necesitás implementar un pipeline de procesamiento de datos que maneje grandes volúmenes de información con requisitos de esquema variables. La solución debe proporcionar flexibilidad para transformaciones de datos y soportar evolución de esquema. ¿Cuáles servicios de AWS y qué enfoque de diseño deberías utilizar?",
+      "options": [
+        {
+          "text": "Utilizar Amazon RDS con AWS Step Functions, Amazon S3 para evolución de esquema, y AWS CloudFormation para orquestación del pipeline.",
+          "correct": false
+        },
+        {
+          "text": "Implementar Amazon EMR con Apache Hadoop, Amazon S3 para almacenamiento, y AWS Lambda para transformaciones de datos.",
+          "correct": false
+        },
+        {
+          "text": "Usar Amazon Glue con AWS Glue Data Catalog para gestión de esquemas, Amazon Kinesis Data Firehose para ingesta de datos, y Amazon Redshift para análisis.",
+          "correct": true
+        },
+        {
+          "text": "Desplegar Amazon MSK para datos en streaming, usar Amazon DynamoDB para almacenamiento de datos, y Amazon QuickSight para visualización.",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon Glue proporciona capacidades de gestión de esquemas y ETL, AWS Glue Data Catalog soporta evolución de esquema, Amazon Kinesis Data Firehose maneja la ingesta de datos, y Amazon Redshift ofrece análisis sobre los datos procesados.</p>"
+    },
+    {
+      "id": "7-49",
+      "number": 49,
+      "text": "Tu empresa necesita procesar archivos de imagen a gran escala y realizar transformaciones como redimensionamiento y conversión de formato. ¿Cuál servicio de AWS deberías usar?",
+      "options": [
+        {
+          "text": "Amazon Elastic File System (EFS)",
+          "correct": false
+        },
+        {
+          "text": "AWS Lambda con triggers de Amazon S3",
+          "correct": true
+        },
+        {
+          "text": "Amazon EC2 con un paquete de software de procesamiento de imágenes",
+          "correct": false
+        },
+        {
+          "text": "Amazon S3 con AWS Glue para procesos ETL",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>AWS Lambda puede ser activado por eventos de Amazon S3 para procesar archivos de imagen, permitiéndote realizar transformaciones como redimensionamiento y conversión de formato automáticamente.</p>"
+    },
+    {
+      "id": "7-50",
+      "number": 50,
+      "text": "Necesitás implementar una solución para gestionar y rotar secrets de forma segura en múltiples aplicaciones de manera escalable. La solución debe proporcionar gestión centralizada e integración con servicios de AWS. ¿Cuál servicio de AWS deberías usar?",
+      "options": [
+        {
+          "text": "AWS Secrets Manager con AWS KMS y AWS IAM",
+          "correct": true
+        },
+        {
+          "text": "AWS Systems Manager Parameter Store con AWS CloudTrail y AWS Lambda",
+          "correct": false
+        },
+        {
+          "text": "Amazon RDS con AWS CloudFormation y AWS Backup",
+          "correct": false
+        },
+        {
+          "text": "Amazon Cognito con AWS WAF y AWS Shield Advanced",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>AWS Secrets Manager proporciona gestión centralizada de secrets y rotación automática, AWS KMS se encarga del cifrado de los secrets, y AWS IAM gestiona el acceso a esos secrets de forma segura.</p>"
+    },
+    {
+      "id": "7-51",
+      "number": 51,
+      "text": "A medida que tu aplicación evoluciona para incluir IA y machine learning, necesitás automatizar el entrenamiento e implementación de modelos minimizando la intervención manual. ¿Cuál es el servicio de AWS diseñado para facilitar estos flujos de trabajo avanzados de machine learning?",
+      "options": [
+        {
+          "text": "AWS Step Functions",
+          "correct": false
+        },
+        {
+          "text": "Amazon SageMaker Pipelines",
+          "correct": true
+        },
+        {
+          "text": "Amazon Rekognition",
+          "correct": false
+        },
+        {
+          "text": "AWS Glue",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon SageMaker Pipelines ayuda a automatizar y optimizar el proceso de construcción, entrenamiento e implementación de modelos de machine learning, reduciendo la intervención manual e incrementando la eficiencia.</p>"
+    },
+    {
+      "id": "7-52",
+      "number": 52,
+      "text": "Para asegurar que los flujos de procesamiento de datos de una aplicación sean eficientes y rentables mientras se manejan requisitos complejos de transformación, ¿cuáles servicios de AWS se deben utilizar?",
+      "options": [
+        {
+          "text": "AWS Batch con Amazon Redshift y AWS DataSync",
+          "correct": false
+        },
+        {
+          "text": "AWS Step Functions con AWS Lambda y AWS Glue",
+          "correct": true
+        },
+        {
+          "text": "Amazon EMR con Amazon RDS y AWS Data Pipeline",
+          "correct": false
+        },
+        {
+          "text": "Amazon Athena con Amazon S3 y AWS Lambda",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>AWS Step Functions orquesta los flujos de trabajo, AWS Lambda proporciona computación serverless para las transformaciones, y AWS Glue maneja tareas complejas de ETL de manera eficiente y rentable.</p>"
+    },
+    {
+      "id": "7-53",
+      "number": 53,
+      "text": "En el futuro, con el uso cada vez mayor de arquitecturas serverless, necesitarás gestionar flujos de trabajo complejos y dependencias entre funciones serverless. ¿Cuál es el servicio de AWS que te ayudará a orquestar y administrar estos flujos de trabajo?",
+      "options": [
+        {
+          "text": "AWS Step Functions",
+          "correct": true
+        },
+        {
+          "text": "AWS Lambda",
+          "correct": false
+        },
+        {
+          "text": "AWS CodePipeline",
+          "correct": false
+        },
+        {
+          "text": "Amazon API Gateway",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>AWS Step Functions te permite coordinar y gestionar flujos de trabajo entre múltiples funciones de AWS Lambda y otros servicios, facilitando arquitecturas serverless complejas.</p>"
+    }
+  ]
+}

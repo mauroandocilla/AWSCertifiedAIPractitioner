@@ -2,6 +2,8 @@ node_modules
 dist
 dist-ssr
 *.local
+.quiz-translate-batch.json
+others/
 *.tsbuildinfo
 .DS_Store
 

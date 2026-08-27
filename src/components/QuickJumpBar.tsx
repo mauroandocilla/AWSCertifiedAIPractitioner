@@ -10,6 +10,7 @@ const ITEMS = [
   { key: 'glosario', label: 'Glosario', to: '/glosario' },
   { key: 'estudiar', label: 'Cómo estudiarlo', to: '/como-estudiarlo' },
   { key: 'formato', label: 'Formato del examen', to: '/formato-examen' },
+  { key: 'quiz', label: 'Quiz', to: '/quiz' },
 ];
 
 export default function QuickJumpBar({ current }: { current: string }) {

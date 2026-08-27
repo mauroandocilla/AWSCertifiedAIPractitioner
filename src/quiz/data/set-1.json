@@ -1,0 +1,1357 @@
+{
+  "setNumber": 1,
+  "sourceFile": "Practice_Set_1.html",
+  "questionCount": 54,
+  "questions": [
+    {
+      "id": "1-1",
+      "number": 1,
+      "text": "What does Amazon Bedrock‘s guardrails feature help prevent?",
+      "options": [
+        {
+          "text": "Inappropriate or unwanted content",
+          "correct": true
+        },
+        {
+          "text": "Data loss",
+          "correct": false
+        },
+        {
+          "text": "High compute costs",
+          "correct": false
+        },
+        {
+          "text": "Slow response times",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Guardrails help prevent inappropriate or unwanted content.</p>"
+    },
+    {
+      "id": "1-2",
+      "number": 2,
+      "text": "What is the role of context in prompt engineering?",
+      "options": [
+        {
+          "text": "To simplify prompts",
+          "correct": false
+        },
+        {
+          "text": "To reduce model complexity",
+          "correct": false
+        },
+        {
+          "text": "To provide relevant information for better responses",
+          "correct": true
+        },
+        {
+          "text": "To increase token count",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Context provides relevant information that improves the quality and accuracy of responses.</p>"
+    },
+    {
+      "id": "1-3",
+      "number": 3,
+      "text": "How does Amazon Rekognition help in security and surveillance?",
+      "options": [
+        {
+          "text": "By providing personalized recommendations",
+          "correct": false
+        },
+        {
+          "text": "By translating surveillance footage",
+          "correct": false
+        },
+        {
+          "text": "By converting text to speech",
+          "correct": false
+        },
+        {
+          "text": "By analyzing images and videos for security threats",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon Rekognition enhances security and surveillance by analyzing images and videos for threats.</p>"
+    },
+    {
+      "id": "1-4",
+      "number": 4,
+      "text": "What is the role of Amazon SageMaker Data Wrangler in generative AI solutions?",
+      "options": [
+        {
+          "text": "To manage data storage",
+          "correct": false
+        },
+        {
+          "text": "To simplify data preparation and feature engineering",
+          "correct": true
+        },
+        {
+          "text": "To deploy models",
+          "correct": false
+        },
+        {
+          "text": "To monitor model performance",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>SageMaker Data Wrangler simplifies data preparation and feature engineering, crucial steps in developing generative AI models.</p>"
+    },
+    {
+      "id": "1-5",
+      "number": 5,
+      "text": "Which of the following is a feature of Amazon Bedrock‘s playgrounds?",
+      "options": [
+        {
+          "text": "Deploying models to production",
+          "correct": false
+        },
+        {
+          "text": "Experimenting with model prompts and configurations",
+          "correct": true
+        },
+        {
+          "text": "Long-term storage of model outputs",
+          "correct": false
+        },
+        {
+          "text": "Managing infrastructure settings",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Playgrounds allow for experimenting with model prompts and configurations.</p>"
+    },
+    {
+      "id": "1-6",
+      "number": 6,
+      "text": "What is gradient descent used for in machine learning?",
+      "options": [
+        {
+          "text": "To cluster data points",
+          "correct": false
+        },
+        {
+          "text": "To visualize data",
+          "correct": false
+        },
+        {
+          "text": "To increase the complexity of a model",
+          "correct": false
+        },
+        {
+          "text": "To minimize the loss function",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Gradient descent is used to minimize the loss function in machine learning models.</p>"
+    },
+    {
+      "id": "1-7",
+      "number": 7,
+      "text": "What is an epoch in the context of neural networks?",
+      "options": [
+        {
+          "text": "A type of activation function",
+          "correct": false
+        },
+        {
+          "text": "A single pass through the entire training data",
+          "correct": true
+        },
+        {
+          "text": "A measure of model complexity",
+          "correct": false
+        },
+        {
+          "text": "A single pass through a subset of the training data",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>An epoch refers to one complete pass through the entire training dataset.</p>"
+    },
+    {
+      "id": "1-8",
+      "number": 8,
+      "text": "What is the “curse of dimensionality“ in machine learning?",
+      "options": [
+        {
+          "text": "The problem of overfitting due to high variance",
+          "correct": false
+        },
+        {
+          "text": "The challenge of interpreting large datasets",
+          "correct": false
+        },
+        {
+          "text": "The problem of having too few features",
+          "correct": false
+        },
+        {
+          "text": "The phenomenon where high-dimensional spaces complicate data analysis",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>The curse of dimensionality refers to the phenomenon where high-dimensional spaces complicate data analysis and model performance.</p>"
+    },
+    {
+      "id": "1-9",
+      "number": 9,
+      "text": "How does AWS support responsible AI through education?",
+      "options": [
+        {
+          "text": "By offering comprehensive training on bias mitigation, privacy, and explainability",
+          "correct": true
+        },
+        {
+          "text": "By providing only technical training",
+          "correct": false
+        },
+        {
+          "text": "By limiting access to AI technologies",
+          "correct": false
+        },
+        {
+          "text": "By avoiding public engagement",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>AWS offers comprehensive training on bias mitigation, privacy, and explainability to support responsible AI.</p>"
+    },
+    {
+      "id": "1-10",
+      "number": 10,
+      "text": "Which practice helps optimize the performance of foundation models in Amazon Bedrock?",
+      "options": [
+        {
+          "text": "Using generic data sources",
+          "correct": false
+        },
+        {
+          "text": "Fine-tuning with domain-specific data",
+          "correct": true
+        },
+        {
+          "text": "Increasing model complexity",
+          "correct": false
+        },
+        {
+          "text": "Ignoring model updates",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Fine-tuning foundation models with domain-specific data optimizes their performance.</p>"
+    },
+    {
+      "id": "1-11",
+      "number": 11,
+      "text": "How does AWS address the societal impact of AI?",
+      "options": [
+        {
+          "text": "By avoiding collaborations",
+          "correct": false
+        },
+        {
+          "text": "By focusing only on technical performance",
+          "correct": false
+        },
+        {
+          "text": "By prioritizing fairness, privacy, and safety",
+          "correct": true
+        },
+        {
+          "text": "By limiting AI research",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>AWS addresses the societal impact of AI by prioritizing fairness, privacy, and safety.</p>"
+    },
+    {
+      "id": "1-12",
+      "number": 12,
+      "text": "How does Amazon SageMaker Feature Store improve generative AI development?",
+      "options": [
+        {
+          "text": "By automating model deployment",
+          "correct": false
+        },
+        {
+          "text": "By reducing model complexity",
+          "correct": false
+        },
+        {
+          "text": "By providing a centralized repository for managing features",
+          "correct": true
+        },
+        {
+          "text": "By enhancing data encryption",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>SageMaker Feature Store provides a centralized repository for managing features, aiding in efficient model development.</p>"
+    },
+    {
+      "id": "1-13",
+      "number": 13,
+      "text": "What is the purpose of watermarking in AI-generated content by AWS?",
+      "options": [
+        {
+          "text": "To enhance image resolution",
+          "correct": false
+        },
+        {
+          "text": "To store more data",
+          "correct": false
+        },
+        {
+          "text": "To identify and reduce the spread of disinformation",
+          "correct": true
+        },
+        {
+          "text": "To automate content creation",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Watermarking helps identify AI-generated content and reduce the spread of disinformation.</p>"
+    },
+    {
+      "id": "1-14",
+      "number": 14,
+      "text": "How does Amazon SageMaker Ground Truth help in machine learning?",
+      "options": [
+        {
+          "text": "By converting text to speech",
+          "correct": false
+        },
+        {
+          "text": "By providing data labeling services",
+          "correct": true
+        },
+        {
+          "text": "By translating text",
+          "correct": false
+        },
+        {
+          "text": "By detecting objects in images",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon SageMaker Ground Truth provides data labeling services to create high-quality training datasets.</p>"
+    },
+    {
+      "id": "1-15",
+      "number": 15,
+      "text": "What is a key characteristic of a good machine learning model?",
+      "options": [
+        {
+          "text": "High bias and low variance",
+          "correct": false
+        },
+        {
+          "text": "Low bias and high variance",
+          "correct": false
+        },
+        {
+          "text": "Low bias and low variance",
+          "correct": true
+        },
+        {
+          "text": "High bias and high variance",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>A good machine learning model typically has low bias and low variance, ensuring it generalizes well to new data.</p>"
+    },
+    {
+      "id": "1-16",
+      "number": 16,
+      "text": "What does the term “ensemble learning“ refer to in machine learning?",
+      "options": [
+        {
+          "text": "A method for reducing dimensionality",
+          "correct": false
+        },
+        {
+          "text": "Combining multiple models to improve performance",
+          "correct": true
+        },
+        {
+          "text": "Using a single algorithm for prediction",
+          "correct": false
+        },
+        {
+          "text": "A technique for data normalization",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Ensemble learning refers to combining multiple models to improve predictive performance.</p>"
+    },
+    {
+      "id": "1-17",
+      "number": 17,
+      "text": "How can administrators control the behavior of Amazon Q Business?",
+      "options": [
+        {
+          "text": "By setting up IP restrictions",
+          "correct": false
+        },
+        {
+          "text": "By configuring guardrails and keywords",
+          "correct": true
+        },
+        {
+          "text": "By disabling the service for certain users",
+          "correct": false
+        },
+        {
+          "text": "By setting up separate networks",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>\n\t\t\t\t\t\t\t<span>Guardrails and keywords are powerful tools that allow administrators to define the boundaries of Amazon Q Business’s responses, ensuring that it stays within the desired parameters.</span><span>By carefully crafting these guidelines, administrators can control the topics Amazon Q Business discusses, the tone it adopts, and even the specific information it shares.</span> This granular control is essential for maintaining brand consistency, protecting sensitive information, and ensuring that Amazon Q Business aligns with organizational goals.\n\t\t\t\t\t\t</p>"
+    },
+    {
+      "id": "1-18",
+      "number": 18,
+      "text": "Which method is commonly used to handle imbalanced datasets?",
+      "options": [
+        {
+          "text": "Random over-sampling of the minority class",
+          "correct": true
+        },
+        {
+          "text": "Decreasing the number of features",
+          "correct": false
+        },
+        {
+          "text": "Applying PCA",
+          "correct": false
+        },
+        {
+          "text": "Using linear regression",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>\n\t\t\t\t\t\t\t<b><span>Random over-sampling of the minority class</span></b><span> is a commonly used technique to handle imbalanced datasets.</span><span>&nbsp;</span>Here’s how it works:\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ol>\n\t\t\t\t\t\t\t<li><b>Identify the minority class:</b> Determine the class with fewer samples.</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b><span>Randomly sample:</span></b><span> Randomly select samples from the minority class with replacement and add them to the training dataset.</span><span> &nbsp;</span>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li><b>Balance the dataset:</b> Repeat the sampling process until the number of samples in the minority class is equal to or close to the number of samples in the majority class.</li>\n\t\t\t\t\t\t</ol>\n\t\t\t\t\t\t<p><span>This technique helps to balance the dataset and prevent the model from being biased towards the majority class.</span><span>&nbsp;</span>Other techniques for handling imbalanced datasets include:</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b><span>Undersampling the majority class:</span></b><span> Randomly removing samples from the majority class.</span><span> &nbsp;</span>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b><span>Using a combination of oversampling and undersampling techniques.</span></b><span>&nbsp;</span>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b><span>Using advanced techniques like SMOTE (Synthetic Minority Over-sampling Technique).</span></b><span>&nbsp; &nbsp;</span><b>Adjusting the class weights in the model.</b>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>The best technique to use depends on the specific dataset and the problem at hand. It’s important to experiment with different techniques and evaluate their performance using appropriate metrics like F1-score, precision, and recall.</p>"
+    },
+    {
+      "id": "1-19",
+      "number": 19,
+      "text": "What is the role of Amazon Q Apps in Amazon Q Business?",
+      "options": [
+        {
+          "text": "To provide hardware configurations",
+          "correct": false
+        },
+        {
+          "text": "To monitor application performance",
+          "correct": false
+        },
+        {
+          "text": "To create and share generative AI-powered apps",
+          "correct": true
+        },
+        {
+          "text": "To develop new AWS services",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>The role of Amazon Q Apps in Amazon Q Business is:</p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>To create and share generative AI-powered apps</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<span>Amazon Q Apps empowers employees to easily create and share custom generative AI applications within their organization.</span>\n\t\t\t\t\t\t\t<span>These apps can automate tasks, improve workflows, and boost overall productivity.</span><span> &nbsp;</span>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p>Here’s a breakdown of how Q Apps achieve this:</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b><span>Simplified App Creation:</span></b><span> Employees can describe the desired app functionality in natural language, and Q Apps leverages AI to generate the application based on their requirements.</span><span>&nbsp;</span>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b>No-Code/Low-Code Approach:</b>\n\t\t\t\t\t\t\t\t<span>Q Apps minimizes the need for extensive coding knowledge, making it accessible to a broader range of employees.</span><span>&nbsp;</span>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b><span>Enterprise Focus:</span></b><span> Q Apps are built with enterprise security and compliance in mind, ensuring that sensitive data remains protected.</span>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b><span>Shared App Library:</span></b><span> Created apps can be shared within the organization, allowing other employees to benefit from and reuse these custom applications.</span><span> &nbsp;</span>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<span>By enabling employees to easily create and share AI-powered apps, Amazon Q Apps aims to democratize access to generative AI technology and drive innovation within businesses.</span>\n\t\t\t\t\t\t</p>"
+    },
+    {
+      "id": "1-20",
+      "number": 20,
+      "text": "What is the primary objective of reinforcement learning?",
+      "options": [
+        {
+          "text": "To reduce dimensionality of data",
+          "correct": false
+        },
+        {
+          "text": "To cluster similar data points",
+          "correct": false
+        },
+        {
+          "text": "To predict future values",
+          "correct": false
+        },
+        {
+          "text": "To maximize cumulative reward",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>The primary objective of reinforcement learning is <b>to maximize cumulative reward</b>.</p>\n\t\t\t\t\t\t<p>Here’s a breakdown:</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b>Reinforcement Learning (RL):</b>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li><span>RL involves an agent learning to make decisions in an environment by interacting with it.</span><span>&nbsp;</span></li>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<span>The agent receives feedback in the form of rewards or penalties.</span>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t<li>The goal is to learn a policy (a set of rules) that maximizes the total reward received over time.</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>Here’s why the other options are incorrect:</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b><span>To reduce dimensionality of data:</span></b><span> This is the primary objective of dimensionality reduction techniques (e.g., PCA).</span><span>&nbsp;</span>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li><b>To cluster similar data points:</b> This is the primary objective of clustering algorithms (e.g., k-means).</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b><span>To predict future values:</span></b><span> This is the primary objective of supervised learning tasks like regression.</span>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>"
+    },
+    {
+      "id": "1-21",
+      "number": 21,
+      "text": "Which algorithm is best suited for large datasets with many features?",
+      "options": [
+        {
+          "text": "Gradient Boosting",
+          "correct": true
+        },
+        {
+          "text": "Naive Bayes",
+          "correct": false
+        },
+        {
+          "text": "Random Forest",
+          "correct": false
+        },
+        {
+          "text": "K-means",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p><b>Gradient Boosting</b></p>\n\t\t\t\t\t\t<p>Gradient Boosting algorithms (such as XGBoost, which is widely used on AWS, e.g., in SageMaker’s built-in XGBoost container) are particularly well-suited for large datasets with many features (high-dimensional data). They excel because they are powerful ensemble methods that sequentially correct the errors of previous models, leading to very high predictive accuracy. They effectively handle complex, non-linear relationships in the data and include built-in regularization to prevent overfitting, which is a common risk with many features. In the context of AWS AI services, Gradient Boosting is a go-to algorithm for structured/tabular data problems involving large-scale, feature-rich datasets. </p>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p><b>Naive Bayes</b></p>\n\t\t\t\t\t\t<p>Naive Bayes is generally <b>not</b>&nbsp;the best choice for datasets with “many features.” Its core assumption is that all features are independent of each other, which is rarely true in complex, high-dimensional datasets. This “naive” assumption often breaks down when there are many correlated features, leading to suboptimal performance and poor accuracy compared to more sophisticated algorithms like Gradient Boosting. </p>\n\t\t\t\t\t\t<p><b>Random Forest</b></p>\n\t\t\t\t\t\t<p>While Random Forest is a robust ensemble algorithm that can handle large datasets and is less prone to overfitting than individual decision trees, it is often outperformed by <b>Gradient Boosting</b>&nbsp;in terms of pure predictive accuracy, especially on structured data with many features. Random Forest builds trees in parallel and can be more computationally efficient for training, but Gradient Boosting’s sequential error-correction approach typically achieves higher accuracy, making it the “best suited” choice among the options for maximizing performance on such data. </p>\n\t\t\t\t\t\t<p><b>K-means</b></p>\n\t\t\t\t\t\t<p>K-means is an <b>unsupervised learning</b>&nbsp;algorithm used for clustering, not for predictive modeling on labeled datasets. The question about a “large dataset with many features” implies a supervised learning context (like classification or regression), for which K-means is not applicable. Therefore, it is an incorrect choice for this scenario.</p>"
+    },
+    {
+      "id": "1-22",
+      "number": 22,
+      "text": "Amazon Q Business is designed to serve as a secure, enterprise-ready generative AI assistant. Which core feature is primarily responsible for mitigating hallucinations and ensuring the assistant’s answers are factually accurate and traceable to a company’s private documents?",
+      "options": [
+        {
+          "text": "Using high Temperature settings to increase the randomness and creativity of the generated output.",
+          "correct": false
+        },
+        {
+          "text": "Relying on post-generation guardrails to filter out sensitive or abusive language.",
+          "correct": false
+        },
+        {
+          "text": "Performing fine-tuning on the underlying Foundation Model (FM) with a full copy of the enterprise data.",
+          "correct": false
+        },
+        {
+          "text": "Grounding the response using a Retrieval Augmented Generation (RAG) workflow based on private enterprise data.",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Grounding the response using a Retrieval Augmented Generation (RAG) workflow based on private enterprise data.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>Grounding</b> is the process of ensuring a generative AI model’s output is based on a specific, verified knowledge source rather than the model’s general training data.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>Amazon Q Business implements grounding through a fully managed <b>Retrieval Augmented Generation (RAG)</b> architecture. It connects to your enterprise data sources (e.g., Amazon S3, SharePoint), retrieves relevant document snippets, and feeds them to the Foundation Model (FM) along with the user’s query.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>By <b>confining responses to existing enterprise data</b>, the FM is forced to synthesize an answer <i>only</i> from the provided, verified context, drastically reducing the risk of generating inaccurate, fabricated, or “hallucinated” information. Amazon Q also provides <b>citations</b> to the source documents for full traceability.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>Incorrect</p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Using high Temperature settings to increase the randomness and creativity of the generated output.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>Temperature</b> is a hyperparameter that controls the <b>randomness</b> of the model’s output. A <i>higher</i> temperature encourages more creative and diverse responses, which actually <i>increases</i> the risk of the model deviating from the facts and, thus, <b>increases the likelihood of hallucination</b>, directly contradicting the goal of accuracy.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Relying on post-generation guardrails to filter out sensitive or abusive language.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>AWS Guardrails (like those in Amazon Bedrock or Amazon Q’s built-in controls) are essential for <b>Responsible AI</b>. They filter the output to prevent the generation of <b>harmful, illegal, or abusive content</b>, and they can be used to block topics. However, their primary role is not to verify the <i>factual accuracy</i> of a statement against internal corporate data; that is the job of RAG/Grounding.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Performing fine-tuning on the underlying Foundation Model (FM) with a full copy of the enterprise data.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<b>Fine-tuning</b> changes the actual weights of the Foundation Model to teach it a new style or skill. While it can introduce new knowledge, it is an expensive, slow, and static process. The knowledge becomes baked into the model and is not updated in real-time. Critically, fine-tuned models can still hallucinate or forget information. RAG/Grounding is the industry-standard, cost-effective, and dynamic approach used by Amazon Q Business to ensure <b>up-to-date, source-cited accuracy</b> for enterprise knowledge.\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>"
+    },
+    {
+      "id": "1-23",
+      "number": 23,
+      "text": "What is the purpose of a validation set in machine learning?",
+      "options": [
+        {
+          "text": "To test the final model performance",
+          "correct": false
+        },
+        {
+          "text": "To visualize the data",
+          "correct": false
+        },
+        {
+          "text": "To train the model",
+          "correct": false
+        },
+        {
+          "text": "To tune hyperparameters",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p><b>To tune hyperparameters</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>The <b>validation set</b> (or development set) is a subset of the data used <b>after each training iteration or epoch</b> to evaluate the model’s performance on unseen data.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>This evaluation is critical for making decisions about the model’s configuration, specifically tuning <b>hyperparameters</b> (e.g., learning rate, number of layers, regularization strength) to find the combination that results in the best generalization performance.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<span>By using the validation set for this iterative tuning, you prevent the model from </span><b><span>overfitting</span></b><span> to the training data while ensuring the final </span><b><span>test set</span></b><span> remains truly unseen for the final, unbiased performance check.</span>\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>Incorrect</p>\n\t\t\t\t\t\t<p>To test the final model performance</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>The role of providing a final, unbiased measure of model performance on completely unseen data is reserved for the <b>test set</b>. If the validation set were used for the final performance test, the hyperparameter tuning process would have inadvertently introduced <b>data leakage</b> from the validation set into the model’s selection process, leading to an overly optimistic estimate of the model’s true generalization error. </p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>To visualize the data</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<span>Data visualization is part of </span><b><span>Exploratory Data Analysis (EDA)</span></b><span>, which is conducted on the raw data </span><i><span>before</span></i><span> it is split into training, validation, and test sets.</span> Visualization helps in understanding data distribution, features, and identifying outliers, but it is not the intended purpose of the validation set split.\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>To train the model</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>The <b>training set</b> is the largest subset of the data and is used by the algorithm to <b>learn the patterns and relationships</b> by adjusting the model’s internal parameters (weights and biases). The validation set is specifically excluded from this learning process to ensure it provides an unbiased measure of model performance during tuning.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>"
+    },
+    {
+      "id": "1-24",
+      "number": 24,
+      "text": "What is the primary purpose of normalization in data preprocessing?",
+      "options": [
+        {
+          "text": "To split the data into training and test sets",
+          "correct": false
+        },
+        {
+          "text": "To increase the number of features",
+          "correct": false
+        },
+        {
+          "text": "To ensure all features contribute equally to the model",
+          "correct": true
+        },
+        {
+          "text": "To remove outliers from the data",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<div>\n\t\t\t\t\t\t\t<p><strong>Correct</strong></p>\n\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t<b>To ensure all features contribute equally to the model</b>\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<p>Features with <b>different scales</b> (e.g., age 0-100 vs. income $0-1M) cause <b>distance-based algorithms</b> (KNN, SVM, Neural Networks) to be dominated by larger-range features. Normalization (Min-Max, Z-score) <b>scales all features to same range</b> so each contributes proportionally. </p>\n\t\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t<b>To split the data into training and test sets</b>\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t<b>Train/test split</b> = data partitioning technique. Normalization = <b>feature scaling</b>.\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t<b>To increase the number of features</b>\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t<b>Feature engineering</b> (PCA, polynomial features). Normalization = <b>existing feature scaling</b>.\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t<b>To remove outliers from the data</b>\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t<b>Outlier detection/removal</b> (IQR, Z-score thresholding). Normalization <b>doesn’t remove data points</b>.\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t</div>"
+    },
+    {
+      "id": "1-25",
+      "number": 25,
+      "text": "Which Amazon Bedrock API is used for making inference requests?",
+      "options": [
+        {
+          "text": "bedrock-agent-runtime",
+          "correct": false
+        },
+        {
+          "text": "bedrock-runtime",
+          "correct": true
+        },
+        {
+          "text": "bedrock",
+          "correct": false
+        },
+        {
+          "text": "bedrock-agent",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p><b>bedrock-runtime</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>The <b><code>bedrock-runtime</code> API</b> is the correct Amazon Bedrock API used for <b>making inference requests</b>. </li>\n\t\t\t\t\t\t\t<li>It allows developers to send prompts to foundation models hosted on Bedrock and receive responses.</li>\n\t\t\t\t\t\t\t<li>This API is specifically designed for inference workloads, such as text generation, summarization, or question answering.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p><b>bedrock-agent-runtime</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>This API is used for <b>running Bedrock Agents</b>, which orchestrate tasks and workflows using foundation models.</li>\n\t\t\t\t\t\t\t<li>It is not intended for direct inference requests to models.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>bedrock</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>This is not a valid API name.</li>\n\t\t\t\t\t\t\t<li>It may refer to the overall service (Amazon Bedrock), but it does not represent the specific API used for inference.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>bedrock-agent</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>This API is related to <b>creating and managing Bedrock Agents</b>, not for inference requests.</li>\n\t\t\t\t\t\t\t<li>Agents extend model capabilities but are not the direct interface for inference.</li>\n\t\t\t\t\t\t</ul>"
+    },
+    {
+      "id": "1-26",
+      "number": 26,
+      "text": "Which AWS service can help with the secure integration of Bedrock into an enterprise system?",
+      "options": [
+        {
+          "text": "Amazon CloudFront",
+          "correct": false
+        },
+        {
+          "text": "AWS Lambda",
+          "correct": false
+        },
+        {
+          "text": "Amazon S3",
+          "correct": false
+        },
+        {
+          "text": "AWS IAM Identity Center",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p><b>AWS IAM Identity Center</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Correct because <b>IAM Identity Center</b> (formerly AWS SSO) provides <b>centralized identity and access management</b>.</li>\n\t\t\t\t\t\t\t<li>It ensures secure integration of <b>Amazon Bedrock</b> into enterprise systems by managing authentication, authorization, and role‑based access.</li>\n\t\t\t\t\t\t\t<li>This aligns with AWS best practices for secure integration, especially when connecting enterprise users and applications to Bedrock.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p><b>Amazon CloudFront</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because CloudFront is a <b>content delivery network (CDN)</b> used for caching and distributing content globally.</li>\n\t\t\t\t\t\t\t<li>It does not provide identity or access management for secure integration with Bedrock.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>AWS Lambda</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because Lambda is a <b>serverless compute service</b> used to run code in response to events.</li>\n\t\t\t\t\t\t\t<li>While Lambda can orchestrate workflows with Bedrock, it does not directly provide secure integration or identity management.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>Amazon S3</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because S3 is a <b>storage service</b> for objects and data.</li>\n\t\t\t\t\t\t\t<li>It can store inputs/outputs for Bedrock models but does not handle secure integration or access control.</li>\n\t\t\t\t\t\t</ul>"
+    },
+    {
+      "id": "1-27",
+      "number": 27,
+      "text": "What is the function of SageMaker Experiments in optimizing foundation models?",
+      "options": [
+        {
+          "text": "Reduces data usage",
+          "correct": false
+        },
+        {
+          "text": "Enhances security features",
+          "correct": false
+        },
+        {
+          "text": "Increases model complexity",
+          "correct": false
+        },
+        {
+          "text": "Tracks and compares ML experiments",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Tracks and compares ML experiments</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li><b>Correct because</b> SageMaker Experiments is designed to <b>organize, track, and compare different training runs</b>.</li>\n\t\t\t\t\t\t\t<li>This helps practitioners optimize foundation models by evaluating variations in hyperparameters, datasets, or configurations.</li>\n\t\t\t\t\t\t\t<li>It aligns with the exam’s focus on understanding how AWS services support <b>MLOps and model optimization workflows</b>.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p><b>Reduces data usage</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because SageMaker Experiments does not reduce the amount of data used.</li>\n\t\t\t\t\t\t\t<li>Data reduction would involve preprocessing or sampling, not experiment tracking.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>Enhances security features</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because security is handled through IAM roles, encryption, and network controls, not by SageMaker Experiments.</li>\n\t\t\t\t\t\t\t<li>Experiments are about tracking ML runs, not security.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>Increases model complexity</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because SageMaker Experiments does not inherently increase complexity.</li>\n\t\t\t\t\t\t\t<li>Its purpose is to <b>manage and compare experiments</b>, not to make models more complex.</li>\n\t\t\t\t\t\t</ul>"
+    },
+    {
+      "id": "1-28",
+      "number": 28,
+      "text": "How does Amazon Bedrock help in managing multi-step tasks?",
+      "options": [
+        {
+          "text": "By using data encryption",
+          "correct": false
+        },
+        {
+          "text": "By using fine-tuning",
+          "correct": false
+        },
+        {
+          "text": "By using agents",
+          "correct": true
+        },
+        {
+          "text": "By using model evaluation",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Agents in Amazon Bedrock manage and execute multi-step tasks.</p>"
+    },
+    {
+      "id": "1-29",
+      "number": 29,
+      "text": "Which machine learning technique is used to handle missing data?",
+      "options": [
+        {
+          "text": "Imputation",
+          "correct": true
+        },
+        {
+          "text": "Regression",
+          "correct": false
+        },
+        {
+          "text": "Clustering",
+          "correct": false
+        },
+        {
+          "text": "Classification",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Imputation is used to handle and fill in missing data values in datasets.</p>"
+    },
+    {
+      "id": "1-30",
+      "number": 30,
+      "text": "What is the role of the activation function in a neural network?",
+      "options": [
+        {
+          "text": "To normalize the input data",
+          "correct": false
+        },
+        {
+          "text": "To reduce the number of parameters",
+          "correct": false
+        },
+        {
+          "text": "To introduce non-linearity into the model",
+          "correct": true
+        },
+        {
+          "text": "To decrease the learning rate",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Activation functions introduce non-linearity into the neural network, allowing it to learn complex patterns.</p>"
+    },
+    {
+      "id": "1-31",
+      "number": 31,
+      "text": "What is the purpose of a confusion matrix in classification?",
+      "options": [
+        {
+          "text": "To measure the accuracy of regression models",
+          "correct": false
+        },
+        {
+          "text": "To perform dimensionality reduction",
+          "correct": false
+        },
+        {
+          "text": "To evaluate the performance of a classification model",
+          "correct": true
+        },
+        {
+          "text": "To visualize data distributions",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>A confusion matrix is used to evaluate the performance of a classification model by showing true vs. predicted values.</p>"
+    },
+    {
+      "id": "1-32",
+      "number": 32,
+      "text": "What is the purpose of SageMaker Studio Lab?",
+      "options": [
+        {
+          "text": "To deploy ML models",
+          "correct": false
+        },
+        {
+          "text": "To provide a free environment for ML experimentation",
+          "correct": true
+        },
+        {
+          "text": "To encrypt data",
+          "correct": false
+        },
+        {
+          "text": "To monitor model drift",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>SageMaker Studio Lab provides a free environment for machine learning experimentation.</p>"
+    },
+    {
+      "id": "1-33",
+      "number": 33,
+      "text": "How can developers test their agents in Amazon Bedrock?",
+      "options": [
+        {
+          "text": "Running them on local servers",
+          "correct": false
+        },
+        {
+          "text": "By deploying them in production",
+          "correct": false
+        },
+        {
+          "text": "Integrating with CI/CD pipelines",
+          "correct": false
+        },
+        {
+          "text": "Using the Amazon Bedrock console",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>The Amazon Bedrock console allows for testing agents.</p>"
+    },
+    {
+      "id": "1-34",
+      "number": 34,
+      "text": "How can Amazon Bedrock Studio help developers?",
+      "options": [
+        {
+          "text": "By providing hardware maintenance",
+          "correct": false
+        },
+        {
+          "text": "By managing financial transactions",
+          "correct": false
+        },
+        {
+          "text": "By monitoring network traffic",
+          "correct": false
+        },
+        {
+          "text": "By offering a rapid prototyping environment",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Bedrock Studio provides a rapid prototyping environment for AI applications.</p>"
+    },
+    {
+      "id": "1-35",
+      "number": 35,
+      "text": "How does Amazon Textract assist in document processing?",
+      "options": [
+        {
+          "text": "By translating text",
+          "correct": false
+        },
+        {
+          "text": "By detecting sentiment in text",
+          "correct": false
+        },
+        {
+          "text": "By converting text to speech",
+          "correct": false
+        },
+        {
+          "text": "By extracting text and data from documents",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon Textract extracts text and data from documents, facilitating automated document processing.</p>"
+    },
+    {
+      "id": "1-36",
+      "number": 36,
+      "text": "What is the role of the Amazon Bedrock API?",
+      "options": [
+        {
+          "text": "To manage cloud storage",
+          "correct": false
+        },
+        {
+          "text": "To encrypt data",
+          "correct": false
+        },
+        {
+          "text": "To monitor system health",
+          "correct": false
+        },
+        {
+          "text": "To provide programmatic access to Bedrock services",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>The Amazon Bedrock API provides programmatic access to Bedrock services.</p>"
+    },
+    {
+      "id": "1-37",
+      "number": 37,
+      "text": "What is the primary benefit of using pre-trained foundation models in SageMaker JumpStart?",
+      "options": [
+        {
+          "text": "Reduces model accuracy",
+          "correct": false
+        },
+        {
+          "text": "Enhances security features",
+          "correct": false
+        },
+        {
+          "text": "Accelerates the development process",
+          "correct": true
+        },
+        {
+          "text": "Increases data storage requirements",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Pre-trained foundation models in JumpStart accelerate the development process.</p>"
+    },
+    {
+      "id": "1-38",
+      "number": 38,
+      "text": "How can you enhance prompt robustness against attacks?",
+      "options": [
+        {
+          "text": "By implementing dynamic and context-aware templates",
+          "correct": true
+        },
+        {
+          "text": "By using static templates",
+          "correct": false
+        },
+        {
+          "text": "By ignoring security",
+          "correct": false
+        },
+        {
+          "text": "By reducing token usage",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Implementing dynamic and context-aware templates enhances robustness against attacks.</p>"
+    },
+    {
+      "id": "1-39",
+      "number": 39,
+      "text": "How do you enhance the effectiveness of AI-generated responses?",
+      "options": [
+        {
+          "text": "By providing clear and specific instructions in the prompts",
+          "correct": true
+        },
+        {
+          "text": "By using generic prompts",
+          "correct": false
+        },
+        {
+          "text": "By increasing token limits",
+          "correct": false
+        },
+        {
+          "text": "By ignoring context",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Clear and specific instructions in prompts enhance the effectiveness of AI-generated responses.</p>"
+    },
+    {
+      "id": "1-40",
+      "number": 40,
+      "text": "How does SageMaker Debugger help in the optimization of foundation models?",
+      "options": [
+        {
+          "text": "Enhances data storage",
+          "correct": false
+        },
+        {
+          "text": "Provides real-time metrics during training",
+          "correct": true
+        },
+        {
+          "text": "Automates model deployment",
+          "correct": false
+        },
+        {
+          "text": "Simplifies model architecture",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>SageMaker Debugger provides real-time metrics during training to help optimize foundation models.</p>"
+    },
+    {
+      "id": "1-41",
+      "number": 41,
+      "text": "What does a ROC curve represent?",
+      "options": [
+        {
+          "text": "The error rate of a model",
+          "correct": false
+        },
+        {
+          "text": "The relationship between precision and recall",
+          "correct": false
+        },
+        {
+          "text": "The trade-off between sensitivity and specificity",
+          "correct": true
+        },
+        {
+          "text": "The distribution of a dataset",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>The ROC curve represents the trade-off between sensitivity (true positive rate) and specificity (false positive rate).</p>"
+    },
+    {
+      "id": "1-42",
+      "number": 42,
+      "text": "Which SageMaker feature helps debug machine learning models?",
+      "options": [
+        {
+          "text": "SageMaker Debugger",
+          "correct": true
+        },
+        {
+          "text": "SageMaker Ground Truth",
+          "correct": false
+        },
+        {
+          "text": "SageMaker Data Wrangler",
+          "correct": false
+        },
+        {
+          "text": "SageMaker Autopilot",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>SageMaker Debugger helps debug machine learning models.</p>"
+    },
+    {
+      "id": "1-43",
+      "number": 43,
+      "text": "What is a common use of decision trees in machine learning?",
+      "options": [
+        {
+          "text": "Data normalization",
+          "correct": false
+        },
+        {
+          "text": "Regression and classification",
+          "correct": true
+        },
+        {
+          "text": "Clustering data points",
+          "correct": false
+        },
+        {
+          "text": "Dimensionality reduction",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Decision trees are commonly used for both regression and classification tasks.</p>"
+    },
+    {
+      "id": "1-44",
+      "number": 44,
+      "text": "What type of responses does Amazon Q Business generate?",
+      "options": [
+        {
+          "text": "Responses based on enterprise data and permissions",
+          "correct": true
+        },
+        {
+          "text": "General internet search results",
+          "correct": false
+        },
+        {
+          "text": "Randomized content",
+          "correct": false
+        },
+        {
+          "text": "Only predefined templates",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon Q Business generates responses based on enterprise data and user permissions.</p>"
+    },
+    {
+      "id": "1-45",
+      "number": 45,
+      "text": "Which evaluation metric is suitable for imbalanced classification problems?",
+      "options": [
+        {
+          "text": "Adjusted R-Squared",
+          "correct": false
+        },
+        {
+          "text": "Precision-Recall Curve",
+          "correct": true
+        },
+        {
+          "text": "Mean Squared Error (MSE)",
+          "correct": false
+        },
+        {
+          "text": "Accuracy",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>The Precision-Recall Curve is suitable for evaluating imbalanced classification problems.</p>"
+    },
+    {
+      "id": "1-46",
+      "number": 46,
+      "text": "Which AWS service is designed to help evaluate and compare AI models for responsible AI use?",
+      "options": [
+        {
+          "text": "Amazon SageMaker Clarify",
+          "correct": true
+        },
+        {
+          "text": "Amazon Lex",
+          "correct": false
+        },
+        {
+          "text": "Amazon Translate",
+          "correct": false
+        },
+        {
+          "text": "Amazon Polly",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon SageMaker Clarify helps evaluate and compare AI models for responsible use.</p>"
+    },
+    {
+      "id": "1-47",
+      "number": 47,
+      "text": "How can AWS Step Functions be used in generative AI development?",
+      "options": [
+        {
+          "text": "To manage data storage",
+          "correct": false
+        },
+        {
+          "text": "To orchestrate machine learning workflows",
+          "correct": true
+        },
+        {
+          "text": "To convert text to speech",
+          "correct": false
+        },
+        {
+          "text": "To automate real-time data streaming",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>AWS Step Functions orchestrate ML workflows, which is essential for complex generative AI applications.</p>"
+    },
+    {
+      "id": "1-48",
+      "number": 48,
+      "text": "What is the role of the bedrock-agent-runtime API in Amazon Bedrock?",
+      "options": [
+        {
+          "text": "Monitoring model performance",
+          "correct": false
+        },
+        {
+          "text": "Invoking agents and querying knowledge bases",
+          "correct": true
+        },
+        {
+          "text": "Managing agents",
+          "correct": false
+        },
+        {
+          "text": "Training models",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>The bedrock-agent-runtime API is used for invoking agents and querying knowledge bases.</p>"
+    },
+    {
+      "id": "1-49",
+      "number": 49,
+      "text": "What is a key benefit of using feedback mechanisms in prompt engineering?",
+      "options": [
+        {
+          "text": "To store more data",
+          "correct": false
+        },
+        {
+          "text": "To continuously improve prompt design",
+          "correct": true
+        },
+        {
+          "text": "To increase token usage",
+          "correct": false
+        },
+        {
+          "text": "To reduce model accuracy",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Feedback mechanisms continuously improve the design and effectiveness of prompts.</p>"
+    },
+    {
+      "id": "1-50",
+      "number": 50,
+      "text": "Which algorithm is used for clustering in unsupervised learning?",
+      "options": [
+        {
+          "text": "Linear regression",
+          "correct": false
+        },
+        {
+          "text": "Decision trees",
+          "correct": false
+        },
+        {
+          "text": "Naive Bayes",
+          "correct": false
+        },
+        {
+          "text": "K-means",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>K-means is commonly used for clustering in unsupervised learning.</p>"
+    },
+    {
+      "id": "1-51",
+      "number": 51,
+      "text": "How does Amazon Bedrock customize foundation models with your data?",
+      "options": [
+        {
+          "text": "By using pre-configured templates",
+          "correct": false
+        },
+        {
+          "text": "By using shared data pools",
+          "correct": false
+        },
+        {
+          "text": "By creating a private, customized copy of the model",
+          "correct": true
+        },
+        {
+          "text": "By modifying the original base models",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Bedrock creates a private, customized copy of the model for your data.</p>"
+    },
+    {
+      "id": "1-52",
+      "number": 52,
+      "text": "How does AWS Shield protect AI solutions?",
+      "options": [
+        {
+          "text": "By managing user authentication",
+          "correct": false
+        },
+        {
+          "text": "By increasing storage capacity",
+          "correct": false
+        },
+        {
+          "text": "By providing DDoS protection",
+          "correct": true
+        },
+        {
+          "text": "By monitoring API calls",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>AWS Shield provides DDoS protection for AI solutions.</p>"
+    },
+    {
+      "id": "1-53",
+      "number": 53,
+      "text": "How does Amazon SageMaker JumpStart accelerate ML development?",
+      "options": [
+        {
+          "text": "By providing access to pre-built models and solutions",
+          "correct": true
+        },
+        {
+          "text": "By creating custom algorithms",
+          "correct": false
+        },
+        {
+          "text": "By monitoring model drift",
+          "correct": false
+        },
+        {
+          "text": "By managing data storage",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>SageMaker JumpStart accelerates ML development by providing access to pre-built models and solutions.</p>"
+    },
+    {
+      "id": "1-54",
+      "number": 54,
+      "text": "What is the function of AWS AI Service Cards?",
+      "options": [
+        {
+          "text": "To provide transparency about AI services",
+          "correct": true
+        },
+        {
+          "text": "To enhance data storage",
+          "correct": false
+        },
+        {
+          "text": "To manage network security",
+          "correct": false
+        },
+        {
+          "text": "To automate data processing",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>AWS AI Service Cards provide transparency about the intended use, limitations</p>"
+    }
+  ]
+}

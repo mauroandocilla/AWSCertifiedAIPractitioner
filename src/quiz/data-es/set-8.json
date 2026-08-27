@@ -1,0 +1,232 @@
+{
+  "setNumber": 8,
+  "sourceFile": "Practice_Set_8.html",
+  "questionCount": 9,
+  "questions": [
+    {
+      "id": "8-1",
+      "number": 1,
+      "text": "Necesitás proporcionar notificaciones en tiempo real a los usuarios sobre actualizaciones en una aplicación web. ¿Cuál servicio de AWS sería más apropiado para enviar notificaciones?",
+      "options": [
+        {
+          "text": "Amazon SES (Simple Email Service)",
+          "correct": false
+        },
+        {
+          "text": "AWS Lambda",
+          "correct": false
+        },
+        {
+          "text": "Amazon SQS (Simple Queue Service)",
+          "correct": false
+        },
+        {
+          "text": "Amazon SNS (Simple Notification Service)",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon SNS te permite enviar notificaciones en tiempo real a los usuarios a través de varios canales de comunicación, incluyendo SMS, correo electrónico y notificaciones push.</p>"
+    },
+    {
+      "id": "8-2",
+      "number": 2,
+      "text": "Para una empresa que requiere una arquitectura que admita implementaciones en múltiples regiones con failover automatizado y recuperación ante desastres para una aplicación crítica, ¿cuáles son los servicios y estrategias de AWS más adecuados?",
+      "options": [
+        {
+          "text": "AWS Direct Connect con Amazon CloudFront, Amazon EKS y AWS Config",
+          "correct": false
+        },
+        {
+          "text": "Amazon S3 con AWS Snowball, Amazon DynamoDB Global Tables y AWS Elastic Beanstalk",
+          "correct": false
+        },
+        {
+          "text": "Amazon Route 53 con AWS Global Accelerator, Amazon Aurora Global Databases y AWS Backup",
+          "correct": true
+        },
+        {
+          "text": "AWS CloudFormation con AWS Lambda, Amazon RDS Multi-AZ y AWS CloudTrail",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon Route 53 proporciona gestión de DNS, AWS Global Accelerator mejora el rendimiento y la disponibilidad, Amazon Aurora Global Databases asegura failover de base de datos en múltiples regiones, y AWS Backup gestiona la recuperación ante desastres.</p>"
+    },
+    {
+      "id": "8-3",
+      "number": 3,
+      "text": "Para un proyecto que implica procesamiento y análisis de video en tiempo real, ¿cuál sería el servicio de AWS más apropiado?",
+      "options": [
+        {
+          "text": "Amazon Kinesis Video Streams",
+          "correct": true
+        },
+        {
+          "text": "AWS Elemental MediaLive",
+          "correct": false
+        },
+        {
+          "text": "Amazon Elastic Transcoder",
+          "correct": false
+        },
+        {
+          "text": "AWS Lambda con Amazon S3",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon Kinesis Video Streams te permite recopilar, procesar y analizar streams de video en tiempo real, lo que lo hace ideal para aplicaciones de procesamiento de video.</p>"
+    },
+    {
+      "id": "8-4",
+      "number": 4,
+      "text": "Para monitorear y recibir alertas sobre el desempeño y estado operacional de tus recursos de AWS, ¿qué servicio de AWS deberías usar?",
+      "options": [
+        {
+          "text": "AWS Config",
+          "correct": false
+        },
+        {
+          "text": "AWS CloudTrail",
+          "correct": false
+        },
+        {
+          "text": "Amazon CloudWatch",
+          "correct": true
+        },
+        {
+          "text": "Amazon Inspector",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon CloudWatch proporciona monitoreo, alertas e información operacional sobre los recursos de AWS, ayudándote a rastrear el desempeño y configurar notificaciones.</p>"
+    },
+    {
+      "id": "8-5",
+      "number": 5,
+      "text": "Para escalar automáticamente tus instancias de EC2 según la demanda, ¿qué servicio de AWS deberías usar?",
+      "options": [
+        {
+          "text": "AWS Elastic Beanstalk",
+          "correct": false
+        },
+        {
+          "text": "Amazon Auto Scaling",
+          "correct": true
+        },
+        {
+          "text": "AWS CloudFormation",
+          "correct": false
+        },
+        {
+          "text": "Amazon CloudWatch",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon Auto Scaling ajusta automáticamente la cantidad de instancias de EC2 en función del tráfico o la demanda, garantizando un rendimiento óptimo y eficiencia de costos.</p>"
+    },
+    {
+      "id": "8-6",
+      "number": 6,
+      "text": "Necesitás implementar una solución para transferir de forma segura grandes volúmenes de datos entre regiones de AWS manteniendo la integridad y el cumplimiento normativo. ¿Cuáles son los servicios y características de AWS que deberías usar?",
+      "options": [
+        {
+          "text": "Amazon S3 Transfer Acceleration con AWS Backup y Amazon RDS Multi-AZ",
+          "correct": false
+        },
+        {
+          "text": "AWS DataSync con Amazon S3 Cross-Region Replication y AWS KMS",
+          "correct": true
+        },
+        {
+          "text": "AWS Snowcone con AWS Snowball y Amazon CloudFront",
+          "correct": false
+        },
+        {
+          "text": "AWS Direct Connect con AWS Global Accelerator y AWS WAF",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>AWS DataSync transfiere datos de forma segura y eficiente, Amazon S3 Cross-Region Replication garantiza la replicación de datos entre regiones, y AWS KMS proporciona encriptación y cumplimiento normativo.</p>"
+    },
+    {
+      "id": "8-7",
+      "number": 7,
+      "text": "Una empresa quiere configurar una solución para integración continua y entrega continua (CI/CD) con control de versiones robusto, testing automatizado e implementación. ¿Cuáles son los servicios de AWS que deberían utilizarse para implementar esta solución?",
+      "options": [
+        {
+          "text": "AWS Lambda con Amazon S3, AWS Step Functions y AWS CloudFormation",
+          "correct": false
+        },
+        {
+          "text": "AWS Fargate con AWS Elastic Beanstalk, AWS CloudTrail y AWS CodePipeline",
+          "correct": false
+        },
+        {
+          "text": "AWS CodePipeline con AWS CodeBuild, AWS CodeCommit y AWS CodeDeploy",
+          "correct": true
+        },
+        {
+          "text": "Amazon EC2 con AWS CodeDeploy, Amazon RDS y AWS CloudWatch",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correcta</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>AWS CodePipeline con AWS CodeBuild, AWS CodeCommit y AWS CodeDeploy</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p>Esta combinación representa los servicios principales de AWS diseñados específicamente para pipelines de CI/CD, que se ajustan directamente a los requisitos:</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>AWS CodeCommit:</b> Proporciona <b>control de versiones</b> seguro y altamente escalable para almacenar código.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>AWS CodeBuild:</b> Automatiza el proceso de <b>compilar código fuente, ejecutar pruebas (testing automatizado)</b> y generar paquetes de software.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>AWS CodeDeploy:</b> Automatiza la <b>implementación</b> de código en diversos servicios de cómputo.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>AWS CodePipeline:</b> <b>Orquesta</b> todo el flujo de trabajo de CI/CD, automatizando las etapas desde el cambio de código fuente hasta la compilación, prueba e implementación, proporcionando una verdadera solución de <b>integración continua y entrega continua</b>.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrecta</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>AWS Lambda con Amazon S3, AWS Step Functions y AWS CloudFormation</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p>Si bien estos son servicios poderosos para construir <em>aplicaciones</em> serverless e infraestructura como código (<b>AWS CloudFormation</b>), este conjunto no es la suite principal de servicios de CI/CD. <b>AWS Step Functions</b> es para orquestar microservicios, no para pipelines de CI/CD. <b>Amazon S3</b> es para almacenamiento, no para control de versiones. Esta combinación carece del control de versiones integrado, compilación y automatización de implementación de la suite de herramientas de desarrollador de AWS (servicios Code).</p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>AWS Fargate con AWS Elastic Beanstalk, AWS CloudTrail y AWS CodePipeline</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p>Esta opción mezcla servicios de cómputo (<b>AWS Fargate</b>, <b>AWS Elastic Beanstalk</b>) y un servicio de auditoría (<b>AWS CloudTrail</b>) con un servicio de CI/CD (<b>AWS CodePipeline</b>). <b>AWS CloudTrail</b> es para auditoría y registro de API, no para tareas de CI/CD como compilación o implementación de código. Esta colección es un conjunto desajustado de servicios en lugar de la cadena de herramientas de CI/CD integrada que proporcionan los servicios Code*.</p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Amazon EC2 con AWS CodeDeploy, Amazon RDS y AWS CloudWatch</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p>Esta opción incluye un servicio de cómputo (<b>Amazon EC2</b>), un servicio de implementación (<b>AWS CodeDeploy</b>), una base de datos administrada (<b>Amazon RDS</b>) y un servicio de monitoreo (<b>AWS CloudWatch</b>). Le faltan componentes críticos de CI/CD como <b>control de versiones</b> y un <b>servicio de compilación y prueba</b>. <b>AWS CloudWatch</b> es para monitoreo y observabilidad, no para integración continua. Este conjunto es incompleto para implementar una solución completa de CI/CD.</p>"
+    },
+    {
+      "id": "8-8",
+      "number": 8,
+      "text": "Escenario: Necesitás configurar una aplicación web básica que será accedida por usuarios en todo el mundo. El requisito es garantizar baja latencia y alta disponibilidad.",
+      "options": [
+        {
+          "text": "AWS Lambda",
+          "correct": false
+        },
+        {
+          "text": "Amazon RDS",
+          "correct": false
+        },
+        {
+          "text": "Amazon CloudFront",
+          "correct": true
+        },
+        {
+          "text": "Amazon EC2",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p><b>Amazon CloudFront</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b>Es correcto porque</b>: <ul>\n\t\t\t\t\t\t\t\t\t<li>Amazon CloudFront es un servicio de <b>Content Delivery Network (CDN)</b>. </li>\n\t\t\t\t\t\t\t\t\t<li>Almacena en caché y entrega contenido desde <b>ubicaciones edge en todo el mundo</b>, garantizando <b>baja latencia</b> para usuarios globales. </li>\n\t\t\t\t\t\t\t\t\t<li>También proporciona <b>alta disponibilidad</b> al distribuir el tráfico entre múltiples servidores edge.</li>\n\t\t\t\t\t\t\t\t\t<li>Esta es la mejor solución para una aplicación web accedida globalmente donde el rendimiento y la disponibilidad son críticos.</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p><b>AWS Lambda</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Es incorrecto porque Lambda es un servicio de <b>compute serverless</b>. Si bien es útil para lógica de backend, no garantiza directamente la <b>entrega global de contenido web con baja latencia</b>. </li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>Amazon RDS</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Es incorrecto porque RDS es un servicio de <b>base de datos relacional</b>. Almacena y gestiona datos pero no entrega contenido web globalmente ni reduce la latencia. </li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>Amazon EC2</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Es incorrecto porque EC2 proporciona <b>servidores virtuales</b>. Aunque podés alojar una aplicación web en EC2, no proporciona inherentemente <b>distribución global u optimización de latencia</b> sin servicios adicionales como CloudFront. </li>\n\t\t\t\t\t\t</ul>"
+    },
+    {
+      "id": "8-9",
+      "number": 9,
+      "text": "Necesitás crear una solución rentable para alojar una aplicación web con alto tráfico y contenido dinámico. La solución debe escalar automáticamente ante picos de tráfico y proporcionar acceso de baja latencia a los usuarios. ¿Qué combinación de servicios de AWS es la más apropiada?",
+      "options": [
+        {
+          "text": "Utilizar Amazon Lightsail para alojamiento, AWS WAF para seguridad y Amazon S3 para copias de seguridad.",
+          "correct": false
+        },
+        {
+          "text": "Usar AWS Lambda con Amazon API Gateway para contenido dinámico, Amazon S3 para contenido estático y Amazon DynamoDB para la base de datos.",
+          "correct": true
+        },
+        {
+          "text": "Desplegar la aplicación en AWS Fargate con Amazon ECS, usar Amazon CloudFront para entrega de contenido y Amazon Aurora para la base de datos.",
+          "correct": false
+        },
+        {
+          "text": "Desplegar la aplicación en Amazon EC2 con Elastic Load Balancing, usar Amazon CloudFront para caché y Amazon RDS para la base de datos.",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b>Usar AWS Lambda con Amazon API Gateway para contenido dinámico, Amazon S3 para contenido estático y Amazon DynamoDB para la base de datos</b> Es correcto porque esta combinación aprovecha una <b>arquitectura sin servidores</b>, que es altamente <b>rentable</b> y escala automáticamente ante picos de tráfico. <ul>\n\t\t\t\t\t\t\t\t\t<li><b>AWS Lambda + API Gateway</b>: Maneja solicitudes de contenido dinámico sin necesidad de provisionar servidores, escalando de manera fluida según la demanda.</li>\n\t\t\t\t\t\t\t\t\t<li><b>Amazon S3</b>: Proporciona almacenamiento de bajo costo y alta disponibilidad para contenido estático.</li>\n\t\t\t\t\t\t\t\t\t<li><b>Amazon DynamoDB</b>: Ofrece una base de datos NoSQL completamente administrada y sin servidores con escalado automático y baja latencia. Esta arquitectura satisface directamente los requisitos del examen: rentabilidad, escalabilidad y baja latencia.</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li><b>Lightsail + WAF + S3</b> Es incorrecto porque Lightsail está diseñado para <b>cargas de trabajo simples con bajo tráfico</b>. No escala automáticamente para aplicaciones dinámicas con alto tráfico. Aunque WAF y S3 añaden seguridad y copias de seguridad, esta opción no cumple con el requisito de escalabilidad.</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b>Fargate + ECS + CloudFront + Aurora</b> Es incorrecto porque aunque esta opción es escalable y tiene buen rendimiento, es <b>más costosa</b> que las soluciones sin servidores. Aurora y ECS introducen costos operativos más altos en comparación con DynamoDB y Lambda. Esto no cumple con el requisito de \"rentabilidad\".\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b>EC2 + ELB + CloudFront + RDS</b> Es incorrecto porque EC2 requiere <b>escalado manual o Grupos de Auto Scaling</b>, lo que añade complejidad y costo. Aunque CloudFront y RDS proporcionan caché y soporte de base de datos, esta opción no es tan rentable como una solución sin servidores.\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>"
+    }
+  ]
+}

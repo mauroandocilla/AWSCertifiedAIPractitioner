@@ -55,6 +55,12 @@ export default function Landing() {
           <div className="landing-card-name">Formato del examen</div>
           <div className="landing-card-meta">tipos de pregunta y estrategia de puntaje</div>
         </Link>
+
+        <Link to="/quiz" className="landing-card ref accent">
+          <div className="landing-card-top"><span className="mono">PRÁCTICA</span></div>
+          <div className="landing-card-name">Quiz de práctica</div>
+          <div className="landing-card-meta">24 sets, +1200 preguntas</div>
+        </Link>
       </div>
     </>
   );

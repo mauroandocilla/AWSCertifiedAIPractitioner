@@ -1,0 +1,1494 @@
+{
+  "setNumber": 10,
+  "sourceFile": "Practice_Set_10.html",
+  "questionCount": 59,
+  "questions": [
+    {
+      "id": "10-1",
+      "number": 1,
+      "text": "Una empresa desea crear imágenes generadas con IA para apoyar sus esfuerzos de marketing. ¿Cuál es el tipo de modelo de IA generativa más adecuado para generar imágenes de alta calidad?",
+      "options": [
+        {
+          "text": "Diffusion models",
+          "correct": true
+        },
+        {
+          "text": "Modelos de resumen de texto",
+          "correct": false
+        },
+        {
+          "text": "Vector embeddings",
+          "correct": false
+        },
+        {
+          "text": "Modelos basados en Transformer",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>Diffusion models</p>\n\t\t\t\t\t\t<p>Los diffusion models son una clase de modelos generativos que han ganado prominencia recientemente por su capacidad de generar imágenes de alta calidad. Funcionan modelando el proceso de agregar ruido a los datos y luego aprendiendo cómo invertir este proceso para reconstruir los datos originales. En el contexto de la generación de imágenes, los diffusion models comienzan con ruido aleatorio y lo refinan de manera iterativa para producir una imagen coherente y detallada. Este enfoque les permite generar imágenes con detalles finos y alta resolución, lo que los hace ideales para materiales de marketing que requieren elementos visuales fotorrealistas. Las empresas aprovechan los diffusion models para crear imágenes que son casi indistinguibles de fotografías reales, mejorando así sus esfuerzos de marketing con contenido visual convincente.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>Vector embeddings</p>\n\t\t\t\t\t\t<p>Los vector embeddings son representaciones numéricas de elementos de datos (como palabras o imágenes) en un espacio vectorial continuo. Se utilizan principalmente para tareas como búsquedas de similitud, recomendaciones o como características de entrada para modelos de aprendizaje automático. Aunque son esenciales para entender las relaciones entre puntos de datos, no son modelos generativos y no pueden utilizarse para crear nuevas imágenes.</p>\n\t\t\t\t\t\t<p>Modelos basados en Transformer</p>\n\t\t\t\t\t\t<p>Los modelos basados en Transformer son arquitecturas de redes neuronales que sobresalen en el procesamiento de datos secuenciales y en capturar dependencias de largo alcance, principalmente en tareas de procesamiento del lenguaje natural. Aunque existen adaptaciones de transformers para tareas de imágenes, como Vision Transformers (ViT), generalmente se utilizan para reconocimiento y clasificación de imágenes en lugar de generar imágenes de alta calidad.</p>\n\t\t\t\t\t\t<p>Modelos de resumen de texto</p>\n\t\t\t\t\t\t<p>Los modelos de resumen de texto están diseñados para condensar grandes cuerpos de texto en resúmenes más cortos mientras se preservan las ideas principales. No son aplicables a tareas de generación de imágenes, ya que se enfocan únicamente en procesar y generar datos textuales.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://aws.amazon.com/what-is/stable-diffusion\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/what-is/stable-diffusion</a>\n\t\t\t\t\t\t</p>"
+    },
+    {
+      "id": "10-2",
+      "number": 2,
+      "text": "Un sistema de conducción autónoma utiliza un modelo de IA para tomar decisiones en tiempo real. Durante una prueba, el auto no responde correctamente en ciertas condiciones climáticas. ¿Cuál aspecto de la IA responsable debería considerarse para mejorar el sistema de IA?",
+      "options": [
+        {
+          "text": "Bias",
+          "correct": false
+        },
+        {
+          "text": "Veracity",
+          "correct": false
+        },
+        {
+          "text": "Robustness",
+          "correct": true
+        },
+        {
+          "text": "Fairness",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>Robustness</p>\n\t\t\t\t\t\t<p>Robustness en IA se refiere a la capacidad de un sistema de funcionar de manera confiable en una amplia gama de condiciones, incluyendo entornos inesperados o desafiantes. Para un auto de conducción autónoma, robustness significa que el modelo de IA debe manejar diversos escenarios del mundo real como diferentes condiciones climáticas, tipos de carreteras y situaciones de tráfico sin fallar. Si el auto no responde correctamente en ciertas condiciones climáticas, indica que el modelo no es suficientemente robusto para esas situaciones. Mejorar la robustness implica entrenar el modelo de IA con datasets diversos que incluyan diferentes patrones climáticos como lluvia, nieve, niebla y luz solar extrema. También incluye pruebas rigurosas y validación para asegurar un desempeño consistente. Al enfocarse en robustness, puedes mejorar la capacidad del auto de conducción autónoma para operar de manera segura y efectiva independientemente de los cambios ambientales.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>Veracity</p>\n\t\t\t\t\t\t<p>Veracity se relaciona con la exactitud y confiabilidad de los datos. No aborda directamente la capacidad del sistema para manejar diferentes condiciones climáticas.</p>\n\t\t\t\t\t\t<p>Fairness</p>\n\t\t\t\t\t\t<p>Fairness en IA asegura que las decisiones del sistema sean imparciales y equitativas entre diferentes grupos. Este problema no está relacionado con el desempeño de la IA en condiciones climáticas variables.</p>\n\t\t\t\t\t\t<p>Bias</p>\n\t\t\t\t\t\t<p>Bias se refiere a errores sistemáticos que conducen a resultados o decisiones injustas. No resuelve el problema del fallo de la IA en ciertas condiciones climáticas.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://aws.amazon.com/ai/responsible-ai\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/ai/responsible-ai</a>\n\t\t\t\t\t\t</p>"
+    },
+    {
+      "id": "10-3",
+      "number": 3,
+      "text": "Una institución financiera quiere implementar un foundation model para detección de fraude. Les preocupa seleccionar el mejor modelo que pueda escalar con el aumento de datos mientras garantiza baja latencia. ¿En qué etapa del ciclo de vida del foundation model deberían enfocarse para abordar estas preocupaciones?",
+      "options": [
+        {
+          "text": "Selección de modelo",
+          "correct": true
+        },
+        {
+          "text": "Selección de datos",
+          "correct": false
+        },
+        {
+          "text": "Fine-tuning",
+          "correct": false
+        },
+        {
+          "text": "Feedback",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>Selección de modelo</p>\n\t\t\t\t\t\t<p>La selección de modelo es la etapa donde la institución elige la arquitectura de modelo y los algoritmos más apropiados que cumplan con sus requisitos específicos, como escalabilidad con el aumento de datos y baja latencia para detección de fraude en tiempo real. Al enfocarse en la selección de modelo, pueden evaluar diferentes modelos para encontrar uno que procese eficientemente grandes volúmenes de datos y entregue predicciones rápidas, lo cual es crítico en escenarios de detección de fraude donde las respuestas oportunas son esenciales. Seleccionar el modelo correcto asegura que el sistema pueda manejar el crecimiento en volumen de datos sin comprometer el desempeño.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>Selección de datos</p>\n\t\t\t\t\t\t<p>La selección de datos implica elegir los conjuntos de datos apropiados para entrenar y validar el modelo. Si bien tener datos de alta calidad y relevantes es crucial para el desempeño del modelo, la selección de datos no aborda directamente las preocupaciones relacionadas con la capacidad del modelo para escalar con el aumento de datos o garantizar baja latencia. Esta etapa se enfoca en qué datos se utilizan, no en cómo el modelo procesa los datos.</p>\n\t\t\t\t\t\t<p>Fine-tuning</p>\n\t\t\t\t\t\t<p>El fine-tuning es el proceso de adaptar un modelo pre-entrenado a una tarea específica entrenándolo además con datos específicos de esa tarea. Aunque el fine-tuning puede mejorar la precisión de un modelo para una aplicación particular, no aborda principalmente problemas de escalabilidad o latencia. El fine-tuning ajusta los parámetros del modelo para mejor desempeño en una tarea pero no cambia fundamentalmente la capacidad del modelo para manejar conjuntos de datos más grandes o reducir la latencia de predicción.</p>\n\t\t\t\t\t\t<p>Feedback</p>\n\t\t\t\t\t\t<p>El feedback implica recopilar información de usuarios o datos de desempeño del sistema después de la implementación para mejorar el modelo de forma iterativa. Aunque incorporar feedback es importante para la mejora continua, no aborda directamente las preocupaciones iniciales de seleccionar un modelo que escale y proporcione baja latencia. Los mecanismos de feedback son más sobre refinamiento posterior a la implementación que sobre la selección inicial de modelo para características de desempeño.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://docs.aws.amazon.com/sagemaker/latest/dg/algorithms-choose.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/sagemaker/latest/dg/algorithms-choose.html</a>\n\t\t\t\t\t\t</p>"
+    },
+    {
+      "id": "10-4",
+      "number": 4,
+      "text": "Tu sistema de IA está recopilando datos en tiempo real desde dispositivos IoT para su análisis. Para garantizar cumplimiento normativo e integridad del sistema, necesitas monitorear continuamente los flujos de datos en busca de anomalías e irregularidades. ¿Cuál es la estrategia de gobernanza de datos más relevante para esta tarea?",
+      "options": [
+        {
+          "text": "Data Monitoring",
+          "correct": true
+        },
+        {
+          "text": "Data Lifecycle Management",
+          "correct": false
+        },
+        {
+          "text": "Data Retention",
+          "correct": false
+        },
+        {
+          "text": "Data Logging",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>Data Monitoring</p>\n\t\t\t\t\t\t<p>Data Monitoring implica observar continuamente flujos de datos, transacciones o actividades para detectar anomalías, irregularidades o patrones sospechosos en tiempo real. Para un sistema de IA que recopila datos en tiempo real desde dispositivos IoT, el monitoreo garantiza que los datos siendo analizados sigan siendo precisos, seguros y cumplan con las regulaciones relevantes. Al identificar comportamientos inusuales o posibles brechas, data monitoring ayuda a mantener la integridad del sistema y asegura respuestas oportunas a cualquier problema que surja, mejorando la confiabilidad general del sistema de IA.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>Data Logging</p>\n\t\t\t\t\t\t<p>Data Logging registra el acceso a datos y las acciones realizadas sobre ellos, pero se enfoca en rastrear actividades pasadas en lugar de monitorear anomalías en tiempo real.</p>\n\t\t\t\t\t\t<p>Data Lifecycle Management</p>\n\t\t\t\t\t\t<p>Data Lifecycle Management rige cómo se manejan los datos a lo largo de su ciclo de vida, desde su creación hasta su eliminación. Aunque es importante para el cumplimiento normativo, no se enfoca en la detección de anomalías en tiempo real.</p>\n\t\t\t\t\t\t<p>Data Retention</p>\n\t\t\t\t\t\t<p>Data Retention define cuánto tiempo se almacenan los datos antes de ser archivados o eliminados. Garantiza cumplimiento con regulaciones de almacenamiento pero no aborda el monitoreo en tiempo real de flujos de datos.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://docs.aws.amazon.com/data-exchange/latest/userguide/monitoring-overview.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/data-exchange/latest/userguide/monitoring-overview.html</a>\n\t\t\t\t\t\t</p>"
+    },
+    {
+      "id": "10-5",
+      "number": 5,
+      "text": "Tu organización está desarrollando un sistema de IA para mantenimiento predictivo en la industria manufacturera. Para asegurar que el sistema cumpla con los protocolos de gobierno, el equipo debe realizar revisiones periódicas de cumplimiento con estándares de la industria. ¿Cuál servicio de AWS ayudaría mejor a gestionar los requisitos de cumplimiento y auditoría?",
+      "options": [
+        {
+          "text": "Amazon SageMaker Clarify",
+          "correct": false
+        },
+        {
+          "text": "Amazon Macie",
+          "correct": false
+        },
+        {
+          "text": "AWS Audit Manager",
+          "correct": true
+        },
+        {
+          "text": "AWS Config",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correcta</strong></p>\n\t\t\t\t\t\t<p>AWS Audit Manager</p>\n\t\t\t\t\t\t<p>AWS Audit Manager ayuda a automatizar el proceso de recopilación de evidencia y la gestión de cumplimiento con estándares de la industria y regulaciones. Permite que los equipos monitoreen continuamente, evalúen y documenten el cumplimiento de su sistema con los protocolos de gobierno relevantes. Para un sistema de IA en la industria manufacturera, AWS Audit Manager se puede usar para simplificar las auditorías al vincular recursos de AWS a estándares específicos de la industria y generar reportes detallados. Esto asegura que la organización pueda cumplir fácilmente con los requisitos regulatorios y mantener cumplimiento continuo con esfuerzo manual mínimo.</p>\n\t\t\t\t\t\t<p><strong>Incorrecta</strong></p>\n\t\t\t\t\t\t<p>AWS Config</p>\n\t\t\t\t\t\t<p>AWS Config ayuda a monitorear y evaluar configuraciones de recursos de AWS, pero se enfoca en gestión de configuración más que en auditoría integral de cumplimiento.</p>\n\t\t\t\t\t\t<p>Amazon Macie</p>\n\t\t\t\t\t\t<p>Amazon Macie es un servicio de seguridad que ayuda a identificar y proteger datos sensibles. No está diseñado para gestionar auditorías ni cumplimiento.</p>\n\t\t\t\t\t\t<p>Amazon SageMaker Clarify</p>\n\t\t\t\t\t\t<p>Amazon SageMaker Clarify se usa para detectar sesgos en modelos de machine learning y mejorar la interpretabilidad, pero no se enfoca en gestión de auditoría ni cumplimiento.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://aws.amazon.com/audit-manager\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/audit-manager</a>\n\t\t\t\t\t\t</p>"
+    },
+    {
+      "id": "10-6",
+      "number": 6,
+      "text": "Te encargan construir una aplicación de IA que utiliza un foundation model para resumir documentos. Necesitas optimizar el costo de inferencia del foundation model sin comprometer demasiado la precisión. ¿Cuál sería el mejor enfoque para lograrlo?",
+      "options": [
+        {
+          "text": "Implementar Retrieval-Augmented Generation (RAG)",
+          "correct": false
+        },
+        {
+          "text": "Hacer fine-tuning del modelo para casos de uso específicos",
+          "correct": true
+        },
+        {
+          "text": "Usar zero-shot learning",
+          "correct": false
+        },
+        {
+          "text": "Entrenar el modelo desde cero",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>Hacer fine-tuning del modelo para casos de uso específicos</p>\n\t\t\t\t\t\t<p>El fine-tuning de un foundation model pre-entrenado implica adaptarlo a tareas o conjuntos de datos específicos. Este enfoque es efectivo para optimizar costos de inferencia porque permite que el modelo se enfoque solo en las tareas relevantes, lo que reduce la carga computacional manteniendo alta precisión. En lugar de entrenar un modelo desde cero, el fine-tuning requiere significativamente menos recursos, haciéndolo más eficiente y rentable. También ayuda a mantener las capacidades centrales del modelo mientras lo adaptas a necesidades especializadas, equilibrando el compromiso entre costo y desempeño. En muchas tareas de resumen de documentos, el fine-tuning es un método ideal porque refina el modelo para el dominio específico, generando resúmenes más precisos sin la carga de costos de inferencia masivos.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>Entrenar el modelo desde cero</p>\n\t\t\t\t\t\t<p>Entrenar un modelo desde cero requiere muchos recursos, necesitando una gran cantidad de poder computacional, datos y tiempo. Esta opción no es ideal para optimizar costos de inferencia, ya que implica una inversión inicial significativa sin necesariamente ofrecer mejores beneficios de costo-desempeño para tareas específicas.</p>\n\t\t\t\t\t\t<p>Usar zero-shot learning</p>\n\t\t\t\t\t\t<p>El zero-shot learning permite que un modelo realice una tarea sin ver datos específicos de la tarea durante el entrenamiento. Aunque esto puede ahorrar tiempo en el entrenamiento, generalmente resulta en menor precisión comparado con fine-tuning. Por lo tanto, podría no cumplir con el equilibrio entre costo de inferencia y precisión necesario para resumir documentos.</p>\n\t\t\t\t\t\t<p>Implementar Retrieval-Augmented Generation (RAG)</p>\n\t\t\t\t\t\t<p>RAG combina un retriever y un generador para mejorar respuestas basadas en conocimiento externo. Aunque es poderoso, aumenta la complejidad y puede elevar los costos de inferencia debido al paso de búsqueda, haciéndolo menos adecuado para reducir costos manteniendo alta precisión.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://docs.aws.amazon.com/sagemaker/latest/dg/jumpstart-fine-tune.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/sagemaker/latest/dg/jumpstart-fine-tune.html</a>\n\t\t\t\t\t\t</p>"
+    },
+    {
+      "id": "10-7",
+      "number": 7,
+      "text": "Una startup de IA está considerando hacer pre-entrenamiento de un modelo foundation desde cero versus hacer fine-tuning de un modelo existente. ¿Cuál es la principal desventaja de costo al hacer pre-entrenamiento de un modelo desde cero?",
+      "options": [
+        {
+          "text": "Tiene bajo costo inicial pero requiere reentrenamiento frecuente, lo que lleva a costos más altos a largo plazo.",
+          "correct": false
+        },
+        {
+          "text": "Lleva a una inferencia de modelo más rápida, pero con costos iniciales más altos.",
+          "correct": false
+        },
+        {
+          "text": "Es altamente intensivo en recursos y requiere conjuntos de datos a gran escala, lo que lo hace prohibitivamente costoso.",
+          "correct": true
+        },
+        {
+          "text": "Requiere menos almacenamiento pero más potencia de procesamiento.",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>Es altamente intensivo en recursos y requiere conjuntos de datos a gran escala, lo que lo hace prohibitivamente costoso.</p>\n\t\t\t\t\t\t<p>El pre-entrenamiento de un modelo foundation desde cero implica entrenar el modelo con conjuntos de datos masivos utilizando enormes recursos computacionales. Este proceso típicamente requiere hardware especializado, como GPUs o TPUs, y puede tomar semanas o meses para completarse, generando costos muy altos. Además, adquirir y gestionar conjuntos de datos a gran escala es intensivo en recursos, haciendo que esta opción sea prohibitivamente costosa para muchas startups. Aunque el pre-entrenamiento desde cero puede producir un modelo personalizado para necesidades específicas, el costo en términos de tiempo y dinero es significativamente mayor comparado con hacer fine-tuning de un modelo existente.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>Requiere menos almacenamiento pero más potencia de procesamiento.</p>\n\t\t\t\t\t\t<p>El pre-entrenamiento desde cero generalmente requiere grandes cantidades de almacenamiento (para los conjuntos de datos) y potencia de procesamiento, no solo más potencia de procesamiento.</p>\n\t\t\t\t\t\t<p>Lleva a una inferencia de modelo más rápida, pero con costos iniciales más altos.</p>\n\t\t\t\t\t\t<p>El pre-entrenamiento no necesariamente lleva a tiempos de inferencia más rápidos. El problema principal es la naturaleza intensiva en recursos del pre-entrenamiento en sí, no la velocidad de inferencia.</p>\n\t\t\t\t\t\t<p>Tiene bajo costo inicial pero requiere reentrenamiento frecuente, lo que lleva a costos más altos a largo plazo.</p>\n\t\t\t\t\t\t<p>El pre-entrenamiento desde cero tiene costos iniciales muy altos. El fine-tuning, no el pre-entrenamiento, implicaría menores costos iniciales y la posibilidad de actualizaciones más frecuentes.</p>"
+    },
+    {
+      "id": "10-8",
+      "number": 8,
+      "text": "Estás preparando datos para un modelo de IA/ML que predecirá el comportamiento del cliente en función de sus patrones de compra. Los datos deben limpiarse, normalizarse y visualizarse antes de alimentar el modelo. ¿Cuál servicio de AWS puede automatizar las tareas de preparación de datos para este pipeline de IA/ML?",
+      "options": [
+        {
+          "text": "AWS Glue DataBrew",
+          "correct": true
+        },
+        {
+          "text": "Amazon QuickSight",
+          "correct": false
+        },
+        {
+          "text": "AWS Data Exchange",
+          "correct": false
+        },
+        {
+          "text": "Amazon SageMaker",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>AWS Glue DataBrew</p>\n\t\t\t\t\t\t<p>AWS Glue DataBrew ayuda a automatizar tareas de preparación de datos como limpieza, normalización y transformación sin necesidad de escribir código. Proporciona más de 250 transformaciones integradas para preparar datos rápidamente. Esto es especialmente útil para pipelines de IA/ML donde los datos sin procesar necesitan ser procesados antes de alimentar un modelo. DataBrew ofrece características como limpieza de datos, normalización de datos, manejo de datos faltantes y visualización de información sobre los datos, facilitando la preparación de datos para machine learning. También se integra con Amazon S3, AWS Glue y Amazon SageMaker, permitiendo una integración fluida en flujos de trabajo de IA/ML. Esto lo convierte en una herramienta valiosa para automatizar tareas de preparación de datos antes del entrenamiento del modelo.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>Amazon SageMaker</p>\n\t\t\t\t\t\t<p>Amazon SageMaker es un servicio completamente administrado para crear, entrenar e implementar modelos de machine learning. No se enfoca específicamente en tareas de preparación de datos como limpieza o normalización. Si bien ofrece algunas características para manejar conjuntos de datos, AWS Glue DataBrew está más especializado en preparar datos.</p>\n\t\t\t\t\t\t<p>Amazon QuickSight</p>\n\t\t\t\t\t\t<p>Amazon QuickSight es una herramienta de inteligencia empresarial (BI) para crear paneles e informes interactivos. Ayuda con la visualización de datos pero no está diseñada para limpiar o normalizar datos con propósitos de machine learning.</p>\n\t\t\t\t\t\t<p>AWS Data Exchange</p>\n\t\t\t\t\t\t<p>AWS Data Exchange es un servicio para suscribirse a conjuntos de datos de terceros. Permite a las organizaciones encontrar, suscribirse y usar datos externos, pero no maneja tareas como limpieza o preparación de conjuntos de datos internos para machine learning.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://docs.aws.amazon.com/glue/latest/dg/what-is-glue.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/glue/latest/dg/what-is-glue.html</a>\n\t\t\t\t\t\t</p>"
+    },
+    {
+      "id": "10-9",
+      "number": 9,
+      "text": "Estás implementando un sistema de IA que requiere respuestas precisas y específicas del dominio. El foundation model que usas es de propósito general, así que decides hacer fine-tuning para tu dominio específico. ¿Cuál sería el método más adecuado para lograrlo?",
+      "options": [
+        {
+          "text": "Transfer learning",
+          "correct": true
+        },
+        {
+          "text": "In-context learning",
+          "correct": false
+        },
+        {
+          "text": "Chain-of-thought prompting",
+          "correct": false
+        },
+        {
+          "text": "Zero-shot prompting",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>Transfer learning</p>\n\t\t\t\t\t\t<p>Transfer learning es una técnica que implica tomar un modelo previamente entrenado, como un foundation model, y hacer fine-tuning en un dataset nuevo y específico del dominio. Este método es muy adecuado cuando necesitas respuestas precisas y específicas del dominio porque permite que el modelo aproveche el conocimiento que ya tiene del entrenamiento de propósito general y lo adapte a tu caso de uso particular. Hacer fine-tuning de un modelo con transfer learning garantiza que el modelo conserve sus habilidades básicas mientras mejora su desempeño en áreas especializadas. Este enfoque es eficiente porque requiere menos datos y procesamiento que entrenar un modelo desde cero, mientras entrega resultados altamente precisos y específicos del dominio.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>Zero-shot prompting</p>\n\t\t\t\t\t\t<p>Zero-shot prompting permite que un modelo realice tareas en las que no ha sido entrenado explícitamente, aprovechando su conocimiento de propósito general. Aunque este método evita el fine-tuning, podría no proporcionar el nivel de precisión necesario para respuestas específicas del dominio, lo que lo hace menos adecuado para tareas especializadas.</p>\n\t\t\t\t\t\t<p>Chain-of-thought prompting</p>\n\t\t\t\t\t\t<p>Chain-of-thought prompting ayuda al modelo a desglosar tareas de razonamiento complejo generando pasos intermedios antes de llegar a una respuesta final. Aunque es útil para mejorar el razonamiento en algunos escenarios, no adapta un modelo a un dominio específico y, por lo tanto, no es el mejor método para fine-tuning específico del dominio.</p>\n\t\t\t\t\t\t<p>In-context learning</p>\n\t\t\t\t\t\t<p>In-context learning implica proporcionar ejemplos de una tarea dentro del input para guiar las respuestas del modelo. Aunque es una forma flexible de guiar el resultado del modelo, no adapta permanentemente el modelo para necesidades específicas del dominio, lo que lo hace menos adecuado para la precisión a largo plazo en tareas especializadas.</p>"
+    },
+    {
+      "id": "10-10",
+      "number": 10,
+      "text": "Tu equipo necesita desplegar una aplicación de IA generativa con almacenamiento de datos seguro y eficiente para datos estructurados utilizados durante el entrenamiento del modelo. ¿Cuál servicio de base de datos administrado de AWS está optimizado para manejar datos estructurados con escalado automático y copias de seguridad?",
+      "options": [
+        {
+          "text": "AWS Glue",
+          "correct": false
+        },
+        {
+          "text": "Amazon RDS",
+          "correct": true
+        },
+        {
+          "text": "Amazon S3 Glacier",
+          "correct": false
+        },
+        {
+          "text": "Amazon EC2",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>Amazon RDS</p>\n\t\t\t\t\t\t<p>Amazon Relational Database Service (RDS) es un servicio completamente administrado diseñado para manejar datos estructurados en bases de datos relacionales. Es compatible con motores de base de datos populares como MySQL, PostgreSQL, Oracle y SQL Server. RDS maneja automáticamente tareas como la configuración de la base de datos, parches, copias de seguridad y escalado, permitiendo que tu equipo se enfoque en la aplicación de IA generativa en lugar de gestionar la infraestructura de la base de datos. Con características como escalado automático y copias de seguridad, RDS garantiza que tus datos estructurados se almacenen de forma segura y eficiente, lo que lo hace ideal para administrar conjuntos de datos utilizados durante el entrenamiento de modelos de IA.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>Amazon S3 Glacier</p>\n\t\t\t\t\t\t<p>Amazon S3 Glacier está diseñado para archivado y almacenamiento de datos a largo plazo, no para manejar datos estructurados ni para soportar cargas de trabajo en tiempo real durante el entrenamiento de modelos de IA.</p>\n\t\t\t\t\t\t<p>Amazon EC2</p>\n\t\t\t\t\t\t<p>Amazon EC2 es un servicio de cómputo para ejecutar servidores virtuales, no un servicio de base de datos administrado. Aunque se puede usar para alojar bases de datos, no proporciona administración automatizada de bases de datos como Amazon RDS.</p>\n\t\t\t\t\t\t<p>AWS Glue</p>\n\t\t\t\t\t\t<p>AWS Glue es un servicio serverless de ETL (extracción, transformación y carga) utilizado para preparación y transformación de datos, no para almacenamiento y administración de datos estructurados durante el entrenamiento de modelos de IA.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://aws.amazon.com/rds\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/rds</a>\n\t\t\t\t\t\t</p>"
+    },
+    {
+      "id": "10-11",
+      "number": 11,
+      "text": "Una empresa está construyendo un chatbot de IA utilizando foundation models y quiere asegurar que los outputs del modelo sean responsables y confiables. ¿Cuál herramienta se puede usar para implementar barreras durante el despliegue de este modelo de IA?",
+      "options": [
+        {
+          "text": "Amazon SageMaker Model Monitor",
+          "correct": false
+        },
+        {
+          "text": "Amazon Bedrock Agents",
+          "correct": false
+        },
+        {
+          "text": "Amazon Bedrock Guardrails",
+          "correct": true
+        },
+        {
+          "text": "Amazon SageMaker Model Cards",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>Amazon Bedrock Guardrails</p>\n\t\t\t\t\t\t<p>Amazon Bedrock Guardrails son características que ayudan a los desarrolladores a implementar medidas de seguridad y controles de contenido al desplegar modelos de IA, especialmente aquellos que usan foundation models. Estos guardrails te permiten configurar políticas que eviten que el modelo de IA genere contenido inapropiado, sesgado o dañino. Al integrar guardrails en tu chatbot de IA, puedes asegurar que los outputs del modelo sean responsables y confiables. Esto es crucial en aplicaciones donde la IA interactúa directamente con usuarios, ya que ayuda a mantener la confianza del usuario y cumple con estándares éticos y regulaciones. Los guardrails funcionan filtrando las respuestas del modelo basándose en reglas y directrices predefinidas, actuando efectivamente como barreras que mejoran la seguridad y confiabilidad del sistema de IA durante el despliegue.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>Amazon Bedrock Agents</p>\n\t\t\t\t\t\t<p>Amazon Bedrock Agents es una herramienta que ayuda a orquestar solicitudes de usuarios y gestionar interacciones entre usuarios y foundation models. Si bien facilita la construcción de aplicaciones como chatbots, no proporciona específicamente mecanismos para implementar barreras en outputs responsables de IA.</p>\n\t\t\t\t\t\t<p>Amazon SageMaker Model Monitor</p>\n\t\t\t\t\t\t<p>Amazon SageMaker Model Monitor monitorea continuamente los modelos de machine learning en producción para detectar problemas de calidad de datos, drift y anomalías. Ayuda a mantener el rendimiento del modelo a lo largo del tiempo, pero no implementa barreras para controlar el contenido de los outputs del modelo.</p>\n\t\t\t\t\t\t<p>Amazon SageMaker Model Cards</p>\n\t\t\t\t\t\t<p>Amazon SageMaker Model Cards ofrece una forma estructurada de documentar y compartir detalles esenciales sobre modelos de machine learning, como su uso previsto, métricas de rendimiento e información de cumplimiento. Mejora la transparencia y gobernanza, pero no proporciona funcionalidades para implementar barreras durante el despliegue del modelo.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://aws.amazon.com/bedrock/guardrails\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/bedrock/guardrails</a>\n\t\t\t\t\t\t</p>"
+    },
+    {
+      "id": "10-12",
+      "number": 12,
+      "text": "Un equipo de IA tiene la tarea de desarrollar un asistente activado por voz usando AWS. El asistente debe entender y responder a consultas en lenguaje natural. ¿Cuáles servicios administrados de AWS se pueden utilizar para construir esta solución? (Selecciona DOS.)",
+      "options": [
+        {
+          "text": "Amazon Polly y Amazon Lex para modelado de voz y conversación",
+          "correct": true
+        },
+        {
+          "text": "Amazon Rekognition para procesamiento de lenguaje natural",
+          "correct": false
+        },
+        {
+          "text": "Amazon Translate para traducir voz a texto",
+          "correct": false
+        },
+        {
+          "text": "AWS SageMaker para entrenamiento de modelos de deep learning",
+          "correct": false
+        },
+        {
+          "text": "Amazon Comprehend para análisis de sentimientos y modelado de tópicos",
+          "correct": true
+        }
+      ],
+      "multiSelect": true,
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>Amazon Polly y Amazon Lex para modelado de voz y conversación</p>\n\t\t\t\t\t\t<p>Amazon Polly convierte texto en voz natural y realista, lo cual es esencial para crear respuestas de voz. Amazon Lex permite construir interfaces conversacionales usando voz y texto. Juntos, permiten que un asistente activado por voz entienda consultas habladas, las procese y responda. Polly maneja la conversión de texto a voz, mientras que Lex gestiona la comprensión del lenguaje natural y el flujo de la conversación, lo que los hace ideales para construir asistentes activados por voz.</p>\n\t\t\t\t\t\t<p>Amazon Comprehend para análisis de sentimientos y modelado de tópicos</p>\n\t\t\t\t\t\t<p>Amazon Comprehend realiza procesamiento de lenguaje natural (NLP), permitiendo que el asistente entienda el sentimiento, frases clave y tópicos de las consultas del usuario. Mejora la capacidad del asistente para analizar y entender el significado detrás de las consultas de texto, proporcionando respuestas más inteligentes basadas en sentimiento y contexto. Esto es útil para hacer la interacción más consciente del contexto.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>Amazon Rekognition para procesamiento de lenguaje natural</p>\n\t\t\t\t\t\t<p>Amazon Rekognition se utiliza para análisis de imágenes y vídeos, no para procesamiento de lenguaje natural. Se especializa en identificar objetos, personas y escenas en medios visuales, por lo que no es relevante para construir un asistente activado por voz.</p>\n\t\t\t\t\t\t<p>Amazon Translate para traducir voz a texto</p>\n\t\t\t\t\t\t<p>Amazon Translate está diseñado para traducción de idiomas, pero no convierte voz a texto. Amazon Transcribe sería el servicio correcto para conversión de voz a texto, lo que hace que esta opción no sea adecuada para el caso de uso específico.</p>\n\t\t\t\t\t\t<p>AWS SageMaker para entrenamiento de modelos de deep learning</p>\n\t\t\t\t\t\t<p>Aunque SageMaker es excelente para entrenar e implementar modelos de machine learning personalizados, AWS ya ofrece servicios completamente administrados como Lex y Polly para aplicaciones basadas en voz. SageMaker no es esencial para esta solución si utilizas esos servicios administrados.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://docs.aws.amazon.com/lex\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/lex</a></p>\n\t\t\t\t\t\t<p><a href=\"https://docs.aws.amazon.com/polly\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/polly</a></p>\n\t\t\t\t\t\t<p><a href=\"https://docs.aws.amazon.com/comprehend\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/comprehend</a>\n\t\t\t\t\t\t</p>"
+    },
+    {
+      "id": "10-13",
+      "number": 13,
+      "text": "Estás trabajando en un proyecto que utiliza IA generativa para producir contenido de video basado en prompts específicos. ¿Qué concepto de la IA generativa asegura que el modelo pueda manejar inputs de múltiples formas de datos, como texto y video?",
+      "options": [
+        {
+          "text": "Fine-tuning",
+          "correct": false
+        },
+        {
+          "text": "Structured data models",
+          "correct": false
+        },
+        {
+          "text": "Multi-modal models",
+          "correct": true
+        },
+        {
+          "text": "Clustering",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>Multi-modal models</p>\n\t\t\t\t\t\t<p>Los multi-modal models están diseñados para procesar y generar datos en múltiples modalidades, como texto, imágenes, audio y video. En el contexto de la IA generativa, estos modelos permiten la integración y comprensión de diferentes tipos de datos dentro de un único marco. Para un proyecto que busca producir contenido de video basado en prompts específicos (inputs de texto), un multi-modal model es esencial. Permite que el modelo interprete los prompts textuales y los traduzca en outputs de video correspondientes. Esto implica mapeos complejos entre la información semántica del texto y los elementos visuales del video. Los multi-modal models aprovechan técnicas que alinean y fusionan datos de diferentes fuentes, asegurando la generación de contenido coherente y relevante contextualmente. Al manejar inputs de múltiples formas de datos, los multi-modal models mejoran la capacidad de los sistemas de IA para realizar tareas que requieren comprensión y generación entre modalidades, lo que los hace altamente relevantes para proyectos que involucran generación de texto a video.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>Fine-tuning</p>\n\t\t\t\t\t\t<p>Fine-tuning es el proceso de tomar un modelo pre-entrenado y adaptarlo a una tarea o dataset específico continuando el entrenamiento con nuevos datos. Aunque el fine-tuning puede mejorar el desempeño de un modelo en una tarea particular, no habilita inherentemente que el modelo maneje múltiples modalidades de datos como texto y video. Se enfoca en refinar el modelo dentro de sus capacidades existentes en lugar de expandirlas para incluir tipos de datos adicionales.</p>\n\t\t\t\t\t\t<p>Clustering</p>\n\t\t\t\t\t\t<p>Clustering es una técnica de aprendizaje no supervisado utilizada para agrupar puntos de datos similares en función de sus características. Es útil para segmentación de datos y reconocimiento de patrones, pero no contribuye a la capacidad del modelo de procesar o generar datos de múltiples modalidades. El clustering no facilita la integración de inputs de texto y video en modelos de IA generativa.</p>\n\t\t\t\t\t\t<p>Structured data models</p>\n\t\t\t\t\t\t<p>Los structured data models están diseñados para manejar datos altamente organizados y formateados de manera predefinida, como bases de datos u hojas de cálculo. Estos modelos no están equipados para procesar simultáneamente tipos de datos no estructurados como texto y video. Carecen de los mecanismos requeridos para interpretar y generar contenido en diferentes formas de datos, lo que los hace inapropiados para tareas de IA generativa multi-modal.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://aws.amazon.com/blogs/machine-learning/fine-tune-large-multimodal-models-using-amazon-sagemaker/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/blogs/machine-learning/fine-tune-large-multimodal-models-using-amazon-sagemaker/</a>\n\t\t\t\t\t\t</p>"
+    },
+    {
+      "id": "10-14",
+      "number": 14,
+      "text": "Se te asigna la tarea de implementar prácticas seguras de ingeniería de datos para un sistema de IA que maneja información financiera de clientes. ¿Cuál de las siguientes prácticas deberías implementar para proteger los datos tanto en almacenamiento como en procesamiento?",
+      "options": [
+        {
+          "text": "Técnicas de ofuscación de datos",
+          "correct": false
+        },
+        {
+          "text": "Cifrar datos en reposo y en tránsito",
+          "correct": true
+        },
+        {
+          "text": "Uso de buckets S3 públicos para almacenamiento de datos",
+          "correct": false
+        },
+        {
+          "text": "Replicación de datos",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>Cifrar datos en reposo y en tránsito</p>\n\t\t\t\t\t\t<p>Cifrar datos en reposo y en tránsito es una de las prácticas más importantes para asegurar la información financiera de los clientes. El cifrado en reposo garantiza que los datos estén protegidos cuando se almacenan, mientras que el cifrado en tránsito protege los datos cuando se transfieren entre sistemas. Esto asegura que personas no autorizadas no puedan acceder a información sensible durante el almacenamiento o la transmisión. Servicios de AWS, como AWS Key Management Service (KMS), se pueden usar para administrar claves de cifrado y aplicar cifrado en varios almacenes de datos, incluyendo Amazon S3 y RDS, así como durante las transferencias usando SSL/TLS.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>Técnicas de ofuscación de datos</p>\n\t\t\t\t\t\t<p>La ofuscación de datos oculta información sensible, pero no es una solución de seguridad integral como el cifrado para proteger datos durante el almacenamiento y la transmisión.</p>\n\t\t\t\t\t\t<p>Replicación de datos</p>\n\t\t\t\t\t\t<p>La replicación de datos garantiza la disponibilidad de datos al copiarlos entre sistemas, pero no protege inherentemente los datos del acceso no autorizado ni los asegura.</p>\n\t\t\t\t\t\t<p>Uso de buckets S3 públicos para almacenamiento de datos</p>\n\t\t\t\t\t\t<p>Usar buckets S3 públicos para almacenar datos sensibles es un riesgo de seguridad, ya que puede exponer los datos a usuarios no autorizados. En su lugar, se debe usar almacenamiento privado y cifrado.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://docs.aws.amazon.com/whitepapers/latest/logical-separation/encrypting-data-at-rest-and--in-transit.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/whitepapers/latest/logical-separation/encrypting-data-at-rest-and–in-transit.html</a>\n\t\t\t\t\t\t</p>"
+    },
+    {
+      "id": "10-15",
+      "number": 15,
+      "text": "Estás desarrollando un modelo de IA que depende de embeddings almacenados en una base de datos NoSQL orientada a documentos. ¿Cuál es el servicio de AWS más apropiado para almacenar estos vector embeddings?",
+      "options": [
+        {
+          "text": "Amazon DocumentDB",
+          "correct": true
+        },
+        {
+          "text": "Amazon CloudWatch",
+          "correct": false
+        },
+        {
+          "text": "AWS Data Exchange",
+          "correct": false
+        },
+        {
+          "text": "Amazon EMR",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>Amazon DocumentDB</p>\n\t\t\t\t\t\t<p>Amazon DocumentDB es una base de datos NoSQL orientada a documentos, completamente administrada y escalable, lo que la hace ideal para almacenar vector embeddings. Dado que los embeddings generalmente se almacenan como arrays o vectores en formatos tipo JSON, la estructura de DocumentDB permite un almacenamiento y consulta eficiente de estos embeddings. El soporte de la base de datos para cargas de trabajo de gran escala y alto rendimiento, junto con su capacidad de integración con pipelines de aprendizaje automático, la hace perfecta para casos de uso que involucran embeddings en modelos de IA. Su compatibilidad con MongoDB también ofrece flexibilidad para desarrolladores familiarizados con el ecosistema de MongoDB.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>Amazon EMR</p>\n\t\t\t\t\t\t<p>Amazon EMR es una plataforma en la nube para procesamiento de big data que ayuda a ejecutar frameworks de procesamiento de datos a gran escala como Apache Hadoop y Spark. Aunque es útil para procesamiento y análisis de datos, no es un servicio de base de datos y no está optimizado para almacenar embeddings.</p>\n\t\t\t\t\t\t<p>Amazon CloudWatch</p>\n\t\t\t\t\t\t<p>Amazon CloudWatch es un servicio de monitoreo y observabilidad diseñado para rastrear métricas de rendimiento y logs de aplicaciones de AWS. No se utiliza para almacenar datos como vector embeddings, sino para monitorear y registrar la salud del sistema.</p>\n\t\t\t\t\t\t<p>AWS Data Exchange</p>\n\t\t\t\t\t\t<p>AWS Data Exchange facilita el intercambio de datos entre proveedores y consumidores de datos. Aunque simplifica el acceso a conjuntos de datos externos, no es un servicio de base de datos o almacenamiento diseñado para guardar embeddings.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://aws.amazon.com/documentdb\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/documentdb</a>\n\t\t\t\t\t\t</p>"
+    },
+    {
+      "id": "10-16",
+      "number": 16,
+      "text": "Una startup está desarrollando un servicio de generación de imágenes basado en IA y necesita aprovechar un servicio administrado que proporcione acceso a foundation models para IA generativa, sin necesidad de gestionar la infraestructura. ¿Cuál es el servicio de AWS más apropiado para este requisito?",
+      "options": [
+        {
+          "text": "Amazon Kinesis",
+          "correct": false
+        },
+        {
+          "text": "Amazon Bedrock",
+          "correct": true
+        },
+        {
+          "text": "Amazon SageMaker",
+          "correct": false
+        },
+        {
+          "text": "Amazon Neptune",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>Amazon Bedrock</p>\n\t\t\t\t\t\t<p>Amazon Bedrock es un servicio completamente administrado que permite a los desarrolladores crear, personalizar e implementar aplicaciones de IA generativa usando foundation models. Proporciona acceso a varios modelos de alto rendimiento de AI21 Labs, Anthropic, Stability AI y los modelos Titan de AWS, simplificando el proceso de desarrollo para tareas como generación de contenido, resumen de textos y agentes conversacionales. Bedrock elimina la necesidad de gestionar la infraestructura subyacente, facilitando a los usuarios la integración de IA en sus aplicaciones con codificación mínima. También permite a los usuarios personalizar modelos para casos de uso específicos, mejorando la flexibilidad y escalabilidad.</p>\n\t\t\t\t\t\t<p>Bedrock simplifica el uso de modelos de IA generativa al abstraer la necesidad de gestionar la infraestructura subyacente, lo que lo hace ideal para startups que buscan desarrollar servicios como generación de imágenes basada en IA. Los desarrolladores pueden optimizar fácilmente estos modelos e integrarlos en sus aplicaciones sin preocuparse por complejidades operacionales.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>Amazon SageMaker</p>\n\t\t\t\t\t\t<p>Amazon SageMaker es un servicio integral de machine learning que proporciona herramientas para crear, entrenar e implementar modelos. Si bien ofrece varias capacidades para machine learning, no se especializa en ofrecer foundation models específicamente para IA generativa.</p>\n\t\t\t\t\t\t<p>Amazon Kinesis</p>\n\t\t\t\t\t\t<p>Amazon Kinesis se utiliza para streaming y análisis de datos en tiempo real. No está diseñado para gestionar modelos de IA generativa ni ofrecer capacidades de foundation models.</p>\n\t\t\t\t\t\t<p>Amazon Neptune</p>\n\t\t\t\t\t\t<p>Amazon Neptune es un servicio de base de datos de gráficos administrado diseñado para almacenar y consultar relaciones entre puntos de datos. No está relacionado con IA generativa ni tareas de generación de imágenes.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://docs.aws.amazon.com/bedrock/latest/userguide/what-is-bedrock.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/bedrock/latest/userguide/what-is-bedrock.html</a>\n\t\t\t\t\t\t</p>"
+    },
+    {
+      "id": "10-17",
+      "number": 17,
+      "text": "Un modelo de IA para el sector sanitario muestra alta precisión en la población general pero presenta un desempeño consistentemente deficiente en grupos minoritarios. ¿Qué sugiere esto sobre el dataset o el modelo?",
+      "options": [
+        {
+          "text": "El modelo tiene baja varianza pero alta precisión.",
+          "correct": false
+        },
+        {
+          "text": "El modelo puede tener sesgo inherente contra ciertos grupos demográficos.",
+          "correct": true
+        },
+        {
+          "text": "El modelo está experimentando overfitting debido a datos complejos.",
+          "correct": false
+        },
+        {
+          "text": "El modelo está experimentando underfitting en todos los datos.",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>El modelo puede tener sesgo inherente contra ciertos grupos demográficos.</p>\n\t\t\t\t\t\t<p>Esto sugiere que el modelo no ha aprendido a tratar todos los grupos demográficos por igual, lo que indica un posible sesgo en los datos o en el modelo mismo. El sesgo puede surgir de datos de entrenamiento desequilibrados, donde ciertos grupos están subrepresentados, lo que lleva al modelo a tener un desempeño deficiente para esos grupos. En IA sanitaria, si un modelo tiene un desempeño consistentemente deficiente para grupos minoritarios, puede ser porque los datos de entrenamiento no incluyen suficientes ejemplos de esos grupos o el modelo no fue diseñado para abordar las disparidades en la representación. Esto podría resultar en resultados injustos, como predicciones o diagnósticos inexactos para poblaciones subrepresentadas, y destaca la importancia de la equidad e inclusividad en el desarrollo de IA.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>El modelo tiene baja varianza pero alta precisión.</p>\n\t\t\t\t\t\t<p>Baja varianza con alta precisión generalmente significa que el modelo es consistente y tiene un buen desempeño en la mayoría de los datos, lo que contradice el hecho de que el modelo tiene un desempeño deficiente en grupos específicos.</p>\n\t\t\t\t\t\t<p>El modelo está experimentando overfitting debido a datos complejos.</p>\n\t\t\t\t\t\t<p>El overfitting generalmente significa que el modelo tiene un buen desempeño en los datos de entrenamiento pero un desempeño deficiente en datos nuevos. Sin embargo, el problema aquí es específico de grupos minoritarios, no una incapacidad general para generalizar a todos los datos nuevos.</p>\n\t\t\t\t\t\t<p>El modelo está experimentando underfitting en todos los datos.</p>\n\t\t\t\t\t\t<p>Underfitting significa que el modelo tiene un desempeño deficiente tanto en los datos de entrenamiento como en datos nuevos. Dado que el modelo tiene un buen desempeño en la población general, el underfitting no es la explicación correcta.</p>"
+    },
+    {
+      "id": "10-18",
+      "number": 18,
+      "text": "¿Cuál de las siguientes es un ejemplo común de aprendizaje por refuerzo?",
+      "options": [
+        {
+          "text": "Un robot aprendiendo a navegar un laberinto recibiendo recompensas por decisiones correctas",
+          "correct": true
+        },
+        {
+          "text": "Un chatbot entendiendo consultas de clientes usando respuestas predefinidas",
+          "correct": false
+        },
+        {
+          "text": "Un modelo que clasifica emails como spam o no spam",
+          "correct": false
+        },
+        {
+          "text": "Un modelo identificando dígitos manuscritos a partir de imágenes",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>Un robot aprendiendo a navegar un laberinto recibiendo recompensas por decisiones correctas</p>\n\t\t\t\t\t\t<p>Este es un ejemplo común de aprendizaje por refuerzo, donde un agente (en este caso, un robot) interactúa con un entorno (el laberinto) y aprende a realizar tareas recibiendo retroalimentación en forma de recompensas o penalizaciones por sus acciones. El robot mejora su toma de decisiones a través de prueba y error, optimizando sus acciones para maximizar las recompensas acumuladas. El aprendizaje por refuerzo generalmente se utiliza en situaciones donde un agente debe tomar decisiones secuenciales para lograr un objetivo.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>Un modelo identificando dígitos manuscritos a partir de imágenes</p>\n\t\t\t\t\t\t<p>Esto describe una tarea de clasificación, frecuentemente realizada usando aprendizaje supervisado (por ejemplo, con redes neuronales o redes neuronales convolucionales para reconocimiento de imágenes), no aprendizaje por refuerzo.</p>\n\t\t\t\t\t\t<p>Un modelo que clasifica emails como spam o no spam</p>\n\t\t\t\t\t\t<p>Este también es un ejemplo de tarea de clasificación usando aprendizaje supervisado, donde el modelo se entrena con ejemplos etiquetados de emails spam y no spam.</p>\n\t\t\t\t\t\t<p>Un chatbot entendiendo consultas de clientes usando respuestas predefinidas</p>\n\t\t\t\t\t\t<p>Esto probablemente describe una tarea de procesamiento de lenguaje natural que utiliza técnicas basadas en reglas o aprendizaje supervisado, no aprendizaje por refuerzo.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://aws.amazon.com/what-is/reinforcement-learning\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/what-is/reinforcement-learning</a>\n\t\t\t\t\t\t</p>"
+    },
+    {
+      "id": "10-19",
+      "number": 19,
+      "text": "Te encargan generar imágenes sintéticas para una nueva campaña de marketing usando un modelo de IA generativa. ¿Cuál es el servicio de AWS más adecuado para este caso de uso?",
+      "options": [
+        {
+          "text": "Amazon Bedrock",
+          "correct": true
+        },
+        {
+          "text": "Amazon Lex",
+          "correct": false
+        },
+        {
+          "text": "Amazon Rekognition",
+          "correct": false
+        },
+        {
+          "text": "Amazon SageMaker",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>Amazon Bedrock</p>\n\t\t\t\t\t\t<p>Amazon Bedrock te permite crear y escalar fácilmente aplicaciones de IA generativa usando foundation models. Soporta varios modelos, incluyendo aquellos diseñados para generar imágenes sintéticas, texto y otros tipos de contenido. Bedrock simplifica el acceso e implementación de modelos de IA generativa para tareas como la creación de visuales de marketing, sin necesidad de gestionar infraestructura o construir modelos desde cero. Esto la convierte en la solución más apropiada para generar imágenes sintéticas en una campaña de marketing.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>Amazon Rekognition</p>\n\t\t\t\t\t\t<p>Amazon Rekognition es un servicio para analizar imágenes y videos a fin de detectar objetos, rostros y actividades. No genera imágenes sintéticas, sino que se enfoca en el reconocimiento y análisis de imágenes.</p>\n\t\t\t\t\t\t<p>Amazon Lex</p>\n\t\t\t\t\t\t<p>Amazon Lex es un servicio para construir interfaces conversacionales como chatbots. Se encarga del procesamiento del lenguaje natural pero no es apto para generar imágenes sintéticas.</p>\n\t\t\t\t\t\t<p>Amazon SageMaker</p>\n\t\t\t\t\t\t<p>Amazon SageMaker es una plataforma integral de machine learning utilizada para construir, entrenar e implementar modelos de ML. Si bien puede usarse para desarrollar modelos personalizados que generen imágenes sintéticas, Amazon Bedrock está más orientado al acceso de modelos de IA generativa preconstructos sin requerir conocimientos profundos de ML.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://aws.amazon.com/bedrock\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/bedrock</a>\n\t\t\t\t\t\t</p>"
+    },
+    {
+      "id": "10-20",
+      "number": 20,
+      "text": "Una empresa de servicios financieros quiere implementar un modelo de IA generativa para análisis de datos de clientes, pero le preocupa la seguridad de los datos financieros sensibles. ¿Cómo garantiza AWS la seguridad de los datos en una aplicación de IA generativa?",
+      "options": [
+        {
+          "text": "Ofreciendo algoritmos de encriptación personalizados",
+          "correct": false
+        },
+        {
+          "text": "Proporcionando replicación automatizada de datos en regiones globales",
+          "correct": false
+        },
+        {
+          "text": "Habilitando encriptación de datos en reposo y en tránsito",
+          "correct": true
+        },
+        {
+          "text": "Ofreciendo infraestructura completamente de código abierto que la empresa pueda modificar",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>Habilitando encriptación de datos en reposo y en tránsito</p>\n\t\t\t\t\t\t<p>AWS garantiza la seguridad de los datos financieros sensibles mediante mecanismos robustos de encriptación tanto en reposo como en tránsito. Esto significa que los datos almacenados en bases de datos o servicios de almacenamiento como Amazon S3 están encriptados, y cualquier dato que se transmita entre servicios también está encriptado, protegiéndolo del acceso no autorizado. AWS ofrece varias opciones de encriptación, incluyendo AWS Key Management Service (KMS), que ayuda a los usuarios a gestionar de forma segura las claves de encriptación. Esto es crucial para empresas de servicios financieros que manejan datos sensibles de clientes y necesitan garantizar el cumplimiento de regulaciones de la industria.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>Ofreciendo algoritmos de encriptación personalizados</p>\n\t\t\t\t\t\t<p>AWS proporciona algoritmos de encriptación estándar de la industria y servicios como KMS en lugar de métodos de encriptación personalizados.</p>\n\t\t\t\t\t\t<p>Proporcionando replicación automatizada de datos en regiones globales</p>\n\t\t\t\t\t\t<p>Aunque AWS ofrece características de replicación, no están enfocadas principalmente en la seguridad. La replicación es generalmente para redundancia y disponibilidad, no para encriptación o seguridad.</p>\n\t\t\t\t\t\t<p>Ofreciendo infraestructura completamente de código abierto que la empresa pueda modificar</p>\n\t\t\t\t\t\t<p>AWS no es completamente de código abierto, y aunque algunos servicios son modificables, la infraestructura es gestionada por AWS y sigue estándares de seguridad estrictos.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://aws.amazon.com/kms\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/kms</a></p>\n\t\t\t\t\t\t<p><a href=\"https://aws.amazon.com/security\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/security</a>\n\t\t\t\t\t\t</p>"
+    },
+    {
+      "id": "10-21",
+      "number": 21,
+      "text": "Un equipo de ciencia de datos está preparando un conjunto de datos grande para entrenar un modelo de machine learning. Necesitan limpiar, normalizar y transformar los datos de manera eficiente. ¿Cuáles son las herramientas de AWS que deberían usar para esta tarea?",
+      "options": [
+        {
+          "text": "Amazon SageMaker Model Monitor",
+          "correct": false
+        },
+        {
+          "text": "Amazon SageMaker Ground Truth",
+          "correct": false
+        },
+        {
+          "text": "Amazon SageMaker Data Wrangler",
+          "correct": true
+        },
+        {
+          "text": "Amazon SageMaker Studio",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>Amazon SageMaker Data Wrangler</p>\n\t\t\t\t\t\t<p>Amazon SageMaker Data Wrangler es una herramienta que simplifica el proceso de preparación de datos e ingeniería de features para machine learning. Permite a los usuarios importar, limpiar, transformar, normalizar y analizar datos de diversas fuentes sin necesidad de escribir código complejo. Data Wrangler proporciona una interfaz intuitiva con más de 300 transformaciones de datos integradas, lo que facilita el preprocesamiento de datos para modelos de machine learning. Se integra sin problemas con SageMaker, permitiendo transiciones rápidas desde la preparación de datos hasta el entrenamiento e implementación del modelo. Esto acelera el flujo de trabajo de machine learning, ayudando a los científicos de datos y analistas a ahorrar tiempo y enfocarse en construir mejores modelos.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>Amazon SageMaker Ground Truth</p>\n\t\t\t\t\t\t<p>Amazon SageMaker Ground Truth es una herramienta para etiquetado de datos, utilizada para crear conjuntos de datos etiquetados de alta calidad. No se enfoca en limpiar o transformar datos para el entrenamiento del modelo.</p>\n\t\t\t\t\t\t<p>Amazon SageMaker Model Monitor</p>\n\t\t\t\t\t\t<p>SageMaker Model Monitor se utiliza para hacer seguimiento del rendimiento de modelos de machine learning en producción, particularmente para detectar data drift. No ayuda con el preprocesamiento de datos.</p>\n\t\t\t\t\t\t<p>Amazon SageMaker Studio</p>\n\t\t\t\t\t\t<p>SageMaker Studio es un entorno de desarrollo integrado (IDE) para crear, entrenar e implementar modelos de machine learning. Aunque proporciona un entorno completo para el desarrollo de modelos, no se enfoca únicamente en la preparación de datos como lo hace Data Wrangler.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://docs.aws.amazon.com/sagemaker/latest/dg/data-wrangler.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/sagemaker/latest/dg/data-wrangler.html</a>\n\t\t\t\t\t\t</p>"
+    },
+    {
+      "id": "10-22",
+      "number": 22,
+      "text": "Un chatbot de servicio al cliente se implementa usando Retrieval Augmented Generation (RAG) para proporcionar a los usuarios respuestas precisas basadas en una gran base de datos de interacciones previas con clientes y manuales de productos. ¿Cuál es la ventaja clave de usar RAG en este contexto?",
+      "options": [
+        {
+          "text": "El modelo recupera documentos relevantes y genera respuestas contextuales basadas en ellos.",
+          "correct": true
+        },
+        {
+          "text": "El modelo genera respuestas sin necesitar información adicional.",
+          "correct": false
+        },
+        {
+          "text": "El modelo usa solo datos pre-entrenados para generar respuestas genéricas.",
+          "correct": false
+        },
+        {
+          "text": "El modelo se fine-tunea automáticamente con cada consulta.",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>El modelo recupera documentos relevantes y genera respuestas contextuales basadas en ellos.</p>\n\t\t\t\t\t\t<p>Retrieval Augmented Generation (RAG) es un modelo híbrido que combina enfoques basados en recuperación y generativos en procesamiento de lenguaje natural (NLP). En RAG, un modelo de recuperación primero obtiene información relevante de una base de conocimiento externa o de documentos. Luego, un modelo generativo (como GPT) usa esta información para crear respuestas más precisas y contextuales. Este método mejora el desempeño del modelo generativo al proporcionarle una base factual de fuentes externas, lo que genera resultados más confiables e informados. Se usa frecuentemente para tareas como responder preguntas, resumir y generar documentos.</p>\n\t\t\t\t\t\t<p>En este contexto, el chatbot busca en una vasta base de datos de interacciones previas con clientes y manuales de productos para encontrar información relevante para la consulta del usuario. Al recuperar estos documentos pertinentes, el modelo puede generar respuestas precisas y específicas para el contexto. Este enfoque garantiza que el chatbot proporcione respuestas actualizadas y exactas, mejorando la satisfacción y eficiencia del usuario. RAG aprovecha tanto la recuperación de datos en tiempo real como las capacidades de generación de lenguaje de modelos de IA para entregar respuestas personalizadas.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>El modelo genera respuestas sin necesitar información adicional.</p>\n\t\t\t\t\t\t<p>Esta opción sugiere que el modelo se basa únicamente en su conocimiento preexistente para responder consultas. Sin embargo, RAG específicamente implica recuperar documentos externos para complementar las respuestas, no solo generar respuestas a partir de datos pre-entrenados.</p>\n\t\t\t\t\t\t<p>El modelo usa solo datos pre-entrenados para generar respuestas genéricas.</p>\n\t\t\t\t\t\t<p>Esta opción implica que el modelo proporciona respuestas generales basadas en su entrenamiento inicial. RAG, en contraste, mejora las respuestas incorporando información recuperada y relevante, haciéndolas más específicas y útiles.</p>\n\t\t\t\t\t\t<p>El modelo se fine-tunea automáticamente con cada consulta.</p>\n\t\t\t\t\t\t<p>Esta opción indica que el modelo actualiza sus parámetros de aprendizaje con cada consulta, lo cual no es cómo funciona RAG. RAG recupera información relevante para informar las respuestas, pero no implica fine-tuning continuo durante las interacciones.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://aws.amazon.com/what-is/retrieval-augmented-generation\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/what-is/retrieval-augmented-generation</a>\n\t\t\t\t\t\t</p>"
+    },
+    {
+      "id": "10-23",
+      "number": 23,
+      "text": "Un equipo de investigación utiliza una métrica que evalúa la similitud entre secuencias de texto midiendo la similitud del coseno de los embeddings contextuales generados por un modelo transformer. ¿Cuál es la métrica que están usando para evaluar la calidad del texto generado?",
+      "options": [
+        {
+          "text": "BERTScore",
+          "correct": true
+        },
+        {
+          "text": "Precision",
+          "correct": false
+        },
+        {
+          "text": "BLEU",
+          "correct": false
+        },
+        {
+          "text": "ROUGE",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>BERTScore</p>\n\t\t\t\t\t\t<p>BERTScore es una métrica que evalúa la similitud entre dos secuencias de texto utilizando embeddings contextuales generados por modelos transformer como BERT. En lugar de depender de coincidencias exactas de palabras como BLEU o ROUGE, BERTScore captura la similitud semántica midiendo la similitud del coseno de los embeddings del texto generado y el texto de referencia. Esto hace que BERTScore sea particularmente efectivo para evaluar la calidad del texto donde el significado es más importante que la coincidencia exacta de palabras. Es especialmente útil en tareas como traducción automática y resumen de textos, donde mantener el contexto y el significado es crucial.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>ROUGE</p>\n\t\t\t\t\t\t<p>ROUGE mide la superposición de n-gramas, secuencias de palabras o pares de palabras entre el texto generado y el texto de referencia, enfocándose en el recall. No involucra embeddings ni similitud del coseno.</p>\n\t\t\t\t\t\t<p>BLEU</p>\n\t\t\t\t\t\t<p>BLEU es una métrica para traducción automática que compara n-gramas en el texto generado con los de traducciones de referencia. Se basa en coincidencias exactas de palabras, no en embeddings.</p>\n\t\t\t\t\t\t<p>Precision</p>\n\t\t\t\t\t\t<p>Precision es una métrica básica utilizada para medir la proporción de instancias predichas correctamente. No está relacionada con medir la similitud de secuencias de texto usando embeddings.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://docs.aws.amazon.com/sagemaker/latest/dg/clarify-accuracy-evaluation.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/sagemaker/latest/dg/clarify-accuracy-evaluation.html</a>\n\t\t\t\t\t\t</p>"
+    },
+    {
+      "id": "10-24",
+      "number": 24,
+      "text": "Una empresa desarrolla un modelo de IA para automatizar las interacciones con clientes. Sin embargo, el modelo ocasionalmente genera respuestas que contienen datos fabricados. Si los clientes confían en estas respuestas incorrectas, ¿a qué riesgo se expone la empresa?",
+      "options": [
+        {
+          "text": "Alucinaciones",
+          "correct": false
+        },
+        {
+          "text": "Resultados del modelo sesgados",
+          "correct": false
+        },
+        {
+          "text": "Pérdida de confianza del cliente",
+          "correct": true
+        },
+        {
+          "text": "Infracción de propiedad intelectual",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>El riesgo más directo y significativo al que se expone la empresa cuando su modelo de IA para servicio al cliente genera respuestas con datos fabricados es la <b>Pérdida de confianza del cliente</b>.</p>\n\t\t\t\t\t\t<p>Esto es por qué:</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li><b>Pérdida de confianza del cliente:</b> Si los clientes reciben información incorrecta del modelo de IA y actúan en función de ella, lo que puede resultar en consecuencias negativas o necesidades insatisfechas, la confianza que tienen en la empresa se erosionará. Esto puede llevar a una disminución de la lealtad del cliente, comentarios negativos de boca en boca y, en última instancia, a un declive en el negocio.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>Veamos por qué las otras opciones son menos directas como riesgo principal en este escenario:</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>Alucinaciones:</b> Aunque \"alucinaciones\" es el término técnico para cuando los modelos de IA generan información fabricada, es la <em>causa</em> del problema, no el riesgo principal al que se enfrenta la empresa por estas fabricaciones.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>Resultados del modelo sesgados:</b> Los resultados sesgados del modelo se refieren a cuando el modelo favorece consistentemente ciertos grupos demográficos o perspectivas de forma injusta. Si bien este es un problema grave, el escenario describe específicamente la generación de <em>datos fabricados</em>, que es un tipo de error diferente. Un modelo puede alucinar sin estar inherentemente sesgado en el sentido tradicional.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>Infracción de propiedad intelectual:</b> Este riesgo típicamente surge cuando un modelo de IA utiliza material protegido por derechos de autor sin permiso en sus datos de entrenamiento o contenido generado. Si bien es posible en algunas aplicaciones de IA, no es el riesgo directo e inmediato que surge de un modelo de servicio al cliente que proporciona información factual fabricada.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>En resumen, el peligro central de un modelo de IA para servicio al cliente que proporciona información incorrecta e inventada es el daño que causa a la relación de la empresa con sus clientes, lo que resulta en una pérdida de confianza.</b>\n\t\t\t\t\t\t</p>"
+    },
+    {
+      "id": "10-25",
+      "number": 25,
+      "text": "Un equipo de desarrollo está construyendo una aplicación de IA en AWS y necesita asegurar que cada usuario tenga el nivel de acceso apropiado según su rol en la organización. ¿Cuál es la característica de AWS que ayuda a implementar least privilege definiendo permisos basados en roles?",
+      "options": [
+        {
+          "text": "AWS IAM Role",
+          "correct": true
+        },
+        {
+          "text": "AWS IAM User",
+          "correct": false
+        },
+        {
+          "text": "AWS IAM Access Key",
+          "correct": false
+        },
+        {
+          "text": "AWS IAM Group",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p><b>AWS IAM Role</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t\t\t<span>Un </span><b><span>IAM Role</span></b><span> es una identidad que puedes crear en tu cuenta con políticas de permisos específicas.</span> <span>A diferencia de un usuario de IAM, un IAM role </span><b><span>no está permanentemente asociado a una persona</span></b><span>.</span> <span>En su lugar, es una identidad que cualquier persona (una persona, una aplicación o un servicio de AWS) puede </span><b><span>asumir</span></b><span> para obtener credenciales de seguridad temporales.</span>\n\t\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>Este mecanismo es fundamental para el principio de <b>least privilege</b> porque: </p>\n\t\t\t\t\t\t\t\t\t\t<ol start=\"1\">\n\t\t\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t<b><span>Credenciales Temporales:</span></b><span> El usuario o servicio solo tiene los permisos otorgados por el role durante una sesión limitada.</span>\n\t\t\t\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t\t\t<p><b>Acceso Basado en Roles:</b> Puedes definir un único conjunto preciso de permisos (el \"least privilege\") para una función de trabajo específica (por ejemplo, un \"ML Training Role\" o \"App Deployment Role\") y otorgarlo a cualquiera que necesite desempeñar esa tarea, sin darles permisos permanentes y excesivos.</p>\n\t\t\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t\t</ol>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>Incorrecto</p>\n\t\t\t\t\t\t<p>AWS IAM User</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<span>Un </span><b><span>IAM User</span></b><span> es una entidad permanente e identidad de largo plazo que representa a una persona o aplicación dentro de tu cuenta de AWS.</span> Aunque puedes adjuntar políticas de permisos a un usuario, el usuario es la <b>identidad en sí misma</b>. <span>Los roles (Opción A) son el mecanismo principal utilizado para otorgar </span><b><span>permisos temporales, específicos de una tarea y con least privilege</span></b><span> a usuarios o servicios que de otro modo podrían tener permisos permanentes diferentes o más altos.</span>\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>AWS IAM Access Key</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<span>Un </span><b><span>IAM Access Key</span></b><span> (que consta de un Access Key ID y una Secret Access Key) es una </span><b><span>credencial</span></b><span> utilizada para realizar solicitudes programáticas a AWS.</span> No es una identidad ni un contenedor de permisos; es simplemente la clave utilizada para autenticar un <b>usuario de IAM</b> o un conjunto de <b>credenciales de role temporal</b>. <span>Los permisos se definen mediante la política asociada en el usuario o rol.</span>\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>AWS IAM Group</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<span>Un </span><b><span>IAM Group</span></b><span> es una colección de usuarios de IAM.</span> Se utiliza para especificar permisos para múltiples usuarios simultáneamente (por ejemplo, todos los \"AI Developers\" están en un grupo y comparten los mismos permisos base). Aunque los grupos ayudan a simplificar la gestión, los <b>permisos en sí mismos</b> (la encarnación del least privilege) se definen en las políticas adjuntas al rol o usuario, no en el grupo en sí. <span>El </span><b><span>Role</span></b><span> es la característica diseñada para otorgar permisos temporales y específicos de una tarea.</span>\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>"
+    },
+    {
+      "id": "10-26",
+      "number": 26,
+      "text": "Un equipo de desarrollo está construyendo una aplicación de IA que debe cumplir con requisitos rigurosos de seguridad y cumplimiento normativo. Necesitan una herramienta que proporcione reportes de seguridad y cumplimiento normativo, incluyendo reportes SOC, bajo demanda. ¿Cuál servicio de AWS puede proporcionar estos reportes?",
+      "options": [
+        {
+          "text": "AWS Artifact",
+          "correct": true
+        },
+        {
+          "text": "Amazon Inspector",
+          "correct": false
+        },
+        {
+          "text": "AWS Trusted Advisor",
+          "correct": false
+        },
+        {
+          "text": "AWS Config",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><b>Respuesta Correcta</b></p>\n\t\t\t\t\t\t<p><b>AWS Artifact</b></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>AWS Artifact</b>&nbsp;es el recurso central de AWS para <b>información relacionada con cumplimiento normativo</b>. Está diseñado específicamente para proporcionar acceso bajo demanda a documentos de seguridad y cumplimiento de AWS, como <b>reportes SOC (SOC 1, SOC 2, SOC 3)</b>, reportes PCI y certificaciones ISO. Cuando un equipo de desarrollo necesita estos reportes oficiales para demostrar cumplimiento normativo de su aplicación de IA ante auditores o stakeholders, AWS Artifact es el servicio directo y correcto a utilizar.\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p><b>Respuestas Incorrectas</b></p>\n\t\t\t\t\t\t<p><b>Amazon Inspector</b></p>\n\t\t\t\t\t\t<p>Amazon Inspector es un <b>servicio automatizado de gestión de vulnerabilidades</b>&nbsp;que escanea instancias EC2 e imágenes de contenedores para identificar vulnerabilidades de software y exposición de red. Es una herramienta para mejorar tu propia postura de seguridad, no para recuperar reportes de cumplimiento interno de AWS como SOC. </p>\n\t\t\t\t\t\t<p><b>AWS Trusted Advisor</b></p>\n\t\t\t\t\t\t<p>AWS Trusted Advisor es un servicio automatizado que proporciona <b>orientación en tiempo real y recomendaciones de mejores prácticas</b>&nbsp;para optimizar tu entorno de AWS en términos de costo, rendimiento, seguridad, tolerancia a fallos y límites de servicio. No proporciona reportes de cumplimiento oficiales auditados por terceros. </p>\n\t\t\t\t\t\t<p><b>AWS Config</b></p>\n\t\t\t\t\t\t<p>AWS Config es un servicio para <b>auditar y evaluar la configuración de tus recursos de AWS</b>. Te ayuda a garantizar que las configuraciones de tus recursos cumplan con políticas internas y regulaciones externas al rastrear cambios de configuración y evaluarlos contra reglas. Sin embargo, no proporciona los reportes de cumplimiento oficiales emitidos por auditores sobre la plataforma AWS en sí. </p>"
+    },
+    {
+      "id": "10-27",
+      "number": 27,
+      "text": "Tu empresa está desarrollando un sistema de IA para procesamiento de datos financieros. Para asegurar que el sistema sea seguro y cumpla con los requisitos de gobierno corporativo necesarios, el equipo necesita identificar un estándar internacional que ofrezca directrices para la gestión de la seguridad de la información. ¿Cuál es el estándar que debería adoptar la empresa?",
+      "options": [
+        {
+          "text": "SOC 2",
+          "correct": false
+        },
+        {
+          "text": "ISO 27001",
+          "correct": true
+        },
+        {
+          "text": "GDPR",
+          "correct": false
+        },
+        {
+          "text": "HIPAA",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>ISO 27001</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p>ISO/IEC 27001 es un estándar reconocido internacionalmente que proporciona un marco integral para establecer, implementar, mantener y mejorar continuamente un Sistema de Gestión de Seguridad de la Información (ISMS). Aborda directamente el gobierno corporativo, la gestión de riesgos y los controles de seguridad, lo que lo hace muy adecuado para proteger sistemas de IA que procesan datos financieros sensibles.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>SOC 2</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p>SOC 2 es un estándar de auditoría enfocado en organizaciones de servicios y sus controles relacionados con seguridad, disponibilidad y confidencialidad. No es un estándar internacional ni proporciona un marco de gestión formal y reconocido globalmente como ISO 27001.</p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>GDPR</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p>GDPR es una regulación de protección de datos enfocada en la privacidad de datos personales y los derechos individuales dentro de la Unión Europea. Aunque es importante para cumplimiento normativo, no es un estándar para gestionar el gobierno corporativo de seguridad de la información en una organización.</p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>HIPAA</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p>HIPAA es una regulación estadounidense específica para proteger información de salud. No es aplicable al procesamiento general de datos financieros ni proporciona un marco universal de gestión de seguridad de la información.</p>"
+    },
+    {
+      "id": "10-28",
+      "number": 28,
+      "text": "Un hospital está implementando un sistema de IA para asistir en el diagnóstico de pacientes. Quieren un modelo altamente interpretable en el que los médicos puedan confiar, pero también les preocupa la capacidad del modelo para tomar decisiones seguras de manera consistente en situaciones críticas. ¿Cuál podría ser una desventaja si el hospital elige un modelo altamente transparente e interpretable?",
+      "options": [
+        {
+          "text": "El modelo tendrá alto rendimiento pero podría no ser fácilmente explicable.",
+          "correct": false
+        },
+        {
+          "text": "El modelo podría tener precisión o rendimiento reducido en comparación con un modelo más complejo tipo caja negra.",
+          "correct": true
+        },
+        {
+          "text": "El modelo tomará decisiones seguras sin afectar el rendimiento ni la transparencia.",
+          "correct": false
+        },
+        {
+          "text": "El modelo tendrá mayor complejidad en la toma de decisiones pero menor seguridad.",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<div>\n\t\t\t\t\t\t\t<h3>Correcto</h3>\n\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t<b>Opción B. Precisión reducida en comparación con modelos tipo caja negra&nbsp;</b>\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<p>Los modelos transparentes como árboles de decisión o regresión lineal ofrecen la explicabilidad que los médicos necesitan para tomar decisiones seguras, pero típicamente tienen menor rendimiento que redes neuronales complejas en precisión para patrones diagnósticos intrincados.</p>\n\t\t\t\t\t\t\t<h3>Incorrecto</h3>\n\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t<b>Opción A. Alto rendimiento pero no explicable</b>\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<p>Invierte la desventaja—los modelos de alto rendimiento (como aprendizaje profundo) suelen ser tipo caja negra, no transparentes.</p>\n\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t<b>Opción C. Decisiones seguras sin desventajas&nbsp;</b>\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<p>Ningún modelo logra simultáneamente seguridad perfecta, rendimiento y transparencia a la vez.</p>\n\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t<b>Opción D. Mayor complejidad pero menor seguridad&nbsp;</b>\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<p>Contradice el objetivo—los modelos transparentes reducen la complejidad mientras buscan mantener la seguridad mediante la comprensibilidad.</p>\n\t\t\t\t\t\t</div>"
+    },
+    {
+      "id": "10-29",
+      "number": 29,
+      "text": "Un equipo ha desarrollado un modelo de machine learning usando datos históricos de ventas y ahora quiere implementarlo para predicciones en tiempo real. ¿Cuál servicio de AWS les permitiría alojar este modelo y hacerlo accesible a través de una API?",
+      "options": [
+        {
+          "text": "Amazon SageMaker",
+          "correct": true
+        },
+        {
+          "text": "Amazon Lex",
+          "correct": false
+        },
+        {
+          "text": "Amazon Transcribe",
+          "correct": false
+        },
+        {
+          "text": "Amazon Translate",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p><b>Amazon SageMaker</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Es la opción correcta porque <b>Amazon SageMaker</b> es el servicio completamente administrado de AWS para construir, entrenar e implementar modelos de machine learning.</li>\n\t\t\t\t\t\t\t<li>Permite desplegar modelos como <b>endpoints</b> que se pueden acceder a través de <b>REST APIs</b> para predicciones en tiempo real.</li>\n\t\t\t\t\t\t\t<li>Esto satisface directamente el requisito de alojar el modelo y hacerlo accesible a través de una API.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p><b>Amazon Lex</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Es incorrecto porque <b>Lex</b> se utiliza para construir interfaces conversacionales (chatbots y asistentes de voz).</li>\n\t\t\t\t\t\t\t<li>No aloja modelos arbitrarios de ML para predicciones.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>Amazon Transcribe</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Es incorrecto porque <b>Transcribe</b> es un servicio de conversión de voz a texto.</li>\n\t\t\t\t\t\t\t<li>Está especializado en transcripción de audio, no en la implementación general de modelos de ML.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>Amazon Translate</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Es incorrecto porque <b>Translate</b> es un servicio de traducción automática.</li>\n\t\t\t\t\t\t\t<li>Convierte texto entre idiomas, pero no proporciona una plataforma para alojar modelos de ML personalizados.</li>\n\t\t\t\t\t\t</ul>"
+    },
+    {
+      "id": "10-30",
+      "number": 30,
+      "text": "Un proyecto de IA generativa requiere almacenar y recuperar datos complejos multidimensionales como embeddings y vectores. ¿Cuál servicio de AWS proporciona una solución de base de datos administrada optimizada para este propósito?",
+      "options": [
+        {
+          "text": "Amazon RDS",
+          "correct": false
+        },
+        {
+          "text": "AWS Lambda",
+          "correct": false
+        },
+        {
+          "text": "Amazon Neptune",
+          "correct": true
+        },
+        {
+          "text": "Amazon DocumentDB",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p><b>Amazon Neptune</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li><strong>Correcto</strong> porque <b>Amazon Neptune</b> es un servicio de base de datos de grafos completamente administrado, optimizado para manejar datos altamente conectados y multidimensionales.</li>\n\t\t\t\t\t\t\t<li>Soporta <b>property graphs y modelos de datos RDF</b>, que son ideales para embeddings, relaciones y estructuras tipo vectores.</li>\n\t\t\t\t\t\t\t<li>En casos de uso de IA generativa, Neptune puede almacenar y consultar embeddings de manera eficiente, habilitando búsqueda semántica y sistemas de recomendación.</li>\n\t\t\t\t\t\t\t<li>Esto lo convierte en el servicio de AWS adecuado para gestionar datos complejos multidimensionales.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p><b>Amazon RDS</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrecto porque RDS es un <b>servicio de base de datos relacional</b> optimizado para datos estructurados en formato tabular.</li>\n\t\t\t\t\t\t\t<li>No está diseñado para almacenar o consultar embeddings o vectores de manera eficiente.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>AWS Lambda</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrecto porque Lambda es un <b>servicio de cómputo sin servidor</b>, no una base de datos.</li>\n\t\t\t\t\t\t\t<li>Puede procesar datos, pero no puede almacenar ni gestionar embeddings o vectores directamente.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>Amazon DocumentDB</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrecto porque DocumentDB es una <b>base de datos NoSQL de documentos</b> compatible con MongoDB.</li>\n\t\t\t\t\t\t\t<li>Está optimizada para documentos tipo JSON, no para estructuras de datos de grafos o vectores.</li>\n\t\t\t\t\t\t</ul>"
+    },
+    {
+      "id": "10-31",
+      "number": 31,
+      "text": "Un equipo necesita entrenar un modelo de aprendizaje automático en un conjunto de datos grande pero quiere evitar administrar la infraestructura subyacente para el entrenamiento. ¿Cuál servicio de AWS les permite construir, entrenar e implementar modelos sin necesidad de administrar infraestructura?",
+      "options": [
+        {
+          "text": "Amazon Polly",
+          "correct": false
+        },
+        {
+          "text": "Amazon Translate",
+          "correct": false
+        },
+        {
+          "text": "Amazon SageMaker",
+          "correct": true
+        },
+        {
+          "text": "Amazon Comprehend",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>Amazon SageMaker</p>\n\t\t\t\t\t\t<p>Amazon SageMaker es un servicio completamente administrado que permite a científicos de datos y desarrolladores construir, entrenar e implementar modelos de aprendizaje automático a escala sin necesidad de administrar la infraestructura subyacente. Simplifica el flujo de trabajo de aprendizaje automático al proporcionar herramientas integradas para etiquetado de datos, entrenamiento de modelos, ajuste fino e implementación. SageMaker también aprovisiona automáticamente los recursos de cómputo requeridos, lo que lo hace ideal para equipos que desean enfocarse en desarrollar modelos en lugar de administrar servidores y otra infraestructura.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>Amazon Comprehend</p>\n\t\t\t\t\t\t<p>Amazon Comprehend es un servicio de procesamiento del lenguaje natural (NLP) que ayuda a analizar texto para obtener información, como análisis de sentimientos, pero no proporciona funcionalidad para construir, entrenar e implementar modelos de aprendizaje automático.</p>\n\t\t\t\t\t\t<p>Amazon Polly</p>\n\t\t\t\t\t\t<p>Amazon Polly es un servicio de conversión de texto a voz que transforma texto en voz natural. No ofrece características para entrenar o implementar modelos de aprendizaje automático, lo que lo hace irrelevante para este caso de uso.</p>\n\t\t\t\t\t\t<p>Amazon Translate</p>\n\t\t\t\t\t\t<p>Amazon Translate es un servicio de traducción automática neuronal utilizado para traducir texto entre idiomas. No está diseñado para construir, entrenar o implementar modelos de aprendizaje automático.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://docs.aws.amazon.com/sagemaker/latest/dg/whatis.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/sagemaker/latest/dg/whatis.html</a>\n\t\t\t\t\t\t</p>"
+    },
+    {
+      "id": "10-32",
+      "number": 32,
+      "text": "Un laboratorio de investigación está desarrollando un modelo de machine learning para predicción climática y quiere asegurar que el modelo sea transparente y fácil de entender para otros investigadores. Están considerando usar un modelo de código abierto. ¿Cuál es un beneficio clave de usar un modelo de código abierto para lograr transparencia?",
+      "options": [
+        {
+          "text": "Los modelos de código abierto generalmente tienen mayor precisión que los modelos propietarios.",
+          "correct": false
+        },
+        {
+          "text": "Los modelos de código abierto están automáticamente licenciados para uso comercial sin restricciones.",
+          "correct": false
+        },
+        {
+          "text": "Los modelos de código abierto permiten a los usuarios inspeccionar y modificar el código, lo que hace el modelo más transparente.",
+          "correct": true
+        },
+        {
+          "text": "Los modelos de código abierto proporcionan explicaciones integradas para todas las predicciones.",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>Los modelos de código abierto permiten a los usuarios inspeccionar y modificar el código, lo que hace el modelo más transparente.</p>\n\t\t\t\t\t\t<p>Un beneficio clave de usar modelos de código abierto para transparencia es que permiten a los usuarios inspeccionar y modificar el código. Esto facilita que investigadores y desarrolladores entiendan cómo funciona el modelo, evalúen su proceso de toma de decisiones y se aseguren de que se alinea con sus objetivos o metodologías. Los modelos de código abierto fomentan la colaboración y el intercambio de conocimiento, permitiendo que otros investigadores verifiquen y mejoren el modelo, lo cual es esencial en investigación científica como la predicción climática.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>Los modelos de código abierto generalmente tienen mayor precisión que los modelos propietarios.</p>\n\t\t\t\t\t\t<p>Los modelos de código abierto no necesariamente tienen mayor precisión que los modelos propietarios. La precisión depende del diseño del modelo, los datos y el entrenamiento, no de si es de código abierto.</p>\n\t\t\t\t\t\t<p>Los modelos de código abierto están automáticamente licenciados para uso comercial sin restricciones.</p>\n\t\t\t\t\t\t<p>Los modelos de código abierto a menudo están sujetos a licencias específicas que pueden imponer restricciones en el uso comercial. Los usuarios siempre deben verificar los términos de la licencia antes de usar un modelo de código abierto con propósitos comerciales.</p>\n\t\t\t\t\t\t<p>Los modelos de código abierto proporcionan explicaciones integradas para todas las predicciones.</p>\n\t\t\t\t\t\t<p>Aunque los modelos de código abierto ofrecen transparencia a través del código accesible, no proporcionan automáticamente explicaciones integradas para cada predicción. Las características de explicabilidad dependen de la implementación específica.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://aws.amazon.com/opensource\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/opensource</a>\n\t\t\t\t\t\t</p>"
+    },
+    {
+      "id": "10-33",
+      "number": 33,
+      "text": "Un equipo ha deployado su foundation model y ahora está recopilando feedback de usuarios para mejorarlo con el tiempo. ¿En qué etapa del ciclo de vida del foundation model se encuentran actualmente?",
+      "options": [
+        {
+          "text": "Feedback",
+          "correct": true
+        },
+        {
+          "text": "Selección de modelo",
+          "correct": false
+        },
+        {
+          "text": "Pre-training",
+          "correct": false
+        },
+        {
+          "text": "Fine-tuning",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>Feedback</p>\n\t\t\t\t\t\t<p>La etapa de Feedback es cuando un foundation model deployado interactúa con usuarios reales y se recopila su feedback para mejorar el modelo con el tiempo. En esta fase, las interacciones de los usuarios proporcionan información valiosa sobre el desempeño del modelo en escenarios prácticos. El equipo analiza este feedback para identificar deficiencias, adaptarse a las necesidades de los usuarios e iterar para mejorar continuamente la precisión, relevancia y usabilidad del modelo. Este ciclo de mejora continua es crucial para mantener la efectividad del modelo y asegurar que genere valor a los usuarios finales.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>Pre-training</p>\n\t\t\t\t\t\t<p>Pre-training es la etapa inicial donde el foundation model se entrena con un conjunto de datos masivo para aprender patrones generales y representaciones. Esta fase ocurre antes del deployment e implica aprendizaje no supervisado a partir de enormes volúmenes de datos. Como el equipo ya ha deployado el modelo y está recopilando feedback de usuarios, ha superado la etapa de pre-training.</p>\n\t\t\t\t\t\t<p>Fine-tuning</p>\n\t\t\t\t\t\t<p>Fine-tuning implica ajustar el modelo pre-entrenado en un conjunto de datos más pequeño y específico para la tarea, a fin de especializarlo para una aplicación particular. Este paso adapta el conocimiento del modelo a necesidades específicas antes del deployment. El escenario indica que el modelo ya está deployado y el equipo está recopilando feedback de usuarios, lo que significa que han pasado más allá de la etapa de fine-tuning.</p>\n\t\t\t\t\t\t<p>Selección de modelo</p>\n\t\t\t\t\t\t<p>Selección de modelo es el proceso de evaluar y elegir el mejor modelo de un conjunto de candidatos según métricas de desempeño. Esto ocurre antes del deployment para asegurar que se selecciona el modelo más adecuado para la tarea. Dado que el modelo ya está deployado y se está recopilando feedback de usuarios, el equipo no se encuentra actualmente en la etapa de selección de modelo.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://docs.aws.amazon.com/wellarchitected/latest/machine-learning-lens/well-architected-machine-learning-lifecycle.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/wellarchitected/latest/machine-learning-lens/well-architected-machine-learning-lifecycle.html</a>\n\t\t\t\t\t\t</p>"
+    },
+    {
+      "id": "10-34",
+      "number": 34,
+      "text": "Una empresa de healthcare está construyendo un sistema de IA para predecir resultados en pacientes. Están preocupados tanto por la precisión como por la sostenibilidad ambiental. ¿Cuál de las siguientes prácticas recomendadas deberían adoptar al seleccionar el modelo de IA?",
+      "options": [
+        {
+          "text": "Seleccionar el modelo más complejo, asumiendo que proporcionará los mejores resultados independientemente del costo ambiental.",
+          "correct": false
+        },
+        {
+          "text": "Elegir un modelo que equilibre el desempeño con la eficiencia energética, como uno diseñado para un menor consumo de energía.",
+          "correct": true
+        },
+        {
+          "text": "Usar un modelo pre-entrenado con menor precisión pero con impacto ambiental mínimo.",
+          "correct": false
+        },
+        {
+          "text": "Enfocarse únicamente en la precisión e ignorar los factores ambientales.",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>Elegir un modelo que equilibre el desempeño con la eficiencia energética, como uno diseñado para un menor consumo de energía.</p>\n\t\t\t\t\t\t<p>Equilibrar el desempeño con la eficiencia energética es una práctica recomendada que aborda tanto la precisión como las preocupaciones de sostenibilidad ambiental. Al seleccionar un modelo diseñado para un menor consumo de energía sin comprometer significativamente la precisión, la empresa de healthcare puede asegurar predicciones confiables de resultados en pacientes mientras minimiza el impacto ambiental. Los modelos energéticamente eficientes a menudo utilizan algoritmos optimizados, arquitecturas ligeras o técnicas como model pruning y quantization para reducir las demandas computacionales. Esto no solo reduce el consumo de energía durante el entrenamiento e inferencia, sino que también reduce los costos operacionales asociados con recursos computacionales elevados. Implementar un modelo de este tipo se alinea con prácticas de desarrollo de IA sostenible y objetivos de responsabilidad social corporativa. Permite que la empresa entregue soluciones de healthcare de alta calidad mientras se adhiere a la sostenibilidad ambiental, asegurando que ambos objetivos críticos se cumplan.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>Usar un modelo pre-entrenado con menor precisión pero con impacto ambiental mínimo</p>\n\t\t\t\t\t\t<p>Aunque esta opción minimiza el impacto ambiental, sacrifica la precisión, que es crucial en aplicaciones de healthcare. Una precisión menor podría conducir a predicciones incorrectas, afectando negativamente los resultados de los pacientes.</p>\n\t\t\t\t\t\t<p>Enfocarse únicamente en la precisión e ignorar los factores ambientales</p>\n\t\t\t\t\t\t<p>Ignorar los factores ambientales descuida la preocupación de la empresa por la sostenibilidad. Enfocarse solo en la precisión puede llevar a seleccionar modelos con alto consumo de energía, aumentando el impacto ambiental y los costos operacionales.</p>\n\t\t\t\t\t\t<p>Seleccionar el modelo más complejo, asumiendo que proporcionará los mejores resultados independientemente del costo ambiental</p>\n\t\t\t\t\t\t<p>Elegir el modelo más complejo no garantiza los mejores resultados y a menudo conduce a un mayor consumo de energía. Esta opción descuida las preocupaciones de sostenibilidad y puede resultar en un impacto ambiental innecesario.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://docs.aws.amazon.com/wellarchitected/latest/sustainability-pillar/sustainability-pillar.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/wellarchitected/latest/sustainability-pillar/sustainability-pillar.html</a>\n\t\t\t\t\t\t</p>"
+    },
+    {
+      "id": "10-35",
+      "number": 35,
+      "text": "Un sistema de IA recopila y almacena datos durante varios años. La empresa debe cumplir con regulaciones sobre cuánto tiempo se pueden mantener ciertos tipos de datos antes de ser eliminados. ¿Qué concepto de gobernanza de datos está abordando la empresa?",
+      "options": [
+        {
+          "text": "Observación de datos",
+          "correct": false
+        },
+        {
+          "text": "Retención de datos",
+          "correct": true
+        },
+        {
+          "text": "Cifrado de datos",
+          "correct": false
+        },
+        {
+          "text": "Residencia de datos",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>Retención de datos</p>\n\t\t\t\t\t\t<p>La retención de datos se refiere a las políticas y prácticas que rigen cuánto tiempo se almacenan los datos antes de ser eliminados o archivados. Cuando una empresa debe cumplir con regulaciones sobre cuánto tiempo se pueden mantener los datos, está abordando la retención de datos. Diferentes regulaciones, como el GDPR, frecuentemente establecen plazos específicos para conservar ciertos tipos de datos. Tener una política clara de retención de datos ayuda a las organizaciones a evitar sanciones asegurando que eliminen o archiven los datos después del período requerido, manteniendo el cumplimiento y protegiendo la privacidad del cliente.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>Observación de datos</p>\n\t\t\t\t\t\t<p>La observación de datos implica monitorear y rastrear datos en tiempo real para entender patrones o comportamientos. Aunque es útil para obtener información en tiempo real, no aborda directamente el tiempo durante el cual se almacenan los datos.</p>\n\t\t\t\t\t\t<p>Residencia de datos</p>\n\t\t\t\t\t\t<p>La residencia de datos se refiere a dónde se almacenan los datos geográficamente para cumplir con regulaciones locales. No está relacionada con cuánto tiempo se mantienen los datos.</p>\n\t\t\t\t\t\t<p>Cifrado de datos</p>\n\t\t\t\t\t\t<p>El cifrado de datos se trata de proteger la información convirtiéndola en un formato ilegible, protegiéndola del acceso no autorizado. No aborda la duración del almacenamiento ni la gestión del ciclo de vida de los datos.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://aws.amazon.com/compliance/data-privacy\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/compliance/data-privacy</a>\n\t\t\t\t\t\t</p>"
+    },
+    {
+      "id": "10-36",
+      "number": 36,
+      "text": "Eres un científico de datos que trabaja en una organización que necesita gestionar datos de múltiples proveedores terceros para análisis de mercado. Tu tarea es encontrar un servicio que te permita suscribirte y gestionar conjuntos de datos de proveedores externos dentro del ecosistema de AWS. ¿Cuál servicio de AWS elegirías para lograr este objetivo?",
+      "options": [
+        {
+          "text": "Amazon QuickSight",
+          "correct": false
+        },
+        {
+          "text": "Amazon EMR",
+          "correct": false
+        },
+        {
+          "text": "Amazon Redshift",
+          "correct": false
+        },
+        {
+          "text": "AWS Data Exchange",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>AWS Data Exchange</p>\n\t\t\t\t\t\t<p>AWS Data Exchange es el servicio ideal para suscribirse y gestionar conjuntos de datos de proveedores terceros. Te permite descubrir de forma segura, suscribirte y utilizar datos externos directamente en el ecosistema de AWS. Data Exchange proporciona una amplia variedad de fuentes de datos, incluyendo conjuntos financieros, demográficos y de análisis de mercado, que son cruciales para la investigación de mercado. El servicio también garantiza una fácil integración con servicios de AWS, permitiendo que los datos se utilicen sin problemas para análisis e insights.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>Amazon Redshift</p>\n\t\t\t\t\t\t<p>Amazon Redshift es un servicio de almacenamiento de datos que es excelente para almacenar y consultar grandes conjuntos de datos, pero no está diseñado para suscribirse o gestionar conjuntos de datos de terceros.</p>\n\t\t\t\t\t\t<p>Amazon QuickSight</p>\n\t\t\t\t\t\t<p>Amazon QuickSight es una herramienta de inteligencia empresarial utilizada para visualizar y analizar datos. Ayuda a generar reportes e insights, pero no gestiona suscripciones a datos externos.</p>\n\t\t\t\t\t\t<p>Amazon EMR</p>\n\t\t\t\t\t\t<p>Amazon EMR es un servicio para procesar grandes cantidades de datos utilizando frameworks de big data como Apache Hadoop y Spark. No es apropiado para suscribirse a conjuntos de datos de terceros.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://aws.amazon.com/data-exchange\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/data-exchange</a>\n\t\t\t\t\t\t</p>"
+    },
+    {
+      "id": "10-37",
+      "number": 37,
+      "text": "Una institución financiera quiere asegurar que sus modelos de IA, ejecutados en AWS, cumplan con las leyes internacionales de privacidad de datos. Necesita proteger el almacenamiento de datos sensibles de clientes mientras también proporciona cifrado durante la transmisión de datos. ¿Cuál sería el servicio de AWS más apropiado para lograr cifrado en reposo y en tránsito para sus modelos de IA?",
+      "options": [
+        {
+          "text": "AWS Key Management Service (KMS)",
+          "correct": true
+        },
+        {
+          "text": "Amazon Macie",
+          "correct": false
+        },
+        {
+          "text": "Amazon Rekognition",
+          "correct": false
+        },
+        {
+          "text": "AWS Secrets Manager",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>AWS Key Management Service (KMS)</p>\n\t\t\t\t\t\t<p>AWS Key Management Service (KMS) está diseñado para ayudarte a crear y gestionar claves criptográficas para proteger datos sensibles. Proporciona cifrado en reposo y en tránsito, lo que lo convierte en una solución ideal para garantizar el cumplimiento de las leyes internacionales de privacidad de datos. AWS KMS se integra con otros servicios de AWS, incluidos los modelos de IA, para cifrar datos antes de que se almacenen (en reposo) y mientras se mueven entre sistemas (en tránsito). Al gestionar las claves de cifrado de manera centralizada, AWS KMS garantiza que los datos sensibles de los clientes permanezcan protegidos y seguros a lo largo de todo su ciclo de vida.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>AWS Secrets Manager</p>\n\t\t\t\t\t\t<p>AWS Secrets Manager ayuda a gestionar y rotar de forma segura secretos como credenciales de base de datos o claves de API. No proporciona servicios de cifrado de datos en reposo o en tránsito.</p>\n\t\t\t\t\t\t<p>Amazon Macie</p>\n\t\t\t\t\t\t<p>Amazon Macie es un servicio de seguridad de datos que utiliza aprendizaje automático para descubrir y clasificar automáticamente datos sensibles. Ayuda a identificar riesgos de seguridad pero no gestiona el cifrado de datos.</p>\n\t\t\t\t\t\t<p>Amazon Rekognition</p>\n\t\t\t\t\t\t<p>Amazon Rekognition es un servicio de análisis de imágenes y videos que utiliza aprendizaje automático para identificar objetos, rostros y más. No proporciona servicios de cifrado de datos en reposo o en tránsito.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://docs.aws.amazon.com/kms/latest/developerguide/overview.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/kms/latest/developerguide/overview.html</a>\n\t\t\t\t\t\t</p>"
+    },
+    {
+      "id": "10-38",
+      "number": 38,
+      "text": "Estás evaluando el desempeño de un foundation model para una aplicación de resumen de textos. ¿Cuál sería la métrica más apropiada para evaluar la precisión de los resúmenes generados por el modelo?",
+      "options": [
+        {
+          "text": "BERTScore",
+          "correct": false
+        },
+        {
+          "text": "ROUGE (Recall-Oriented Understudy for Gisting Evaluation)",
+          "correct": true
+        },
+        {
+          "text": "AUC (Area Under the Curve)",
+          "correct": false
+        },
+        {
+          "text": "BLEU (Bilingual Evaluation Understudy)",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>ROUGE (Recall-Oriented Understudy for Gisting Evaluation)</p>\n\t\t\t\t\t\t<p>ROUGE es la métrica más apropiada para evaluar la precisión de modelos de resumen de textos. Mide la coincidencia entre los resúmenes generados y los resúmenes de referencia comparando n-gramas, secuencias de palabras o pares de palabras. ROUGE está específicamente diseñada para tareas de resumen y proporciona métricas como ROUGE-N (para la coincidencia de n-gramas) y ROUGE-L (para las secuencias comunes más largas). Cuanto mayor sea la coincidencia, más preciso será el resumen. Esto hace que ROUGE sea la métrica más adecuada para evaluar el desempeño de modelos de resumen.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>BLEU (Bilingual Evaluation Understudy)</p>\n\t\t\t\t\t\t<p>BLEU es una métrica comúnmente utilizada para evaluar modelos de traducción automática, no resumen. Mide la correspondencia entre una traducción generada por máquina y una o más traducciones realizadas por humanos, pero es menos efectiva para tareas de resumen.</p>\n\t\t\t\t\t\t<p>BERTScore</p>\n\t\t\t\t\t\t<p>BERTScore compara embeddings de textos generados y de referencia, lo que la hace útil para evaluar similitud de significado. Sin embargo, se utiliza más frecuentemente en tareas como generación de texto y traducción, no específicamente para resumen.</p>\n\t\t\t\t\t\t<p>AUC (Area Under the Curve)</p>\n\t\t\t\t\t\t<p>AUC se utiliza en tareas de clasificación para medir el desempeño de clasificadores binarios. No es relevante para evaluar modelos de resumen de textos.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://aws.amazon.com/blogs/machine-learning/evaluate-the-text-summarization-capabilities-of-llms-for-enhanced-decision-making-on-aws\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/blogs/machine-learning/evaluate-the-text-summarization-capabilities-of-llms-for-enhanced-decision-making-on-aws</a>\n\t\t\t\t\t\t</p>"
+    },
+    {
+      "id": "10-39",
+      "number": 39,
+      "text": "Una empresa de comercio electrónico necesita pronosticar ventas futuras basándose en datos históricos, tendencias de marketing y demanda estacional. ¿Qué tipo de caso de uso de IA sería más apropiado para ayudarles con esta tarea?",
+      "options": [
+        {
+          "text": "Pronóstico de series temporales",
+          "correct": true
+        },
+        {
+          "text": "Análisis de sentimiento",
+          "correct": false
+        },
+        {
+          "text": "Clustering",
+          "correct": false
+        },
+        {
+          "text": "Reconocimiento de imágenes",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>Pronóstico de series temporales</p>\n\t\t\t\t\t\t<p>El pronóstico de series temporales en machine learning implica predecir valores futuros basándose en puntos de datos históricos recopilados a lo largo del tiempo. Se utiliza ampliamente en campos como finanzas, predicción del clima y gestión de inventario. El desafío clave es capturar patrones como tendencias, estacionalidad y comportamiento cíclico en datos dependientes del tiempo. Técnicas como ARIMA, suavizado exponencial y modelos más avanzados como redes Long Short-Term Memory (LSTM) se utilizan para este propósito. Al pronosticar con precisión valores futuros, las organizaciones pueden tomar decisiones informadas y optimizar la asignación de recursos, mejorando la eficiencia operativa y la planificación estratégica.</p>\n\t\t\t\t\t\t<p>El pronóstico de series temporales es el caso de uso de IA más apropiado para predecir ventas futuras basándose en datos históricos, tendencias y demanda estacional. Esta técnica analiza puntos de datos recopilados a lo largo del tiempo e identifica patrones o tendencias que se pueden utilizar para predecir valores futuros. El pronóstico de series temporales se utiliza comúnmente para tareas como predicción de ventas, pronóstico de precios de acciones y planificación de demanda, lo que lo hace ideal para que la empresa de comercio electrónico prediga ventas futuras considerando factores como estacionalidad y tendencias de marketing.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>Análisis de sentimiento</p>\n\t\t\t\t\t\t<p>El análisis de sentimiento se utiliza para analizar las emociones u opiniones expresadas en texto, típicamente para entender el sentimiento público sobre un producto o marca. No implica pronosticar ventas futuras.</p>\n\t\t\t\t\t\t<p>Clustering</p>\n\t\t\t\t\t\t<p>El clustering es una técnica de aprendizaje no supervisado utilizada para agrupar puntos de datos similares. Aunque es útil para segmentación de clientes, no es apropiado para predecir ventas futuras.</p>\n\t\t\t\t\t\t<p>Reconocimiento de imágenes</p>\n\t\t\t\t\t\t<p>El reconocimiento de imágenes implica analizar e identificar objetos o patrones en imágenes. No está relacionado con pronosticar ventas basándose en datos históricos.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://aws.amazon.com/what-is/forecast\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/what-is/forecast</a></p>\n\t\t\t\t\t\t<p><a href=\"https://docs.aws.amazon.com/forecast/latest/dg/what-is-forecast.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/forecast/latest/dg/what-is-forecast.html</a>\n\t\t\t\t\t\t</p>"
+    },
+    {
+      "id": "10-40",
+      "number": 40,
+      "text": "Una empresa SaaS ofrece un servicio de generación de texto impulsado por IA generativa y quiere alinear su modelo de precios con la demanda de los usuarios. La empresa está particularmente preocupada por cobrar en función de cuánto contenido se genera. ¿Cuál modelo de precios de AWS se adaptaría mejor a este requisito?",
+      "options": [
+        {
+          "text": "Token-based pricing",
+          "correct": true
+        },
+        {
+          "text": "Reserved instances",
+          "correct": false
+        },
+        {
+          "text": "Fixed pricing",
+          "correct": false
+        },
+        {
+          "text": "Provision throughput pricing",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>Token-based pricing</p>\n\t\t\t\t\t\t<p>Token-based pricing es un modelo de pago por uso que cobra a los usuarios según la cantidad de contenido generado o procesado, como palabras, caracteres o tokens de datos. Este modelo es ideal para una empresa SaaS que ofrece un servicio de generación de texto impulsado por IA generativa porque se alinea directamente con la demanda del usuario. Si los usuarios generan más contenido, pagan más; si generan menos, los costos disminuyen en consecuencia. Esta estructura de precios ofrece flexibilidad y escalabilidad, asegurando que la empresa solo pague por lo que utiliza, lo que ayuda a gestionar los costos de manera eficiente.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>Fixed pricing</p>\n\t\t\t\t\t\t<p>Fixed pricing cobra una tarifa fija sin importar el uso, lo que no se alinea con la demanda fluctuante del usuario y podría resultar en sobrecobro o subcobro según la generación de contenido.</p>\n\t\t\t\t\t\t<p>Reserved instances</p>\n\t\t\t\t\t\t<p>Reserved instances ofrece un precio con descuento para recursos comprometidos previamente a lo largo del tiempo, pero este modelo es más adecuado para cargas de trabajo predecibles y estables en lugar de generación de contenido fluctuante.</p>\n\t\t\t\t\t\t<p>Provision throughput pricing</p>\n\t\t\t\t\t\t<p>Provision throughput pricing asigna una cantidad fija de rendimiento o recursos, lo que podría no alinearse con la necesidad de escalado dinámico según el volumen de texto generado.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://aws.amazon.com/bedrock/pricing\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/bedrock/pricing</a>\n\t\t\t\t\t\t</p>"
+    },
+    {
+      "id": "10-41",
+      "number": 41,
+      "text": "Estás desarrollando un sistema de IA para predecir precios de viviendas, pero notás que el modelo tiene un desempeño deficiente al predecir precios en áreas rurales. ¿Cuál es la razón más probable de este problema?",
+      "options": [
+        {
+          "text": "El dataset está desbalanceado y carece de diversidad",
+          "correct": true
+        },
+        {
+          "text": "El dataset es demasiado grande para que el modelo lo procese",
+          "correct": false
+        },
+        {
+          "text": "El dataset ha sido curado de fuentes no confiables",
+          "correct": false
+        },
+        {
+          "text": "El dataset incluye excesivamente poblaciones minoritarias",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>El dataset está desbalanceado y carece de diversidad</p>\n\t\t\t\t\t\t<p>Cuando un modelo de IA tiene un desempeño deficiente, particularmente con un tipo específico de datos como las áreas rurales en este caso, la razón más probable es que el dataset esté desbalanceado. Esto significa que el dataset no tiene suficientes muestras diversas que representen diferentes regiones, como áreas rurales. Si el modelo principalmente \"aprendió\" de datos urbanos y tiene datos limitados o ninguno de zonas rurales, le va a costar hacer predicciones precisas para esas áreas menos representadas. Para mejorar el desempeño del modelo, deberías asegurar que el dataset incluya una representación balanceada de precios de viviendas tanto urbanas como rurales. La augmentación de datos o recopilar más datos específicos de áreas rurales también podría ser útil.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>El dataset es demasiado grande para que el modelo lo procese</p>\n\t\t\t\t\t\t<p>Aunque un dataset grande puede aumentar los tiempos de procesamiento o los requisitos de memoria, no impacta directamente la capacidad del modelo para predecir precios de viviendas rurales. El desempeño deficiente del modelo en áreas específicas está más relacionado con el desbalance de datos que con el tamaño del dataset.</p>\n\t\t\t\t\t\t<p>El dataset ha sido curado de fuentes no confiables</p>\n\t\t\t\t\t\t<p>Usar fuentes de datos no confiables puede causar predicciones incorrectas, pero esto afectaría el desempeño general del modelo, no solo para áreas rurales. El problema clave aquí es un dataset desbalanceado.</p>\n\t\t\t\t\t\t<p>El dataset incluye excesivamente poblaciones minoritarias</p>\n\t\t\t\t\t\t<p>Un dataset inclusivo ayuda a hacer predicciones más justas. La inclusión de poblaciones minoritarias no causaría desempeño deficiente; si acaso, haría que el modelo sea más robusto entre grupos diversos.</p>"
+    },
+    {
+      "id": "10-42",
+      "number": 42,
+      "text": "Un equipo de investigación necesita una base de datos altamente escalable y optimizada para grafos que almacene embeddings de un modelo de machine learning usado para detectar relaciones entre entidades en un grafo de conocimiento. ¿Cuál servicio de AWS deberían usar?",
+      "options": [
+        {
+          "text": "Amazon Neptune",
+          "correct": true
+        },
+        {
+          "text": "Amazon RDS for MySQL",
+          "correct": false
+        },
+        {
+          "text": "AWS Lambda",
+          "correct": false
+        },
+        {
+          "text": "Amazon DynamoDB",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>Amazon Neptune</p>\n\t\t\t\t\t\t<p>Amazon Neptune es un servicio de base de datos de grafos completamente administrado, optimizado para almacenar y navegar datos altamente conectados, como grafos de conocimiento. Soporta modelos de grafos populares como Property Graph y RDF de W3C, junto con sus lenguajes de consulta respectivos, Apache TinkerPop Gremlin y SPARQL. Para un equipo de investigación que necesita una base de datos altamente escalable y optimizada para grafos para almacenar embeddings de un modelo de machine learning, Neptune es una opción ideal. Está diseñado para manejar miles de millones de relaciones y puede procesar consultas con latencia de milisegundos. La arquitectura de Neptune le permite escalar sin interrupciones, garantizando alto rendimiento incluso cuando el conjunto de datos crece. Además, se integra bien con otros servicios de AWS, lo que facilita crear e implementar aplicaciones complejas que detecten relaciones entre entidades.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>Amazon RDS for MySQL</p>\n\t\t\t\t\t\t<p>Amazon RDS for MySQL es un servicio de base de datos relacional administrado, optimizado para datos estructurados y cargas de trabajo transaccionales. No soporta nativamente modelos de datos de grafos, lo que lo hace menos adecuado para almacenar y consultar relaciones complejas en grafos de conocimiento.</p>\n\t\t\t\t\t\t<p>AWS Lambda</p>\n\t\t\t\t\t\t<p>AWS Lambda es un servicio de computación sin servidores que te permite ejecutar código sin aprovisionar servidores. No es un servicio de base de datos y no puede usarse para almacenar datos como embeddings ni gestionar relaciones en una estructura de grafo.</p>\n\t\t\t\t\t\t<p>Amazon DynamoDB</p>\n\t\t\t\t\t\t<p>Amazon DynamoDB es un servicio de base de datos NoSQL rápido y flexible para rendimiento de milisegundos de un dígito en cualquier escala. Aunque destaca en almacenamiento de clave-valor y documentos, no está optimizado para consultas de grafos ni para almacenar relaciones complejas inherentes a los grafos de conocimiento.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://aws.amazon.com/neptune\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/neptune</a>\n\t\t\t\t\t\t</p>"
+    },
+    {
+      "id": "10-43",
+      "number": 43,
+      "text": "Te encargan desplegar una aplicación de IA generativa que requiere ejecutar múltiples contenedores orquestados en un cluster. ¿Cuál servicio de AWS proporciona una solución Kubernetes administrada para ejecutar aplicaciones containerizadas?",
+      "options": [
+        {
+          "text": "AWS Glue DataBrew",
+          "correct": false
+        },
+        {
+          "text": "Amazon Elastic Container Service (Amazon ECS)",
+          "correct": false
+        },
+        {
+          "text": "Amazon Elastic Kubernetes Service (Amazon EKS)",
+          "correct": true
+        },
+        {
+          "text": "Amazon S3 Glacier",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>Amazon Elastic Kubernetes Service (Amazon EKS)</p>\n\t\t\t\t\t\t<p>Amazon EKS es un servicio Kubernetes completamente administrado que simplifica la ejecución de Kubernetes en AWS sin necesidad de gestionar la infraestructura subyacente. Proporciona una solución escalable para desplegar, administrar y escalar aplicaciones containerizadas, lo que la hace ideal para orquestar múltiples contenedores en un cluster. EKS se integra perfectamente con servicios de AWS como IAM para seguridad y Elastic Load Balancing para manejar tráfico, garantizando que tus aplicaciones de IA generativa se ejecuten eficientemente y se escalen según sea necesario. Kubernetes también permite flexibilidad en la gestión de aplicaciones containerizadas con herramientas como Helm, haciendo que EKS sea perfecta para cargas de trabajo de IA.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>AWS Glue DataBrew</p>\n\t\t\t\t\t\t<p>AWS Glue DataBrew es una herramienta de preparación de datos diseñada para limpiar y normalizar datos para análisis y machine learning. No está relacionada con ejecutar u orquestar aplicaciones containerizadas.</p>\n\t\t\t\t\t\t<p>Amazon S3 Glacier</p>\n\t\t\t\t\t\t<p>Amazon S3 Glacier es un servicio de almacenamiento para archivar y retención de datos a largo plazo con bajo costo. No administra ni orquesta contenedores ni maneja aplicaciones en tiempo real.</p>\n\t\t\t\t\t\t<p>Amazon Elastic Container Service (Amazon ECS)</p>\n\t\t\t\t\t\t<p>Amazon ECS es otro servicio de AWS para ejecutar aplicaciones containerizadas, pero no es una solución Kubernetes. Proporciona orquestación de contenedores utilizando Docker en lugar de Kubernetes. Si necesitas Kubernetes, EKS es la opción correcta.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://aws.amazon.com/eks\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/eks</a>\n\t\t\t\t\t\t</p>"
+    },
+    {
+      "id": "10-44",
+      "number": 44,
+      "text": "Una empresa de comercio electrónico está considerando usar IA generativa para automatizar la generación de descripciones de productos. Busca una solución que pueda optimizar el proceso con una configuración técnica mínima e interacción del usuario limitada. ¿Cuál es una de las principales ventajas de usar IA generativa para este propósito?",
+      "options": [
+        {
+          "text": "La IA generativa solo funciona bien con datos estructurados y predefinidos.",
+          "correct": false
+        },
+        {
+          "text": "La IA generativa no puede automatizar tareas de descripción de productos y requiere escritura manual.",
+          "correct": false
+        },
+        {
+          "text": "La IA generativa es muy compleja de configurar y requiere entrada manual constante.",
+          "correct": false
+        },
+        {
+          "text": "La IA generativa simplifica la creación de contenido al automatizar el proceso con poca experiencia técnica necesaria.",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>La IA generativa simplifica la creación de contenido al automatizar el proceso con poca experiencia técnica necesaria.</p>\n\t\t\t\t\t\t<p>Los modelos de IA generativa están diseñados para simplificar y acelerar la creación de contenido. Estos modelos pueden procesar información mínima, como detalles del producto o características clave, y generar automáticamente descripciones bien estructuradas y optimizadas para SEO. Para las empresas de comercio electrónico, esto reduce significativamente el tiempo y el costo de la escritura manual y no requiere experiencia técnica profunda para la configuración. Muchas soluciones de IA están diseñadas con interfaces amigables para el usuario, lo que las hace accesibles a usuarios sin conocimientos técnicos. Esto hace que la IA generativa sea muy efectiva para optimizar tareas de creación de contenido.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>La IA generativa es muy compleja de configurar y requiere entrada manual constante.</p>\n\t\t\t\t\t\t<p>Las plataformas modernas de IA generativa están construidas para ser amigables con el usuario, requiriendo una configuración mínima o entrada manual una vez que los modelos entrenados estén en su lugar. Los usuarios pueden generar contenido fácilmente.</p>\n\t\t\t\t\t\t<p>La IA generativa no puede automatizar tareas de descripción de productos y requiere escritura manual.</p>\n\t\t\t\t\t\t<p>Una de las principales ventajas de la IA generativa es su capacidad de automatizar tareas como la generación de descripciones de productos, reduciendo la necesidad de escritura manual.</p>\n\t\t\t\t\t\t<p>La IA generativa solo funciona bien con datos estructurados y predefinidos.</p>\n\t\t\t\t\t\t<p>La IA generativa puede funcionar con una variedad de tipos de datos, incluyendo datos no estructurados, y es capaz de aprender patrones de grandes conjuntos de datos para generar contenido dinámicamente.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://d1.awsstatic.com/psc-digital/2024/gc-600/genai-adv-tdm/The-generative-AI-advantage.pdf\" rel=\"noopener\" target=\"_blank\">https://d1.awsstatic.com/psc-digital/2024/gc-600/genai-adv-tdm/The-generative-AI-advantage.pdf</a>\n\t\t\t\t\t\t</p>"
+    },
+    {
+      "id": "10-45",
+      "number": 45,
+      "text": "Tu equipo está desarrollando un modelo de inteligencia artificial generativa para crear imágenes basadas en prompts del usuario. El modelo necesita generar imágenes de alta resolución pero también debe poder ejecutarse en hardware con memoria limitada. ¿Qué factor afectará más la elección del modelo?",
+      "options": [
+        {
+          "text": "Capacidad de fine-tuning",
+          "correct": false
+        },
+        {
+          "text": "Cumplimiento con leyes de derechos de autor",
+          "correct": false
+        },
+        {
+          "text": "Tamaño y complejidad del modelo",
+          "correct": true
+        },
+        {
+          "text": "Capacidad de respuesta",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>Tamaño y complejidad del modelo</p>\n\t\t\t\t\t\t<p>El tamaño y la complejidad del modelo serán los factores que más impacten la elección en este caso. La generación de imágenes de alta resolución requiere modelos potentes, pero si el hardware tiene memoria limitada, el tamaño del modelo debe optimizarse. Los modelos más grandes y complejos típicamente demandan más memoria y poder computacional, por lo que seleccionar un modelo que equilibre la capacidad de generar imágenes de alta calidad con un uso eficiente de memoria es esencial. Reducir el tamaño o la complejidad del modelo puede ayudar a garantizar que funcione efectivamente en hardware con restricciones.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>Cumplimiento con leyes de derechos de autor</p>\n\t\t\t\t\t\t<p>Aunque es importante, el cumplimiento de derechos de autor no impacta directamente las limitaciones de hardware del modelo. Esto es más una consideración legal que técnica.</p>\n\t\t\t\t\t\t<p>Capacidad de fine-tuning</p>\n\t\t\t\t\t\t<p>El fine-tuning ayuda a adaptar modelos para tareas específicas, pero el problema aquí está relacionado con restricciones de memoria, no con adaptación de tareas.</p>\n\t\t\t\t\t\t<p>Capacidad de respuesta</p>\n\t\t\t\t\t\t<p>La capacidad de respuesta es importante, pero en este escenario, la capacidad de generar imágenes de alta calidad dentro de restricciones de memoria es el factor clave, haciendo que el tamaño y la complejidad del modelo sean más críticos.</p>"
+    },
+    {
+      "id": "10-46",
+      "number": 46,
+      "text": "Estás evaluando un modelo de traducción automática comparando su salida con una traducción de referencia. El objetivo es medir qué tan de cerca coincide la salida del modelo con la referencia en términos de palabras y frases superpuestas. ¿Qué métrica deberías usar?",
+      "options": [
+        {
+          "text": "ROUGE",
+          "correct": false
+        },
+        {
+          "text": "BERTScore",
+          "correct": false
+        },
+        {
+          "text": "BLEU",
+          "correct": true
+        },
+        {
+          "text": "Recall",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>BLEU</p>\n\t\t\t\t\t\t<p>BLEU (Bilingual Evaluation Understudy) es una métrica popular para evaluar modelos de traducción automática. Compara los n-gramas de la traducción generada por la máquina con los n-gramas de la traducción de referencia para medir cuánto se superponen. BLEU se enfoca en precisión verificando si las palabras y frases en la salida de la máquina están presentes en la referencia. Es una de las métricas más utilizadas para tareas de traducción, ya que ayuda a determinar qué tan de cerca coincide la salida del modelo con las traducciones humanas. Una puntuación BLEU más alta indica una mejor calidad de traducción.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>BERTScore</p>\n\t\t\t\t\t\t<p>BERTScore utiliza embeddings del modelo BERT para comparar la similitud entre oraciones generadas y de referencia a nivel semántico. Si bien es útil, no se enfoca tanto en la superposición de n-gramas como lo hace BLEU para tareas de traducción.</p>\n\t\t\t\t\t\t<p>ROUGE</p>\n\t\t\t\t\t\t<p>ROUGE se utiliza principalmente para tareas de resumen de texto en lugar de traducción. Se enfoca en recall en lugar de precisión, midiendo cuánto del resumen de referencia es capturado por el resumen generado.</p>\n\t\t\t\t\t\t<p>Recall</p>\n\t\t\t\t\t\t<p>Recall es una métrica general utilizada en tareas de clasificación para medir qué tan bien el modelo identifica todas las instancias relevantes. No está específicamente diseñada para la evaluación de traducción automática.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://aws.amazon.com/blogs/machine-learning/build-a-multilingual-automatic-translation-pipeline-with-amazon-translate-active-custom-translation\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/blogs/machine-learning/build-a-multilingual-automatic-translation-pipeline-with-amazon-translate-active-custom-translation</a>\n\t\t\t\t\t\t</p>"
+    },
+    {
+      "id": "10-47",
+      "number": 47,
+      "text": "Un equipo de ciencia de datos necesita preparar y limpiar grandes volúmenes de datos sin procesar antes de entrenar un modelo de machine learning. Quieren una herramienta que simplifique el proceso de exploración de datos e ingeniería de características. ¿Cuál servicio de AWS deberían usar?",
+      "options": [
+        {
+          "text": "Amazon SageMaker Data Wrangler",
+          "correct": true
+        },
+        {
+          "text": "Amazon Transcribe",
+          "correct": false
+        },
+        {
+          "text": "Amazon SageMaker Feature Store",
+          "correct": false
+        },
+        {
+          "text": "Amazon SageMaker Model Monitor",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>Amazon SageMaker Data Wrangler</p>\n\t\t\t\t\t\t<p>Amazon SageMaker Data Wrangler está diseñado para simplificar el proceso de preparación y limpieza de grandes conjuntos de datos para machine learning. Proporciona una interfaz visual para exploración de datos, ingeniería de características y transformación de datos, permitiendo a los usuarios manejar fácilmente datos sin procesar antes del entrenamiento del modelo. Con SageMaker Data Wrangler, el equipo puede importar datos de múltiples fuentes, visualizar patrones, limpiar y normalizar los datos, y crear características, todo dentro de una única herramienta. Esto lo convierte en el servicio más apropiado para su necesidad de preparación y exploración de datos.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>Amazon SageMaker Feature Store</p>\n\t\t\t\t\t\t<p>Amazon SageMaker Feature Store es un repositorio para almacenar y administrar características de machine learning, permitiendo el uso consistente de características en entrenamiento e inferencia. Si bien ayuda a gestionar características, no está específicamente diseñado para exploración de datos o limpieza.</p>\n\t\t\t\t\t\t<p>Amazon SageMaker Model Monitor</p>\n\t\t\t\t\t\t<p>Amazon SageMaker Model Monitor se utiliza para rastrear y monitorear el desempeño del modelo en producción, detectando problemas como data drift. No proporciona funcionalidad para preparación de datos o ingeniería de características, lo que lo hace inadecuado para esta tarea.</p>\n\t\t\t\t\t\t<p>Amazon Transcribe</p>\n\t\t\t\t\t\t<p>Amazon Transcribe es un servicio que convierte voz en texto. No tiene relación con limpieza de datos, exploración o ingeniería de características.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://docs.aws.amazon.com/sagemaker/latest/dg/data-wrangler.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/sagemaker/latest/dg/data-wrangler.html</a>\n\t\t\t\t\t\t</p>"
+    },
+    {
+      "id": "10-48",
+      "number": 48,
+      "text": "Estás usando un modelo de IA generativa para crear respuestas automatizadas de atención al cliente. Las respuestas del modelo varían cada vez, incluso cuando se le proporciona la misma entrada. ¿Cuál es la limitación de la IA generativa que esto representa?",
+      "options": [
+        {
+          "text": "Alucinaciones",
+          "correct": false
+        },
+        {
+          "text": "Simplicidad",
+          "correct": false
+        },
+        {
+          "text": "No determinismo",
+          "correct": true
+        },
+        {
+          "text": "Precisión",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>No determinismo</p>\n\t\t\t\t\t\t<p>El no determinismo en la IA generativa significa que el modelo puede producir diferentes salidas incluso cuando recibe la misma entrada. Esto ocurre porque los modelos generativos a menudo utilizan aleatoriedad en sus procesos para mejorar la variedad y creatividad de las respuestas. Esta característica es particularmente útil en aplicaciones creativas, pero también puede ser un desafío en situaciones como la atención al cliente, donde se necesitan respuestas consistentes. El no determinismo es una característica clave de muchos modelos de IA modernos y destaca su capacidad para generar resultados diversos, aunque puede afectar la predictibilidad.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>Precisión</p>\n\t\t\t\t\t\t<p>La precisión se refiere a cuán correctas o confiables son las respuestas de la IA. En este escenario, el problema no es que la IA produzca respuestas incorrectas, sino que produce respuestas diferentes, por lo que la precisión no es la preocupación principal aquí.</p>\n\t\t\t\t\t\t<p>Alucinaciones</p>\n\t\t\t\t\t\t<p>Las alucinaciones ocurren cuando una IA generativa proporciona respuestas que son factualmente incorrectas o inventadas. Este no es el problema descrito, ya que el enfoque está en la variabilidad de las respuestas en lugar de su exactitud o veracidad.</p>\n\t\t\t\t\t\t<p>Simplicidad</p>\n\t\t\t\t\t\t<p>La simplicidad se refiere a qué tan básicas o directas son las respuestas de la IA. El problema aquí no es que las respuestas sean demasiado simples, sino que el modelo produce respuestas variadas cada vez.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://aws.amazon.com/what-is/machine-learning\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/what-is/machine-learning</a>\n\t\t\t\t\t\t</p>"
+    },
+    {
+      "id": "10-49",
+      "number": 49,
+      "text": "Un desarrollador intenta optimizar el desempeño de un modelo de IA generativa reduciendo el tamaño de su entrada sin perder contexto importante. ¿Qué proceso implica dividir el texto en partes más pequeñas que puede usar un LLM basado en transformer para un procesamiento más eficiente?",
+      "options": [
+        {
+          "text": "Entrenamiento del modelo",
+          "correct": false
+        },
+        {
+          "text": "Aprendizaje por refuerzo",
+          "correct": false
+        },
+        {
+          "text": "Tokenización",
+          "correct": true
+        },
+        {
+          "text": "Fine-tuning",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>Tokenización</p>\n\t\t\t\t\t\t<p>Tokenización es el proceso de convertir texto sin procesar en unidades más pequeñas llamadas tokens, que pueden ser palabras, subpalabras o caracteres. En Large Language Models (LLMs) basados en transformer, la tokenización es un paso crucial para el procesamiento eficiente de texto. Al dividir el texto en tokens, el modelo puede manejar entradas de longitud variable y capturar relaciones contextuales entre diferentes partes del texto. Este proceso reduce el tamaño de entrada sin perder contexto importante, ya que permite que el modelo se enfoque en unidades significativas del lenguaje en lugar de procesar oraciones completas o párrafos como entidades únicas. La tokenización eficiente ayuda a optimizar el desempeño del modelo al hacer que la carga computacional sea más manejable y mejora la capacidad del modelo para entender y generar texto similar al humano.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>Aprendizaje por refuerzo</p>\n\t\t\t\t\t\t<p>Aprendizaje por refuerzo es un paradigma de machine learning donde los agentes aprenden a tomar decisiones realizando acciones y recibiendo retroalimentación en forma de recompensas o penalizaciones. Aunque es útil para entrenar modelos en tareas de toma de decisiones, no implica dividir texto en partes más pequeñas para procesamiento por LLMs.</p>\n\t\t\t\t\t\t<p>Fine-tuning</p>\n\t\t\t\t\t\t<p>Fine-tuning implica tomar un modelo previamente entrenado y adaptarlo a una tarea específica o conjunto de datos continuando el proceso de entrenamiento. Ayuda a mejorar el desempeño del modelo en tareas especializadas pero no está relacionado con reducir el tamaño de entrada mediante segmentación de texto.</p>\n\t\t\t\t\t\t<p>Entrenamiento del modelo</p>\n\t\t\t\t\t\t<p>Entrenamiento del modelo se refiere al proceso general de enseñar a un modelo de machine learning a realizar una tarea exponiéndolo a datos y ajustando sus parámetros. Aunque es esencial, no aborda específicamente la optimización del tamaño de entrada dividiendo el texto en unidades más pequeñas para modelos basados en transformer.</p>"
+    },
+    {
+      "id": "10-50",
+      "number": 50,
+      "text": "Una empresa de logística necesita pronosticar la demanda de sus servicios basándose en datos históricos y tendencias estacionales. ¿Cuál sería el modelo de machine learning más apropiado para esta tarea?",
+      "options": [
+        {
+          "text": "Clasificación",
+          "correct": false
+        },
+        {
+          "text": "Clustering",
+          "correct": false
+        },
+        {
+          "text": "Regression",
+          "correct": true
+        },
+        {
+          "text": "Aprendizaje por refuerzo",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>Regression</p>\n\t\t\t\t\t\t<p>Regression es el modelo de machine learning más apropiado para pronosticar demanda basándose en datos históricos y tendencias estacionales. Los modelos de regression predicen una variable de salida continua basándose en datos de entrada, lo que los hace ideales para tareas como pronóstico de demanda, donde el objetivo es estimar un valor futuro (como la cantidad de servicios requeridos). Al analizar las relaciones entre características como el tiempo, patrones estacionales y datos de demanda, los modelos de regression pueden proporcionar predicciones precisas. Las empresas de logística a menudo utilizan modelos de regression de series temporales como linear regression, ARIMA o técnicas más avanzadas para proyectar la demanda futura y optimizar sus operaciones basándose en las tendencias predichas.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>Clustering</p>\n\t\t\t\t\t\t<p>Clustering se utiliza para agrupar puntos de datos similares según sus características, pero no predice valores futuros. Aunque puede ayudar a entender patrones en los datos, no es apropiado para pronósticos.</p>\n\t\t\t\t\t\t<p>Clasificación</p>\n\t\t\t\t\t\t<p>Los modelos de clasificación se utilizan para categorizar datos en clases discretas, como demanda \"alta\" o \"baja\". Este enfoque no es adecuado para predecir valores continuos como la demanda, que requiere un enfoque basado en regression.</p>\n\t\t\t\t\t\t<p>Aprendizaje por refuerzo</p>\n\t\t\t\t\t\t<p>El aprendizaje por refuerzo se utiliza en procesos de toma de decisiones donde un agente aprende interactuando con un entorno, frecuentemente por ensayo y error. No se utiliza comúnmente para tareas como pronóstico de demanda, que se basan en datos históricos y tendencias.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://docs.aws.amazon.com/machine-learning/latest/dg/regression.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/machine-learning/latest/dg/regression.html</a>\n\t\t\t\t\t\t</p>"
+    },
+    {
+      "id": "10-51",
+      "number": 51,
+      "text": "Para garantizar la calidad de los datos que se alimentan a un sistema de IA, es importante evaluar los conjuntos de datos para detectar entradas faltantes o incorrectas antes de utilizarlos. ¿Cuál es la mejor práctica que deberías seguir para asegurar datos de alta calidad?",
+      "options": [
+        {
+          "text": "Data quality assessment",
+          "correct": true
+        },
+        {
+          "text": "Compresión de datos",
+          "correct": false
+        },
+        {
+          "text": "Data augmentation",
+          "correct": false
+        },
+        {
+          "text": "Data normalization",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>Data quality assessment</p>\n\t\t\t\t\t\t<p>Data quality assessment es la mejor práctica para asegurar que los conjuntos de datos utilizados en un sistema de IA sean completos, precisos y confiables. Este proceso implica evaluar los datos en busca de entradas faltantes, incorrectas o inconsistentes, y garantizar que los datos cumplan con los estándares requeridos antes de usarlos para entrenar modelos. Al realizar evaluaciones exhaustivas de la calidad de los datos, puedes identificar y corregir problemas como valores faltantes u outliers que podrían afectar negativamente el desempeño de tus modelos de IA. Este paso es crucial para garantizar la efectividad y precisión generales de los sistemas de IA.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>Compresión de datos</p>\n\t\t\t\t\t\t<p>La compresión de datos reduce el tamaño de los conjuntos de datos para almacenamiento o transmisión, pero no verifica ni mejora la calidad de los datos en sí.</p>\n\t\t\t\t\t\t<p>Data normalization</p>\n\t\t\t\t\t\t<p>Data normalization implica organizar los datos en un formato consistente, lo que ayuda con la compatibilidad, pero no evalúa la completitud o precisión de los datos.</p>\n\t\t\t\t\t\t<p>Data augmentation</p>\n\t\t\t\t\t\t<p>Data augmentation genera datos de entrenamiento adicionales modificando datos existentes, pero no aborda la calidad o corrección del conjunto de datos original.</p>"
+    },
+    {
+      "id": "10-52",
+      "number": 52,
+      "text": "Para mejorar la precisión de un modelo base utilizado para traducción de idiomas, un equipo selecciona cuidadosamente fuentes de texto de alta calidad, elimina datos ruidosos y asegura que todos los conjuntos de datos estén alineados con los objetivos de la tarea. ¿Cómo se conoce este proceso?",
+      "options": [
+        {
+          "text": "Etiquetado de datos",
+          "correct": false
+        },
+        {
+          "text": "Reinforcement learning from human feedback (RLHF)",
+          "correct": false
+        },
+        {
+          "text": "Data curation",
+          "correct": true
+        },
+        {
+          "text": "Data governance",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>Data curation</p>\n\t\t\t\t\t\t<p>Data curation se refiere al proceso de seleccionar cuidadosamente, limpiar, organizar y mantener datos para garantizar su calidad y relevancia para una tarea específica. En el contexto de mejorar un modelo base para traducción de idiomas, el equipo se enfoca en fuentes de texto de alta calidad, eliminación de datos ruidosos y aseguramiento de la alineación con los objetivos de la tarea. Esto ayuda a garantizar que el modelo se entrene con los datos más precisos y relevantes, lo que finalmente mejora el desempeño del modelo.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>Data governance</p>\n\t\t\t\t\t\t<p>Data governance se enfoca en la gestión general de políticas de datos, cumplimiento normativo y seguridad. Es un término más amplio y no se refiere específicamente a la tarea de seleccionar y limpiar datos para mejorar el modelo.</p>\n\t\t\t\t\t\t<p>Reinforcement learning from human feedback (RLHF)</p>\n\t\t\t\t\t\t<p>RLHF implica el uso de comentarios humanos para guiar el proceso de toma de decisiones de un modelo, pero no está relacionado con el proceso de seleccionar y limpiar datos para el entrenamiento.</p>\n\t\t\t\t\t\t<p>Etiquetado de datos</p>\n\t\t\t\t\t\t<p>El etiquetado de datos es el proceso de asignar etiquetas o anotaciones a los datos. Si bien es importante para el aprendizaje supervisado, no abarca la tarea más amplia de seleccionar y limpiar datos para alinearse con los objetivos de la tarea.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://docs.aws.amazon.com/whitepapers/latest/aws-caf-governance-perspective/data-curation.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/whitepapers/latest/aws-caf-governance-perspective/data-curation.html</a>\n\t\t\t\t\t\t</p>"
+    },
+    {
+      "id": "10-53",
+      "number": 53,
+      "text": "Estás desarrollando un sistema de IA que genera respuestas de soporte al cliente basadas en consultas de entrada. El sistema debe adaptarse a diferentes idiomas y proporcionar respuestas precisas. ¿En cuáles conceptos de IA generativa deberías enfocarte para lograr estos objetivos? (Selecciona DOS.)",
+      "options": [
+        {
+          "text": "Transformer-based large language models (LLMs)",
+          "correct": true
+        },
+        {
+          "text": "Tokens y embeddings",
+          "correct": true
+        },
+        {
+          "text": "Algoritmos de machine learning clásicos",
+          "correct": false
+        },
+        {
+          "text": "Sistemas basados en reglas",
+          "correct": false
+        },
+        {
+          "text": "Multi-modal models",
+          "correct": false
+        }
+      ],
+      "multiSelect": true,
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>Transformer-based large language models (LLMs)</p>\n\t\t\t\t\t\t<p>Los LLMs basados en Transformers son fundamentales para crear sistemas de IA que generen respuestas de soporte al cliente. Estos modelos son altamente efectivos para entender y generar texto similar al humano en varios idiomas. Utilizan mecanismos de atención para procesar largas secuencias de palabras, lo que les permite captar el contexto y significado de la consulta de entrada. Al entrenar estos modelos con conjuntos de datos multilingües, el sistema puede generar respuestas precisas en diferentes idiomas, adaptándose a las necesidades de clientes diversos. LLMs como GPT y BERT se utilizan ampliamente para este propósito.</p>\n\t\t\t\t\t\t<p>Tokens y embeddings</p>\n\t\t\t\t\t\t<p>Los tokens y embeddings son conceptos fundamentales en IA generativa. Un token representa una unidad de texto, como una palabra o un carácter, mientras que los embeddings son representaciones vectoriales de estos tokens en un espacio continuo. Los embeddings ayudan al sistema de IA a entender el significado y las relaciones entre palabras. Al utilizar tokens y embeddings, el sistema puede convertir el lenguaje en forma numérica que el modelo puede procesar. Esto es crucial para generar respuestas coherentes y conscientes del contexto, independientemente del idioma que se utilice.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>Sistemas basados en reglas</p>\n\t\t\t\t\t\t<p>Los sistemas basados en reglas se basan en lógica predefinida y no se adaptan a variaciones de idioma o consultas complejas. Son rígidos y menos efectivos para respuestas de soporte al cliente dinámicas o multilingües.</p>\n\t\t\t\t\t\t<p>Multi-modal models</p>\n\t\t\t\t\t\t<p>Los multi-modal models procesan múltiples tipos de datos (como imágenes, texto o sonido) simultáneamente. Aunque son útiles en ciertos contextos, no son necesarios para generar respuestas de soporte al cliente basadas en texto.</p>\n\t\t\t\t\t\t<p>Algoritmos de machine learning clásicos</p>\n\t\t\t\t\t\t<p>Los algoritmos de machine learning clásicos, como árboles de decisión o SVMs, no están diseñados para generación de texto o comprensión del lenguaje. Son más adecuados para datos estructurados y no manejan tareas de lenguaje natural con la misma eficiencia que los modelos basados en Transformers.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://aws.amazon.com/what-is/generative-ai\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/what-is/generative-ai</a>\n\t\t\t\t\t\t</p>"
+    },
+    {
+      "id": "10-54",
+      "number": 54,
+      "text": "Una empresa de videojuegos quiere usar IA generativa para crear automáticamente modelos 3D realistas de personajes y entornos, acelerando el proceso de desarrollo. ¿Cuál de los siguientes métodos de IA generativa sería el mejor para este caso de uso? (Selecciona DOS.)",
+      "options": [
+        {
+          "text": "Reinforcement learning para crear entornos de juego",
+          "correct": false
+        },
+        {
+          "text": "Generative Adversarial Networks (GANs) para crear modelos 3D",
+          "correct": true
+        },
+        {
+          "text": "Algoritmos de clustering para generación de modelos",
+          "correct": false
+        },
+        {
+          "text": "Diffusion models para generar imágenes de alta calidad",
+          "correct": true
+        },
+        {
+          "text": "Modelos de lenguaje basados en Transformer para generación de texto",
+          "correct": false
+        }
+      ],
+      "multiSelect": true,
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>Diffusion models para generar imágenes de alta calidad</p>\n\t\t\t\t\t\t<p>Los diffusion models son un tipo de IA generativa que pueden producir imágenes detalladas y de alta calidad, lo que los hace adecuados para generar texturas 3D realistas y componentes visuales en desarrollo de videojuegos. Aunque estos modelos se utilizan más comúnmente para generar imágenes 2D, pueden adaptarse para generar componentes que contribuyan a la creación de modelos 3D, como texturas para personajes y entornos, lo que resulta en resultados visualmente realistas.</p>\n\t\t\t\t\t\t<p>Generative Adversarial Networks (GANs) para crear modelos 3D</p>\n\t\t\t\t\t\t<p>Las Generative Adversarial Networks (GANs) son muy efectivas para crear modelos 3D realistas. Los GANs consisten en dos redes neuronales (un generador y un discriminador) que trabajan juntas para producir datos realistas. En el contexto del desarrollo de videojuegos, los GANs pueden generar modelos 3D detallados de personajes, paisajes y entornos aprendiendo de grandes conjuntos de datos de activos 3D. Este método acelera el proceso de desarrollo automatizando la creación de modelos complejos y realistas.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>Reinforcement learning para crear entornos de juego</p>\n\t\t\t\t\t\t<p>El reinforcement learning es útil para entrenar agentes de IA que interactúen con entornos, pero no está diseñado para generar modelos 3D o personajes. Se enfoca en la toma de decisiones y el aprendizaje a través de acciones, no en la generación de contenido.</p>\n\t\t\t\t\t\t<p>Modelos de lenguaje basados en Transformer para generación de texto</p>\n\t\t\t\t\t\t<p>Los modelos de lenguaje basados en Transformer están optimizados para generación y comprensión de texto. Aunque son poderosos para sistemas de diálogo o narrativas de juegos, no son adecuados para generar modelos 3D o contenido visual.</p>\n\t\t\t\t\t\t<p>Algoritmos de clustering para generación de modelos</p>\n\t\t\t\t\t\t<p>Los algoritmos de clustering agrupan puntos de datos similares, pero no se utilizan para generar nuevos modelos 3D. No tienen la capacidad de crear nuevos activos, lo que los hace irrelevantes para este caso de uso.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://aws.amazon.com/blogs/machine-learning/safe-image-generation-and-diffusion-models-with-amazon-ai-content-moderation-services\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/blogs/machine-learning/safe-image-generation-and-diffusion-models-with-amazon-ai-content-moderation-services</a></p>\n\t\t\t\t\t\t<p><a href=\"https://aws.amazon.com/what-is/gan\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/what-is/gan</a>\n\t\t\t\t\t\t</p>"
+    },
+    {
+      "id": "10-55",
+      "number": 55,
+      "text": "Una empresa necesita detectar automáticamente el sentimiento de tweets relacionados con su marca. Desean clasificar el sentimiento como positivo, negativo, neutral o mixto. ¿Cuál función de Amazon Comprehend deberían usar?",
+      "options": [
+        {
+          "text": "Análisis de sintaxis",
+          "correct": false
+        },
+        {
+          "text": "Reconocimiento de entidades nombradas",
+          "correct": false
+        },
+        {
+          "text": "Extracción de frases clave",
+          "correct": false
+        },
+        {
+          "text": "Análisis de sentimiento",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>Análisis de sentimiento</p>\n\t\t\t\t\t\t<p>El Sentiment Analysis de Amazon Comprehend es una herramienta poderosa de procesamiento de lenguaje natural (NLP) diseñada para analizar y categorizar automáticamente el tono emocional de un texto. Utiliza machine learning para detectar si un fragmento de texto expresa sentimiento positivo, negativo, neutral o mixto. Esta función se usa comúnmente en comentarios de clientes, monitoreo de redes sociales o reseñas de productos, ayudando a las empresas a obtener información valiosa sobre cómo sienten los clientes respecto a sus productos o servicios. Con su capacidad de procesar grandes volúmenes de datos, Amazon Comprehend permite a las organizaciones identificar tendencias y tomar decisiones basadas en datos de manera más efectiva. Su integración con otros servicios de AWS también facilita su implementación dentro de flujos de análisis más amplios.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>Análisis de sintaxis</p>\n\t\t\t\t\t\t<p>El análisis de sintaxis identifica la parte del discurso (sustantivos, verbos, etc.) en un texto, pero no clasifica el sentimiento. Se enfoca en la estructura del lenguaje más que en las emociones expresadas.</p>\n\t\t\t\t\t\t<p>Reconocimiento de entidades nombradas</p>\n\t\t\t\t\t\t<p>El reconocimiento de entidades nombradas (NER) detecta y clasifica entidades como nombres, fechas o ubicaciones en un texto. Si bien es útil para identificar información importante, no proporciona clasificación de sentimiento.</p>\n\t\t\t\t\t\t<p>Extracción de frases clave</p>\n\t\t\t\t\t\t<p>La extracción de frases clave identifica las frases más relevantes en un texto, pero no proporciona información sobre el sentimiento o el tono emocional del contenido.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://docs.aws.amazon.com/comprehend/latest/dg/how-sentiment.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/comprehend/latest/dg/how-sentiment.html</a>\n\t\t\t\t\t\t</p>"
+    },
+    {
+      "id": "10-56",
+      "number": 56,
+      "text": "Estás trabajando en una solución de atención al cliente con IA que necesita guiar a los usuarios a través de una serie de interacciones, como verificar saldos de cuenta, resolver problemas y ofrecer promociones. ¿Cómo pueden ayudar los agents para Amazon Bedrock en este tipo de tarea de varios pasos?",
+      "options": [
+        {
+          "text": "Los agents priorizarán las tareas secuencialmente y asignarán modelos para cada paso del flujo de trabajo.",
+          "correct": false
+        },
+        {
+          "text": "Los agents asignarán manualmente las tareas a diferentes representantes de servicio para su tratamiento humano.",
+          "correct": false
+        },
+        {
+          "text": "Los agents actuarán como modelos individuales para cada tarea, sin requerir orquestación adicional.",
+          "correct": false
+        },
+        {
+          "text": "Los agents proporcionan una forma de definir dependencias entre tareas y garantizar que los modelos completen sus tareas asignadas en el orden correcto.",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>Los agents proporcionan una forma de definir dependencias entre tareas y garantizar que los modelos completen sus tareas asignadas en el orden correcto.</p>\n\t\t\t\t\t\t<p>En Amazon Bedrock, los agents pueden ayudar a gestionar flujos de trabajo complejos de varios pasos al definir dependencias entre tareas. Esto garantiza que el modelo o servicio correcto sea invocado en el momento adecuado para completar cada tarea en la secuencia correcta. Por ejemplo, un agent puede guiar a los usuarios para verificar saldos de cuenta, resolver problemas y ofrecer promociones, garantizando que cada interacción se maneje adecuadamente y que las tareas se procesen en el orden correcto. Esta orquestación facilita la gestión de flujos de trabajo complejos con una intervención manual mínima.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>Los agents actuarán como modelos individuales para cada tarea, sin requerir orquestación adicional.</p>\n\t\t\t\t\t\t<p>Los agents en Amazon Bedrock no actúan como modelos individuales. En su lugar, orquestan el flujo de trabajo, garantizando que las tareas se completen en el orden correcto y sean manejadas por los modelos apropiados.</p>\n\t\t\t\t\t\t<p>Los agents priorizarán las tareas secuencialmente y asignarán modelos para cada paso del flujo de trabajo.</p>\n\t\t\t\t\t\t<p>Aunque los agents ayudan a gestionar tareas, no solo priorizan tareas secuencialmente. Garantizan el flujo de tareas correcto al definir dependencias y orquestar los modelos apropiados, no simplemente asignando tareas paso a paso.</p>\n\t\t\t\t\t\t<p>Los agents asignarán manualmente las tareas a diferentes representantes de servicio para su tratamiento humano.</p>\n\t\t\t\t\t\t<p>Los agents en Amazon Bedrock están diseñados para gestionar flujos de trabajo de forma autónoma utilizando modelos de IA, no para asignar manualmente tareas a representantes humanos.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://aws.amazon.com/bedrock/agents\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/bedrock/agents</a>\n\t\t\t\t\t\t</p>"
+    },
+    {
+      "id": "10-57",
+      "number": 57,
+      "text": "Un equipo está desarrollando un modelo de IA para generar documentos legales. Para asegurar que el modelo entienda que debe generar lenguaje formal, necesitan proporcionar directivas específicas en el prompt. ¿Qué tipo de construcción de prompt engineering deberían usar?",
+      "options": [
+        {
+          "text": "Instruction prompting",
+          "correct": true
+        },
+        {
+          "text": "Negative prompting",
+          "correct": false
+        },
+        {
+          "text": "Few-shot prompting",
+          "correct": false
+        },
+        {
+          "text": "Model latent space",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>Instruction prompting</p>\n\t\t\t\t\t\t<p>Instruction prompting implica proporcionar al modelo de IA instrucciones explícitas sobre cómo realizar una tarea. Al dar directivas claras en el prompt, guías al modelo para generar respuestas que cumplan con requisitos específicos, como usar lenguaje formal en documentos legales. Esta técnica ayuda al modelo a entender el tono, estilo y estructura de contenido deseados. Por ejemplo, comenzar tu prompt con \"Redacta un documento legal formal que incluya...\" le dice al modelo exactamente qué esperas. Instruction prompting es efectivo porque aprovecha la capacidad del modelo de seguir instrucciones detalladas, asegurando que el resultado se alinee con tus objetivos.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>Model latent space</p>\n\t\t\t\t\t\t<p>Model latent space se refiere a las representaciones internas y características aprendidas por el modelo de IA durante el entrenamiento. Los usuarios normalmente no interactúan ni modifican directamente el latent space al elaborar prompts.</p>\n\t\t\t\t\t\t<p>Few-shot prompting</p>\n\t\t\t\t\t\t<p>Few-shot prompting proporciona al modelo algunos ejemplos de los cuales aprender dentro del prompt. Si bien esto puede guiar el estilo y formato, se basa en ejemplos más que en instrucciones explícitas para lograr un tono formal.</p>\n\t\t\t\t\t\t<p>Negative prompting</p>\n\t\t\t\t\t\t<p>Negative prompting le dice al modelo qué evitar en su respuesta. Se enfoca en prohibir cierto contenido pero no proporciona directivas específicas para lograr un tono formal.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-engineering-guidelines.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-engineering-guidelines.html</a>\n\t\t\t\t\t\t</p>"
+    },
+    {
+      "id": "10-58",
+      "number": 58,
+      "text": "Una empresa de salud quiere entrenar múltiples modelos de machine learning usando diferentes algoritmos para predecir resultados de pacientes. Busca una característica que pueda probar automáticamente diferentes algoritmos y encontrar el modelo con mejor desempeño. ¿Cuál característica de Amazon SageMaker puede ayudar con esto?",
+      "options": [
+        {
+          "text": "Amazon SageMaker Studio",
+          "correct": false
+        },
+        {
+          "text": "Amazon SageMaker Feature Store",
+          "correct": false
+        },
+        {
+          "text": "Amazon SageMaker Autopilot",
+          "correct": true
+        },
+        {
+          "text": "Amazon SageMaker Ground Truth",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>Amazon SageMaker Autopilot</p>\n\t\t\t\t\t\t<p>Amazon SageMaker Autopilot automatiza el proceso de entrenar y evaluar múltiples modelos de machine learning usando diferentes algoritmos. Prueba automáticamente una variedad de modelos y combinaciones de hiperparámetros para encontrar el de mejor desempeño en función del dataset proporcionado. Autopilot también proporciona información detallada sobre el rendimiento del modelo y permite hacer fine-tuning adicional si es necesario. Para una empresa de salud que busca entrenar modelos para predecir resultados de pacientes, SageMaker Autopilot puede simplificar significativamente el proceso al encontrar automáticamente el modelo más efectivo.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>Amazon SageMaker Studio</p>\n\t\t\t\t\t\t<p>SageMaker Studio es un ambiente de desarrollo integrado para construir e implementar modelos de machine learning. Aunque proporciona herramientas para el desarrollo de modelos, no prueba automáticamente diferentes algoritmos como lo hace Autopilot.</p>\n\t\t\t\t\t\t<p>Amazon SageMaker Ground Truth</p>\n\t\t\t\t\t\t<p>SageMaker Ground Truth es un servicio de etiquetado de datos que ayuda a crear datasets etiquetados para modelos de machine learning. No se utiliza para probar diferentes algoritmos ni para encontrar el modelo con mejor desempeño.</p>\n\t\t\t\t\t\t<p>Amazon SageMaker Feature Store</p>\n\t\t\t\t\t\t<p>SageMaker Feature Store es un repositorio centralizado para almacenar y gestionar features para modelos de machine learning. Ayuda a administrar features pero no se encarga de la selección de algoritmos ni de la automatización del entrenamiento de modelos.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p><a href=\"https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-automate-model-development.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-automate-model-development.html</a>\n\t\t\t\t\t\t</p>"
+    },
+    {
+      "id": "10-59",
+      "number": 59,
+      "text": "Un científico de datos debe elegir los datos correctos para entrenar un foundation model y asegurar que capture patrones relevantes para su chatbot de atención al cliente. ¿Cuál es la consideración más importante durante la etapa de selección de datos?",
+      "options": [
+        {
+          "text": "Seleccionar un modelo pre-entrenado",
+          "correct": false
+        },
+        {
+          "text": "Hacer pre-training del modelo",
+          "correct": false
+        },
+        {
+          "text": "Asegurar la representatividad y calidad de los datos",
+          "correct": true
+        },
+        {
+          "text": "Elegir el proveedor de nube correcto",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>Asegurar la representatividad y calidad de los datos</p>\n\t\t\t\t\t\t<p>Asegurar la representatividad y calidad de los datos es fundamental durante la etapa de selección de datos para entrenar un foundation model, especialmente para un chatbot. Los datos representativos garantizan que el modelo capture el rango completo de consultas de clientes, matices del lenguaje y patrones de interacción que encontrará en escenarios reales. Los datos de alta calidad, libres de errores, sesgos e información irrelevante, mejoran la capacidad del modelo para entender y responder con precisión a las entradas del usuario. Al enfocarse en datos que reflejen fielmente la base de usuarios objetivo y los tipos de interacción, el científico de datos puede entrenar un modelo que ofrezca soporte al cliente efectivo y confiable, lo que lleva a una mayor satisfacción del usuario y eficiencia operacional.</p>\n\t\t\t\t\t\t<p><b>Opciones Incorrectas:</b></p>\n\t\t\t\t\t\t<p>Elegir el proveedor de nube correcto</p>\n\t\t\t\t\t\t<p>Aunque seleccionar un proveedor de nube apropiado es importante para escalabilidad, rendimiento y consideraciones de costo, no es el factor más crítico durante la etapa de selección de datos. El proveedor de nube no influye en la calidad inherente o representatividad de los datos de entrenamiento.</p>\n\t\t\t\t\t\t<p>Hacer pre-training del modelo</p>\n\t\t\t\t\t\t<p>Hacer pre-training del modelo implica entrenar con un conjunto de datos grande para aprender patrones generales antes de hacer fine-tuning en tareas específicas. Este paso ocurre después de la selección de datos y no impacta directamente las consideraciones involucradas en elegir los datos de entrenamiento correctos.</p>\n\t\t\t\t\t\t<p>Seleccionar un modelo pre-entrenado</p>\n\t\t\t\t\t\t<p>Seleccionar un modelo pre-entrenado se relaciona con la selección del modelo más que con la selección de datos. Aunque puede acelerar el desarrollo, no aborda la necesidad de asegurar que los datos de entrenamiento sean representativos y de alta calidad para el caso de uso específico de un chatbot de atención al cliente.</p>\n\t\t\t\t\t\t<p>Referencias:</p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<a href=\"https://aws.amazon.com/what-is/data-preparation\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/what-is/data-preparation</a>\n\t\t\t\t\t\t</p>"
+    }
+  ]
+}

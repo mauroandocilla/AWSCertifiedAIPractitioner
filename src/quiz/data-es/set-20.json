@@ -1,0 +1,1377 @@
+{
+  "setNumber": 20,
+  "sourceFile": "Practice_Set_20.html",
+  "questionCount": 54,
+  "questions": [
+    {
+      "id": "20-1",
+      "number": 1,
+      "text": "En el contexto de desplegar modelos de IA en AWS, ¿cuál es la principal preocupación de seguridad entre la detección de amenazas y la gestión de vulnerabilidades?",
+      "options": [
+        {
+          "text": "La detección de amenazas implica implementar protocolos de seguridad como encriptación y control de acceso.",
+          "correct": false
+        },
+        {
+          "text": "La detección de amenazas se enfoca en monitoreo en tiempo real para identificar amenazas activas, mientras que la gestión de vulnerabilidades apunta a identificar y mitigar debilidades potenciales.",
+          "correct": true
+        },
+        {
+          "text": "La gestión de vulnerabilidades se trata únicamente de cumplimiento regulatorio, mientras que la detección de amenazas no está directamente vinculada al cumplimiento.",
+          "correct": false
+        },
+        {
+          "text": "La detección de amenazas y la gestión de vulnerabilidades son los mismos procesos enfocados en diferentes conjuntos de datos.",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>En el despliegue de modelos de IA en AWS, mantener una seguridad robusta implica diferentes estrategias. La detección de amenazas es una medida de seguridad proactiva que se enfoca en el monitoreo en tiempo real e identificación de amenazas activas para responder rápidamente a ellas. La gestión de vulnerabilidades, por otro lado, gira en torno a los procesos de identificar sistemáticamente, evaluar, tratar y reportar vulnerabilidades de seguridad en un sistema. Ambas son cruciales para una estrategia de seguridad integral pero sirven propósitos diferentes en la protección del entorno de IA.</p>"
+    },
+    {
+      "id": "20-2",
+      "number": 2,
+      "text": "En el contexto de AWS, ¿cómo se puede utilizar Amazon VPC para garantizar el aislamiento de red en flujos de trabajo de aprendizaje automático?",
+      "options": [
+        {
+          "text": "Usando un Internet Gateway con reglas de enrutamiento estrictas para controlar el tráfico entre modelos en diferentes subnets.",
+          "correct": false
+        },
+        {
+          "text": "Creando una subnet pública para cada modelo para garantizar que sean accesibles por internet.",
+          "correct": false
+        },
+        {
+          "text": "Implementando subnets privadas y security groups para restringir el acceso a los modelos de aprendizaje automático y al procesamiento de datos asociado.",
+          "correct": true
+        },
+        {
+          "text": "Utilizando AWS Direct Connect para vincular fuentes de datos externas directamente a la VPC sin pasar por internet.",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon Virtual Private Cloud (VPC) es fundamental para crear un espacio de red seguro e aislado en AWS. Te permite definir una red virtual similar a la que operarías en tu propio data center, pero con los beneficios de usar la infraestructura escalable de AWS. Para flujos de trabajo de aprendizaje automático, el aislamiento de red típicamente se logra mediante el uso de subnets privadas, que no son directamente accesibles por internet, y security groups, que actúan como un firewall virtual para controlar el tráfico entrante y saliente a nivel de instancia. Esta configuración garantiza que los modelos de ML y los datos se accedan solo a través de canales definidos y seguros. </p>"
+    },
+    {
+      "id": "20-3",
+      "number": 3,
+      "text": "Un equipo de ciencia de datos en una empresa tecnológica está desarrollando una solución de IA para categorizar imágenes de productos en su plataforma de comercio electrónico. ¿Cuál sería la arquitectura de red neuronal más adecuada para clasificar con precisión los patrones y características complejas en datos de imágenes?",
+      "options": [
+        {
+          "text": "Generative Adversarial Networks (GANs)",
+          "correct": false
+        },
+        {
+          "text": "Recurrent Neural Networks (RNNs)",
+          "correct": false
+        },
+        {
+          "text": "Convolutional Neural Networks (CNNs)",
+          "correct": true
+        },
+        {
+          "text": "Retrieval-Augmented Generation (RAG)",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>En el contexto de categorizar imágenes en una plataforma de comercio electrónico, las Convolutional Neural Networks (CNNs) son la opción más efectiva. Las CNNs son reconocidas por su capacidad para manejar las complejidades asociadas con datos de imágenes gracias a sus capas especializadas como las capas convolucionales y capas de pooling. Estas capas ayudan a reconocer y analizar las jerarquías espaciales y patrones dentro de las imágenes, lo que las hace bien adaptadas para tareas de clasificación de imágenes. Para más información sobre CNNs y sus aplicaciones en procesamiento de imágenes, AWS ofrece orientación detallada: [AWS Machine Learning Services](<a href=\"https://aws.amazon.com/machine-learning/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/machine-learning/</a>). </p>"
+    },
+    {
+      "id": "20-4",
+      "number": 4,
+      "text": "Eres un Científico de Datos preparando datos para un modelo de Machine Learning que predice el abandono de clientes. Decides utilizar AWS Glue DataBrew para limpiar y explorar tus conjuntos de datos, lo que incluye manejar valores faltantes, outliers y transformar datos para mejorar el desempeño del modelo. ¿Cuál de las siguientes operaciones puede ser mejor manejada por AWS Glue DataBrew para estos requisitos?",
+      "options": [
+        {
+          "text": "Analizar registros de red para detectar amenazas de seguridad",
+          "correct": false
+        },
+        {
+          "text": "Provisionar instancias de base de datos para almacenar datos transformados",
+          "correct": false
+        },
+        {
+          "text": "Automatizar el despliegue de modelos de machine learning directamente",
+          "correct": false
+        },
+        {
+          "text": "Detectar y tratar valores faltantes y outliers en el conjunto de datos",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>AWS Glue DataBrew es una herramienta visual de preparación de datos que permite a los usuarios limpiar, normalizar y transformar datos sin escribir código. Proporciona más de 250 transformaciones preconstruidas para automatizar tareas de preparación de datos tales como corregir anomalías, manejar datos faltantes y preparar datos para análisis e machine learning. Glue DataBrew se integra sin problemas con otros servicios de AWS, proporcionando una solución completa de preparación de datos para workflows de machine learning y análisis de datos. Para más detalles, visita la página del producto AWS Glue DataBrew: <a href=\"https://aws.amazon.com/glue/features/databrew/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/glue/features/databrew/</a>\n\t\t\t\t\t\t</p>"
+    },
+    {
+      "id": "20-5",
+      "number": 5,
+      "text": "Identifica la función correcta del siguiente servicio de Amazon SageMaker: SageMaker Ground Truth.",
+      "options": [
+        {
+          "text": "Facilita la inferencia en tiempo real usando modelos de machine learning implementados.",
+          "correct": false
+        },
+        {
+          "text": "Proporciona una plataforma para el entrenamiento de modelos de machine learning completamente administrado.",
+          "correct": false
+        },
+        {
+          "text": "Automatiza la implementación de modelos de machine learning en entornos de producción.",
+          "correct": false
+        },
+        {
+          "text": "Ofrece capacidades para etiquetar conjuntos de datos masivos necesarios para entrenar modelos de machine learning precisos.",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon SageMaker Ground Truth es un servicio que te ayuda a construir conjuntos de datos de entrenamiento altamente precisos para machine learning rápidamente. Ground Truth ofrece acceso fácil a etiquetadores humanos públicos y privados, y les proporciona flujos de trabajo e interfaces integradas para tareas de etiquetado comunes. Una capacidad clave de Ground Truth es que puede ayudarte a etiquetar datos a escala, lo cual es esencial para desarrollar modelos de ML precisos. Encontrarás más información en la documentación oficial de AWS en <a href=\"https://aws.amazon.com/sagemaker/groundtruth/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/sagemaker/groundtruth/</a>\n\t\t\t\t\t\t</p>"
+    },
+    {
+      "id": "20-6",
+      "number": 6,
+      "text": "Una empresa de logística está utilizando Amazon SageMaker para construir modelos de ML que optimicen rutas de entrega. Necesitan una herramienta para preprocesar eficientemente grandes volúmenes de datos sin requerir codificación extensiva. ¿Cuál servicio de Amazon SageMaker deberían utilizar para manejar transformaciones de datos con codificación mínima?",
+      "options": [
+        {
+          "text": "Amazon SageMaker Feature Store",
+          "correct": false
+        },
+        {
+          "text": "Amazon SageMaker Clarify",
+          "correct": false
+        },
+        {
+          "text": "Amazon SageMaker Data Wrangler",
+          "correct": true
+        },
+        {
+          "text": "Amazon SageMaker Ground Truth",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon SageMaker Data Wrangler está diseñado específicamente para tareas de preprocesamiento y transformación de datos en un entorno sin código o con código mínimo. Facilita la importación, limpieza y preparación de datos, admite transformaciones rápidas y escalables, y proporciona una interfaz intuitiva para gestionar estos procesos de manera eficiente. Este servicio se ajusta a las necesidades de la empresa de logística ya que busca acelerar el ciclo de desarrollo de modelos de machine learning reduciendo la codificación manual requerida para el preprocesamiento de datos.</p>"
+    },
+    {
+      "id": "20-7",
+      "number": 7,
+      "text": "En el contexto de usar Amazon Bedrock para automatizar respuestas en un chatbot de atención al cliente, ¿cómo afecta específicamente el parámetro de inferencia 'Response length' a la salida del modelo?",
+      "options": [
+        {
+          "text": "Especifica las secuencias de caracteres que detienen al modelo para que no genere más tokens.",
+          "correct": false
+        },
+        {
+          "text": "Influye en el porcentaje de candidatos más probables que el modelo considera para el siguiente token.",
+          "correct": false
+        },
+        {
+          "text": "Especifica el número mínimo o máximo de tokens que se deben devolver en la respuesta generada.",
+          "correct": true
+        },
+        {
+          "text": "Influye en la cantidad de candidatos más probables que el modelo considera para el siguiente token.",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>El parámetro de inferencia 'Response length' en Amazon Bedrock controla directamente la cantidad de tokens que el modelo de IA generará en su respuesta. Este parámetro crítico asegura que las respuestas del chatbot estén adecuadamente ajustadas en longitud para adaptarse al contexto de la interacción, sin truncar información importante ni abrumar al usuario con respuestas excesivamente largas. Esto ayuda a mantener interacciones eficientes y amigables para el usuario en escenarios de atención al cliente.</p>"
+    },
+    {
+      "id": "20-8",
+      "number": 8,
+      "text": "¿Cuál es la función principal de Amazon SageMaker Canvas?",
+      "options": [
+        {
+          "text": "Se enfoca principalmente en la preparación rápida de datos para conjuntos de datos tabulares e imágenes en aplicaciones de machine learning.",
+          "correct": false
+        },
+        {
+          "text": "Ofrece un conjunto completo de soluciones de un clic para una variedad de desafíos comunes de machine learning.",
+          "correct": false
+        },
+        {
+          "text": "Permite que los usuarios construyan modelos de machine learning sin necesidad de escribir código.",
+          "correct": true
+        },
+        {
+          "text": "Proporciona explicaciones sobre cómo las características de entrada impactan las predicciones del modelo durante las fases de desarrollo e inferencia.",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon SageMaker Canvas es una herramienta dentro de AWS diseñada para democratizar el machine learning permitiendo que analistas de negocio y otros profesionales sin experiencia en desarrollo construyan modelos de machine learning sin escribir código. Utiliza una interfaz visual donde los usuarios pueden crear modelos simplemente cargando datos y seleccionando variables objetivo, lo que la hace accesible y fácil de usar. Esta capacidad se alinea con la tendencia creciente de plataformas de IA sin código, enfatizando una mayor accesibilidad a las tecnologías de IA.</p>"
+    },
+    {
+      "id": "20-9",
+      "number": 9,
+      "text": "En el contexto de la gobernanza de datos para sistemas de IA en AWS, ¿cuál describe con precisión la diferencia entre residencia de datos y registro de datos?",
+      "options": [
+        {
+          "text": "La residencia de datos determina la ubicación geográfica donde deben almacenarse los datos, mientras que el registro de datos implica rastrear quién accedió y qué cambios se realizaron en los datos.",
+          "correct": true
+        },
+        {
+          "text": "La residencia de datos implica monitorear cómo se utilizan los datos, mientras que el registro de datos rastrea la eficiencia de las transformaciones de datos.",
+          "correct": false
+        },
+        {
+          "text": "La residencia de datos rastrea el uso de datos en tiempo real, mientras que el registro de datos maneja el archivado de datos.",
+          "correct": false
+        },
+        {
+          "text": "La residencia de datos se trata de encriptar datos, mientras que el registro de datos se refiere a registrar quién accede a los datos.",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>La residencia de datos y el registro de datos son dos aspectos cruciales de la gobernanza de datos, especialmente relevantes al implementar sistemas de IA en AWS. La residencia de datos se enfoca en garantizar que los datos se almacenen en ubicaciones específicas para cumplir con las leyes y regulaciones locales, como el GDPR en Europa. Por otro lado, el registro de datos es una práctica dirigida a mantener registros del acceso a datos y alteraciones para garantizar la seguridad y el cumplimiento con la integridad de datos. Comprender estos conceptos ayuda a diseñar soluciones de IA que cumplan con estándares de gobernanza, gestión de riesgos y cumplimiento normativo (GRC).</p>"
+    },
+    {
+      "id": "20-10",
+      "number": 10,
+      "text": "Una empresa de servicios financieros está migrando su modelo de machine learning de elegibilidad de créditos a AWS y busca abordar posibles sesgos. ¿Cómo puede Amazon SageMaker Clarify ayudar a mejorar la equidad y transparencia de su modelo?",
+      "options": [
+        {
+          "text": "SageMaker Clarify puede ajustar automáticamente los hiperparámetros del modelo para garantizar un rendimiento óptimo.",
+          "correct": false
+        },
+        {
+          "text": "SageMaker Clarify puede ayudar a identificar y mitigar sesgos en el dataset y el modelo durante la preparación de datos y post-entrenamiento.",
+          "correct": true
+        },
+        {
+          "text": "SageMaker Clarify proporciona una interfaz sin código para construir, entrenar e implementar modelos.",
+          "correct": false
+        },
+        {
+          "text": "SageMaker Clarify se utiliza principalmente para el monitoreo e implementación en tiempo real del rendimiento del modelo.",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon SageMaker Clarify está diseñado específicamente para ayudar a aumentar la equidad y transparencia de los modelos de machine learning, proporcionando herramientas para identificar, medir y mitigar sesgos tanto en los datos previos al entrenamiento como en las predicciones del modelo posterior al entrenamiento. Esta funcionalidad es crucial para aplicaciones en dominios sensibles como servicios financieros, donde decisiones sesgadas pueden tener implicaciones éticas y legales significativas. Puedes encontrar documentación detallada sobre las características y capacidades de SageMaker Clarify en el sitio de documentación oficial de AWS.</p>"
+    },
+    {
+      "id": "20-11",
+      "number": 11,
+      "text": "Eres un analista de datos encargado de crear un dashboard ejecutivo usando Amazon QuickSight para los datos de ventas trimestrales de tu empresa. El objetivo es proporcionar un resumen visual que destaque áreas de crecimiento financiero y preocupación. ¿Cuál de los siguientes tipos de visualizaciones sería más efectivo para lograr este objetivo en Amazon QuickSight?",
+      "options": [
+        {
+          "text": "Utilizar gráficos de líneas para mostrar la correlación entre patrones climáticos y datos de ventas",
+          "correct": false
+        },
+        {
+          "text": "Usar widgets de KPI (Indicador Clave de Desempeño) para destacar cambios significativos en ingresos y márgenes de ganancia",
+          "correct": true
+        },
+        {
+          "text": "Crear un gráfico de pastel para representar la cantidad de clientes nuevos versus clientes recurrentes",
+          "correct": false
+        },
+        {
+          "text": "Implementar gráficos de dispersión para mostrar la distribución de calificaciones de comentarios de clientes",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>En el contexto de crear un dashboard ejecutivo en Amazon QuickSight, el uso de herramientas de visualización apropiadas juega un papel crítico para comunicar efectivamente los insights clave de los datos. Los widgets de KPI son particularmente adecuados para dashboards dirigidos a ejecutivos debido a su presentación directa de datos críticos, lo que ayuda a tomar decisiones rápidas pero informadas. Amazon QuickSight proporciona varios tipos de visualización que se adaptan a diferentes necesidades de presentación de datos, y elegir el tipo correcto es crucial para lograr el objetivo del dashboard.</p>"
+    },
+    {
+      "id": "20-12",
+      "number": 12,
+      "text": "Una empresa de servicio al cliente está planeando mejorar su chatbot impulsado por IA. Están considerando usar Reinforcement Learning from Human Feedback (RLHF) versus Amazon Augmented AI (A2I). ¿Cuáles son las diferencias principales entre estos enfoques que podrían influir en su decisión?",
+      "options": [
+        {
+          "text": "RLHF requiere un volumen sustancial de datos iniciales, mientras que A2I funciona eficazmente con datos mínimos.",
+          "correct": false
+        },
+        {
+          "text": "RLHF utiliza un modelo de integración continua de retroalimentación humana para entrenar la IA, mientras que A2I permite que instancias específicas de predicciones de IA sean revisadas y anotadas por trabajadores humanos.",
+          "correct": true
+        },
+        {
+          "text": "RLHF automatiza el etiquetado de datos para conjuntos de entrenamiento, mientras que A2I se utiliza principalmente en tareas de aprendizaje no supervisado.",
+          "correct": false
+        },
+        {
+          "text": "RLHF es exclusivamente para tareas de procesamiento del lenguaje natural, mientras que A2I está diseñado para análisis de imágenes y texto.",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Reinforcement Learning from Human Feedback (RLHF) es una metodología de entrenamiento donde los modelos de IA se refinan continuamente a través de la integración de retroalimentación humana, lo que la hace adecuada para entornos dinámicos donde se desea una mejora continua. Amazon Augmented AI (A2I) proporciona un mecanismo para que los humanos intervengan y tomen decisiones sobre las predicciones realizadas por modelos de IA, garantizando precisión y confiabilidad en decisiones críticas. Estos atributos hacen que RLHF sea ideal para el aprendizaje iterativo, mientras que A2I destaca en precisión y confiabilidad a través de la supervisión humana.</p>"
+    },
+    {
+      "id": "20-13",
+      "number": 13,
+      "text": "El equipo de desarrollo de una empresa necesita seleccionar el modelo de lenguaje grande (LLM) más apropiado para la aplicación insignia de la empresa. Dado el amplio abanico de LLMs disponibles, el equipo no está seguro de cuál es la mejor opción. Además, como la aplicación será accesible públicamente, el equipo tiene preocupaciones sobre la posibilidad de generar contenido dañino o inapropiado. ¿Cuáles son las soluciones de AWS que el equipo debería implementar para abordar tanto la selección del modelo apropiado como la mitigación de la generación de contenido dañino? (Selecciona dos).",
+      "options": [
+        {
+          "text": "Amazon SageMaker Model Monitor",
+          "correct": false
+        },
+        {
+          "text": "Amazon Comprehend",
+          "correct": false
+        },
+        {
+          "text": "Amazon SageMaker Clarify",
+          "correct": false
+        },
+        {
+          "text": "Model Evaluation on Amazon Bedrock",
+          "correct": true
+        },
+        {
+          "text": "Guardrails for Amazon Bedrock",
+          "correct": true
+        }
+      ],
+      "multiSelect": true,
+      "explanationHtml": "<p>Para abordar la selección del LLM apropiado y la mitigación de la generación de contenido dañino, el equipo de desarrollo debe usar Guardrails for Amazon Bedrock y Model Evaluation on Amazon Bedrock. Guardrails ayuda a garantizar la seguridad e idoneidad del contenido generado, mientras que Model Evaluation permite que el equipo evalúe y elija el mejor LLM para su aplicación. Más información: <a href=\"https://aws.amazon.com/bedrock/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/bedrock/</a>\n\t\t\t\t\t\t</p>"
+    },
+    {
+      "id": "20-14",
+      "number": 14,
+      "text": "En el contexto del uso de servicios de AWS para machine learning, una empresa del sector financiero descubre que su modelo tiene overfitting al predecir riesgo crediticio. ¿Cuál debería ser la estrategia principal a considerar para mitigar este problema?",
+      "options": [
+        {
+          "text": "Ignorar la ingeniería de features y enfocarse solo en datos en bruto",
+          "correct": false
+        },
+        {
+          "text": "Simplificar la estructura del modelo y usar técnicas como cross-validation",
+          "correct": true
+        },
+        {
+          "text": "Aumentar la complejidad del modelo para capturar comportamientos más matizados en los datos",
+          "correct": false
+        },
+        {
+          "text": "Actualizar frecuentemente el modelo con el mismo dataset de entrenamiento",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Para mitigar el overfitting en modelos de machine learning, especialmente en áreas sensibles como los servicios financieros, es recomendable simplificar el modelo y utilizar metodologías como cross-validation. Estas estrategias ayudan al modelo a generalizar mejor hacia datos nuevos y no vistos, en lugar de solo desempeñarse bien en el dataset de entrenamiento. Esto es particularmente importante en soluciones de machine learning de AWS donde modelos escalables y eficientes son cruciales para manejar grandes volúmenes de datos y realizar predicciones precisas.</p>"
+    },
+    {
+      "id": "20-15",
+      "number": 15,
+      "text": "Una organización utiliza tanto su centro de datos local como servicios de AWS Cloud para su implementación de TI. ¿Cuál es el término que mejor describe este tipo de configuración de infraestructura?",
+      "options": [
+        {
+          "text": "Implementación nativa en la nube",
+          "correct": false
+        },
+        {
+          "text": "Implementación multi-cloud",
+          "correct": false
+        },
+        {
+          "text": "Implementación híbrida",
+          "correct": true
+        },
+        {
+          "text": "Implementación privada",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Una implementación híbrida es la integración de centros de datos locales con servicios de nube pública. Este tipo de implementación permite que las organizaciones mantengan una infraestructura de TI controlada y segura para tareas sensibles o aplicaciones heredadas, mientras que también aprovechan la escalabilidad, disponibilidad y rentabilidad de la nube para otras partes de sus operaciones.</p>"
+    },
+    {
+      "id": "20-16",
+      "number": 16,
+      "text": "Un practicante de IA está orquestando un flujo de trabajo de entrenamiento de modelos de machine learning usando AWS Step Functions. El flujo de trabajo incluye preprocesamiento de datos, entrenamiento del modelo y evaluación de su desempeño. Si el desempeño del modelo en el paso de evaluación no cumple con el umbral deseado, el modelo debe reentrenarse con parámetros diferentes. ¿Qué integración de servicio de AWS debería usarse en AWS Step Functions para decidir condicionalmente si el modelo necesita reentrenamiento?",
+      "options": [
+        {
+          "text": "Amazon EC2",
+          "correct": false
+        },
+        {
+          "text": "Amazon S3",
+          "correct": false
+        },
+        {
+          "text": "Amazon RDS",
+          "correct": false
+        },
+        {
+          "text": "AWS Lambda",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>AWS Step Functions se integra con varios servicios de AWS para orquestar flujos de trabajo. Cuando un flujo de trabajo requiere lógica condicional basada en el resultado de un proceso, como decidir si un modelo de machine learning necesita reentrenarse según métricas de desempeño, AWS Lambda es una opción apropiada. AWS Lambda puede ejecutar código personalizado que evalúe el desempeño del modelo y determine la dirección del flujo de trabajo en AWS Step Functions, lo que la hace ideal para tareas que requieren lógica condicional y computación personalizada. Esta integración permite a los practicantes construir flujos de trabajo de orquestación de ML complejos de manera efectiva.</p>"
+    },
+    {
+      "id": "20-17",
+      "number": 17,
+      "text": "Una empresa de medios quiere categorizar automáticamente miles de videos archivados detectando objetos, escenas y actividades en cada video. Necesitan una solución altamente escalable que pueda procesar videos almacenados en Amazon S3 e integrarse fácilmente con otros servicios de AWS para procesamiento posterior y manejo de datos. ¿Cuál es el servicio de AWS más adecuado para este requisito?",
+      "options": [
+        {
+          "text": "Amazon Transcribe",
+          "correct": false
+        },
+        {
+          "text": "Amazon SageMaker",
+          "correct": false
+        },
+        {
+          "text": "Amazon Rekognition Video",
+          "correct": true
+        },
+        {
+          "text": "AWS Lambda",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon Rekognition Video ofrece modelos preestablecidos y personalizables que se orientan específicamente a tareas de análisis de video, lo que la hace perfecta para una empresa de medios que desea categorizar automáticamente grandes volúmenes de contenido de video archivado basándose en elementos visuales. Se integra sin problemas con Amazon S3 para almacenamiento y puede conectarse con otros servicios de AWS como AWS Lambda y Amazon Simple Notification Service (SNS) para procesamiento posterior y alertas, respectivamente. Obtén más información sobre Amazon Rekognition Video en <a href=\"https://aws.amazon.com/rekognition/video-features/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/rekognition/video-features/</a>\n\t\t\t\t\t\t</p>"
+    },
+    {
+      "id": "20-18",
+      "number": 18,
+      "text": "Una empresa de redes sociales planea implementar un modelo de lenguaje grande (LLM) para moderación automatizada de contenido, con el objetivo de marcar contenido inapropiado o dañino. Para mantener equidad y mitigar sesgos, es crucial realizar una evaluación continua de los resultados del modelo. Considerando la necesidad de minimizar el esfuerzo administrativo mientras se garantizan insights confiables sobre sesgos, ¿cuál sería la fuente de datos más adecuada para esta evaluación?",
+      "options": [
+        {
+          "text": "Utilizar muestras seleccionadas aleatoriamente de datos reales de usuarios para evaluar los resultados del modelo.",
+          "correct": false
+        },
+        {
+          "text": "Usar benchmarking supervisado por humanos, con revisores que evalúen manualmente los resultados del modelo.",
+          "correct": false
+        },
+        {
+          "text": "Generar datos sintéticos internos personalizados para probar escenarios específicos de sesgo.",
+          "correct": false
+        },
+        {
+          "text": "Utilizar conjuntos de datos de benchmark estandarizados y precompilados, diseñados específicamente para pruebas de sesgo.",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Utilizar conjuntos de datos de benchmark estandarizados y precompilados, diseñados específicamente para pruebas de sesgo.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p><b>Minimiza el esfuerzo administrativo:</b> Los conjuntos de datos de benchmark estandarizados (como los utilizados para pruebas de equidad en LLMs, tales como <b>StereoSet</b> o <b>CrowS-Pairs</b>) están disponibles y requieren <b>configuración mínima o procesamiento manual</b> en comparación con generar nuevos datos o revisar manualmente los resultados.</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p><b>Proporciona insights confiables:</b> Estos conjuntos de datos están <b>diseñados y validados por investigadores</b> para probar sistemáticamente sesgos conocidos (por ejemplo, sesgo de género, raza o religión) de manera controlada y consistente. Ofrecen <b>métricas objetivas y reproducibles</b> para equidad y sesgo.</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p><b>Esencial para evaluación continua:</b> Permiten verificaciones rápidas y automatizadas después de actualizaciones del modelo o durante integración continua/despliegue continuo (CI/CD), garantizando que los sesgos no se reintroduzcan sin generar sobrecarga manual significativa.</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Utilizar muestras seleccionadas aleatoriamente de datos reales de usuarios para evaluar los resultados del modelo.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>Aunque usar datos reales es esencial para evaluación general del desempeño, <b>el muestreo aleatorio es ineficiente</b> y poco confiable para detectar sesgos. Los eventos o inputs sesgados generalmente representan un <b>subconjunto pequeño y poco frecuente</b> del total de datos. Confiar en muestras aleatorias probablemente pasaría por alto estos casos sutiles pero críticos, requiriendo tamaños de muestra mucho más grandes (y administrativamente complejos) para lograr insights confiables.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Usar benchmarking supervisado por humanos, con revisores que evalúen manualmente los resultados del modelo.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>Este enfoque es altamente efectivo para análisis cualitativo pero <b>maximiza el esfuerzo administrativo</b>. Requiere tiempo significativo, presupuesto y recursos para contratar y capacitar revisores humanos para evaluación continua, contradictiendo directamente el requisito de minimizar sobrecarga administrativa. Es mejor usarlo para auditorías dirigidas y periódicas, no para evaluación continua con bajo overhead.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Generar datos sintéticos internos personalizados para probar escenarios específicos de sesgo.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>Aunque los datos sintéticos son valiosos para llenar vacíos de datos, <b>generar datos sintéticos de alta calidad y sin sesgo</b> que pruebe sistemáticamente sesgos es una <b>tarea que consume tiempo e intensiva administrativamente</b>. Requiere conocimiento especializado para evitar introducir nuevos sesgos durante el proceso de generación, lo que socava el objetivo de minimizar esfuerzo administrativo. Los benchmarks estandarizados (Opción D) ofrecen la misma capacidad de prueba sistemática sin el overhead de desarrollo.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>"
+    },
+    {
+      "id": "20-19",
+      "number": 19,
+      "text": "Una empresa de desarrollo de software está explorando Amazon Q Developer para mejorar sus herramientas y flujos de trabajo internos. La empresa está particularmente interesada en aprovechar las capacidades de la plataforma para automatizar la generación de código, mejorar la automatización de tareas e integrar funcionalidades de machine learning en sus aplicaciones. Para entender cómo Amazon Q Developer puede apoyar estos objetivos, el equipo de desarrollo necesita una descripción clara de sus funcionalidades principales. ¿Cuál de las siguientes opciones representa las capacidades de Amazon Q Developer? (Selecciona dos)",
+      "options": [
+        {
+          "text": "Entender y administrar tu infraestructura en la nube en AWS",
+          "correct": true
+        },
+        {
+          "text": "Visualizar datos relacionados con costos específicos de tu cuenta de AWS en Amazon Q Developer",
+          "correct": false
+        },
+        {
+          "text": "Obtener respuestas a preguntas relacionadas con costos específicos de tu cuenta de AWS usando lenguaje natural",
+          "correct": true
+        },
+        {
+          "text": "Modificar tus recursos de AWS para lograr optimización de costos",
+          "correct": false
+        },
+        {
+          "text": "Implementar tu infraestructura en la nube en AWS",
+          "correct": false
+        }
+      ],
+      "multiSelect": true,
+      "explanationHtml": "<p><strong>Correctas</strong></p>\n\t\t\t\t\t\t<p>Amazon Q Developer es un asistente impulsado por IA generativa diseñado específicamente para tareas de desarrollo de software y relacionadas con IT. Sus capacidades principales, tal como las define AWS para el examen AIF-C01, se centran en código, resolución de problemas e interacción con tu entorno de AWS usando lenguaje natural.</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<b>Entender y administrar tu infraestructura en la nube en AWS:</b>&nbsp;Esto es correcto. Una función principal de Amazon Q Developer es ayudar a los desarrolladores a entender e interactuar con sus recursos de AWS. Puedes usar lenguaje natural para hacer preguntas como \"¿Por qué está fallando mi función Lambda?\" o \"¿Cómo configuro mi API Gateway?\", y te proporcionará explicaciones y fragmentos de código para ayudarte a administrar tu infraestructura.\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>Obtener respuestas a preguntas relacionadas con costos específicos de tu cuenta de AWS usando lenguaje natural:</b>&nbsp;Esto es correcto. Amazon Q Developer puede conectarse a tu entorno de AWS (con los permisos apropiados) para proporcionar respuestas contextuales específicas de la cuenta. Esto incluye hacer preguntas relacionadas con costos como \"¿Cuál es mi servicio con mayor costo este mes?\" o \"¿Cómo puedo reducir mis costos de S3?\".</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrectas</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Visualizar datos relacionados con costos específicos de tu cuenta de AWS en Amazon Q Developer</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p>Esto es incorrecto. Si bien Amazon Q Developer puede <em>responder preguntas sobre costos</em>&nbsp;usando lenguaje natural, no es una herramienta de visualización de datos. Para visualizar datos de costos, usarías servicios dedicados como <b>AWS Cost Explorer</b>&nbsp;o la <b>consola de AWS Billing &amp; Cost Management</b>. Amazon Q proporciona información y respuestas, no gráficos. </p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Modificar tus recursos de AWS para lograr optimización de costos</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p>Esto es incorrecto y describe una acción fuera del alcance del asistente. Amazon Q Developer puede <em>sugerir</em>&nbsp;código (por ejemplo, un script para eliminar volúmenes EBS sin usar) o <em>recomendar</em>&nbsp;mejores prácticas para optimización de costos. Sin embargo, no tiene la capacidad de modificar o provisionar directamente recursos de AWS. Un desarrollador debe revisar, aprobar y ejecutar el código que proporciona.</p>\n\t\t\t\t\t\t<p><b>Implementar tu infraestructura en la nube en AWS</b></p>\n\t\t\t\t\t\t<p>Esto es incorrecto. La implementación de infraestructura es función de servicios de AWS como <b>AWS CloudFormation</b>,&nbsp;<b>AWS CodeDeploy</b> o <b>AWS Copilot CLI</b>. Amazon Q Developer puede ayudarte a <em>escribir</em>&nbsp;templates de Infrastructure as Code (IaC) (por ejemplo, para CloudFormation) o solucionar problemas de implementación, pero no realiza la acción de implementación en sí. </p>"
+    },
+    {
+      "id": "20-20",
+      "number": 20,
+      "text": "Una empresa de servicios financieros está configurando un pipeline de implementación de ML altamente compatible usando Amazon SageMaker. Para cumplir con requisitos de auditoría estrictos, necesitan un registro detallado e inmutable de todas las acciones del plano de control (como crear un modelo) y todas las acciones del plano de datos (como leer datos de entrenamiento) relacionadas con sus recursos de ML. ¿Cómo se puede configurar AWS CloudTrail para garantizar este rastreo exhaustivo y auditable?",
+      "options": [
+        {
+          "text": "Confiar únicamente en los Management Events predeterminados de CloudTrail, que incluyen automáticamente todas las llamadas API a Amazon SageMaker.",
+          "correct": false
+        },
+        {
+          "text": "Configurar CloudTrail para registrar Data Events en los buckets de Amazon S3 que almacenan los datos de entrenamiento, prueba y artefactos del modelo de ML.",
+          "correct": true
+        },
+        {
+          "text": "Usar CloudTrail para monitorear y registrar continuamente métricas operacionales en tiempo real como utilización de CPU y latencia para endpoints de SageMaker.",
+          "correct": false
+        },
+        {
+          "text": "Habilitar CloudTrail para rastrear todos los cambios de estado de instancias EC2 pero excluir todas las acciones de servicios administrados como Amazon SageMaker.",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Configurar CloudTrail para registrar Data Events en los buckets de Amazon S3 que almacenan los datos de entrenamiento, prueba y artefactos del modelo de ML.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p><b>AWS CloudTrail</b> registra dos tipos principales de eventos: <b>Management Events</b> y <b>Data Events</b>.</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p><b>Management Events</b> (Plano de Control): Registran acciones realizadas <i>sobre</i> recursos de AWS (por ejemplo, <code>CreateTrainingJob</code>, <code>DeleteModel</code>, <code>UpdateEndpoint</code> en SageMaker). Estos se registran típicamente de forma predeterminada y cubren las llamadas API de SageMaker.</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p><b>Data Events</b> (Plano de Datos): Registran acciones realizadas <i>dentro</i> o <i>sobre</i> los datos en un recurso (por ejemplo, <code>GetObject</code>, <code>PutObject</code> en Amazon S3).</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>Para una empresa financiera con <b>requisitos estrictos de cumplimiento y auditoría</b>, auditar el <b>acceso a los datos de ML</b> es crítico. Necesitas poder rastrear quién accedió a los datos de entrenamiento en S3, cuándo lo hizo y qué hizo. Este nivel de auditoría requiere habilitar explícitamente <b>Data Events</b> para los buckets S3 relevantes en CloudTrail, proporcionando el <b>registro más exhaustivo y auditable</b> de todo el flujo de trabajo de ML.</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>Confiar únicamente en los Management Events predeterminados de CloudTrail, que incluyen automáticamente todas las llamadas API a Amazon SageMaker.</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>Aunque la configuración predeterminada de CloudTrail registra <b>Management Events</b> (todas las llamadas API a SageMaker, cubriendo actividades del plano de control), <i>no incluye</i> <b>Data Events</b> para buckets S3 de forma predeterminada. Sin registrar Data Events, el rastro de auditoría está incompleto, perdiendo información crítica sobre quién accedió a los datos de entrenamiento sensibles, lo que representa una brecha importante de cumplimiento para servicios financieros.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>Usar CloudTrail para monitorear y registrar continuamente métricas operacionales en tiempo real como utilización de CPU y latencia para endpoints de SageMaker.</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>El propósito de CloudTrail es <b>Auditoría, Gobernanza y Cumplimiento</b> (rastrear <i>quién</i> hizo <i>qué</i> y <i>cuándo</i>). Las <b>métricas operacionales en tiempo real</b> como CPU y latencia son dominio de <b>Amazon CloudWatch</b>. CloudWatch se usa para monitorear la salud y rendimiento de recursos, no para crear un registro auditable de acciones de usuario y recursos API.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>Habilitar CloudTrail para rastrear todos los cambios de estado de instancias EC2 pero excluir todas las acciones de servicios administrados como Amazon SageMaker.</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>Esto contradice el requisito central de auditar actividades de ML. Amazon SageMaker es un servicio administrado, y CloudTrail está diseñado para registrar las llamadas API realizadas a <b>todos</b> los servicios de AWS, incluidos los servicios administrados. Excluir llamadas API de SageMaker impediría la auditoría de actividades clave como iniciar un trabajo de entrenamiento o implementar un modelo, haciendo que el registro de auditoría sea inútil para cumplimiento de ML.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>"
+    },
+    {
+      "id": "20-21",
+      "number": 21,
+      "text": "Una empresa de análisis financiero necesita permitir que múltiples equipos accedan a recursos específicos de AWS como buckets S3, tablas DynamoDB e instancias EC2, pero desea asegurar que cada equipo solo tenga acceso a los recursos necesarios para sus proyectos. ¿Cuál es la mejor manera de gestionar estos permisos para minimizar los riesgos de seguridad?",
+      "options": [
+        {
+          "text": "Desactivar todos los permisos y aprobar manualmente cada solicitud de acceso a recursos de AWS caso por caso.",
+          "correct": false
+        },
+        {
+          "text": "Usar roles de IAM y asignarlos a grupos de IAM correspondientes a cada equipo, aplicando políticas que restrinjan el acceso solo a los recursos necesarios.",
+          "correct": true
+        },
+        {
+          "text": "Implementar usuarios de IAM para cada individuo y asignar permisos directamente a cada usuario según sus necesidades.",
+          "correct": false
+        },
+        {
+          "text": "Crear un único rol de IAM con acceso a todos los recursos y compartir las credenciales entre todos los equipos.",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Usar roles de IAM y asignarlos a grupos de IAM correspondientes a cada equipo, aplicando políticas que restrinjan el acceso solo a los recursos necesarios.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p>Esta es una práctica de seguridad fundamental en AWS conocida como el <b>principio de menor privilegio</b>. El enfoque es tanto escalable como seguro:</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>Grupos de IAM:</b>&nbsp;Crear un grupo para cada equipo (por ejemplo, \"DataScienceTeam\", \"EngineeringTeam\") permite una gestión sencilla. En lugar de asignar permisos a usuarios individuales, asignas usuarios a grupos.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>Roles y políticas de IAM:</b>&nbsp;Adjuntas una política de IAM a cada grupo. Esta política está ajustada finamente para otorgar permisos <em>únicamente</em> a los buckets S3, tablas DynamoDB e instancias EC2 específicas requeridas para los proyectos de ese equipo. Esto minimiza el \"radio de explosión\" si las credenciales se ven comprometidas e impide acceso accidental a recursos sensibles.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Desactivar todos los permisos y aprobar manualmente cada solicitud de acceso a recursos de AWS caso por caso.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p>Aunque esto parece seguro en teoría, es operacionalmente insostenible y viola el principio de agilidad en la nube. Crea un cuello de botella significativo, obstaculizando la productividad ya que los equipos deben esperar aprobación manual para cada tarea. No es una forma escalable ni eficiente de gestionar permisos en un entorno dinámico y es propenso a errores humanos.</p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Implementar usuarios de IAM para cada individuo y asignar permisos directamente a cada usuario según sus necesidades.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p>Esta es una mala práctica desde la perspectiva de gestión y seguridad. Si bien aplica el menor privilegio a nivel de usuario, es increíblemente difícil de escalar y auditar. Si tienes 100 usuarios, tendrías que gestionar 100 conjuntos de permisos individuales. Cuando las necesidades de acceso de un equipo cambian, tendrías que actualizar manualmente cada usuario de ese equipo, lo que es propenso a errores e ineficiente. Usar grupos, como en la opción B, es el método recomendado por AWS.</p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Crear un único rol de IAM con acceso a todos los recursos y compartir las credenciales entre todos los equipos.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p>Esta es la <b>antítesis de las prácticas recomendadas de seguridad</b> y maximizaría, en lugar de minimizar, los riesgos de seguridad. Viola completamente el principio de menor privilegio. Si las credenciales compartidas se ven comprometidas, cada recurso en la cuenta está en riesgo. No hay responsabilidad, ya que no puedes rastrear qué equipo o usuario realizó una acción. AWS desaconseja firmemente este enfoque.</p>"
+    },
+    {
+      "id": "20-22",
+      "number": 22,
+      "text": "En el contexto de construir un sistema de gestión de inventario impulsado por IA para una empresa minorista usando servicios de AWS, ¿en qué se diferencian fundamentalmente los objetivos esenciales del procesamiento de imágenes y la visión por computadora?",
+      "options": [
+        {
+          "text": "El procesamiento de imágenes manipula y mejora las imágenes para calidad visual o análisis, mientras que la visión por computadora interpreta y analiza el contenido de las imágenes para tomar decisiones.",
+          "correct": true
+        },
+        {
+          "text": "La visión por computadora y el procesamiento de imágenes son lo mismo; ambos usan machine learning para interpretar el contenido de las imágenes en decisiones comerciales.",
+          "correct": false
+        },
+        {
+          "text": "El procesamiento de imágenes es un subconjunto de la visión por computadora enfocado únicamente en identificar y catalogar objetos.",
+          "correct": false
+        },
+        {
+          "text": "La visión por computadora se trata principalmente de mejorar la resolución de la imagen, mientras que el procesamiento de imágenes identifica objetos basándose en criterios predefinidos.",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>El procesamiento de imágenes manipula y mejora las imágenes para calidad visual o análisis, mientras que la visión por computadora interpreta y analiza el contenido de las imágenes para tomar decisiones.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p>Esta opción distingue correctamente la relación secuencial y los objetivos diferentes de estos dos campos, que es un concepto fundamental clave para IA en AWS.</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<b>Procesamiento de imágenes:</b>&nbsp;Este es un paso fundamental. Funciona a nivel de píxeles para mejorar la calidad de una imagen o transformarla para un análisis posterior. Su objetivo no es \"entender\" la imagen sino prepararla. En el contexto de AWS, podrías usar servicios de propósito general o código personalizado para realizar tareas como recorte, reducción de ruido o ajuste de contraste en imágenes de cámaras de tienda antes de alimentarlas a un modelo de visión por computadora.\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<b>Visión por computadora:</b>&nbsp;Este es un campo de nivel superior que busca extraer significado y comprensión de las imágenes. Utiliza modelos para identificar patrones y objetos. El resultado no es una imagen modificada, sino información, una decisión o una acción. En AWS,&nbsp;<b>Amazon Rekognition</b>&nbsp;es el servicio principal para visión por computadora, ya que puede procesar una imagen (que puede haber sido preprocesada) y devolver datos como etiquetas de productos, conteos de inventario o si un estante está vacío.\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>En un flujo de trabajo, el procesamiento de imágenes a menudo sirve como un paso de preprocesamiento para mejorar la precisión de un modelo de visión por computadora posterior.</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>La visión por computadora y el procesamiento de imágenes son lo mismo; ambos usan machine learning para interpretar el contenido de las imágenes en decisiones comerciales.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p>Esto es incorrecto porque confunde dos disciplinas distintas. Aunque la visión por computadora moderna se basa fuertemente en machine learning, el procesamiento de imágenes tradicional a menudo utiliza operaciones matemáticas deterministas (como filtros y transformaciones) que no involucran ML. El propósito fundamental del procesamiento de imágenes no es \"interpretar\" contenido sino manipular los datos de la imagen en sí. Afirmar que son lo mismo demuestra una incomprensión fundamental de los conceptos de IA.</p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>El procesamiento de imágenes es un subconjunto de la visión por computadora enfocado únicamente en identificar y catalogar objetos.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p>Esta afirmación invierte la relación y malinterpreta la función. Identificar y catalogar objetos es la tarea central de la <b>visión por computadora</b>, no del procesamiento de imágenes. Aunque el procesamiento de imágenes puede ser <em>utilizado dentro de</em> un flujo de visión por computadora, no es un \"subconjunto\" de ella; son campos relacionados pero separados. El procesamiento de imágenes tiene muchas aplicaciones fuera de la visión por computadora, como en imágenes médicas o fotografía.</p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>La visión por computadora se trata principalmente de mejorar la resolución de la imagen, mientras que el procesamiento de imágenes identifica objetos basándose en criterios predefinidos.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p>Esta opción invierte completamente las definiciones. Mejorar la resolución de una imagen (por ejemplo, escalado superior, nitidez) es una tarea clásica del <b>procesamiento de imágenes</b>. Por el contrario, aunque los primeros sistemas de visión por computadora usaban criterios predefinidos, la visión por computadora moderna en AWS (potenciada por servicios como Rekognition) utiliza modelos sofisticados de deep learning preentrenados para identificar objetos, yendo mucho más allá de reglas simples y predefinidas.</p>"
+    },
+    {
+      "id": "20-23",
+      "number": 23,
+      "text": "Una empresa minorista desea utilizar servicios de AWS para crear dashboards dinámicos e interactivos y visualizaciones para monitorear el desempeño de ventas en tiempo real. ¿Cuál sería el servicio de AWS más apropiado para cumplir con este requisito?",
+      "options": [
+        {
+          "text": "Amazon SageMaker Data Wrangler",
+          "correct": false
+        },
+        {
+          "text": "Amazon QuickSight",
+          "correct": true
+        },
+        {
+          "text": "Amazon SageMaker Canvas",
+          "correct": false
+        },
+        {
+          "text": "Amazon CloudWatch Dashboards",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<div>\n\t\t\t\t\t\t\t<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t\t<p><b>(Amazon QuickSight):</b> Amazon QuickSight es el servicio de BI completamente administrado de AWS, diseñado específicamente para crear dashboards interactivos y visualizaciones en tiempo real a partir de diversas fuentes de datos, incluyendo métricas de desempeño de ventas.</p>\n\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t<strong>Incorrecto</strong>\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t<b>(Amazon SageMaker Data Wrangler):</b> Herramienta de preparación de datos para flujos de trabajo de ML; se enfoca en limpiar y transformar datos, no en crear dashboards.\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t<b>(Amazon SageMaker Canvas):</b> Interfaz sin código para crear modelos de ML; genera predicciones, no dashboards interactivos de ventas.\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t<b>(Amazon CloudWatch Dashboards):</b> Monitorea métricas de infraestructura de AWS y logs; no es adecuado para visualizar el desempeño de ventas del negocio.\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t</div>"
+    },
+    {
+      "id": "20-24",
+      "number": 24,
+      "text": "Un despacho legal está buscando implementar una solución de IA que pueda generar respuestas detalladas y precisas a las consultas de los clientes al recuperar información relevante de su extenso repositorio de documentos legales. El equipo está considerando utilizar Retrieval Augmented Generation (RAG) a través de Amazon Bedrock para mejorar la calidad y relevancia del contenido generado. Quieren entender cuáles son los mejores casos de uso para RAG y determinar si se alinea con sus necesidades de recuperación de conocimiento y generación de contenido. ¿Cuál de las siguientes opciones representa los mejores casos de uso para utilizar Retrieval Augmented Generation (RAG) en Amazon Bedrock? (Selecciona dos)",
+      "options": [
+        {
+          "text": "Chatbot de servicio al cliente",
+          "correct": true
+        },
+        {
+          "text": "Generación de imágenes a partir de un prompt de texto",
+          "correct": false
+        },
+        {
+          "text": "Creación de contenido original",
+          "correct": false
+        },
+        {
+          "text": "Recomendaciones de productos que coincidan con las preferencias del comprador",
+          "correct": false
+        },
+        {
+          "text": "Chatbot para consultas médicas",
+          "correct": true
+        }
+      ],
+      "multiSelect": true,
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>Chatbot de servicio al cliente</b></p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t\t\t<span>El servicio al cliente es un caso de uso principal para RAG.</span>\n\t\t\t\t\t\t\t\t\t\t\t<span>En este escenario, el modelo no depende únicamente de sus datos previamente entrenados (que podrían estar desactualizados).</span>\n\t\t\t\t\t\t\t\t\t\t\t<span>En cambio, \"recupera\" información de la base de conocimiento interna más reciente de la empresa, FAQs y documentación para proporcionar al usuario respuestas actuales y específicas.</span>\n\t\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t\t\t<span>Esto reduce la probabilidad de \"alucinaciones\" (inventar información incorrecta) porque el modelo se ve obligado a basar su respuesta en los documentos recuperados.</span>\n\t\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>Chatbot para consultas médicas</b></p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t\t\t<span>En campos altamente sensibles como la medicina o el derecho, la precisión es fundamental.</span>\n\t\t\t\t\t\t\t\t\t\t\t<span>RAG permite que un chatbot acceda a revistas médicas específicas, libros de texto o protocolos hospitalarios.</span>\n\t\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t\t\t<span>Al hacer referencia a datos específicos y verificados a través de </span><b><span>Amazon Bedrock Knowledge Bases</span></b><span>, la IA puede proporcionar respuestas respaldadas por evidencia médica verificada en lugar de patrones lingüísticos generales, garantizando la \"calidad y relevancia\" requeridas por el despacho en el enunciado.</span>\n\t\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>Generación de imágenes a partir de un prompt de texto</b></p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t\t\t<span>La generación de imágenes la manejan modelos especializados como </span><b><span>Stable Diffusion</span></b><span> o </span><b><span>Amazon Titan Image Generator</span></b><span>.</span>\n\t\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t\t\t<span>RAG es una arquitectura basada en texto diseñada para mejorar las respuestas de LLM recuperando datos textuales.</span> No tiene un papel en la síntesis a nivel de píxeles requerida para crear arte visual o imágenes a partir de un prompt.\n\t\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>Creación de contenido original</b></p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>Aunque los LLMs son excelentes en la creación de contenido original (como poemas o historias de ficción), esto es típicamente una tarea generativa \"zero-shot\" o \"few-shot\" que se basa en las capacidades creativas internas del modelo.</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t\t\t<span>RAG está específicamente diseñado para </span><b><span>anclar</span></b><span> respuestas en datos existentes.</span> Si el objetivo es puramente la creación \"original\" sin la necesidad de hechos externos o bases de datos, el componente de \"Recuperación\" de RAG es innecesario y redundante.\n\t\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<b>Recomendaciones de productos que coincidan con las preferencias del comprador</b>\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t\t\t<span>Aunque se utiliza IA para recomendaciones, esta tarea generalmente la manejan </span><b><span>motores de personalización</span></b><span> (como </span><b><span>Amazon Personalize</span></b><span>)</span> o modelos de aprendizaje automático que analizan patrones de comportamiento del usuario, historial y filtrado colaborativo.\n\t\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>RAG se enfoca en responder preguntas recuperando documentos, no en realizar el complejo análisis estadístico de tendencias de comportamiento del usuario requerido para predecir qué producto podría gustarle a un comprador en el futuro.</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>"
+    },
+    {
+      "id": "20-25",
+      "number": 25,
+      "text": "Una empresa desea utilizar Amazon Transcribe para transcribir de manera eficiente llamadas de servicio al cliente, que se realizan en un ambiente ruidoso con mucho ruido de fondo. ¿Cuál es la característica de Amazon Transcribe que mejor mejoraría la precisión de las transcripciones en este escenario?",
+      "options": [
+        {
+          "text": "Custom Vocabulary",
+          "correct": false
+        },
+        {
+          "text": "Noise Reduction",
+          "correct": true
+        },
+        {
+          "text": "Channel Identification",
+          "correct": false
+        },
+        {
+          "text": "Automatic Language Identification",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li><b>Noise Reduction</b> Esta es la respuesta correcta. Amazon Transcribe incluye <b>capacidades de reducción de ruido</b> que ayudan a filtrar sonidos de fondo y ruido, mejorando la claridad del reconocimiento de voz. En ambientes de servicio al cliente ruidosos, esta característica mejora directamente la precisión de la transcripción al enfocarse en la voz del hablante principal.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li><b>Custom Vocabulary</b> Incorrecto. Custom Vocabulary mejora el reconocimiento de términos específicos del dominio, nombres de productos o jerga técnica. Aunque es útil para lenguaje especializado, no aborda el desafío del ruido de fondo, que es el problema principal en este escenario.</li>\n\t\t\t\t\t\t\t<li><b>Channel Identification</b> Incorrecto. Channel Identification separa el audio de diferentes canales (por ejemplo, agente versus cliente en una grabación de llamada). Esto ayuda a distinguir a los hablantes, pero no reduce el ruido de fondo ni mejora la precisión de la transcripción en ambientes ruidosos.</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b>Automatic Language Identification</b> Incorrecto. Automatic Language Identification detecta qué idioma se está hablando. Esto es útil en contextos multilingües, pero no resuelve el problema del ruido de fondo que interfiere con la precisión de la transcripción.\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>"
+    },
+    {
+      "id": "20-26",
+      "number": 26,
+      "text": "Una empresa de biotecnología está considerando usar Amazon SageMaker Asynchronous Inference para analizar grandes conjuntos de datos genómicos. ¿Cuál escenario representa la aplicación más adecuada para SageMaker Asynchronous Inference?",
+      "options": [
+        {
+          "text": "Solicitudes con tamaños de payload grandes de hasta 1GB y tiempos de procesamiento largos",
+          "correct": true
+        },
+        {
+          "text": "Para sistemas de monitoreo de salud en tiempo real que requieren retroalimentación inmediata",
+          "correct": false
+        },
+        {
+          "text": "Para plataformas de trading de alta frecuencia que necesitan decisiones de baja latencia",
+          "correct": false
+        },
+        {
+          "text": "Para procesar datos en streaming en tiempo real desde equipos de laboratorio",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correcta</strong></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b>Solicitudes con tamaños de payload grandes de hasta 1GB y tiempos de procesamiento largos</b>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>SageMaker <b>Asynchronous Inference</b> está diseñado para cargas de trabajo donde las solicitudes son <b>grandes</b> y el procesamiento toma <b>minutos u horas</b>.</li>\n\t\t\t\t\t\t\t\t\t<li>Encola solicitudes, las procesa de forma asincrónica y almacena los resultados en Amazon S3, lo que lo hace ideal para análisis de conjuntos de datos genómicos.</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrectas</strong></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b>Para sistemas de monitoreo de salud en tiempo real que requieren retroalimentación inmediata</b>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>El monitoreo en tiempo real requiere <b>inferencia de baja latencia</b>, que es mejor atendida por <b>SageMaker Real‑Time Endpoints</b>, no por inferencia asincrónica. </li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b>Para plataformas de trading de alta frecuencia que necesitan decisiones de baja latencia</b>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>El trading de alta frecuencia exige <b>tiempos de respuesta en milisegundos</b>, que la inferencia asincrónica no puede proporcionar. </li>\n\t\t\t\t\t\t\t\t\t<li>Se requieren endpoints en tiempo real u otras soluciones especializadas de baja latencia.</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b>Para procesar datos en streaming en tiempo real desde equipos de laboratorio</b>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>Los datos en streaming requieren <b>ingesta continua y procesamiento en tiempo real</b>, que no es el propósito de la inferencia asincrónica. </li>\n\t\t\t\t\t\t\t\t\t<li>Servicios como <b>Kinesis Data Streams</b> o <b>SageMaker Real‑Time Endpoints</b> son más apropiados.</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>"
+    },
+    {
+      "id": "20-27",
+      "number": 27,
+      "text": "Una institución financiera está entrenando un modelo de aprendizaje automático para detectar transacciones fraudulentas. Para asegurar un rendimiento óptimo del modelo, el equipo de ciencia de datos está preparando los datos dividiéndolos en conjuntos de entrenamiento, validación y prueba. Entender el rol distintivo de cada conjunto es crucial para evaluar y mejorar la precisión y generalización del modelo. ¿Cuáles de las siguientes afirmaciones sobre estas divisiones de datos son correctas? (Selecciona dos)",
+      "options": [
+        {
+          "text": "El conjunto de entrenamiento se utiliza para ajustar los pesos del modelo durante el entrenamiento.",
+          "correct": true
+        },
+        {
+          "text": "El conjunto de prueba se utiliza para evaluar qué tan bien el modelo generaliza a datos no vistos.",
+          "correct": true
+        },
+        {
+          "text": "El conjunto de validación se utiliza para ajustar los pesos del modelo durante el entrenamiento.",
+          "correct": false
+        },
+        {
+          "text": "Los conjuntos de validación son opcionales en los flujos de trabajo de aprendizaje automático.",
+          "correct": false
+        },
+        {
+          "text": "El conjunto de prueba se utiliza para ajustar los hiperparámetros durante el entrenamiento del modelo.",
+          "correct": false
+        },
+        {
+          "text": "El conjunto de entrenamiento siempre debe ser más pequeño que el conjunto de prueba.",
+          "correct": false
+        }
+      ],
+      "multiSelect": true,
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>El conjunto de entrenamiento se utiliza para ajustar los pesos del modelo durante el entrenamiento.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Correcto porque el <b>conjunto de entrenamiento</b> es el dataset utilizado para ajustar el modelo.</li>\n\t\t\t\t\t\t\t<li>Proporciona ejemplos de los que el modelo aprende, ajustando pesos y parámetros para minimizar el error.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>El conjunto de prueba se utiliza para evaluar qué tan bien el modelo generaliza a datos no vistos.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Correcto porque el <b>conjunto de prueba</b> se reserva para la evaluación final.</li>\n\t\t\t\t\t\t\t<li>Mide el rendimiento del modelo en datos que nunca ha visto, asegurando generalización más allá del entrenamiento y validación.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p><b>El conjunto de validación ajusta los pesos</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrecto porque el conjunto de validación no se utiliza para ajustar pesos directamente.</li>\n\t\t\t\t\t\t\t<li>En cambio, se utiliza para <b>ajuste de hiperparámetros</b> y monitoreo del rendimiento para prevenir sobreajuste.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>Los conjuntos de validación son opcionales</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrecto porque aunque técnicamente son opcionales, en la práctica son críticos para la optimización del modelo.</li>\n\t\t\t\t\t\t\t<li>Sin validación, el ajuste de hiperparámetros y la parada temprana no se pueden hacer efectivamente.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Conjunto de prueba para ajuste de hiperparámetros</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrecto porque el conjunto de prueba debe mantenerse sin tocar hasta la evaluación final.</li>\n\t\t\t\t\t\t\t<li>Utilizarlo para ajuste introduce <b>fuga de datos</b> e invalida las métricas de rendimiento.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Conjunto de entrenamiento más pequeño que el conjunto de prueba</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrecto porque el conjunto de entrenamiento típicamente es la <b>porción más grande</b> de los datos.</li>\n\t\t\t\t\t\t\t<li>El conjunto de prueba es más pequeño, utilizado únicamente para evaluación.</li>\n\t\t\t\t\t\t</ul>"
+    },
+    {
+      "id": "20-28",
+      "number": 28,
+      "text": "En una organización que utiliza un Foundation Model basado en Amazon Bedrock en una configuración de Retrieval Augmented Generation (RAG), ¿cómo se puede mantener efectivamente la seguridad de datos y el control de acceso para garantizar que cada equipo acceda solo a los datos específicos de sus clientes?",
+      "options": [
+        {
+          "text": "Configurar políticas de bucket en S3 para permitir acceso a todos los equipos pero monitorear el uso a través de logs de AWS CloudTrail.",
+          "correct": false
+        },
+        {
+          "text": "Implementar un único rol para Amazon Bedrock con acceso total a Amazon S3 y luego crear roles IAM separados para cada equipo, limitados a acceder solo a los datos de sus clientes.",
+          "correct": false
+        },
+        {
+          "text": "Crear una única política IAM que otorgue acceso de solo lectura a todos los buckets de S3 para todos los equipos.",
+          "correct": false
+        },
+        {
+          "text": "Crear un rol de servicio para Amazon Bedrock para cada equipo, otorgando acceso solo a los datos de los clientes de ese equipo específico en Amazon S3.",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>En entornos de AWS, garantizar la seguridad de datos y controles de acceso cumplidos generalmente implica configurar roles y políticas específicas que implementen restricciones de acceso estrictas adaptadas a las necesidades empresariales. En este escenario, la mejor práctica es crear roles de servicio dedicados vinculados a cada equipo que definan permisos exclusivamente para los recursos necesarios. Este método no solo asegura los datos al limitar estrictamente el acceso, sino que también se alinea con las prácticas recomendadas de AWS para mantener configuraciones de seguridad escalables y manejables. </p>"
+    },
+    {
+      "id": "20-29",
+      "number": 29,
+      "text": "Una empresa de seguros está utilizando AWS y tiene interés en implementar Amazon Bedrock para generar recomendaciones de productos. Busca mejorar la funcionalidad del modelo incorporando datos específicos de la empresa en el Foundation Model. ¿Cuál sería el enfoque más efectivo para integrar estos datos?",
+      "options": [
+        {
+          "text": "Hacer fine-tuning directo del Foundation Model base utilizado por Amazon Bedrock usando los repositorios de datos privados de la empresa.",
+          "correct": false
+        },
+        {
+          "text": "Aplicar modelos de Procesamiento de Lenguaje Natural (NLP) directamente sin incorporar ningún dato privado de la empresa, confiando únicamente en datos genéricos.",
+          "correct": false
+        },
+        {
+          "text": "Implementar Reinforcement Learning from Human Feedback (RLHF) en Amazon Bedrock usando los datos específicos de la empresa para entrenar el Foundation Model (FM).",
+          "correct": false
+        },
+        {
+          "text": "Usar Knowledge Bases en Amazon Bedrock para enriquecer el Foundation Model con información contextual de datos específicos de la empresa mediante Retrieval Augmented Generation (RAG).",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>La Retrieval Augmented Generation (RAG) de Amazon Bedrock es particularmente adecuada para escenarios donde un modelo necesita enriquecerse con información específica de la empresa o externa. Permite que el foundation model acceda e incorpore datos de una knowledge base o repositorio especializado, mejorando la especificidad y relevancia de los resultados del modelo. Esto es especialmente valioso en aplicaciones como recomendaciones de productos, donde las respuestas personalizadas pueden mejorar significativamente la experiencia del cliente y los resultados empresariales.</p>"
+    },
+    {
+      "id": "20-30",
+      "number": 30,
+      "text": "Como Ingeniero de Machine Learning, eres responsable de auditar las actividades de modelos y pipelines de machine learning (ML) en AWS. Para lograr cumplimiento continuo y gobernanza de seguridad en tus operaciones de ML, ¿cuál servicio de AWS deberías utilizar para registrar y monitorear todas las llamadas a las API de ML así como actividades relacionadas?",
+      "options": [
+        {
+          "text": "Implementar Amazon QuickSight para monitoreo y visualización de actividades de ML.",
+          "correct": false
+        },
+        {
+          "text": "Implementar AWS CloudTrail para registrar y monitorear todas las llamadas a API de ML y pipelines específicos.",
+          "correct": true
+        },
+        {
+          "text": "Usar AWS Lambda para registrar automáticamente todas las actividades relacionadas con ML.",
+          "correct": false
+        },
+        {
+          "text": "Utilizar Amazon S3 para almacenar logs de todas las actividades de ML.",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>AWS CloudTrail es la solución óptima para auditar actividades de ML ya que permite registrar las llamadas a API en todos los servicios de AWS. Puede capturar todas las solicitudes de API realizadas por usuarios, roles o servicios de AWS y almacenar los logs para análisis posterior, asegurando así el cumplimiento y mejorando la seguridad de las aplicaciones de ML.</p>"
+    },
+    {
+      "id": "20-31",
+      "number": 31,
+      "text": "En el contexto de una empresa de medios que busca mejorar su creación de contenido con tecnologías de IA, ¿cuál de las siguientes opciones explica mejor la importancia de la IA generativa en aplicaciones tecnológicas modernas?",
+      "options": [
+        {
+          "text": "La IA generativa es esencial porque puede innovar creando contenido e ideas nuevas, lo que puede mejorar la creatividad y eficiencia en varios dominios.",
+          "correct": true
+        },
+        {
+          "text": "La IA generativa se usa principalmente para automatizar tareas repetitivas como entrada de datos y gestión de hojas de cálculo.",
+          "correct": false
+        },
+        {
+          "text": "La IA generativa puede gestionar autónomamente toda la infraestructura de TI, eliminando la necesidad de administradores de TI humanos.",
+          "correct": false
+        },
+        {
+          "text": "La IA generativa solo se puede aplicar de manera efectiva en sectores como finanzas y salud, ofreciendo valor limitado a industrias creativas.",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>La IA generativa es crucial en aplicaciones tecnológicas modernas por su capacidad de generar contenido, ideas y soluciones de datos nuevas y únicas de forma autónoma. Esta capacidad la convierte en una herramienta poderosa para industrias enfocadas en creatividad e innovación, como empresas de medios que buscan mejorar procesos de creación de contenido. Permite la automatización de tareas creativas, mejora resultados innovadores y optimiza flujos de trabajo, lo que la convierte en una tecnología transformadora en diversos dominios.</p>"
+    },
+    {
+      "id": "20-32",
+      "number": 32,
+      "text": "En el contexto del desarrollo de capacidades de toma de decisiones para robots autónomos, ¿qué distingue al aprendizaje por refuerzo del aprendizaje supervisado?",
+      "options": [
+        {
+          "text": "El aprendizaje por refuerzo implica que un agente optimice sus acciones en función de las recompensas que recibe del entorno, mientras que el aprendizaje supervisado requiere un conjunto de datos pre-etiquetados para entrenar modelos.",
+          "correct": true
+        },
+        {
+          "text": "Tanto el aprendizaje por refuerzo como el aprendizaje supervisado requieren grandes cantidades de datos etiquetados para el entrenamiento del modelo.",
+          "correct": false
+        },
+        {
+          "text": "El aprendizaje por refuerzo y el aprendizaje supervisado son esencialmente lo mismo, ya que ambos utilizan datos etiquetados para entrenar modelos.",
+          "correct": false
+        },
+        {
+          "text": "El aprendizaje por refuerzo usa un conjunto de datos fijo para el entrenamiento, mientras que el aprendizaje supervisado actualiza continuamente sus modelos a través de la interacción con el entorno.",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Comprender las diferencias clave entre el aprendizaje por refuerzo y el aprendizaje supervisado es crucial para aplicaciones como la robótica autónoma. El aprendizaje por refuerzo permite que los robots aprendan comportamientos óptimos a través de interacciones por ensayo y error y recompensas del entorno. En cambio, los modelos de aprendizaje supervisado hacen predicciones basadas en conjuntos de datos etiquetados existentes. Esta distinción influye en la elección de la estrategia de aprendizaje dependiendo de la naturaleza de las tareas asignadas a los robots.</p>"
+    },
+    {
+      "id": "20-33",
+      "number": 33,
+      "text": "En el contexto del desarrollo de aplicaciones de IA usando AWS, ¿cuál es la relación jerárquica correcta entre Inteligencia Artificial (IA), Machine Learning (ML), Deep Learning (DL) e IA Generativa (GenAI)?",
+      "options": [
+        {
+          "text": "IA Generativa > Deep Learning > Machine Learning > Inteligencia Artificial",
+          "correct": false
+        },
+        {
+          "text": "Deep Learning > IA Generativa > Machine Learning > Inteligencia Artificial",
+          "correct": false
+        },
+        {
+          "text": "Machine Learning > Deep Learning > Inteligencia Artificial > IA Generativa",
+          "correct": false
+        },
+        {
+          "text": "Inteligencia Artificial > Machine Learning > Deep Learning > IA Generativa",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Comprender la estructura jerárquica correcta de las tecnologías de IA es fundamental para aplicarlas efectivamente en estrategias empresariales. La IA es el campo general que implica simular la inteligencia humana en máquinas. Machine Learning es un derivado de la IA enfocado en software que aprende de datos. Deep Learning, un subconjunto de ML, profundiza en el aprendizaje a partir de grandes volúmenes de datos, requiriendo una potencia computacional sustancial. Generative AI, que emerge desde Deep Learning, se especializa en generar nuevo contenido a partir de datos existentes.</p>"
+    },
+    {
+      "id": "20-34",
+      "number": 34,
+      "text": "En el contexto del uso de redes neuronales para detección de fraude en tiempo real, ¿cuál de las siguientes opciones describe mejor cómo las redes neuronales procesan datos de entrada para identificar transacciones fraudulentas?",
+      "options": [
+        {
+          "text": "Las redes neuronales están compuestas por capas de nodos que ajustan las interconexiones basándose en el entrenamiento con datos para reconocer patrones fraudulentos.",
+          "correct": true
+        },
+        {
+          "text": "Las redes neuronales procesan transacciones de forma secuencial y comparan cada una con un conjunto de escenarios de fraude conocidos.",
+          "correct": false
+        },
+        {
+          "text": "Las redes neuronales se basan en reglas codificadas manualmente para cada tipo de transacción para detectar fraude.",
+          "correct": false
+        },
+        {
+          "text": "Las redes neuronales memorizan transacciones individuales para reconocer futuras transacciones fraudulentas.",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Las redes neuronales en detección de fraude analizan datos de entrada a través de múltiples capas de nodos interconectados (neuronas). Cada nodo procesa parte de los datos, y las conexiones entre nodos (weights) se ajustan durante el entrenamiento basándose en su efectividad para predecir transacciones fraudulentas. Este método permite que la red aprenda patrones complejos en los datos asociados con actividades fraudulentas, posibilitando una detección efectiva en tiempo real sin depender de reglas predefinidas ni memorizar transacciones.</p>"
+    },
+    {
+      "id": "20-35",
+      "number": 35,
+      "text": "Una empresa de seguros está migrando a AWS Cloud y desea integrar sus datos propietarios con Amazon Bedrock para mejorar las recomendaciones de productos utilizando el Foundation Model (FM) subyacente. ¿Cuál es el enfoque más adecuado para lograr esto?",
+      "options": [
+        {
+          "text": "Implementar Reinforcement Learning from Human Feedback (RLHF) en Amazon Bedrock aprovechando la información contextual de los datos privados de la empresa.",
+          "correct": false
+        },
+        {
+          "text": "Realizar fine-tuning del Foundation Model (FM) base utilizado por Amazon Bedrock aprovechando la información contextual de los datos privados de la empresa.",
+          "correct": false
+        },
+        {
+          "text": "Usar Knowledge Bases para Amazon Bedrock para complementar información contextual de los datos privados de la empresa al FM utilizando Reinforcement Learning from Human Feedback (RLHF).",
+          "correct": false
+        },
+        {
+          "text": "Usar Knowledge Bases para Amazon Bedrock para complementar información contextual de los datos privados de la empresa al FM utilizando Retrieval Augmented Generation (RAG).",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Retrieval Augmented Generation (RAG) es particularmente útil en escenarios donde es beneficioso integrar dinámicamente conocimiento de bases de datos o repositorios externos en la salida del modelo. Esta capacidad permite que el modelo utilice información relevante y específica (como los datos privados de una empresa de seguros) para mejorar sus predicciones o recomendaciones, lo que convierte a RAG en la mejor opción para este caso de uso.</p>"
+    },
+    {
+      "id": "20-36",
+      "number": 36,
+      "text": "Una empresa de servicios financieros planea desplegar un modelo de machine learning en AWS para realizar predicciones en tiempo real de tendencias del mercado de valores. ¿Cuál métrica de AWS debería usarse principalmente para garantizar que el modelo entregue resultados lo suficientemente rápido para tomar decisiones comerciales oportunas?",
+      "options": [
+        {
+          "text": "Model Accuracy",
+          "correct": false
+        },
+        {
+          "text": "Average Latency",
+          "correct": true
+        },
+        {
+          "text": "Throughput",
+          "correct": false
+        },
+        {
+          "text": "Precision-Recall Score",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Para predicciones en tiempo real en operaciones financieras, la eficiencia de un modelo de machine learning es crítica. Average Latency, como medida del tiempo de respuesta, se vuelve muy importante. Garantiza que la entrega de resultados del modelo sea lo suficientemente rápida para tomar decisiones oportunas, lo cual es esencial para operar según las tendencias del mercado de valores. Las predicciones rápidas y oportunas pueden impactar significativamente la efectividad de las estrategias de trading en entornos altamente volátiles.</p>"
+    },
+    {
+      "id": "20-37",
+      "number": 37,
+      "text": "Trabajás como ingeniero de datos y necesitás hacer un análisis continuo de grandes volúmenes de datos almacenados en AWS S3 usando consultas SQL. Necesitás un servicio que te permita ejecutar queries directamente sobre los datos en S3 sin tener que cargarlos primero en una base de datos. ¿Cuál es el servicio de AWS más adecuado para este requisito?",
+      "options": [
+        {
+          "text": "Amazon Athena",
+          "correct": true
+        },
+        {
+          "text": "AWS Data Pipeline",
+          "correct": false
+        },
+        {
+          "text": "Amazon Redshift",
+          "correct": false
+        },
+        {
+          "text": "Amazon RDS",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon Athena está diseñado específicamente para ejecutar queries interactivas contra datos almacenados en Amazon S3 usando SQL estándar. Es serverless, por lo que no hay infraestructura que administrar, y pagás solo por las consultas que ejecutás, lo que lo hace rentable y eficiente para escenarios donde los datos necesitan ser analizados directamente en S3, como se describe en la pregunta. Para más información, visitá: <a href=\"https://aws.amazon.com/athena/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/athena/</a>\n\t\t\t\t\t\t</p>"
+    },
+    {
+      "id": "20-38",
+      "number": 38,
+      "text": "En el contexto de una empresa de streaming de video que está desarrollando modelos de machine learning para recomendar contenido y analizar interacciones de usuarios, identifica qué tipo de red neuronal es la más adecuada para modelar datos secuenciales como fotogramas de video.",
+      "options": [
+        {
+          "text": "Decision Trees",
+          "correct": false
+        },
+        {
+          "text": "Recurrent Neural Networks (RNNs)",
+          "correct": true
+        },
+        {
+          "text": "Convolutional Neural Networks (CNNs)",
+          "correct": false
+        },
+        {
+          "text": "Support Vector Machines (SVMs)",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>La respuesta correcta es Recurrent Neural Networks (RNNs), que son particularmente efectivas para resolver problemas de predicción de secuencias. Las RNNs pueden mantener información en \"memoria\" a lo largo del tiempo, lo que ayuda a analizar secuencias de fotogramas de video donde comprender la dinámica temporal es crucial. Esto las hace más adecuadas para tareas de procesamiento de datos de video en comparación con CNNs, Decision Trees y SVMs, que no se especializan en el manejo de datos secuenciales.</p>"
+    },
+    {
+      "id": "20-39",
+      "number": 39,
+      "text": "En el contexto de AWS Certified AI Practitioner AIF-C01, ¿puedes diferenciar entre un algoritmo de machine learning (ML) y un modelo de ML? Esta distinción es crucial para estructurar el flujo de trabajo de desarrollo en proyectos de IA.",
+      "options": [
+        {
+          "text": "Un algoritmo de ML es un conjunto de instrucciones matemáticas para resolver un tipo específico de problema, mientras que un modelo de ML es el resultado entrenado del algoritmo cuando se aplica a datos.",
+          "correct": true
+        },
+        {
+          "text": "Un algoritmo de ML es una aplicación precompilada utilizada para automatizar tareas, mientras que un modelo de ML es simplemente un conjunto de parámetros de datos.",
+          "correct": false
+        },
+        {
+          "text": "Un algoritmo de ML es responsable del almacenamiento y recuperación de datos, mientras que un modelo de ML es específicamente para hacer predicciones basadas en nuevos datos.",
+          "correct": false
+        },
+        {
+          "text": "Un modelo de ML se utiliza para almacenar grandes conjuntos de datos para análisis, mientras que un algoritmo de ML funciona para desplegar aplicaciones en un entorno de producción.",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Entender la diferencia fundamental entre un algoritmo de ML y un modelo de ML es esencial en el desarrollo de IA. El algoritmo de ML representa las instrucciones o reglas fundacionales utilizadas para crear modelos. A su vez, el modelo de ML es el resultado concreto de aplicar estos algoritmos en conjuntos de datos específicos, capturando comportamientos y patrones aprendidos para realizar tareas con datos nuevos y nunca vistos. Esta distinción ayuda a estructurar proyectos de desarrollo de IA asignando el diseño del algoritmo a las etapas preliminares y el entrenamiento y aplicación del modelo a etapas posteriores. Encontrarás más detalles en las guías de AWS AI Practitioner y recursos disponibles en línea.</p>"
+    },
+    {
+      "id": "20-40",
+      "number": 40,
+      "text": "¿Cuál de los siguientes escenarios es más adecuado para aplicar Reinforcement Learning (RL) en entornos de AWS para la toma de decisiones?",
+      "options": [
+        {
+          "text": "Optimizar un sistema de recomendación de clientes que se adapta a las interacciones del usuario.",
+          "correct": false
+        },
+        {
+          "text": "Desarrollar un sistema de navegación de vehículos autónomos que aprende y se adapta a partir de condiciones de tráfico diversas e impredecibles.",
+          "correct": true
+        },
+        {
+          "text": "Hacer fine-tuning en un chatbot para mejorar la satisfacción del usuario según los resultados de las conversaciones.",
+          "correct": false
+        },
+        {
+          "text": "Analizar conjuntos de datos estáticos para identificar tendencias demográficas y segmentación de clientes.",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Reinforcement Learning es más efectivo en escenarios donde un agente debe tomar una secuencia de decisiones que lleven a una recompensa acumulada, especialmente en entornos dinámicos e inciertos. Aprende a través del ensayo y error, recibiendo recompensas o penalizaciones según las acciones que selecciona. Esto hace que RL sea perfectamente adecuado para tareas como la navegación autónoma, donde las condiciones cambian constantemente y el sistema necesita adaptarse continuamente para lograr resultados óptimos. Para obtener más información sobre RL, AWS proporciona recursos como Amazon SageMaker RL: <a href=\"https://aws.amazon.com/sagemaker/rl/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/sagemaker/rl/</a></p>"
+    },
+    {
+      "id": "20-41",
+      "number": 41,
+      "text": "¿Cuál es una característica clave de Amazon Translate que mejora la precisión y relevancia de las traducciones para industrias o temas específicos?",
+      "options": [
+        {
+          "text": "Uso de tecnologías de traducción automática neuronal",
+          "correct": false
+        },
+        {
+          "text": "Integración con Amazon Polly para salida de voz",
+          "correct": false
+        },
+        {
+          "text": "Traducción simultánea en múltiples idiomas",
+          "correct": false
+        },
+        {
+          "text": "Característica de terminología personalizada",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>La característica de terminología personalizada de Amazon Translate es fundamental para empresas que necesitan traducciones precisas con terminología específica o jerga única de un campo o industria determinada. Esta característica permite a los usuarios crear diccionarios personalizados que controlan cómo se deben traducir nombres, marcas, términos técnicos y otras expresiones propietarias, asegurando que las traducciones sean precisas y contextualmente apropiadas para comunicaciones específicas del negocio. La terminología personalizada es vital para mantener la consistencia y precisión necesarias para una comunicación e documentación internacional efectiva.</p>"
+    },
+    {
+      "id": "20-42",
+      "number": 42,
+      "text": "Una empresa de IoT necesita implementar modelos de ML en dispositivos edge para aplicaciones como mantenimiento predictivo y detección de anomalías. Considerando la necesidad de procesar datos en tiempo real con latencia mínima, ¿qué enfoque debería adoptar la empresa para optimizar el rendimiento y mantener una inferencia de baja latencia en estos dispositivos?",
+      "options": [
+        {
+          "text": "Implementar un small language model (SLM) optimizado directamente en cada dispositivo edge.",
+          "correct": true
+        },
+        {
+          "text": "Usar una API central conectada a un small language model (SLM) con un endpoint de inferencia asincrónica.",
+          "correct": false
+        },
+        {
+          "text": "Usar una API central conectada a un large language model (LLM) con un endpoint de inferencia asincrónica.",
+          "correct": false
+        },
+        {
+          "text": "Implementar un large language model (LLM) optimizado directamente en cada dispositivo edge.",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>En escenarios donde los análisis en tiempo real y la latencia mínima son críticos, implementar un small language model optimizado directamente en los dispositivos edge es el enfoque más eficiente. Esta configuración minimiza la latencia al procesar datos localmente y reduce las dependencias en ancho de banda de red y puntos de procesamiento central, lo que es crítico en aplicaciones sensibles al tiempo como el mantenimiento predictivo y la detección de anomalías. Para más información, AWS ofrece diversos recursos sobre edge computing y machine learning, como los servicios AWS IoT y AWS Greengrass.</p>"
+    },
+    {
+      "id": "20-43",
+      "number": 43,
+      "text": "Estás a cargo de un proyecto que implica construir varios modelos de machine learning para una empresa de salud. Los modelos necesitan ser actualizados y evaluados frecuentemente antes de ser desplegados. Dadas las limitaciones de tiempo y gestión de recursos, ¿qué servicio de AWS sería más apropiado para automatizar la construcción y prueba de estos artefactos de ML?",
+      "options": [
+        {
+          "text": "Usar AWS CodeBuild para automatizar la construcción y prueba de modelos de ML.",
+          "correct": true
+        },
+        {
+          "text": "Utilizar Amazon S3 para automatizar las construcciones de modelos de ML.",
+          "correct": false
+        },
+        {
+          "text": "Implementar AWS Lambda para pruebas y despliegue continuo.",
+          "correct": false
+        },
+        {
+          "text": "Desplegar AWS CodeCommit para el proceso de automatización.",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>AWS CodeBuild es el servicio adecuado para automatizar la construcción y prueba de modelos de machine learning debido a sus características que soportan compilación, prueba y empaquetamiento de artefactos de software. Este servicio no solo automatiza estos flujos de trabajo, sino que también se integra bien con otros servicios de AWS, estableciendo un pipeline optimizado para el desarrollo e implementación de modelos de ML. Esto garantiza que los modelos se construyan, prueben y estén listos para producción de forma consistente. Puedes encontrar más información en <a href=\"https://aws.amazon.com/codebuild/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/codebuild/</a>\n\t\t\t\t\t\t</p>"
+    },
+    {
+      "id": "20-44",
+      "number": 44,
+      "text": "Como Ingeniero de Datos, tienes la responsabilidad de gestionar y preprocesar grandes conjuntos de datos de diferentes fuentes para usarlos posteriormente en modelos de machine learning. Tu proceso debe ser escalable, sin servidor y fácil de mantener. ¿Cómo puedes aprovechar mejor AWS Glue, particularmente el servicio AWS Glue ETL, para cumplir con estos requisitos?",
+      "options": [
+        {
+          "text": "Usar solo AWS Glue Catalog para almacenar metadatos y procesar las transformaciones manualmente con AWS Lambda.",
+          "correct": false
+        },
+        {
+          "text": "Utilizar trabajos de AWS Glue ETL para automatizar procesos de transformación de datos, orquestando el flujo de trabajo con Apache Airflow en EC2.",
+          "correct": false
+        },
+        {
+          "text": "Emplear AWS Glue ETL para crear, ejecutar y monitorear pipelines de integración y transformación de datos completamente administrados y escalados por AWS.",
+          "correct": true
+        },
+        {
+          "text": "Usar AWS Glue DataBrew para explorar y limpiar datos visualmente, pero codificar manualmente las transformaciones en una instancia de EC2.",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>AWS Glue ETL es una herramienta valiosa para ingenieros de datos que supervisan operaciones de datos a gran escala, especialmente cuando la flexibilidad, la capacidad de gestión, la escalabilidad y las opciones sin servidor son fundamentales. Permite crear y gestionar flujos de trabajo de transformación de datos en un entorno completamente administrado, eliminando la necesidad de codificación manual o gestión de recursos, lo que maximiza la eficiencia y reduce errores. AWS Glue automatiza las tareas relacionadas con el trabajo de ETL, proporcionando una solución robusta adecuada para una variedad de necesidades de preparación y carga de datos. Puedes encontrar más información sobre AWS Glue en la documentación oficial de AWS: <a href=\"https://docs.aws.amazon.com/glue/latest/dg/what-is-glue.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/glue/latest/dg/what-is-glue.html</a>\n\t\t\t\t\t\t</p>"
+    },
+    {
+      "id": "20-45",
+      "number": 45,
+      "text": "Una empresa minorista planea mejorar su sistema de segmentación de clientes utilizando algoritmos de machine learning y ha considerado usar K-Means y K-Nearest Neighbors (KNN). ¿Cuál es la diferencia principal entre K-Means y KNN que podría afectar la decisión sobre cuál algoritmo usar para segmentación de clientes?",
+      "options": [
+        {
+          "text": "K-Means es un algoritmo de aprendizaje no supervisado usado para agrupar puntos de datos en clusters, mientras que KNN es un algoritmo de aprendizaje supervisado usado para clasificar puntos de datos basándose en su proximidad a ejemplos etiquetados.",
+          "correct": true
+        },
+        {
+          "text": "K-Means se utiliza principalmente para tareas de regresión, mientras que KNN se utiliza para reducir la dimensionalidad de los datos.",
+          "correct": false
+        },
+        {
+          "text": "K-Means es un algoritmo de aprendizaje supervisado usado para clasificación, mientras que KNN es un algoritmo de aprendizaje no supervisado usado para clustering.",
+          "correct": false
+        },
+        {
+          "text": "K-Means requiere datos etiquetados para formar clusters, mientras que KNN no utiliza datos etiquetados para hacer predicciones.",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Entender la diferencia entre aprendizaje supervisado y no supervisado es crucial para seleccionar el algoritmo adecuado para tareas específicas como la segmentación de clientes. K-Means, un algoritmo de aprendizaje no supervisado, organiza los datos en clusters sin necesidad de etiquetas previas, lo que lo hace ideal para descubrir agrupaciones inherentes en los datos. KNN, por otro lado, es un algoritmo supervisado que requiere datos etiquetados para predecir la clasificación de nuevos puntos basándose en las etiquetas conocidas de los vecinos más cercanos. Por lo tanto, la elección depende de la naturaleza de los datos disponibles y de los requisitos específicos del sistema a desarrollar.</p>"
+    },
+    {
+      "id": "20-46",
+      "number": 46,
+      "text": "Eres un ingeniero de IA encargado de implementar un modelo de machine learning para un comercio electrónico de alto tráfico durante la temporada navideña. El modelo debe escalarse automáticamente para manejar picos repentinos en las solicitudes de usuarios, mientras que también sea rentable durante los períodos de menor demanda. ¿Qué característica de servicio de AWS deberías usar para gestionar eficientemente el escalado de recursos del modelo de ML tanto para training como para inference?",
+      "options": [
+        {
+          "text": "Configurar un número fijo de instancias EC2 estimadas para manejar las cargas máximas.",
+          "correct": false
+        },
+        {
+          "text": "Utilizar AWS Auto Scaling con políticas de escalado predefinidas basadas en la utilización de CPU y memoria.",
+          "correct": true
+        },
+        {
+          "text": "Configurar Amazon RDS para que se escale automáticamente según la carga de la base de datos, lo que ayuda indirectamente al rendimiento del modelo de ML.",
+          "correct": false
+        },
+        {
+          "text": "Usar AWS Lambda para el escalado automático de recursos, activando más instancias a medida que aumenta el tráfico.",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>AWS Auto Scaling es el servicio apropiado para gestionar el escalado de recursos de modelos de ML, particularmente durante cargas variables como las que experimenta el comercio electrónico durante las fiestas. Este servicio ajusta dinámicamente los recursos en función de métricas de uso reales, como CPU y memoria, permitiendo un escalado eficiente y rentable. Esto es esencial para mantener la disponibilidad y el rendimiento del servicio durante tráfico alto y para minimizar costos durante períodos más tranquilos.</p>"
+    },
+    {
+      "id": "20-47",
+      "number": 47,
+      "text": "En el contexto de implementar modelos de IA generativa para servicio al cliente, ¿qué término describe la situación en la que el modelo genera información plausible pero factualmente incorrecta?",
+      "options": [
+        {
+          "text": "Bias",
+          "correct": false
+        },
+        {
+          "text": "Hallucination",
+          "correct": true
+        },
+        {
+          "text": "Overfitting",
+          "correct": false
+        },
+        {
+          "text": "Variance",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>En la implementación de modelos de IA, particularmente los de tipo generativo como los que se usan en sistemas automatizados de servicio al cliente, el término 'hallucination' es crucial ya que denota instancias donde los outputs pueden inducir a error a los usuarios al ser factualmente inexactos a pesar de parecer plausibles. Entender este fenómeno es vital porque afecta la confiabilidad y precisión del modelo, que son críticas en escenarios de servicio al cliente. Es importante que los equipos que implementan estas tecnologías establezcan controles y procesos de validación para mitigar estos efectos.</p>"
+    },
+    {
+      "id": "20-48",
+      "number": 48,
+      "text": "Como AWS Certified AI Practitioner, estás explicando al equipo directivo de una empresa de servicios financieros cómo el machine learning puede aplicarse para automatizar la calificación crediticia y la detección de fraudes. ¿Cuál de las siguientes opciones describe mejor el concepto central del machine learning?",
+      "options": [
+        {
+          "text": "El machine learning implica etiquetar manualmente cada punto de datos antes de que pueda identificar patrones o hacer suposiciones.",
+          "correct": false
+        },
+        {
+          "text": "El machine learning se basa principalmente en crear configuraciones óptimas de hardware para el procesamiento y almacenamiento de datos.",
+          "correct": false
+        },
+        {
+          "text": "Los algoritmos de machine learning se basan únicamente en reglas estáticas y predefinidas que se aplican universalmente sin necesidad de datos.",
+          "correct": false
+        },
+        {
+          "text": "El machine learning implica entrenar algoritmos con grandes conjuntos de datos para identificar patrones y hacer predicciones o tomar decisiones basadas en datos nuevos.",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>El machine learning es un método de análisis de datos que automatiza la construcción de modelos analíticos. Es una rama de la inteligencia artificial basada en la idea de que los sistemas pueden aprender de los datos, identificar patrones y tomar decisiones con una intervención humana mínima. Esta tecnología es invaluable para tareas como la calificación crediticia y la detección de fraudes en servicios financieros, donde puede analizar rápidamente grandes volúmenes de datos para identificar actividades potencialmente fraudulentas o la capacidad crediticia. Para obtener más información, visita: <a href=\"https://aws.amazon.com/machine-learning/what-is-machine-learning/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/machine-learning/what-is-machine-learning/</a></p>"
+    },
+    {
+      "id": "20-49",
+      "number": 49,
+      "text": "Como especialista en IA, te encargaron monitorear el rendimiento e infraestructura de un modelo de aprendizaje automático implementado usando AWS CloudWatch. ¿Cuál de los siguientes es el método más efectivo para utilizar Amazon CloudWatch y facilitar la resolución proactiva de problemas y mejorar la confiabilidad del modelo?",
+      "options": [
+        {
+          "text": "Almacenar archivos de registro de tu modelo en Amazon S3 y revisarlos manualmente cada semana para detectar actividad inusual.",
+          "correct": false
+        },
+        {
+          "text": "Habilitar CloudWatch logs solo durante los horarios de mayor uso del modelo para conservar recursos y reducir costos.",
+          "correct": false
+        },
+        {
+          "text": "Utilizar CloudWatch Events para disparar funciones de AWS Lambda que realicen auto-escalado de recursos basado en pronósticos de demanda.",
+          "correct": false
+        },
+        {
+          "text": "Configurar alarmas de alta resolución para monitorear el modelo con mayor frecuencia y reaccionar más rápidamente ante problemas de rendimiento.",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>El monitoreo proactivo y efectivo de modelos de aprendizaje automático en producción es crucial para garantizar su confiabilidad y eficiencia. Amazon CloudWatch proporciona varios servicios para monitoreo en tiempo real y evaluación de la salud operacional. Las alarmas de alta resolución permiten específicamente detectar y reaccionar más rápidamente ante anomalías de rendimiento o problemas de infraestructura, garantizando alta disponibilidad y confiabilidad de los modelos de ML. Para más información sobre las características y mejores prácticas de Amazon CloudWatch, visita <a href=\"https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html</a>\n\t\t\t\t\t\t</p>"
+    },
+    {
+      "id": "20-50",
+      "number": 50,
+      "text": "Al aprovechar Amazon Bedrock para generar descripciones de productos personalizadas y recomendaciones, ¿cómo afecta el ajuste del parámetro de inferencia Top K al resultado del modelo al generar texto?",
+      "options": [
+        {
+          "text": "Determina cómo el modelo detiene la generación de tokens una vez que se completa una secuencia de caracteres.",
+          "correct": false
+        },
+        {
+          "text": "Controla la cantidad de candidatos de tokens con alta probabilidad que el modelo considera para generar la siguiente parte del texto.",
+          "correct": true
+        },
+        {
+          "text": "Cambia el algoritmo de entrenamiento del modelo para mejorar la velocidad y eficiencia de la salida de texto.",
+          "correct": false
+        },
+        {
+          "text": "Afecta el rango de probabilidades de tokens consideradas por el modelo, aumentando así la diversidad en la generación de texto.",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>El parámetro Top K en la generación de texto controla cuántos tokens siguientes potenciales se consideran según su probabilidad. Ajustar este parámetro en Amazon Bedrock afecta la diversidad y predictibilidad del texto generado, logrando un equilibrio entre novedad y coherencia. Este parámetro de ajuste es crucial en escenarios donde el contenido personalizado necesita ser tanto atractivo como relevante sin alejarse demasiado de los patrones esperados. Entender y optimizar este parámetro puede mejorar significativamente las interacciones con clientes en entornos minoristas.</p>"
+    },
+    {
+      "id": "20-51",
+      "number": 51,
+      "text": "Como desarrollador que integra soporte multilingüe en una aplicación global, querés usar Amazon Polly para convertir texto a voz en varios idiomas. ¿Cuál es la característica de Amazon Polly que permite seleccionar diferentes voces, cada una capaz de hablar un conjunto específico de idiomas?",
+      "options": [
+        {
+          "text": "Lexicon support",
+          "correct": false
+        },
+        {
+          "text": "Voice Selection",
+          "correct": true
+        },
+        {
+          "text": "Standard and Neural TTS technology modes",
+          "correct": false
+        },
+        {
+          "text": "Speech Synthesis Markup Language (SSML) support",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon Polly ofrece una característica llamada Voice Selection, que permite a los desarrolladores elegir entre una variedad de voces, cada una designada para diferentes idiomas. Esto ayuda a crear aplicaciones que requieren soporte para texto a voz multilingüe, facilitando la atención a una audiencia global al proporcionar voz de alta calidad y sonido natural en varios idiomas.</p>"
+    },
+    {
+      "id": "20-52",
+      "number": 52,
+      "text": "Dentro del Modelo de Responsabilidad Compartida de AWS, ¿cómo se maneja la seguridad al implementar modelos de machine learning usando Amazon SageMaker?",
+      "options": [
+        {
+          "text": "AWS es responsable de la seguridad de la infraestructura subyacente, mientras que los clientes deben asegurar sus modelos de machine learning y datos.",
+          "correct": true
+        },
+        {
+          "text": "La responsabilidad de seguridad se divide equitativamente entre AWS y el cliente en todos los aspectos de la operación de Amazon SageMaker.",
+          "correct": false
+        },
+        {
+          "text": "AWS gestiona todos los aspectos de seguridad, incluyendo la seguridad de datos y los controles de acceso.",
+          "correct": false
+        },
+        {
+          "text": "Los clientes son totalmente responsables de la seguridad, abarcando tanto la infraestructura como la gestión de aplicaciones.",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>El Modelo de Responsabilidad Compartida de AWS establece que AWS gestiona la seguridad de la infraestructura que ejecuta todos los servicios proporcionados en AWS Cloud. Sin embargo, los clientes son responsables de gestionar la seguridad de sus datos, aplicaciones y modelos de machine learning en SageMaker. Esta distinción permite que los clientes se enfoquen en sus características de producto y modelos sin necesidad de gestionar la seguridad física ni aspectos de seguridad de software no relacionados con la gestión de sus datos y aplicaciones.</p>"
+    },
+    {
+      "id": "20-53",
+      "number": 53,
+      "text": "Una firma de consultoría está evaluando el uso de Modelos de Lenguaje Grande (LLMs) para mejorar el servicio al cliente y la creación de contenido para un cliente. ¿Cuáles son las aplicaciones más apropiadas de LLMs para estos propósitos?",
+      "options": [
+        {
+          "text": "Los LLMs se utilizan para diseñar y generar modelos 3D para usar en diversas aplicaciones como videojuegos y diseño industrial.",
+          "correct": false
+        },
+        {
+          "text": "Los LLMs se utilizan para generar texto similar al humano, traducir idiomas, resumir texto y responder preguntas basadas en grandes conjuntos de datos.",
+          "correct": true
+        },
+        {
+          "text": "Los LLMs se utilizan para sintetizar habla humana realista a partir de entradas de texto.",
+          "correct": false
+        },
+        {
+          "text": "Los LLMs se utilizan principalmente para mejorar sistemas de toma de decisiones en tiempo real integrando análisis predictivo.",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Los Modelos de Lenguaje Grande (LLMs) son más adecuados para tareas que implican procesamiento complejo del lenguaje, lo que los hace perfectos para automatizar el servicio al cliente a través de chatbots y generar contenido de marketing atractivo y creativo. Su capacidad para comprender y generar texto similar al humano también los hace excelentes para procesar grandes volúmenes de datos de texto y extraer información valiosa.</p>"
+    },
+    {
+      "id": "20-54",
+      "number": 54,
+      "text": "Un analista de datos debe analizar comentarios de clientes recopilados de diversas fuentes para entender tendencias de sentimiento con AWS. ¿Qué característica del servicio Amazon Comprehend permite la clasificación automática de sentimientos positivos, negativos, neutrales o mixtos en textos de comentarios de clientes?",
+      "options": [
+        {
+          "text": "Sentiment Analysis",
+          "correct": true
+        },
+        {
+          "text": "Entity Recognition",
+          "correct": false
+        },
+        {
+          "text": "Syntax Tokenization",
+          "correct": false
+        },
+        {
+          "text": "Key Phrase Extraction",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>La característica Sentiment Analysis de Amazon Comprehend está específicamente diseñada para analizar los sentimientos expresados en datos textuales. Automatiza el proceso de clasificación de sentimientos, convirtiéndola en una herramienta esencial para analizar comentarios de clientes de múltiples fuentes. Esto ayuda a las organizaciones a medir el sentimiento público, ajustar estrategias de marketing y mejorar el servicio al cliente al entender y responder de manera más efectiva a las necesidades de los clientes.</p>"
+    }
+  ]
+}

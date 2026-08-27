@@ -1,0 +1,1377 @@
+{
+  "setNumber": 18,
+  "sourceFile": "Practice_Set_18.html",
+  "questionCount": 54,
+  "questions": [
+    {
+      "id": "18-1",
+      "number": 1,
+      "text": "You are developing a security system using Amazon Rekognition to analyze video footage for unauthorized access. What is the optimal Amazon Rekognition feature to detect and identify individuals in video streams?",
+      "options": [
+        {
+          "text": "Facial analysis",
+          "correct": false
+        },
+        {
+          "text": "Face search",
+          "correct": true
+        },
+        {
+          "text": "Image moderation",
+          "correct": false
+        },
+        {
+          "text": "Facial comparison",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon Rekognition provides a face search capability which allows it to match detected faces in video streams against a collection comprising known faces. This feature is particularly beneficial in security systems for identifying unauthorized individuals in real time. It leverages advanced facial recognition algorithms and can be integrated in diverse surveillance scenarios to enhance security measures.</p>"
+    },
+    {
+      "id": "18-2",
+      "number": 2,
+      "text": "A retail company employs an Amazon Lex-powered chatbot to handle customer inquiries. To improve the efficacy of the chatbot, the company aims for it to learn from ongoing customer interactions and adjust its responses over time. Which machine learning technique is most suitable to autonomously enhance the chatbot‘s performance based on feedback from interactions?",
+      "options": [
+        {
+          "text": "Engage in supervised learning with periodic retraining using updated datasets collected from customer interactions.",
+          "correct": false
+        },
+        {
+          "text": "Apply transfer learning from a different yet related customer service domain to boost the chatbot‘s understanding.",
+          "correct": false
+        },
+        {
+          "text": "Implement reinforcement learning where the chatbot receives rewards based on positive customer feedback.",
+          "correct": true
+        },
+        {
+          "text": "Use unsupervised learning to allow the chatbot to discover hidden patterns in customer data without specific feedback.",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>The most effective technique for enabling a chatbot to autonomously enhance its performance based on ongoing interaction is reinforcement learning (RL). RL allows the chatbot to learn from interaction experiences using a system of rewards and penalties, making it adapt to new data and behaviors effectively. This approach aligns with the needs for real-time learning and adaptiveness required for customer service chatbots.</p>"
+    },
+    {
+      "id": "18-3",
+      "number": 3,
+      "text": "A retail company wants to analyze customer sentiment from recorded service calls to improve their customer service. Which combination of AWS services is best suited for transcribing and analyzing the sentiment of these audio recordings?",
+      "options": [
+        {
+          "text": "Amazon Transcribe and Amazon Translate",
+          "correct": false
+        },
+        {
+          "text": "Amazon Transcribe and Amazon Comprehend",
+          "correct": true
+        },
+        {
+          "text": "Amazon Rekognition and Amazon Transcribe",
+          "correct": false
+        },
+        {
+          "text": "Amazon Translate and Amazon Comprehend",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>For the scenario of analyzing customer sentiment from recorded audio, the appropriate services are Amazon Transcribe and Amazon Comprehend. Amazon Transcribe will first convert the audio into text. Subsequently, Amazon Comprehend can be used to analyze the sentiment of the text. This combination is effective for extracting meaningful insights from customer interactions, helping improve service quality and customer satisfaction. More information can be found on the official AWS pages for [Amazon Transcribe](<a href=\"https://aws.amazon.com/transcribe/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/transcribe/</a>) and [Amazon Comprehend](<a href=\"https://aws.amazon.com/comprehend/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/comprehend/</a>). </p>"
+    },
+    {
+      "id": "18-4",
+      "number": 4,
+      "text": "In the context of improving a machine translation model for a multilingual application, which evaluation metric would be most suitable for assessing the quality of translations from English to various other languages?",
+      "options": [
+        {
+          "text": "BERT score",
+          "correct": false
+        },
+        {
+          "text": "BLEU (Bilingual Evaluation Understudy) score",
+          "correct": true
+        },
+        {
+          "text": "Accuracy",
+          "correct": false
+        },
+        {
+          "text": "ROUGE (Recall-Oriented Understudy for Gisting Evaluation)",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>The BLEU score is the most appropriate metric for evaluating machine translations because it specifically addresses the quality of translation by comparing the translated text against a set of high-quality reference translations. BLEU measures precision at multiple levels of granularity (n-grams), making it highly effective in assessing the closeness of the machine-translated text to human language.</p>"
+    },
+    {
+      "id": "18-5",
+      "number": 5,
+      "text": "A financial technology company is deploying machine learning models for real-time fraud detection and wants to ensure network isolation between their development environment and the production environment to maintain security and compliance. Which of the following AWS services should be utilized to meet these requirements in the context of network isolation?",
+      "options": [
+        {
+          "text": "Apply Amazon Cognito for user authentication in different environments.",
+          "correct": false
+        },
+        {
+          "text": "Configure AWS IAM roles to restrict access between development and production environments.",
+          "correct": false
+        },
+        {
+          "text": "Use Amazon SageMaker to deploy models in different VPCs for testing and production.",
+          "correct": false
+        },
+        {
+          "text": "Implement Amazon VPC to create private subnets for development and production environments.",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>To achieve network isolation between different environments, such as development and production, Amazon VPC is the most suitable. It enables the setup of private network spaces in the cloud, allowing full control over IP address range, subnet creation, and configuration of route tables and network gateways. This isolation ensures that the environments do not overlap and remain secured from each other, which is critical in high compliance sectors like financial technology. </p>"
+    },
+    {
+      "id": "18-6",
+      "number": 6,
+      "text": "A manufacturing company has developed a machine learning model for classifying various materials such as metals, plastics, and fabrics based on images from its production line. To assess this model‘s ability to distinguish accurately between these materials, which evaluation metric would provide the most comprehensive insights into both the model‘s accuracy and its classification errors?",
+      "options": [
+        {
+          "text": "Correlation matrix",
+          "correct": false
+        },
+        {
+          "text": "Confusion matrix",
+          "correct": true
+        },
+        {
+          "text": "Mean Absolute Error (MAE)",
+          "correct": false
+        },
+        {
+          "text": "Root Mean Squared Error (RMSE)",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>In the context of evaluating a classification model like the one developed by the manufacturing company, a confusion matrix would be the most appropriate tool. It not only provides detailed information about the number of correct and incorrect predictions for each class but also helps in understanding the types of errors the model is making, such as confusing one material type with another. This enables more targeted improvements in the model‘s classification capabilities. </p>"
+    },
+    {
+      "id": "18-7",
+      "number": 7,
+      "text": "A company using various AWS machine learning services wants to optimize its budget by closely monitoring ML solution costs. What AWS service is most beneficial for tracking the usage and associated costs of their machine learning solutions over time?",
+      "options": [
+        {
+          "text": "AWS Trusted Advisor",
+          "correct": false
+        },
+        {
+          "text": "Amazon CloudWatch",
+          "correct": false
+        },
+        {
+          "text": "AWS Budgets",
+          "correct": false
+        },
+        {
+          "text": "AWS Cost Explorer",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>AWS Cost Explorer is the most effective tool for monitoring and analyzing costs related to machine learning solutions on AWS. It offers detailed visualizations and filtering capabilities, which enable businesses to drill down into their expenses by service, linked accounts, tags, etc., helping them to manage and optimize the costs associated with their AWS usage efficiently.</p>"
+    },
+    {
+      "id": "18-8",
+      "number": 8,
+      "text": "In the context of building a Thanksgiving marketing campaign where competitive brand names and sensitive topics need to be excluded from generative AI content, what prompting technique should be used?",
+      "options": [
+        {
+          "text": "Chain-of-thought Prompting",
+          "correct": false
+        },
+        {
+          "text": "Zero-shot Prompting",
+          "correct": false
+        },
+        {
+          "text": "Few-shot Prompting",
+          "correct": false
+        },
+        {
+          "text": "Negative Prompting",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>In scenarios where specific content needs to be excluded from AI generated text, such as competitive brand names or sensitive topics in a marketing campaign, negative prompting is the appropriate technique. This method directly instructs the AI on what to avoid, thereby aligning the output with the marketing goals without compromising the brand's image or violating sensitivities.</p>"
+    },
+    {
+      "id": "18-9",
+      "number": 9,
+      "text": "A financial firm is using AWS Identity and Access Management (IAM) to control user access to its AWS services. The firm wants to ensure that only the finance department personnel can access the Amazon DynamoDB tables containing financial reports while enforcing the principle of least privilege. Which IAM feature should be used to accomplish this task effectively?",
+      "options": [
+        {
+          "text": "Use AWS IAM permissions boundaries.",
+          "correct": false
+        },
+        {
+          "text": "Implement IAM users for each employee in the finance department.",
+          "correct": false
+        },
+        {
+          "text": "Apply IAM roles with cross-account access policies.",
+          "correct": false
+        },
+        {
+          "text": "Create IAM policies that specifically include the finance department and assign them to the relevant users or groups.",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>AWS Identity and Access Management (IAM) allows organizations to manage access to AWS services and resources securely. Using IAM policies to specify who is allowed to access which services in what manner is a cornerstone of AWS security and governance. In this scenario, specifying IAM policies tailored to the finance department‘s needs ensures both secure and precise access control, aligning perfectly with the principle of least privilege, which aims to minimize user privileges to only those necessary to perform the job. </p>"
+    },
+    {
+      "id": "18-10",
+      "number": 10,
+      "text": "As a Data Scientist working on optimizing costs for machine learning solutions in AWS, you are tasked with monitoring and managing the costs associated with your ML deployments. Which AWS service would help you track and analyze these costs most effectively?",
+      "options": [
+        {
+          "text": "AWS Cost Explorer",
+          "correct": true
+        },
+        {
+          "text": "AWS Budgets",
+          "correct": false
+        },
+        {
+          "text": "Amazon CloudWatch",
+          "correct": false
+        },
+        {
+          "text": "AWS Price List Service",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>AWS Cost Explorer is particularly designed for visualizing, understanding, and managing AWS costs and usage over time. It provides detailed cost and usage reports that help break down costs by service, linked accounts, and custom tags, which is critical in identifying cost trends and making informed decisions on cost optimization in machine learning and other AWS service deployments.</p>"
+    },
+    {
+      "id": "18-11",
+      "number": 11,
+      "text": "A security company is evaluating Amazon Rekognition to enhance its Machine Learning (ML) capabilities. Which of the following scenarios is LEAST likely to be effectively addressed by Amazon Rekognition?",
+      "options": [
+        {
+          "text": "Enable multilingual user experiences in applications",
+          "correct": true
+        },
+        {
+          "text": "Celebrity recognition in media files",
+          "correct": false
+        },
+        {
+          "text": "Search and categorization in media libraries",
+          "correct": false
+        },
+        {
+          "text": "Face-based user identity verification",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon Rekognition provides powerful image and video analysis capabilities, including object detection, facial analysis, and activity recognition, which makes it suitable for various security and media-related applications. However, it does not support multilingual text processing, which is necessary for creating multilingual user experiences in applications; services like Amazon Translate or Amazon Polly would be appropriate for those needs. </p>"
+    },
+    {
+      "id": "18-12",
+      "number": 12,
+      "text": "In the context of using Amazon Bedrock for generating AI-driven financial insights, how does varying the ‘Top P‘ inference parameter affect the model‘s output?",
+      "options": [
+        {
+          "text": "It sets the sequence length of the output, determining how verbose the model‘s responses are.",
+          "correct": false
+        },
+        {
+          "text": "It increases the model's training speed by prioritizing higher probability tokens.",
+          "correct": false
+        },
+        {
+          "text": "It changes the number of output tokens generated before the model stops.",
+          "correct": false
+        },
+        {
+          "text": "It influences the randomness of token selection, increasing output diversity by considering only the most probable tokens that cumulatively reach the threshold P.",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>The ‘Top P‘ parameter, crucial in models like Amazon Bedrock, implements nucleus samplinga technique where during inference, only the top P% most probable next tokens are considered for generating the next part of the sequence. This balances between model creativity and relevance by avoiding less likely, irrelevant tokens while not strictly limiting to the highest probability token. This method enhances the model‘s capability to generate diverse and contextually appropriate insights, crucial in applications such as financial services where nuanced understanding is key. </p>"
+    },
+    {
+      "id": "18-13",
+      "number": 13,
+      "text": "In an AWS AI deployment, a shopping center‘s security system is using AI to analyze live footage and flag suspicious activities. The AI has been mistakenly identifying actions by individuals from a specific ethnic group as suspicious at a higher rate. What type of data-related issue is most likely causing this bias?",
+      "options": [
+        {
+          "text": "Sampling bias",
+          "correct": true
+        },
+        {
+          "text": "Confirmation bias",
+          "correct": false
+        },
+        {
+          "text": "Measurement bias",
+          "correct": false
+        },
+        {
+          "text": "Observer bias",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Sampling bias in AI systems occurs when the data used to train the model is not representative of the broader population or operational environment, leading to biased predictions or classifications. In the case of the shopping center‘s security system, if the training data was primarily composed of or lacked diversity regarding certain ethnic groups, the AI might falsely learn to associate specific behaviors with those groups erroneously. This example underscores the importance of ensuring diversity and representativeness in training datasets to prevent AI bias. </p>"
+    },
+    {
+      "id": "18-14",
+      "number": 14,
+      "text": "Which of the following represents a valid application of generative AI in the realm of artificial intelligence?",
+      "options": [
+        {
+          "text": "Leveraging generative AI to develop new pharmaceutical compounds through simulation of molecular structures",
+          "correct": true
+        },
+        {
+          "text": "Using generative AI to predict future stock market movements based on past data",
+          "correct": false
+        },
+        {
+          "text": "Employing generative AI to classify images into predetermined categories",
+          "correct": false
+        },
+        {
+          "text": "Applying generative AI to optimize website layouts based on user interaction data",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Generative AI is fundamentally about creating new data instances that are similar to the training data, yet distinct. This technology is apt for tasks such as designing new drugs, creating art, or generating synthetic data for training other AI models. The answer relating to pharmaceuticals correctly represents a scenario where generative models simulate complex, novel molecular structures, which is a key strength of this AI domain. </p>"
+    },
+    {
+      "id": "18-15",
+      "number": 15,
+      "text": "As a Data Analyst at a retail company, you‘ve been tasked with analyzing large-scale e-commerce transaction data stored in CSV format on Amazon S3. Your goal is to run ad-hoc SQL queries to identify buying patterns without setting up complex ETL processes. Which AWS service would be most appropriate for this task?",
+      "options": [
+        {
+          "text": "AWS Glue",
+          "correct": false
+        },
+        {
+          "text": "Amazon Athena",
+          "correct": true
+        },
+        {
+          "text": "Amazon RDS",
+          "correct": false
+        },
+        {
+          "text": "Amazon Redshift",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon Athena is the most appropriate choice for the given scenario as it allows SQL querying directly on data stored in Amazon S3 without the overhead of data warehousing or ETL processes. This capability makes it highly suitable for quick, ad-hoc querying of transaction data to uncover insights such as buying patterns, which can aid in decision-making processes within the retail sector. For more details, refer to Amazon Athena's documentation: <a href=\"https://aws.amazon.com/athena/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/athena/</a>\n\t\t\t\t\t\t</p>"
+    },
+    {
+      "id": "18-16",
+      "number": 16,
+      "text": "A software company is evaluating different AWS services to integrate AI-powered solutions into its applications. The team is particularly interested in Amazon Q for automating business workflows and Amazon Bedrock for leveraging pre-trained foundation models. To make an informed decision on which service to adopt for their specific use cases, they need to understand the core differences between the two, including their capabilities, target use cases, and how each service supports AI-driven tasks. Which of the following represent the correct options for the given scenario? (Select two)",
+      "options": [
+        {
+          "text": "Amazon Bedrock is a generative AIpowered assistant that allows you to create pre-packaged generative AI applications, whereas, Amazon Q provides an environment to build and scale generative AI applications using a Foundation Model (FM).",
+          "correct": false
+        },
+        {
+          "text": "Amazon Q is a generative AIpowered assistant that allows you to create pre-packaged generative AI applications, whereas, Amazon Bedrock provides an environment to build and scale generative AI applications using a Foundation Model (FM).",
+          "correct": true
+        },
+        {
+          "text": "Both Amazon Q and Amazon Bedrock are generative AI-powered assistants that allow you to create pre-packaged generative AI applications.",
+          "correct": false
+        },
+        {
+          "text": "With Amazon Bedrock, you can choose the underlying Foundation Model. However, Amazon Q does not allow you to choose the underlying Foundation Model.",
+          "correct": true
+        },
+        {
+          "text": "With Amazon Q, you can choose the underlying Foundation Model. However, Amazon Bedrock does not allow you to choose the underlying Foundation Model.",
+          "correct": false
+        }
+      ],
+      "multiSelect": true,
+      "explanationHtml": "<p>Amazon Q and Amazon Bedrock serve different purposes within the AWS ecosystem. Amazon Q is designed to streamline business workflows by offering pre-packaged generative AI applications. In contrast, Amazon Bedrock provides a flexible environment to build and scale generative AI applications using Foundation Models. Understanding these differences helps in selecting the right service for specific use cases. More info: <a href=\"https://aws.amazon.com/q/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/q/</a>, <a href=\"https://aws.amazon.com/bedrock/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/bedrock/</a>\n\t\t\t\t\t\t</p>"
+    },
+    {
+      "id": "18-17",
+      "number": 17,
+      "text": "You are working as a data analyst for a media company that is interested in understanding the sentiment and key themes from customer feedback collected through various channels. You decide to use Amazon Comprehend to analyze the text data. Which Amazon Comprehend feature would best help you identify the prevailing sentiments and key phrases in the feedback?",
+      "options": [
+        {
+          "text": "Apply Amazon Comprehend‘s Language Detection.",
+          "correct": false
+        },
+        {
+          "text": "Use Amazon Comprehend‘s Syntax Analysis.",
+          "correct": false
+        },
+        {
+          "text": "Deploy Amazon Comprehend‘s Custom Classification.",
+          "correct": false
+        },
+        {
+          "text": "Utilize Amazon Comprehend‘s Sentiment Analysis and Key Phrases Detection features.",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon Comprehend is a natural language processing (NLP) service that uses machine learning to find insights and relationships in text. Specifically, the Sentiment Analysis feature in Amazon Comprehend helps determine the emotional tone behind words, which is crucial in understanding customer feedback. The Key Phrases Detection feature extracts terms and phrases that are important within the text. This makes it particularly useful for analyzing customer feedback to gauge overall sentiment and highlight relevant themes. For more details, refer to the AWS documentation on Amazon Comprehend: <a href=\"https://aws.amazon.com/comprehend/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/comprehend/</a>\n\t\t\t\t\t\t</p>"
+    },
+    {
+      "id": "18-18",
+      "number": 18,
+      "text": "A customer support company is utilizing Amazon Bedrock to refine its chatbot by improving its intent recognition capabilities. When implementing few-shot learning techniques, what should the data structure of the few-shot examples consist of to effectively enhance the model's ability to discern and correctly respond based on user intent?",
+      "options": [
+        {
+          "text": "Each example should juxtapose incorrect user intents alongside the correct ones to teach distinction.",
+          "correct": false
+        },
+        {
+          "text": "Each example should focus on the model‘s predicted responses without linking them to specific user inputs or intents.",
+          "correct": false
+        },
+        {
+          "text": "Each example should contain user input paired with the correct user intent label.",
+          "correct": true
+        },
+        {
+          "text": "Each example should only include the full conversation history without explicit intent labels.",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Few-shot learning in AI models, such as those developed on Amazon Bedrock, significantly benefits from examples that clearly associate specific user inputs with their corresponding intents. This approach directly supports the model‘s ability to learn and generalize from few examples by clearly defining what constitutes each intent, thus enhancing its predictive accuracy in operational scenarios.</p>"
+    },
+    {
+      "id": "18-19",
+      "number": 19,
+      "text": "A content marketing team is using a generative AI model for drafting articles and notices the model is restricted by the quantity of text it can analyze in one operation. Which concept explains the limitation on the amount of text this AI model can process at a single time?",
+      "options": [
+        {
+          "text": "Context window",
+          "correct": true
+        },
+        {
+          "text": "Tokens",
+          "correct": false
+        },
+        {
+          "text": "Embeddings",
+          "correct": false
+        },
+        {
+          "text": "Character count",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>The correct answer is <b>Context window</b>.</p>\n\t\t\t\t\t\t<p>Here’s why:</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li><b>Context window:</b> This refers to the amount of text an AI model can consider at once when generating or analyzing text. It’s a key limitation in many large language models.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>Here’s why the other options are less appropriate:</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li><b>Tokens:</b> Tokens are the basic units of text that the model processes (words, parts of words, etc.). While related, they don’t directly explain the <em>limitation</em> on the amount of text.</li>\n\t\t\t\t\t\t\t<li><b>Embeddings:</b> Embeddings are numerical representations of words or phrases, used to capture their meaning. They don’t limit the amount of text the model can process.</li>\n\t\t\t\t\t\t\t<li><b>Character count:</b> While character count is a practical measure of text length, it doesn’t represent the fundamental limitation of the AI model’s processing capacity as well as the context window does. The context window more accurately describes the amount of related information that the model can actively use.</li>\n\t\t\t\t\t\t</ul>"
+    },
+    {
+      "id": "18-20",
+      "number": 20,
+      "text": "In the context of Amazon Bedrock, which embedded database is primarily used for managing vector embeddings in Knowledge Bases to facilitate NLP and document search functionalities?",
+      "options": [
+        {
+          "text": "OpenSearch Serverless vector store",
+          "correct": true
+        },
+        {
+          "text": "Redis Enterprise Cloud",
+          "correct": false
+        },
+        {
+          "text": "MongoDB",
+          "correct": false
+        },
+        {
+          "text": "Amazon Aurora",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>\n\t\t\t\t\t\t\t<span>The embedded database primarily used for managing vector embeddings in Amazon Bedrock Knowledge Bases is </span><b><span>OpenSearch Serverless vector store</span></b><span>.</span><span>&nbsp;</span>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p>Here’s why:</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b>OpenSearch Serverless vector store:</b>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<span>Amazon Bedrock Knowledge Bases leverages OpenSearch Serverless’s vector search capabilities to store and efficiently retrieve vector embeddings.</span> This is crucial for semantic search and question-answering tasks within NLP applications.<span> &nbsp;</span>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>Here’s why the other options are not the primary choice:</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b>Redis Enterprise Cloud:</b>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>While Redis is a powerful in-memory data store, it’s not the primary embedded database used by Amazon Bedrock Knowledge Bases for vector embeddings.</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b>MongoDB:</b>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>MongoDB is a document database, but it’s not the default choice for vector embedding management in Amazon Bedrock.</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b>Amazon Aurora:</b>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<span>Amazon Aurora is a relational database service, and while it’s highly capable, it’s not the primary service used for managing vector embeddings in this context.</span>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>"
+    },
+    {
+      "id": "18-21",
+      "number": 21,
+      "text": "A company is exploring Amazon Q to streamline its internal business processes through automation and generative AI capabilities. The team is particularly interested in understanding how Amazon Q integrates generative AI techniques within its web application workflow to enhance tasks such as automating report generation, creating summaries, and analyzing large datasets. They want to know which specific generative AI techniques are employed in Amazon Q to achieve these outcomes. Which of the following generative AI techniques are used in the Amazon Q Business web application workflow? (Select two)",
+      "options": [
+        {
+          "text": "Diffusion Model",
+          "correct": false
+        },
+        {
+          "text": "Retrieval-Augmented Generation (RAG)",
+          "correct": true
+        },
+        {
+          "text": "Large Language Model (LLM)",
+          "correct": true
+        },
+        {
+          "text": "Variational autoencoders (VAE)",
+          "correct": false
+        },
+        {
+          "text": "Generative adversarial network (GAN)",
+          "correct": false
+        }
+      ],
+      "multiSelect": true,
+      "explanationHtml": "<p>The two generative AI techniques used in the Amazon Q Business web application workflow are:</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li><b>Retrieval-Augmented Generation (RAG)</b></li>\n\t\t\t\t\t\t\t<li><b>Large Language Model (LLM)</b></li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>Here’s why:</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b>Retrieval-Augmented Generation (RAG):</b>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<span>Amazon Q uses RAG to ground its responses in your company’s specific data.</span> This allows it to provide more accurate and contextually relevant information, especially when dealing with internal documents and datasets.<span>&nbsp;</span>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b>Large Language Model (LLM):</b>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>LLMs are the core of Amazon Q’s generative AI capabilities. <span>They enable tasks like summarizing documents, generating reports, and analyzing data through natural language interactions.</span><span>&nbsp;</span>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>Here’s why the other options are not primarily used in this context:</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b>Diffusion Model:</b>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>Diffusion models are primarily used for image generation and are not a key component of Amazon Q’s text-based workflows.</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b>Variational autoencoders (VAE):</b>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>VAEs are used for learning latent representations of data, often in image and generative tasks, but are less central to the core functionalities of Amazon Q.</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b>Generative adversarial network (GAN):</b>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<span>GANs are used for generating realistic synthetic data, particularly images, and are not a primary technique for Amazon Q’s business application workflows.</span>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>"
+    },
+    {
+      "id": "18-22",
+      "number": 22,
+      "text": "A company utilizes Amazon SageMaker to scrutinize customer purchase habits and forecast upcoming trends. Their data scientists process smaller datasets (under 1 GB) mainly from sales and customer logs weekly. The results are not time-sensitive. Which SageMaker inference type should they use?",
+      "options": [
+        {
+          "text": "Real-time Inference",
+          "correct": false
+        },
+        {
+          "text": "Serverless Inference",
+          "correct": false
+        },
+        {
+          "text": "Batch Inference",
+          "correct": true
+        },
+        {
+          "text": "Asynchronous Inference",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>The most suitable SageMaker inference type for this scenario is <b>Batch Inference</b>. </p>\n\t\t\t\t\t\t<p>Here’s why:</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b>Batch Inference:</b>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>This is ideal for processing large datasets offline, which perfectly matches the company’s weekly analysis of sales and customer logs.</li>\n\t\t\t\t\t\t\t\t\t<li>It’s cost-effective for non-time-sensitive tasks, as it doesn’t require maintaining a continuously running endpoint.</li>\n\t\t\t\t\t\t\t\t\t<li>It’s well-suited for processing datasets of the size described (under 1 GB).</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>Here’s why the other options are less appropriate:</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b>Real-time Inference:</b>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>This is designed for applications that require immediate predictions, which is not the case here.</li>\n\t\t\t\t\t\t\t\t\t<li>It involves maintaining a continuously running endpoint, which is more expensive than batch inference.</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b>Serverless Inference:</b>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>While serverless inference is cost effective for spiky or infrequent traffic, batch inference is better designed for processing large datasets in an offline manor.</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b>Asynchronous Inference:</b>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>Asynchronous inference is good for near real time results, and for large payloads, but batch inference is the best for offline large dataset processing.</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>"
+    },
+    {
+      "id": "18-23",
+      "number": 23,
+      "text": "When deploying generative AI models in a healthcare context using the AWS cloud, which factor is critical for ensuring the success of such applications in terms of data handling and scalability?",
+      "options": [
+        {
+          "text": "Implementing AWS Glue for data cataloging",
+          "correct": false
+        },
+        {
+          "text": "Using AWS IoT for real-time data analysis",
+          "correct": false
+        },
+        {
+          "text": "Leveraging AWS SageMaker for model training and deployment",
+          "correct": true
+        },
+        {
+          "text": "Utilizing AWS Lambda for managing backend services",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<ol>\n\t\t\t\t\t\t\t<li>Incorrect <b>Implementing AWS Glue for data cataloging</b>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>Glue helps prepare and catalog data.</li>\n\t\t\t\t\t\t\t\t\t<li>Useful, but not the core factor for deploying <b>generative AI models at scale</b>. </li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>Incorrect <b>Using AWS IoT for real-time data analysis</b>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>IoT is for device telemetry and real-time streaming.</li>\n\t\t\t\t\t\t\t\t\t<li>Not central to deploying generative AI in healthcare.</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>Correct <b>Leveraging AWS SageMaker for model training and deployment</b>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>SageMaker is <b>purpose-built for ML and generative AI</b>. </li>\n\t\t\t\t\t\t\t\t\t<li>Provides managed infrastructure for <b>scalability</b>, <b>training</b>, <b>deployment</b>, and <b>compliance features</b> (important in healthcare, e.g., HIPAA-eligible). </li>\n\t\t\t\t\t\t\t\t\t<li>This is the <b>critical factor</b> for success.</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>Incorrect <b>Utilizing AWS Lambda for managing backend services</b>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>Lambda is serverless compute.</li>\n\t\t\t\t\t\t\t\t\t<li>Useful for event-driven logic, but not for <b>training/deploying generative AI models at scale</b>. </li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ol>"
+    },
+    {
+      "id": "18-24",
+      "number": 24,
+      "text": "A logistics company is exploring Amazon Machine Learning (ML) services to enhance its predictive analytics, such as optimizing delivery routes and forecasting demand. The data science team needs to understand the key features and capabilities of various Amazon ML services to determine which ones align with their business goals. To ensure they make the right decisions, the team is reviewing different options and statements about these services. Which of the following represent the CORRECT statements regarding the Amazon ML services? (Select two)",
+      "options": [
+        {
+          "text": "Amazon Rekognition can extract key phrases and automatically organizes a collection of text files by topic.",
+          "correct": false
+        },
+        {
+          "text": "Amazon Comprehend service uses machine learning to find insights and relationships in the text.",
+          "correct": true
+        },
+        {
+          "text": "Amazon Transcribe is an AWS service for building conversational interfaces for applications using voice and text.",
+          "correct": false
+        },
+        {
+          "text": "Amazon Comprehend uses machine learning models to convert speech to text.",
+          "correct": false
+        },
+        {
+          "text": "Amazon Polly is used to deploy high-quality, natural-sounding human voices in dozens of languages.",
+          "correct": true
+        }
+      ],
+      "multiSelect": true,
+      "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Amazon Comprehend service uses machine learning to find insights and relationships in the text.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>Amazon Comprehend</b> is a <b>Natural Language Processing (NLP)</b> service that uses ML to uncover insights and relationships within unstructured text data. Its core capabilities include key phrase extraction, sentiment analysis, language detection, topic modeling, and entity recognition.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Amazon Polly is used to deploy high-quality, natural-sounding human voices in dozens of languages.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>Amazon Polly</b> is a <b>Text-to-Speech (TTS)</b> service that converts text into lifelike speech, allowing you to create applications that talk. It is known for supporting many languages and offering high-quality, natural-sounding voices.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Amazon Rekognition can extract key phrases and automatically organizes a collection of text files by topic.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>Amazon Rekognition</b> is a service for <b>image and video analysis</b>, not text analysis. The service responsible for key phrase extraction and topic organization from text is <b>Amazon Comprehend</b>.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Amazon Transcribe is an AWS service for building conversational interfaces for applications using voice and text.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>Amazon Transcribe</b> is a <b>Speech-to-Text (STT)</b> service that converts spoken audio into text. The service responsible for building conversational interfaces (chatbots) is <b>Amazon Lex</b>.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Amazon Comprehend uses machine learning models to convert speech to text.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>As established, <b>Amazon Comprehend</b> is an <b>NLP</b> service for analyzing text. The service that uses ML models to convert <b>speech to text</b> is <b>Amazon Transcribe</b>.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>"
+    },
+    {
+      "id": "18-25",
+      "number": 25,
+      "text": "A retail company wants to enhance their in-store operations by employing AI solutions for tasks like inventory management and visual monitoring. They are looking for AWS services which can provide them with both pre-trained and customizable computer vision models. Which AWS service best matches these requirements?",
+      "options": [
+        {
+          "text": "Amazon DeepRacer",
+          "correct": false
+        },
+        {
+          "text": "Amazon Rekognition",
+          "correct": false
+        },
+        {
+          "text": "Amazon Textract",
+          "correct": false
+        },
+        {
+          "text": "Amazon SageMaker",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p><b>Amazon SageMaker</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Correct because <b>Amazon SageMaker</b> allows developers to build, train, and deploy <b>customizable machine learning models</b>, including computer vision models.</li>\n\t\t\t\t\t\t\t<li>Through <b>SageMaker JumpStart</b>, users can also access <b>pre‑trained models</b> for computer vision tasks, making it suitable for both customization and ready‑to‑use solutions.</li>\n\t\t\t\t\t\t\t<li>This flexibility makes SageMaker the best match for retail companies needing AI for inventory management and visual monitoring.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p><b>Amazon DeepRacer</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because DeepRacer is an <b>autonomous racing car platform</b> used for reinforcement learning experiments. </li>\n\t\t\t\t\t\t\t<li>It is not designed for inventory management or computer vision tasks in retail operations.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>Amazon Rekognition</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because Rekognition provides <b>pre‑trained computer vision capabilities</b> such as facial recognition, object detection, and image/video analysis. </li>\n\t\t\t\t\t\t\t<li>While powerful, it does not offer <b>customizable model training</b>, which is a key requirement in this scenario. </li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>Amazon Textract</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because Textract is an <b>OCR (Optical Character Recognition) service</b> that extracts text and data from scanned documents. </li>\n\t\t\t\t\t\t\t<li>It is not intended for visual monitoring or inventory management tasks.</li>\n\t\t\t\t\t\t</ul>"
+    },
+    {
+      "id": "18-26",
+      "number": 26,
+      "text": "A software development company intends to use Amazon Q Developer to incorporate AI-driven features such as automated code suggestions, task automation, and content generation. What is the underlying AWS service that primarily powers Amazon Q Developer?",
+      "options": [
+        {
+          "text": "AWS CodeGuru",
+          "correct": false
+        },
+        {
+          "text": "Amazon SageMaker JumpStart",
+          "correct": true
+        },
+        {
+          "text": "Amazon Comprehend",
+          "correct": false
+        },
+        {
+          "text": "Amazon Kendra",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p><b>Amazon SageMaker JumpStart</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li><b>Correct because</b> Amazon Q Developer leverages <b>Amazon SageMaker JumpStart</b> as the underlying AWS service.</li>\n\t\t\t\t\t\t\t<li>SageMaker JumpStart provides access to pre‑built, foundation models and managed ML capabilities, enabling Amazon Q Developer to deliver AI‑driven features like <b>code suggestions, automation, and content generation</b>. </li>\n\t\t\t\t\t\t\t<li>This aligns with AWS’s design: SageMaker JumpStart is the foundation for generative AI services integrated into developer tools.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p><b>AWS CodeGuru</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because CodeGuru is focused on <b>automated code reviews and performance profiling</b>, not powering generative AI features like content creation or task automation. </li>\n\t\t\t\t\t\t\t<li>It is a separate developer tool, not the underlying service for Amazon Q Developer.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>Amazon Comprehend</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because Comprehend is a <b>natural language processing service</b> for text analysis (sentiment, entity recognition, etc.). </li>\n\t\t\t\t\t\t\t<li>While useful for NLP tasks, it does not serve as the foundation for Amazon Q Developer’s generative AI capabilities.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>Amazon Kendra</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because Kendra is an <b>enterprise search service</b> that uses ML to provide intelligent search across documents. </li>\n\t\t\t\t\t\t\t<li>It is unrelated to code generation or developer automation features.</li>\n\t\t\t\t\t\t</ul>"
+    },
+    {
+      "id": "18-27",
+      "number": 27,
+      "text": "A healthcare analytics company is planning to enhance its AI capabilities by specializing in medical text analysis using Amazon Bedrock. They intend to fine-tune a foundation model using their own labeled dataset of clinical notes. What would be the most effective mode of operation in Bedrock for this requirement?",
+      "options": [
+        {
+          "text": "Using the Bedrock playground for iterative model testing and tuning.",
+          "correct": false
+        },
+        {
+          "text": "Utilizing Provisioned Throughput mode to ensure dedicated capacity for model fine-tuning.",
+          "correct": false
+        },
+        {
+          "text": "Adopting On-Demand mode, charging based only on the compute resources used.",
+          "correct": true
+        },
+        {
+          "text": "Implementing Batch inference mode for processing large datasets.",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Adopting On‑Demand mode, charging based only on the compute resources used.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Correct because <b>On‑Demand mode</b> in Amazon Bedrock is designed for flexible experimentation and fine‑tuning tasks.</li>\n\t\t\t\t\t\t\t<li>It allows the company to fine‑tune foundation models using their labeled dataset without needing dedicated throughput reservations.</li>\n\t\t\t\t\t\t\t<li>This mode is cost‑effective for workloads like model training and fine‑tuning, where compute usage may vary.</li>\n\t\t\t\t\t\t\t<li>It directly supports the requirement of fine‑tuning a foundation model for medical text analysis.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Using the Bedrock playground for iterative model testing and tuning.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because the playground is intended for <b>prompt experimentation and testing</b>, not for fine‑tuning with labeled datasets. </li>\n\t\t\t\t\t\t\t<li>It helps validate model behavior interactively but does not support full fine‑tuning workflows.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Utilizing Provisioned Throughput mode to ensure dedicated capacity for model fine‑tuning.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because Provisioned Throughput is meant for <b>production inference workloads</b> that require guaranteed capacity and low latency. </li>\n\t\t\t\t\t\t\t<li>It is not the most effective or cost‑efficient option for fine‑tuning tasks.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Implementing Batch inference mode for processing large datasets.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because batch inference is used for <b>running predictions at scale</b>, not for fine‑tuning models. </li>\n\t\t\t\t\t\t\t<li>It is suitable for applying trained models to large datasets, but it does not address the fine‑tuning requirement.</li>\n\t\t\t\t\t\t</ul>"
+    },
+    {
+      "id": "18-28",
+      "number": 28,
+      "text": "What is a unique feature of Amazon Textract that differentiates it from traditional OCR (Optical Character Recognition) tools when processing documents?",
+      "options": [
+        {
+          "text": "Amazon Textract requires manual setup of document templates before extraction can occur.",
+          "correct": false
+        },
+        {
+          "text": "Amazon Textract can process images and PDFs exclusively in English.",
+          "correct": false
+        },
+        {
+          "text": "Amazon Textract provides only the coordinates of the text detected in documents.",
+          "correct": false
+        },
+        {
+          "text": "Amazon Textract is capable of recognizing and extracting information from forms and tables in addition to plain text.",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon Textract is a powerful service that goes beyond traditional OCR tools by extracting text along with the structure of the data contained within forms and tables in documents. This makes it particularly useful in automating data extraction tasks where structure and multiple data types are involved, such as processing forms and extracting data embedded in tables without manual intervention. This capability to handle complex document structures effectively helps in automating workflows and enhancing data management processes. </p>"
+    },
+    {
+      "id": "18-29",
+      "number": 29,
+      "text": "A media company is looking to efficiently transcribe large volumes of video content into text to aid in content categorization and accessibility compliance. They are considering using Amazon Transcribe. Which Amazon Transcribe feature would BEST meet the requirement to simultaneously transcribe and identify different speakers within the video content?",
+      "options": [
+        {
+          "text": "Speaker identification and channel labeling",
+          "correct": true
+        },
+        {
+          "text": "Amazon Transcribe Medical",
+          "correct": false
+        },
+        {
+          "text": "Amazon Transcribe Standard",
+          "correct": false
+        },
+        {
+          "text": "Custom vocabulary",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon Transcribe offers a feature called ‘Speaker identification‘, which automatically differentiates and identifies different speakers in the audio. It assigns each speaker a unique ID and accurately labels portions of the transcript to correspond with each speaker. This feature is particularly useful for media content, interviews, meetings, or any scenario involving multiple participants and requires the transcriptions to indicate which individual said what, thereby aiding in content categorization and compliance for accessibility. </p>"
+    },
+    {
+      "id": "18-30",
+      "number": 30,
+      "text": "In the context of real-time data processing for machine learning pipelines in AWS, how does Amazon Kinesis effectively manage high throughput ingestion of data?",
+      "options": [
+        {
+          "text": "By providing a single-threaded, sequential data stream that guarantees order at the expense of concurrency and speed.",
+          "correct": false
+        },
+        {
+          "text": "By dynamically adjusting the throughput of the data stream according to the incoming data volume.",
+          "correct": false
+        },
+        {
+          "text": "By using sharding to partition the data stream, allowing for concurrent data ingestion and parallel processing.",
+          "correct": true
+        },
+        {
+          "text": "By compressing the data before ingestion, reducing the volume of data flowing into the pipeline.",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon Kinesis Data Streams is designed to handle real-time data ingestion and processing at large scales. It achieves high throughput capabilities principally through sharding, where data is divided into ordered sequences, each managed independently. This allows for both high concurrency and parallelism in data processing, making it a robust choice for handling large, fast-moving data streams in machine learning and other applications. More detailed information can be found in the AWS documentation on Kinesis Data Streams. </p>"
+    },
+    {
+      "id": "18-31",
+      "number": 31,
+      "text": "A data analytics team at a large corporation needs to perform daily ETL jobs to process and transform large volumes of incoming data for their machine learning models. The incoming data contains various inconsistencies and formats that need to be standardized and stored in their Amazon Redshift data warehouse. How should the team utilize AWS Glue to address this requirement effectively?",
+      "options": [
+        {
+          "text": "Use AWS Glue DataBrew to manually craft and operate transformations for each data source before loading to Redshift.",
+          "correct": false
+        },
+        {
+          "text": "Implement AWS Lambda functions to manually parse and transform each incoming data file, then use Amazon S3 to stage and subsequently load the data into Redshift.",
+          "correct": false
+        },
+        {
+          "text": "Create AWS Glue Crawlers to automate schema recognition and then directly load the data into Amazon Redshift without transformations.",
+          "correct": false
+        },
+        {
+          "text": "Design an automated ETL pipeline using AWS Glue Jobs to transform incoming data into the required format and then load it into Amazon Redshift.",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>AWS Glue is a managed ETL (extract, transform, load) service that simplifies the process of preparing and transforming data at scale before moving it to data stores such as Amazon Redshift. Automating ETL processes via AWS Glue Jobs not only ensures scalability and efficiency but also helps in maintaining data consistency throughout the analytics pipeline. By leveraging Glue Jobs, teams can handle inconsistencies and varied data formats with less manual intervention, leading to more reliable and faster processing. </p>"
+    },
+    {
+      "id": "18-32",
+      "number": 32,
+      "text": "In the context of developing a natural language processing (NLP) solution, how do Transformer models specifically handle text processing for tasks such as language translation, summarization, and text generation?",
+      "options": [
+        {
+          "text": "Transformer models function by creating embeddings from large datasets and compressing this information into a smaller, more manageable latent space.",
+          "correct": false
+        },
+        {
+          "text": "Transformer models work by training two neural networks in a competitive manner to improve output text quality.",
+          "correct": false
+        },
+        {
+          "text": "Transformer models utilize a self-attention mechanism to process each word in the context of all other words in a sentence.",
+          "correct": true
+        },
+        {
+          "text": "Transformer models randomly alter words and phrases in the input data to generate new text based on probabilities.",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Transformer models are crucial in the field of NLP due to their architecture, specifically the self-attention mechanism, which allows them to consider each word in the context of all other words in the input sequence. This functionality provides significant improvements in handling language-based tasks because it means the model can maintain a broader awareness of the input text and make more contextually appropriate decisions when generating or transforming text. The ability to weigh different parts of the input data differently at different transformers layers allows for highly accurate and nuanced language processing performances. For further details, you can explore AWS‘s machine learning blog on Transformer models at [AWS Machine Learning Blog](<a href=\"https://aws.amazon.com/blogs/machine-learning/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/blogs/machine-learning/</a>). </p>"
+    },
+    {
+      "id": "18-33",
+      "number": 33,
+      "text": "A team of data scientists at a burgeoning tech startup are working on automating their ML artifact builds for various AI-driven projects ranging from natural language processing to image recognition. They aim to utilize AWS CodeBuild for this purpose. What is the primary advantage of using AWS CodeBuild for constructing their machine learning artifacts?",
+      "options": [
+        {
+          "text": "AWS CodeBuild provides a fully managed build service that compiles source code, runs tests, and produces software packages that are ready to deploy.",
+          "correct": true
+        },
+        {
+          "text": "AWS CodeBuild specializes in real-time data streaming and processing for immediate deployment of AI models.",
+          "correct": false
+        },
+        {
+          "text": "AWS CodeBuild offers direct integrations with Jupyter Notebook for immediate updates and builds during interactive sessions.",
+          "correct": false
+        },
+        {
+          "text": "AWS CodeBuild automatically manages the scaling of the underlying hardware to cater to real-time inference demands.",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>AWS CodeBuild is ideal for constructing ML artifacts due to its ability to provide a consistent, scalable, and managed environment for automating the build process. It helps in compiling code, running tests, and building software packages without the need for managing underlying infrastructure. This service aids teams in maintaining development and deployment efficiency, especially in complex projects involving machine learning where consistent environment setup is critical. </p>"
+    },
+    {
+      "id": "18-34",
+      "number": 34,
+      "text": "Given a retail company‘s intent to integrate MLflow with Amazon SageMaker for managing their machine learning workflows, which feature primarily describes the use of MLflow in this scenario?",
+      "options": [
+        {
+          "text": "Automatic deployment of machine learning models",
+          "correct": false
+        },
+        {
+          "text": "Manage machine learning experiments",
+          "correct": true
+        },
+        {
+          "text": "Predictive analytics with built-in algorithms",
+          "correct": false
+        },
+        {
+          "text": "Provision bare-metal infrastructure",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>MLflow is an open-source platform for managing the end-to-end machine learning lifecycle. It includes features such as experiment tracking, model versioning, and a model registry. Integrating MLflow with Amazon SageMaker provides a comprehensive toolkit for managing machine learning experiments, which enhances productivity and collaboration for teams working on machine learning projects. This setup helps in maintaining a systematic approach to recording experiments and managing models efficiently. </p>"
+    },
+    {
+      "id": "18-35",
+      "number": 35,
+      "text": "A pharmaceutical company is deploying an AI-powered diagnostic tool that uses machine learning models for analyzing patient data. These models are hosted in Amazon SageMaker but must be isolated from any other network traffic. How should they configure a Virtual Private Cloud (VPC) in AWS for maximum security and isolation?",
+      "options": [
+        {
+          "text": "Deploy the models in a VPC with both public and private subnets, using NACLs for added security.",
+          "correct": false
+        },
+        {
+          "text": "Create a private subnet in the VPC and connect it with a NAT Gateway for controlled outbound traffic.",
+          "correct": false
+        },
+        {
+          "text": "Create a totally isolated private subnet with no Internet access and use VPC endpoints for AWS services connectivity.",
+          "correct": true
+        },
+        {
+          "text": "Use a public subnet in the VPC and secure it with Security Groups.",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>In scenarios requiring high security for sensitive data, such as handling medical information, the best practice is to use totally isolated private subnets within a VPC. This approach prevents any accidental data exposure to the Internet, and AWS VPC endpoints allow secure, private connections to other AWS services without needing to traverse the public Internet. This setup maximizes security by ensuring that only the necessary traffic to and from AWS services can occur, following the principle of least privilege. </p>"
+    },
+    {
+      "id": "18-36",
+      "number": 36,
+      "text": "In the context of AI and NLP within AWS, what term is used to describe the smallest unit of text that models process, such as words, sub-words, or characters?",
+      "options": [
+        {
+          "text": "Vectors",
+          "correct": false
+        },
+        {
+          "text": "Context Window",
+          "correct": false
+        },
+        {
+          "text": "Tokens",
+          "correct": true
+        },
+        {
+          "text": "Embeddings",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>In AI and NLP, tokens are fundamental units through which models perceive and process text. This granularity allows models to analyze and generate language in a manageable way. Within AWS, services like Amazon Comprehend and SageMaker use tokenization to understand and manipulate text effectively.</p>"
+    },
+    {
+      "id": "18-37",
+      "number": 37,
+      "text": "What key concern is the admissions committee addressing by implementing AI detection tools to analyze application essays?",
+      "options": [
+        {
+          "text": "Plagiarism of content",
+          "correct": true
+        },
+        {
+          "text": "Technical challenges of essay submission",
+          "correct": false
+        },
+        {
+          "text": "Bias in essay evaluation",
+          "correct": false
+        },
+        {
+          "text": "Lack of creativity in essays",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>The introduction of AI and language models in crafting essays has posed ethical questions about authenticity and merit in applications to academic institutions. The Ivy League admissions committee‘s primary concern is ensuring that all essay submissions are genuine works of the applicants and not content created artificially by AI, preserving the integrity and fairness of the admissions process. Detection of AI-generated content is pursued to counter potential misuse where students might pass off machine-produced text as their own, thereby undermining the purpose of essay requirements to gauge individual abilities and authenticity. </p>"
+    },
+    {
+      "id": "18-38",
+      "number": 38,
+      "text": "A financial services company has implemented a machine learning system on AWS to detect fraudulent transactions in real time. The company aims to ensure data privacy and adherence to compliance standards by monitoring both the inputs and outputs of their fraud detection models. What is the most effective AWS service to achieve detailed monitoring of this model‘s invocation data?",
+      "options": [
+        {
+          "text": "Enable detailed logging in Amazon SageMaker for both input and output data of the machine learning models.",
+          "correct": true
+        },
+        {
+          "text": "Implement AWS CloudTrail to log all API activities related to the machine learning models.",
+          "correct": false
+        },
+        {
+          "text": "Utilize Amazon EventBridge for real-time monitoring of model invocation events.",
+          "correct": false
+        },
+        {
+          "text": "Use AWS X-Ray to trace and analyze the requests made to the machine learning models.",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>In scenarios requiring detailed tracking of both input and output data from machine learning models, Amazon SageMaker‘s logging capabilities are most apt. This feature facilitates not only compliance with stringent standards like those in the financial sector but also aids in maintaining operational transparency by providing exhaustive data regarding each model invocation. This is crucial for environments needing to uphold data integrity and privacy standards. </p>"
+    },
+    {
+      "id": "18-39",
+      "number": 39,
+      "text": "A content creation company wants to use Amazon Polly to integrate speech into their applications for accessibility features. They need to ensure that the speech generated is lifelike and engaging for users with different accents. Which feature of Amazon Polly should they use to achieve natural-sounding, accent-specific speech synthesis?",
+      "options": [
+        {
+          "text": "Utilize Lexicon feature to customize pronunciation of certain words only.",
+          "correct": false
+        },
+        {
+          "text": "Employ Amazon Polly's NTTS (Neural Text-To-Speech) technology with support for multiple languages and Speaking Styles.",
+          "correct": true
+        },
+        {
+          "text": "Implement an external language translation service before synthesis.",
+          "correct": false
+        },
+        {
+          "text": "Use standard voices for all users to ensure uniformity.",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon Polly‘s Neural Text-To-Speech (NTTS) technology enhances the naturalness and expressiveness of the synthesized speech, making it more lifelike compared to standard Text-To-Speech (TTS). Additionally, NTTS supports different languages and Speaking Styles, which allows customization according to the user‘s accent and preferences, thereby enhancing the overall user experience with speech-enabled applications. This technology adapts fluidly to various contexts and user needs, representing a good choice for applications requiring high-quality, personalized voice interactions. More about Polly NTTS can be found at <a href=\"https://aws.amazon.com/polly/features/#Neural_Text-to-Speech\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/polly/features/#Neural_Text-to-Speech</a>. </p>"
+    },
+    {
+      "id": "18-40",
+      "number": 40,
+      "text": "In the AWS Shared Responsibility Model, what is the scope of AWS‘s responsibility versus that of the customer?",
+      "options": [
+        {
+          "text": "AWS is responsible for configuring the security of customer applications, while customers handle the physical infrastructure.",
+          "correct": false
+        },
+        {
+          "text": "Customers are responsible for network management and hardware maintenance, while AWS manages application security and data encryption.",
+          "correct": false
+        },
+        {
+          "text": "AWS takes responsibility for user identity management and securing network data, leaving the customers to manage the operating system and virtual network controls.",
+          "correct": false
+        },
+        {
+          "text": "AWS is responsible for the security of the cloud, including physical infrastructure and host systems; customers are responsible for security in the cloud, such as data security and user access management.",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>In AWS‘s Shared Responsibility Model, AWS ensures the security of the components of the cloud they control, like hardware, software, networking, and facilities. On the other hand, the customer is responsible for securing the components they operate and manage, such as the data stored in AWS, configuration of the AWS services they use, and management of user access. This model outlines the need to understand security responsibilities to ensure secure and efficient use of AWS cloud services. </p>"
+    },
+    {
+      "id": "18-41",
+      "number": 41,
+      "text": "Which of the following is the primary benefit of using AWS Key Management Service (KMS) for data encryption in cloud applications?",
+      "options": [
+        {
+          "text": "It enhances network performance for applications using encrypted data.",
+          "correct": false
+        },
+        {
+          "text": "It simplifies the management of encryption keys used to protect data.",
+          "correct": true
+        },
+        {
+          "text": "It automates the geographical distribution of data.",
+          "correct": false
+        },
+        {
+          "text": "It provides unlimited storage for data encryption keys.",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>AWS Key Management Service (KMS) is designed to help you create and manage cryptographic keys and control their use across a wide range of AWS services and in your applications. It simplifies the management of encryption keys, ensuring secure key storage, policy enforcement, and log auditing in one integrated service. For more information, visit the AWS documentation on KMS: <a href=\"https://docs.aws.amazon.com/kms/\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/kms/</a>\n\t\t\t\t\t\t</p>"
+    },
+    {
+      "id": "18-42",
+      "number": 42,
+      "text": "A media company is developing an AI-based image generation model and notices the model‘s bias due to an imbalanced training dataset, particularly underrepresenting certain demographic groups. What method should be used to ensure a more balanced representation in the generated images?",
+      "options": [
+        {
+          "text": "Introduce manual review and adjustment to the training data by human experts.",
+          "correct": false
+        },
+        {
+          "text": "Increase the amount of training data for underrepresented groups through data augmentation.",
+          "correct": true
+        },
+        {
+          "text": "Switch to a different AI model that inherently avoids bias.",
+          "correct": false
+        },
+        {
+          "text": "Apply regularization techniques during training to reduce model complexity.",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Ensuring fair representation in AI-generated images requires addressing the imbalance in the training dataset. Among the given options, data augmentation is the most direct and effective approach to increase the representation of underrepresented groups by generating additional relevant data instances. This helps in creating a more balanced dataset, which in turn reduces bias in the model‘s output.</p>"
+    },
+    {
+      "id": "18-43",
+      "number": 43,
+      "text": "A company is deploying AI systems on AWS and seeks a tool to help optimize their AWS environment for governance, cost savings, performance, security, and fault tolerance. Which AWS service best provides recommendations and best practices for improving the efficiency and security of their AI system deployments?",
+      "options": [
+        {
+          "text": "AWS Audit Manager",
+          "correct": false
+        },
+        {
+          "text": "AWS CloudTrail",
+          "correct": false
+        },
+        {
+          "text": "AWS Config",
+          "correct": false
+        },
+        {
+          "text": "AWS Trusted Advisor",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>AWS Trusted Advisor is specifically designed to provide automated recommendations across several categories including cost optimization, performance, security, and fault tolerance. It helps ensure your AI deployments on AWS are running efficiently and securely, aligning with best practices which are crucial attributes for AI system implementations. This can be further explored through the AWS documentation and case studies available at [AWS Trusted Advisor Official Page](<a href=\"https://aws.amazon.com/premiumsupport/technology/trusted-advisor/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/premiumsupport/technology/trusted-advisor/</a>). </p>"
+    },
+    {
+      "id": "18-44",
+      "number": 44,
+      "text": "A data analyst at a healthcare company is leveraging AWS Glue DataBrew to clean and prepare a large dataset comprising patient records. The data includes inconsistent formatting and missing values, which need to be resolved before it can be used for machine learning model training. Which of the following features in AWS Glue DataBrew would be most effective for automatically resolving these data issues?",
+      "options": [
+        {
+          "text": "Utilizing AWS Glue DataBrew‘s transformations to apply data cleaning recipes",
+          "correct": true
+        },
+        {
+          "text": "Creating SQL queries within Amazon Athena to filter and format the raw data",
+          "correct": false
+        },
+        {
+          "text": "Employing AWS Glue ETL jobs to manually code the data cleaning process",
+          "correct": false
+        },
+        {
+          "text": "Using AWS Glue Data Catalog for data source connection and metadata management",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>AWS Glue DataBrew is designed to help users clean and normalize data directly using a visual interface, without needing advanced coding skills. It provides various pre-built transformations for tasks such as handling missing values or correcting format inconsistencies, which are crucial for preparing accurate, reliable datasets for machine learning models. The use of DataBrew in this context improves efficiency and reduces the likelihood of errors compared to manual coding or using other tools not specifically designed for data preparation. </p>"
+    },
+    {
+      "id": "18-45",
+      "number": 45,
+      "text": "Which explanation best differentiates Shapley values from Partial Dependence Plots (PDP) in terms of model explainability within AI systems, and advises on their respective applications?",
+      "options": [
+        {
+          "text": "Both Shapley values and PDP offer visual interpretations, but Shapley values are more efficient in computational costs.",
+          "correct": false
+        },
+        {
+          "text": "Shapley values and PDP essentially provide explanations at the dataset level by aggregating data impacts, but Shapley values are computationally more intensive.",
+          "correct": false
+        },
+        {
+          "text": "PDP provides numeric values for feature contributions to model predictions, whereas Shapley values are primarily used for presenting visual distributions of feature influence.",
+          "correct": false
+        },
+        {
+          "text": "Shapley values measure the impact of each feature on an instance prediction, making them ideal for individual analysis, whereas PDP illustrates the effect of a feature across a data set, serving for broader inferences.",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Understanding the distinction between Shapley values and Partial Dependence Plots is crucial for effectively deploying model explainability tools. Shapley values are used for local explanations, providing detailed insights on how each feature impacts a particular prediction. In contrast, PDPs offer a more general view by illustrating the average effect of a feature across the entire dataset, useful for understanding global model behavior. These tools play significant roles in analyzing and interpreting complex machine learning models, ensuring transparency and enhancing trust in AI applications. </p>"
+    },
+    {
+      "id": "18-46",
+      "number": 46,
+      "text": "A company is using a machine learning model for sales forecasting. During peak sales periods, they notice performance issues due to increased demand on the model. To manage varying loads and ensure efficient resource utilization, the company plans to implement AWS Auto Scaling. Which AWS service should be utilized to automatically adjust the compute capacity for the ML inference to handle the fluctuating demand?",
+      "options": [
+        {
+          "text": "Use AWS Auto Scaling with Amazon EC2 instances.",
+          "correct": true
+        },
+        {
+          "text": "Use Amazon S3 to enhance performance during peak times.",
+          "correct": false
+        },
+        {
+          "text": "Implement Elastic Load Balancing without additional auto-scaling features.",
+          "correct": false
+        },
+        {
+          "text": "Apply AWS Lambda for automatic scaling.",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>AWS Auto Scaling with Amazon EC2 is the most effective option for adjusting compute resources dynamically to handle fluctuating demands, such as those experienced during peak sales in a sales forecasting model. It automates the scaling process, ensuring resources are efficiently utilized without manual intervention. This solution not only helps in maintaining performance but also in managing the cost by scaling down when the demand decreases. For more details, visit the AWS Auto Scaling page: <a href=\"https://aws.amazon.com/autoscaling/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/autoscaling/</a>\n\t\t\t\t\t\t</p>"
+    },
+    {
+      "id": "18-47",
+      "number": 47,
+      "text": "A financial services company is evaluating Foundation Models (FMs) for generative AI applications such as automated report generation. Which statement accurately describes the learning mechanisms of Foundation Models in this context?",
+      "options": [
+        {
+          "text": "FMs use self-supervised learning to generate labels from input data, however, fine-tuning an FM is a supervised learning process.",
+          "correct": true
+        },
+        {
+          "text": "FMs use supervised learning to generate labels from input data, however, fine-tuning an FM is a self-supervised learning process.",
+          "correct": false
+        },
+        {
+          "text": "FMs use self-supervised learning to generate labels from input data and fine-tuning an FM is a self-supervised learning process as well.",
+          "correct": false
+        },
+        {
+          "text": "FMs use supervised learning to generate labels from input data, and fine-tuning an FM is a supervised learning process as well.",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Foundation Models (FMs) such as those developed for generative AI purposes, utilize self-supervised learning to analyze and understand unlabeled data extensively. This capacity allows them to predict or generate new data based on learned representations. When these models are fine-tuned for specific applications (e.g., generating financial reports), they are typically trained further with supervised learning, where examples with known outputs are necessary to ensure that the model adheres to task-specific accuracy and relevance. Understanding the distinction between initial training methods and fine-tuning processes is crucial for effectively implementing and scaling AI solutions in business scenarios. </p>"
+    },
+    {
+      "id": "18-48",
+      "number": 48,
+      "text": "Which of the following statements are correct regarding AWS SageMaker? (Select two)",
+      "options": [
+        {
+          "text": "AWS SageMaker includes Jupyter notebooks for easy data exploration and model training.",
+          "correct": true
+        },
+        {
+          "text": "AWS SageMaker can only be used with structured data.",
+          "correct": false
+        },
+        {
+          "text": "AWS SageMaker does not provide hyperparameter tuning capabilities.",
+          "correct": false
+        },
+        {
+          "text": "AWS SageMaker is limited to using TensorFlow as the machine learning framework.",
+          "correct": false
+        },
+        {
+          "text": "AWS SageMaker enables you to build, train, and deploy machine learning models quickly.",
+          "correct": true
+        },
+        {
+          "text": "AWS SageMaker cannot be used for real-time inference.",
+          "correct": false
+        }
+      ],
+      "multiSelect": true,
+      "explanationHtml": "<p>AWS SageMaker is a fully managed service that provides every developer and data scientist with the ability to build, train, and deploy machine learning (ML) models quickly. It includes managed Jupyter notebooks for easy data exploration and model training, supports multiple frameworks, and offers hyperparameter tuning and real-time inference capabilities. These features make it a comprehensive solution for end-to-end machine learning workflows. More info: <a href=\"https://aws.amazon.com/sagemaker/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/sagemaker/</a>\n\t\t\t\t\t\t</p>"
+    },
+    {
+      "id": "18-49",
+      "number": 49,
+      "text": "A financial analytics company wants to automate its ML workflows for predicting stock market trends using multiple AWS services. The company requires a solution that can manage, orchestrate, and automate the execution of distributed machine learning tasks which involve data gathering, data processing, model training, and model deployment. Which AWS service is most suitable to manage this kind of orchestration?",
+      "options": [
+        {
+          "text": "Adopt AWS Direct Connect to handle the ML workflow orchestration.",
+          "correct": false
+        },
+        {
+          "text": "Use AWS Lambda for orchestrating and automating the ML workflows.",
+          "correct": false
+        },
+        {
+          "text": "Use AWS Step Functions to manage the orchestration of ML workflows.",
+          "correct": true
+        },
+        {
+          "text": "Apply AWS CloudFormation to orchestrate the ML workflows.",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>AWS Step Functions is ideal for orchestrating complex workflows such as those required for machine learning pipelines in a scalable and maintainable way. It allows for the automation of various stages like data extraction, preprocessing, model training, and deployment within a visual workflow, promoting efficiency and reducing the chance of errors during the process. More information on AWS Step Functions for machine learning can be found at the official AWS documentation on <a href=\"https://aws.amazon.com/step-functions/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/step-functions/</a>\n\t\t\t\t\t\t</p>"
+    },
+    {
+      "id": "18-50",
+      "number": 50,
+      "text": "A healthcare analytics company has noticed significant performance degradation in their machine learning model when processing new, unseen patient data after deployment. This issue indicates a potential problem in the model‘s ability to generalize to new cases. Which of the following strategies should be employed to mitigate this problem and enhance the model's real-world applicability?",
+      "options": [
+        {
+          "text": "Apply techniques like regularization, increasing the training data size, and utilizing advanced cross-validation methods.",
+          "correct": true
+        },
+        {
+          "text": "Decrease the complexity of the model by reducing the number of layers and neurons in the neural network.",
+          "correct": false
+        },
+        {
+          "text": "Employ a state-of-the-art deep learning architecture to automatically ensure model generalization.",
+          "correct": false
+        },
+        {
+          "text": "Remove outliers and noise from the training dataset to clean the data thoroughly before training.",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Improving a model‘s ability to generalize to new, unseen data requires a combination of strategies rather than a single change. Regularization techniques such as L1 or L2 regularization help prevent overfitting by penalizing excessively large weights. Increasing the dataset size provides the model with a more comprehensive representation of real-world scenarios, thus helping it learn and adapt better. Advanced cross-validation methods, including k-fold or stratified cross-validation, provide a better evaluation of how the model might perform under various unknown datasets, contributing to a realistic estimate of its general performance. </p>"
+    },
+    {
+      "id": "18-51",
+      "number": 51,
+      "text": "A technology company is considering utilizing Amazon Bedrock for integrating generative AI capabilities into their range of products, but their future usage levels remain ambiguous. They require a flexible pricing strategy that allows for varied experimentation without binding them to specific usage commitments or lengthy contracts. Considering these needs, which AWS pricing model would most effectively meet their requirements?",
+      "options": [
+        {
+          "text": "The company should opt for On-Demand pricing, which allows them to pay only for the actual usage of resources without any long-term commitments.",
+          "correct": true
+        },
+        {
+          "text": "The company should choose Provisioned Throughput, which reserves a certain amount of capacity in advance for a discounted rate.",
+          "correct": false
+        },
+        {
+          "text": "The company should consider Spot Instances, which offer significant cost savings but come with the risk of interruptions.",
+          "correct": false
+        },
+        {
+          "text": "The company should select Reserved Instances, which offer lower rates for a long-term commitment.",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>When choosing a pricing model for AWS services, it‘s crucial to match the flexibility of the pricing model with the company‘s operational needs and usage patterns. In this scenario, On-Demand pricing is the most appropriate choice because it offers the maximum flexibility without requiring upfront commitments or payments, enabling the company to explore different applications of Amazon Bedrock in their products without unnecessary expenditures or constraints. </p>"
+    },
+    {
+      "id": "18-52",
+      "number": 52,
+      "text": "You are responsible for maintaining operational excellence for machine learning models deployed on AWS. One key aspect is monitoring performance to quickly detect and respond to issues like high prediction latency or resource constraints. Using Amazon CloudWatch, what would be the most effective strategy to maintain the performance of machine learning models in production?",
+      "options": [
+        {
+          "text": "Rely on the default CloudWatch metrics provided by AWS Lambda and AWS SageMaker without any custom metric or additional configuration.",
+          "correct": false
+        },
+        {
+          "text": "Only monitor the input and output data of the model to ensure data quality without configuring any additional metrics or alarms.",
+          "correct": false
+        },
+        {
+          "text": "Using CloudWatch, create a dashboard that includes custom metrics for inference latency, error rates, and system utilization, and set alarms to notify of anomalies.",
+          "correct": true
+        },
+        {
+          "text": "Set up CloudWatch Alarms for CPU and Memory utilization across machine learning infrastructure.",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Maintaining operational excellence for machine learning models in production involves comprehensive monitoring strategies. Amazon CloudWatch offers robust monitoring capabilities, including the ability to create custom metrics and alarms. Specifically, tracking metrics like inference latency, error rates, and system utilization gives a detailed understanding of model performance and system health. Thus, creating a customized CloudWatch dashboard with these specific metrics helps in proactively managing and resolving performance issues. For more detailed information, visit: [Amazon CloudWatch User Guide](<a href=\"https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html</a>) </p>"
+    },
+    {
+      "id": "18-53",
+      "number": 53,
+      "text": "A financial services company is leveraging Amazon SageMaker to deploy machine learning models for real-time credit risk assessments and fraud detection. Which Amazon SageMaker service should they use to effectively monitor, manage, and troubleshoot the performance and usage of their models deployed at endpoints?",
+      "options": [
+        {
+          "text": "Amazon SageMaker Model Monitor",
+          "correct": true
+        },
+        {
+          "text": "Amazon SageMaker Clarify",
+          "correct": false
+        },
+        {
+          "text": "Amazon SageMaker Ground Truth",
+          "correct": false
+        },
+        {
+          "text": "Amazon SageMaker JumpStart",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon SageMaker Model Monitor is the appropriate service for this scenario as it is specifically designed for monitoring the model‘s performance post-deployment. It helps ensure that the model performs as expected when deployed into production by detecting quality deviations and enabling easy troubleshooting and management of model deployments. This service is crucial for maintaining model accuracy and reliability in critical applications such as credit risk assessments and fraud detection. </p>"
+    },
+    {
+      "id": "18-54",
+      "number": 54,
+      "text": "A company is utilizing AWS to improve their NLP model and needs to control the selection of candidate words for the next word prediction. Which inference parameter would best serve this requirement?",
+      "options": [
+        {
+          "text": "Top K",
+          "correct": true
+        },
+        {
+          "text": "Top P",
+          "correct": false
+        },
+        {
+          "text": "Stop sequences",
+          "correct": false
+        },
+        {
+          "text": "Temperature",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>In scenarios where precise control over the number of candidate predictions is required, the Top K parameter is the most effective choice. This setting directly limits the possible next words to consider to the specified number, K, facilitating a more controlled output from the model. Understanding and applying these parameters helps in fine tuning NLP models for better prediction accuracy and relevancy in a production environment. </p>"
+    }
+  ]
+}

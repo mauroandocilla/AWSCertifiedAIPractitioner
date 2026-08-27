@@ -1,0 +1,1082 @@
+{
+  "setNumber": 6,
+  "sourceFile": "Practice_Set_6.html",
+  "questionCount": 43,
+  "questions": [
+    {
+      "id": "6-1",
+      "number": 1,
+      "text": "Your application needs to ensure that all user uploads are virus scanned before they are stored in your S3 bucket. What AWS service or combination should you use to accomplish this?",
+      "options": [
+        {
+          "text": "Use AWS Lambda with Amazon S3 triggers and integrate with a third-party antivirus service",
+          "correct": true
+        },
+        {
+          "text": "Deploy Amazon EC2 with antivirus software installed to monitor S3 uploads",
+          "correct": false
+        },
+        {
+          "text": "Utilize AWS Shield for DDoS protection and Amazon CloudWatch for monitoring",
+          "correct": false
+        },
+        {
+          "text": "Use AWS WAF to scan and filter content before it reaches S3",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Use AWS Lambda with Amazon S3 triggers and integrate with a third-party antivirus service</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Correct because this is the recommended approach for scanning files uploaded to S3.</li>\n\t\t\t\t\t\t\t<li>An <b>S3 trigger</b> invokes <b>AWS Lambda</b> whenever a file is uploaded.</li>\n\t\t\t\t\t\t\t<li>The Lambda function can integrate with a <b>third-party antivirus engine</b> (such as ClamAV or commercial solutions) to scan the file before allowing it to be stored or processed further. </li>\n\t\t\t\t\t\t\t<li>This solution is <b>serverless, scalable, and cost-effective</b>, making it ideal for high-volume applications. </li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Deploy Amazon EC2 with antivirus software installed to monitor S3 uploads</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because EC2 instances cannot directly monitor S3 uploads.</li>\n\t\t\t\t\t\t\t<li>You would need custom scripts to pull objects from S3 and scan them, which is inefficient and costly compared to Lambda-based automation.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Utilize AWS Shield for DDoS protection and Amazon CloudWatch for monitoring</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because <b>AWS Shield</b> protects against <b>DDoS attacks</b>, not viruses.</li>\n\t\t\t\t\t\t\t<li><b>CloudWatch</b> provides monitoring and logging but does not perform malware scanning.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Use AWS WAF to scan and filter content before it reaches S3</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because <b>AWS WAF</b> is a web application firewall that filters HTTP(S) traffic based on rules.</li>\n\t\t\t\t\t\t\t<li>It cannot scan files for viruses or malware before they are stored in S3.</li>\n\t\t\t\t\t\t</ul>"
+    },
+    {
+      "id": "6-2",
+      "number": 2,
+      "text": "You are developing a solution that requires both real-time and batch processing of large volumes of log data. The solution must provide near real-time analytics and long-term data storage. What combination of AWS services should you use?",
+      "options": [
+        {
+          "text": "Amazon MSK for streaming data, Amazon S3 for batch storage, and AWS Glue for ETL tasks",
+          "correct": false
+        },
+        {
+          "text": "Amazon DynamoDB for real-time processing, Amazon S3 for batch storage, and AWS Lambda for analytics",
+          "correct": false
+        },
+        {
+          "text": "Amazon Kinesis Data Firehose for real-time data ingestion, Amazon S3 for long-term storage, and Amazon Redshift for analytics",
+          "correct": true
+        },
+        {
+          "text": "Amazon EMR for both real-time and batch processing, Amazon RDS for storage, and Amazon QuickSight for analytics",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon Kinesis Data Firehose handles real-time data ingestion and transformation, Amazon S3 provides durable long-term storage, and Amazon Redshift allows for powerful batch analytics on stored data.</p>"
+    },
+    {
+      "id": "6-3",
+      "number": 3,
+      "text": "For a data warehousing solution that requires high performance for complex queries and scalability with growing data volumes, which AWS services and configurations are most suitable?",
+      "options": [
+        {
+          "text": "Amazon EMR with AWS Step Functions and AWS CloudWatch",
+          "correct": false
+        },
+        {
+          "text": "Amazon Redshift with Amazon Redshift Spectrum, Amazon S3, and AWS Glue",
+          "correct": true
+        },
+        {
+          "text": "Amazon RDS with AWS Lambda, Amazon DynamoDB, and Amazon QuickSight",
+          "correct": false
+        },
+        {
+          "text": "Amazon Aurora with AWS Fargate and AWS CodeDeploy",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon Redshift provides high-performance data warehousing, Amazon Redshift Spectrum allows querying data directly in S3, and AWS Glue handles ETL tasks, offering scalability and performance for complex queries.</p>"
+    },
+    {
+      "id": "6-4",
+      "number": 4,
+      "text": "To ensure security and compliance for a highly regulated application running on AWS, you need to implement data encryption, secure access controls, and continuous monitoring. Which AWS services should be used?",
+      "options": [
+        {
+          "text": "Amazon RDS with AWS Secrets Manager and AWS Shield Advanced",
+          "correct": false
+        },
+        {
+          "text": "AWS KMS for encryption, AWS IAM for access control, and AWS CloudTrail for monitoring",
+          "correct": true
+        },
+        {
+          "text": "AWS CloudFormation with AWS Config and AWS Lambda",
+          "correct": false
+        },
+        {
+          "text": "Amazon S3 with AWS CloudFront and AWS WAF",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>AWS KMS provides data encryption, AWS IAM manages secure access controls, and AWS CloudTrail offers continuous monitoring of API calls and resource changes, ensuring security and compliance.</p>"
+    },
+    {
+      "id": "6-5",
+      "number": 5,
+      "text": "Which AWS service is best suited for managing serverless functions and automatically scaling them based on demand?",
+      "options": [
+        {
+          "text": "Amazon EC2",
+          "correct": false
+        },
+        {
+          "text": "AWS Lambda",
+          "correct": true
+        },
+        {
+          "text": "AWS Elastic Beanstalk",
+          "correct": false
+        },
+        {
+          "text": "Amazon ECS",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>AWS Lambda is designed for running serverless functions that automatically scale based on the number of incoming requests, eliminating the need to manage servers.</p>"
+    },
+    {
+      "id": "6-6",
+      "number": 6,
+      "text": "A company wants to implement a secure, scalable solution for sharing sensitive data between multiple AWS accounts while maintaining access control and compliance. What AWS services and configurations should be used?",
+      "options": [
+        {
+          "text": "Amazon DynamoDB with AWS Config, AWS WAF, and AWS Shield Advanced",
+          "correct": false
+        },
+        {
+          "text": "AWS Transfer Family with AWS Secrets Manager, AWS CloudTrail, and Amazon RDS",
+          "correct": false
+        },
+        {
+          "text": "AWS Outposts with Amazon Aurora, AWS Kinesis Data Firehose, and AWS CloudFormation",
+          "correct": false
+        },
+        {
+          "text": "Amazon S3 with AWS IAM policies, AWS Organizations, and AWS KMS",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon S3 enables secure data storage, AWS IAM policies control access, AWS Organizations manage multiple accounts, and AWS KMS handles encryption, ensuring secure data sharing and compliance.</p>"
+    },
+    {
+      "id": "6-7",
+      "number": 7,
+      "text": "You are deploying a new feature in your application that requires real-time machine learning inference. Which AWS service should you use to deploy a machine learning model and provide predictions in real time?",
+      "options": [
+        {
+          "text": "AWS Lambda with Amazon Comprehend",
+          "correct": false
+        },
+        {
+          "text": "Amazon EC2 with TensorFlow",
+          "correct": false
+        },
+        {
+          "text": "Amazon SageMaker Endpoints",
+          "correct": true
+        },
+        {
+          "text": "Amazon Redshift with AWS Glue",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon SageMaker Endpoints allow you to deploy machine learning models for real-time inference, providing low-latency predictions directly integrated with your application.</p>"
+    },
+    {
+      "id": "6-8",
+      "number": 8,
+      "text": "How would you manage a high-traffic web application with fluctuating workloads and a requirement for low latency, while also ensuring cost efficiency and high availability?",
+      "options": [
+        {
+          "text": "Implement Auto Scaling Groups with Elastic Load Balancing and Amazon CloudFront",
+          "correct": true
+        },
+        {
+          "text": "Leverage Amazon Elastic Beanstalk with Multi-AZ RDS and EC2 Spot Instances",
+          "correct": false
+        },
+        {
+          "text": "Use AWS Global Accelerator with Amazon Route 53 for Latency-Based Routing",
+          "correct": false
+        },
+        {
+          "text": "Deploy AWS Fargate with Auto Scaling and a CDN",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<b>Implement Auto Scaling Groups with Elastic Load Balancing and Amazon CloudFront</b>\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>This combination provides the most comprehensive solution for all requirements. <b>Elastic Load Balancing (ELB)</b> distributes incoming traffic across multiple instances in different Availability Zones for <b>high availability</b>. <b>Auto Scaling Groups (ASG)</b> automatically adjust the number of compute instances up and down based on demand, which handles <b>fluctuating workloads</b> and ensures <b>cost efficiency</b> by not over-provisioning resources. <b>Amazon CloudFront</b> acts as a Content Delivery Network (CDN), caching content at edge locations globally to ensure <b>low latency</b> for users worldwide. </p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>Incorrect</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<b>Leverage Amazon Elastic Beanstalk with Multi-AZ RDS and EC2 Spot Instances</b>\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>The use of <b>EC2 Spot Instances</b> is the critical flaw. Spot Instances are excellent for cost efficiency but are suitable only for flexible, fault-tolerant applications because AWS can reclaim them with short notice. A <b>high-traffic web application</b> that requires <b>high availability</b> for its core function should not rely solely on Spot Instances for its web server fleet.</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<b>Use AWS Global Accelerator with Amazon Route 53 for Latency-Based Routing</b>\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>This option is focused on optimizing global connectivity and low latency. <b>AWS Global Accelerator</b> and <b>Route 53’s Latency-Based Routing</b> improve front-end access speed by directing traffic efficiently. However, this solution is <b>incomplete</b> because it does not explicitly define the necessary backend mechanism (like Auto Scaling Groups) to handle the <b>fluctuating workloads</b> and automatically scale the compute resources up and down for back-end <b>cost efficiency</b>. </p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<b>Deploy AWS Fargate with Auto Scaling and a CDN</b>\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>This is a strong, technically modern solution. <b>AWS Fargate</b> (serverless containers) with Auto Scaling handles fluctuating workloads, and a <b>CDN</b> (like CloudFront) handles low latency. However, in the context of entry-level exams like AIF-C01, the architecture presented in Option A (EC2/ASG/ELB/CloudFront) is the <b>textbook, foundational answer</b> that explicitly lists the core components for elasticity, availability, and low latency that are universally taught as the best practice for this scenario. Option A is more explicit and broad than this container-based approach. </p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>"
+    },
+    {
+      "id": "6-9",
+      "number": 9,
+      "text": "You need to provide secure, on-demand access to your application's logs for troubleshooting and compliance purposes. Which AWS service should you use?",
+      "options": [
+        {
+          "text": "Amazon CloudWatch Logs",
+          "correct": true
+        },
+        {
+          "text": "AWS Systems Manager Session Manager",
+          "correct": false
+        },
+        {
+          "text": "AWS CloudTrail",
+          "correct": false
+        },
+        {
+          "text": "Amazon S3 with AWS IAM policies",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>Amazon CloudWatch Logs</b></p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t\t\t<b>Amazon CloudWatch Logs</b> is the dedicated, managed AWS service designed to centralize and store operational data from your applications, AWS services (like EC2, Lambda, ECS, etc.), and custom sources. It provides capabilities for secure, long-term retention of logs, real-time monitoring, and searching/filtering of log events. This directly addresses the requirement for <b>secure, on-demand access to application logs</b> for <b>troubleshooting and compliance</b>.\n\t\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>Incorrect</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>AWS Systems Manager Session Manager</b></p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t\t\t<b>Session Manager</b> is used to provide secure, auditable, and on-demand <b>remote access to EC2 instances or other managed nodes</b> (servers) for <i>command-line interaction and operational management</i>. It is used to <i>access</i> the environment where the logs reside, but it is <b>not the service used to collect, store, and manage the logs themselves</b>.\n\t\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>AWS CloudTrail</b></p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p><b>AWS CloudTrail</b> is a service that focuses on <b>governance, compliance, and auditing</b> by recording <b>API calls (actions)</b> made by a user, role, or an AWS service. It tracks <i>who</i> did <i>what</i> and <i>when</i>. While critical for compliance, it records control plane activity, not the <b>application’s operational logs</b> needed for troubleshooting application failures or performance issues.</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>Amazon S3 with AWS IAM policies</b></p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t\t\t<b>Amazon S3</b> is a highly durable and scalable <b>object storage service</b>. It can certainly be used as a <i>target</i> for log storage and secured with IAM policies. However, it is only a storage repository; it does <b>not provide the built-in managed search, filtering, streaming, real-time analysis, and retention policies</b> that <b>Amazon CloudWatch Logs</b> offers, making it a less complete and less efficient solution for “on-demand access for troubleshooting” compared to the dedicated log service.\n\t\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>"
+    },
+    {
+      "id": "6-10",
+      "number": 10,
+      "text": "In a scenario where you need to design a solution for a high-throughput, low-latency messaging system that supports both streaming and batch processing, which AWS services should be combined?",
+      "options": [
+        {
+          "text": "Amazon SNS with Amazon SQS and AWS Glue",
+          "correct": false
+        },
+        {
+          "text": "Amazon Kinesis Data Streams with Amazon S3 and AWS Lambda",
+          "correct": true
+        },
+        {
+          "text": "Amazon Kinesis Data Firehose with Amazon Redshift",
+          "correct": false
+        },
+        {
+          "text": "Amazon EventBridge with Amazon RDS",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<b>Amazon Kinesis Data Streams with Amazon S3 and AWS Lambda</b>\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t\t\t<b>Amazon Kinesis Data Streams (KDS)</b> is the dedicated service for high-throughput, real-time data ingestion and processing, directly addressing the <b>high-throughput, low-latency messaging/streaming</b> requirement. KDS allows multiple consumers to process the same stream concurrently.\n\t\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p><b>AWS Lambda</b> can be configured as a consumer of the stream for <b>real-time/streaming processing</b> (e.g., immediate alerts, data transformation).</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p><b>Amazon S3</b> provides a highly durable and cost-effective destination for storing the raw data from KDS. This stored data in S3 can then be used later for <b>batch processing</b> (e.g., running analytical jobs using Amazon EMR or AWS Glue), satisfying the second requirement.</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>Amazon SNS with Amazon SQS and AWS Glue</b></p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t\t\t<b>Amazon SNS (Simple Notification Service)</b> and <b>Amazon SQS (Simple Queue Service)</b> are designed for general-purpose message passing and decoupling microservices. While SQS can handle high traffic, it is typically used for discrete messages and queueing, not for the continuous, ordered, multi-consumer <b>high-throughput streaming</b> data model required. <b>AWS Glue</b> is used for ETL and cataloging, not the messaging transport itself.\n\t\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<b>Amazon Kinesis Data Firehose with Amazon Redshift</b>\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t\t\t<b>Amazon Kinesis Data Firehose</b> is an excellent managed service for delivering streaming data to destinations like S3 or Redshift. However, Firehose is optimized for easy <i>delivery</i> and only supports <b>micro-batching</b> for data ingestion, not the fine-grained, concurrent <b>low-latency streaming processing</b> by multiple custom consumers (like Lambda or Kinesis Data Analytics) that <b>Kinesis Data Streams</b> allows. <b>Amazon Redshift</b> is a data warehouse, not a core component of the messaging transport system.\n\t\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>Amazon EventBridge with Amazon RDS</b></p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t\t\t<b>Amazon EventBridge</b> is a serverless event bus that focuses on routing events between applications and AWS services, making it ideal for event-driven architectures. It is not designed for the extreme <b>high-throughput, continuous data stream</b> needed for messaging or log aggregation. <b>Amazon RDS (Relational Database Service)</b> is a database, not a messaging or streaming service, making this option completely unsuitable for the transport and processing requirements.\n\t\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>"
+    },
+    {
+      "id": "6-11",
+      "number": 11,
+      "text": "For an application that requires cross-region replication with minimal latency and cost, and needs to ensure data consistency and durability, which AWS services and features are recommended?",
+      "options": [
+        {
+          "text": "Amazon EMR with AWS Step Functions and AWS CodePipeline",
+          "correct": false
+        },
+        {
+          "text": "Amazon DynamoDB Global Tables with AWS CloudTrail and Amazon CloudWatch",
+          "correct": true
+        },
+        {
+          "text": "Amazon RDS Multi-AZ with AWS Global Accelerator and AWS Lambda",
+          "correct": false
+        },
+        {
+          "text": "Amazon S3 Cross-Region Replication with Amazon CloudFront and AWS KMS",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Amazon DynamoDB Global Tables with AWS CloudTrail and Amazon CloudWatch</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li><b>Amazon DynamoDB Global Tables</b> provide <b>multi‑region, fully managed replication</b> with low latency and strong durability.</li>\n\t\t\t\t\t\t\t<li>They ensure <b>data consistency</b> across regions, which is critical for applications requiring global availability.</li>\n\t\t\t\t\t\t\t<li><b>CloudTrail</b> and <b>CloudWatch</b> add monitoring and auditing capabilities, ensuring compliance and visibility into operations.</li>\n\t\t\t\t\t\t\t<li>This combination directly addresses the requirements: <b>cross‑region replication, minimal latency, cost efficiency, consistency, and durability</b>. </li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Amazon EMR with AWS Step Functions and AWS CodePipeline</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>EMR is designed for big data processing, not for real‑time cross‑region replication.</li>\n\t\t\t\t\t\t\t<li>Step Functions and CodePipeline orchestrate workflows but do not provide low‑latency replication or durability guarantees.</li>\n\t\t\t\t\t\t\t<li>Incorrect because it does not meet the replication and consistency requirements.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Amazon RDS Multi‑AZ with AWS Global Accelerator and AWS Lambda</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>RDS Multi‑AZ provides <b>high availability within a single region</b>, not cross‑region replication. </li>\n\t\t\t\t\t\t\t<li>Global Accelerator improves network performance but does not replicate data.</li>\n\t\t\t\t\t\t\t<li>Lambda is serverless compute, not a replication mechanism.</li>\n\t\t\t\t\t\t\t<li>Incorrect because it does not achieve cross‑region replication with consistency.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Amazon S3 Cross‑Region Replication with Amazon CloudFront and AWS KMS</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>S3 Cross‑Region Replication is useful for object storage, but it is <b>eventually consistent</b> and not optimized for transactional workloads requiring strict consistency.</li>\n\t\t\t\t\t\t\t<li>CloudFront is a CDN for content delivery, not database replication.</li>\n\t\t\t\t\t\t\t<li>KMS provides encryption but does not solve replication or latency issues.</li>\n\t\t\t\t\t\t\t<li>Incorrect because it does not guarantee minimal latency and strong consistency for application data.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>&nbsp;</p>"
+    },
+    {
+      "id": "6-12",
+      "number": 12,
+      "text": "You are tasked with creating a scalable architecture for a video streaming application. The solution must handle high concurrent user traffic, provide low latency, and deliver content globally. Which AWS services and features are best suited for this use case?",
+      "options": [
+        {
+          "text": "Amazon CloudFront with Amazon S3, AWS Elemental Media Services, and AWS Lambda",
+          "correct": true
+        },
+        {
+          "text": "AWS Batch with Amazon EKS, AWS CodeDeploy, and AWS Step Functions",
+          "correct": false
+        },
+        {
+          "text": "Amazon RDS with Amazon EC2, Amazon ElastiCache, and Amazon DynamoDB",
+          "correct": false
+        },
+        {
+          "text": "Amazon SQS with AWS Fargate, Amazon Kinesis Data Streams, and Amazon QuickSight",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon CloudFront delivers content globally with low latency, Amazon S3 stores video files, AWS Elemental Media Services handles video processing, and AWS Lambda can handle custom processing requirements.</p>"
+    },
+    {
+      "id": "6-13",
+      "number": 13,
+      "text": "A multi-national corporation is deploying a generative AI solution using AWS. The company must ensure that sensitive training datasets comply with strict data sovereignty laws (keeping data within specific national borders) while maintaining high availability for their global users. Which combination of AWS services and strategies is best suited for this requirement?",
+      "options": [
+        {
+          "text": "AWS Global Accelerator with Amazon S3 Cross-Region Replication and AWS KMS",
+          "correct": true
+        },
+        {
+          "text": "Amazon Route 53 with AWS Elastic Beanstalk and AWS Config",
+          "correct": false
+        },
+        {
+          "text": "Amazon RDS with AWS Shield Advanced and Amazon CloudFront",
+          "correct": false
+        },
+        {
+          "text": "AWS Outposts with Amazon Aurora and AWS Backup",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>AWS Global Accelerator with Amazon S3 Cross‑Region Replication and AWS KMS</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<strong>Correct</strong> because this combination directly addresses both <b>data sovereignty</b> and <b>global availability</b>: <ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<b>Amazon S3 Cross‑Region Replication (CRR)</b> ensures that datasets can be replicated across regions while still respecting national boundaries by configuring replication policies per region.\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t<li><b>AWS KMS (Key Management Service)</b> enforces encryption and compliance with local data protection laws, ensuring sensitive datasets remain secure.</li>\n\t\t\t\t\t\t\t\t\t<li><b>AWS Global Accelerator</b> provides low‑latency access for global users by routing traffic to the nearest healthy endpoint, improving availability and performance.</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>Together, these services provide a compliant, secure, and highly available architecture for generative AI workloads.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Amazon Route 53 with AWS Elastic Beanstalk and AWS Config</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because while Route 53 provides DNS routing and Elastic Beanstalk simplifies application deployment, they do not address <b>data sovereignty requirements</b>.</li>\n\t\t\t\t\t\t\t<li>AWS Config helps with compliance monitoring but does not enforce data residency.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Amazon RDS with AWS Shield Advanced and Amazon CloudFront</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because RDS is for relational databases, not for large AI training datasets.</li>\n\t\t\t\t\t\t\t<li>Shield Advanced provides DDoS protection, and CloudFront accelerates content delivery, but neither ensures <b>data residency compliance</b>. </li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>AWS Outposts with Amazon Aurora and AWS Backup</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because Outposts provides on‑premises AWS infrastructure, but it is limited to specific deployments and does not scale globally for multi‑national AI workloads.</li>\n\t\t\t\t\t\t\t<li>Aurora and Backup are useful for database and recovery, but they do not solve the <b>global availability + sovereignty</b> challenge. </li>\n\t\t\t\t\t\t</ul>"
+    },
+    {
+      "id": "6-14",
+      "number": 14,
+      "text": "Scenario: A financial institution needs to process and analyze large volumes of transaction data in real time while maintaining high security and compliance standards. The question asks: Which combination of AWS services represents the most current and appropriate real-time streaming solution with the necessary security and governance tools?",
+      "options": [
+        {
+          "text": "Amazon EMR with AWS Secrets Manager and AWS WAF (Web Application Firewall)",
+          "correct": false
+        },
+        {
+          "text": "Amazon Redshift with AWS Config and AWS CloudTrail",
+          "correct": false
+        },
+        {
+          "text": "Amazon Managed Service for Apache Flink with AWS Glue and AWS Key Management Service (KMS)",
+          "correct": true
+        },
+        {
+          "text": "AWS Lambda with Amazon Relational Database Service (RDS) and AWS Shield Advanced",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>\n\t\t\t\t\t\t\t<strong>Correct</strong>\n\t\t\t\t\t\t\t<b>Amazon Managed Service for Apache Flink with AWS Glue and AWS Key Management Service (KMS)</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b>Amazon Managed Service for Apache Flink</b> provides <b>real-time stream processing</b> at scale, ideal for financial transaction analysis.\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li><b>AWS Glue</b> supports <b>data cataloging, ETL, and governance</b>, ensuring compliance and structured metadata management.</li>\n\t\t\t\t\t\t\t<li><b>AWS KMS</b> ensures <b>encryption and key management</b>, meeting strict financial institution security requirements.</li>\n\t\t\t\t\t\t\t<li>This combination directly addresses <b>real-time streaming, compliance, and security</b> needs, making it the most appropriate solution. </li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<strong>Incorrect</strong>\n\t\t\t\t\t\t\t<b>Amazon EMR with AWS Secrets Manager and AWS WAF (Web Application Firewall)</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>EMR is designed for <b>batch big data processing</b>, not real-time streaming. </li>\n\t\t\t\t\t\t\t<li>Secrets Manager and WAF provide security, but they do not solve the <b>real-time ingestion and processing requirement</b>. </li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Amazon Redshift with AWS Config and AWS CloudTrail</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Redshift is a <b>data warehouse</b> optimized for <b>analytical queries on historical data</b>, not real-time streaming.</li>\n\t\t\t\t\t\t\t<li>Config and CloudTrail provide governance and auditing, but they do not enable <b>real-time transaction stream processing</b>. </li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>AWS Lambda with Amazon Relational Database Service (RDS) and AWS Shield Advanced</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Lambda + RDS is suitable for <b>event-driven workloads</b>, not continuous <b>high-volume real-time streaming</b>. </li>\n\t\t\t\t\t\t\t<li>Shield Advanced protects against DDoS attacks, but this does not address the <b>streaming analytics requirement</b>. </li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>&nbsp;</p>"
+    },
+    {
+      "id": "6-15",
+      "number": 15,
+      "text": "In a scenario where a company needs to build a highly available and fault‑tolerant application architecture with automated scaling based on demand, which AWS services should be used?",
+      "options": [
+        {
+          "text": "Amazon ECS with AWS Fargate and Amazon RDS Multi-AZ",
+          "correct": true
+        },
+        {
+          "text": "AWS Lambda with Amazon DynamoDB and Amazon S3",
+          "correct": false
+        },
+        {
+          "text": "AWS Elastic Beanstalk with Amazon Route 53 and AWS Backup",
+          "correct": false
+        },
+        {
+          "text": "Amazon EC2 with Auto Scaling and Elastic Load Balancer (ELB)",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Amazon ECS with AWS Fargate and Amazon RDS Multi‑AZ</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Correct because <b>Amazon ECS with AWS Fargate</b> provides container orchestration with serverless compute, ensuring <b>automated scaling and high availability</b>. </li>\n\t\t\t\t\t\t\t<li><b>Amazon RDS Multi‑AZ</b> ensures database fault tolerance and automatic failover, making the application resilient.</li>\n\t\t\t\t\t\t\t<li>Together, these services deliver a highly available, fault‑tolerant architecture with minimal manual intervention.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>AWS Lambda with Amazon DynamoDB and Amazon S3</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because while this combination supports <b>serverless workloads</b> and scales automatically, it is best suited for <b>event‑driven applications</b>, not general highly available architectures requiring containerized or stateful workloads. </li>\n\t\t\t\t\t\t\t<li>It lacks the explicit fault‑tolerant database setup (like RDS Multi‑AZ) for transactional applications.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>AWS Elastic Beanstalk with Amazon Route 53 and AWS Backup</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because Elastic Beanstalk simplifies deployment but does not inherently guarantee <b>fault tolerance</b> without additional configuration. </li>\n\t\t\t\t\t\t\t<li>Route 53 provides DNS and traffic routing, and AWS Backup is for data protection, not real‑time availability.</li>\n\t\t\t\t\t\t\t<li>This combination does not directly address automated scaling and fault tolerance.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Amazon EC2 with Auto Scaling and Elastic Load Balancer (ELB)</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because while EC2 Auto Scaling and ELB provide <b>scalability and availability</b>, they require more <b>manual management</b> compared to ECS with Fargate. </li>\n\t\t\t\t\t\t\t<li>This option is valid but not the <b>most optimized</b> solution for minimizing operational overhead in modern architectures. </li>\n\t\t\t\t\t\t</ul>"
+    },
+    {
+      "id": "6-16",
+      "number": 16,
+      "text": "For an application that needs to handle a large number of concurrent users and provide real‑time analytics with minimal latency, which combination of AWS services would be optimal?",
+      "options": [
+        {
+          "text": "Amazon DynamoDB with Amazon Elasticsearch Service and Amazon CloudFront",
+          "correct": false
+        },
+        {
+          "text": "Amazon RDS with AWS Lambda and Amazon S3",
+          "correct": false
+        },
+        {
+          "text": "AWS Glue with Amazon Redshift Spectrum and AWS Batch",
+          "correct": false
+        },
+        {
+          "text": "Amazon ElastiCache with Amazon Kinesis Data Analytics and AWS Fargate",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Amazon ElastiCache with Amazon Kinesis Data Analytics and AWS Fargate</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Correct because this combination is designed for <b>high concurrency and real‑time analytics</b>: <ul>\n\t\t\t\t\t\t\t\t\t<li><b>Amazon ElastiCache</b> provides <b>low‑latency, in‑memory caching</b> to serve large numbers of concurrent users efficiently.</li>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<b>Amazon Kinesis Data Analytics</b> enables <b>real‑time stream processing and analytics</b> on clickstream or event data.\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t<li><b>AWS Fargate</b> offers <b>serverless container orchestration</b>, scaling automatically to handle workloads without manual infrastructure management.</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>Together, they ensure minimal latency and real‑time insights, which directly meets the requirements.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>DynamoDB + Elasticsearch + CloudFront</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because while <b>DynamoDB</b> scales well for concurrent users and <b>CloudFront</b> reduces latency for content delivery, <b>Elasticsearch</b> is better suited for search and log analytics, not real‑time streaming analytics.</li>\n\t\t\t\t\t\t\t<li>This combination lacks a true real‑time analytics engine.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>RDS + Lambda + S3</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because <b>RDS</b> is a relational database that struggles with very high concurrency compared to DynamoDB or ElastiCache.</li>\n\t\t\t\t\t\t\t<li><b>Lambda</b> and <b>S3</b> are useful for serverless compute and storage, but they do not provide real‑time analytics capabilities.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>Glue + Redshift Spectrum + Batch</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because this stack is designed for <b>ETL and batch analytics</b>, not real‑time processing. </li>\n\t\t\t\t\t\t\t<li><b>Glue</b> and <b>Batch</b> introduce latency, and <b>Redshift Spectrum</b> is optimized for querying large datasets, not handling real‑time streams.</li>\n\t\t\t\t\t\t</ul>"
+    },
+    {
+      "id": "6-17",
+      "number": 17,
+      "text": "What advanced feature in Amazon RDS can be utilized to automatically handle failovers and maintain high availability with minimal data loss?",
+      "options": [
+        {
+          "text": "Amazon RDS Multi-AZ Deployments",
+          "correct": true
+        },
+        {
+          "text": "Amazon RDS Performance Insights",
+          "correct": false
+        },
+        {
+          "text": "Amazon RDS Aurora Global Databases",
+          "correct": false
+        },
+        {
+          "text": "Amazon RDS Read Replicas",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p><b>Amazon RDS Multi‑AZ Deployments</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Correct because <b>Multi‑AZ deployments</b> provide <b>automatic failover</b> to a standby instance in another Availability Zone.</li>\n\t\t\t\t\t\t\t<li>This ensures <b>high availability</b> and <b>minimal data loss</b>, as synchronous replication keeps the standby up to date.</li>\n\t\t\t\t\t\t\t<li>It is the recommended feature for production workloads requiring resilience and business continuity.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p><b>Amazon RDS Performance Insights</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because Performance Insights is a <b>monitoring and tuning tool</b> for database performance. </li>\n\t\t\t\t\t\t\t<li>It helps identify bottlenecks but does not provide failover or high availability.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Amazon RDS Aurora Global Databases</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because Aurora Global Databases are designed for <b>cross‑region disaster recovery and read scalability</b>, not automatic failover within a region. </li>\n\t\t\t\t\t\t\t<li>While they improve resilience across regions, they are not the primary solution for automatic failover in RDS.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>Amazon RDS Read Replicas</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because Read Replicas are used for <b>scaling read traffic</b> and offloading queries. </li>\n\t\t\t\t\t\t\t<li>They do not provide automatic failover or synchronous replication, so they cannot guarantee minimal data loss in case of failure.</li>\n\t\t\t\t\t\t</ul>"
+    },
+    {
+      "id": "6-18",
+      "number": 18,
+      "text": "Which approach in cloud-native architectures addresses the issue of managing stateful applications across ephemeral container instances?",
+      "options": [
+        {
+          "text": "Kubernetes StatefulSets",
+          "correct": true
+        },
+        {
+          "text": "Kubernetes Deployments",
+          "correct": false
+        },
+        {
+          "text": "Docker Volumes",
+          "correct": false
+        },
+        {
+          "text": "Kubernetes DaemonSets",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p><b>Kubernetes StatefulSets</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Correct because <b>StatefulSets</b> are designed to manage <b>stateful applications</b> in Kubernetes.</li>\n\t\t\t\t\t\t\t<li>They provide stable, unique network identifiers and persistent storage for each pod, ensuring that state is maintained even when pods are rescheduled.</li>\n\t\t\t\t\t\t\t<li>This directly addresses the challenge of running stateful workloads across ephemeral container instances.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p><b>Kubernetes Deployments</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because <b>Deployments</b> are intended for <b>stateless applications</b>.</li>\n\t\t\t\t\t\t\t<li>They manage replicas and rolling updates but do not guarantee stable identities or persistent storage for pods.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>Docker Volumes</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because while Docker volumes provide persistent storage, they are not a full solution for managing state across distributed container instances in Kubernetes.</li>\n\t\t\t\t\t\t\t<li>Volumes alone do not handle pod identity or scaling stateful workloads.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>Kubernetes DaemonSets</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because <b>DaemonSets</b> ensure that a copy of a pod runs on every node in the cluster.</li>\n\t\t\t\t\t\t\t<li>They are useful for monitoring or logging agents, not for managing stateful applications.</li>\n\t\t\t\t\t\t</ul>"
+    },
+    {
+      "id": "6-19",
+      "number": 19,
+      "text": "You need to perform a routine audit of your AWS environment to ensure compliance with security policies. Which AWS service can help you automate and manage this audit process?",
+      "options": [
+        {
+          "text": "Amazon Inspector",
+          "correct": false
+        },
+        {
+          "text": "AWS CloudTrail",
+          "correct": false
+        },
+        {
+          "text": "AWS Config",
+          "correct": true
+        },
+        {
+          "text": "AWS Shield",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p><b>AWS Config</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Correct because <b>AWS Config</b> is designed to <b>track, evaluate, and audit resource configurations</b>.</li>\n\t\t\t\t\t\t\t<li>It allows you to define compliance rules and automatically check whether resources meet those rules.</li>\n\t\t\t\t\t\t\t<li>It provides a <b>history of configuration changes</b>, enabling routine audits and compliance reporting. </li>\n\t\t\t\t\t\t\t<li>This makes it the most appropriate service for automating and managing audits.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p><b>Amazon Inspector</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because <b>Amazon Inspector</b> focuses on <b>vulnerability management and security assessments</b> of workloads. </li>\n\t\t\t\t\t\t\t<li>While useful for detecting security risks, it does not provide full compliance auditing across all AWS resources.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>AWS CloudTrail</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because <b>CloudTrail</b> records API calls and user activity.</li>\n\t\t\t\t\t\t\t<li>It is valuable for <b>security monitoring and forensic analysis</b>, but it does not automate compliance audits or enforce rules. </li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>AWS Shield</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because <b>AWS Shield</b> is a <b>DDoS protection service</b>.</li>\n\t\t\t\t\t\t\t<li>It protects applications from external attacks but does not perform compliance audits or configuration checks.</li>\n\t\t\t\t\t\t</ul>"
+    },
+    {
+      "id": "6-20",
+      "number": 20,
+      "text": "In a scenario where you need to deploy and manage a multi‑tier application architecture with integrated monitoring and automated scaling, which AWS service would be most effective?",
+      "options": [
+        {
+          "text": "Amazon EC2 with Auto Scaling and Elastic Load Balancing",
+          "correct": false
+        },
+        {
+          "text": "Amazon Lightsail",
+          "correct": false
+        },
+        {
+          "text": "AWS Fargate with Amazon ECS",
+          "correct": false
+        },
+        {
+          "text": "AWS Elastic Beanstalk",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p><b>AWS Elastic Beanstalk</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li><strong>Correct</strong> because Elastic Beanstalk is a <b>Platform as a Service (PaaS)</b> that simplifies deployment and management of multi‑tier applications.</li>\n\t\t\t\t\t\t\t<li>It automatically handles <b>provisioning, load balancing, monitoring, and auto scaling</b>, allowing developers to focus on application code rather than infrastructure. </li>\n\t\t\t\t\t\t\t<li>This makes it the most effective choice for the scenario described in the exam question.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Amazon EC2 with Auto Scaling and Elastic Load Balancing</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because while EC2 with Auto Scaling and ELB can support scaling and load balancing, it requires <b>manual setup and management</b> of monitoring, scaling policies, and infrastructure. </li>\n\t\t\t\t\t\t\t<li>It does not provide the same level of automation and simplicity as Elastic Beanstalk.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>Amazon Lightsail</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because Lightsail is designed for <b>simpler applications</b> and small workloads. </li>\n\t\t\t\t\t\t\t<li>It does not provide robust multi‑tier architecture support or advanced monitoring and scaling features required for enterprise applications.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>AWS Fargate with Amazon ECS</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because Fargate with ECS is excellent for <b>containerized workloads</b>, but the question specifies a <b>multi‑tier application architecture</b> with integrated monitoring and automated scaling. </li>\n\t\t\t\t\t\t\t<li>While possible, it requires more configuration compared to Elastic Beanstalk, which is purpose‑built for this scenario.</li>\n\t\t\t\t\t\t</ul>"
+    },
+    {
+      "id": "6-21",
+      "number": 21,
+      "text": "Which AWS service provides a managed relational database with built-in replication and backup capabilities for high availability?",
+      "options": [
+        {
+          "text": "Amazon Redshift",
+          "correct": false
+        },
+        {
+          "text": "Amazon DynamoDB",
+          "correct": false
+        },
+        {
+          "text": "Amazon RDS (Relational Database Service)",
+          "correct": true
+        },
+        {
+          "text": "Amazon Aurora",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Amazon RDS (Relational Database Service)</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li><strong>Correct</strong> because <b>Amazon RDS</b> is a fully managed relational database service that supports engines like MySQL, PostgreSQL, Oracle, and SQL Server.</li>\n\t\t\t\t\t\t\t<li>It provides <b>automated backups, replication, and failover</b> to ensure high availability. </li>\n\t\t\t\t\t\t\t<li>RDS reduces administrative overhead by handling patching, scaling, and monitoring, making it the right answer for managed relational databases with built‑in HA features.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p><b>Amazon Redshift</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li><strong>Incorrect</strong> because Redshift is a <b>data warehouse service</b>, optimized for analytics and reporting, not for transactional relational database workloads.</li>\n\t\t\t\t\t\t\t<li>While it supports replication for performance, it is not positioned as a general relational database with built‑in backup/HA like RDS.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>Amazon DynamoDB</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li><strong>Incorrect</strong> because DynamoDB is a <b>NoSQL database service</b>, designed for key‑value and document storage.</li>\n\t\t\t\t\t\t\t<li>It offers high availability and replication but is not a <b>relational database</b>. </li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>Amazon Aurora</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li><b>Incorrect in this context</b> because Aurora is a <b>specific relational database engine</b> built for high performance and availability, but it runs <b>within Amazon RDS</b>.</li>\n\t\t\t\t\t\t\t<li>The broader service that provides managed relational databases with replication and backup is <b>Amazon RDS</b>, not Aurora alone.</li>\n\t\t\t\t\t\t</ul>"
+    },
+    {
+      "id": "6-22",
+      "number": 22,
+      "text": "A company is deploying a new application that requires high availability and disaster recovery across multiple AWS Regions (Active/Passive or Pilot Light strategy). Which combination of AWS services represents the most effective architectural strategy for ensuring global traffic routing, application scalability, and data resilience?",
+      "options": [
+        {
+          "text": "AWS Global Accelerator with Amazon S3 Cross-Region Replication and AWS EC2 Auto Scaling",
+          "correct": false
+        },
+        {
+          "text": "Amazon RDS Multi-AZ deployments with AWS Direct Connect and Amazon CloudFront",
+          "correct": false
+        },
+        {
+          "text": "Amazon Aurora Global Database with Amazon Route 53 Failover Routing and AWS CloudFormation",
+          "correct": true
+        },
+        {
+          "text": "AWS Elastic Beanstalk with AWS WAF and Amazon DynamoDB Local Tables",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Amazon Aurora Global Database with Amazon Route 53 Failover Routing and AWS CloudFormation</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Correct because this combination directly addresses the requirements: <ul>\n\t\t\t\t\t\t\t\t\t<li><b>Aurora Global Database</b> provides <b>low-latency reads</b> across multiple regions and fast disaster recovery (typically under a minute).</li>\n\t\t\t\t\t\t\t\t\t<li><b>Amazon Route 53 Failover Routing</b> ensures <b>global traffic routing</b> by automatically directing requests to the healthy region in case of failure.</li>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<b>AWS CloudFormation</b> enables <b>scalable, repeatable infrastructure deployment</b> across regions, ensuring consistency and automation.\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>Together, these services deliver <b>high availability, disaster recovery, scalability, and resilience</b> in a cost-effective manner. </li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>AWS Global Accelerator with Amazon S3 Cross-Region Replication and AWS EC2 Auto Scaling</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because while <b>Global Accelerator</b> helps with global traffic routing and <b>S3 Cross-Region Replication</b> ensures data durability, this option does not provide <b>database-level disaster recovery</b>. </li>\n\t\t\t\t\t\t\t<li>EC2 Auto Scaling supports scalability but does not address <b>multi-region database resilience</b>. </li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Amazon RDS Multi-AZ deployments with AWS Direct Connect and Amazon CloudFront</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because <b>RDS Multi-AZ</b> provides high availability only within a <b>single region</b>, not across multiple regions.</li>\n\t\t\t\t\t\t\t<li><b>Direct Connect</b> is for dedicated network connectivity, and <b>CloudFront</b> is for content delivery, neither of which ensures cross-region database disaster recovery.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>AWS Elastic Beanstalk with AWS WAF and Amazon DynamoDB Local Tables</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because <b>Elastic Beanstalk</b> simplifies application deployment but does not inherently provide <b>multi-region disaster recovery</b>. </li>\n\t\t\t\t\t\t\t<li><b>WAF</b> adds security, and <b>DynamoDB Local Tables</b> are for local testing, not global resilience.</li>\n\t\t\t\t\t\t\t<li>This option fails to meet the requirements for global traffic routing and cross-region data durability.</li>\n\t\t\t\t\t\t</ul>"
+    },
+    {
+      "id": "6-23",
+      "number": 23,
+      "text": "Which AWS service helps in managing and analyzing large volumes of streaming data in real-time?",
+      "options": [
+        {
+          "text": "Amazon Redshift Spectrum",
+          "correct": false
+        },
+        {
+          "text": "Amazon Kinesis",
+          "correct": true
+        },
+        {
+          "text": "AWS Glue",
+          "correct": false
+        },
+        {
+          "text": "Amazon S3 Select",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon Kinesis is designed for real-time processing and analysis of streaming data from various sources.</p>"
+    },
+    {
+      "id": "6-24",
+      "number": 24,
+      "text": "In a highly distributed microservices architecture, what is a common challenge related to ensuring consistent data across services?",
+      "options": [
+        {
+          "text": "Service Discovery Latency",
+          "correct": false
+        },
+        {
+          "text": "Load Balancer Overhead",
+          "correct": false
+        },
+        {
+          "text": "API Gateway Rate Limiting",
+          "correct": false
+        },
+        {
+          "text": "Data Replication Lag",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Data replication lag can occur when changes in one service take time to propagate to others, leading to inconsistencies in distributed microservices.</p>"
+    },
+    {
+      "id": "6-25",
+      "number": 25,
+      "text": "To support an application with high throughput requirements and a need for distributed, low-latency data access, which AWS service is best suited for managing large-scale NoSQL databases?",
+      "options": [
+        {
+          "text": "Amazon Neptune",
+          "correct": false
+        },
+        {
+          "text": "Amazon DocumentDB",
+          "correct": false
+        },
+        {
+          "text": "Amazon RDS for MySQL",
+          "correct": false
+        },
+        {
+          "text": "Amazon DynamoDB",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon DynamoDB is a managed NoSQL database service designed for high throughput, distributed access, and low-latency data operations.</p>"
+    },
+    {
+      "id": "6-26",
+      "number": 26,
+      "text": "In a scenario where a company needs to build a secure and scalable API service for handling millions of requests per day, while also integrating with various third-party services, which AWS services are appropriate?",
+      "options": [
+        {
+          "text": "AWS AppSync with Amazon RDS and AWS Step Functions",
+          "correct": false
+        },
+        {
+          "text": "Amazon CloudFront with AWS Shield Advanced and Amazon Aurora",
+          "correct": false
+        },
+        {
+          "text": "Amazon API Gateway with AWS Lambda and Amazon DynamoDB",
+          "correct": true
+        },
+        {
+          "text": "AWS Fargate with Amazon ECS and AWS WAF",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon API Gateway handles API requests, AWS Lambda processes requests serverlessly, and Amazon DynamoDB provides a scalable and fast database solution, suitable for handling high volumes of API traffic.</p>"
+    },
+    {
+      "id": "6-27",
+      "number": 27,
+      "text": "For an application requiring end-to-end encryption and secure key management while handling large volumes of sensitive data, which AWS services should be used together?",
+      "options": [
+        {
+          "text": "AWS CloudHSM with Amazon S3 Server-Side Encryption",
+          "correct": false
+        },
+        {
+          "text": "AWS Shield with AWS WAF and AWS Key Management Service (KMS)",
+          "correct": false
+        },
+        {
+          "text": "AWS Secrets Manager with Amazon RDS Encryption",
+          "correct": false
+        },
+        {
+          "text": "Amazon S3 with Server-Side Encryption (SSE-KMS) and AWS KMS",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon S3 with SSE-KMS provides end-to-end encryption of data at rest, while AWS KMS handles the management of encryption keys securely.</p>"
+    },
+    {
+      "id": "6-28",
+      "number": 28,
+      "text": "To implement a solution for securing API endpoints and protecting against common web vulnerabilities, which AWS services and strategies should be combined?",
+      "options": [
+        {
+          "text": "AWS API Gateway with AWS WAF and AWS Shield Standard",
+          "correct": true
+        },
+        {
+          "text": "AWS AppSync with Amazon Cognito and AWS KMS",
+          "correct": false
+        },
+        {
+          "text": "Amazon S3 with AWS IAM and AWS Secrets Manager",
+          "correct": false
+        },
+        {
+          "text": "Amazon CloudFront with AWS Certificate Manager and AWS CloudTrail",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>AWS API Gateway manages API endpoints, AWS WAF protects against web vulnerabilities, and AWS Shield Standard provides DDoS protection, securing API endpoints effectively.</p>"
+    },
+    {
+      "id": "6-29",
+      "number": 29,
+      "text": "For implementing a robust solution for automated deployment and rollback with advanced control over infrastructure changes across multiple AWS accounts and regions, which AWS service is most suitable?",
+      "options": [
+        {
+          "text": "AWS OpsWorks with Chef and Puppet",
+          "correct": false
+        },
+        {
+          "text": "AWS CodePipeline with AWS CodeDeploy and AWS CodeBuild",
+          "correct": false
+        },
+        {
+          "text": "AWS Elastic Beanstalk with Multi-Region Deployment",
+          "correct": false
+        },
+        {
+          "text": "AWS CloudFormation StackSets with Change Sets",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>AWS CloudFormation StackSets allows for automated deployment and rollback of infrastructure changes across multiple AWS accounts and regions, with advanced control using Change Sets.</p>"
+    },
+    {
+      "id": "6-30",
+      "number": 30,
+      "text": "For implementing a high-performance, fully managed graph database service that supports complex queries and relationships, which AWS service should be used?",
+      "options": [
+        {
+          "text": "Amazon Aurora with PostgreSQL Compatibility",
+          "correct": false
+        },
+        {
+          "text": "Amazon DocumentDB",
+          "correct": false
+        },
+        {
+          "text": "Amazon RDS for PostgreSQL",
+          "correct": false
+        },
+        {
+          "text": "Amazon Neptune",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon Neptune is a fully managed graph database service designed for complex queries and relationships, supporting both property graph and RDF graph models.</p>"
+    },
+    {
+      "id": "6-31",
+      "number": 31,
+      "text": "What advanced feature in AWS Lambda allows you to deploy functions with different versions and manage traffic between them?",
+      "options": [
+        {
+          "text": "Lambda Provisioned Concurrency",
+          "correct": false
+        },
+        {
+          "text": "Lambda Aliases",
+          "correct": true
+        },
+        {
+          "text": "Lambda Layers",
+          "correct": false
+        },
+        {
+          "text": "Lambda Destinations",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Lambda Aliases let you create versioned endpoints for your functions and control traffic between different versions, facilitating blue-green deployments and gradual rollouts.</p>"
+    },
+    {
+      "id": "6-32",
+      "number": 32,
+      "text": "What recent trend in AI development focuses on creating models that are interpretable and transparent to enhance trust and understanding?",
+      "options": [
+        {
+          "text": "Reinforcement Learning",
+          "correct": false
+        },
+        {
+          "text": "Federated Learning",
+          "correct": false
+        },
+        {
+          "text": "Generative Adversarial Networks (GANs)",
+          "correct": false
+        },
+        {
+          "text": "Explainable AI (XAI)",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Explainable AI (XAI) emphasizes creating models whose decisions and processes can be understood and interpreted, enhancing trust and transparency.</p>"
+    },
+    {
+      "id": "6-33",
+      "number": 33,
+      "text": "To handle complex data transformations and ETL processes with minimal code and server management, which AWS service provides a serverless data integration platform?",
+      "options": [
+        {
+          "text": "Amazon Redshift Spectrum",
+          "correct": false
+        },
+        {
+          "text": "AWS Data Pipeline",
+          "correct": false
+        },
+        {
+          "text": "Amazon Athena",
+          "correct": false
+        },
+        {
+          "text": "AWS Glue",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>AWS Glue is a serverless ETL service that allows for complex data transformations and integration with minimal code and server management.</p>"
+    },
+    {
+      "id": "6-34",
+      "number": 34,
+      "text": "In a complex AWS environment with multiple microservices that require consistent state and transaction management, what solution provides both event sourcing and CQRS capabilities?",
+      "options": [
+        {
+          "text": "Amazon Kinesis Data Firehose with Amazon S3 and AWS Glue",
+          "correct": false
+        },
+        {
+          "text": "AWS Step Functions with Amazon SQS and Amazon RDS",
+          "correct": false
+        },
+        {
+          "text": "Amazon SNS with Amazon Kinesis Data Analytics and Amazon Aurora",
+          "correct": false
+        },
+        {
+          "text": "Amazon EventBridge with AWS Lambda and DynamoDB Streams",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon EventBridge, combined with AWS Lambda and DynamoDB Streams, can be used to implement event sourcing and CQRS (Command Query Responsibility Segregation) for managing state and transactions.</p>"
+    },
+    {
+      "id": "6-35",
+      "number": 35,
+      "text": "For a global application that requires real-time collaboration features and document synchronization with minimal latency, which AWS service should be used?",
+      "options": [
+        {
+          "text": "Amazon WorkSpaces with Amazon Cognito and AWS Lambda",
+          "correct": false
+        },
+        {
+          "text": "Amazon Chime SDK with Amazon DynamoDB and AWS Global Accelerator",
+          "correct": false
+        },
+        {
+          "text": "AWS AppSync with Amazon S3 and AWS Amplify",
+          "correct": true
+        },
+        {
+          "text": "Amazon QuickSight with AWS Glue and Amazon CloudFront",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>AWS AppSync provides real-time data synchronization and collaboration features, while Amazon S3 and AWS Amplify support document storage and front-end integration, ensuring minimal latency.</p>"
+    },
+    {
+      "id": "6-36",
+      "number": 36,
+      "text": "In a microservices architecture, which pattern addresses the challenge of managing inter-service communication and ensures reliable delivery of messages?",
+      "options": [
+        {
+          "text": "Direct Service-to-Service Communication",
+          "correct": false
+        },
+        {
+          "text": "Synchronous API Calls",
+          "correct": false
+        },
+        {
+          "text": "Message Queuing and Pub/Sub Pattern",
+          "correct": true
+        },
+        {
+          "text": "Service Registry and Discovery",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Message Queuing and the Publish/Subscribe (Pub/Sub) pattern ensure reliable message delivery and decoupling between services in a microservices architecture.</p>"
+    },
+    {
+      "id": "6-37",
+      "number": 37,
+      "text": "What AWS service provides a fully managed database with automatic failover and support for distributed transactions, designed for applications requiring high availability and scalability?",
+      "options": [
+        {
+          "text": "Amazon RDS for PostgreSQL",
+          "correct": false
+        },
+        {
+          "text": "Amazon Neptune",
+          "correct": false
+        },
+        {
+          "text": "Amazon DynamoDB",
+          "correct": false
+        },
+        {
+          "text": "Amazon Aurora",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon Aurora offers high availability with automatic failover and support for distributed transactions, making it ideal for applications requiring high scalability.</p>"
+    },
+    {
+      "id": "6-38",
+      "number": 38,
+      "text": "For a global application requiring consistent, low-latency data access and write capability across multiple regions, while also managing eventual consistency, which AWS service should be utilized?",
+      "options": [
+        {
+          "text": "AWS ElastiCache with Redis",
+          "correct": false
+        },
+        {
+          "text": "Amazon Aurora Global Databases",
+          "correct": false
+        },
+        {
+          "text": "Amazon DynamoDB Global Tables",
+          "correct": true
+        },
+        {
+          "text": "Amazon RDS with Cross-Region Read Replicas",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon DynamoDB Global Tables provides low-latency data access and write capability across multiple regions with eventual consistency, suitable for global applications.</p>"
+    },
+    {
+      "id": "6-39",
+      "number": 39,
+      "text": "Which emerging technology in data storage is designed to provide highly scalable and cost-efficient data lakes with advanced querying capabilities?",
+      "options": [
+        {
+          "text": "Amazon S3 Intelligent-Tiering",
+          "correct": false
+        },
+        {
+          "text": "Amazon DynamoDB On-Demand",
+          "correct": false
+        },
+        {
+          "text": "Amazon Redshift Spectrum",
+          "correct": false
+        },
+        {
+          "text": "AWS Lake Formation",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>AWS Lake Formation simplifies the process of building and managing a data lake, providing scalable storage and advanced querying capabilities.</p>"
+    },
+    {
+      "id": "6-40",
+      "number": 40,
+      "text": "In a real-life scenario where a company needs to migrate a legacy on-premises database to AWS, ensuring minimal downtime and data consistency, which combination of AWS services should be used?",
+      "options": [
+        {
+          "text": "AWS Direct Connect with AWS Backup",
+          "correct": false
+        },
+        {
+          "text": "AWS Database Migration Service (DMS) with AWS Schema Conversion Tool (SCT)",
+          "correct": true
+        },
+        {
+          "text": "AWS Snowball with Amazon Aurora",
+          "correct": false
+        },
+        {
+          "text": "Amazon RDS with AWS DataSync and AWS Glue",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>AWS DMS facilitates the migration of databases with minimal downtime, and AWS SCT helps in converting database schema, ensuring data consistency during the migration.</p>"
+    },
+    {
+      "id": "6-41",
+      "number": 41,
+      "text": "For a machine learning application that needs to train models using large datasets and requires distributed training capabilities, which AWS services and configurations are most appropriate?",
+      "options": [
+        {
+          "text": "Amazon RDS with AWS Step Functions and Amazon CloudWatch",
+          "correct": false
+        },
+        {
+          "text": "Amazon EMR with Amazon DynamoDB and AWS Fargate",
+          "correct": false
+        },
+        {
+          "text": "Amazon SageMaker with Distributed Training, Amazon S3, and Amazon EC2 P3 Instances",
+          "correct": true
+        },
+        {
+          "text": "AWS Lambda with Amazon S3, Amazon Redshift, and AWS Glue",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon SageMaker supports distributed training for large datasets, Amazon S3 provides scalable storage, and Amazon EC2 P3 Instances offer high-performance GPU resources for efficient model training.</p>"
+    },
+    {
+      "id": "6-42",
+      "number": 42,
+      "text": "An organization requires a highly available and fault-tolerant architecture for a multi-tier web application with the ability to automatically scale based on traffic patterns. Which AWS services and features would best meet these requirements?",
+      "options": [
+        {
+          "text": "Amazon Lightsail with Amazon S3 and AWS Step Functions",
+          "correct": false
+        },
+        {
+          "text": "Amazon ECS with AWS Fargate, Amazon Aurora Serverless, and AWS WAF",
+          "correct": false
+        },
+        {
+          "text": "Amazon EKS with AWS Lambda, Amazon DynamoDB Global Tables, and AWS Shield Advanced",
+          "correct": false
+        },
+        {
+          "text": "Amazon EC2 Auto Scaling with Elastic Load Balancer, Amazon RDS Multi-AZ, and AWS Elastic Beanstalk",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon EC2 Auto Scaling adjusts capacity, Elastic Load Balancer distributes traffic, Amazon RDS Multi-AZ provides high availability for databases, and AWS Elastic Beanstalk handles application deployment and scaling.</p>"
+    },
+    {
+      "id": "6-43",
+      "number": 43,
+      "text": "You are developing a solution to analyze and visualize large amounts of data from multiple sources. The solution needs to be able to handle complex queries, scale with data volume, and provide interactive dashboards. Which AWS services and features should be used?",
+      "options": [
+        {
+          "text": "Amazon Redshift with Amazon QuickSight and AWS Glue",
+          "correct": true
+        },
+        {
+          "text": "Amazon DynamoDB with AWS Glue and Amazon Elasticsearch Service",
+          "correct": false
+        },
+        {
+          "text": "Amazon S3 with Amazon EMR and Amazon QuickSight",
+          "correct": false
+        },
+        {
+          "text": "Amazon RDS with Amazon Athena and AWS Lambda",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon Redshift handles complex queries and scales with data volume, Amazon QuickSight provides interactive dashboards, and AWS Glue manages ETL tasks to prepare data for analysis.</p>"
+    }
+  ]
+}

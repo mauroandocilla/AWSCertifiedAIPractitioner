@@ -1,0 +1,1307 @@
+{
+  "setNumber": 4,
+  "sourceFile": "Practice_Set_4.html",
+  "questionCount": 52,
+  "questions": [
+    {
+      "id": "4-1",
+      "number": 1,
+      "text": "Para reducir los costos de ejecutar inferencia de machine learning en conjuntos de datos grandes, ¿qué característica de Amazon SageMaker deberías usar?",
+      "options": [
+        {
+          "text": "Batch transform",
+          "correct": true
+        },
+        {
+          "text": "Model monitoring",
+          "correct": false
+        },
+        {
+          "text": "Real-time endpoints",
+          "correct": false
+        },
+        {
+          "text": "Hyperparameter tuning",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Batch transform en Amazon SageMaker te permite ejecutar inferencia en conjuntos de datos grandes de una sola vez, en lugar de procesar los datos en tiempo real. Esto puede reducir significativamente los costos al utilizar los recursos de forma eficiente durante las horas de menor demanda.</p>"
+    },
+    {
+      "id": "4-2",
+      "number": 2,
+      "text": "¿Cómo crear un modelo en Amazon SageMaker usando AWS CLI?",
+      "options": [
+        {
+          "text": "aws sagemaker deploy-model --name --container",
+          "correct": false
+        },
+        {
+          "text": "aws sagemaker create-model --model-name --primary-container",
+          "correct": true
+        },
+        {
+          "text": "aws sagemaker start-model --name --container",
+          "correct": false
+        },
+        {
+          "text": "aws sagemaker register-model --model --container",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>El comando aws sagemaker create-model crea un nuevo modelo en Amazon SageMaker. Necesitás especificar el nombre del modelo y el primary container que contiene los artefactos del modelo y el código de inferencia usando los flags –model-name y –primary-container.</p>"
+    },
+    {
+      "id": "4-3",
+      "number": 3,
+      "text": "¿A qué se refiere el término \"overfitting\" en machine learning?",
+      "options": [
+        {
+          "text": "El proceso de entrenamiento de un modelo tarda demasiado en converger",
+          "correct": false
+        },
+        {
+          "text": "Un modelo utiliza muy pocas características para hacer predicciones",
+          "correct": false
+        },
+        {
+          "text": "Un modelo es demasiado simple para capturar los patrones subyacentes en los datos",
+          "correct": false
+        },
+        {
+          "text": "Un modelo funciona bien con datos de entrenamiento pero mal con datos nuevos no vistos",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>El overfitting ocurre cuando un modelo aprende demasiado bien los datos de entrenamiento, incluyendo el ruido y los valores atípicos, lo que resulta en una pobre generalización a datos nuevos no vistos.</p>"
+    },
+    {
+      "id": "4-4",
+      "number": 4,
+      "text": "¿Cuál es el principal beneficio de usar Amazon SageMaker Data Wrangler?",
+      "options": [
+        {
+          "text": "Proporciona inferencia en tiempo real",
+          "correct": false
+        },
+        {
+          "text": "Simplifica la preparación de datos e ingeniería de características",
+          "correct": true
+        },
+        {
+          "text": "Automatiza el ajuste de hiperparámetros",
+          "correct": false
+        },
+        {
+          "text": "Implementa modelos en dispositivos edge",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon SageMaker Data Wrangler simplifica el proceso de preparación de datos e ingeniería de características, permitiendo que los usuarios preparen datos de forma rápida y eficiente para modelos de machine learning utilizando una interfaz visual.</p>"
+    },
+    {
+      "id": "4-5",
+      "number": 5,
+      "text": "En el contexto del aprendizaje automático, ¿a qué se refiere \"feature scaling\"?",
+      "options": [
+        {
+          "text": "Reducir la cantidad de features",
+          "correct": false
+        },
+        {
+          "text": "Aumentar la dimensionalidad de los features",
+          "correct": false
+        },
+        {
+          "text": "Seleccionar los features más importantes",
+          "correct": false
+        },
+        {
+          "text": "Normalizar el rango de los features",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Feature scaling implica normalizar el rango de los features en un conjunto de datos para asegurar que todos los features contribuyan de manera equitativa al desempeño del modelo, frecuentemente estandarizando o normalizando los valores de los features.</p>"
+    },
+    {
+      "id": "4-6",
+      "number": 6,
+      "text": "Tienes un dataset con valores faltantes. ¿Cuál es una técnica que puedes usar en Amazon SageMaker Data Wrangler para manejar estos valores faltantes?",
+      "options": [
+        {
+          "text": "Eliminar filas con valores faltantes",
+          "correct": false
+        },
+        {
+          "text": "Usar métodos de forward fill o backward fill",
+          "correct": false
+        },
+        {
+          "text": "Rellenar valores faltantes con la media",
+          "correct": false
+        },
+        {
+          "text": "Todas las anteriores",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon SageMaker Data Wrangler proporciona varias técnicas para manejar valores faltantes, incluyendo eliminar filas con valores faltantes, rellenar valores faltantes con medidas estadísticas como la media, y usar métodos de forward fill o backward fill para propagar la observación válida siguiente o anterior.</p>"
+    },
+    {
+      "id": "4-7",
+      "number": 7,
+      "text": "Estás utilizando un modelo previamente entrenado de AWS Marketplace pero necesitas ajustarlo para tu caso de uso específico. ¿Cuál es el mejor enfoque para lograrlo?",
+      "options": [
+        {
+          "text": "Modificar la arquitectura del modelo",
+          "correct": false
+        },
+        {
+          "text": "Reentrenar el modelo desde cero",
+          "correct": false
+        },
+        {
+          "text": "Usar el modelo tal como está para predicciones",
+          "correct": false
+        },
+        {
+          "text": "Usar transfer learning con Amazon SageMaker",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Transfer learning implica tomar un modelo previamente entrenado y ajustarlo con tu conjunto de datos específico. Amazon SageMaker admite transfer learning, lo que te permite adaptar el modelo previamente entrenado a tu caso de uso específico de manera eficiente.</p>"
+    },
+    {
+      "id": "4-8",
+      "number": 8,
+      "text": "¿Cuál servicio de AWS se integra con Amazon SageMaker para proporcionar capacidades de etiquetado de datos para aprendizaje supervisado?",
+      "options": [
+        {
+          "text": "Amazon Mechanical Turk",
+          "correct": false
+        },
+        {
+          "text": "SageMaker Ground Truth",
+          "correct": true
+        },
+        {
+          "text": "Amazon Rekognition",
+          "correct": false
+        },
+        {
+          "text": "AWS Glue",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>SageMaker Ground Truth proporciona capacidades de etiquetado de datos que ayudan a crear conjuntos de datos de entrenamiento de alta calidad para aprendizaje supervisado aprovechando etiquetadores humanos, etiquetado automatizado y aprendizaje activo.</p>"
+    },
+    {
+      "id": "4-9",
+      "number": 9,
+      "text": "Al implementar un modelo de machine learning para inferencia en AWS Lambda, ¿cuál es una consideración clave para garantizar un rendimiento eficiente?",
+      "options": [
+        {
+          "text": "Usar tamaños de batch más grandes",
+          "correct": false
+        },
+        {
+          "text": "El tamaño del modelo debe ser minimizado",
+          "correct": true
+        },
+        {
+          "text": "Aumentar la asignación de memoria de Lambda",
+          "correct": false
+        },
+        {
+          "text": "Usar múltiples funciones Lambda para inferencia",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Al implementar un modelo de machine learning para inferencia en AWS Lambda, es crucial minimizar el tamaño del modelo para que quepa dentro de los límites de memoria y almacenamiento del entorno de ejecución de Lambda. Los modelos más pequeños se cargan más rápido y utilizan menos recursos, lo que garantiza un rendimiento eficiente.</p>"
+    },
+    {
+      "id": "4-10",
+      "number": 10,
+      "text": "¿Qué combinación de servicios utilizarías para construir un pipeline de machine learning completamente administrado de extremo a extremo que incluya preprocesamiento de datos, entrenamiento de modelos e implementación?",
+      "options": [
+        {
+          "text": "AWS Batch, Amazon SageMaker y Amazon S3",
+          "correct": false
+        },
+        {
+          "text": "AWS Lambda, Amazon Rekognition y Amazon S3",
+          "correct": false
+        },
+        {
+          "text": "Amazon Redshift, AWS Glue y AWS Lambda",
+          "correct": false
+        },
+        {
+          "text": "Amazon SageMaker Pipelines, AWS Glue y Amazon SageMaker Endpoints",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon SageMaker Pipelines, AWS Glue y Amazon SageMaker Endpoints proporcionan una solución integral y completamente administrada para construir un pipeline de machine learning de extremo a extremo, cubriendo preprocesamiento de datos, entrenamiento de modelos e implementación.</p>"
+    },
+    {
+      "id": "4-11",
+      "number": 11,
+      "text": "¿Cuál es la principal ventaja de usar Amazon SageMaker Neo para la implementación de modelos?",
+      "options": [
+        {
+          "text": "Capacidades mejoradas de visualización de datos",
+          "correct": false
+        },
+        {
+          "text": "Optimización de modelos para múltiples plataformas de hardware",
+          "correct": true
+        },
+        {
+          "text": "Seguridad de datos mejorada",
+          "correct": false
+        },
+        {
+          "text": "Análisis de video en tiempo real",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon SageMaker Neo permite a los desarrolladores optimizar modelos de machine learning para que se ejecuten eficientemente en múltiples plataformas de hardware, como CPUs, GPUs y dispositivos edge. Esta optimización puede mejorar significativamente el rendimiento del modelo y reducir la latencia de inferencia.</p>"
+    },
+    {
+      "id": "4-12",
+      "number": 12,
+      "text": "Tenés un conjunto de datos grande almacenado en Amazon S3 y necesitás usarlo para entrenar un modelo de machine learning. ¿Cuál de las siguientes características de Amazon SageMaker te permite entrenar con estos datos sin copiarlos a la instancia de entrenamiento?",
+      "options": [
+        {
+          "text": "SageMaker Debugger",
+          "correct": false
+        },
+        {
+          "text": "SageMaker Batch Transform",
+          "correct": false
+        },
+        {
+          "text": "SageMaker Processing",
+          "correct": false
+        },
+        {
+          "text": "SageMaker Training with Pipe Mode",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>SageMaker Training with Pipe Mode te permite hacer streaming de los datos directamente desde Amazon S3 hacia las instancias de entrenamiento, lo que elimina la necesidad de descargar el conjunto de datos completo al almacenamiento de la instancia. Esto acelera el entrenamiento y reduce los costos de almacenamiento.</p>"
+    },
+    {
+      "id": "4-13",
+      "number": 13,
+      "text": "Querés identificar las características más importantes que influyen en las predicciones de tu modelo. ¿Cuál servicio de AWS puede proporcionarte esta información?",
+      "options": [
+        {
+          "text": "Amazon SageMaker Debugger",
+          "correct": false
+        },
+        {
+          "text": "AWS Glue",
+          "correct": false
+        },
+        {
+          "text": "Amazon SageMaker Ground Truth",
+          "correct": false
+        },
+        {
+          "text": "Amazon SageMaker Clarify",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon SageMaker Clarify ofrece análisis de importancia de características, lo que ayuda a identificar las características más importantes que influyen en las predicciones del modelo. Este conocimiento puede utilizarse para mejorar la interpretabilidad y el desempeño del modelo.</p>"
+    },
+    {
+      "id": "4-14",
+      "number": 14,
+      "text": "¿Cuál es el propósito principal de usar dropout en redes neuronales?",
+      "options": [
+        {
+          "text": "Aumentar la cantidad de neuronas en cada capa",
+          "correct": false
+        },
+        {
+          "text": "Prevenir el overfitting desactivando aleatoriamente neuronas durante el entrenamiento",
+          "correct": true
+        },
+        {
+          "text": "Acelerar el proceso de entrenamiento",
+          "correct": false
+        },
+        {
+          "text": "Asegurar que todas las neuronas estén siempre activas",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Dropout es una técnica de regularización utilizada en redes neuronales para prevenir el overfitting desactivando aleatoriamente un subconjunto de neuronas durante cada iteración de entrenamiento, haciendo así que la red sea más robusta.</p>"
+    },
+    {
+      "id": "4-15",
+      "number": 15,
+      "text": "¿Cuál es el servicio de AWS diseñado para crear interfaces conversacionales y chatbots?",
+      "options": [
+        {
+          "text": "Amazon Comprehend",
+          "correct": false
+        },
+        {
+          "text": "Amazon Lex",
+          "correct": true
+        },
+        {
+          "text": "AWS Glue",
+          "correct": false
+        },
+        {
+          "text": "Amazon Polly",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon Lex es un servicio para crear interfaces conversacionales en cualquier aplicación usando voz y texto. Proporciona capacidades de deep learning como reconocimiento automático de voz (ASR) para convertir voz a texto y procesamiento de lenguaje natural (NLU) para reconocer la intención del texto.</p>"
+    },
+    {
+      "id": "4-16",
+      "number": 16,
+      "text": "En el contexto del aprendizaje automático, ¿qué es el \"feature engineering\"?",
+      "options": [
+        {
+          "text": "El proceso de seleccionar y transformar características de entrada para mejorar el desempeño del modelo",
+          "correct": true
+        },
+        {
+          "text": "El proceso de construir e implementar modelos",
+          "correct": false
+        },
+        {
+          "text": "El proceso de dividir datos en conjuntos de entrenamiento y prueba",
+          "correct": false
+        },
+        {
+          "text": "El proceso de ajustar hiperparámetros de un modelo",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>El feature engineering implica seleccionar, modificar y crear nuevas características a partir de datos sin procesar para mejorar el desempeño de los modelos de aprendizaje automático.</p>"
+    },
+    {
+      "id": "4-17",
+      "number": 17,
+      "text": "¿Cuál es el servicio de AWS que se utiliza principalmente para construir e implementar modelos de machine learning?",
+      "options": [
+        {
+          "text": "Amazon S3",
+          "correct": false
+        },
+        {
+          "text": "AWS Lambda",
+          "correct": false
+        },
+        {
+          "text": "Amazon SageMaker",
+          "correct": true
+        },
+        {
+          "text": "Amazon RDS",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon SageMaker es un servicio completamente administrado que brinda a desarrolladores y científicos de datos la capacidad de construir, entrenar e implementar modelos de machine learning (ML) rápidamente. Se integra con otros servicios de AWS y proporciona herramientas para etiquetar, construir, entrenar e implementar modelos, lo que lo convierte en el servicio preferido para proyectos de ML.</p>"
+    },
+    {
+      "id": "4-18",
+      "number": 18,
+      "text": "En un flujo de trabajo de machine learning en AWS, ¿cuál es el propósito de usar AWS Data Pipeline?",
+      "options": [
+        {
+          "text": "Crear visualizaciones de datos",
+          "correct": false
+        },
+        {
+          "text": "Desplegar modelos de machine learning",
+          "correct": false
+        },
+        {
+          "text": "Almacenar grandes conjuntos de datos",
+          "correct": false
+        },
+        {
+          "text": "Automatizar el movimiento y transformación de datos",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>AWS Data Pipeline es un servicio web que ayuda a automatizar el movimiento y transformación de datos. Se utiliza comúnmente en flujos de trabajo de machine learning para preparar y procesar datos para el entrenamiento y evaluación de modelos.</p>"
+    },
+    {
+      "id": "4-19",
+      "number": 19,
+      "text": "¿Cuál es la métrica más comúnmente utilizada para evaluar el rendimiento de un modelo de regresión?",
+      "options": [
+        {
+          "text": "Accuracy",
+          "correct": false
+        },
+        {
+          "text": "Mean Squared Error (MSE)",
+          "correct": true
+        },
+        {
+          "text": "Confusion Matrix",
+          "correct": false
+        },
+        {
+          "text": "F1 Score",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Mean Squared Error (MSE) es una métrica común para evaluar el rendimiento de modelos de regresión, ya que mide el promedio de las diferencias al cuadrado entre los valores predichos y los valores reales.</p>"
+    },
+    {
+      "id": "4-20",
+      "number": 20,
+      "text": "¿Cuál comando usarías para crear una nueva instancia de notebook en Amazon SageMaker con un tipo de instancia específico y un rol de IAM?",
+      "options": [
+        {
+          "text": "aws sagemaker create-notebook-instance --instance-type --role-name",
+          "correct": false
+        },
+        {
+          "text": "aws sagemaker create-notebook-instance --instance-type --role-arn",
+          "correct": true
+        },
+        {
+          "text": "aws sagemaker create-notebook --instance-type --role",
+          "correct": false
+        },
+        {
+          "text": "aws sagemaker create-notebook --type --iam-role",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>El comando <code>aws sagemaker create-notebook-instance</code> se usa para crear una nueva instancia de notebook en Amazon SageMaker. El flag <code>--instance-type</code> especifica el tipo de instancia, y el flag <code>--role-arn</code> especifica el rol de IAM que usará la instancia de notebook.</p>"
+    },
+    {
+      "id": "4-21",
+      "number": 21,
+      "text": "¿Cuál de las siguientes opciones describe mejor el concepto de \"early stopping\" en el entrenamiento de modelos?",
+      "options": [
+        {
+          "text": "Detener el proceso de entrenamiento después de una cantidad fija de épocas",
+          "correct": false
+        },
+        {
+          "text": "Terminar el entrenamiento cuando el error de validación comienza a aumentar",
+          "correct": true
+        },
+        {
+          "text": "Aumentar el tamaño del batch para acelerar el entrenamiento",
+          "correct": false
+        },
+        {
+          "text": "Reducir la tasa de aprendizaje cuando el rendimiento del modelo se estanca",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>\n\t\t\t\t\t\t\t<b>Terminar el entrenamiento cuando el error de validación comienza a aumentar</b> describe mejor el concepto de \"early stopping\" en el entrenamiento de modelos.\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p>Early stopping <span>es una técnica utilizada para prevenir el overfitting en modelos de machine learning. El overfitting ocurre cuando un modelo se vuelve demasiado complejo y comienza a</span> aprender el ruido en los datos de entrenamiento en lugar de los patrones subyacentes. Esto puede resultar en un rendimiento deficiente en datos nuevos que el modelo nunca ha visto.</p>\n\t\t\t\t\t\t<p>Al monitorear el error de validación durante el entrenamiento y detener el proceso cuando comienza a aumentar, early stopping ayuda a prevenir el overfitting y mejora el rendimiento de generalización del modelo.</p>"
+    },
+    {
+      "id": "4-22",
+      "number": 22,
+      "text": "Necesitás realizar pruebas A/B para diferentes versiones de tu modelo de machine learning. ¿Qué característica de Amazon SageMaker puede facilitar esto?",
+      "options": [
+        {
+          "text": "SageMaker Pipelines",
+          "correct": false
+        },
+        {
+          "text": "SageMaker Experiments",
+          "correct": false
+        },
+        {
+          "text": "SageMaker Multi-Model Endpoints",
+          "correct": true
+        },
+        {
+          "text": "SageMaker Model Monitor",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p><span></span><span>SageMaker Multi-Model Endpoints</span></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<span>El mecanismo central para las pruebas A/B en Amazon SageMaker se logra implementando múltiples </span><span>Production Variants</span><span> detrás de un único endpoint de tiempo real.</span>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li><span>Cada </span><span>Production Variant</span><span> aloja una versión diferente del modelo (o incluso algoritmos diferentes o tipos de instancias).</span></li>\n\t\t\t\t\t\t\t\t\t<li><span>SageMaker te permite definir un initial_weight para cada variante. Al configurar los pesos, podés </span><span>dividir el tráfico de producción en vivo</span><span> entre los modelos (por ejemplo, 90% al modelo antiguo/campeón y 10% al modelo nuevo/desafiante) para monitorear y comparar sus métricas de rendimiento (como precisión, tasa de clics o latencia) bajo condiciones reales.</span></li>\n\t\t\t\t\t\t\t\t\t<li><span>Aunque el término "
+    },
+    {
+      "id": "4-23",
+      "number": 23,
+      "text": "¿Cuál servicio de AWS puede ayudar a mejorar la eficiencia en centros de atención?",
+      "options": [
+        {
+          "text": "Amazon Lex",
+          "correct": true
+        },
+        {
+          "text": "Amazon Rekognition",
+          "correct": false
+        },
+        {
+          "text": "Amazon Polly",
+          "correct": false
+        },
+        {
+          "text": "Amazon Translate",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p><b>Amazon Lex</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>Amazon Lex es un servicio de AWS para construir <b>interfaces conversacionales (chatbots y voice bots)</b>.</li>\n\t\t\t\t\t\t\t\t\t<li>Utiliza <b>reconocimiento automático de voz (ASR)</b> y <b>comprensión del lenguaje natural (NLU)</b> para interactuar con los clientes.</li>\n\t\t\t\t\t\t\t\t\t<li>En centros de atención, Lex puede automatizar consultas rutinarias, reducir tiempos de espera y mejorar la eficiencia al gestionar interacciones de clientes sin necesidad de agentes humanos.</li>\n\t\t\t\t\t\t\t\t\t<li>Este es el <b>servicio principal de AWS</b> que aparece en escenarios de examen para mejorar <b>la eficiencia en centros de atención</b>.</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>Incorrecto</p>\n\t\t\t\t\t\t<p><b>Amazon Rekognition</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>Rekognition se utiliza para <b>análisis de imágenes y videos</b> (por ejemplo, reconocimiento facial, detección de objetos).</li>\n\t\t\t\t\t\t\t\t\t<li>No tiene un rol directo en mejorar la eficiencia de centros de atención.</li>\n\t\t\t\t\t\t\t\t\t<li>Es más relevante para casos de uso de seguridad, medios o vigilancia.</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>Amazon Polly</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>Polly convierte texto en <b>voz natural y realista</b>.</li>\n\t\t\t\t\t\t\t\t\t<li>Si bien puede utilizarse en centros de atención para proporcionar respuestas de voz, no es el <b>servicio principal para mejoras de eficiencia</b>.</li>\n\t\t\t\t\t\t\t\t\t<li>Polly se utiliza frecuentemente junto con Lex, pero Lex es el servicio central para la automatización.</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>Amazon Translate</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>Translate proporciona <b>traducción de lenguaje en tiempo real</b>.</li>\n\t\t\t\t\t\t\t\t\t<li>Es útil para soporte multilingüe, pero no mejora directamente la <b>eficiencia general del centro de atención</b>.</li>\n\t\t\t\t\t\t\t\t\t<li>Es una herramienta complementaria, no la solución principal.</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>"
+    },
+    {
+      "id": "4-24",
+      "number": 24,
+      "text": "¿Cuál servicio de AWS proporciona Jupyter notebooks administrados para ciencia de datos?",
+      "options": [
+        {
+          "text": "Amazon QuickSight",
+          "correct": false
+        },
+        {
+          "text": "Amazon SageMaker",
+          "correct": true
+        },
+        {
+          "text": "Amazon Lex",
+          "correct": false
+        },
+        {
+          "text": "Amazon EMR",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<div>\n\t\t\t\t\t\t\t<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t<b>Amazon SageMaker</b>\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t<b>SageMaker Studio</b> y <b>Notebook Instances</b> ofrecen <b>entornos JupyterLab/Jupyter Notebook completamente administrados</b>. Vienen preconfigurados con librerías de ciencia de datos (Pandas, NumPy, scikit-learn), frameworks de machine learning (TensorFlow, PyTorch) y escalado elástico de recursos.\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t<b>Amazon QuickSight</b>\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t<b>Herramienta de visualización de BI</b>. Tableros y gráficos – <b>sin compatibilidad con Jupyter notebooks</b>.\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t<b>Amazon Lex</b>\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t<b>Servicio de chatbot</b> para IA conversacional. <b>Sin funcionalidad de notebooks</b>.\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t<b>Amazon EMR</b>\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t<b>Clusters de big data con Hadoop/Spark</b>. Soporta JupyterHub pero requiere <b>gestión manual del cluster</b> – no es \"Jupyter notebooks administrados\".\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t</div>"
+    },
+    {
+      "id": "4-25",
+      "number": 25,
+      "text": "¿Cuál de las siguientes opciones NO es una característica de Amazon Rekognition?",
+      "options": [
+        {
+          "text": "Análisis facial",
+          "correct": false
+        },
+        {
+          "text": "Detección de objetos",
+          "correct": false
+        },
+        {
+          "text": "Reconocimiento de celebridades",
+          "correct": false
+        },
+        {
+          "text": "Análisis de sentimientos",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p><b>Análisis de sentimientos</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Correcto porque: Amazon Rekognition está diseñado para <b>análisis de imágenes y videos</b>. Ofrece características como análisis facial, detección de objetos y reconocimiento de celebridades. El <b>análisis de sentimientos</b>, sin embargo, es una capacidad de procesamiento del lenguaje natural (NLP) basada en texto, que típicamente ofrece <b>Amazon Comprehend</b>, no Rekognition.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p><b>Análisis facial</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrecto porque: Rekognition puede detectar rostros, analizar atributos faciales (rango de edad, emociones, género) e identificar individuos en imágenes y videos.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>Detección de objetos</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrecto porque: Rekognition admite detección de objetos y escenas, identificando miles de objetos (por ejemplo, autos, animales, muebles) dentro de imágenes y videos.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>Reconocimiento de celebridades</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrecto porque: Rekognition incluye reconocimiento de celebridades, permitiendo la identificación de personajes públicos conocidos en imágenes y videos.</li>\n\t\t\t\t\t\t</ul>"
+    },
+    {
+      "id": "4-26",
+      "number": 26,
+      "text": "¿Cuál es la característica de Amazon SageMaker que te ayuda a mantener el control de todas las diferentes versiones de tus datasets de entrenamiento, modelos y experimentos?",
+      "options": [
+        {
+          "text": "Amazon SageMaker Experiments",
+          "correct": true
+        },
+        {
+          "text": "Amazon SageMaker Model Registry",
+          "correct": false
+        },
+        {
+          "text": "Amazon SageMaker Pipelines",
+          "correct": false
+        },
+        {
+          "text": "Amazon SageMaker Data Wrangler",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correcta</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Amazon SageMaker Experiments</b> es correcta porque <b>SageMaker Experiments</b> está diseñado específicamente para rastrear, organizar y comparar diferentes versiones de datasets, modelos y ejecuciones de entrenamiento. Te permite capturar metadatos, parámetros y resultados, facilitando que reproduzcas experimentos y analices variaciones. Esta es la característica que aborda directamente el control de versiones en todo el ciclo de vida del ML.\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p><strong>Incorrecta</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Amazon SageMaker Model Registry</b> es incorrecta porque <b>Model Registry</b> se utiliza para gestionar e implementar modelos entrenados, incluyendo el control de versiones de modelos para producción. Si bien rastrea versiones de modelos, no rastrea datasets o experimentos, por lo que no cumple completamente con el requisito.\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p><b>Amazon SageMaker Pipelines</b> es incorrecta porque <b>Pipelines</b> automatiza flujos de trabajo de ML (entrenamiento, evaluación, implementación). Ayuda a simplificar procesos pero no está diseñado para rastrear versiones de datasets y experimentos.</p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Amazon SageMaker Data Wrangler</b> es incorrecta porque <b>Data Wrangler</b> se utiliza para preparar y transformar datos. Simplifica el preprocesamiento de datos pero no proporciona rastreo de experimentos ni control de versiones de datasets y modelos.\n\t\t\t\t\t\t</p>"
+    },
+    {
+      "id": "4-27",
+      "number": 27,
+      "text": "Para gestionar el ciclo de vida de modelos de machine learning, incluyendo versionado e implementación, ¿cuál es el servicio de AWS que deberías usar?",
+      "options": [
+        {
+          "text": "Amazon SageMaker Model Registry",
+          "correct": true
+        },
+        {
+          "text": "AWS CodePipeline",
+          "correct": false
+        },
+        {
+          "text": "AWS CodeBuild",
+          "correct": false
+        },
+        {
+          "text": "AWS CloudFormation",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon SageMaker Model Registry ayuda a gestionar el ciclo de vida de modelos de machine learning al proporcionar versionado de modelos, seguimiento de metadatos y gestión de implementación. Garantiza que los modelos puedan ser rastreados fácilmente, compartidos e implementados de manera consistente en diferentes entornos.</p>"
+    },
+    {
+      "id": "4-28",
+      "number": 28,
+      "text": "¿Qué significa RAG en el contexto de Amazon Bedrock?",
+      "options": [
+        {
+          "text": "Randomized AI Generation",
+          "correct": false
+        },
+        {
+          "text": "Recurrent AI Generation",
+          "correct": false
+        },
+        {
+          "text": "Retrieval-Augmented Generation",
+          "correct": true
+        },
+        {
+          "text": "Random Access Generation",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>RAG significa Retrieval-Augmented Generation.</p>"
+    },
+    {
+      "id": "4-29",
+      "number": 29,
+      "text": "¿Cuál es el propósito de usar plugins en Amazon Q Business?",
+      "options": [
+        {
+          "text": "Crear políticas de seguridad de red",
+          "correct": false
+        },
+        {
+          "text": "Realizar acciones en sistemas empresariales y consultar datos",
+          "correct": true
+        },
+        {
+          "text": "Mejorar el procesamiento de imágenes",
+          "correct": false
+        },
+        {
+          "text": "Desarrollar aplicaciones móviles",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Los plugins en Amazon Q Business se utilizan para realizar acciones en sistemas empresariales y consultar datos.</p>"
+    },
+    {
+      "id": "4-30",
+      "number": 30,
+      "text": "¿Cuál es la técnica utilizada para reducir la dimensionalidad de los datos?",
+      "options": [
+        {
+          "text": "K-means",
+          "correct": false
+        },
+        {
+          "text": "Decision trees",
+          "correct": false
+        },
+        {
+          "text": "Logistic regression",
+          "correct": false
+        },
+        {
+          "text": "Principal Component Analysis (PCA)",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Principal Component Analysis (PCA) se utiliza para reducir la dimensionalidad de los datos.</p>"
+    },
+    {
+      "id": "4-31",
+      "number": 31,
+      "text": "¿Cómo optimiza Amazon SageMaker Neo el despliegue de modelos?",
+      "options": [
+        {
+          "text": "Automatizando el etiquetado de datos",
+          "correct": false
+        },
+        {
+          "text": "Reduciendo el tamaño del conjunto de datos",
+          "correct": false
+        },
+        {
+          "text": "Compilando modelos para hardware específico",
+          "correct": true
+        },
+        {
+          "text": "Simplificando la arquitectura del modelo",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>SageMaker Neo compila modelos para optimizarlos según el hardware específico, mejorando la eficiencia del despliegue.</p>"
+    },
+    {
+      "id": "4-32",
+      "number": 32,
+      "text": "¿Cómo maneja Amazon Q Business los permisos y el control de acceso?",
+      "options": [
+        {
+          "text": "Permitiendo acceso abierto a todos los datos",
+          "correct": false
+        },
+        {
+          "text": "Integrándose con AWS IAM Identity Center",
+          "correct": true
+        },
+        {
+          "text": "Aplicando solo listas blancas de IP",
+          "correct": false
+        },
+        {
+          "text": "Usando solo claves públicas",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>AWS IAM Identity Center se utiliza para administrar de manera segura los permisos y el control de acceso en Amazon Q Business.</p>"
+    },
+    {
+      "id": "4-33",
+      "number": 33,
+      "text": "¿Cuál es un beneficio clave de usar SageMaker Autopilot para el desarrollo de modelos de IA generativa?",
+      "options": [
+        {
+          "text": "Proporciona traducción en tiempo real",
+          "correct": false
+        },
+        {
+          "text": "Requiere ajuste manual de parámetros",
+          "correct": false
+        },
+        {
+          "text": "Utiliza templates predefinidos",
+          "correct": false
+        },
+        {
+          "text": "Simplifica la implementación de modelos",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>SageMaker Autopilot automatiza el entrenamiento y tuning de modelos de IA generativa.</p>"
+    },
+    {
+      "id": "4-34",
+      "number": 34,
+      "text": "¿Cómo se puede acceder a Amazon Q Business de forma programática?",
+      "options": [
+        {
+          "text": "Solo a través de AWS CLI",
+          "correct": false
+        },
+        {
+          "text": "Usando la API de Amazon Q Business",
+          "correct": true
+        },
+        {
+          "text": "Codificando manualmente cada función",
+          "correct": false
+        },
+        {
+          "text": "Usando AWS CloudFormation",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>La API de Amazon Q Business proporciona acceso programático al servicio.</p>"
+    },
+    {
+      "id": "4-35",
+      "number": 35,
+      "text": "¿Qué tipo de aplicación de IA se puede desarrollar utilizando Amazon Personalize?",
+      "options": [
+        {
+          "text": "Recomendaciones personalizadas",
+          "correct": true
+        },
+        {
+          "text": "Conversión de texto a voz",
+          "correct": false
+        },
+        {
+          "text": "Reconocimiento de imágenes",
+          "correct": false
+        },
+        {
+          "text": "Traducción de idiomas",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon Personalize se utiliza para desarrollar aplicaciones que proporcionan recomendaciones personalizadas.</p>"
+    },
+    {
+      "id": "4-36",
+      "number": 36,
+      "text": "¿De qué manera Amazon SageMaker Studio respalda el desarrollo colaborativo de IA generativa?",
+      "options": [
+        {
+          "text": "Proporcionando un IDE compartido con herramientas integradas",
+          "correct": true
+        },
+        {
+          "text": "Automatizando el preprocesamiento de datos",
+          "correct": false
+        },
+        {
+          "text": "Gestionando el tráfico de red",
+          "correct": false
+        },
+        {
+          "text": "Mejorando el cifrado de datos",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>SageMaker Studio ofrece un IDE compartido, lo que facilita que los equipos colaboren en proyectos de IA generativa.</p>"
+    },
+    {
+      "id": "4-37",
+      "number": 37,
+      "text": "¿Cuál es la ventaja de usar SageMaker Studio para el desarrollo de IA generativa?",
+      "options": [
+        {
+          "text": "Solo admite aprendizaje supervisado",
+          "correct": false
+        },
+        {
+          "text": "Ofrece un entorno de desarrollo unificado",
+          "correct": true
+        },
+        {
+          "text": "Se limita al preprocesamiento de datos",
+          "correct": false
+        },
+        {
+          "text": "Requiere habilidades avanzadas de codificación",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>SageMaker Studio ofrece un entorno de desarrollo unificado para soluciones de IA generativa.</p>"
+    },
+    {
+      "id": "4-38",
+      "number": 38,
+      "text": "¿Cómo puedes asegurar que los datasets de entrenamiento y prueba no se superpongan al usar Amazon SageMaker Data Wrangler?",
+      "options": [
+        {
+          "text": "Dividiendo manualmente los datasets",
+          "correct": false
+        },
+        {
+          "text": "Usando una fuente de datos diferente para las pruebas",
+          "correct": false
+        },
+        {
+          "text": "Aumentando el tamaño de los datasets",
+          "correct": false
+        },
+        {
+          "text": "Usando las capacidades integradas de división de datos",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon SageMaker Data Wrangler proporciona capacidades integradas para dividir datasets en conjuntos de entrenamiento y prueba, asegurando que no haya superposición. Esto ayuda a mantener la integridad del proceso de evaluación del modelo.</p>"
+    },
+    {
+      "id": "4-39",
+      "number": 39,
+      "text": "Cuando usas Amazon SageMaker Ground Truth para etiquetar datos, ¿cuál de estas técnicas puede ayudarte a reducir el costo general del proceso de etiquetado?",
+      "options": [
+        {
+          "text": "Aumentar la complejidad de las tareas de etiquetado",
+          "correct": false
+        },
+        {
+          "text": "Usar aumento automático de datos",
+          "correct": false
+        },
+        {
+          "text": "Implementar active learning",
+          "correct": true
+        },
+        {
+          "text": "Asignar más trabajadores a cada tarea de etiquetado",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Active learning es una técnica en la que el modelo identifica los puntos de datos más informativos que necesitan etiquetado. Al enfocarse en estos puntos de datos, Amazon SageMaker Ground Truth puede reducir la cantidad de datos etiquetados requeridos, disminuyendo así el costo general del proceso de etiquetado.</p>"
+    },
+    {
+      "id": "4-40",
+      "number": 40,
+      "text": "¿Cuál es el beneficio de usar Amazon SageMaker Feature Store en el desarrollo de IA generativa?",
+      "options": [
+        {
+          "text": "Proporciona un repositorio centralizado para el almacenamiento y gestión de features",
+          "correct": true
+        },
+        {
+          "text": "Mejora los protocolos de seguridad",
+          "correct": false
+        },
+        {
+          "text": "Simplifica la arquitectura del modelo",
+          "correct": false
+        },
+        {
+          "text": "Automatiza el etiquetado de datos",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>SageMaker Feature Store proporciona un repositorio centralizado para gestionar features, lo que ayuda en el desarrollo de IA generativa.</p>"
+    },
+    {
+      "id": "4-41",
+      "number": 41,
+      "text": "¿Cuál es el servicio de AWS que se utiliza para data warehousing escalable?",
+      "options": [
+        {
+          "text": "Amazon RDS",
+          "correct": false
+        },
+        {
+          "text": "Amazon Aurora",
+          "correct": false
+        },
+        {
+          "text": "Amazon DynamoDB",
+          "correct": false
+        },
+        {
+          "text": "Amazon Redshift",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon Redshift es un servicio de data warehouse completamente administrado que te permite ejecutar consultas complejas sobre petabytes de datos estructurados. Está diseñado para alta escalabilidad y rendimiento, lo que lo hace ideal para data warehousing y análisis de big data.</p>"
+    },
+    {
+      "id": "4-42",
+      "number": 42,
+      "text": "Querés habilitar la colaboración entre tu equipo de data science para construir y compartir modelos de machine learning. ¿Cuál servicio de AWS deberías usar?",
+      "options": [
+        {
+          "text": "Amazon SageMaker Ground Truth",
+          "correct": false
+        },
+        {
+          "text": "Amazon SageMaker Studio",
+          "correct": true
+        },
+        {
+          "text": "Amazon QuickSight",
+          "correct": false
+        },
+        {
+          "text": "Amazon Athena",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon SageMaker Studio es un entorno de desarrollo integrado (IDE) para machine learning. Proporciona una interfaz basada en web para construir, entrenar e implementar modelos, y facilita la colaboración entre equipos de data science al permitirles compartir notebooks, experimentos y modelos.</p>"
+    },
+    {
+      "id": "4-43",
+      "number": 43,
+      "text": "¿Cuál servicio de AWS usarías para realizar entrenamiento distribuido de modelos de deep learning con TensorFlow en un cluster de instancias GPU?",
+      "options": [
+        {
+          "text": "Amazon SageMaker Distributed Training",
+          "correct": true
+        },
+        {
+          "text": "AWS Glue",
+          "correct": false
+        },
+        {
+          "text": "AWS Batch",
+          "correct": false
+        },
+        {
+          "text": "Amazon Redshift",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon SageMaker Distributed Training te permite realizar entrenamiento distribuido de modelos de deep learning en múltiples instancias GPU. Soporta frameworks populares como TensorFlow y ayuda a reducir el tiempo de entrenamiento para modelos a gran escala.</p>"
+    },
+    {
+      "id": "4-44",
+      "number": 44,
+      "text": "Tu empresa requiere que todos los modelos de machine learning cumplan con regulaciones de privacidad de datos. ¿Cuál servicio de AWS puede ayudarte a detectar información sensible en tus conjuntos de datos antes del entrenamiento?",
+      "options": [
+        {
+          "text": "Amazon Rekognition",
+          "correct": false
+        },
+        {
+          "text": "AWS Config",
+          "correct": false
+        },
+        {
+          "text": "AWS Lambda",
+          "correct": false
+        },
+        {
+          "text": "Amazon Macie",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon Macie es un servicio de seguridad de datos que utiliza machine learning para descubrir, clasificar y proteger automáticamente información sensible en AWS. Ayuda a garantizar el cumplimiento de regulaciones de privacidad de datos al identificar información sensible en conjuntos de datos.</p>"
+    },
+    {
+      "id": "4-45",
+      "number": 45,
+      "text": "¿Cómo puedes monitorear la exactitud de un modelo implementado en Amazon SageMaker a lo largo del tiempo?",
+      "options": [
+        {
+          "text": "Usando AWS CloudTrail",
+          "correct": false
+        },
+        {
+          "text": "Usando Amazon SageMaker Model Monitor",
+          "correct": true
+        },
+        {
+          "text": "Reentrenando regularmente el modelo",
+          "correct": false
+        },
+        {
+          "text": "Configurando alarmas en Amazon CloudWatch",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon SageMaker Model Monitor monitorea continuamente los datos que procesan los modelos implementados y detecta problemas como data drift y errores de predicción. Esto ayuda a mantener la exactitud y confiabilidad del modelo a lo largo del tiempo.</p>"
+    },
+    {
+      "id": "4-46",
+      "number": 46,
+      "text": "Mientras usas Amazon SageMaker para entrenar un modelo, necesitas administrar automáticamente la optimización de hiperparámetros. ¿Qué feature deberías usar?",
+      "options": [
+        {
+          "text": "Automatic model tuning",
+          "correct": true
+        },
+        {
+          "text": "Data wrangling",
+          "correct": false
+        },
+        {
+          "text": "Batch transform",
+          "correct": false
+        },
+        {
+          "text": "Model explainability",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Automatic model tuning, también conocido como hyperparameter optimization (HPO), en Amazon SageMaker te permite buscar automáticamente los mejores hiperparámetros para tus modelos de machine learning. Utiliza técnicas como optimización Bayesiana para encontrar de manera eficiente los valores óptimos.</p>"
+    },
+    {
+      "id": "4-47",
+      "number": 47,
+      "text": "¿Qué enfoque utilizarías para manejar conjuntos de datos desbalanceados en un problema de clasificación en AWS?",
+      "options": [
+        {
+          "text": "Data augmentation",
+          "correct": false
+        },
+        {
+          "text": "Aumentar el tamaño del batch durante el entrenamiento",
+          "correct": false
+        },
+        {
+          "text": "Hacer oversampling de la clase minoritaria usando Amazon SageMaker Data Wrangler",
+          "correct": true
+        },
+        {
+          "text": "Reducir la cantidad de características",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Para manejar conjuntos de datos desbalanceados, hacer oversampling de la clase minoritaria es una técnica común. Amazon SageMaker Data Wrangler proporciona herramientas para preprocesar datos, incluyendo técnicas para balancear conjuntos de datos mediante oversampling o undersampling.</p>"
+    },
+    {
+      "id": "4-48",
+      "number": 48,
+      "text": "¿Cuál es el propósito de Amazon SageMaker Feature Store?",
+      "options": [
+        {
+          "text": "Almacenar datos sin procesar para aprendizaje automático",
+          "correct": false
+        },
+        {
+          "text": "Desplegar modelos de aprendizaje automático",
+          "correct": false
+        },
+        {
+          "text": "Gestionar y recuperar features para modelos de aprendizaje automático",
+          "correct": true
+        },
+        {
+          "text": "Proporcionar APIs de predicción en tiempo real",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon SageMaker Feature Store es un repositorio que facilita el almacenamiento, gestión y recuperación de features utilizados en modelos de aprendizaje automático. Ayuda a crear features consistentes y reutilizables para entrenamiento e inferencia.</p>"
+    },
+    {
+      "id": "4-49",
+      "number": 49,
+      "text": "¿Cómo Amazon SageMaker Clarify ayuda a garantizar la equidad en los modelos de aprendizaje automático?",
+      "options": [
+        {
+          "text": "Optimizando las métricas de rendimiento del modelo",
+          "correct": false
+        },
+        {
+          "text": "Integrándose con AWS Shield para seguridad",
+          "correct": false
+        },
+        {
+          "text": "Generando automáticamente conjuntos de datos de entrenamiento",
+          "correct": false
+        },
+        {
+          "text": "Proporcionando herramientas para detección de sesgos en datos y explicabilidad del modelo",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon SageMaker Clarify ofrece herramientas para detectar sesgos en los datos y en los modelos de aprendizaje automático, y proporciona explicabilidad del modelo, ayudando a garantizar que los modelos sean justos y transparentes.</p>"
+    },
+    {
+      "id": "4-50",
+      "number": 50,
+      "text": "¿Cuál es el uso principal de Amazon Forecast?",
+      "options": [
+        {
+          "text": "Análisis de video en tiempo real",
+          "correct": false
+        },
+        {
+          "text": "Pronóstico de series de tiempo",
+          "correct": true
+        },
+        {
+          "text": "Almacenamiento de datos",
+          "correct": false
+        },
+        {
+          "text": "Análisis de sentimiento",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon Forecast es un servicio completamente administrado que utiliza machine learning para proporcionar pronósticos altamente precisos. Se puede usar para predecir valores futuros basándose en datos históricos, lo que lo hace útil para aplicaciones como planificación de demanda, planificación financiera y optimización de recursos.</p>"
+    },
+    {
+      "id": "4-51",
+      "number": 51,
+      "text": "¿Cuál es la característica de Amazon SageMaker que te ayuda a depurar trabajos de entrenamiento y comprender el comportamiento del modelo durante el entrenamiento?",
+      "options": [
+        {
+          "text": "SageMaker Data Wrangler",
+          "correct": false
+        },
+        {
+          "text": "SageMaker Debugger",
+          "correct": true
+        },
+        {
+          "text": "SageMaker Studio",
+          "correct": false
+        },
+        {
+          "text": "SageMaker Model Monitor",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon SageMaker Debugger proporciona herramientas para depurar y analizar trabajos de entrenamiento de aprendizaje automático en tiempo real. Ayuda a entender el comportamiento del modelo, identificar cuellos de botella y diagnosticar problemas durante el proceso de entrenamiento.</p>"
+    },
+    {
+      "id": "4-52",
+      "number": 52,
+      "text": "Necesitás automatizar el flujo de trabajo de machine learning desde la ingesta de datos hasta el despliegue del modelo. ¿Cuál servicio de AWS proporciona una solución completamente administrada para esto?",
+      "options": [
+        {
+          "text": "Amazon SageMaker Pipelines",
+          "correct": true
+        },
+        {
+          "text": "AWS Batch",
+          "correct": false
+        },
+        {
+          "text": "AWS Data Pipeline",
+          "correct": false
+        },
+        {
+          "text": "AWS Step Functions",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon SageMaker Pipelines es un servicio completamente administrado que permite la automatización y orquestación de flujos de trabajo de machine learning. Integra diferentes etapas del ciclo de vida de ML, desde la ingesta y preprocesamiento de datos hasta el entrenamiento, evaluación y despliegue del modelo.</p>"
+    }
+  ]
+}

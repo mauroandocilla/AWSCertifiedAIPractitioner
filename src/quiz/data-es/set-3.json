@@ -1,0 +1,1207 @@
+{
+  "setNumber": 3,
+  "sourceFile": "Practice_Set_3.html",
+  "questionCount": 48,
+  "questions": [
+    {
+      "id": "3-1",
+      "number": 1,
+      "text": "¿Cuál servicio de AWS ayuda a gestionar el ciclo de vida de los modelos de fundación?",
+      "options": [
+        {
+          "text": "Amazon EC2",
+          "correct": false
+        },
+        {
+          "text": "AWS Lambda",
+          "correct": false
+        },
+        {
+          "text": "Amazon SageMaker",
+          "correct": true
+        },
+        {
+          "text": "Amazon S3",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon SageMaker proporciona herramientas para gestionar el ciclo de vida de los modelos de fundación.</p>"
+    },
+    {
+      "id": "3-2",
+      "number": 2,
+      "text": "¿Cuál es el beneficio de usar SageMaker Autopilot con foundation models?",
+      "options": [
+        {
+          "text": "Automatiza el almacenamiento de datos",
+          "correct": false
+        },
+        {
+          "text": "Aumenta los límites de tokens",
+          "correct": false
+        },
+        {
+          "text": "Automatiza la construcción, entrenamiento y ajuste de modelos",
+          "correct": true
+        },
+        {
+          "text": "Mejora los protocolos de seguridad",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>SageMaker Autopilot automatiza la construcción, entrenamiento y ajuste de modelos.</p>"
+    },
+    {
+      "id": "3-3",
+      "number": 3,
+      "text": "¿Qué es una red neuronal?",
+      "options": [
+        {
+          "text": "Un método para agrupar puntos de datos",
+          "correct": false
+        },
+        {
+          "text": "Un tipo de algoritmo de aprendizaje no supervisado",
+          "correct": false
+        },
+        {
+          "text": "Un modelo computacional inspirado en el cerebro humano",
+          "correct": true
+        },
+        {
+          "text": "Una herramienta para preprocesamiento de datos",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Las redes neuronales son modelos computacionales inspirados en la estructura y funcionamiento del cerebro humano.</p>"
+    },
+    {
+      "id": "3-4",
+      "number": 4,
+      "text": "¿Cuál es la función de los guardrails en Amazon Bedrock?",
+      "options": [
+        {
+          "text": "Proporcionar seguridad de red",
+          "correct": false
+        },
+        {
+          "text": "Monitorear el rendimiento del sistema",
+          "correct": false
+        },
+        {
+          "text": "Garantizar que las respuestas de IA sean seguras y estén alineadas con las directrices",
+          "correct": true
+        },
+        {
+          "text": "Almacenar grandes conjuntos de datos",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Los guardrails garantizan que las respuestas de IA sean seguras y estén alineadas con las directrices.</p>"
+    },
+    {
+      "id": "3-5",
+      "number": 5,
+      "text": "¿Cómo ayuda Amazon SageMaker Canvas a los analistas de negocio?",
+      "options": [
+        {
+          "text": "Encriptando datos",
+          "correct": false
+        },
+        {
+          "text": "Ajustando hiperparámetros",
+          "correct": false
+        },
+        {
+          "text": "Proporcionando una interfaz visual para predicciones de ML",
+          "correct": true
+        },
+        {
+          "text": "Habilitando la implementación de modelos",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>SageMaker Canvas proporciona una interfaz visual para que los analistas de negocio realicen predicciones de ML.</p>"
+    },
+    {
+      "id": "3-6",
+      "number": 6,
+      "text": "¿Cuál servicio de AWS se puede usar para almacenar y versionar datasets para modelos de IA generativa?",
+      "options": [
+        {
+          "text": "Amazon Lex",
+          "correct": false
+        },
+        {
+          "text": "AWS Lambda",
+          "correct": false
+        },
+        {
+          "text": "Amazon S3",
+          "correct": true
+        },
+        {
+          "text": "Amazon Polly",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon S3 proporciona capacidades de almacenamiento y versionado de datasets.</p>"
+    },
+    {
+      "id": "3-7",
+      "number": 7,
+      "text": "¿Cuál es la función principal de SageMaker Model Monitor?",
+      "options": [
+        {
+          "text": "Automatizar el entrenamiento de modelos",
+          "correct": false
+        },
+        {
+          "text": "Ajustar hiperparámetros",
+          "correct": false
+        },
+        {
+          "text": "Detectar concept drift en modelos desplegados",
+          "correct": true
+        },
+        {
+          "text": "Preprocesar datos",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>SageMaker Model Monitor detecta y alerta sobre concept drift en modelos desplegados.</p>"
+    },
+    {
+      "id": "3-8",
+      "number": 8,
+      "text": "¿Cuál servicio de AWS facilita la orquestación de flujos de trabajo de aprendizaje automático para IA generativa?",
+      "options": [
+        {
+          "text": "Amazon S3",
+          "correct": false
+        },
+        {
+          "text": "Amazon Comprehend",
+          "correct": false
+        },
+        {
+          "text": "AWS Step Functions",
+          "correct": true
+        },
+        {
+          "text": "Amazon Polly",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>AWS Step Functions facilita la orquestación de flujos de trabajo de aprendizaje automático.</p>"
+    },
+    {
+      "id": "3-9",
+      "number": 9,
+      "text": "¿Cómo se puede usar Amazon SageMaker en aplicaciones de IA?",
+      "options": [
+        {
+          "text": "Para crear chatbots",
+          "correct": false
+        },
+        {
+          "text": "Para análisis de imágenes y videos",
+          "correct": false
+        },
+        {
+          "text": "Para traducción de idiomas en tiempo real",
+          "correct": false
+        },
+        {
+          "text": "Para construir, entrenar e implementar modelos de machine learning",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon SageMaker se utiliza para construir, entrenar e implementar modelos de machine learning.</p>"
+    },
+    {
+      "id": "3-10",
+      "number": 10,
+      "text": "¿Cuál es el rol de los ciclos de retroalimentación en la ingeniería de prompts?",
+      "options": [
+        {
+          "text": "Aumentar los límites de tokens",
+          "correct": false
+        },
+        {
+          "text": "Ignorar la entrada del usuario",
+          "correct": false
+        },
+        {
+          "text": "Reducir la complejidad del modelo",
+          "correct": false
+        },
+        {
+          "text": "Mejorar iterativamente la efectividad del prompt",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Los ciclos de retroalimentación mejoran iterativamente la efectividad de los prompts.</p>"
+    },
+    {
+      "id": "3-11",
+      "number": 11,
+      "text": "¿Cuál es el rol de Amazon Kendra en la mejora de soluciones de IA generativa?",
+      "options": [
+        {
+          "text": "Proporciona streaming de datos en tiempo real",
+          "correct": false
+        },
+        {
+          "text": "Ofrece capacidades de búsqueda inteligente",
+          "correct": true
+        },
+        {
+          "text": "Gestiona el cifrado de datos",
+          "correct": false
+        },
+        {
+          "text": "Automatiza el entrenamiento de modelos",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon Kendra proporciona capacidades de búsqueda inteligente que pueden mejorar las soluciones de IA generativa.</p>"
+    },
+    {
+      "id": "3-12",
+      "number": 12,
+      "text": "¿Qué tipo de aplicaciones se pueden crear con Amazon Q Apps?",
+      "options": [
+        {
+          "text": "Herramientas de gestión de redes sociales",
+          "correct": false
+        },
+        {
+          "text": "Herramientas de auditoría financiera",
+          "correct": false
+        },
+        {
+          "text": "Software de edición de video",
+          "correct": false
+        },
+        {
+          "text": "Aplicaciones impulsadas por IA generativa basadas en datos empresariales",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon Q Apps permite la creación de aplicaciones impulsadas por IA generativa basadas en datos empresariales.</p>"
+    },
+    {
+      "id": "3-13",
+      "number": 13,
+      "text": "¿Cuál es una técnica común para manejar la ambigüedad en un prompt?",
+      "options": [
+        {
+          "text": "Aumentar la longitud del prompt",
+          "correct": false
+        },
+        {
+          "text": "Ignorar el problema",
+          "correct": false
+        },
+        {
+          "text": "Usar prompts contextualmente ricos",
+          "correct": true
+        },
+        {
+          "text": "Reducir el uso de tokens",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Usar prompts contextualmente ricos reduce la ambigüedad y mejora la calidad de la respuesta.</p>"
+    },
+    {
+      "id": "3-14",
+      "number": 14,
+      "text": "¿Cómo ayuda Amazon Bedrock a prevenir el mal uso potencial de modelos de IA?",
+      "options": [
+        {
+          "text": "Implementando mecanismos automatizados de detección de abuso",
+          "correct": true
+        },
+        {
+          "text": "Deshabilitando el logging",
+          "correct": false
+        },
+        {
+          "text": "Usando claves API estáticas",
+          "correct": false
+        },
+        {
+          "text": "Aumentando la complejidad del modelo",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon Bedrock utiliza mecanismos automatizados de detección de abuso para prevenir el mal uso potencial de modelos de IA.</p>"
+    },
+    {
+      "id": "3-15",
+      "number": 15,
+      "text": "¿Cuál es la función principal de Amazon SageMaker Debugger en soluciones de IA generativa?",
+      "options": [
+        {
+          "text": "Automatizar el despliegue de modelos",
+          "correct": false
+        },
+        {
+          "text": "Mejorar el cifrado de datos",
+          "correct": false
+        },
+        {
+          "text": "Proporcionar métricas e información en tiempo real durante el entrenamiento",
+          "correct": true
+        },
+        {
+          "text": "Gestionar el almacenamiento de datos",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>SageMaker Debugger proporciona métricas e información en tiempo real durante el entrenamiento del modelo.</p>"
+    },
+    {
+      "id": "3-16",
+      "number": 16,
+      "text": "¿Cuál es el rol de Amazon VPC en la seguridad de aplicaciones de IA?",
+      "options": [
+        {
+          "text": "Administrar claves de cifrado",
+          "correct": false
+        },
+        {
+          "text": "Crear un entorno de red privada",
+          "correct": true
+        },
+        {
+          "text": "Proporcionar recursos de compute",
+          "correct": false
+        },
+        {
+          "text": "Desplegar modelos de machine learning",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon VPC crea un entorno de red privada, mejorando la seguridad de las aplicaciones de IA.</p>"
+    },
+    {
+      "id": "3-17",
+      "number": 17,
+      "text": "¿Cómo optimiza SageMaker Inference el despliegue de modelos fundacionales?",
+      "options": [
+        {
+          "text": "Aumentando la capacidad de almacenamiento",
+          "correct": false
+        },
+        {
+          "text": "Simplificando la arquitectura del modelo",
+          "correct": false
+        },
+        {
+          "text": "Optimizando el uso de aceleradores",
+          "correct": true
+        },
+        {
+          "text": "Mejorando los protocolos de seguridad",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>SageMaker Inference optimiza el despliegue de modelos fundacionales utilizando eficientemente los aceleradores.</p>"
+    },
+    {
+      "id": "3-18",
+      "number": 18,
+      "text": "¿Cómo puedes prevenir ataques de prompt injection en Amazon Bedrock?",
+      "options": [
+        {
+          "text": "Utilizando tokens estáticos",
+          "correct": false
+        },
+        {
+          "text": "Aumentando el conteo de tokens",
+          "correct": false
+        },
+        {
+          "text": "Implementando tokenización dinámica y validación",
+          "correct": true
+        },
+        {
+          "text": "Ignorando las entradas del usuario",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>La tokenización dinámica y la validación ayudan a prevenir ataques de prompt injection.</p>"
+    },
+    {
+      "id": "3-19",
+      "number": 19,
+      "text": "¿Cuál es el propósito de la validación cruzada en machine learning?",
+      "options": [
+        {
+          "text": "Agrupar puntos de datos",
+          "correct": false
+        },
+        {
+          "text": "Visualizar datos",
+          "correct": false
+        },
+        {
+          "text": "Prevenir el sobreajuste",
+          "correct": true
+        },
+        {
+          "text": "Aumentar la complejidad de un modelo",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>La validación cruzada se utiliza para evaluar la generalización de un modelo y prevenir el sobreajuste.</p>"
+    },
+    {
+      "id": "3-20",
+      "number": 20,
+      "text": "¿Cuál es el propósito del AWS Generative AI Innovation Center?",
+      "options": [
+        {
+          "text": "Gestionar la seguridad de red",
+          "correct": false
+        },
+        {
+          "text": "Ayudar a los clientes a construir e implementar productos de IA generativa de manera responsable",
+          "correct": true
+        },
+        {
+          "text": "Desarrollar aplicaciones de videojuegos",
+          "correct": false
+        },
+        {
+          "text": "Almacenar grandes conjuntos de datos",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>El AWS Generative AI Innovation Center asiste a los clientes en la construcción e implementación de productos de IA generativa de manera responsable.</p>"
+    },
+    {
+      "id": "3-21",
+      "number": 21,
+      "text": "¿Cómo puedes monitorear la calidad de los modelos de IA generativa en producción usando AWS?",
+      "options": [
+        {
+          "text": "Ignorando los datos de registro",
+          "correct": false
+        },
+        {
+          "text": "Usando SageMaker Model Monitor",
+          "correct": true
+        },
+        {
+          "text": "Usando conjuntos de datos estáticos",
+          "correct": false
+        },
+        {
+          "text": "Confiando únicamente en revisiones manuales",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>SageMaker Model Monitor ayuda a hacer seguimiento y mantener la calidad de los modelos de IA generativa en producción.</p>"
+    },
+    {
+      "id": "3-22",
+      "number": 22,
+      "text": "¿Cuál es el beneficio de usar embeddings contextuales en los prompts?",
+      "options": [
+        {
+          "text": "Almacenar datos",
+          "correct": false
+        },
+        {
+          "text": "Mejorar la comprensión del contexto por parte del modelo",
+          "correct": true
+        },
+        {
+          "text": "Simplificar la estructura del prompt",
+          "correct": false
+        },
+        {
+          "text": "Aumentar la cantidad de tokens",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Los embeddings contextuales mejoran la comprensión del contexto por parte del modelo, lo que optimiza la calidad de las respuestas.</p>"
+    },
+    {
+      "id": "3-23",
+      "number": 23,
+      "text": "¿Qué tipo de tareas pueden automatizar los agentes de Amazon Bedrock?",
+      "options": [
+        {
+          "text": "Informes financieros",
+          "correct": false
+        },
+        {
+          "text": "Despliegue de código",
+          "correct": false
+        },
+        {
+          "text": "Interacciones de atención al cliente",
+          "correct": true
+        },
+        {
+          "text": "Gestión de infraestructura",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p><b>Interacciones de atención al cliente</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>Los agentes de Amazon Bedrock son ideales para automatizar complejas <b>interacciones de atención al cliente</b>. Esto incluye tareas como:</p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p><b>Orquestación:</b> Desglosar una solicitud en lenguaje natural (por ejemplo, "
+    },
+    {
+      "id": "3-24",
+      "number": 24,
+      "text": "¿Cuál es un uso común del procesamiento de lenguaje natural (NLP)?",
+      "options": [
+        {
+          "text": "Reconocimiento de voz",
+          "correct": true
+        },
+        {
+          "text": "Clasificación de imágenes",
+          "correct": false
+        },
+        {
+          "text": "Mantenimiento predictivo",
+          "correct": false
+        },
+        {
+          "text": "Detección de anomalías",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p><b>Reconocimiento de voz</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li><strong>Correcto</strong> porque NLP se utiliza ampliamente en <b>sistemas de reconocimiento de voz</b>.</li>\n\t\t\t\t\t\t\t<li>Permite que las máquinas conviertan el lenguaje hablado en texto y luego procesen su significado.</li>\n\t\t\t\t\t\t\t<li>Algunos ejemplos incluyen <b>Amazon Alexa</b>, <b>Google Assistant</b> y <b>servicios de transcripción de voz a texto</b>.</li>\n\t\t\t\t\t\t\t<li>Esta es una aplicación central de NLP en sistemas de IA del mundo real.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p><b>Clasificación de imágenes</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrecto porque la clasificación de imágenes forma parte de <b>visión por computadora</b>, no de NLP. </li>\n\t\t\t\t\t\t\t<li>NLP se ocupa de <b>texto e idioma</b>, mientras que la clasificación de imágenes trabaja con <b>datos visuales</b>.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>Mantenimiento predictivo</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrecto porque el mantenimiento predictivo utiliza <b>modelos de machine learning</b> sobre datos de sensores y registros operacionales. </li>\n\t\t\t\t\t\t\t<li>No está relacionado con el procesamiento de lenguaje.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>Detección de anomalías</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrecto porque la detección de anomalías es una <b>técnica de análisis de datos</b> utilizada para identificar patrones inusuales en conjuntos de datos. </li>\n\t\t\t\t\t\t\t<li>No es una aplicación directa de NLP.</li>\n\t\t\t\t\t\t</ul>"
+    },
+    {
+      "id": "3-25",
+      "number": 25,
+      "text": "¿Cómo maneja Amazon Titan el contenido dañino en las salidas de IA?",
+      "options": [
+        {
+          "text": "Ignorando la entrada del usuario",
+          "correct": false
+        },
+        {
+          "text": "Filtrando contenido inapropiado en las salidas",
+          "correct": true
+        },
+        {
+          "text": "Generando respuestas aleatorias",
+          "correct": false
+        },
+        {
+          "text": "Usando plantillas de salida fijas",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon Titan filtra contenido inapropiado en las salidas de IA para garantizar la seguridad.</p>"
+    },
+    {
+      "id": "3-26",
+      "number": 26,
+      "text": "¿Cuál es la característica de Amazon Bedrock que permite a las organizaciones evaluar modelos base?",
+      "options": [
+        {
+          "text": "Fine-tuning",
+          "correct": false
+        },
+        {
+          "text": "Model evaluation",
+          "correct": true
+        },
+        {
+          "text": "Knowledge bases",
+          "correct": false
+        },
+        {
+          "text": "Guardrails",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Model evaluation permite a las organizaciones evaluar modelos base utilizando diversas métricas.</p>"
+    },
+    {
+      "id": "3-27",
+      "number": 27,
+      "text": "¿Cuál es la capacidad de Amazon SageMaker que ayuda a reducir el tiempo de entrenamiento para modelos grandes?",
+      "options": [
+        {
+          "text": "SageMaker Clarify",
+          "correct": false
+        },
+        {
+          "text": "SageMaker Data Wrangler",
+          "correct": false
+        },
+        {
+          "text": "SageMaker Studio",
+          "correct": false
+        },
+        {
+          "text": "SageMaker HyperPod",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>SageMaker HyperPod reduce el tiempo de entrenamiento para modelos grandes.</p>"
+    },
+    {
+      "id": "3-28",
+      "number": 28,
+      "text": "¿Cuál es la práctica que ayuda a mantener la precisión de las respuestas de IA?",
+      "options": [
+        {
+          "text": "Usar prompts genéricos",
+          "correct": false
+        },
+        {
+          "text": "Reducir el conteo de tokens",
+          "correct": false
+        },
+        {
+          "text": "Ignorar las actualizaciones de prompts",
+          "correct": false
+        },
+        {
+          "text": "Usar prompts específicos y detallados",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Los prompts específicos y detallados ayudan a mantener la precisión de las respuestas de IA.</p>"
+    },
+    {
+      "id": "3-29",
+      "number": 29,
+      "text": "¿Cuál característica de Amazon Bedrock ayuda a generar respuestas más precisas al utilizar datos actualizados?",
+      "options": [
+        {
+          "text": "Retrieval-Augmented Generation (RAG)",
+          "correct": true
+        },
+        {
+          "text": "Encriptación de datos",
+          "correct": false
+        },
+        {
+          "text": "Guardrails",
+          "correct": false
+        },
+        {
+          "text": "Fine-tuning",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>RAG utiliza datos actualizados para generar respuestas más precisas.</p>"
+    },
+    {
+      "id": "3-30",
+      "number": 30,
+      "text": "¿Cómo puede Amazon Bedrock mejorar el desarrollo de aplicaciones de IA generativa?",
+      "options": [
+        {
+          "text": "Al reducir la latencia de red",
+          "correct": false
+        },
+        {
+          "text": "Al ofrecer foundation models y herramientas de personalización",
+          "correct": true
+        },
+        {
+          "text": "Al proporcionar plantillas estáticas",
+          "correct": false
+        },
+        {
+          "text": "Al aplicar esquemas estrictos",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon Bedrock proporciona foundation models y herramientas de personalización para aplicaciones de IA generativa.</p>"
+    },
+    {
+      "id": "3-31",
+      "number": 31,
+      "text": "¿Qué integración permite a Amazon Q Business crear y administrar problemas en Jira?",
+      "options": [
+        {
+          "text": "Consultas SQL integradas",
+          "correct": false
+        },
+        {
+          "text": "Custom plugin",
+          "correct": true
+        },
+        {
+          "text": "Instancias de Amazon EC2",
+          "correct": false
+        },
+        {
+          "text": "Integración directa con AWS Lambda",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Los custom plugins permiten que Amazon Q Business se integre con Jira y administre problemas.</p>"
+    },
+    {
+      "id": "3-32",
+      "number": 32,
+      "text": "¿Cómo puedes mejorar la precisión de los modelos de inteligencia artificial generativa utilizando Amazon SageMaker?",
+      "options": [
+        {
+          "text": "Utilizando conjuntos de datos estáticos",
+          "correct": false
+        },
+        {
+          "text": "Reduciendo la cantidad de capas",
+          "correct": false
+        },
+        {
+          "text": "Utilizando aprendizaje no supervisado",
+          "correct": false
+        },
+        {
+          "text": "Incorporando retroalimentación humana para fine-tuning",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Incorporar retroalimentación humana ayuda a refinar el modelo y mejorar su precisión.</p>"
+    },
+    {
+      "id": "3-33",
+      "number": 33,
+      "text": "¿Cómo puede AWS Glue ayudarte a preparar datos para modelos de IA generativa?",
+      "options": [
+        {
+          "text": "Proporcionando traducciones en tiempo real",
+          "correct": false
+        },
+        {
+          "text": "Proporcionando servicios de despliegue de modelos",
+          "correct": false
+        },
+        {
+          "text": "Automatizando procesos de preparación de datos y ETL",
+          "correct": true
+        },
+        {
+          "text": "Gestionando el monitoreo de modelos",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>AWS Glue automatiza los procesos de preparación de datos y ETL, ayudando a entrenar modelos de IA generativa.</p>"
+    },
+    {
+      "id": "3-34",
+      "number": 34,
+      "text": "¿Cómo puede SageMaker JumpStart mejorar la eficiencia en el desarrollo de soluciones de IA generativa?",
+      "options": [
+        {
+          "text": "Proporcionando acceso a foundation models prearmados",
+          "correct": true
+        },
+        {
+          "text": "Limitando el uso de datos",
+          "correct": false
+        },
+        {
+          "text": "Simplificando la arquitectura del modelo",
+          "correct": false
+        },
+        {
+          "text": "Reduciendo la precisión del modelo",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>SageMaker JumpStart mejora la eficiencia al proporcionar acceso a foundation models prearmados.</p>"
+    },
+    {
+      "id": "3-35",
+      "number": 35,
+      "text": "¿Cómo promueve AWS la transparencia en IA?",
+      "options": [
+        {
+          "text": "Manteniendo los procesos del modelo confidenciales",
+          "correct": false
+        },
+        {
+          "text": "No divulgando las limitaciones del modelo",
+          "correct": false
+        },
+        {
+          "text": "Proporcionando AI Service Cards",
+          "correct": true
+        },
+        {
+          "text": "Limitando el acceso de los usuarios a los modelos",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>AWS promueve la transparencia a través de AI Service Cards que proporcionan información detallada sobre los servicios de IA.</p>"
+    },
+    {
+      "id": "3-36",
+      "number": 36,
+      "text": "¿Cuál es la principal ventaja de usar Amazon SageMaker Processing para la preparación de datos?",
+      "options": [
+        {
+          "text": "Automatiza el entrenamiento del modelo",
+          "correct": false
+        },
+        {
+          "text": "Reduce la necesidad de ajuste de hiperparámetros",
+          "correct": false
+        },
+        {
+          "text": "Simplifica el despliegue del modelo",
+          "correct": false
+        },
+        {
+          "text": "Permite el procesamiento de datos escalable y distribuido",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>SageMaker Processing ayuda a manejar grandes volúmenes de datos de manera eficiente a través del procesamiento de datos escalable y distribuido.</p>"
+    },
+    {
+      "id": "3-37",
+      "number": 37,
+      "text": "¿Qué utiliza Amazon Bedrock para llamar automáticamente a APIs e invocar knowledge bases a fin de complementar acciones?",
+      "options": [
+        {
+          "text": "Playgrounds",
+          "correct": false
+        },
+        {
+          "text": "Foundation models",
+          "correct": false
+        },
+        {
+          "text": "Guardrails",
+          "correct": false
+        },
+        {
+          "text": "Agents",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Los Agents en Bedrock llaman automáticamente a APIs e invocan knowledge bases.</p>"
+    },
+    {
+      "id": "3-38",
+      "number": 38,
+      "text": "¿Qué servicio de AWS ayuda a monitorear y registrar las actividades de soluciones de IA con fines de auditoría?",
+      "options": [
+        {
+          "text": "Amazon Rekognition",
+          "correct": false
+        },
+        {
+          "text": "Amazon S3",
+          "correct": false
+        },
+        {
+          "text": "Amazon Lex",
+          "correct": false
+        },
+        {
+          "text": "AWS CloudTrail",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>AWS CloudTrail monitorea y registra las actividades de soluciones de IA con fines de auditoría.</p>"
+    },
+    {
+      "id": "3-39",
+      "number": 39,
+      "text": "¿Cuál servicio de AWS es adecuado para construir sistemas de detección de fraude?",
+      "options": [
+        {
+          "text": "Amazon Lex",
+          "correct": false
+        },
+        {
+          "text": "Amazon Translate",
+          "correct": false
+        },
+        {
+          "text": "Amazon Polly",
+          "correct": false
+        },
+        {
+          "text": "Amazon Fraud Detector",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon Fraud Detector está diseñado para construir sistemas que detecten fraude.</p>"
+    },
+    {
+      "id": "3-40",
+      "number": 40,
+      "text": "¿Cuál herramienta de AWS ayuda a asegurar que las imágenes generadas por IA sean identificables?",
+      "options": [
+        {
+          "text": "Amazon Polly",
+          "correct": false
+        },
+        {
+          "text": "Amazon Titan Image Generator",
+          "correct": true
+        },
+        {
+          "text": "Amazon Translate",
+          "correct": false
+        },
+        {
+          "text": "Amazon Comprehend",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon Titan Image Generator incluye watermarking para ayudar a identificar imágenes generadas por IA.</p>"
+    },
+    {
+      "id": "3-41",
+      "number": 41,
+      "text": "¿Cuál es el uso principal de Knowledge Bases en Amazon Bedrock?",
+      "options": [
+        {
+          "text": "Almacenar credenciales de usuario",
+          "correct": false
+        },
+        {
+          "text": "Gestionar facturación y pagos",
+          "correct": false
+        },
+        {
+          "text": "Monitorear la seguridad de red",
+          "correct": false
+        },
+        {
+          "text": "Mejorar las respuestas de FM con datos propietarios",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Knowledge Bases mejoran las respuestas de FM con datos relevantes de la empresa.</p>"
+    },
+    {
+      "id": "3-42",
+      "number": 42,
+      "text": "¿Qué es una máquina de vectores de soporte (SVM)?",
+      "options": [
+        {
+          "text": "Un tipo de red neuronal",
+          "correct": false
+        },
+        {
+          "text": "Un algoritmo de aprendizaje no supervisado",
+          "correct": false
+        },
+        {
+          "text": "Una técnica de clustering",
+          "correct": false
+        },
+        {
+          "text": "Un algoritmo de aprendizaje supervisado utilizado para clasificación y regresión",
+          "correct": true
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Las máquinas de vectores de soporte (SVMs) son algoritmos de aprendizaje supervisado utilizados para clasificación y regresión.</p>"
+    },
+    {
+      "id": "3-43",
+      "number": 43,
+      "text": "¿Cómo Amazon CloudWatch apoya la gobernanza en soluciones de IA?",
+      "options": [
+        {
+          "text": "Aumentando la capacidad de almacenamiento de datos",
+          "correct": false
+        },
+        {
+          "text": "Almacenando claves de cifrado",
+          "correct": false
+        },
+        {
+          "text": "Realizando seguimiento de métricas de uso y proporcionando registros",
+          "correct": true
+        },
+        {
+          "text": "Gestionando la autenticación de usuarios",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Amazon CloudWatch apoya la gobernanza realizando seguimiento de métricas de uso y proporcionando registros.</p>"
+    },
+    {
+      "id": "3-44",
+      "number": 44,
+      "text": "¿Cómo IAM (AWS Identity and Access Management) respalda el cumplimiento normativo en soluciones de IA?",
+      "options": [
+        {
+          "text": "Implementando modelos",
+          "correct": false
+        },
+        {
+          "text": "Aplicando políticas de acceso y permisos",
+          "correct": true
+        },
+        {
+          "text": "Aumentando la capacidad de almacenamiento",
+          "correct": false
+        },
+        {
+          "text": "Monitoreando la actividad de API",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>IAM respalda el cumplimiento normativo al aplicar políticas de acceso y permisos.</p>"
+    },
+    {
+      "id": "3-45",
+      "number": 45,
+      "text": "¿Cómo Amazon SageMaker Data Wrangler respalda el desarrollo de modelos de IA generativa?",
+      "options": [
+        {
+          "text": "Simplificando la preparación de datos e ingeniería de características",
+          "correct": true
+        },
+        {
+          "text": "Implementando modelos",
+          "correct": false
+        },
+        {
+          "text": "Automatizando el ajuste de hiperparámetros",
+          "correct": false
+        },
+        {
+          "text": "Proporcionando métricas en tiempo real",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>SageMaker Data Wrangler simplifica la preparación de datos e ingeniería de características para modelos de IA generativa.</p>"
+    },
+    {
+      "id": "3-46",
+      "number": 46,
+      "text": "¿Cuál es el propósito de usar AWS Key Management Service (KMS) en soluciones de IA?",
+      "options": [
+        {
+          "text": "Monitorear llamadas a API",
+          "correct": false
+        },
+        {
+          "text": "Crear y administrar claves de encriptación",
+          "correct": true
+        },
+        {
+          "text": "Desplegar modelos de aprendizaje automático",
+          "correct": false
+        },
+        {
+          "text": "Reducir costos de almacenamiento de datos",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>AWS KMS crea y administra claves de encriptación para la seguridad de datos.</p>"
+    },
+    {
+      "id": "3-47",
+      "number": 47,
+      "text": "¿Cuál es el servicio de AWS que se puede utilizar para registrar las acciones realizadas por Amazon Q Business?",
+      "options": [
+        {
+          "text": "Amazon S3",
+          "correct": false
+        },
+        {
+          "text": "AWS CodeBuild",
+          "correct": false
+        },
+        {
+          "text": "AWS CloudTrail",
+          "correct": true
+        },
+        {
+          "text": "AWS CloudFormation",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>AWS CloudTrail se utiliza para registrar las acciones realizadas por Amazon Q Business.</p>"
+    },
+    {
+      "id": "3-48",
+      "number": 48,
+      "text": "¿Cómo garantiza Amazon Bedrock la privacidad de los datos utilizados para personalizar modelos fundacionales?",
+      "options": [
+        {
+          "text": "Mediante el cifrado de datos en reposo y en tránsito",
+          "correct": false
+        },
+        {
+          "text": "Aplicando políticas estrictas de IAM",
+          "correct": false
+        },
+        {
+          "text": "Creando copias privadas y personalizadas del modelo base",
+          "correct": true
+        },
+        {
+          "text": "Utilizando hardware dedicado",
+          "correct": false
+        }
+      ],
+      "multiSelect": false,
+      "explanationHtml": "<p>Bedrock garantiza la privacidad creando copias privadas de modelos personalizados.</p>"
+    }
+  ]
+}

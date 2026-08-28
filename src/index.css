@@ -784,9 +784,47 @@
       background: none;
       border: none;
       padding: 0;
-      margin-bottom: 1.1rem;
       cursor: pointer;
       font-family: inherit;
+      flex: none;
+    }
+
+    /* Sticky context bar: back button + a compact "where am I" crumb, pinned just
+       below the fixed top nav while scrolling through a long detail pane. */
+    .mobile-panel-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.6rem;
+      position: sticky;
+      top: 44px;
+      z-index: 4;
+      background: var(--bg);
+      padding: 0.7rem 0;
+      margin-bottom: 0.4rem;
+    }
+    .mobile-panel-crumb {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--ink-faint);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 0.25rem 0.6rem;
+      white-space: nowrap;
+      flex: none;
+    }
+
+    /* Sticky sidebar section headers: each one sticks under the previous as you
+       scroll, and gets pushed out by the next section's header in turn. */
+    .ds-subtitle {
+      position: sticky;
+      top: 44px;
+      z-index: 3;
+      background: var(--bg);
+      padding: 0.5rem 0;
+      margin-bottom: 0;
     }
   }
 

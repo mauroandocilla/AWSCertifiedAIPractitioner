@@ -35,6 +35,7 @@ export default function DomainDetail({ number }: { number: number }) {
 
   const firstBulletId = domain.subsections[0]?.bullets[0]?.glossId;
   const activeId = searchParams.get('b') || firstBulletId;
+  const activeSubsection = domain.subsections.find((ss) => ss.bullets.some((b) => b.glossId === activeId));
 
   function selectBullet(glossId: string) {
     if (isMobile && !mobileDetailActive) listScrollY.current = window.scrollY;
@@ -81,9 +82,12 @@ export default function DomainDetail({ number }: { number: number }) {
 
   const panel = (
     <div className="domain-split-panel">
-      <button type="button" className="mobile-back-btn" onClick={backToList}>
-        <BackArrowIcon /> Ver lista
-      </button>
+      <div className="mobile-panel-header">
+        <button type="button" className="mobile-back-btn" onClick={backToList}>
+          <BackArrowIcon /> Ver lista
+        </button>
+        <span className="mobile-panel-crumb">D{domain.number}{activeSubsection ? ` · ${activeSubsection.id}` : ''}</span>
+      </div>
       <div className="domain-head">
         <div>
           <span className="kicker">{domain.kicker}</span>

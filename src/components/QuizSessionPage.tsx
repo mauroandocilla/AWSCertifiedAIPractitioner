@@ -196,9 +196,12 @@ export default function QuizSessionPage() {
         <section className="quiz-split">
           {renderBody(
             <div className="quiz-split-panel">
-              <button type="button" className="mobile-back-btn" onClick={backToSets}>
-                <BackArrowIcon /> Ver sets
-              </button>
+              <div className="mobile-panel-header">
+                <button type="button" className="mobile-back-btn" onClick={backToSets}>
+                  <BackArrowIcon /> Ver sets
+                </button>
+                <span className="mobile-panel-crumb">SET {setNumber}</span>
+              </div>
               <QuizLangToggle lang={lang} onChange={setLang} />
               <p>Set de práctica no encontrado.</p>
             </div>,
@@ -215,9 +218,12 @@ export default function QuizSessionPage() {
         <section className="quiz-split">
           {renderBody(
             <div className="quiz-split-panel">
-              <button type="button" className="mobile-back-btn" onClick={backToSets}>
-                <BackArrowIcon /> Ver sets
-              </button>
+              <div className="mobile-panel-header">
+                <button type="button" className="mobile-back-btn" onClick={backToSets}>
+                  <BackArrowIcon /> Ver sets
+                </button>
+                <span className="mobile-panel-crumb">SET {setNumber}</span>
+              </div>
               <QuizLangToggle lang={lang} onChange={setLang} />
               <p>Cargando…</p>
             </div>,
@@ -238,9 +244,12 @@ export default function QuizSessionPage() {
       <section className="quiz-split">
         {renderBody(
           <div className="quiz-split-panel">
-            <button type="button" className="mobile-back-btn" onClick={backToSets}>
-              <BackArrowIcon /> Ver sets
-            </button>
+            <div className="mobile-panel-header">
+              <button type="button" className="mobile-back-btn" onClick={backToSets}>
+                <BackArrowIcon /> Ver sets
+              </button>
+              <span className="mobile-panel-crumb">SET {quizSet.setNumber} · P{currentNumber}</span>
+            </div>
 
             <div className="quiz-session-head">
               <div>

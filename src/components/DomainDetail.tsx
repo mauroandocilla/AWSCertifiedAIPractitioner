@@ -1,14 +1,32 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { domainByNumber } from '../domainData.ts';
 import GlossaryEntryContent from './GlossaryEntryContent.tsx';
 import BackArrowIcon from './BackArrowIcon.tsx';
+
+const MOBILE_QUERY = '(max-width: 720px)';
 
 export default function DomainDetail({ number }: { number: number }) {
   const domain = domainByNumber[number];
   const [searchParams, setSearchParams] = useSearchParams();
   // Mobile only: which pane is showing (list vs. selected bullet). Ignored on desktop, where both show at once.
   const [mobileDetailActive, setMobileDetailActive] = useState(false);
+  const listScrollY = useRef(0);
+  const wasDetailActive = useRef(false);
+
+  // Entering the detail pane starts it at its own top (not wherever the list happened
+  // to be scrolled to); leaving it restores the list to where you left it, instead of
+  // both panes fighting over one shared window scroll position.
+  useEffect(() => {
+    if (window.matchMedia(MOBILE_QUERY).matches) {
+      if (mobileDetailActive && !wasDetailActive.current) {
+        window.scrollTo(0, 0);
+      } else if (!mobileDetailActive && wasDetailActive.current) {
+        window.scrollTo(0, listScrollY.current);
+      }
+    }
+    wasDetailActive.current = mobileDetailActive;
+  }, [mobileDetailActive]);
 
   if (!domain) return <p>Dominio no encontrado.</p>;
 
@@ -16,6 +34,9 @@ export default function DomainDetail({ number }: { number: number }) {
   const activeId = searchParams.get('b') || firstBulletId;
 
   function selectBullet(glossId: string) {
+    if (!mobileDetailActive && window.matchMedia(MOBILE_QUERY).matches) {
+      listScrollY.current = window.scrollY;
+    }
     setSearchParams((prev) => {
       const next = new URLSearchParams(prev);
       next.set('b', glossId);

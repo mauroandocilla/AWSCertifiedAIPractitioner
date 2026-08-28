@@ -64,6 +64,14 @@ export default function QuizSessionPage() {
   // this set from the grid/sidebar to get here) — the back arrow reveals the set list.
   const [mobileDetailActive, setMobileDetailActive] = useState(true);
 
+  // Opening the set list should start at its top, not wherever the question happened
+  // to be scrolled to.
+  useEffect(() => {
+    if (!mobileDetailActive && window.matchMedia('(max-width: 720px)').matches) {
+      window.scrollTo(0, 0);
+    }
+  }, [mobileDetailActive]);
+
   const [quizSet, setQuizSet] = useState<QuizSet | null>(null);
   const [loadError, setLoadError] = useState(false);
   const [answers, setAnswers] = useState<Record<string, number[]>>({});

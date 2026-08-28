@@ -768,6 +768,7 @@
       left: 0;
       transform: translateX(100%);
       padding-left: 0;
+      pointer-events: none;
     }
 
     .domain-split-body.detail-active .domain-sidebar,
@@ -776,6 +777,11 @@
       top: 0;
       left: 0;
       transform: translateX(-100%);
+      pointer-events: none;
+    }
+    .domain-split-body.detail-active .domain-split-panel,
+    .quiz-split-body.detail-active .quiz-split-panel {
+      pointer-events: auto;
     }
     .domain-split-body.detail-active .domain-split-panel,
     .quiz-split-body.detail-active .quiz-split-panel {

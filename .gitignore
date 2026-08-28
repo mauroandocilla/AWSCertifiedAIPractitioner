@@ -5,6 +5,7 @@ dist-ssr
 .quiz-translate-batch.json
 .quiz-scope-batch.json
 .quiz-scope-recheck-batch.json
+.quiz-domain-tag-batch.json
 others/
 *.tsbuildinfo
 .DS_Store

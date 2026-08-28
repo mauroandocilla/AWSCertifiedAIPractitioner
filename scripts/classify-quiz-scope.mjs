@@ -25,6 +25,8 @@ const reportFile = path.join(root, 'others/quiz-scope-report.json');
 const batchStateFile = path.join(root, '.quiz-scope-batch.json');
 const recheckReportFile = path.join(root, 'others/quiz-scope-recheck-report.json');
 const recheckBatchStateFile = path.join(root, '.quiz-scope-recheck-batch.json');
+const dataDirEs = path.join(root, 'src/quiz/data-es');
+const tagDomainsBatchStateFile = path.join(root, '.quiz-domain-tag-batch.json');
 
 // Sets 6/7/8 are being dropped wholesale (93-100% out of scope) — no point re-checking them.
 const DROPPED_SETS = new Set([6, 7, 8]);
@@ -326,10 +328,96 @@ async function cmdRecheckCollect() {
   console.log(`Reporte en ${recheckReportFile}`);
 }
 
+async function cmdTagDomains() {
+  requireApiKey();
+  if (fs.existsSync(tagDomainsBatchStateFile)) {
+    console.error(`Ya existe un batch guardado en ${tagDomainsBatchStateFile}. Corré "tag-domains-collect", o borralo para arrancar de cero.`);
+    process.exit(1);
+  }
+  const client = new Anthropic();
+  const sets = readSets();
+  const requests = sets.flatMap((set) => set.questions.map((q) => ({ custom_id: q.id, params: buildParams(q) })));
+  console.log(`Enviando batch de clasificación de dominio con ${requests.length} preguntas...`);
+  const batch = await client.messages.batches.create({ requests });
+  fs.writeFileSync(tagDomainsBatchStateFile, JSON.stringify({ batchId: batch.id, createdAt: new Date().toISOString() }, null, 2));
+  console.log(`Batch creado: ${batch.id}`);
+  console.log(`Guardado en ${tagDomainsBatchStateFile}. Corré "node scripts/classify-quiz-scope.mjs tag-domains-collect" para esperarlo.`);
+}
+
+async function cmdTagDomainsCollect() {
+  requireApiKey();
+  if (!fs.existsSync(tagDomainsBatchStateFile)) {
+    console.error(`No hay ningún batch guardado (${tagDomainsBatchStateFile} no existe). Corré "tag-domains" primero.`);
+    process.exit(1);
+  }
+  const { batchId } = JSON.parse(fs.readFileSync(tagDomainsBatchStateFile, 'utf8'));
+  const client = new Anthropic();
+
+  let batch = await client.messages.batches.retrieve(batchId);
+  while (batch.processing_status !== 'ended') {
+    console.log(`Estado: ${batch.processing_status} — ${JSON.stringify(batch.request_counts)}`);
+    await new Promise((resolve) => setTimeout(resolve, 60_000));
+    batch = await client.messages.batches.retrieve(batchId);
+  }
+  console.log('Batch terminado. Bajando resultados...');
+
+  const domainById = {};
+  const errors = [];
+  for await (const result of await client.messages.batches.results(batchId)) {
+    if (result.result.type === 'succeeded') {
+      const textBlock = result.result.message.content.find((b) => b.type === 'text');
+      try {
+        const v = VerdictSchema.parse(JSON.parse(textBlock.text));
+        domainById[result.custom_id] = v.domain;
+      } catch (err) {
+        errors.push({ custom_id: result.custom_id, reason: `parse error: ${err.message}` });
+      }
+    } else {
+      errors.push({ custom_id: result.custom_id, reason: result.result.type });
+    }
+  }
+
+  let tagged = 0;
+  const byDomain = {};
+  for (const dir of [dataDir, dataDirEs]) {
+    const files = fs.readdirSync(dir).filter((f) => /^set-\d+\.json$/.test(f));
+    for (const file of files) {
+      const filePath = path.join(dir, file);
+      const set = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+      let changed = false;
+      for (const q of set.questions) {
+        const domain = domainById[q.id];
+        if (domain != null && q.domain !== domain) {
+          q.domain = domain;
+          changed = true;
+          if (dir === dataDir) {
+            tagged++;
+            byDomain[domain] = (byDomain[domain] || 0) + 1;
+          }
+        }
+      }
+      if (changed) fs.writeFileSync(filePath, JSON.stringify(set, null, 2) + '\n');
+    }
+  }
+
+  console.log(`\nEtiquetadas: ${tagged}. Errores: ${errors.length}.`);
+  console.log('Por dominio:', byDomain);
+  if (errors.length) console.log('Con error (quedan sin domain):', errors);
+}
+
 const cmd = process.argv[2];
-const commands = { test: cmdTest, submit: cmdSubmit, status: cmdStatus, collect: cmdCollect, recheck: cmdRecheck, 'recheck-collect': cmdRecheckCollect };
+const commands = {
+  test: cmdTest,
+  submit: cmdSubmit,
+  status: cmdStatus,
+  collect: cmdCollect,
+  recheck: cmdRecheck,
+  'recheck-collect': cmdRecheckCollect,
+  'tag-domains': cmdTagDomains,
+  'tag-domains-collect': cmdTagDomainsCollect,
+};
 if (!commands[cmd]) {
-  console.error('Uso: node scripts/classify-quiz-scope.mjs <test|submit|status|collect|recheck|recheck-collect>');
+  console.error('Uso: node scripts/classify-quiz-scope.mjs <test|submit|status|collect|recheck|recheck-collect|tag-domains|tag-domains-collect>');
   process.exit(1);
 }
 await commands[cmd]();

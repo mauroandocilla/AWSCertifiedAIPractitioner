@@ -10,6 +10,8 @@ export interface QuizQuestion {
   options: QuizOption[];
   multiSelect: boolean;
   explanationHtml: string;
+  /** AIF-C01 domain (1-5) this question tests, if tagged. See scripts/classify-quiz-scope.mjs tag-domains. */
+  domain?: number;
 }
 
 export interface QuizSet {

@@ -576,6 +576,9 @@
     min-width: 0;
     flex: 1 1 auto;
     scrollbar-width: none;
+    /* room to scroll the last pill clear of the fixed theme toggle (34px wide,
+       sitting 20px from the right edge) instead of it covering it */
+    padding-right: 3.75rem;
   }
   .quickjump-pills::-webkit-scrollbar { display: none; }
   .quickjump-pill {

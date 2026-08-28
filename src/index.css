@@ -91,6 +91,10 @@
     margin: 0 auto;
     padding: 3rem 2rem 1.5rem;
   }
+  @media (max-width: 720px) {
+    .wrap { padding: 3.25rem 1rem 1.25rem; }
+    .quickjump { padding: 0.65rem 1rem; }
+  }
 
   code, .mono { font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, monospace; }
 

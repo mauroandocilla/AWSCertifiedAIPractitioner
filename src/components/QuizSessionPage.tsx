@@ -7,6 +7,7 @@ import { loadQuizSet } from '../quiz/loadSet.ts';
 import { quizSetsMeta } from '../quiz/meta.ts';
 import { useQuizLang } from '../quiz/useQuizLang.ts';
 import { useIsMobile } from '../hooks/useIsMobile.ts';
+import { isCorrectAnswer } from '../quiz/isCorrectAnswer.ts';
 import type { QuizSet } from '../quiz/types.ts';
 
 interface StoredProgress {
@@ -27,12 +28,6 @@ function loadProgress(setNumber: number): StoredProgress {
   } catch {
     return { answers: {}, revealed: {} };
   }
-}
-
-function isCorrectAnswer(selected: number[], options: QuizSet['questions'][number]['options']): boolean {
-  const correctIdx = options.map((o, i) => (o.correct ? i : -1)).filter((i) => i >= 0);
-  const selectedSet = new Set(selected);
-  return correctIdx.length === selected.length && correctIdx.every((i) => selectedSet.has(i));
 }
 
 function QuizSidebar({ activeSet, onSelect }: { activeSet: number; onSelect: () => void }) {

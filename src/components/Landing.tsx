@@ -59,7 +59,13 @@ export default function Landing() {
         <Link to="/quiz" className="landing-card ref accent">
           <div className="landing-card-top"><span className="mono">PRÁCTICA</span></div>
           <div className="landing-card-name">Quiz de práctica</div>
-          <div className="landing-card-meta">24 sets, +1200 preguntas</div>
+          <div className="landing-card-meta">21 sets, ~900 preguntas</div>
+        </Link>
+
+        <Link to="/examen" className="landing-card ref">
+          <div className="landing-card-top"><span className="mono">SIMULACRO</span></div>
+          <div className="landing-card-name">Modo examen</div>
+          <div className="landing-card-meta">65 preguntas, 90 min, sin respuestas hasta el final</div>
         </Link>
       </div>
     </>

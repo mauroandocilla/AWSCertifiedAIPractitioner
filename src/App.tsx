@@ -8,6 +8,7 @@ import ResourcesPage from './components/ResourcesPage.tsx';
 import ExamFormatPage from './components/ExamFormatPage.tsx';
 import QuizListPage from './components/QuizListPage.tsx';
 import QuizSessionPage from './components/QuizSessionPage.tsx';
+import ExamPage from './components/ExamPage.tsx';
 import Footer from './components/Footer.tsx';
 import ThemeToggle from './components/ThemeToggle.tsx';
 import ScrollToTop from './components/ScrollToTop.tsx';
@@ -28,6 +29,7 @@ export default function App() {
             <Route path="/formato-examen" element={<ExamFormatPage />} />
             <Route path="/quiz" element={<QuizListPage />} />
             <Route path="/quiz/:setNumber" element={<QuizSessionPage />} />
+            <Route path="/examen" element={<ExamPage />} />
           </Route>
         </Routes>
         <Footer />

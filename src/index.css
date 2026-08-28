@@ -742,14 +742,21 @@
   }
 
   @media (max-width: 720px) {
-    .domain-split, .quiz-split { overflow-x: hidden; margin-top: 1rem; }
+    /* overflow-x (not overflow: hidden / overflow-x: hidden) on purpose: setting only
+       overflow-x to a non-visible value while overflow-y stays "visible" forces the
+       browser to compute overflow-y as "auto" instead — silently turning this into a
+       scroll container, which breaks position:sticky for everything inside it (sticky
+       needs an unbroken chain of non-scrolling ancestors up to the real viewport).
+       overflow-x: clip doesn't have that pairing quirk, so it clips the slide
+       animation horizontally without touching the vertical axis at all. */
+    .domain-split, .quiz-split { overflow-x: clip; margin-top: 1rem; }
     .quiz-list { margin-top: 1rem; }
 
     .domain-split-body.mobile,
     .quiz-split-body.mobile {
       display: block;
       margin-top: 0.75rem;
-      overflow-x: hidden;
+      overflow-x: clip;
     }
     .mobile-pane {
       width: 100%;

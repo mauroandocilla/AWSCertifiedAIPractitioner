@@ -733,10 +733,12 @@
   .mobile-back-btn { display: none; }
 
   @media (max-width: 720px) {
-    .domain-split, .quiz-split { overflow-x: hidden; }
+    .domain-split, .quiz-split { overflow-x: hidden; margin-top: 1rem; }
+    .quiz-list { margin-top: 1rem; }
 
     .domain-split-body,
     .quiz-split-body {
+      margin-top: 0.75rem;
       flex-wrap: nowrap;
       width: 200%;
       gap: 0;

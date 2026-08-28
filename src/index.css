@@ -350,6 +350,35 @@
   }
   .domain-split-panel .gloss-group { margin-top: 0; }
 
+  @media (max-width: 720px) {
+    .domain-split-body { flex-direction: column; }
+    .domain-sidebar {
+      flex: none;
+      width: 100%;
+      flex-direction: row;
+      gap: 0.9rem;
+      position: static;
+      max-height: none;
+      overflow-x: auto;
+      overflow-y: visible;
+      padding-right: 0;
+      padding-bottom: 0.6rem;
+      scrollbar-width: none;
+    }
+    .domain-sidebar::-webkit-scrollbar { display: none; }
+    .ds-subsection { flex: none; display: flex; align-items: center; gap: 0.4rem; }
+    .ds-subtitle { flex: none; white-space: nowrap; margin-bottom: 0; }
+    .ds-bullets { flex-direction: row; }
+    .ds-bullet {
+      flex: none;
+      width: auto;
+      max-width: 130px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
   /* Scope appendix */
   section.scope { margin-top: 3.25rem; }
   .scope-note {
@@ -553,7 +582,7 @@
     background: color-mix(in srgb, var(--surface) 92%, transparent);
     backdrop-filter: blur(4px);
     border-bottom: 1px solid var(--border);
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
   }
   .quickjump-back {
     display: flex;
@@ -563,18 +592,26 @@
     color: var(--accent);
     text-decoration: none;
     flex: none;
+    white-space: nowrap;
   }
   .quickjump-pills {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 0.35rem;
+    overflow-x: auto;
+    min-width: 0;
+    flex: 1 1 auto;
+    scrollbar-width: none;
   }
+  .quickjump-pills::-webkit-scrollbar { display: none; }
   .quickjump-pill {
     font-size: 0.78rem;
     color: var(--ink-soft);
     text-decoration: none;
     padding: 0.35rem 0.7rem;
     border-radius: 999px;
+    flex: none;
+    white-space: nowrap;
   }
   .quickjump-pill:hover { background: var(--surface); }
   .quickjump-pill.active {
@@ -723,7 +760,9 @@
       overflow-y: visible;
       padding-right: 0;
       padding-bottom: 0.6rem;
+      scrollbar-width: none;
     }
+    .quiz-sidebar::-webkit-scrollbar { display: none; }
     .quiz-sidebar-item { width: auto; flex: none; white-space: nowrap; }
   }
 

@@ -1,4 +1,5 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
+import type { ReactNode } from 'react';
 import { Link, useParams, useSearchParams } from 'react-router-dom';
 import QuickJumpBar from './QuickJumpBar.tsx';
 import QuizLangToggle from './QuizLangToggle.tsx';
@@ -6,6 +7,7 @@ import BackArrowIcon from './BackArrowIcon.tsx';
 import { loadQuizSet } from '../quiz/loadSet.ts';
 import { quizSetsMeta } from '../quiz/meta.ts';
 import { useQuizLang } from '../quiz/useQuizLang.ts';
+import { useIsMobile } from '../hooks/useIsMobile.ts';
 import type { QuizSet } from '../quiz/types.ts';
 
 interface StoredProgress {
@@ -60,17 +62,31 @@ export default function QuizSessionPage() {
   const setNumber = Number(setNumberParam);
   const [searchParams, setSearchParams] = useSearchParams();
   const [lang, setLang] = useQuizLang();
+  const isMobile = useIsMobile();
+
   // Mobile only: which pane is showing. Defaults to the question (you already picked
   // this set from the grid/sidebar to get here) — the back arrow reveals the set list.
+  // Only one pane is ever mounted on mobile (see renderBody below), so there's nothing
+  // for it to fight over height/scroll with.
   const [mobileDetailActive, setMobileDetailActive] = useState(true);
+  const [animDirection, setAnimDirection] = useState<'forward' | 'back'>('forward');
+  const [animKey, setAnimKey] = useState(0);
+  const hasInteracted = useRef(false);
+  const wasDetailActive = useRef(true);
 
-  // Opening the set list should start at its top, not wherever the question happened
-  // to be scrolled to.
-  useEffect(() => {
-    if (!mobileDetailActive && window.matchMedia('(max-width: 720px)').matches) {
+  useLayoutEffect(() => {
+    if (isMobile && !mobileDetailActive && wasDetailActive.current) {
       window.scrollTo(0, 0);
     }
-  }, [mobileDetailActive]);
+    wasDetailActive.current = mobileDetailActive;
+  }, [mobileDetailActive, isMobile]);
+
+  function backToSets() {
+    hasInteracted.current = true;
+    setAnimDirection('back');
+    setAnimKey((k) => k + 1);
+    setMobileDetailActive(false);
+  }
 
   const [quizSet, setQuizSet] = useState<QuizSet | null>(null);
   const [loadError, setLoadError] = useState(false);
@@ -154,21 +170,39 @@ export default function QuizSessionPage() {
     goTo(1);
   }
 
+  function renderBody(panel: ReactNode) {
+    const sidebar = <QuizSidebar activeSet={setNumber} />;
+    if (isMobile) {
+      return (
+        <div className="quiz-split-body mobile">
+          <div key={animKey} className={hasInteracted.current ? `mobile-pane enter-${animDirection}` : 'mobile-pane'}>
+            {mobileDetailActive ? panel : sidebar}
+          </div>
+        </div>
+      );
+    }
+    return (
+      <div className="quiz-split-body">
+        {sidebar}
+        {panel}
+      </div>
+    );
+  }
+
   if (loadError) {
     return (
       <>
         <QuickJumpBar current="quiz" />
         <section className="quiz-split">
-          <div className={mobileDetailActive ? 'quiz-split-body detail-active' : 'quiz-split-body'}>
-            <QuizSidebar activeSet={setNumber} />
+          {renderBody(
             <div className="quiz-split-panel">
-              <button type="button" className="mobile-back-btn" onClick={() => setMobileDetailActive(false)}>
+              <button type="button" className="mobile-back-btn" onClick={backToSets}>
                 <BackArrowIcon /> Ver sets
               </button>
               <QuizLangToggle lang={lang} onChange={setLang} />
               <p>Set de práctica no encontrado.</p>
-            </div>
-          </div>
+            </div>,
+          )}
         </section>
       </>
     );
@@ -179,16 +213,15 @@ export default function QuizSessionPage() {
       <>
         <QuickJumpBar current="quiz" />
         <section className="quiz-split">
-          <div className={mobileDetailActive ? 'quiz-split-body detail-active' : 'quiz-split-body'}>
-            <QuizSidebar activeSet={setNumber} />
+          {renderBody(
             <div className="quiz-split-panel">
-              <button type="button" className="mobile-back-btn" onClick={() => setMobileDetailActive(false)}>
+              <button type="button" className="mobile-back-btn" onClick={backToSets}>
                 <BackArrowIcon /> Ver sets
               </button>
               <QuizLangToggle lang={lang} onChange={setLang} />
               <p>Cargando…</p>
-            </div>
-          </div>
+            </div>,
+          )}
         </section>
       </>
     );
@@ -203,11 +236,9 @@ export default function QuizSessionPage() {
     <>
       <QuickJumpBar current="quiz" />
       <section className="quiz-split">
-        <div className={mobileDetailActive ? 'quiz-split-body detail-active' : 'quiz-split-body'}>
-          <QuizSidebar activeSet={setNumber} />
-
+        {renderBody(
           <div className="quiz-split-panel">
-            <button type="button" className="mobile-back-btn" onClick={() => setMobileDetailActive(false)}>
+            <button type="button" className="mobile-back-btn" onClick={backToSets}>
               <BackArrowIcon /> Ver sets
             </button>
 
@@ -308,8 +339,8 @@ export default function QuizSessionPage() {
                 </div>
               </div>
             )}
-          </div>
-        </div>
+          </div>,
+        )}
       </section>
     </>
   );

@@ -725,36 +725,46 @@
   }
   .quiz-split-panel { flex: 1; min-width: 0; }
 
-  /* Mobile master-detail: sidebar and panel are each a full-width pane; sliding
-     between them is driven by the .detail-active class (added in DomainDetail.tsx /
-     QuizSessionPage.tsx). Desktop is untouched — these rules only apply <=720px.
-     Placed after every base rule it overrides (domain-* above, quiz-* here) so
-     cascade order — not just the media query — actually wins on mobile. */
+  /* Mobile master-detail: only ONE of {sidebar, panel} is ever mounted at a time on
+     mobile (see the isMobile branch in DomainDetail.tsx / QuizSessionPage.tsx) — so
+     there's no shared container for the two to fight over height or scroll with. The
+     mounted pane just plays a slide-in animation driven by React's key+className.
+     Desktop keeps rendering both side by side, untouched by any of this. */
   .mobile-back-btn { display: none; }
+
+  @keyframes pane-enter-from-right {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
+  }
+  @keyframes pane-enter-from-left {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+  }
 
   @media (max-width: 720px) {
     .domain-split, .quiz-split { overflow-x: hidden; margin-top: 1rem; }
     .quiz-list { margin-top: 1rem; }
 
-    /* Both panes are full-width; whichever one is NOT showing is pulled out of
-       normal flow with position:absolute so it stops contributing height to
-       the container — otherwise the container (and the visible pane's box)
-       would always be as tall as the taller of the two, leaving a blank gap
-       under short content. transform still drives the left/right slide. */
-    .domain-split-body,
-    .quiz-split-body {
-      position: relative;
+    .domain-split-body.mobile,
+    .quiz-split-body.mobile {
+      display: block;
       margin-top: 0.75rem;
-      gap: 0;
+      overflow-x: hidden;
     }
+    .mobile-pane {
+      width: 100%;
+      animation-duration: 0.28s;
+      animation-timing-function: ease;
+      animation-fill-mode: both;
+    }
+    .mobile-pane.enter-forward { animation-name: pane-enter-from-right; }
+    .mobile-pane.enter-back { animation-name: pane-enter-from-left; }
 
     .domain-sidebar, .quiz-sidebar,
     .domain-split-panel, .quiz-split-panel {
-      flex: 1 1 100%;
       width: 100%;
       max-width: 100%;
       box-sizing: border-box;
-      transition: transform 0.28s ease;
     }
     .domain-sidebar, .quiz-sidebar {
       position: static;
@@ -763,32 +773,7 @@
       overflow-y: visible;
       padding-right: 0;
     }
-    .domain-split-panel, .quiz-split-panel {
-      position: absolute;
-      top: 0;
-      left: 0;
-      transform: translateX(100%);
-      padding-left: 0;
-      pointer-events: none;
-    }
-
-    .domain-split-body.detail-active .domain-sidebar,
-    .quiz-split-body.detail-active .quiz-sidebar {
-      position: absolute;
-      top: 0;
-      left: 0;
-      transform: translateX(-100%);
-      pointer-events: none;
-    }
-    .domain-split-body.detail-active .domain-split-panel,
-    .quiz-split-body.detail-active .quiz-split-panel {
-      pointer-events: auto;
-    }
-    .domain-split-body.detail-active .domain-split-panel,
-    .quiz-split-body.detail-active .quiz-split-panel {
-      position: relative;
-      transform: translateX(0);
-    }
+    .domain-split-panel, .quiz-split-panel { padding-left: 0; }
 
     .mobile-back-btn {
       display: inline-flex;

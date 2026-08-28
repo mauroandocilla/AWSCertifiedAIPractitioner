@@ -750,6 +750,7 @@
 
     .domain-sidebar, .quiz-sidebar,
     .domain-split-panel, .quiz-split-panel {
+      flex: 1 1 100%;
       width: 100%;
       max-width: 100%;
       box-sizing: border-box;

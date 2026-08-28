@@ -26,7 +26,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Amazon SageMaker proporciona herramientas para gestionar el ciclo de vida de los modelos de fundación.</p>"
+      "explanationHtml": "<p>Amazon SageMaker proporciona herramientas para gestionar el ciclo de vida de los modelos de fundación.</p>",
+      "domain": 1
     },
     {
       "id": "3-3",
@@ -51,7 +52,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Las redes neuronales son modelos computacionales inspirados en la estructura y funcionamiento del cerebro humano.</p>"
+      "explanationHtml": "<p>Las redes neuronales son modelos computacionales inspirados en la estructura y funcionamiento del cerebro humano.</p>",
+      "domain": 1
     },
     {
       "id": "3-4",
@@ -76,7 +78,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Los guardrails garantizan que las respuestas de IA sean seguras y estén alineadas con las directrices.</p>"
+      "explanationHtml": "<p>Los guardrails garantizan que las respuestas de IA sean seguras y estén alineadas con las directrices.</p>",
+      "domain": 4
     },
     {
       "id": "3-5",
@@ -101,7 +104,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>SageMaker Canvas proporciona una interfaz visual para que los analistas de negocio realicen predicciones de ML.</p>"
+      "explanationHtml": "<p>SageMaker Canvas proporciona una interfaz visual para que los analistas de negocio realicen predicciones de ML.</p>",
+      "domain": 1
     },
     {
       "id": "3-6",
@@ -126,7 +130,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Amazon S3 proporciona capacidades de almacenamiento y versionado de datasets.</p>"
+      "explanationHtml": "<p>Amazon S3 proporciona capacidades de almacenamiento y versionado de datasets.</p>",
+      "domain": 1
     },
     {
       "id": "3-7",
@@ -151,7 +156,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>SageMaker Model Monitor detecta y alerta sobre concept drift en modelos desplegados.</p>"
+      "explanationHtml": "<p>SageMaker Model Monitor detecta y alerta sobre concept drift en modelos desplegados.</p>",
+      "domain": 1
     },
     {
       "id": "3-9",
@@ -176,7 +182,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Amazon SageMaker se utiliza para construir, entrenar e implementar modelos de machine learning.</p>"
+      "explanationHtml": "<p>Amazon SageMaker se utiliza para construir, entrenar e implementar modelos de machine learning.</p>",
+      "domain": 1
     },
     {
       "id": "3-10",
@@ -201,7 +208,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Los ciclos de retroalimentación mejoran iterativamente la efectividad de los prompts.</p>"
+      "explanationHtml": "<p>Los ciclos de retroalimentación mejoran iterativamente la efectividad de los prompts.</p>",
+      "domain": 2
     },
     {
       "id": "3-13",
@@ -226,7 +234,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Usar prompts contextualmente ricos reduce la ambigüedad y mejora la calidad de la respuesta.</p>"
+      "explanationHtml": "<p>Usar prompts contextualmente ricos reduce la ambigüedad y mejora la calidad de la respuesta.</p>",
+      "domain": 3
     },
     {
       "id": "3-14",
@@ -251,7 +260,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Amazon Bedrock utiliza mecanismos automatizados de detección de abuso para prevenir el mal uso potencial de modelos de IA.</p>"
+      "explanationHtml": "<p>Amazon Bedrock utiliza mecanismos automatizados de detección de abuso para prevenir el mal uso potencial de modelos de IA.</p>",
+      "domain": 5
     },
     {
       "id": "3-17",
@@ -276,7 +286,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>SageMaker Inference optimiza el despliegue de modelos fundacionales utilizando eficientemente los aceleradores.</p>"
+      "explanationHtml": "<p>SageMaker Inference optimiza el despliegue de modelos fundacionales utilizando eficientemente los aceleradores.</p>",
+      "domain": 3
     },
     {
       "id": "3-18",
@@ -301,7 +312,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>La tokenización dinámica y la validación ayudan a prevenir ataques de prompt injection.</p>"
+      "explanationHtml": "<p>La tokenización dinámica y la validación ayudan a prevenir ataques de prompt injection.</p>",
+      "domain": 5
     },
     {
       "id": "3-19",
@@ -326,7 +338,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>La validación cruzada se utiliza para evaluar la generalización de un modelo y prevenir el sobreajuste.</p>"
+      "explanationHtml": "<p>La validación cruzada se utiliza para evaluar la generalización de un modelo y prevenir el sobreajuste.</p>",
+      "domain": 1
     },
     {
       "id": "3-21",
@@ -351,7 +364,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>SageMaker Model Monitor ayuda a hacer seguimiento y mantener la calidad de los modelos de IA generativa en producción.</p>"
+      "explanationHtml": "<p>SageMaker Model Monitor ayuda a hacer seguimiento y mantener la calidad de los modelos de IA generativa en producción.</p>",
+      "domain": 3
     },
     {
       "id": "3-22",
@@ -376,7 +390,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Los embeddings contextuales mejoran la comprensión del contexto por parte del modelo, lo que optimiza la calidad de las respuestas.</p>"
+      "explanationHtml": "<p>Los embeddings contextuales mejoran la comprensión del contexto por parte del modelo, lo que optimiza la calidad de las respuestas.</p>",
+      "domain": 2
     },
     {
       "id": "3-23",
@@ -401,7 +416,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p><b>Interacciones de atención al cliente</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>Los agentes de Amazon Bedrock son ideales para automatizar complejas <b>interacciones de atención al cliente</b>. Esto incluye tareas como:</p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p><b>Orquestación:</b> Desglosar una solicitud en lenguaje natural (por ejemplo, "
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p><b>Interacciones de atención al cliente</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>Los agentes de Amazon Bedrock son ideales para automatizar complejas <b>interacciones de atención al cliente</b>. Esto incluye tareas como:</p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p><b>Orquestación:</b> Desglosar una solicitud en lenguaje natural (por ejemplo, ",
+      "domain": 2
     },
     {
       "id": "3-24",
@@ -426,7 +442,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p><b>Reconocimiento de voz</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li><strong>Correcto</strong> porque NLP se utiliza ampliamente en <b>sistemas de reconocimiento de voz</b>.</li>\n\t\t\t\t\t\t\t<li>Permite que las máquinas conviertan el lenguaje hablado en texto y luego procesen su significado.</li>\n\t\t\t\t\t\t\t<li>Algunos ejemplos incluyen <b>Amazon Alexa</b>, <b>Google Assistant</b> y <b>servicios de transcripción de voz a texto</b>.</li>\n\t\t\t\t\t\t\t<li>Esta es una aplicación central de NLP en sistemas de IA del mundo real.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p><b>Clasificación de imágenes</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrecto porque la clasificación de imágenes forma parte de <b>visión por computadora</b>, no de NLP. </li>\n\t\t\t\t\t\t\t<li>NLP se ocupa de <b>texto e idioma</b>, mientras que la clasificación de imágenes trabaja con <b>datos visuales</b>.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>Mantenimiento predictivo</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrecto porque el mantenimiento predictivo utiliza <b>modelos de machine learning</b> sobre datos de sensores y registros operacionales. </li>\n\t\t\t\t\t\t\t<li>No está relacionado con el procesamiento de lenguaje.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>Detección de anomalías</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrecto porque la detección de anomalías es una <b>técnica de análisis de datos</b> utilizada para identificar patrones inusuales en conjuntos de datos. </li>\n\t\t\t\t\t\t\t<li>No es una aplicación directa de NLP.</li>\n\t\t\t\t\t\t</ul>"
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p><b>Reconocimiento de voz</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li><strong>Correcto</strong> porque NLP se utiliza ampliamente en <b>sistemas de reconocimiento de voz</b>.</li>\n\t\t\t\t\t\t\t<li>Permite que las máquinas conviertan el lenguaje hablado en texto y luego procesen su significado.</li>\n\t\t\t\t\t\t\t<li>Algunos ejemplos incluyen <b>Amazon Alexa</b>, <b>Google Assistant</b> y <b>servicios de transcripción de voz a texto</b>.</li>\n\t\t\t\t\t\t\t<li>Esta es una aplicación central de NLP en sistemas de IA del mundo real.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p><b>Clasificación de imágenes</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrecto porque la clasificación de imágenes forma parte de <b>visión por computadora</b>, no de NLP. </li>\n\t\t\t\t\t\t\t<li>NLP se ocupa de <b>texto e idioma</b>, mientras que la clasificación de imágenes trabaja con <b>datos visuales</b>.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>Mantenimiento predictivo</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrecto porque el mantenimiento predictivo utiliza <b>modelos de machine learning</b> sobre datos de sensores y registros operacionales. </li>\n\t\t\t\t\t\t\t<li>No está relacionado con el procesamiento de lenguaje.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>Detección de anomalías</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrecto porque la detección de anomalías es una <b>técnica de análisis de datos</b> utilizada para identificar patrones inusuales en conjuntos de datos. </li>\n\t\t\t\t\t\t\t<li>No es una aplicación directa de NLP.</li>\n\t\t\t\t\t\t</ul>",
+      "domain": 1
     },
     {
       "id": "3-25",
@@ -451,7 +468,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Amazon Titan filtra contenido inapropiado en las salidas de IA para garantizar la seguridad.</p>"
+      "explanationHtml": "<p>Amazon Titan filtra contenido inapropiado en las salidas de IA para garantizar la seguridad.</p>",
+      "domain": 4
     },
     {
       "id": "3-26",
@@ -476,7 +494,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Model evaluation permite a las organizaciones evaluar modelos base utilizando diversas métricas.</p>"
+      "explanationHtml": "<p>Model evaluation permite a las organizaciones evaluar modelos base utilizando diversas métricas.</p>",
+      "domain": 2
     },
     {
       "id": "3-28",
@@ -501,7 +520,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Los prompts específicos y detallados ayudan a mantener la precisión de las respuestas de IA.</p>"
+      "explanationHtml": "<p>Los prompts específicos y detallados ayudan a mantener la precisión de las respuestas de IA.</p>",
+      "domain": 3
     },
     {
       "id": "3-29",
@@ -526,7 +546,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>RAG utiliza datos actualizados para generar respuestas más precisas.</p>"
+      "explanationHtml": "<p>RAG utiliza datos actualizados para generar respuestas más precisas.</p>",
+      "domain": 3
     },
     {
       "id": "3-30",
@@ -551,7 +572,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Amazon Bedrock proporciona foundation models y herramientas de personalización para aplicaciones de IA generativa.</p>"
+      "explanationHtml": "<p>Amazon Bedrock proporciona foundation models y herramientas de personalización para aplicaciones de IA generativa.</p>",
+      "domain": 2
     },
     {
       "id": "3-32",
@@ -576,7 +598,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Incorporar retroalimentación humana ayuda a refinar el modelo y mejorar su precisión.</p>"
+      "explanationHtml": "<p>Incorporar retroalimentación humana ayuda a refinar el modelo y mejorar su precisión.</p>",
+      "domain": 3
     },
     {
       "id": "3-33",
@@ -601,7 +624,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>AWS Glue automatiza los procesos de preparación de datos y ETL, ayudando a entrenar modelos de IA generativa.</p>"
+      "explanationHtml": "<p>AWS Glue automatiza los procesos de preparación de datos y ETL, ayudando a entrenar modelos de IA generativa.</p>",
+      "domain": 1
     },
     {
       "id": "3-34",
@@ -626,7 +650,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>SageMaker JumpStart mejora la eficiencia al proporcionar acceso a foundation models prearmados.</p>"
+      "explanationHtml": "<p>SageMaker JumpStart mejora la eficiencia al proporcionar acceso a foundation models prearmados.</p>",
+      "domain": 2
     },
     {
       "id": "3-35",
@@ -651,7 +676,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>AWS promueve la transparencia a través de AI Service Cards que proporcionan información detallada sobre los servicios de IA.</p>"
+      "explanationHtml": "<p>AWS promueve la transparencia a través de AI Service Cards que proporcionan información detallada sobre los servicios de IA.</p>",
+      "domain": 4
     },
     {
       "id": "3-36",
@@ -676,7 +702,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>SageMaker Processing ayuda a manejar grandes volúmenes de datos de manera eficiente a través del procesamiento de datos escalable y distribuido.</p>"
+      "explanationHtml": "<p>SageMaker Processing ayuda a manejar grandes volúmenes de datos de manera eficiente a través del procesamiento de datos escalable y distribuido.</p>",
+      "domain": 1
     },
     {
       "id": "3-37",
@@ -701,7 +728,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Los Agents en Bedrock llaman automáticamente a APIs e invocan knowledge bases.</p>"
+      "explanationHtml": "<p>Los Agents en Bedrock llaman automáticamente a APIs e invocan knowledge bases.</p>",
+      "domain": 3
     },
     {
       "id": "3-38",
@@ -726,7 +754,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>AWS CloudTrail monitorea y registra las actividades de soluciones de IA con fines de auditoría.</p>"
+      "explanationHtml": "<p>AWS CloudTrail monitorea y registra las actividades de soluciones de IA con fines de auditoría.</p>",
+      "domain": 5
     },
     {
       "id": "3-41",
@@ -751,7 +780,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Knowledge Bases mejoran las respuestas de FM con datos relevantes de la empresa.</p>"
+      "explanationHtml": "<p>Knowledge Bases mejoran las respuestas de FM con datos relevantes de la empresa.</p>",
+      "domain": 3
     },
     {
       "id": "3-42",
@@ -776,7 +806,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Las máquinas de vectores de soporte (SVMs) son algoritmos de aprendizaje supervisado utilizados para clasificación y regresión.</p>"
+      "explanationHtml": "<p>Las máquinas de vectores de soporte (SVMs) son algoritmos de aprendizaje supervisado utilizados para clasificación y regresión.</p>",
+      "domain": 1
     },
     {
       "id": "3-43",
@@ -801,7 +832,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Amazon CloudWatch apoya la gobernanza realizando seguimiento de métricas de uso y proporcionando registros.</p>"
+      "explanationHtml": "<p>Amazon CloudWatch apoya la gobernanza realizando seguimiento de métricas de uso y proporcionando registros.</p>",
+      "domain": 5
     },
     {
       "id": "3-44",
@@ -826,7 +858,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>IAM respalda el cumplimiento normativo al aplicar políticas de acceso y permisos.</p>"
+      "explanationHtml": "<p>IAM respalda el cumplimiento normativo al aplicar políticas de acceso y permisos.</p>",
+      "domain": 5
     },
     {
       "id": "3-45",
@@ -851,7 +884,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>SageMaker Data Wrangler simplifica la preparación de datos e ingeniería de características para modelos de IA generativa.</p>"
+      "explanationHtml": "<p>SageMaker Data Wrangler simplifica la preparación de datos e ingeniería de características para modelos de IA generativa.</p>",
+      "domain": 3
     },
     {
       "id": "3-46",
@@ -876,7 +910,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>AWS KMS crea y administra claves de encriptación para la seguridad de datos.</p>"
+      "explanationHtml": "<p>AWS KMS crea y administra claves de encriptación para la seguridad de datos.</p>",
+      "domain": 5
     },
     {
       "id": "3-48",
@@ -901,7 +936,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Bedrock garantiza la privacidad creando copias privadas de modelos personalizados.</p>"
+      "explanationHtml": "<p>Bedrock garantiza la privacidad creando copias privadas de modelos personalizados.</p>",
+      "domain": 5
     }
   ]
 }

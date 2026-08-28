@@ -26,7 +26,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Amazon Polly provides an asynchronous synthesis feature that is specifically designed to manage and process large volumes of text efficiently. This is particularly useful in applications like audiobooks where large texts need to be converted to speech. This feature allows tasks to be processed in the background and the speech files to be stored or retrieved from an S3 bucket, making it efficient and scalable for long text applications. </p>"
+      "explanationHtml": "<p>Amazon Polly provides an asynchronous synthesis feature that is specifically designed to manage and process large volumes of text efficiently. This is particularly useful in applications like audiobooks where large texts need to be converted to speech. This feature allows tasks to be processed in the background and the speech files to be stored or retrieved from an S3 bucket, making it efficient and scalable for long text applications. </p>",
+      "domain": 1
     },
     {
       "id": "19-5",
@@ -51,7 +52,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>When tuning inference settings for machine learning models in AWS, ‘Max Response Length‘ is crucial for capping the number of tokens or words in the model‘s output. This ensures more predictable handling of the resources and clearer response boundaries, which is especially important in applications like chatbots, automated writers, or any setup where output length needs to be controlled. Understanding this parameter helps in effectively managing response sizes without unexpected outputs or processing overload. </p>"
+      "explanationHtml": "<p>When tuning inference settings for machine learning models in AWS, ‘Max Response Length‘ is crucial for capping the number of tokens or words in the model‘s output. This ensures more predictable handling of the resources and clearer response boundaries, which is especially important in applications like chatbots, automated writers, or any setup where output length needs to be controlled. Understanding this parameter helps in effectively managing response sizes without unexpected outputs or processing overload. </p>",
+      "domain": 2
     },
     {
       "id": "19-6",
@@ -76,7 +78,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>In AWS machine learning services, particularly when dealing with language models, controlling the output size is crucial for managing resources and ensuring predictable behavior. The ‘Max tokens‘ parameter is specifically designed to limit the number of tokens that the model can generate, making it an appropriate choice for controlling output size. This could be particularly useful in scenarios like automated content generation, where output size needs to be bounded to fit particular formats or use-cases. </p>"
+      "explanationHtml": "<p>In AWS machine learning services, particularly when dealing with language models, controlling the output size is crucial for managing resources and ensuring predictable behavior. The ‘Max tokens‘ parameter is specifically designed to limit the number of tokens that the model can generate, making it an appropriate choice for controlling output size. This could be particularly useful in scenarios like automated content generation, where output size needs to be bounded to fit particular formats or use-cases. </p>",
+      "domain": 2
     },
     {
       "id": "19-8",
@@ -101,7 +104,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Generative AI is crucial in modern technological applications, especially in content creation, because it is not simply automating tasks but is also capable of generating new, creative ideas and content autonomously. This ability allows media companies to push creative boundaries and improve productivity in content creation. Understanding and implementing generative AI can provide companies with competitive advantages in creativity and operational efficiency. </p>"
+      "explanationHtml": "<p>Generative AI is crucial in modern technological applications, especially in content creation, because it is not simply automating tasks but is also capable of generating new, creative ideas and content autonomously. This ability allows media companies to push creative boundaries and improve productivity in content creation. Understanding and implementing generative AI can provide companies with competitive advantages in creativity and operational efficiency. </p>",
+      "domain": 2
     },
     {
       "id": "19-9",
@@ -126,7 +130,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>In the context of scaling machine learning models for varying loads, Amazon SageMaker‘s automatic scaling feature is most suited. It provides a managed experience, where the scaling of inference resources is directly aligned with the incoming traffic of inference requests, ensuring cost efficiency and performance. This capability allows for seamless handling of fluctuating loads, crucial during promotions or special events, without manual scaling interventions. More about this can be learned from the official AWS documentation: <a href=\"https://docs.aws.amazon.com/sagemaker/latest/dg/endpoint-auto-scaling.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/sagemaker/latest/dg/endpoint-auto-scaling.html</a>\n\t\t\t\t\t\t</p>"
+      "explanationHtml": "<p>In the context of scaling machine learning models for varying loads, Amazon SageMaker‘s automatic scaling feature is most suited. It provides a managed experience, where the scaling of inference resources is directly aligned with the incoming traffic of inference requests, ensuring cost efficiency and performance. This capability allows for seamless handling of fluctuating loads, crucial during promotions or special events, without manual scaling interventions. More about this can be learned from the official AWS documentation: <a href=\"https://docs.aws.amazon.com/sagemaker/latest/dg/endpoint-auto-scaling.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/sagemaker/latest/dg/endpoint-auto-scaling.html</a>\n\t\t\t\t\t\t</p>",
+      "domain": 1
     },
     {
       "id": "19-10",
@@ -151,7 +156,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>AWS Step Functions orchestrates various services and tasks in a machine learning workflow. For efficient orchestration, AWS Glue can handle the data preprocessing, Amazon SageMaker can perform the model training, and Amazon SageMaker Batch Transform can execute batch predictions efficiently. This setup leverages the strengths of each AWS service, providing a coherent flow and efficient management of machine learning pipelines. </p>"
+      "explanationHtml": "<p>AWS Step Functions orchestrates various services and tasks in a machine learning workflow. For efficient orchestration, AWS Glue can handle the data preprocessing, Amazon SageMaker can perform the model training, and Amazon SageMaker Batch Transform can execute batch predictions efficiently. This setup leverages the strengths of each AWS service, providing a coherent flow and efficient management of machine learning pipelines. </p>",
+      "domain": 1
     },
     {
       "id": "19-11",
@@ -176,7 +182,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Chain-of-thought prompting is especially beneficial when dealing with complex issues that an AI needs to understand and address in a structured manner. This technique encourages the model to think through each part of the problem step-by-step, which mirrors human problem-solving processes. By doing so, it significantly improves the model's ability to generate coherent and contextually appropriate outputs for intricate tasks. This type of prompting proves particularly useful in business contexts where detailed logical reasoning is required. </p>"
+      "explanationHtml": "<p>Chain-of-thought prompting is especially beneficial when dealing with complex issues that an AI needs to understand and address in a structured manner. This technique encourages the model to think through each part of the problem step-by-step, which mirrors human problem-solving processes. By doing so, it significantly improves the model's ability to generate coherent and contextually appropriate outputs for intricate tasks. This type of prompting proves particularly useful in business contexts where detailed logical reasoning is required. </p>",
+      "domain": 3
     },
     {
       "id": "19-12",
@@ -201,7 +208,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Amazon CloudWatch Alarms are integral in monitoring AWS resources and applications, including machine learning models and their infrastructure. They allow the setup of alarms based on predefined thresholds for any metric, which can automatically initiate actions or send alerts. This feature helps ensure that anomalies, performance reductions, or operational issues are promptly addressed. It is particularly useful in a cloud-based ML deployment to maintain expected performance and respond to issues without manual oversight. For more detailed information, you can refer to the official CloudWatch documentation on Alerts at <a href=\"https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/AlarmThatSendsEmail.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/AlarmThatSendsEmail.html</a>\n\t\t\t\t\t\t</p>"
+      "explanationHtml": "<p>Amazon CloudWatch Alarms are integral in monitoring AWS resources and applications, including machine learning models and their infrastructure. They allow the setup of alarms based on predefined thresholds for any metric, which can automatically initiate actions or send alerts. This feature helps ensure that anomalies, performance reductions, or operational issues are promptly addressed. It is particularly useful in a cloud-based ML deployment to maintain expected performance and respond to issues without manual oversight. For more detailed information, you can refer to the official CloudWatch documentation on Alerts at <a href=\"https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/AlarmThatSendsEmail.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/AlarmThatSendsEmail.html</a>\n\t\t\t\t\t\t</p>",
+      "domain": 5
     },
     {
       "id": "19-13",
@@ -226,7 +234,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>AWS CloudTrail is crucial for tracking user actions and API usage in AWS, including machine learning environments. It captures all API calls for SageMaker and other ML services as events, including calls from the SageMaker console and code calls to the SageMaker APIs, thus serving as the best tool for audit trailing in compliance and monitoring scenarios. This helps organizations ensure operational and regulatory compliance effectively. For more information, you can visit the official AWS CloudTrail documentation at: <a href=\"https://aws.amazon.com/cloudtrail/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/cloudtrail/</a>\n\t\t\t\t\t\t</p>"
+      "explanationHtml": "<p>AWS CloudTrail is crucial for tracking user actions and API usage in AWS, including machine learning environments. It captures all API calls for SageMaker and other ML services as events, including calls from the SageMaker console and code calls to the SageMaker APIs, thus serving as the best tool for audit trailing in compliance and monitoring scenarios. This helps organizations ensure operational and regulatory compliance effectively. For more information, you can visit the official AWS CloudTrail documentation at: <a href=\"https://aws.amazon.com/cloudtrail/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/cloudtrail/</a>\n\t\t\t\t\t\t</p>",
+      "domain": 5
     },
     {
       "id": "19-15",
@@ -251,7 +260,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Amazon Transcribe offers a feature called ‘Speaker Diarization‘ which is specifically designed to handle scenarios where multiple speakers are involved. It helps differentiate the speakers throughout the audio, attributing the transcribed text accordingly. This is particularly beneficial in scenarios like meetings or group discussions where understanding who said what is crucial. More details on this feature can be explored at [AWS official documentation on Transcribe](<a href=\"https://docs.aws.amazon.com/transcribe/latest/dg/how-it-works.html#how-channel-id\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/transcribe/latest/dg/how-it-works.html#how-channel-id</a>). </p>"
+      "explanationHtml": "<p>Amazon Transcribe offers a feature called ‘Speaker Diarization‘ which is specifically designed to handle scenarios where multiple speakers are involved. It helps differentiate the speakers throughout the audio, attributing the transcribed text accordingly. This is particularly beneficial in scenarios like meetings or group discussions where understanding who said what is crucial. More details on this feature can be explored at [AWS official documentation on Transcribe](<a href=\"https://docs.aws.amazon.com/transcribe/latest/dg/how-it-works.html#how-channel-id\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/transcribe/latest/dg/how-it-works.html#how-channel-id</a>). </p>",
+      "domain": 1
     },
     {
       "id": "19-16",
@@ -276,7 +286,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Amazon Textract is a powerful service designed to automatically extract text, handwriting, and data from scanned documents. This includes forms and tables, making it highly suitable for financial institutions processing documents like loan applications. This is due to its ability to handle complex layouts and different data types efficiently. More information on the capabilities of Amazon Textract can be found on the AWS official documentation: <a href=\"https://aws.amazon.com/textract/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/textract/</a>\n\t\t\t\t\t\t</p>"
+      "explanationHtml": "<p>Amazon Textract is a powerful service designed to automatically extract text, handwriting, and data from scanned documents. This includes forms and tables, making it highly suitable for financial institutions processing documents like loan applications. This is due to its ability to handle complex layouts and different data types efficiently. More information on the capabilities of Amazon Textract can be found on the AWS official documentation: <a href=\"https://aws.amazon.com/textract/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/textract/</a>\n\t\t\t\t\t\t</p>",
+      "domain": 1
     },
     {
       "id": "19-17",
@@ -301,7 +312,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Amazon Comprehend provides a sentiment analysis feature, which is particularly suited for processing and classifying text based on its overall sentiment, thereby making it ideal for analyzing user reviews in bulk. This feature directly addresses the challenge of understanding consumer emotions and opinions without manual intervention, aligning perfectly with the requirements of sentiment analysis in user reviews. More details can be found on the Amazon documentation: <a href=\"https://docs.aws.amazon.com/comprehend/latest/dg/how-sentiment.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/comprehend/latest/dg/how-sentiment.html</a>\n\t\t\t\t\t\t</p>"
+      "explanationHtml": "<p>Amazon Comprehend provides a sentiment analysis feature, which is particularly suited for processing and classifying text based on its overall sentiment, thereby making it ideal for analyzing user reviews in bulk. This feature directly addresses the challenge of understanding consumer emotions and opinions without manual intervention, aligning perfectly with the requirements of sentiment analysis in user reviews. More details can be found on the Amazon documentation: <a href=\"https://docs.aws.amazon.com/comprehend/latest/dg/how-sentiment.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/comprehend/latest/dg/how-sentiment.html</a>\n\t\t\t\t\t\t</p>",
+      "domain": 2
     },
     {
       "id": "19-18",
@@ -326,7 +338,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>In machine learning projects, especially in customer segmentation, the primary challenge is often related to data. High-quality, well-prepared data is essential for training effective models. Issues such as missing data, inconsistent data, and bias can significantly affect model performance. AWS offers various services like Amazon SageMaker that help in the data preparation, model building, and deployment process, thereby easing these challenges. </p>"
+      "explanationHtml": "<p>In machine learning projects, especially in customer segmentation, the primary challenge is often related to data. High-quality, well-prepared data is essential for training effective models. Issues such as missing data, inconsistent data, and bias can significantly affect model performance. AWS offers various services like Amazon SageMaker that help in the data preparation, model building, and deployment process, thereby easing these challenges. </p>",
+      "domain": 1
     },
     {
       "id": "19-19",
@@ -351,7 +364,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>SageMaker model cards and AI service cards serve distinct yet complementary roles in documenting AI endeavors on the AWS platform. While SageMaker model cards provide detailed, technical documentation of individual AI models, including performance metrics and evaluation details, AI service cards are designed to ensure transparency by offering insights on the broader implications, intended use, and limitations of AI services. Understanding the specific utility of each can significantly aid in compliance and effective management of AI systems, particularly in sectors like healthcare where accuracy and transparency are paramount. </p>"
+      "explanationHtml": "<p>SageMaker model cards and AI service cards serve distinct yet complementary roles in documenting AI endeavors on the AWS platform. While SageMaker model cards provide detailed, technical documentation of individual AI models, including performance metrics and evaluation details, AI service cards are designed to ensure transparency by offering insights on the broader implications, intended use, and limitations of AI services. Understanding the specific utility of each can significantly aid in compliance and effective management of AI systems, particularly in sectors like healthcare where accuracy and transparency are paramount. </p>",
+      "domain": 4
     },
     {
       "id": "19-20",
@@ -376,7 +390,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Understanding the hierarchical relationship between AI, ML, DL, and GenAI is crucial for structuring an effective AI strategy. AI is the broadest category, with ML as its subset utilizing statistical methods to enable machines to improve with experiences. DL, a subset of ML, uses layered neural networks to analyze various factors of data. GenAI, which falls under DL, focuses on generating new data similar to its training set. This understanding ensures appropriate investment and application in AI technologies to maximize business process automation and decision-making. </p>"
+      "explanationHtml": "<p>Understanding the hierarchical relationship between AI, ML, DL, and GenAI is crucial for structuring an effective AI strategy. AI is the broadest category, with ML as its subset utilizing statistical methods to enable machines to improve with experiences. DL, a subset of ML, uses layered neural networks to analyze various factors of data. GenAI, which falls under DL, focuses on generating new data similar to its training set. This understanding ensures appropriate investment and application in AI technologies to maximize business process automation and decision-making. </p>",
+      "domain": 1
     },
     {
       "id": "19-21",
@@ -401,7 +416,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Understanding the relationship between AI and ML is crucial for implementing the right technology. Artificial Intelligence (AI) is a technology aimed at simulating broad aspects of human intelligence. In contrast, Machine Learning (ML), a subset of AI, specifically focuses on creating algorithms that parse, learn from, and make predictive decisions based on data. This understanding aids in selecting appropriate technologies for varying business needs, leveraging AI‘s benefits to enhance decision-making and problem-solving processes. </p>"
+      "explanationHtml": "<p>Understanding the relationship between AI and ML is crucial for implementing the right technology. Artificial Intelligence (AI) is a technology aimed at simulating broad aspects of human intelligence. In contrast, Machine Learning (ML), a subset of AI, specifically focuses on creating algorithms that parse, learn from, and make predictive decisions based on data. This understanding aids in selecting appropriate technologies for varying business needs, leveraging AI‘s benefits to enhance decision-making and problem-solving processes. </p>",
+      "domain": 1
     },
     {
       "id": "19-22",
@@ -426,7 +442,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>In language processing models, such as those used for translation, tokens are the basic units of text like words or subwords, and embeddings are multi-dimensional vectors representing these tokens. The embeddings capture semantic meaning and syntactic structure, helping the AI model to better understand and process languages. This distinction is crucial for improving language translation models in AI development.</p>"
+      "explanationHtml": "<p>In language processing models, such as those used for translation, tokens are the basic units of text like words or subwords, and embeddings are multi-dimensional vectors representing these tokens. The embeddings capture semantic meaning and syntactic structure, helping the AI model to better understand and process languages. This distinction is crucial for improving language translation models in AI development.</p>",
+      "domain": 2
     },
     {
       "id": "19-23",
@@ -451,7 +468,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Deep learning enhances robotic navigation by allowing the AI system to learn and generalize from diverse environmental inputs. The key method used is backpropagation, where the model is trained on large amounts of data and repeatedly adjusts its internal parameters to minimize prediction errors. This results in improving the model's ability to make real-time decisions in varying conditions.</p>"
+      "explanationHtml": "<p>Deep learning enhances robotic navigation by allowing the AI system to learn and generalize from diverse environmental inputs. The key method used is backpropagation, where the model is trained on large amounts of data and repeatedly adjusts its internal parameters to minimize prediction errors. This results in improving the model's ability to make real-time decisions in varying conditions.</p>",
+      "domain": 1
     },
     {
       "id": "19-25",
@@ -509,7 +527,8 @@
         }
       ],
       "multiSelect": true,
-      "explanationHtml": "<p>Here are the two AWS services/tools that are best suited for monitoring and maintaining model performance in real-time for fraud detection:</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b>Amazon SageMaker Model Monitor:</b>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li><span>This service is specifically designed for monitoring deployed machine learning models.</span><span>&nbsp;</span></li>\n\t\t\t\t\t\t\t\t\t<li><span>It detects data drift, concept drift, and other anomalies that can impact model performance over time.</span><span> &nbsp;</span></li>\n\t\t\t\t\t\t\t\t\t<li><span>It provides alerts and metrics that enable the data science team to take corrective actions.</span><span>&nbsp;</span></li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b>Amazon CloudWatch:</b>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li><span>CloudWatch provides monitoring and observability of AWS resources and applications.</span><span> &nbsp;</span></li>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<span>It can be used to monitor various metrics related to the deployed model, such as prediction latency, error rates, and resource utilization.</span><span>&nbsp;</span>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t<li>It can also be used to setup alarms that would trigger if the model performance degrades.</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>Here’s why the other options are less relevant for this specific real-time performance monitoring task:</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b>Amazon SageMaker Clarify:</b>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>Clarify is primarily used for detecting bias in machine learning models, not for ongoing performance monitoring.</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b>AWS Config:</b>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<span>AWS Config is used for auditing and compliance, tracking configuration changes to AWS resources.</span> While useful for overall infrastructure monitoring, it’s not the primary tool for real-time model performance monitoring.<span>&nbsp;</span>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b>Amazon SageMaker Debugger:</b>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>SageMaker Debugger is used to debug machine learning models during training, not for ongoing runtime performance monitoring.</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b>Amazon Kinesis:</b>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>Amazon Kinesis is used for real-time data streaming.</p>\n\t\t\t\t\t\t\t\t\t\t<p>While it can be part of the data pipeline for the model, it doesn’t directly monitor the model’s performance itself.</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>"
+      "explanationHtml": "<p>Here are the two AWS services/tools that are best suited for monitoring and maintaining model performance in real-time for fraud detection:</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b>Amazon SageMaker Model Monitor:</b>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li><span>This service is specifically designed for monitoring deployed machine learning models.</span><span>&nbsp;</span></li>\n\t\t\t\t\t\t\t\t\t<li><span>It detects data drift, concept drift, and other anomalies that can impact model performance over time.</span><span> &nbsp;</span></li>\n\t\t\t\t\t\t\t\t\t<li><span>It provides alerts and metrics that enable the data science team to take corrective actions.</span><span>&nbsp;</span></li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b>Amazon CloudWatch:</b>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li><span>CloudWatch provides monitoring and observability of AWS resources and applications.</span><span> &nbsp;</span></li>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<span>It can be used to monitor various metrics related to the deployed model, such as prediction latency, error rates, and resource utilization.</span><span>&nbsp;</span>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t<li>It can also be used to setup alarms that would trigger if the model performance degrades.</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>Here’s why the other options are less relevant for this specific real-time performance monitoring task:</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b>Amazon SageMaker Clarify:</b>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>Clarify is primarily used for detecting bias in machine learning models, not for ongoing performance monitoring.</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b>AWS Config:</b>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<span>AWS Config is used for auditing and compliance, tracking configuration changes to AWS resources.</span> While useful for overall infrastructure monitoring, it’s not the primary tool for real-time model performance monitoring.<span>&nbsp;</span>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b>Amazon SageMaker Debugger:</b>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>SageMaker Debugger is used to debug machine learning models during training, not for ongoing runtime performance monitoring.</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b>Amazon Kinesis:</b>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>Amazon Kinesis is used for real-time data streaming.</p>\n\t\t\t\t\t\t\t\t\t\t<p>While it can be part of the data pipeline for the model, it doesn’t directly monitor the model’s performance itself.</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>",
+      "domain": 1
     },
     {
       "id": "19-27",
@@ -538,7 +557,8 @@
         }
       ],
       "multiSelect": true,
-      "explanationHtml": "<p>Let’s analyze the AWS AI services and which ones are suitable for sentiment analysis of customer reviews:</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b>Amazon Comprehend:</b>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>This is a natural language processing (NLP) service that can perform sentiment analysis, entity recognition, topic modeling, and language detection. It’s specifically designed for analyzing text data. Therefore, it is a great choice.</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b>Amazon Bedrock:</b>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>Amazon Bedrock is a service that offers a choice of high-performing foundation models (FMs) from leading AI companies via an <span>API, along with a broad set of capabilities you need to build generative AI applications, simplifying development while maintaining privacy and security.<sup> 1 </sup></span> It can be used for sentiment analysis through its FMs, which makes it a correct option.<span>&nbsp;</span>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b>Amazon Textract:</b>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>This service extracts text and data from scanned documents. It’s not directly related to sentiment analysis.</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b>Amazon Rekognition:</b>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>This service performs image and video analysis. It’s not applicable to text-based sentiment analysis.</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b>Amazon Personalize:</b>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>This service creates personalized recommendations for customers. It doesn’t analyze sentiment.</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>Therefore, the two recommended AWS AI services are:</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li><b>Amazon Comprehend</b></li>\n\t\t\t\t\t\t\t<li><b>Amazon Bedrock</b></li>\n\t\t\t\t\t\t</ul>"
+      "explanationHtml": "<p>Let’s analyze the AWS AI services and which ones are suitable for sentiment analysis of customer reviews:</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b>Amazon Comprehend:</b>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>This is a natural language processing (NLP) service that can perform sentiment analysis, entity recognition, topic modeling, and language detection. It’s specifically designed for analyzing text data. Therefore, it is a great choice.</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b>Amazon Bedrock:</b>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>Amazon Bedrock is a service that offers a choice of high-performing foundation models (FMs) from leading AI companies via an <span>API, along with a broad set of capabilities you need to build generative AI applications, simplifying development while maintaining privacy and security.<sup> 1 </sup></span> It can be used for sentiment analysis through its FMs, which makes it a correct option.<span>&nbsp;</span>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b>Amazon Textract:</b>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>This service extracts text and data from scanned documents. It’s not directly related to sentiment analysis.</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b>Amazon Rekognition:</b>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>This service performs image and video analysis. It’s not applicable to text-based sentiment analysis.</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b>Amazon Personalize:</b>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>This service creates personalized recommendations for customers. It doesn’t analyze sentiment.</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>Therefore, the two recommended AWS AI services are:</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li><b>Amazon Comprehend</b></li>\n\t\t\t\t\t\t\t<li><b>Amazon Bedrock</b></li>\n\t\t\t\t\t\t</ul>",
+      "domain": 1
     },
     {
       "id": "19-29",
@@ -567,7 +587,8 @@
         }
       ],
       "multiSelect": true,
-      "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<b><span>You can use a customized model only in the Provisioned Throughput mode</span></b>\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t\t\t<span>Historically and for the majority of the current certification scope, once a model is customized (fine-tuned) in Amazon Bedrock, it requires </span><b><span>Provisioned Throughput</span></b><span> to run inference.</span>\n\t\t\t\t\t\t\t\t\t\t\t<span>Unlike base models, which can be accessed via a shared “On-Demand” pool, a custom model is unique to your account and requires dedicated capacity (Model Units) to serve requests.</span>\n\t\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p><b>Note for the latest updates:</b> While AWS recently introduced “On-Demand deployment” for certain specific models (like Amazon Nova), the core exam logic consistently tests the principle that customized models generally require Provisioned Throughput for dedicated, consistent performance.</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<b><span>Smaller models are cheaper to use than larger models</span></b>\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>This is a fundamental principle of Large Language Models (LLMs) and Bedrock pricing. Larger models (e.g., Claude 3 Opus or Llama 3 70B) require more computational resources (GPUs/TPUs) to process tokens, leading to higher costs per 1,000 tokens.</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>Smaller, optimized models (e.g., Claude 3 Haiku or Llama 3 8B) are significantly more cost-efficient because they use fewer resources and offer faster inference (lower latency), making them the preferred choice for simple or high-volume tasks where the reasoning depth of a massive model isn’t required.</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<b>You can use the On-Demand mode only with time-based term commitments</b>\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>This is factually reversed. <b><span>On-Demand</span></b><span> mode is specifically designed for “pay-as-you-go” usage with </span><b><span>no upfront commitments</span></b><span> and no time-based terms.</span>\n\t\t\t\t\t\t\t\t\t\t\t<span>You are billed based on the number of tokens processed.</span>\n\t\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t\t\t<span>Time-based commitments (1-month or 6-month terms) are actually associated with </span><b><span>Provisioned Throughput</span></b><span> to receive deeper discounts.</span>\n\t\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<b><span>You can use a customized model in the Provisioned Throughput or On-Demand mode</span></b>\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t\t\t<span>As explained in option B, customized models (fine-tuned versions) are private to your organization and typically cannot be placed in the shared, multi-tenant On-Demand pool used for standard base models.</span>\n\t\t\t\t\t\t\t\t\t\t\t<span>They generally require the allocation of Provisioned Throughput to ensure the model is available to handle your specific traffic.</span>\n\t\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<b>Larger models are cheaper to use than smaller models</b>\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>This contradicts the basic economics of cloud computing and AI. More parameters (model size) always translate to higher infrastructure costs and more intense compute cycles, making larger models the most expensive tier in the Amazon Bedrock pricing catalog.</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>"
+      "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<b><span>You can use a customized model only in the Provisioned Throughput mode</span></b>\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t\t\t<span>Historically and for the majority of the current certification scope, once a model is customized (fine-tuned) in Amazon Bedrock, it requires </span><b><span>Provisioned Throughput</span></b><span> to run inference.</span>\n\t\t\t\t\t\t\t\t\t\t\t<span>Unlike base models, which can be accessed via a shared “On-Demand” pool, a custom model is unique to your account and requires dedicated capacity (Model Units) to serve requests.</span>\n\t\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p><b>Note for the latest updates:</b> While AWS recently introduced “On-Demand deployment” for certain specific models (like Amazon Nova), the core exam logic consistently tests the principle that customized models generally require Provisioned Throughput for dedicated, consistent performance.</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<b><span>Smaller models are cheaper to use than larger models</span></b>\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>This is a fundamental principle of Large Language Models (LLMs) and Bedrock pricing. Larger models (e.g., Claude 3 Opus or Llama 3 70B) require more computational resources (GPUs/TPUs) to process tokens, leading to higher costs per 1,000 tokens.</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>Smaller, optimized models (e.g., Claude 3 Haiku or Llama 3 8B) are significantly more cost-efficient because they use fewer resources and offer faster inference (lower latency), making them the preferred choice for simple or high-volume tasks where the reasoning depth of a massive model isn’t required.</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<b>You can use the On-Demand mode only with time-based term commitments</b>\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>This is factually reversed. <b><span>On-Demand</span></b><span> mode is specifically designed for “pay-as-you-go” usage with </span><b><span>no upfront commitments</span></b><span> and no time-based terms.</span>\n\t\t\t\t\t\t\t\t\t\t\t<span>You are billed based on the number of tokens processed.</span>\n\t\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t\t\t<span>Time-based commitments (1-month or 6-month terms) are actually associated with </span><b><span>Provisioned Throughput</span></b><span> to receive deeper discounts.</span>\n\t\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<b><span>You can use a customized model in the Provisioned Throughput or On-Demand mode</span></b>\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t\t\t<span>As explained in option B, customized models (fine-tuned versions) are private to your organization and typically cannot be placed in the shared, multi-tenant On-Demand pool used for standard base models.</span>\n\t\t\t\t\t\t\t\t\t\t\t<span>They generally require the allocation of Provisioned Throughput to ensure the model is available to handle your specific traffic.</span>\n\t\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<b>Larger models are cheaper to use than smaller models</b>\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>This contradicts the basic economics of cloud computing and AI. More parameters (model size) always translate to higher infrastructure costs and more intense compute cycles, making larger models the most expensive tier in the Amazon Bedrock pricing catalog.</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>",
+      "domain": 2
     },
     {
       "id": "19-30",
@@ -596,7 +617,8 @@
         }
       ],
       "multiSelect": true,
-      "explanationHtml": "<p>Transparent and explainable machine learning models are particularly valuable in fields like healthcare, where understanding how predictions are made is crucial for trust, compliance, and accountability. These models facilitate easier debugging and optimization, and they help foster trust and confidence in the model‘s predictions by making the decision-making process clear. More info: <a href=\"https://aws.amazon.com/machine-learning/explainable-ai/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/machine-learning/explainable-ai/</a>\n\t\t\t\t\t\t</p>"
+      "explanationHtml": "<p>Transparent and explainable machine learning models are particularly valuable in fields like healthcare, where understanding how predictions are made is crucial for trust, compliance, and accountability. These models facilitate easier debugging and optimization, and they help foster trust and confidence in the model‘s predictions by making the decision-making process clear. More info: <a href=\"https://aws.amazon.com/machine-learning/explainable-ai/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/machine-learning/explainable-ai/</a>\n\t\t\t\t\t\t</p>",
+      "domain": 4
     },
     {
       "id": "19-34",
@@ -621,7 +643,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Amazon Bedrock‘s Temperature parameter controls the randomness of predictions by scaling the logits before applying softmax. Higher Temperature values lead to more random selections, thus generating more diverse and creative outputs. This attribute is crucial when aiming for creative content generation, such as advertisement scripts where diversity and novelty are valued.</p>"
+      "explanationHtml": "<p>Amazon Bedrock‘s Temperature parameter controls the randomness of predictions by scaling the logits before applying softmax. Higher Temperature values lead to more random selections, thus generating more diverse and creative outputs. This attribute is crucial when aiming for creative content generation, such as advertisement scripts where diversity and novelty are valued.</p>",
+      "domain": 2
     },
     {
       "id": "19-35",
@@ -646,7 +669,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>The primary distinction between computer vision and image processing lies in their purpose and techniques. Image processing involves editing and enhancing images to improve their visual quality without adding understanding or contextual inference, which is the remit of computer vision. Computer vision, on the other hand, seeks to understand image content in order to perform tasks such as object recognition or scene interpretation, often utilizing machine learning to do so. This understanding is crucial for making effective decisions in applications like inventory management from store camera feeds. </p>"
+      "explanationHtml": "<p>The primary distinction between computer vision and image processing lies in their purpose and techniques. Image processing involves editing and enhancing images to improve their visual quality without adding understanding or contextual inference, which is the remit of computer vision. Computer vision, on the other hand, seeks to understand image content in order to perform tasks such as object recognition or scene interpretation, often utilizing machine learning to do so. This understanding is crucial for making effective decisions in applications like inventory management from store camera feeds. </p>",
+      "domain": 1
     },
     {
       "id": "19-36",
@@ -671,7 +695,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>AWS Glue DataBrew is a visual data preparation tool designed to help users clean and normalize data, which is crucial for machine learning. It offers more than 250 pre-built transformations to automate the process of preparing data, thus reducing the time and effort required compared to manual coding. This makes it an ideal solution for cleansing and transforming retail analytics data, ensuring the data is in an optimal state for modeling. </p>"
+      "explanationHtml": "<p>AWS Glue DataBrew is a visual data preparation tool designed to help users clean and normalize data, which is crucial for machine learning. It offers more than 250 pre-built transformations to automate the process of preparing data, thus reducing the time and effort required compared to manual coding. This makes it an ideal solution for cleansing and transforming retail analytics data, ensuring the data is in an optimal state for modeling. </p>",
+      "domain": 1
     },
     {
       "id": "19-37",
@@ -696,7 +721,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>In the context of controlling the randomness and creativity of a Large Language Model‘s output, adjusting the temperature parameter is the most direct and effective method. It scales the logits of the output layer before applying softmax, thus influencing how deterministic or probabilistic the selection of each word becomes. A higher temperature increases randomness, while a lower one makes outputs more predictable and less varied, which would be ideal for the company's requirements in this scenario. </p>"
+      "explanationHtml": "<p>In the context of controlling the randomness and creativity of a Large Language Model‘s output, adjusting the temperature parameter is the most direct and effective method. It scales the logits of the output layer before applying softmax, thus influencing how deterministic or probabilistic the selection of each word becomes. A higher temperature increases randomness, while a lower one makes outputs more predictable and less varied, which would be ideal for the company's requirements in this scenario. </p>",
+      "domain": 3
     },
     {
       "id": "19-39",
@@ -721,7 +747,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>The Amazon SageMaker Model Dashboard offers a comprehensive view and management capabilities for machine learning models created within Amazon SageMaker. It helps in efficiently tracking, managing, and monitoring multiple models across a company‘s AWS account, thus enhancing model governance and operational efficiency. This feature is ideal for situations where companies like the one in question need a consolidated management solution for their various machine learning projects. </p>"
+      "explanationHtml": "<p>The Amazon SageMaker Model Dashboard offers a comprehensive view and management capabilities for machine learning models created within Amazon SageMaker. It helps in efficiently tracking, managing, and monitoring multiple models across a company‘s AWS account, thus enhancing model governance and operational efficiency. This feature is ideal for situations where companies like the one in question need a consolidated management solution for their various machine learning projects. </p>",
+      "domain": 1
     },
     {
       "id": "19-42",
@@ -746,7 +773,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Understanding the distinction between data residency and data retention is crucial for ensuring compliance with local and international regulations on data governance on AWS. Data residency requires data to be physically stored in specific locations to comply with laws governing cross-border data flow. In contrast, data retention defines how long data should be kept, which is generally set by legal and regulatory requirements. Both concepts are essential for building data governance systems, such as those implemented in AWS environments, that comply with diverse regulations. </p>"
+      "explanationHtml": "<p>Understanding the distinction between data residency and data retention is crucial for ensuring compliance with local and international regulations on data governance on AWS. Data residency requires data to be physically stored in specific locations to comply with laws governing cross-border data flow. In contrast, data retention defines how long data should be kept, which is generally set by legal and regulatory requirements. Both concepts are essential for building data governance systems, such as those implemented in AWS environments, that comply with diverse regulations. </p>",
+      "domain": 5
     },
     {
       "id": "19-44",
@@ -771,7 +799,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>The scenario fits the Exploratory Data Analysis (EDA) best as it involves understanding data through statistical summaries and visualization, which are fundamental activities in EDA. EDA is typically undertaken before any advanced modeling or predictions to ensure the hidden patterns and trends are understood, which assists in informed decision-making and model development. EDA‘s objective is to unravel the underlying structure of the data, which is critical for further steps in the data science workflow. </p>"
+      "explanationHtml": "<p>The scenario fits the Exploratory Data Analysis (EDA) best as it involves understanding data through statistical summaries and visualization, which are fundamental activities in EDA. EDA is typically undertaken before any advanced modeling or predictions to ensure the hidden patterns and trends are understood, which assists in informed decision-making and model development. EDA‘s objective is to unravel the underlying structure of the data, which is critical for further steps in the data science workflow. </p>",
+      "domain": 1
     },
     {
       "id": "19-45",
@@ -796,7 +825,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>The Temperature parameter in model inference specifically adjusts the prediction diversity, which directly impacts the creativity of the output. A lower Temperature value results in more conservative and predictable outputs, which is crucial in scenarios requiring high accuracy or less novelty. Conversely, a higher Temperature increases randomness and creativity, suitable for generating new and diverse ideas or content. This parameter is vital for adjusting the model‘s performance based on required output characteristics in various real-world applications. </p>"
+      "explanationHtml": "<p>The Temperature parameter in model inference specifically adjusts the prediction diversity, which directly impacts the creativity of the output. A lower Temperature value results in more conservative and predictable outputs, which is crucial in scenarios requiring high accuracy or less novelty. Conversely, a higher Temperature increases randomness and creativity, suitable for generating new and diverse ideas or content. This parameter is vital for adjusting the model‘s performance based on required output characteristics in various real-world applications. </p>",
+      "domain": 2
     },
     {
       "id": "19-46",
@@ -821,7 +851,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Multimodal models are designed to process and integrate multiple types of input data (such as text, images, and audio) and are capable of generating outputs in various formats, including text, images, and audio. This capability allows them to be especially useful in complex data environments like retail, where enhancing customer experience may depend on analyzing and responding to a mixture of data types.</p>"
+      "explanationHtml": "<p>Multimodal models are designed to process and integrate multiple types of input data (such as text, images, and audio) and are capable of generating outputs in various formats, including text, images, and audio. This capability allows them to be especially useful in complex data environments like retail, where enhancing customer experience may depend on analyzing and responding to a mixture of data types.</p>",
+      "domain": 2
     },
     {
       "id": "19-47",
@@ -846,7 +877,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Fine-tuning is crucial for refining a foundation model‘s performance on specific tasks or datasets by adjusting its weights, without the need to retrain the model from scratch. This approach not only improves accuracy but also maintains the scalability crucial for large-scale applications like in e-commerce product recommendations. It aligns with the needs of a global e-commerce platform looking to enhance its recommendation system‘s efficiency and accuracy. </p>"
+      "explanationHtml": "<p>Fine-tuning is crucial for refining a foundation model‘s performance on specific tasks or datasets by adjusting its weights, without the need to retrain the model from scratch. This approach not only improves accuracy but also maintains the scalability crucial for large-scale applications like in e-commerce product recommendations. It aligns with the needs of a global e-commerce platform looking to enhance its recommendation system‘s efficiency and accuracy. </p>",
+      "domain": 3
     },
     {
       "id": "19-49",
@@ -871,7 +903,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Amazon Rekognition provides two primary services: Rekognition Image and Rekognition Video. Rekognition Video is specially designed to analyze video files, making it suitable for extracting metadata from video content by recognizing objects, people, and activities within those files. This capability is crucial for media companies looking to categorize and search vast archives efficiently. For more detailed information about Rekognition Video features, visit the Amazon Web Services official documentation. </p>"
+      "explanationHtml": "<p>Amazon Rekognition provides two primary services: Rekognition Image and Rekognition Video. Rekognition Video is specially designed to analyze video files, making it suitable for extracting metadata from video content by recognizing objects, people, and activities within those files. This capability is crucial for media companies looking to categorize and search vast archives efficiently. For more detailed information about Rekognition Video features, visit the Amazon Web Services official documentation. </p>",
+      "domain": 1
     },
     {
       "id": "19-52",
@@ -896,7 +929,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Self-supervised learning is particularly effective for tasks like labeling unstructured medical data because it leverages input data to generate its labels, learning the structure and context of the data without requiring explicit pre-labeled examples. This approach is ideal for automating labeling processes, reducing the dependence on manually labeled datasets, thus enhancing efficiency in developing machine learning models for diagnosis and treatment recommendations. </p>"
+      "explanationHtml": "<p>Self-supervised learning is particularly effective for tasks like labeling unstructured medical data because it leverages input data to generate its labels, learning the structure and context of the data without requiring explicit pre-labeled examples. This approach is ideal for automating labeling processes, reducing the dependence on manually labeled datasets, thus enhancing efficiency in developing machine learning models for diagnosis and treatment recommendations. </p>",
+      "domain": 1
     },
     {
       "id": "19-53",
@@ -921,7 +955,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Foundation models, such as those used in AI services, are advantageous for businesses wanting to implement AI solutions that cover a wide range of tasks. These models are extensively pre-trained on diverse, large datasets which allows them to generalize well across various domains with minimal additional training. This makes foundation models particularly useful for applications needing capabilities in areas such as text generation, image recognition, and natural language understanding without extensive task-specific tuning. </p>"
+      "explanationHtml": "<p>Foundation models, such as those used in AI services, are advantageous for businesses wanting to implement AI solutions that cover a wide range of tasks. These models are extensively pre-trained on diverse, large datasets which allows them to generalize well across various domains with minimal additional training. This makes foundation models particularly useful for applications needing capabilities in areas such as text generation, image recognition, and natural language understanding without extensive task-specific tuning. </p>",
+      "domain": 2
     },
     {
       "id": "19-55",
@@ -946,7 +981,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Transformer models are particularly effective for natural language processing tasks because of their ability to handle sequential data and their attention mechanisms that consider the context of the entire input sequence. Among the options provided, ChatGPT stands out as it is specifically designed around the Transformer architecture, making it ideal for applications like content generation and language translation.</p>"
+      "explanationHtml": "<p>Transformer models are particularly effective for natural language processing tasks because of their ability to handle sequential data and their attention mechanisms that consider the context of the entire input sequence. Among the options provided, ChatGPT stands out as it is specifically designed around the Transformer architecture, making it ideal for applications like content generation and language translation.</p>",
+      "domain": 2
     },
     {
       "id": "19-57",
@@ -971,7 +1007,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Neural networks function by employing a connected network of neurons, where each neuron processes input through activation functions. The networks learn to recognize complex patterns and nuances in the data through a process called ‘training,‘ where they adjust their internal parameters or weights. This adjustment is based predominantly on backpropagation, which helps minimize the error in predictions by tweaking the weights accordingly. This capability to learn and adjust makes neural networks highly effective for applications like fraud detection in dynamic environments such as financial transactions. </p>"
+      "explanationHtml": "<p>Neural networks function by employing a connected network of neurons, where each neuron processes input through activation functions. The networks learn to recognize complex patterns and nuances in the data through a process called ‘training,‘ where they adjust their internal parameters or weights. This adjustment is based predominantly on backpropagation, which helps minimize the error in predictions by tweaking the weights accordingly. This capability to learn and adjust makes neural networks highly effective for applications like fraud detection in dynamic environments such as financial transactions. </p>",
+      "domain": 1
     }
   ]
 }

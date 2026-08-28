@@ -26,7 +26,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>SageMaker Automatic Model Tuning permite configurar ciertos hiperparámetros manualmente mientras se ajustan otros automáticamente usando optimización bayesiana. Esto permite un enfoque equilibrado para ajustar los hiperparámetros de manera efectiva.</p>"
+      "explanationHtml": "<p>SageMaker Automatic Model Tuning permite configurar ciertos hiperparámetros manualmente mientras se ajustan otros automáticamente usando optimización bayesiana. Esto permite un enfoque equilibrado para ajustar los hiperparámetros de manera efectiva.</p>",
+      "domain": 1
     },
     {
       "id": "5-3",
@@ -51,7 +52,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Dropout regularization es una técnica utilizada para prevenir overfitting al descartar aleatoriamente unidades de la red neuronal durante el entrenamiento. Esto ayuda al modelo a generalizar mejor en datos no vistos, reduciendo la varianza.</p>"
+      "explanationHtml": "<p>Dropout regularization es una técnica utilizada para prevenir overfitting al descartar aleatoriamente unidades de la red neuronal durante el entrenamiento. Esto ayuda al modelo a generalizar mejor en datos no vistos, reduciendo la varianza.</p>",
+      "domain": 1
     },
     {
       "id": "5-5",
@@ -101,7 +103,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Random Cut Forest (RCF) es un algoritmo integrado en Amazon SageMaker diseñado específicamente para detección de anomalías. Es ideal para identificar patrones inusuales u outliers en conjuntos de datos, lo que lo hace perfecto para monitorear procesos de manufactura.</p>"
+      "explanationHtml": "<p>Random Cut Forest (RCF) es un algoritmo integrado en Amazon SageMaker diseñado específicamente para detección de anomalías. Es ideal para identificar patrones inusuales u outliers en conjuntos de datos, lo que lo hace perfecto para monitorear procesos de manufactura.</p>",
+      "domain": 1
     },
     {
       "id": "5-9",
@@ -126,7 +129,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Amazon SageMaker Model Registry te permite administrar y compartir modelos de forma segura entre múltiples cuentas de AWS configurando acceso entre cuentas, lo que garantiza que los datos del modelo no se expongan innecesariamente.</p>"
+      "explanationHtml": "<p>Amazon SageMaker Model Registry te permite administrar y compartir modelos de forma segura entre múltiples cuentas de AWS configurando acceso entre cuentas, lo que garantiza que los datos del modelo no se expongan innecesariamente.</p>",
+      "domain": 5
     },
     {
       "id": "5-10",
@@ -151,7 +155,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Amazon SageMaker Pipelines respalda la automatización y orquestación de flujos de trabajo de aprendizaje automático, permitiendo prácticas de integración continua y entrega continua (CI/CD) para modelos de aprendizaje automático.</p>"
+      "explanationHtml": "<p>Amazon SageMaker Pipelines respalda la automatización y orquestación de flujos de trabajo de aprendizaje automático, permitiendo prácticas de integración continua y entrega continua (CI/CD) para modelos de aprendizaje automático.</p>",
+      "domain": 1
     },
     {
       "id": "5-11",
@@ -176,7 +181,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>SageMaker Model Monitor monitorea continuamente la calidad de los modelos de machine learning en producción y detecta data drift y model drift, lo que ayuda a asegurar que los modelos mantengan un alto desempeño y precisión a lo largo del tiempo.</p>"
+      "explanationHtml": "<p>SageMaker Model Monitor monitorea continuamente la calidad de los modelos de machine learning en producción y detecta data drift y model drift, lo que ayuda a asegurar que los modelos mantengan un alto desempeño y precisión a lo largo del tiempo.</p>",
+      "domain": 1
     },
     {
       "id": "5-15",
@@ -201,7 +207,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Transfer learning aprovecha modelos pre-entrenados y aplica su conocimiento a nuevas tareas, reduciendo la necesidad de datasets grandes y entrenamientos extensos, especialmente cuando los datos etiquetados son limitados.</p>"
+      "explanationHtml": "<p>Transfer learning aprovecha modelos pre-entrenados y aplica su conocimiento a nuevas tareas, reduciendo la necesidad de datasets grandes y entrenamientos extensos, especialmente cuando los datos etiquetados son limitados.</p>",
+      "domain": 1
     },
     {
       "id": "5-16",
@@ -226,7 +233,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>El Model Debugger de SageMaker ayuda a identificar y diagnosticar problemas durante el entrenamiento del modelo, como problemas de calidad de datos o tasas de aprendizaje inadecuadas, permitiendo un debugging más efectivo y mejora del modelo.</p>"
+      "explanationHtml": "<p>El Model Debugger de SageMaker ayuda a identificar y diagnosticar problemas durante el entrenamiento del modelo, como problemas de calidad de datos o tasas de aprendizaje inadecuadas, permitiendo un debugging más efectivo y mejora del modelo.</p>",
+      "domain": 1
     },
     {
       "id": "5-17",
@@ -276,7 +284,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b>Precisión y Recall</b>: <ul>\n\t\t\t\t\t\t\t\t\t<li>Precisión y Recall son métricas específicamente diseñadas para evaluar modelos de clasificación.</li>\n\t\t\t\t\t\t\t\t\t<li><b>Precisión</b>&nbsp;mide la exactitud de las predicciones positivas (cuántas de las predicciones positivas son realmente positivas).</li>\n\t\t\t\t\t\t\t\t\t<li><b>Recall</b>&nbsp;mide la capacidad del modelo para identificar todas las instancias relevantes (cuántas de las predicciones positivas reales fueron identificadas correctamente).</li>\n\t\t\t\t\t\t\t\t\t<li>Estas métricas son particularmente útiles para conjuntos de datos desbalanceados y se usan comúnmente en tareas de clasificación binaria y multiclase.</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b>Root Mean Squared Error (RMSE)</b>: <ul>\n\t\t\t\t\t\t\t\t\t<li>RMSE es una métrica utilizada para evaluar modelos de regresión, no modelos de clasificación. Mide la magnitud promedio del error entre los valores predichos y reales.</li>\n\t\t\t\t\t\t\t\t\t<li>No es apropiada para tareas de clasificación donde el resultado es categórico.</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b>Mean Absolute Error (MAE)</b>: <ul>\n\t\t\t\t\t\t\t\t\t<li>MAE es otra métrica utilizada para modelos de regresión. Calcula la diferencia absoluta promedio entre los valores predichos y reales.</li>\n\t\t\t\t\t\t\t\t\t<li>Como RMSE, no es aplicable a tareas de clasificación.</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b>Mean Squared Error (MSE)</b>: <ul>\n\t\t\t\t\t\t\t\t\t<li>MSE es también una métrica de regresión. Mide la diferencia cuadrada promedio entre los valores predichos y reales.</li>\n\t\t\t\t\t\t\t\t\t<li>No se usa en modelos de clasificación, ya que no tiene en cuenta resultados categóricos.</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>"
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b>Precisión y Recall</b>: <ul>\n\t\t\t\t\t\t\t\t\t<li>Precisión y Recall son métricas específicamente diseñadas para evaluar modelos de clasificación.</li>\n\t\t\t\t\t\t\t\t\t<li><b>Precisión</b>&nbsp;mide la exactitud de las predicciones positivas (cuántas de las predicciones positivas son realmente positivas).</li>\n\t\t\t\t\t\t\t\t\t<li><b>Recall</b>&nbsp;mide la capacidad del modelo para identificar todas las instancias relevantes (cuántas de las predicciones positivas reales fueron identificadas correctamente).</li>\n\t\t\t\t\t\t\t\t\t<li>Estas métricas son particularmente útiles para conjuntos de datos desbalanceados y se usan comúnmente en tareas de clasificación binaria y multiclase.</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b>Root Mean Squared Error (RMSE)</b>: <ul>\n\t\t\t\t\t\t\t\t\t<li>RMSE es una métrica utilizada para evaluar modelos de regresión, no modelos de clasificación. Mide la magnitud promedio del error entre los valores predichos y reales.</li>\n\t\t\t\t\t\t\t\t\t<li>No es apropiada para tareas de clasificación donde el resultado es categórico.</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b>Mean Absolute Error (MAE)</b>: <ul>\n\t\t\t\t\t\t\t\t\t<li>MAE es otra métrica utilizada para modelos de regresión. Calcula la diferencia absoluta promedio entre los valores predichos y reales.</li>\n\t\t\t\t\t\t\t\t\t<li>Como RMSE, no es aplicable a tareas de clasificación.</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b>Mean Squared Error (MSE)</b>: <ul>\n\t\t\t\t\t\t\t\t\t<li>MSE es también una métrica de regresión. Mide la diferencia cuadrada promedio entre los valores predichos y reales.</li>\n\t\t\t\t\t\t\t\t\t<li>No se usa en modelos de clasificación, ya que no tiene en cuenta resultados categóricos.</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>",
+      "domain": 1
     },
     {
       "id": "5-20",
@@ -301,7 +310,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>La respuesta correcta es <b>Amazon SageMaker Clarify</b>.</p>\n\t\t\t\t\t\t<p>Por qué:</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li><b>Amazon SageMaker Clarify:</b> Esta herramienta está diseñada específicamente para detectar posibles sesgos en modelos de machine learning y ayudarte a entender cómo estos modelos hacen predicciones. Proporciona información sobre la importancia de las características y te ayuda a comprender los factores que influyen en los resultados del modelo, lo cual es fundamental para explicar modelos de caja negra.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>Por qué las otras opciones no son la solución principal:</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li><b>Amazon SageMaker Ground Truth:</b> Este servicio te ayuda a construir conjuntos de datos de entrenamiento altamente precisos para machine learning. Si bien es esencial para el desarrollo de modelos, no aborda directamente la interpretabilidad del modelo.</li>\n\t\t\t\t\t\t\t<li><b>Amazon SageMaker Studio:</b> Es un entorno integrado de desarrollo (IDE) para machine learning. Aunque puedas usarlo para construir e implementar modelos, no ofrece las características especializadas de explainability que tiene Clarify.</li>\n\t\t\t\t\t\t\t<li><b>Amazon SageMaker Data Wrangler:</b> Esta herramienta simplifica el proceso de preparación de datos e ingeniería de características. Te ayuda a limpiar, transformar y analizar datos, pero no proporciona capacidades de explainability del modelo.</li>\n\t\t\t\t\t\t</ul>"
+      "explanationHtml": "<p>La respuesta correcta es <b>Amazon SageMaker Clarify</b>.</p>\n\t\t\t\t\t\t<p>Por qué:</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li><b>Amazon SageMaker Clarify:</b> Esta herramienta está diseñada específicamente para detectar posibles sesgos en modelos de machine learning y ayudarte a entender cómo estos modelos hacen predicciones. Proporciona información sobre la importancia de las características y te ayuda a comprender los factores que influyen en los resultados del modelo, lo cual es fundamental para explicar modelos de caja negra.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>Por qué las otras opciones no son la solución principal:</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li><b>Amazon SageMaker Ground Truth:</b> Este servicio te ayuda a construir conjuntos de datos de entrenamiento altamente precisos para machine learning. Si bien es esencial para el desarrollo de modelos, no aborda directamente la interpretabilidad del modelo.</li>\n\t\t\t\t\t\t\t<li><b>Amazon SageMaker Studio:</b> Es un entorno integrado de desarrollo (IDE) para machine learning. Aunque puedas usarlo para construir e implementar modelos, no ofrece las características especializadas de explainability que tiene Clarify.</li>\n\t\t\t\t\t\t\t<li><b>Amazon SageMaker Data Wrangler:</b> Esta herramienta simplifica el proceso de preparación de datos e ingeniería de características. Te ayuda a limpiar, transformar y analizar datos, pero no proporciona capacidades de explainability del modelo.</li>\n\t\t\t\t\t\t</ul>",
+      "domain": 4
     },
     {
       "id": "5-21",
@@ -326,7 +336,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>Usar AWS Glue para ETL</b></p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t\t\t<b>AWS Glue</b> es un servicio serverless y escalable de integración de datos y <b>ETL (Extracción, Transformación y Carga)</b>. Está diseñado para manejar eficientemente <b>procesamiento de datos a gran escala</b>, lo cual es crucial para pasos de preprocesamiento de NLP como tokenización, stemming, lemmatización, eliminación de palabras vacías y conversión de texto a características numéricas (como TF-IDF o embeddings de palabras). Glue escala automáticamente su clúster de procesamiento para gestionar el tamaño y la complejidad de los datos de texto, lo que lo convierte en la herramienta más apropiada y rentable para preparación de datos orientada a lotes.\n\t\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>Incorrecto</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>Usar Amazon Comprehend para procesamiento de texto</b></p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t\t\t<b>Amazon Comprehend</b> es un servicio de AWS que proporciona <b>capacidades de NLP preentrenadas</b> (como análisis de sentimiento, reconocimiento de entidades y extracción de frases clave). Si bien procesa texto, se utiliza para <i>analizar</i> texto y generar información, no para realizar los <b>pasos de preprocesamiento/ETL de bajo nivel</b> (como limpieza, estructuración e ingeniería de características) necesarios para preparar datos de texto sin procesar para un modelo de machine learning personalizado.\n\t\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>Usar Amazon Rekognition</b></p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p><b>Amazon Rekognition</b> es un servicio de AWS dedicado a <b>análisis de imágenes y videos</b> (tareas de visión por computadora, como reconocimiento de objetos y facial). No tiene función alguna relacionada con el procesamiento o preparación de datos de texto para un modelo de NLP, lo que lo hace completamente irrelevante para la pregunta.</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>Usar AWS Lambda para procesamiento en tiempo real</b></p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p><b>AWS Lambda</b> es un servicio de cómputo serverless más adecuado para ejecutar <b>funciones de corta duración impulsadas por eventos</b> o <b>inferencia en tiempo real</b>. <b>No está diseñado ni optimizado</b> para el procesamiento de lotes de <b>conjuntos de datos a gran escala</b> requerido para preprocesamiento general de NLP. Ejecutar un trabajo ETL extenso en petabytes de datos a través de Lambda sería altamente ineficiente y probablemente alcanzaría límites de tiempo de ejecución.</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>"
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>Usar AWS Glue para ETL</b></p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t\t\t<b>AWS Glue</b> es un servicio serverless y escalable de integración de datos y <b>ETL (Extracción, Transformación y Carga)</b>. Está diseñado para manejar eficientemente <b>procesamiento de datos a gran escala</b>, lo cual es crucial para pasos de preprocesamiento de NLP como tokenización, stemming, lemmatización, eliminación de palabras vacías y conversión de texto a características numéricas (como TF-IDF o embeddings de palabras). Glue escala automáticamente su clúster de procesamiento para gestionar el tamaño y la complejidad de los datos de texto, lo que lo convierte en la herramienta más apropiada y rentable para preparación de datos orientada a lotes.\n\t\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>Incorrecto</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>Usar Amazon Comprehend para procesamiento de texto</b></p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t\t\t<b>Amazon Comprehend</b> es un servicio de AWS que proporciona <b>capacidades de NLP preentrenadas</b> (como análisis de sentimiento, reconocimiento de entidades y extracción de frases clave). Si bien procesa texto, se utiliza para <i>analizar</i> texto y generar información, no para realizar los <b>pasos de preprocesamiento/ETL de bajo nivel</b> (como limpieza, estructuración e ingeniería de características) necesarios para preparar datos de texto sin procesar para un modelo de machine learning personalizado.\n\t\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>Usar Amazon Rekognition</b></p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p><b>Amazon Rekognition</b> es un servicio de AWS dedicado a <b>análisis de imágenes y videos</b> (tareas de visión por computadora, como reconocimiento de objetos y facial). No tiene función alguna relacionada con el procesamiento o preparación de datos de texto para un modelo de NLP, lo que lo hace completamente irrelevante para la pregunta.</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>Usar AWS Lambda para procesamiento en tiempo real</b></p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p><b>AWS Lambda</b> es un servicio de cómputo serverless más adecuado para ejecutar <b>funciones de corta duración impulsadas por eventos</b> o <b>inferencia en tiempo real</b>. <b>No está diseñado ni optimizado</b> para el procesamiento de lotes de <b>conjuntos de datos a gran escala</b> requerido para preprocesamiento general de NLP. Ejecutar un trabajo ETL extenso en petabytes de datos a través de Lambda sería altamente ineficiente y probablemente alcanzaría límites de tiempo de ejecución.</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>",
+      "domain": 1
     },
     {
       "id": "5-23",
@@ -351,7 +362,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>SageMaker Data Wrangler</b></p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t\t\t<b><span>SageMaker Data Wrangler</span></b><span> es una función diseñada para acelerar el proceso de </span><b><span>agregación y preparación de datos (ETL)</span></b><span> para machine learning.</span>\n\t\t\t\t\t\t\t\t\t\t\t<span>Ofrece una interfaz visual y transformaciones integradas para limpiar, normalizar y hacer feature engineering de datos rápidamente.</span> Para datos de series de tiempo, Data Wrangler tiene capacidades específicas para manejar desafíos comunes, incluyendo:\n\t\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t\t\t<p><b>Alineación de series de tiempo:</b> Asegurar que los puntos de datos estén correctamente sincronizados en diferentes series.</p>\n\t\t\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t\t\t<p><b>Particionamiento:</b><span> Estructurar los datos según el tiempo u otras claves (por ejemplo, ID de producto, ubicación) para optimizar el entrenamiento y la recuperación, lo cual es crucial para conjuntos de datos de series de tiempo a gran escala.</span></p>\n\t\t\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t\t\t<span>Esta herramienta proporciona las funciones necesarias para asegurar que los datos de series de tiempo estén listos para un modelo de forecasting.</span>\n\t\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>Incorrecto</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>SageMaker Ground Truth</b></p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t\t\t<b><span>SageMaker Ground Truth</span></b><span> es un servicio utilizado para </span><b><span>etiquetar conjuntos de datos</span></b><span> para machine learning (por ejemplo, dibujar cuadros delimitadores en imágenes o clasificar texto).</span> No tiene función alguna para el particionamiento de datos, alineación o feature engineering general de datos de series de tiempo.\n\t\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>SageMaker Time Series Forecasting</b></p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>Aunque este servicio se refiere a la tarea general, <b>SageMaker Time Series Forecasting</b> (que utiliza el algoritmo DeepAR integrado o el componente Forecast de SageMaker Canvas) es el paso de <b>modelado e inferencia</b>, no el paso de <b>preparación de datos o feature engineering</b>. Los datos deben estar correctamente particionados y alineados <i>antes</i> de ser alimentados a este servicio de forecasting. </p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>SageMaker Processing</b></p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t\t\t<b><span>SageMaker Processing</span></b><span> proporciona un método altamente escalable y rentable para ejecutar cargas de trabajo de procesamiento de datos personalizadas (como Spark, scikit-learn o código personalizado) para la preparación de ML.</span> Si bien <i>podrías</i> escribir código dentro de un trabajo de Processing para particionar y alinear datos de series de tiempo, <b>Data Wrangler (Opción A)</b> es la función creada específicamente, de nivel superior y más eficiente que simplifica y acelera estas tareas de preparación comunes sin requerir que escribas código personalizado. Por lo tanto, Data Wrangler es la respuesta mejor y más directa.\n\t\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>"
+      "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>SageMaker Data Wrangler</b></p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t\t\t<b><span>SageMaker Data Wrangler</span></b><span> es una función diseñada para acelerar el proceso de </span><b><span>agregación y preparación de datos (ETL)</span></b><span> para machine learning.</span>\n\t\t\t\t\t\t\t\t\t\t\t<span>Ofrece una interfaz visual y transformaciones integradas para limpiar, normalizar y hacer feature engineering de datos rápidamente.</span> Para datos de series de tiempo, Data Wrangler tiene capacidades específicas para manejar desafíos comunes, incluyendo:\n\t\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t\t\t<p><b>Alineación de series de tiempo:</b> Asegurar que los puntos de datos estén correctamente sincronizados en diferentes series.</p>\n\t\t\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t\t\t<p><b>Particionamiento:</b><span> Estructurar los datos según el tiempo u otras claves (por ejemplo, ID de producto, ubicación) para optimizar el entrenamiento y la recuperación, lo cual es crucial para conjuntos de datos de series de tiempo a gran escala.</span></p>\n\t\t\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t\t\t<span>Esta herramienta proporciona las funciones necesarias para asegurar que los datos de series de tiempo estén listos para un modelo de forecasting.</span>\n\t\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>Incorrecto</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>SageMaker Ground Truth</b></p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t\t\t<b><span>SageMaker Ground Truth</span></b><span> es un servicio utilizado para </span><b><span>etiquetar conjuntos de datos</span></b><span> para machine learning (por ejemplo, dibujar cuadros delimitadores en imágenes o clasificar texto).</span> No tiene función alguna para el particionamiento de datos, alineación o feature engineering general de datos de series de tiempo.\n\t\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>SageMaker Time Series Forecasting</b></p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>Aunque este servicio se refiere a la tarea general, <b>SageMaker Time Series Forecasting</b> (que utiliza el algoritmo DeepAR integrado o el componente Forecast de SageMaker Canvas) es el paso de <b>modelado e inferencia</b>, no el paso de <b>preparación de datos o feature engineering</b>. Los datos deben estar correctamente particionados y alineados <i>antes</i> de ser alimentados a este servicio de forecasting. </p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>SageMaker Processing</b></p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t\t\t<b><span>SageMaker Processing</span></b><span> proporciona un método altamente escalable y rentable para ejecutar cargas de trabajo de procesamiento de datos personalizadas (como Spark, scikit-learn o código personalizado) para la preparación de ML.</span> Si bien <i>podrías</i> escribir código dentro de un trabajo de Processing para particionar y alinear datos de series de tiempo, <b>Data Wrangler (Opción A)</b> es la función creada específicamente, de nivel superior y más eficiente que simplifica y acelera estas tareas de preparación comunes sin requerir que escribas código personalizado. Por lo tanto, Data Wrangler es la respuesta mejor y más directa.\n\t\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>",
+      "domain": 1
     },
     {
       "id": "5-24",
@@ -401,7 +413,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Cross-validation es una técnica utilizada para evaluar qué tan bien se desempeña un modelo en diferentes subconjuntos de los datos, asegurando que el modelo generalice correctamente y no esté en overfitting.</p>"
+      "explanationHtml": "<p>Cross-validation es una técnica utilizada para evaluar qué tan bien se desempeña un modelo en diferentes subconjuntos de los datos, asegurando que el modelo generalice correctamente y no esté en overfitting.</p>",
+      "domain": 1
     },
     {
       "id": "5-30",
@@ -426,7 +439,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>La optimización de hiperparámetros en Amazon SageMaker se puede realizar utilizando varios métodos, incluyendo ajuste manual, búsqueda en cuadrícula y optimización bayesiana. Cada método tiene sus propias ventajas y se puede elegir según los requisitos específicos de la tarea de machine learning.</p>"
+      "explanationHtml": "<p>La optimización de hiperparámetros en Amazon SageMaker se puede realizar utilizando varios métodos, incluyendo ajuste manual, búsqueda en cuadrícula y optimización bayesiana. Cada método tiene sus propias ventajas y se puede elegir según los requisitos específicos de la tarea de machine learning.</p>",
+      "domain": 1
     },
     {
       "id": "5-32",
@@ -451,7 +465,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Model drift ocurre cuando las propiedades estadísticas de los datos de entrada cambian con el tiempo, lo que lleva a una degradación en el desempeño del modelo. Monitorear el model drift es fundamental para mantener la precisión y confiabilidad de los modelos de machine learning.</p>"
+      "explanationHtml": "<p>Model drift ocurre cuando las propiedades estadísticas de los datos de entrada cambian con el tiempo, lo que lleva a una degradación en el desempeño del modelo. Monitorear el model drift es fundamental para mantener la precisión y confiabilidad de los modelos de machine learning.</p>",
+      "domain": 1
     },
     {
       "id": "5-33",
@@ -476,7 +491,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>El aprendizaje supervisado implica entrenar un modelo usando datos etiquetados, donde los datos de entrada se emparejan con la salida correcta. El modelo aprende a predecir la salida a partir de los datos de entrada basándose en este entrenamiento.</p>"
+      "explanationHtml": "<p>El aprendizaje supervisado implica entrenar un modelo usando datos etiquetados, donde los datos de entrada se emparejan con la salida correcta. El modelo aprende a predecir la salida a partir de los datos de entrada basándose en este entrenamiento.</p>",
+      "domain": 1
     },
     {
       "id": "5-34",
@@ -501,7 +517,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>AWS Secrets Manager es un servicio diseñado para almacenar y administrar de forma segura información confidencial como claves de acceso, contraseñas y claves API. Ayuda a acceder de manera segura a estas credenciales dentro de tu aplicación de machine learning sin necesidad de incluirlas directamente en el código.</p>"
+      "explanationHtml": "<p>AWS Secrets Manager es un servicio diseñado para almacenar y administrar de forma segura información confidencial como claves de acceso, contraseñas y claves API. Ayuda a acceder de manera segura a estas credenciales dentro de tu aplicación de machine learning sin necesidad de incluirlas directamente en el código.</p>",
+      "domain": 5
     },
     {
       "id": "5-35",
@@ -526,7 +543,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Las Recurrent Neural Networks (RNNs) están diseñadas para manejar datos secuenciales e información de series de tiempo, lo que las hace muy adecuadas para tareas de procesamiento de lenguaje natural como modelado del lenguaje, generación de texto y traducción.</p>"
+      "explanationHtml": "<p>Las Recurrent Neural Networks (RNNs) están diseñadas para manejar datos secuenciales e información de series de tiempo, lo que las hace muy adecuadas para tareas de procesamiento de lenguaje natural como modelado del lenguaje, generación de texto y traducción.</p>",
+      "domain": 1
     },
     {
       "id": "5-36",
@@ -551,7 +569,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Amazon SageMaker Model Monitor monitorea continuamente los datos que procesan los modelos implementados y puede detectar problemas como data drift, sesgo del modelo y errores de predicción en tiempo real. Esto ayuda a mantener la calidad y confiabilidad de los modelos de aprendizaje automático en producción.</p>"
+      "explanationHtml": "<p>Amazon SageMaker Model Monitor monitorea continuamente los datos que procesan los modelos implementados y puede detectar problemas como data drift, sesgo del modelo y errores de predicción en tiempo real. Esto ayuda a mantener la calidad y confiabilidad de los modelos de aprendizaje automático en producción.</p>",
+      "domain": 1
     },
     {
       "id": "5-37",
@@ -576,7 +595,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>AWS Personalize es un servicio de machine learning que permite a los desarrolladores crear recomendaciones individualizadas para clientes en sus aplicaciones. Se puede utilizar para construir motores de recomendación similares a los que usa Amazon.com.</p>"
+      "explanationHtml": "<p>AWS Personalize es un servicio de machine learning que permite a los desarrolladores crear recomendaciones individualizadas para clientes en sus aplicaciones. Se puede utilizar para construir motores de recomendación similares a los que usa Amazon.com.</p>",
+      "domain": 1
     },
     {
       "id": "5-39",
@@ -601,7 +621,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Amazon SageMaker Neo optimiza modelos de machine learning para que se ejecuten más rápido y de manera más eficiente en múltiples plataformas de hardware, incluyendo instancias en la nube y dispositivos edge, reduciendo su tamaño y mejorando la velocidad de inferencia.</p>"
+      "explanationHtml": "<p>Amazon SageMaker Neo optimiza modelos de machine learning para que se ejecuten más rápido y de manera más eficiente en múltiples plataformas de hardware, incluyendo instancias en la nube y dispositivos edge, reduciendo su tamaño y mejorando la velocidad de inferencia.</p>",
+      "domain": 1
     },
     {
       "id": "5-40",
@@ -626,7 +647,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Para gestionar data drift, es esencial reentrenar periódicamente los modelos de machine learning con datos actualizados. Amazon SageMaker proporciona capacidades para automatizar el proceso de reentrenamiento, asegurando que los modelos mantengan su precisión y desempeño a lo largo del tiempo a medida que las distribuciones de datos cambian.</p>"
+      "explanationHtml": "<p>Para gestionar data drift, es esencial reentrenar periódicamente los modelos de machine learning con datos actualizados. Amazon SageMaker proporciona capacidades para automatizar el proceso de reentrenamiento, asegurando que los modelos mantengan su precisión y desempeño a lo largo del tiempo a medida que las distribuciones de datos cambian.</p>",
+      "domain": 1
     },
     {
       "id": "5-41",
@@ -651,7 +673,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Amazon SageMaker es un servicio completamente administrado que proporciona todas las herramientas necesarias para construir, entrenar e implementar modelos de machine learning sin la necesidad de administrar la infraestructura subyacente, lo que facilita que desarrolladores y científicos de datos se enfoquen en sus modelos.</p>"
+      "explanationHtml": "<p>Amazon SageMaker es un servicio completamente administrado que proporciona todas las herramientas necesarias para construir, entrenar e implementar modelos de machine learning sin la necesidad de administrar la infraestructura subyacente, lo que facilita que desarrolladores y científicos de datos se enfoquen en sus modelos.</p>",
+      "domain": 1
     },
     {
       "id": "5-42",
@@ -676,7 +699,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Amazon SageMaker Model Monitor monitorea continuamente los datos que fluyen hacia los modelos implementados y puede detectar cambios en la distribución de datos, conocidos como data drift. Ayuda a mantener el rendimiento del modelo alertándote sobre posibles problemas.</p>"
+      "explanationHtml": "<p>Amazon SageMaker Model Monitor monitorea continuamente los datos que fluyen hacia los modelos implementados y puede detectar cambios en la distribución de datos, conocidos como data drift. Ayuda a mantener el rendimiento del modelo alertándote sobre posibles problemas.</p>",
+      "domain": 1
     },
     {
       "id": "5-44",
@@ -701,7 +725,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Amazon SageMaker Endpoints permite implementar modelos de machine learning para predicciones en tiempo real con baja latencia. Son escalables y pueden manejar un gran volumen de solicitudes, lo que los hace ideales para aplicaciones que requieren respuestas rápidas.</p>"
+      "explanationHtml": "<p>Amazon SageMaker Endpoints permite implementar modelos de machine learning para predicciones en tiempo real con baja latencia. Son escalables y pueden manejar un gran volumen de solicitudes, lo que los hace ideales para aplicaciones que requieren respuestas rápidas.</p>",
+      "domain": 1
     },
     {
       "id": "5-45",
@@ -726,7 +751,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Usar Amazon SageMaker Batch Transform con carga de datos distribuida mejora la escalabilidad y eficiencia de los trabajos de inferencia por lotes al distribuir los datos entre varias instancias, lo que permite el procesamiento paralelo de grandes conjuntos de datos.</p>"
+      "explanationHtml": "<p>Usar Amazon SageMaker Batch Transform con carga de datos distribuida mejora la escalabilidad y eficiencia de los trabajos de inferencia por lotes al distribuir los datos entre varias instancias, lo que permite el procesamiento paralelo de grandes conjuntos de datos.</p>",
+      "domain": 1
     },
     {
       "id": "5-47",
@@ -751,7 +777,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Data augmentation aumenta la diversidad de los datos de entrenamiento sin necesidad de recopilar datos nuevos, ayudando a prevenir overfitting. Early stopping ayuda a detener el proceso de entrenamiento antes de que el modelo comience a sobreajustarse a los datos de entrenamiento.</p>"
+      "explanationHtml": "<p>Data augmentation aumenta la diversidad de los datos de entrenamiento sin necesidad de recopilar datos nuevos, ayudando a prevenir overfitting. Early stopping ayuda a detener el proceso de entrenamiento antes de que el modelo comience a sobreajustarse a los datos de entrenamiento.</p>",
+      "domain": 1
     },
     {
       "id": "5-48",
@@ -776,7 +803,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>AWS Comprehend es un servicio de procesamiento de lenguaje natural (NLP) que utiliza machine learning para encontrar información y relaciones en texto. Te ayuda a analizar documentos de texto y extraer frases clave, sentimientos, entidades e idioma.</p>"
+      "explanationHtml": "<p>AWS Comprehend es un servicio de procesamiento de lenguaje natural (NLP) que utiliza machine learning para encontrar información y relaciones en texto. Te ayuda a analizar documentos de texto y extraer frases clave, sentimientos, entidades e idioma.</p>",
+      "domain": 1
     },
     {
       "id": "5-49",
@@ -801,7 +829,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Amazon CloudWatch y Amazon SageMaker Debugger se pueden usar juntos para monitorear el desempeño del modelo e identificar problemas. CloudWatch proporciona logging y monitoreo, mientras que SageMaker Debugger ofrece debugging en tiempo real y análisis de trabajos de entrenamiento.</p>"
+      "explanationHtml": "<p>Amazon CloudWatch y Amazon SageMaker Debugger se pueden usar juntos para monitorear el desempeño del modelo e identificar problemas. CloudWatch proporciona logging y monitoreo, mientras que SageMaker Debugger ofrece debugging en tiempo real y análisis de trabajos de entrenamiento.</p>",
+      "domain": 1
     },
     {
       "id": "5-52",
@@ -826,7 +855,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Amazon SageMaker Ground Truth proporciona capacidades para crear flujos de trabajo de etiquetado automático de datos que incluyen tanto aprendizaje automático como etiquetado humano. Se integra con Amazon Mechanical Turk y otros proveedores de fuerza laboral para entregar datos etiquetados de alta calidad.</p>"
+      "explanationHtml": "<p>Amazon SageMaker Ground Truth proporciona capacidades para crear flujos de trabajo de etiquetado automático de datos que incluyen tanto aprendizaje automático como etiquetado humano. Se integra con Amazon Mechanical Turk y otros proveedores de fuerza laboral para entregar datos etiquetados de alta calidad.</p>",
+      "domain": 1
     },
     {
       "id": "5-54",
@@ -851,7 +881,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Amazon SageMaker Serverless Inference es un servicio reciente que proporciona una infraestructura sin servidor para alojar modelos de machine learning, permitiendo a los usuarios desplegar modelos sin necesidad de administrar la infraestructura subyacente.</p>"
+      "explanationHtml": "<p>Amazon SageMaker Serverless Inference es un servicio reciente que proporciona una infraestructura sin servidor para alojar modelos de machine learning, permitiendo a los usuarios desplegar modelos sin necesidad de administrar la infraestructura subyacente.</p>",
+      "domain": 1
     },
     {
       "id": "5-55",
@@ -876,7 +907,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Amazon SageMaker Ground Truth proporciona una solución escalable para etiquetar datos, incluyendo características como active learning para reducir la cantidad de datos que necesitan ser etiquetados manualmente. Se integra con servicios de etiquetado humano para garantizar anotaciones de alta calidad para el entrenamiento de modelos.</p>"
+      "explanationHtml": "<p>Amazon SageMaker Ground Truth proporciona una solución escalable para etiquetar datos, incluyendo características como active learning para reducir la cantidad de datos que necesitan ser etiquetados manualmente. Se integra con servicios de etiquetado humano para garantizar anotaciones de alta calidad para el entrenamiento de modelos.</p>",
+      "domain": 1
     },
     {
       "id": "5-56",
@@ -901,7 +933,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Amazon Transcribe es un servicio de reconocimiento automático de voz (ASR) que permite a los desarrolladores agregar capacidades de conversión de voz a texto en sus aplicaciones. Se utiliza para convertir archivos de audio en texto, lo que facilita el análisis y procesamiento del contenido hablado.</p>"
+      "explanationHtml": "<p>Amazon Transcribe es un servicio de reconocimiento automático de voz (ASR) que permite a los desarrolladores agregar capacidades de conversión de voz a texto en sus aplicaciones. Se utiliza para convertir archivos de audio en texto, lo que facilita el análisis y procesamiento del contenido hablado.</p>",
+      "domain": 1
     }
   ]
 }

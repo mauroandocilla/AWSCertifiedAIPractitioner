@@ -26,7 +26,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Guardrails help prevent inappropriate or unwanted content.</p>"
+      "explanationHtml": "<p>Guardrails help prevent inappropriate or unwanted content.</p>",
+      "domain": 2
     },
     {
       "id": "1-2",
@@ -51,7 +52,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Context provides relevant information that improves the quality and accuracy of responses.</p>"
+      "explanationHtml": "<p>Context provides relevant information that improves the quality and accuracy of responses.</p>",
+      "domain": 3
     },
     {
       "id": "1-3",
@@ -126,7 +128,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Playgrounds allow for experimenting with model prompts and configurations.</p>"
+      "explanationHtml": "<p>Playgrounds allow for experimenting with model prompts and configurations.</p>",
+      "domain": 2
     },
     {
       "id": "1-6",
@@ -151,7 +154,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Gradient descent is used to minimize the loss function in machine learning models.</p>"
+      "explanationHtml": "<p>Gradient descent is used to minimize the loss function in machine learning models.</p>",
+      "domain": 1
     },
     {
       "id": "1-7",
@@ -176,7 +180,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>An epoch refers to one complete pass through the entire training dataset.</p>"
+      "explanationHtml": "<p>An epoch refers to one complete pass through the entire training dataset.</p>",
+      "domain": 1
     },
     {
       "id": "1-8",
@@ -201,7 +206,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>The curse of dimensionality refers to the phenomenon where high-dimensional spaces complicate data analysis and model performance.</p>"
+      "explanationHtml": "<p>The curse of dimensionality refers to the phenomenon where high-dimensional spaces complicate data analysis and model performance.</p>",
+      "domain": 1
     },
     {
       "id": "1-10",
@@ -226,7 +232,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Fine-tuning foundation models with domain-specific data optimizes their performance.</p>"
+      "explanationHtml": "<p>Fine-tuning foundation models with domain-specific data optimizes their performance.</p>",
+      "domain": 3
     },
     {
       "id": "1-11",
@@ -251,7 +258,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>AWS addresses the societal impact of AI by prioritizing fairness, privacy, and safety.</p>"
+      "explanationHtml": "<p>AWS addresses the societal impact of AI by prioritizing fairness, privacy, and safety.</p>",
+      "domain": 4
     },
     {
       "id": "1-13",
@@ -301,7 +309,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Amazon SageMaker Ground Truth provides data labeling services to create high-quality training datasets.</p>"
+      "explanationHtml": "<p>Amazon SageMaker Ground Truth provides data labeling services to create high-quality training datasets.</p>",
+      "domain": 1
     },
     {
       "id": "1-15",
@@ -326,7 +335,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>A good machine learning model typically has low bias and low variance, ensuring it generalizes well to new data.</p>"
+      "explanationHtml": "<p>A good machine learning model typically has low bias and low variance, ensuring it generalizes well to new data.</p>",
+      "domain": 1
     },
     {
       "id": "1-16",
@@ -351,7 +361,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Ensemble learning refers to combining multiple models to improve predictive performance.</p>"
+      "explanationHtml": "<p>Ensemble learning refers to combining multiple models to improve predictive performance.</p>",
+      "domain": 1
     },
     {
       "id": "1-18",
@@ -376,7 +387,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>\n\t\t\t\t\t\t\t<b><span>Random over-sampling of the minority class</span></b><span> is a commonly used technique to handle imbalanced datasets.</span><span>&nbsp;</span>Here’s how it works:\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ol>\n\t\t\t\t\t\t\t<li><b>Identify the minority class:</b> Determine the class with fewer samples.</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b><span>Randomly sample:</span></b><span> Randomly select samples from the minority class with replacement and add them to the training dataset.</span><span> &nbsp;</span>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li><b>Balance the dataset:</b> Repeat the sampling process until the number of samples in the minority class is equal to or close to the number of samples in the majority class.</li>\n\t\t\t\t\t\t</ol>\n\t\t\t\t\t\t<p><span>This technique helps to balance the dataset and prevent the model from being biased towards the majority class.</span><span>&nbsp;</span>Other techniques for handling imbalanced datasets include:</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b><span>Undersampling the majority class:</span></b><span> Randomly removing samples from the majority class.</span><span> &nbsp;</span>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b><span>Using a combination of oversampling and undersampling techniques.</span></b><span>&nbsp;</span>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b><span>Using advanced techniques like SMOTE (Synthetic Minority Over-sampling Technique).</span></b><span>&nbsp; &nbsp;</span><b>Adjusting the class weights in the model.</b>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>The best technique to use depends on the specific dataset and the problem at hand. It’s important to experiment with different techniques and evaluate their performance using appropriate metrics like F1-score, precision, and recall.</p>"
+      "explanationHtml": "<p>\n\t\t\t\t\t\t\t<b><span>Random over-sampling of the minority class</span></b><span> is a commonly used technique to handle imbalanced datasets.</span><span>&nbsp;</span>Here’s how it works:\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ol>\n\t\t\t\t\t\t\t<li><b>Identify the minority class:</b> Determine the class with fewer samples.</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b><span>Randomly sample:</span></b><span> Randomly select samples from the minority class with replacement and add them to the training dataset.</span><span> &nbsp;</span>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li><b>Balance the dataset:</b> Repeat the sampling process until the number of samples in the minority class is equal to or close to the number of samples in the majority class.</li>\n\t\t\t\t\t\t</ol>\n\t\t\t\t\t\t<p><span>This technique helps to balance the dataset and prevent the model from being biased towards the majority class.</span><span>&nbsp;</span>Other techniques for handling imbalanced datasets include:</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b><span>Undersampling the majority class:</span></b><span> Randomly removing samples from the majority class.</span><span> &nbsp;</span>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b><span>Using a combination of oversampling and undersampling techniques.</span></b><span>&nbsp;</span>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b><span>Using advanced techniques like SMOTE (Synthetic Minority Over-sampling Technique).</span></b><span>&nbsp; &nbsp;</span><b>Adjusting the class weights in the model.</b>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>The best technique to use depends on the specific dataset and the problem at hand. It’s important to experiment with different techniques and evaluate their performance using appropriate metrics like F1-score, precision, and recall.</p>",
+      "domain": 1
     },
     {
       "id": "1-20",
@@ -401,7 +413,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>The primary objective of reinforcement learning is <b>to maximize cumulative reward</b>.</p>\n\t\t\t\t\t\t<p>Here’s a breakdown:</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b>Reinforcement Learning (RL):</b>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li><span>RL involves an agent learning to make decisions in an environment by interacting with it.</span><span>&nbsp;</span></li>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<span>The agent receives feedback in the form of rewards or penalties.</span>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t<li>The goal is to learn a policy (a set of rules) that maximizes the total reward received over time.</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>Here’s why the other options are incorrect:</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b><span>To reduce dimensionality of data:</span></b><span> This is the primary objective of dimensionality reduction techniques (e.g., PCA).</span><span>&nbsp;</span>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li><b>To cluster similar data points:</b> This is the primary objective of clustering algorithms (e.g., k-means).</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b><span>To predict future values:</span></b><span> This is the primary objective of supervised learning tasks like regression.</span>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>"
+      "explanationHtml": "<p>The primary objective of reinforcement learning is <b>to maximize cumulative reward</b>.</p>\n\t\t\t\t\t\t<p>Here’s a breakdown:</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b>Reinforcement Learning (RL):</b>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li><span>RL involves an agent learning to make decisions in an environment by interacting with it.</span><span>&nbsp;</span></li>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<span>The agent receives feedback in the form of rewards or penalties.</span>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t<li>The goal is to learn a policy (a set of rules) that maximizes the total reward received over time.</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>Here’s why the other options are incorrect:</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b><span>To reduce dimensionality of data:</span></b><span> This is the primary objective of dimensionality reduction techniques (e.g., PCA).</span><span>&nbsp;</span>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li><b>To cluster similar data points:</b> This is the primary objective of clustering algorithms (e.g., k-means).</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b><span>To predict future values:</span></b><span> This is the primary objective of supervised learning tasks like regression.</span>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>",
+      "domain": 1
     },
     {
       "id": "1-21",
@@ -451,7 +464,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Grounding the response using a Retrieval Augmented Generation (RAG) workflow based on private enterprise data.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>Grounding</b> is the process of ensuring a generative AI model’s output is based on a specific, verified knowledge source rather than the model’s general training data.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>Amazon Q Business implements grounding through a fully managed <b>Retrieval Augmented Generation (RAG)</b> architecture. It connects to your enterprise data sources (e.g., Amazon S3, SharePoint), retrieves relevant document snippets, and feeds them to the Foundation Model (FM) along with the user’s query.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>By <b>confining responses to existing enterprise data</b>, the FM is forced to synthesize an answer <i>only</i> from the provided, verified context, drastically reducing the risk of generating inaccurate, fabricated, or “hallucinated” information. Amazon Q also provides <b>citations</b> to the source documents for full traceability.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>Incorrect</p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Using high Temperature settings to increase the randomness and creativity of the generated output.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>Temperature</b> is a hyperparameter that controls the <b>randomness</b> of the model’s output. A <i>higher</i> temperature encourages more creative and diverse responses, which actually <i>increases</i> the risk of the model deviating from the facts and, thus, <b>increases the likelihood of hallucination</b>, directly contradicting the goal of accuracy.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Relying on post-generation guardrails to filter out sensitive or abusive language.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>AWS Guardrails (like those in Amazon Bedrock or Amazon Q’s built-in controls) are essential for <b>Responsible AI</b>. They filter the output to prevent the generation of <b>harmful, illegal, or abusive content</b>, and they can be used to block topics. However, their primary role is not to verify the <i>factual accuracy</i> of a statement against internal corporate data; that is the job of RAG/Grounding.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Performing fine-tuning on the underlying Foundation Model (FM) with a full copy of the enterprise data.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<b>Fine-tuning</b> changes the actual weights of the Foundation Model to teach it a new style or skill. While it can introduce new knowledge, it is an expensive, slow, and static process. The knowledge becomes baked into the model and is not updated in real-time. Critically, fine-tuned models can still hallucinate or forget information. RAG/Grounding is the industry-standard, cost-effective, and dynamic approach used by Amazon Q Business to ensure <b>up-to-date, source-cited accuracy</b> for enterprise knowledge.\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>"
+      "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Grounding the response using a Retrieval Augmented Generation (RAG) workflow based on private enterprise data.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>Grounding</b> is the process of ensuring a generative AI model’s output is based on a specific, verified knowledge source rather than the model’s general training data.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>Amazon Q Business implements grounding through a fully managed <b>Retrieval Augmented Generation (RAG)</b> architecture. It connects to your enterprise data sources (e.g., Amazon S3, SharePoint), retrieves relevant document snippets, and feeds them to the Foundation Model (FM) along with the user’s query.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>By <b>confining responses to existing enterprise data</b>, the FM is forced to synthesize an answer <i>only</i> from the provided, verified context, drastically reducing the risk of generating inaccurate, fabricated, or “hallucinated” information. Amazon Q also provides <b>citations</b> to the source documents for full traceability.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>Incorrect</p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Using high Temperature settings to increase the randomness and creativity of the generated output.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>Temperature</b> is a hyperparameter that controls the <b>randomness</b> of the model’s output. A <i>higher</i> temperature encourages more creative and diverse responses, which actually <i>increases</i> the risk of the model deviating from the facts and, thus, <b>increases the likelihood of hallucination</b>, directly contradicting the goal of accuracy.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Relying on post-generation guardrails to filter out sensitive or abusive language.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>AWS Guardrails (like those in Amazon Bedrock or Amazon Q’s built-in controls) are essential for <b>Responsible AI</b>. They filter the output to prevent the generation of <b>harmful, illegal, or abusive content</b>, and they can be used to block topics. However, their primary role is not to verify the <i>factual accuracy</i> of a statement against internal corporate data; that is the job of RAG/Grounding.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Performing fine-tuning on the underlying Foundation Model (FM) with a full copy of the enterprise data.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<b>Fine-tuning</b> changes the actual weights of the Foundation Model to teach it a new style or skill. While it can introduce new knowledge, it is an expensive, slow, and static process. The knowledge becomes baked into the model and is not updated in real-time. Critically, fine-tuned models can still hallucinate or forget information. RAG/Grounding is the industry-standard, cost-effective, and dynamic approach used by Amazon Q Business to ensure <b>up-to-date, source-cited accuracy</b> for enterprise knowledge.\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>",
+      "domain": 3
     },
     {
       "id": "1-23",
@@ -476,7 +490,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p><b>To tune hyperparameters</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>The <b>validation set</b> (or development set) is a subset of the data used <b>after each training iteration or epoch</b> to evaluate the model’s performance on unseen data.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>This evaluation is critical for making decisions about the model’s configuration, specifically tuning <b>hyperparameters</b> (e.g., learning rate, number of layers, regularization strength) to find the combination that results in the best generalization performance.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<span>By using the validation set for this iterative tuning, you prevent the model from </span><b><span>overfitting</span></b><span> to the training data while ensuring the final </span><b><span>test set</span></b><span> remains truly unseen for the final, unbiased performance check.</span>\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>Incorrect</p>\n\t\t\t\t\t\t<p>To test the final model performance</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>The role of providing a final, unbiased measure of model performance on completely unseen data is reserved for the <b>test set</b>. If the validation set were used for the final performance test, the hyperparameter tuning process would have inadvertently introduced <b>data leakage</b> from the validation set into the model’s selection process, leading to an overly optimistic estimate of the model’s true generalization error. </p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>To visualize the data</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<span>Data visualization is part of </span><b><span>Exploratory Data Analysis (EDA)</span></b><span>, which is conducted on the raw data </span><i><span>before</span></i><span> it is split into training, validation, and test sets.</span> Visualization helps in understanding data distribution, features, and identifying outliers, but it is not the intended purpose of the validation set split.\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>To train the model</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>The <b>training set</b> is the largest subset of the data and is used by the algorithm to <b>learn the patterns and relationships</b> by adjusting the model’s internal parameters (weights and biases). The validation set is specifically excluded from this learning process to ensure it provides an unbiased measure of model performance during tuning.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>"
+      "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p><b>To tune hyperparameters</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>The <b>validation set</b> (or development set) is a subset of the data used <b>after each training iteration or epoch</b> to evaluate the model’s performance on unseen data.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>This evaluation is critical for making decisions about the model’s configuration, specifically tuning <b>hyperparameters</b> (e.g., learning rate, number of layers, regularization strength) to find the combination that results in the best generalization performance.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<span>By using the validation set for this iterative tuning, you prevent the model from </span><b><span>overfitting</span></b><span> to the training data while ensuring the final </span><b><span>test set</span></b><span> remains truly unseen for the final, unbiased performance check.</span>\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>Incorrect</p>\n\t\t\t\t\t\t<p>To test the final model performance</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>The role of providing a final, unbiased measure of model performance on completely unseen data is reserved for the <b>test set</b>. If the validation set were used for the final performance test, the hyperparameter tuning process would have inadvertently introduced <b>data leakage</b> from the validation set into the model’s selection process, leading to an overly optimistic estimate of the model’s true generalization error. </p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>To visualize the data</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<span>Data visualization is part of </span><b><span>Exploratory Data Analysis (EDA)</span></b><span>, which is conducted on the raw data </span><i><span>before</span></i><span> it is split into training, validation, and test sets.</span> Visualization helps in understanding data distribution, features, and identifying outliers, but it is not the intended purpose of the validation set split.\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>To train the model</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>The <b>training set</b> is the largest subset of the data and is used by the algorithm to <b>learn the patterns and relationships</b> by adjusting the model’s internal parameters (weights and biases). The validation set is specifically excluded from this learning process to ensure it provides an unbiased measure of model performance during tuning.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>",
+      "domain": 1
     },
     {
       "id": "1-24",
@@ -501,7 +516,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<div>\n\t\t\t\t\t\t\t<p><strong>Correct</strong></p>\n\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t<b>To ensure all features contribute equally to the model</b>\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<p>Features with <b>different scales</b> (e.g., age 0-100 vs. income $0-1M) cause <b>distance-based algorithms</b> (KNN, SVM, Neural Networks) to be dominated by larger-range features. Normalization (Min-Max, Z-score) <b>scales all features to same range</b> so each contributes proportionally. </p>\n\t\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t<b>To split the data into training and test sets</b>\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t<b>Train/test split</b> = data partitioning technique. Normalization = <b>feature scaling</b>.\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t<b>To increase the number of features</b>\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t<b>Feature engineering</b> (PCA, polynomial features). Normalization = <b>existing feature scaling</b>.\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t<b>To remove outliers from the data</b>\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t<b>Outlier detection/removal</b> (IQR, Z-score thresholding). Normalization <b>doesn’t remove data points</b>.\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t</div>"
+      "explanationHtml": "<div>\n\t\t\t\t\t\t\t<p><strong>Correct</strong></p>\n\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t<b>To ensure all features contribute equally to the model</b>\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<p>Features with <b>different scales</b> (e.g., age 0-100 vs. income $0-1M) cause <b>distance-based algorithms</b> (KNN, SVM, Neural Networks) to be dominated by larger-range features. Normalization (Min-Max, Z-score) <b>scales all features to same range</b> so each contributes proportionally. </p>\n\t\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t<b>To split the data into training and test sets</b>\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t<b>Train/test split</b> = data partitioning technique. Normalization = <b>feature scaling</b>.\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t<b>To increase the number of features</b>\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t<b>Feature engineering</b> (PCA, polynomial features). Normalization = <b>existing feature scaling</b>.\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t<b>To remove outliers from the data</b>\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t<b>Outlier detection/removal</b> (IQR, Z-score thresholding). Normalization <b>doesn’t remove data points</b>.\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t</div>",
+      "domain": 1
     },
     {
       "id": "1-25",
@@ -526,7 +542,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p><b>bedrock-runtime</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>The <b><code>bedrock-runtime</code> API</b> is the correct Amazon Bedrock API used for <b>making inference requests</b>. </li>\n\t\t\t\t\t\t\t<li>It allows developers to send prompts to foundation models hosted on Bedrock and receive responses.</li>\n\t\t\t\t\t\t\t<li>This API is specifically designed for inference workloads, such as text generation, summarization, or question answering.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p><b>bedrock-agent-runtime</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>This API is used for <b>running Bedrock Agents</b>, which orchestrate tasks and workflows using foundation models.</li>\n\t\t\t\t\t\t\t<li>It is not intended for direct inference requests to models.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>bedrock</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>This is not a valid API name.</li>\n\t\t\t\t\t\t\t<li>It may refer to the overall service (Amazon Bedrock), but it does not represent the specific API used for inference.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>bedrock-agent</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>This API is related to <b>creating and managing Bedrock Agents</b>, not for inference requests.</li>\n\t\t\t\t\t\t\t<li>Agents extend model capabilities but are not the direct interface for inference.</li>\n\t\t\t\t\t\t</ul>"
+      "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p><b>bedrock-runtime</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>The <b><code>bedrock-runtime</code> API</b> is the correct Amazon Bedrock API used for <b>making inference requests</b>. </li>\n\t\t\t\t\t\t\t<li>It allows developers to send prompts to foundation models hosted on Bedrock and receive responses.</li>\n\t\t\t\t\t\t\t<li>This API is specifically designed for inference workloads, such as text generation, summarization, or question answering.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p><b>bedrock-agent-runtime</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>This API is used for <b>running Bedrock Agents</b>, which orchestrate tasks and workflows using foundation models.</li>\n\t\t\t\t\t\t\t<li>It is not intended for direct inference requests to models.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>bedrock</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>This is not a valid API name.</li>\n\t\t\t\t\t\t\t<li>It may refer to the overall service (Amazon Bedrock), but it does not represent the specific API used for inference.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>bedrock-agent</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>This API is related to <b>creating and managing Bedrock Agents</b>, not for inference requests.</li>\n\t\t\t\t\t\t\t<li>Agents extend model capabilities but are not the direct interface for inference.</li>\n\t\t\t\t\t\t</ul>",
+      "domain": 2
     },
     {
       "id": "1-27",
@@ -551,7 +568,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Tracks and compares ML experiments</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li><b>Correct because</b> SageMaker Experiments is designed to <b>organize, track, and compare different training runs</b>.</li>\n\t\t\t\t\t\t\t<li>This helps practitioners optimize foundation models by evaluating variations in hyperparameters, datasets, or configurations.</li>\n\t\t\t\t\t\t\t<li>It aligns with the exam’s focus on understanding how AWS services support <b>MLOps and model optimization workflows</b>.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p><b>Reduces data usage</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because SageMaker Experiments does not reduce the amount of data used.</li>\n\t\t\t\t\t\t\t<li>Data reduction would involve preprocessing or sampling, not experiment tracking.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>Enhances security features</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because security is handled through IAM roles, encryption, and network controls, not by SageMaker Experiments.</li>\n\t\t\t\t\t\t\t<li>Experiments are about tracking ML runs, not security.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>Increases model complexity</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because SageMaker Experiments does not inherently increase complexity.</li>\n\t\t\t\t\t\t\t<li>Its purpose is to <b>manage and compare experiments</b>, not to make models more complex.</li>\n\t\t\t\t\t\t</ul>"
+      "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Tracks and compares ML experiments</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li><b>Correct because</b> SageMaker Experiments is designed to <b>organize, track, and compare different training runs</b>.</li>\n\t\t\t\t\t\t\t<li>This helps practitioners optimize foundation models by evaluating variations in hyperparameters, datasets, or configurations.</li>\n\t\t\t\t\t\t\t<li>It aligns with the exam’s focus on understanding how AWS services support <b>MLOps and model optimization workflows</b>.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p><b>Reduces data usage</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because SageMaker Experiments does not reduce the amount of data used.</li>\n\t\t\t\t\t\t\t<li>Data reduction would involve preprocessing or sampling, not experiment tracking.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>Enhances security features</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because security is handled through IAM roles, encryption, and network controls, not by SageMaker Experiments.</li>\n\t\t\t\t\t\t\t<li>Experiments are about tracking ML runs, not security.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>Increases model complexity</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because SageMaker Experiments does not inherently increase complexity.</li>\n\t\t\t\t\t\t\t<li>Its purpose is to <b>manage and compare experiments</b>, not to make models more complex.</li>\n\t\t\t\t\t\t</ul>",
+      "domain": 1
     },
     {
       "id": "1-28",
@@ -576,7 +594,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Agents in Amazon Bedrock manage and execute multi-step tasks.</p>"
+      "explanationHtml": "<p>Agents in Amazon Bedrock manage and execute multi-step tasks.</p>",
+      "domain": 2
     },
     {
       "id": "1-29",
@@ -626,7 +645,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Activation functions introduce non-linearity into the neural network, allowing it to learn complex patterns.</p>"
+      "explanationHtml": "<p>Activation functions introduce non-linearity into the neural network, allowing it to learn complex patterns.</p>",
+      "domain": 1
     },
     {
       "id": "1-31",
@@ -651,7 +671,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>A confusion matrix is used to evaluate the performance of a classification model by showing true vs. predicted values.</p>"
+      "explanationHtml": "<p>A confusion matrix is used to evaluate the performance of a classification model by showing true vs. predicted values.</p>",
+      "domain": 1
     },
     {
       "id": "1-32",
@@ -701,7 +722,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>The Amazon Bedrock console allows for testing agents.</p>"
+      "explanationHtml": "<p>The Amazon Bedrock console allows for testing agents.</p>",
+      "domain": 2
     },
     {
       "id": "1-35",
@@ -751,7 +773,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>The Amazon Bedrock API provides programmatic access to Bedrock services.</p>"
+      "explanationHtml": "<p>The Amazon Bedrock API provides programmatic access to Bedrock services.</p>",
+      "domain": 2
     },
     {
       "id": "1-37",
@@ -776,7 +799,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Pre-trained foundation models in JumpStart accelerate the development process.</p>"
+      "explanationHtml": "<p>Pre-trained foundation models in JumpStart accelerate the development process.</p>",
+      "domain": 1
     },
     {
       "id": "1-38",
@@ -801,7 +825,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Implementing dynamic and context-aware templates enhances robustness against attacks.</p>"
+      "explanationHtml": "<p>Implementing dynamic and context-aware templates enhances robustness against attacks.</p>",
+      "domain": 3
     },
     {
       "id": "1-39",
@@ -826,7 +851,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Clear and specific instructions in prompts enhance the effectiveness of AI-generated responses.</p>"
+      "explanationHtml": "<p>Clear and specific instructions in prompts enhance the effectiveness of AI-generated responses.</p>",
+      "domain": 3
     },
     {
       "id": "1-40",
@@ -851,7 +877,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>SageMaker Debugger provides real-time metrics during training to help optimize foundation models.</p>"
+      "explanationHtml": "<p>SageMaker Debugger provides real-time metrics during training to help optimize foundation models.</p>",
+      "domain": 3
     },
     {
       "id": "1-41",
@@ -876,7 +903,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>The ROC curve represents the trade-off between sensitivity (true positive rate) and specificity (false positive rate).</p>"
+      "explanationHtml": "<p>The ROC curve represents the trade-off between sensitivity (true positive rate) and specificity (false positive rate).</p>",
+      "domain": 1
     },
     {
       "id": "1-42",
@@ -901,7 +929,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>SageMaker Debugger helps debug machine learning models.</p>"
+      "explanationHtml": "<p>SageMaker Debugger helps debug machine learning models.</p>",
+      "domain": 1
     },
     {
       "id": "1-43",
@@ -926,7 +955,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Decision trees are commonly used for both regression and classification tasks.</p>"
+      "explanationHtml": "<p>Decision trees are commonly used for both regression and classification tasks.</p>",
+      "domain": 1
     },
     {
       "id": "1-45",
@@ -951,7 +981,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>The Precision-Recall Curve is suitable for evaluating imbalanced classification problems.</p>"
+      "explanationHtml": "<p>The Precision-Recall Curve is suitable for evaluating imbalanced classification problems.</p>",
+      "domain": 1
     },
     {
       "id": "1-46",
@@ -976,7 +1007,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Amazon SageMaker Clarify helps evaluate and compare AI models for responsible use.</p>"
+      "explanationHtml": "<p>Amazon SageMaker Clarify helps evaluate and compare AI models for responsible use.</p>",
+      "domain": 4
     },
     {
       "id": "1-48",
@@ -1001,7 +1033,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>The bedrock-agent-runtime API is used for invoking agents and querying knowledge bases.</p>"
+      "explanationHtml": "<p>The bedrock-agent-runtime API is used for invoking agents and querying knowledge bases.</p>",
+      "domain": 3
     },
     {
       "id": "1-49",
@@ -1026,7 +1059,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Feedback mechanisms continuously improve the design and effectiveness of prompts.</p>"
+      "explanationHtml": "<p>Feedback mechanisms continuously improve the design and effectiveness of prompts.</p>",
+      "domain": 2
     },
     {
       "id": "1-50",
@@ -1051,7 +1085,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>K-means is commonly used for clustering in unsupervised learning.</p>"
+      "explanationHtml": "<p>K-means is commonly used for clustering in unsupervised learning.</p>",
+      "domain": 1
     },
     {
       "id": "1-51",
@@ -1076,7 +1111,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Bedrock creates a private, customized copy of the model for your data.</p>"
+      "explanationHtml": "<p>Bedrock creates a private, customized copy of the model for your data.</p>",
+      "domain": 3
     },
     {
       "id": "1-53",
@@ -1101,7 +1137,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>SageMaker JumpStart accelerates ML development by providing access to pre-built models and solutions.</p>"
+      "explanationHtml": "<p>SageMaker JumpStart accelerates ML development by providing access to pre-built models and solutions.</p>",
+      "domain": 1
     }
   ]
 }

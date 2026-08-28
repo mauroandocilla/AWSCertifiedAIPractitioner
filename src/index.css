@@ -830,7 +830,7 @@
        scroll, and gets pushed out by the next section's header in turn. */
     .ds-subtitle {
       position: sticky;
-      top: 44px;
+      top: 50px;
       z-index: 3;
       background: var(--bg);
       padding: 0.5rem 0;

@@ -1,4 +1,10 @@
+import { useLayoutEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
+
+// Each page mounts its own QuickJumpBar instance, so the pill row's horizontal
+// scroll would otherwise reset to 0 on every navigation. Module-level (not React
+// state) on purpose — it just needs to survive across mounts within this SPA session.
+let savedScrollLeft = 0;
 
 const ITEMS = [
   { key: 'd1', label: 'D1', to: '/dominio/1' },
@@ -14,6 +20,12 @@ const ITEMS = [
 ];
 
 export default function QuickJumpBar({ current }: { current: string }) {
+  const pillsRef = useRef<HTMLDivElement>(null);
+
+  useLayoutEffect(() => {
+    if (pillsRef.current) pillsRef.current.scrollLeft = savedScrollLeft;
+  }, []);
+
   return (
     <div className="quickjump">
       <Link to="/" className="quickjump-back">
@@ -23,7 +35,13 @@ export default function QuickJumpBar({ current }: { current: string }) {
         </svg>
         <span className="quickjump-back-label">Resumen</span>
       </Link>
-      <div className="quickjump-pills">
+      <div
+        className="quickjump-pills"
+        ref={pillsRef}
+        onScroll={(e) => {
+          savedScrollLeft = e.currentTarget.scrollLeft;
+        }}
+      >
         {ITEMS.map((item) => (
           <Link
             key={item.key}

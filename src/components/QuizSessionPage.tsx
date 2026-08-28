@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { Link, useParams, useSearchParams } from 'react-router-dom';
 import QuickJumpBar from './QuickJumpBar.tsx';
 import QuizLangToggle from './QuizLangToggle.tsx';
+import BackArrowIcon from './BackArrowIcon.tsx';
 import { loadQuizSet } from '../quiz/loadSet.ts';
 import { quizSetsMeta } from '../quiz/meta.ts';
 import { useQuizLang } from '../quiz/useQuizLang.ts';
@@ -59,6 +60,9 @@ export default function QuizSessionPage() {
   const setNumber = Number(setNumberParam);
   const [searchParams, setSearchParams] = useSearchParams();
   const [lang, setLang] = useQuizLang();
+  // Mobile only: which pane is showing. Defaults to the question (you already picked
+  // this set from the grid/sidebar to get here) — the back arrow reveals the set list.
+  const [mobileDetailActive, setMobileDetailActive] = useState(true);
 
   const [quizSet, setQuizSet] = useState<QuizSet | null>(null);
   const [loadError, setLoadError] = useState(false);
@@ -147,9 +151,12 @@ export default function QuizSessionPage() {
       <>
         <QuickJumpBar current="quiz" />
         <section className="quiz-split">
-          <div className="quiz-split-body">
+          <div className={mobileDetailActive ? 'quiz-split-body detail-active' : 'quiz-split-body'}>
             <QuizSidebar activeSet={setNumber} />
             <div className="quiz-split-panel">
+              <button type="button" className="mobile-back-btn" onClick={() => setMobileDetailActive(false)}>
+                <BackArrowIcon /> Ver sets
+              </button>
               <QuizLangToggle lang={lang} onChange={setLang} />
               <p>Set de práctica no encontrado.</p>
             </div>
@@ -164,9 +171,12 @@ export default function QuizSessionPage() {
       <>
         <QuickJumpBar current="quiz" />
         <section className="quiz-split">
-          <div className="quiz-split-body">
+          <div className={mobileDetailActive ? 'quiz-split-body detail-active' : 'quiz-split-body'}>
             <QuizSidebar activeSet={setNumber} />
             <div className="quiz-split-panel">
+              <button type="button" className="mobile-back-btn" onClick={() => setMobileDetailActive(false)}>
+                <BackArrowIcon /> Ver sets
+              </button>
               <QuizLangToggle lang={lang} onChange={setLang} />
               <p>Cargando…</p>
             </div>
@@ -185,10 +195,14 @@ export default function QuizSessionPage() {
     <>
       <QuickJumpBar current="quiz" />
       <section className="quiz-split">
-        <div className="quiz-split-body">
+        <div className={mobileDetailActive ? 'quiz-split-body detail-active' : 'quiz-split-body'}>
           <QuizSidebar activeSet={setNumber} />
 
           <div className="quiz-split-panel">
+            <button type="button" className="mobile-back-btn" onClick={() => setMobileDetailActive(false)}>
+              <BackArrowIcon /> Ver sets
+            </button>
+
             <div className="quiz-session-head">
               <div>
                 <span className="eyebrow">SET {quizSet.setNumber}</span>

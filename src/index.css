@@ -350,32 +350,54 @@
   }
   .domain-split-panel .gloss-group { margin-top: 0; }
 
+  /* Mobile master-detail: sidebar and panel are each a full-width pane; sliding
+     between them is driven by the .detail-active class (added in DomainDetail.tsx /
+     QuizSessionPage.tsx). Desktop is untouched — these rules only apply <=720px. */
+  .mobile-back-btn { display: none; }
+
   @media (max-width: 720px) {
-    .domain-split-body { flex-direction: column; }
-    .domain-sidebar {
-      flex: none;
-      width: 100%;
-      flex-direction: row;
-      gap: 0.9rem;
+    .domain-split, .quiz-split { overflow-x: hidden; }
+
+    .domain-split-body,
+    .quiz-split-body {
+      flex-wrap: nowrap;
+      width: 200%;
+      gap: 0;
+      transition: transform 0.28s ease;
+    }
+    .domain-split-body.detail-active,
+    .quiz-split-body.detail-active {
+      transform: translateX(-50%);
+    }
+
+    .domain-sidebar, .quiz-sidebar,
+    .domain-split-panel, .quiz-split-panel {
+      flex: 0 0 50%;
+      width: 50%;
+      max-width: 50%;
+      box-sizing: border-box;
+    }
+    .domain-sidebar, .quiz-sidebar {
+      flex-direction: column;
       position: static;
       max-height: none;
-      overflow-x: auto;
       overflow-y: visible;
-      padding-right: 0;
-      padding-bottom: 0.6rem;
-      scrollbar-width: none;
+      padding-right: 1rem;
     }
-    .domain-sidebar::-webkit-scrollbar { display: none; }
-    .ds-subsection { flex: none; display: flex; align-items: center; gap: 0.4rem; }
-    .ds-subtitle { flex: none; white-space: nowrap; margin-bottom: 0; }
-    .ds-bullets { flex-direction: row; }
-    .ds-bullet {
-      flex: none;
-      width: auto;
-      max-width: 130px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+    .domain-split-panel, .quiz-split-panel { padding-left: 1rem; }
+
+    .mobile-back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.85rem;
+      color: var(--accent);
+      background: none;
+      border: none;
+      padding: 0;
+      margin-bottom: 1.1rem;
+      cursor: pointer;
+      font-family: inherit;
     }
   }
 
@@ -747,24 +769,6 @@
     color: var(--ink-faint);
   }
   .quiz-split-panel { flex: 1; min-width: 0; }
-
-  @media (max-width: 720px) {
-    .quiz-split-body { flex-direction: column; }
-    .quiz-sidebar {
-      flex: none;
-      width: 100%;
-      flex-direction: row;
-      position: static;
-      max-height: none;
-      overflow-x: auto;
-      overflow-y: visible;
-      padding-right: 0;
-      padding-bottom: 0.6rem;
-      scrollbar-width: none;
-    }
-    .quiz-sidebar::-webkit-scrollbar { display: none; }
-    .quiz-sidebar-item { width: auto; flex: none; white-space: nowrap; }
-  }
 
   .quiz-session { max-width: 62rem; }
   .quiz-session-head {

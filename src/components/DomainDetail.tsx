@@ -1,10 +1,14 @@
+import { useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { domainByNumber } from '../domainData.ts';
 import GlossaryEntryContent from './GlossaryEntryContent.tsx';
+import BackArrowIcon from './BackArrowIcon.tsx';
 
 export default function DomainDetail({ number }: { number: number }) {
   const domain = domainByNumber[number];
   const [searchParams, setSearchParams] = useSearchParams();
+  // Mobile only: which pane is showing (list vs. selected bullet). Ignored on desktop, where both show at once.
+  const [mobileDetailActive, setMobileDetailActive] = useState(false);
 
   if (!domain) return <p>Dominio no encontrado.</p>;
 
@@ -17,11 +21,12 @@ export default function DomainDetail({ number }: { number: number }) {
       next.set('b', glossId);
       return next;
     });
+    setMobileDetailActive(true);
   }
 
   return (
     <section className="domain-split" data-domain={domain.number}>
-      <div className="domain-split-body">
+      <div className={mobileDetailActive ? 'domain-split-body detail-active' : 'domain-split-body'}>
         <aside className="domain-sidebar">
           {domain.subsections.map((ss) => (
             <div className="ds-subsection" key={ss.id}>
@@ -44,6 +49,10 @@ export default function DomainDetail({ number }: { number: number }) {
         </aside>
 
         <div className="domain-split-panel">
+          <button type="button" className="mobile-back-btn" onClick={() => setMobileDetailActive(false)}>
+            <BackArrowIcon /> Ver lista
+          </button>
+
           <div className="domain-head">
             <div>
               <span className="kicker">{domain.kicker}</span>

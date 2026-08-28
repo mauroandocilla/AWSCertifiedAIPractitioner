@@ -36,7 +36,7 @@ function isCorrectAnswer(selected: number[], options: QuizSet['questions'][numbe
   return correctIdx.length === selected.length && correctIdx.every((i) => selectedSet.has(i));
 }
 
-function QuizSidebar({ activeSet }: { activeSet: number }) {
+function QuizSidebar({ activeSet, onSelect }: { activeSet: number; onSelect: () => void }) {
   return (
     <aside className="quiz-sidebar">
       <h3 className="ds-subtitle">Sets de práctica</h3>
@@ -46,6 +46,7 @@ function QuizSidebar({ activeSet }: { activeSet: number }) {
             <Link
               to={`/quiz/${s.setNumber}`}
               className={s.setNumber === activeSet ? 'quiz-sidebar-item active' : 'quiz-sidebar-item'}
+              onClick={onSelect}
             >
               <span>Set {s.setNumber}</span>
               <span className="quiz-sidebar-count">{s.questionCount}</span>
@@ -73,10 +74,18 @@ export default function QuizSessionPage() {
   const [animKey, setAnimKey] = useState(0);
   const hasInteracted = useRef(false);
   const wasDetailActive = useRef(true);
+  const listScrollY = useRef(0);
 
+  // React Router reuses this same component instance across /quiz/:setNumber changes
+  // (it doesn't remount), so mobileDetailActive persists across a set switch — without
+  // this it could stay stuck showing the list. Mirrors DomainDetail's version.
   useLayoutEffect(() => {
-    if (isMobile && !mobileDetailActive && wasDetailActive.current) {
-      window.scrollTo(0, 0);
+    if (isMobile) {
+      if (mobileDetailActive && !wasDetailActive.current) {
+        window.scrollTo(0, 0);
+      } else if (!mobileDetailActive && wasDetailActive.current) {
+        window.scrollTo(0, listScrollY.current);
+      }
     }
     wasDetailActive.current = mobileDetailActive;
   }, [mobileDetailActive, isMobile]);
@@ -86,6 +95,14 @@ export default function QuizSessionPage() {
     setAnimDirection('back');
     setAnimKey((k) => k + 1);
     setMobileDetailActive(false);
+  }
+
+  function selectSet() {
+    if (isMobile && !mobileDetailActive) listScrollY.current = window.scrollY;
+    hasInteracted.current = true;
+    setAnimDirection('forward');
+    setAnimKey((k) => k + 1);
+    setMobileDetailActive(true);
   }
 
   const [quizSet, setQuizSet] = useState<QuizSet | null>(null);
@@ -171,7 +188,7 @@ export default function QuizSessionPage() {
   }
 
   function renderBody(panel: ReactNode) {
-    const sidebar = <QuizSidebar activeSet={setNumber} />;
+    const sidebar = <QuizSidebar activeSet={setNumber} onSelect={selectSet} />;
     if (isMobile) {
       return (
         <div className="quiz-split-body mobile">

@@ -316,6 +316,11 @@
     gap: 0.5rem;
     align-items: baseline;
     margin-bottom: 0.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background: var(--bg);
+    padding: 0.3rem 0;
   }
   .ds-subtitle .tcode {
     font-family: 'IBM Plex Mono', monospace;
@@ -853,6 +858,27 @@
     align-items: center;
     gap: 0.6rem;
     flex-wrap: wrap;
+  }
+
+  /* Desktop equivalent of the mobile sticky panel header: no "Ver lista"/"Ver sets"
+     button needed here (both panes are already visible side by side), but the title
+     still stays pinned while scrolling a long entry/question — same top offset the
+     sticky sidebar already uses. Mobile has its own sticky treatment, untouched. */
+  @media (min-width: 721px) {
+    .domain-split-panel .domain-head {
+      position: sticky;
+      top: 92px;
+      z-index: 2;
+      background: var(--bg);
+      padding-top: 0.4rem;
+    }
+    .quiz-split-panel .quiz-session-head {
+      position: sticky;
+      top: 92px;
+      z-index: 2;
+      background: var(--bg);
+      padding-top: 0.4rem;
+    }
   }
   .quiz-lang-toggle {
     display: inline-flex;

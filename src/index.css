@@ -604,6 +604,7 @@
   }
   @media (max-width: 720px) {
     .quickjump { padding: 0.6rem 1rem; gap: 0.6rem; }
+    .quickjump-back-label { display: none; }
   }
 
   .theme-toggle {

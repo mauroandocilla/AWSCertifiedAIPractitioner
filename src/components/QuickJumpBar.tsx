@@ -21,7 +21,7 @@ export default function QuickJumpBar({ current }: { current: string }) {
           <path d="M19 12H5" />
           <path d="M11 18l-6-6 6-6" />
         </svg>
-        Resumen
+        <span className="quickjump-back-label">Resumen</span>
       </Link>
       <div className="quickjump-pills">
         {ITEMS.map((item) => (

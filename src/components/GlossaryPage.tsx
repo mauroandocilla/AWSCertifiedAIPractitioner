@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import QuickJumpBar from './QuickJumpBar.tsx';
 import Glossary from './Glossary.tsx';
 
 export default function GlossaryPage() {
@@ -18,10 +17,5 @@ export default function GlossaryPage() {
     }
   }, [target]);
 
-  return (
-    <>
-      <QuickJumpBar current="glosario" />
-      <Glossary />
-    </>
-  );
+  return <Glossary />;
 }

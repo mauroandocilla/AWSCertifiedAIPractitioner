@@ -1,5 +1,4 @@
 import { useParams } from 'react-router-dom';
-import QuickJumpBar from './QuickJumpBar.tsx';
 import DomainDetail from './DomainDetail.tsx';
 import { domainByNumber } from '../domainData.ts';
 
@@ -8,19 +7,7 @@ export default function DomainPage() {
   const number = Number(n);
   const domain = domainByNumber[number];
 
-  if (!domain) {
-    return (
-      <>
-        <QuickJumpBar current="" />
-        <p>Dominio no encontrado.</p>
-      </>
-    );
-  }
+  if (!domain) return <p>Dominio no encontrado.</p>;
 
-  return (
-    <>
-      <QuickJumpBar current={`d${number}`} />
-      <DomainDetail number={number} />
-    </>
-  );
+  return <DomainDetail number={number} />;
 }

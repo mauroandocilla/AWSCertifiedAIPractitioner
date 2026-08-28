@@ -1,7 +1,6 @@
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import type { ReactNode } from 'react';
 import { Link, useParams, useSearchParams } from 'react-router-dom';
-import QuickJumpBar from './QuickJumpBar.tsx';
 import QuizLangToggle from './QuizLangToggle.tsx';
 import BackArrowIcon from './BackArrowIcon.tsx';
 import { loadQuizSet } from '../quiz/loadSet.ts';
@@ -208,45 +207,39 @@ export default function QuizSessionPage() {
 
   if (loadError) {
     return (
-      <>
-        <QuickJumpBar current="quiz" />
-        <section className="quiz-split">
-          {renderBody(
-            <div className="quiz-split-panel">
-              <div className="mobile-panel-header">
-                <button type="button" className="mobile-back-btn" onClick={backToSets}>
-                  <BackArrowIcon /> Ver sets
-                </button>
-                <span className="mobile-panel-crumb">SET {setNumber}</span>
-              </div>
-              <QuizLangToggle lang={lang} onChange={setLang} />
-              <p>Set de práctica no encontrado.</p>
-            </div>,
-          )}
-        </section>
-      </>
+      <section className="quiz-split">
+        {renderBody(
+          <div className="quiz-split-panel">
+            <div className="mobile-panel-header">
+              <button type="button" className="mobile-back-btn" onClick={backToSets}>
+                <BackArrowIcon /> Ver sets
+              </button>
+              <span className="mobile-panel-crumb">SET {setNumber}</span>
+            </div>
+            <QuizLangToggle lang={lang} onChange={setLang} />
+            <p>Set de práctica no encontrado.</p>
+          </div>,
+        )}
+      </section>
     );
   }
 
   if (!quizSet || !question) {
     return (
-      <>
-        <QuickJumpBar current="quiz" />
-        <section className="quiz-split">
-          {renderBody(
-            <div className="quiz-split-panel">
-              <div className="mobile-panel-header">
-                <button type="button" className="mobile-back-btn" onClick={backToSets}>
-                  <BackArrowIcon /> Ver sets
-                </button>
-                <span className="mobile-panel-crumb">SET {setNumber}</span>
-              </div>
-              <QuizLangToggle lang={lang} onChange={setLang} />
-              <p>Cargando…</p>
-            </div>,
-          )}
-        </section>
-      </>
+      <section className="quiz-split">
+        {renderBody(
+          <div className="quiz-split-panel">
+            <div className="mobile-panel-header">
+              <button type="button" className="mobile-back-btn" onClick={backToSets}>
+                <BackArrowIcon /> Ver sets
+              </button>
+              <span className="mobile-panel-crumb">SET {setNumber}</span>
+            </div>
+            <QuizLangToggle lang={lang} onChange={setLang} />
+            <p>Cargando…</p>
+          </div>,
+        )}
+      </section>
     );
   }
 
@@ -256,14 +249,12 @@ export default function QuizSessionPage() {
   const allRevealed = quizSet.questions.every((q) => revealed[q.id]);
 
   return (
-    <>
-      <QuickJumpBar current="quiz" />
-      <section className="quiz-split">
-        {renderBody(
-          <div className="quiz-split-panel">
-            <div className="mobile-panel-header">
-              <button type="button" className="mobile-back-btn" onClick={backToSets}>
-                <BackArrowIcon /> Ver sets
+    <section className="quiz-split">
+      {renderBody(
+        <div className="quiz-split-panel">
+          <div className="mobile-panel-header">
+            <button type="button" className="mobile-back-btn" onClick={backToSets}>
+              <BackArrowIcon /> Ver sets
               </button>
               <span className="mobile-panel-crumb">SET {quizSet.setNumber} · P{currentNumber}</span>
             </div>
@@ -368,6 +359,5 @@ export default function QuizSessionPage() {
           </div>,
         )}
       </section>
-    </>
   );
 }

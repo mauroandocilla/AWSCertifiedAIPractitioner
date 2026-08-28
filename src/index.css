@@ -736,34 +736,52 @@
     .domain-split, .quiz-split { overflow-x: hidden; margin-top: 1rem; }
     .quiz-list { margin-top: 1rem; }
 
+    /* Both panes are full-width; whichever one is NOT showing is pulled out of
+       normal flow with position:absolute so it stops contributing height to
+       the container — otherwise the container (and the visible pane's box)
+       would always be as tall as the taller of the two, leaving a blank gap
+       under short content. transform still drives the left/right slide. */
     .domain-split-body,
     .quiz-split-body {
+      position: relative;
       margin-top: 0.75rem;
-      flex-wrap: nowrap;
-      width: 200%;
       gap: 0;
-      transition: transform 0.28s ease;
-    }
-    .domain-split-body.detail-active,
-    .quiz-split-body.detail-active {
-      transform: translateX(-50%);
     }
 
     .domain-sidebar, .quiz-sidebar,
     .domain-split-panel, .quiz-split-panel {
-      flex: 0 0 50%;
-      width: 50%;
-      max-width: 50%;
+      width: 100%;
+      max-width: 100%;
       box-sizing: border-box;
+      transition: transform 0.28s ease;
     }
     .domain-sidebar, .quiz-sidebar {
-      flex-direction: column;
       position: static;
+      flex-direction: column;
       max-height: none;
       overflow-y: visible;
-      padding-right: 0.5rem;
+      padding-right: 0;
     }
-    .domain-split-panel, .quiz-split-panel { padding-left: 0.5rem; }
+    .domain-split-panel, .quiz-split-panel {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(100%);
+      padding-left: 0;
+    }
+
+    .domain-split-body.detail-active .domain-sidebar,
+    .quiz-split-body.detail-active .quiz-sidebar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+    }
+    .domain-split-body.detail-active .domain-split-panel,
+    .quiz-split-body.detail-active .quiz-split-panel {
+      position: relative;
+      transform: translateX(0);
+    }
 
     .mobile-back-btn {
       display: inline-flex;

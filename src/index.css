@@ -417,25 +417,6 @@
     padding: 0.3rem 0.65rem;
     border-radius: 6px;
     margin-bottom: 0.3rem;
-    position: sticky;
-    z-index: 2;
-  }
-  /* Standalone /glosario page: nothing else sticky above it. */
-  @media (min-width: 721px) {
-    .gloss-group-head { top: 92px; }
-  }
-  @media (max-width: 720px) {
-    .gloss-group-head { top: 50px; }
-  }
-  /* Reused inside the domain-detail panel, where the title bar is already sticky —
-     needs a bigger offset so it stacks below it instead of overlapping. These are
-     estimates (domain-head/mobile-panel-header height wasn't measured live) — nudge
-     if it overlaps or leaves too big a gap. */
-  @media (min-width: 721px) {
-    .domain-split-panel .gloss-group-head { top: 172px; }
-  }
-  @media (max-width: 720px) {
-    .domain-split-panel .gloss-group-head { top: 100px; }
   }
   .gloss-bullet-text {
     color: var(--ink-soft);

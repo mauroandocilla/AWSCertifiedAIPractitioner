@@ -23,6 +23,16 @@ function loadRate(): number {
 // the Web Speech API can't change an in-flight utterance's rate, so
 // setRate restarts the current segment instead of silently doing nothing
 // until whatever segment happens to play next.
+//
+// pause()/resume() deliberately don't use speechSynthesis's own native
+// pause/resume: it's unreliable across a multi-utterance queue on mobile
+// Safari, and specifically can't be trusted across the screen locking --
+// iOS suspends/kills speech synthesis on lock with no reliable signal that
+// it happened, so a later native resume() can silently do nothing while
+// state still says "playing". Instead, pause always fully cancels and just
+// remembers which segment was active; resume re-speaks that segment from
+// its start. A restarted sentence is a much smaller cost than audio that
+// silently stopped while the UI still claims it's playing.
 export function useReadAloud() {
   const [status, setStatus] = useState<ReadAloudStatus>('idle');
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
@@ -58,6 +68,18 @@ export function useReadAloud() {
       if (pauseTimerRef.current) clearTimeout(pauseTimerRef.current);
       window.speechSynthesis?.cancel();
     };
+  }, []);
+
+  // The screen locking or switching apps doesn't fire any event of its own
+  // that speech stopped -- this is the closest proxy (tab/page going into
+  // the background), used to snap into a clean "paused" state before iOS
+  // does whatever it's going to do to the audio anyway.
+  useEffect(() => {
+    function onVisibilityChange() {
+      if (document.hidden && statusRef.current === 'playing') pause();
+    }
+    document.addEventListener('visibilitychange', onVisibilityChange);
+    return () => document.removeEventListener('visibilitychange', onVisibilityChange);
   }, []);
 
   function cancelPending() {
@@ -118,13 +140,16 @@ export function useReadAloud() {
   }
 
   function pause() {
-    window.speechSynthesis.pause();
+    generationRef.current++; // invalidate the in-flight utterance's callbacks
+    cancelPending();
     setStatus('paused');
   }
 
   function resume() {
-    window.speechSynthesis.resume();
-    setStatus('playing');
+    const current = activeIndexRef.current;
+    if (current === null) return;
+    const generation = ++generationRef.current;
+    speakIndex(current, generation);
   }
 
   function stop() {

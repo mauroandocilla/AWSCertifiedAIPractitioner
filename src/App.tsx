@@ -12,12 +12,14 @@ import QuizV2Page from './components/QuizV2Page.tsx';
 import ExamPage from './components/ExamPage.tsx';
 import Footer from './components/Footer.tsx';
 import ThemeToggle from './components/ThemeToggle.tsx';
+import DomainSearch from './components/DomainSearch.tsx';
 import ScrollToTop from './components/ScrollToTop.tsx';
 
 export default function App() {
   return (
     <HashRouter>
       <ScrollToTop />
+      <DomainSearch />
       <ThemeToggle />
       <div className="wrap">
         <Routes>

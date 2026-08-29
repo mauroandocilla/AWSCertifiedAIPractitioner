@@ -397,29 +397,40 @@ async function synthesizeSegment(text, creds) {
 
   const workDir = getTmpDir();
   const rawPaths = [];
+  const rawBuffers = [];
   for (let i = 0; i < runs.length; i++) {
     const run = runs[i];
     const audio = await synthesizeRaw(ssmlFor(run.text, run.lang), creds);
+    rawBuffers.push(audio);
     const rawPath = join(workDir, `raw-${i}.mp3`);
     writeFileSync(rawPath, audio);
     rawPaths.push(rawPath);
     if (runs.length > 1) await sleep(120); // be gentle with the free tier's rate limit
   }
 
-  const trimmedPaths = rawPaths.map((p, i) => {
-    const trimmedPath = join(workDir, `trimmed-${i}.mp3`);
-    trimSilence(p, trimmedPath);
-    return trimmedPath;
-  });
+  try {
+    const trimmedPaths = rawPaths.map((p, i) => {
+      const trimmedPath = join(workDir, `trimmed-${i}.mp3`);
+      trimSilence(p, trimmedPath);
+      return trimmedPath;
+    });
 
-  const outPath = join(workDir, 'segment-out.mp3');
-  if (trimmedPaths.length === 1) {
-    execFileSync('cp', [trimmedPaths[0], outPath]);
-  } else {
-    concatWithGaps(trimmedPaths, outPath);
+    const outPath = join(workDir, 'segment-out.mp3');
+    if (trimmedPaths.length === 1) {
+      execFileSync('cp', [trimmedPaths[0], outPath]);
+    } else {
+      concatWithGaps(trimmedPaths, outPath);
+    }
+    return { runs, audio: readFileSync(outPath) };
+  } catch (err) {
+    // ffmpeg/libmp3lame occasionally chokes on a specific buffer ("inadequate
+    // AVFrame plane padding", a known libmp3lame quirk, reproducibly on some
+    // audio) -- rather than failing the whole segment, fall back to the raw,
+    // untrimmed audio concatenated directly. Bigger gap at the splice than
+    // usual for this one segment, but "generate" never gets stuck on it.
+    console.error(`  (ffmpeg falló recortando/pegando, uso audio sin recortar: ${String(err.message).split('\n')[0]})`);
+    return { runs, audio: Buffer.concat(rawBuffers) };
   }
-  const audio = readFileSync(outPath);
-  return { runs, audio };
 }
 
 // ---- commands -------------------------------------------------------------

@@ -146,6 +146,7 @@ const SINGLE_WORDS = [
   'Batch',
   'Asynchronous',
   'MLOps',
+  'GenAI',
   'Scope',
   'Scopes',
   // AWS service names that sometimes appear bare, without a preceding

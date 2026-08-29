@@ -2,38 +2,43 @@ import { useEffect, useRef, useState } from 'react';
 
 export type ReadAloudStatus = 'idle' | 'playing' | 'paused';
 
-interface ReadAloudSegment {
-  title: string;
+export interface ReadAloudSegment {
   text: string;
+  /** Silence before the next segment starts, in ms. Defaults to 300. */
+  pauseAfterMs?: number;
 }
 
 const RATE_KEY = 'read-aloud-rate';
+export const RATE_OPTIONS = [0.75, 1, 1.25];
 
 function loadRate(): number {
   const stored = Number(localStorage.getItem(RATE_KEY));
-  return stored > 0 ? stored : 0.85;
+  return RATE_OPTIONS.includes(stored) ? stored : 1;
 }
 
-// Wraps window.speechSynthesis into a simple sequential-queue player: play a
-// whole list of segments in order (playAll) or just one (playOne), with
-// pause/resume/stop and a persisted playback rate. Built for GlossaryEntryContent's
-// read-aloud feature but has no DOM/React-specific assumptions otherwise.
+// Wraps window.speechSynthesis into a sequential-queue player with real
+// pauses between segments (SpeechSynthesisUtterance has no SSML-style
+// <break>, so a pause is just "wait, then speak the next one"), pause/
+// resume/stop, and a playback rate that actually takes effect immediately --
+// the Web Speech API can't change an in-flight utterance's rate, so
+// setRate restarts the current segment instead of silently doing nothing
+// until whatever segment happens to play next.
 export function useReadAloud() {
   const [status, setStatus] = useState<ReadAloudStatus>('idle');
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
-  const [activeTitle, setActiveTitle] = useState<string | null>(null);
-  const [rate, setRate] = useState(loadRate);
+  const [rate, setRateState] = useState(loadRate);
   const rateRef = useRef(rate);
+  const statusRef = useRef(status);
+  const activeIndexRef = useRef(activeIndex);
   const queueRef = useRef<ReadAloudSegment[]>([]);
-  // If set, stop after finishing this index instead of continuing (single-segment mode).
+  // If set, stop after finishing this index instead of continuing.
   const stopAtRef = useRef<number | null>(null);
-  // Bumped by every play*/stop call. Each utterance's callbacks capture the
-  // generation they were started under and bail if it's no longer current --
-  // browsers don't consistently fire onerror("canceled") vs. onend for an
-  // utterance killed by a *later* speechSynthesis.cancel(), so without this a
-  // stale callback from a just-superseded utterance could still advance the
+  // Bumped by every play*/stop call; each utterance's callbacks capture the
+  // generation they started under and bail if it's no longer current, so a
+  // stale callback from a just-superseded utterance can't advance a
   // (by-then-different) queue.
   const generationRef = useRef(0);
+  const pauseTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
     rateRef.current = rate;
@@ -41,17 +46,33 @@ export function useReadAloud() {
   }, [rate]);
 
   useEffect(() => {
+    statusRef.current = status;
+  }, [status]);
+
+  useEffect(() => {
+    activeIndexRef.current = activeIndex;
+  }, [activeIndex]);
+
+  useEffect(() => {
     return () => {
+      if (pauseTimerRef.current) clearTimeout(pauseTimerRef.current);
       window.speechSynthesis?.cancel();
     };
   }, []);
+
+  function cancelPending() {
+    if (pauseTimerRef.current) {
+      clearTimeout(pauseTimerRef.current);
+      pauseTimerRef.current = null;
+    }
+    window.speechSynthesis.cancel();
+  }
 
   function speakIndex(i: number, generation: number) {
     const queue = queueRef.current;
     if (i >= queue.length) {
       setStatus('idle');
       setActiveIndex(null);
-      setActiveTitle(null);
       return;
     }
     const segment = queue[i];
@@ -63,37 +84,37 @@ export function useReadAloud() {
       if (stopAtRef.current !== null && i >= stopAtRef.current) {
         setStatus('idle');
         setActiveIndex(null);
-        setActiveTitle(null);
         return;
       }
-      speakIndex(i + 1, generation);
+      pauseTimerRef.current = setTimeout(() => {
+        if (generation !== generationRef.current) return;
+        speakIndex(i + 1, generation);
+      }, segment.pauseAfterMs ?? 300);
     };
     utterance.onerror = () => {
       if (generation !== generationRef.current) return;
       setStatus('idle');
       setActiveIndex(null);
-      setActiveTitle(null);
     };
     setActiveIndex(i);
-    setActiveTitle(segment.title);
     setStatus('playing');
     window.speechSynthesis.speak(utterance);
   }
 
   function playAll(segments: ReadAloudSegment[], fromIndex = 0) {
-    window.speechSynthesis.cancel();
+    cancelPending();
     const generation = ++generationRef.current;
     queueRef.current = segments;
     stopAtRef.current = null;
     speakIndex(fromIndex, generation);
   }
 
-  function playOne(segments: ReadAloudSegment[], index: number) {
-    window.speechSynthesis.cancel();
+  function playRange(segments: ReadAloudSegment[], startIndex: number, endIndex: number) {
+    cancelPending();
     const generation = ++generationRef.current;
     queueRef.current = segments;
-    stopAtRef.current = index;
-    speakIndex(index, generation);
+    stopAtRef.current = endIndex;
+    speakIndex(startIndex, generation);
   }
 
   function pause() {
@@ -108,11 +129,21 @@ export function useReadAloud() {
 
   function stop() {
     generationRef.current++;
-    window.speechSynthesis.cancel();
+    cancelPending();
     setStatus('idle');
     setActiveIndex(null);
-    setActiveTitle(null);
   }
 
-  return { status, activeIndex, activeTitle, rate, setRate, playAll, playOne, pause, resume, stop };
+  function setRate(newRate: number) {
+    setRateState(newRate);
+    rateRef.current = newRate;
+    const current = activeIndexRef.current;
+    if (current !== null && statusRef.current !== 'idle') {
+      const generation = ++generationRef.current;
+      cancelPending();
+      speakIndex(current, generation);
+    }
+  }
+
+  return { status, activeIndex, rate, setRate, playAll, playRange, pause, resume, stop };
 }

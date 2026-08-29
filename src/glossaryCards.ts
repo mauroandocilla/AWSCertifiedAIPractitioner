@@ -46,6 +46,16 @@ export function parseGlossaryCards(html: string): GlossaryCard[] {
   return cards;
 }
 
+// Splits a card's bodyHtml (everything after </h4>: the <p> + the
+// <div class="term-short">) into the paragraph and the short-summary text on
+// their own -- used only to build paced read-aloud segments; display still
+// renders bodyHtml as one piece, unaffected by this.
+export function splitCardBody(bodyHtml: string): { paragraphHtml: string; shortHtml: string | null } {
+  const m = bodyHtml.match(/<div class="term-short">\s*<b>[^<]*<\/b>([\s\S]*?)<\/div>/);
+  if (!m) return { paragraphHtml: bodyHtml, shortHtml: null };
+  return { paragraphHtml: bodyHtml.slice(0, m.index), shortHtml: m[1] };
+}
+
 export function extractBulletTextHtml(html: string): string {
   const m = html.match(/<p class="gloss-bullet-text">([\s\S]*?)<\/p>/);
   return m ? m[1] : '';

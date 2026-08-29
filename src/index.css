@@ -810,7 +810,8 @@
     max-width: calc(100vw - 2rem);
   }
   .read-aloud-toggle,
-  .read-aloud-stop {
+  .read-aloud-stop,
+  .read-aloud-step {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -824,6 +825,15 @@
   .read-aloud-toggle { color: var(--accent-ink); background: var(--accent); border: none; }
   .read-aloud-stop { color: var(--ink-faint); background: var(--surface); border: 1px solid var(--border); }
   .read-aloud-stop:hover { color: var(--ink); border-color: var(--ink-faint); }
+  .read-aloud-step {
+    color: var(--ink-soft);
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    line-height: 1;
+  }
+  .read-aloud-step:hover:not(:disabled) { color: var(--accent); }
+  .read-aloud-step:disabled { color: var(--border); cursor: default; }
   .read-aloud-title {
     font-size: 0.82rem;
     color: var(--ink);

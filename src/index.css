@@ -729,8 +729,11 @@
   .search-result-kind.card { color: var(--accent); font-weight: 600; }
 
   @keyframes search-highlight-pulse {
-    0%, 45% { box-shadow: 0 0 0 3px var(--accent); }
-    100% { box-shadow: 0 0 0 3px transparent; }
+    /* inset, not an outward ring -- an outward box-shadow gets clipped by the
+       mobile pane's overflow-x: clip (needed there for the slide animation,
+       see the comment on .domain-split-body.mobile/.quiz-split-body.mobile). */
+    0%, 45% { box-shadow: inset 0 0 0 3px var(--accent); }
+    100% { box-shadow: inset 0 0 0 3px transparent; }
   }
   .search-highlight { animation: search-highlight-pulse 2.2s ease-out; border-radius: 10px; }
 

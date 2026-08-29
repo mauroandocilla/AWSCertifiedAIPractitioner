@@ -955,7 +955,7 @@
       flex: none;
     }
 
-    .term-card { padding: 0.7rem 0.8rem 0.8rem; }
+    .term-card { padding: 0.55rem 0.65rem 0.65rem; }
 
     /* Sticky sidebar section headers: each one sticks under the previous as you
        scroll, and gets pushed out by the next section's header in turn. */

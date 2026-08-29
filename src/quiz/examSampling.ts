@@ -1,5 +1,9 @@
 import { domains } from '../domainData.ts';
-import type { QuizQuestion } from './types.ts';
+
+interface DomainTagged {
+  id: string;
+  domain?: number | null;
+}
 
 function shuffle<T>(arr: T[]): T[] {
   const copy = [...arr];
@@ -23,9 +27,9 @@ export function domainWeights(): Record<number, number> {
  * scripts/classify-quiz-scope.mjs tag-domains). Falls back to plain random
  * sampling if fewer than half the pool is tagged yet.
  */
-export function sampleExamQuestions(pool: QuizQuestion[], total: number): QuizQuestion[] {
+export function sampleExamQuestions<T extends DomainTagged>(pool: T[], total: number): T[] {
   const weights = domainWeights();
-  const byDomain: Record<number, QuizQuestion[]> = {};
+  const byDomain: Record<number, T[]> = {};
   let taggedCount = 0;
   for (const q of pool) {
     if (q.domain != null && weights[q.domain] != null) {
@@ -53,7 +57,7 @@ export function sampleExamQuestions(pool: QuizQuestion[], total: number): QuizQu
     }
   });
 
-  const selected: QuizQuestion[] = [];
+  const selected: T[] = [];
   for (const d of domainNums) {
     const avail = shuffle(byDomain[d] ?? []);
     selected.push(...avail.slice(0, quotas[d]));

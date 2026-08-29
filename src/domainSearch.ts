@@ -1,5 +1,6 @@
 import { domains } from './domainData.ts';
 import { glossaryEntries } from './glossaryData.ts';
+import { parseGlossaryCards, stripHtml } from './glossaryCards.ts';
 
 export interface DomainSearchEntry {
   domainNumber: number;
@@ -18,44 +19,6 @@ export interface DomainSearchEntry {
   matchText: string;
 }
 
-function stripHtml(html: string): string {
-  return html.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
-}
-
-// Walks matching <div>/</div> pairs (not just the nearest "</div>") because
-// each term-card has its own nested <div class="term-short">...</div> --
-// a naive non-greedy regex would stop there instead of at the card's real end.
-function extractTermCards(html: string): { title: string; body: string }[] {
-  const cards: { title: string; body: string }[] = [];
-  const marker = '<div class="term-card">';
-  let searchFrom = 0;
-  while (true) {
-    const start = html.indexOf(marker, searchFrom);
-    if (start === -1) break;
-    let depth = 1;
-    const divTagRe = /<\/?div\b[^>]*>/g;
-    divTagRe.lastIndex = start + marker.length;
-    let end = html.length;
-    let m: RegExpExecArray | null;
-    while ((m = divTagRe.exec(html))) {
-      if (m[0].startsWith('</div')) {
-        depth--;
-        if (depth === 0) {
-          end = m.index;
-          break;
-        }
-      } else {
-        depth++;
-      }
-    }
-    const inner = html.slice(start + marker.length, end);
-    const titleMatch = inner.match(/<h4[^>]*>([\s\S]*?)<\/h4>/);
-    cards.push({ title: titleMatch ? stripHtml(titleMatch[1]) : '', body: stripHtml(inner) });
-    searchFrom = end;
-  }
-  return cards;
-}
-
 const glossaryHtmlById = new Map(glossaryEntries.map((g) => [g.id, g.html]));
 
 // Flattened once at module load -- domainData.ts/glossaryData.ts are static
@@ -68,11 +31,11 @@ export const domainSearchIndex: DomainSearchEntry[] = domains.flatMap((d) =>
     ss.bullets.flatMap((b) => {
       const base = { domainNumber: d.number, domainName: d.name, subsectionTitle: ss.title, bulletText: b.text, glossId: b.glossId };
       const bulletEntry: DomainSearchEntry = { ...base, cardIndex: null, cardTitle: null, matchText: b.text };
-      const cardEntries: DomainSearchEntry[] = extractTermCards(glossaryHtmlById.get(b.glossId) ?? '').map((card, i) => ({
+      const cardEntries: DomainSearchEntry[] = parseGlossaryCards(glossaryHtmlById.get(b.glossId) ?? '').map((card, i) => ({
         ...base,
         cardIndex: i,
-        cardTitle: card.title,
-        matchText: card.body,
+        cardTitle: stripHtml(card.titleHtml),
+        matchText: stripHtml(card.bodyHtml),
       }));
       return [bulletEntry, ...cardEntries];
     }),

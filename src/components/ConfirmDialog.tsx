@@ -1,3 +1,5 @@
+import { useBodyScrollLock } from '../hooks/useBodyScrollLock.ts';
+
 interface ConfirmDialogProps {
   open: boolean;
   message: string;
@@ -7,6 +9,7 @@ interface ConfirmDialogProps {
 }
 
 export default function ConfirmDialog({ open, message, confirmLabel = 'Reiniciar', onConfirm, onCancel }: ConfirmDialogProps) {
+  useBodyScrollLock(open);
   if (!open) return null;
   return (
     <div className="confirm-overlay" onClick={onCancel}>

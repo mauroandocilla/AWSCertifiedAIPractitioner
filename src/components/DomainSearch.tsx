@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import Fuse from 'fuse.js';
 import { domainSearchIndex } from '../domainSearch.ts';
 import type { DomainSearchEntry } from '../domainSearch.ts';
+import { useBodyScrollLock } from '../hooks/useBodyScrollLock.ts';
 
 const MAX_RESULTS = 20;
 
@@ -11,6 +12,7 @@ export default function DomainSearch() {
   const [query, setQuery] = useState('');
   const inputRef = useRef<HTMLInputElement>(null);
   const navigate = useNavigate();
+  useBodyScrollLock(open);
 
   const fuse = useMemo(
     () =>

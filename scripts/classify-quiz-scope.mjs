@@ -101,7 +101,7 @@ Juzgá por el tema real que la pregunta evalúa, no por qué nombres de servicio
 
 const VerdictSchema = z.object({
   inScope: z.boolean(),
-  domain: z.number().nullable(),
+  domain: z.number().int().min(1).max(5).nullable(),
   confidence: z.enum(['high', 'medium', 'low']),
   reason: z.string(),
 });
@@ -336,7 +336,15 @@ async function cmdTagDomains() {
   }
   const client = new Anthropic();
   const sets = readSets();
-  const requests = sets.flatMap((set) => set.questions.map((q) => ({ custom_id: q.id, params: buildParams(q) })));
+  // Only questions still missing a domain -- re-running this after a previous
+  // pass shouldn't re-classify (and re-bill) everything that already has one.
+  const requests = sets.flatMap((set) =>
+    set.questions.filter((q) => q.domain == null).map((q) => ({ custom_id: q.id, params: buildParams(q) })),
+  );
+  if (requests.length === 0) {
+    console.log('Todas las preguntas ya tienen un dominio asignado.');
+    return;
+  }
   console.log(`Enviando batch de clasificación de dominio con ${requests.length} preguntas...`);
   const batch = await client.messages.batches.create({ requests });
   fs.writeFileSync(tagDomainsBatchStateFile, JSON.stringify({ batchId: batch.id, createdAt: new Date().toISOString() }, null, 2));
@@ -403,6 +411,7 @@ async function cmdTagDomainsCollect() {
   console.log(`\nEtiquetadas: ${tagged}. Errores: ${errors.length}.`);
   console.log('Por dominio:', byDomain);
   if (errors.length) console.log('Con error (quedan sin domain):', errors);
+  fs.rmSync(tagDomainsBatchStateFile);
 }
 
 const cmd = process.argv[2];

@@ -28,7 +28,7 @@ function loadRate(): number {
 // needs prev/next which depend on card boundaries this hook doesn't know
 // about) -- no visibilitychange workaround needed, and playbackRate changes
 // apply live instead of requiring a restart.
-export function useAudioReadAloud() {
+export function useAudioReadAloud(onError?: () => void) {
   const audioElRef = useRef<HTMLAudioElement | null>(null);
   const [status, setStatus] = useState<AudioReadAloudStatus>('idle');
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
@@ -38,6 +38,11 @@ export function useAudioReadAloud() {
   const stopAtRef = useRef<number | null>(null);
   const pauseTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const generationRef = useRef(0);
+  const onErrorRef = useRef(onError);
+
+  useEffect(() => {
+    onErrorRef.current = onError;
+  }, [onError]);
 
   useEffect(() => {
     const el = new Audio();
@@ -90,6 +95,7 @@ export function useAudioReadAloud() {
       if (generation !== generationRef.current) return;
       setStatus('idle');
       setActiveIndex(null);
+      onErrorRef.current?.();
     };
     setActiveIndex(i);
     setStatus('playing');

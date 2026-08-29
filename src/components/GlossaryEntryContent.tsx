@@ -78,13 +78,13 @@ export default function GlossaryEntryContent({ id, highlightCardIndex }: Props) 
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   // Both engines are always mounted (Rules of Hooks -- can't call a hook
-  // conditionally), but only one is actually driven: pre-rendered audio
-  // files when your own generate-domain-audio.mjs output is present
-  // (public/domain-audio/, gitignored -- only exists on your own machine),
-  // the browser's built-in voice otherwise. audioAvailable is null only
-  // for the one-time check right after mount.
-  const audioAvailable = useAudioAvailable();
-  const audioEngine = useAudioReadAloud();
+  // conditionally), but only one is actually driven: the pre-rendered audio
+  // (GitHub Release, see audioBase.ts) by default, optimistically, falling
+  // back to the browser's built-in voice the first time a real playback
+  // attempt actually fails to load -- see useAudioAvailable.ts for why this
+  // is reactive rather than an upfront check.
+  const [audioAvailable, markAudioUnavailable] = useAudioAvailable();
+  const audioEngine = useAudioReadAloud(markAudioUnavailable);
   const speechEngine = useReadAloud();
   const engine = audioAvailable ? audioEngine : speechEngine;
   const { status, activeIndex, rate, setRate, playAll, playRange, pause, resume, stop } = engine;

@@ -12,24 +12,27 @@ export default function DomainSearch() {
   const [query, setQuery] = useState('');
   const inputRef = useRef<HTMLInputElement>(null);
   const overlayRef = useRef<HTMLDivElement>(null);
+  const dialogRef = useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
   useBodyScrollLock(open);
 
   // iOS Safari never shrinks window.innerHeight/vh/dvh for the on-screen
-  // keyboard -- only window.visualViewport does. Without this, the overlay
-  // (sized via inset:0, i.e. the full un-shrunk layout viewport) extends
-  // behind the keyboard, and the results list inside it "has room" to
-  // scroll past where anything is actually visible.
+  // keyboard -- only window.visualViewport does. The overlay/backdrop itself
+  // stays a plain full-screen fixed box (covering behind the keyboard is
+  // harmless, nothing is interactive there); only the dialog's own height is
+  // capped to what's actually visible, so its results list can't grow past
+  // that and leave the last few unreachable behind the keyboard.
   useEffect(() => {
     if (!open) return;
     const vv = window.visualViewport;
-    const el = overlayRef.current;
-    if (!vv || !el) return;
+    const overlayEl = overlayRef.current;
+    const dialogEl = dialogRef.current;
+    if (!vv || !overlayEl || !dialogEl) return;
     function update() {
-      if (!vv) return;
-      el!.style.top = `${vv.offsetTop}px`;
-      el!.style.height = `${vv.height}px`;
-      el!.style.bottom = 'auto';
+      if (!vv || !overlayEl || !dialogEl) return;
+      const paddingTop = parseFloat(getComputedStyle(overlayEl).paddingTop) || 0;
+      const visibleBottom = vv.offsetTop + vv.height;
+      dialogEl.style.maxHeight = `${Math.max(160, visibleBottom - paddingTop)}px`;
     }
     update();
     vv.addEventListener('resize', update);
@@ -37,9 +40,7 @@ export default function DomainSearch() {
     return () => {
       vv.removeEventListener('resize', update);
       vv.removeEventListener('scroll', update);
-      el.style.top = '';
-      el.style.height = '';
-      el.style.bottom = '';
+      dialogEl.style.maxHeight = '';
     };
   }, [open]);
 
@@ -81,7 +82,6 @@ export default function DomainSearch() {
 
   function close() {
     setOpen(false);
-    setQuery('');
   }
 
   function goToResult(entry: DomainSearchEntry) {
@@ -111,7 +111,7 @@ export default function DomainSearch() {
 
       {open && (
         <div className="search-overlay" ref={overlayRef} onClick={close}>
-          <div className="search-dialog" onClick={(e) => e.stopPropagation()}>
+          <div className="search-dialog" ref={dialogRef} onClick={(e) => e.stopPropagation()}>
             <div className="search-input-row">
               <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                 <circle cx="11" cy="11" r="7" />

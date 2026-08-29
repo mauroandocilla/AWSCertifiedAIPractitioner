@@ -662,10 +662,11 @@
     box-shadow: var(--shadow);
     width: 100%;
     max-width: 34rem;
-    /* Relative to the overlay's own (padded) box, not a vh/dvh unit -- iOS
-       Safari never shrinks either of those for the on-screen keyboard, only
-       window.visualViewport does. DomainSearch.tsx sizes the overlay itself
-       from that API while open, which this then naturally respects. */
+    /* Fallback for browsers without visualViewport: 100% of the overlay's
+       own (padded, full-screen) box. DomainSearch.tsx overrides this inline
+       with an exact px value from window.visualViewport while open, so the
+       dialog can't grow past what's actually visible above the on-screen
+       keyboard on iOS (vh/dvh never shrink for that there). */
     max-height: 100%;
     display: flex;
     flex-direction: column;

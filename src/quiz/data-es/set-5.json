@@ -259,7 +259,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Amazon EMR (Elastic MapReduce) está diseñado para tareas de procesamiento de datos a gran escala, incluyendo análisis por lotes y preparación de datos para machine learning mediante frameworks de computación distribuida como Apache Hadoop y Spark.</p>"
+      "explanationHtml": "<p>Amazon EMR (Elastic MapReduce) está diseñado para tareas de procesamiento de datos a gran escala, incluyendo análisis por lotes y preparación de datos para machine learning mediante frameworks de computación distribuida como Apache Hadoop y Spark.</p>",
+      "domain": 1
     },
     {
       "id": "5-19",

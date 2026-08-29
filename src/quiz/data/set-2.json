@@ -394,7 +394,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>AWS addresses privacy concerns by implementing data encryption and access controls.</p>"
+      "explanationHtml": "<p>AWS addresses privacy concerns by implementing data encryption and access controls.</p>",
+      "domain": 5
     },
     {
       "id": "2-22",
@@ -1017,7 +1018,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Amazon Translate is used for translating text between different languages.</p>"
+      "explanationHtml": "<p>Amazon Translate is used for translating text between different languages.</p>",
+      "domain": 1
     },
     {
       "id": "2-50",

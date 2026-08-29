@@ -26,16 +26,28 @@ export const quizSetsMeta: QuizSetMeta[] = [
     "questionCount": 36
   },
   {
-    "setNumber": 9,
+    "setNumber": 6,
     "questionCount": 54
   },
   {
-    "setNumber": 10,
+    "setNumber": 7,
     "questionCount": 51
   },
   {
-    "setNumber": 11,
+    "setNumber": 8,
     "questionCount": 55
+  },
+  {
+    "setNumber": 9,
+    "questionCount": 56
+  },
+  {
+    "setNumber": 10,
+    "questionCount": 53
+  },
+  {
+    "setNumber": 11,
+    "questionCount": 57
   },
   {
     "setNumber": 12,
@@ -43,31 +55,31 @@ export const quizSetsMeta: QuizSetMeta[] = [
   },
   {
     "setNumber": 13,
-    "questionCount": 53
+    "questionCount": 57
   },
   {
     "setNumber": 14,
-    "questionCount": 57
-  },
-  {
-    "setNumber": 15,
-    "questionCount": 56
-  },
-  {
-    "setNumber": 16,
-    "questionCount": 57
-  },
-  {
-    "setNumber": 17,
     "questionCount": 29
   },
   {
-    "setNumber": 18,
+    "setNumber": 15,
     "questionCount": 39
   },
   {
-    "setNumber": 19,
+    "setNumber": 16,
     "questionCount": 38
+  },
+  {
+    "setNumber": 17,
+    "questionCount": 40
+  },
+  {
+    "setNumber": 18,
+    "questionCount": 34
+  },
+  {
+    "setNumber": 19,
+    "questionCount": 34
   },
   {
     "setNumber": 20,
@@ -75,18 +87,6 @@ export const quizSetsMeta: QuizSetMeta[] = [
   },
   {
     "setNumber": 21,
-    "questionCount": 34
-  },
-  {
-    "setNumber": 22,
-    "questionCount": 34
-  },
-  {
-    "setNumber": 23,
-    "questionCount": 40
-  },
-  {
-    "setNumber": 24,
     "questionCount": 16
   }
 ];

@@ -103,7 +103,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>SageMaker Data Wrangler simplifies data preparation and feature engineering, crucial steps in developing generative AI models.</p>"
+      "explanationHtml": "<p>SageMaker Data Wrangler simplifies data preparation and feature engineering, crucial steps in developing generative AI models.</p>",
+      "domain": 1
     },
     {
       "id": "1-5",
@@ -439,7 +440,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p><b>Gradient Boosting</b></p>\n\t\t\t\t\t\t<p>Gradient Boosting algorithms (such as XGBoost, which is widely used on AWS, e.g., in SageMaker’s built-in XGBoost container) are particularly well-suited for large datasets with many features (high-dimensional data). They excel because they are powerful ensemble methods that sequentially correct the errors of previous models, leading to very high predictive accuracy. They effectively handle complex, non-linear relationships in the data and include built-in regularization to prevent overfitting, which is a common risk with many features. In the context of AWS AI services, Gradient Boosting is a go-to algorithm for structured/tabular data problems involving large-scale, feature-rich datasets. </p>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p><b>Naive Bayes</b></p>\n\t\t\t\t\t\t<p>Naive Bayes is generally <b>not</b>&nbsp;the best choice for datasets with “many features.” Its core assumption is that all features are independent of each other, which is rarely true in complex, high-dimensional datasets. This “naive” assumption often breaks down when there are many correlated features, leading to suboptimal performance and poor accuracy compared to more sophisticated algorithms like Gradient Boosting. </p>\n\t\t\t\t\t\t<p><b>Random Forest</b></p>\n\t\t\t\t\t\t<p>While Random Forest is a robust ensemble algorithm that can handle large datasets and is less prone to overfitting than individual decision trees, it is often outperformed by <b>Gradient Boosting</b>&nbsp;in terms of pure predictive accuracy, especially on structured data with many features. Random Forest builds trees in parallel and can be more computationally efficient for training, but Gradient Boosting’s sequential error-correction approach typically achieves higher accuracy, making it the “best suited” choice among the options for maximizing performance on such data. </p>\n\t\t\t\t\t\t<p><b>K-means</b></p>\n\t\t\t\t\t\t<p>K-means is an <b>unsupervised learning</b>&nbsp;algorithm used for clustering, not for predictive modeling on labeled datasets. The question about a “large dataset with many features” implies a supervised learning context (like classification or regression), for which K-means is not applicable. Therefore, it is an incorrect choice for this scenario.</p>"
+      "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p><b>Gradient Boosting</b></p>\n\t\t\t\t\t\t<p>Gradient Boosting algorithms (such as XGBoost, which is widely used on AWS, e.g., in SageMaker’s built-in XGBoost container) are particularly well-suited for large datasets with many features (high-dimensional data). They excel because they are powerful ensemble methods that sequentially correct the errors of previous models, leading to very high predictive accuracy. They effectively handle complex, non-linear relationships in the data and include built-in regularization to prevent overfitting, which is a common risk with many features. In the context of AWS AI services, Gradient Boosting is a go-to algorithm for structured/tabular data problems involving large-scale, feature-rich datasets. </p>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p><b>Naive Bayes</b></p>\n\t\t\t\t\t\t<p>Naive Bayes is generally <b>not</b>&nbsp;the best choice for datasets with “many features.” Its core assumption is that all features are independent of each other, which is rarely true in complex, high-dimensional datasets. This “naive” assumption often breaks down when there are many correlated features, leading to suboptimal performance and poor accuracy compared to more sophisticated algorithms like Gradient Boosting. </p>\n\t\t\t\t\t\t<p><b>Random Forest</b></p>\n\t\t\t\t\t\t<p>While Random Forest is a robust ensemble algorithm that can handle large datasets and is less prone to overfitting than individual decision trees, it is often outperformed by <b>Gradient Boosting</b>&nbsp;in terms of pure predictive accuracy, especially on structured data with many features. Random Forest builds trees in parallel and can be more computationally efficient for training, but Gradient Boosting’s sequential error-correction approach typically achieves higher accuracy, making it the “best suited” choice among the options for maximizing performance on such data. </p>\n\t\t\t\t\t\t<p><b>K-means</b></p>\n\t\t\t\t\t\t<p>K-means is an <b>unsupervised learning</b>&nbsp;algorithm used for clustering, not for predictive modeling on labeled datasets. The question about a “large dataset with many features” implies a supervised learning context (like classification or regression), for which K-means is not applicable. Therefore, it is an incorrect choice for this scenario.</p>",
+      "domain": 1
     },
     {
       "id": "1-22",
@@ -697,7 +699,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>SageMaker Studio Lab provides a free environment for machine learning experimentation.</p>"
+      "explanationHtml": "<p>SageMaker Studio Lab provides a free environment for machine learning experimentation.</p>",
+      "domain": 1
     },
     {
       "id": "1-33",

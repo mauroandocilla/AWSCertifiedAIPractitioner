@@ -6,9 +6,9 @@ import { loadQuizV2Questions } from '../quiz-v2/loadQuestions.ts';
 import { resolveQuizV2Question } from '../quiz-v2/resolveLang.ts';
 import { useQuizLang } from '../quiz/useQuizLang.ts';
 import { domainByNumber } from '../domainData.ts';
-import CheckIcon from './CheckIcon.tsx';
-import CrossIcon from './CrossIcon.tsx';
 import ResetIcon from './ResetIcon.tsx';
+import StoriesNav from './StoriesNav.tsx';
+import type { StoriesNavState } from './StoriesNav.tsx';
 import ConfirmDialog from './ConfirmDialog.tsx';
 import QuizLangToggle from './QuizLangToggle.tsx';
 import { withBasePath } from '../quiz-v2/withBasePath.ts';
@@ -210,32 +210,16 @@ export default function QuizV2Page() {
               </button>
             </div>
           </div>
-
-          <div className="quiz-progress-bar">
-            <div className="quiz-progress-fill" style={{ width: `${(score.answered / total) * 100}%` }} />
-          </div>
         </div>
 
-        <div className="quiz-nav-grid">
-          {questions.map((q, i) => {
-            const isCurrent = i + 1 === currentNumber;
-            const qRevealed = revealed[q.id];
-            const qCorrect = qRevealed && isQuestionCorrect(answers[q.id] ?? [], q);
-            let cls = 'quiz-nav-btn';
-            if (isCurrent) cls += ' current';
-            else if (qRevealed) cls += qCorrect ? ' correct' : ' incorrect';
-            return (
-              <button key={q.id} type="button" className={cls} onClick={() => goTo(i + 1)}>
-                <span className="quiz-nav-number">{i + 1}</span>
-                {qRevealed && (
-                  <span className={qCorrect ? 'quiz-nav-badge correct' : 'quiz-nav-badge incorrect'}>
-                    {qCorrect ? <CheckIcon /> : <CrossIcon />}
-                  </span>
-                )}
-              </button>
-            );
+        <StoriesNav
+          states={questions.map((q, i): StoriesNavState => {
+            if (i + 1 === currentNumber) return 'current';
+            if (!revealed[q.id]) return 'unanswered';
+            return isQuestionCorrect(answers[q.id] ?? [], q) ? 'correct' : 'incorrect';
           })}
-        </div>
+          onSelect={(i) => goTo(i + 1)}
+        />
 
         <div className="quiz-question">
           {question.text.split('\n\n').map((para, i) => (

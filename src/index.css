@@ -969,6 +969,26 @@
     flex: none;
   }
 
+  .stories-nav {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    height: 22px;
+    padding: 9px 0;
+    cursor: pointer;
+    touch-action: pan-y;
+  }
+  .stories-nav-seg {
+    flex: 1;
+    min-width: 1.5px;
+    height: 4px;
+    border-radius: 999px;
+    background: var(--border);
+  }
+  .stories-nav-seg.current { background: var(--accent); height: 6px; }
+  .stories-nav-seg.correct { background: var(--d1); }
+  .stories-nav-seg.incorrect { background: var(--d3); }
+
   .quiz-nav-grid {
     display: flex;
     flex-wrap: wrap;

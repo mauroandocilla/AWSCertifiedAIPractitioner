@@ -85,8 +85,11 @@ export default function DomainSearch() {
   }
 
   function goToResult(entry: DomainSearchEntry) {
-    const cardParam = entry.cardIndex != null ? `&card=${entry.cardIndex}` : '';
-    navigate(`/dominio/${entry.domainNumber}?b=${entry.glossId}${cardParam}`);
+    // `card` is always present here (-1 for a bullet-level/"resumen" match) --
+    // its presence is exactly what tells DomainDetail this navigation came
+    // from search and should scroll to + flash something, as opposed to a
+    // plain ?b= from a normal sidebar click or a shared link. See DomainDetail.tsx.
+    navigate(`/dominio/${entry.domainNumber}?b=${entry.glossId}&card=${entry.cardIndex ?? -1}`);
     close();
   }
 

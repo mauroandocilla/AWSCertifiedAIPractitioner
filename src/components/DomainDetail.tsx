@@ -33,8 +33,14 @@ export default function DomainDetail({ number }: { number: number }) {
   }, [mobileDetailActive, isMobile]);
 
   const explicitBulletParam = searchParams.get('b');
+  // `card` is only ever set by the search dialog (see DomainSearch.tsx's
+  // goToResult -- always present there, -1 standing in for a bullet-level
+  // "resumen" match). A plain sidebar click or a shared /dominio/N?b=X link
+  // never sets it. That makes its mere presence the actual signal for "this
+  // navigation came from search, highlight something" -- not just "b is set",
+  // which is also true for perfectly ordinary browsing.
   const explicitCardParam = searchParams.get('card');
-  const explicitCardIndex = explicitCardParam !== null ? Number(explicitCardParam) : null;
+  const explicitCardIndex = explicitCardParam !== null && explicitCardParam !== '-1' ? Number(explicitCardParam) : null;
   // Which (bullet, card) GlossaryEntryContent should scroll to and flash --
   // only set for navigation that arrived from outside (see the effect
   // below), and only actually used while it still matches what's on screen
@@ -45,11 +51,11 @@ export default function DomainDetail({ number }: { number: number }) {
   // A bullet target arriving from outside this component (the search dialog,
   // a shared deep link, browser back/forward into a new domain) needs to
   // actually land on it -- on mobile that means switching from the sidebar
-  // to the detail pane, and on both layouts scrolling to and highlighting the
-  // exact card that matched (GlossaryEntryContent does that once it gets
-  // `highlight` below). selectBullet already handles its own pane switch for
+  // to the detail pane. selectBullet already handles its own pane switch for
   // in-component clicks, so it marks the nav as internal beforehand and this
-  // effect skips those -- a plain sidebar click shouldn't flash anything.
+  // effect skips those. Highlighting is gated further, on `card` specifically
+  // (see above) -- a shared plain ?b= link should still open the right pane,
+  // just without flashing anything since nothing told it to.
   useEffect(() => {
     if (isInternalNav.current) {
       isInternalNav.current = false;
@@ -57,7 +63,18 @@ export default function DomainDetail({ number }: { number: number }) {
     }
     if (!explicitBulletParam) return;
     if (isMobile) setMobileDetailActive(true);
+    if (explicitCardParam === null) return;
     setHighlight({ glossId: explicitBulletParam, cardIndex: explicitCardIndex });
+    // Consume the highlight request: strip `card` so reloading this same URL
+    // later just shows the bullet normally, instead of re-flashing it forever.
+    setSearchParams(
+      (prev) => {
+        const next = new URLSearchParams(prev);
+        next.delete('card');
+        return next;
+      },
+      { replace: true },
+    );
   }, [number, explicitBulletParam, explicitCardParam, isMobile]);
 
   if (!domain) return <p>Dominio no encontrado.</p>;

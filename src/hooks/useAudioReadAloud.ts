@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { RATE_OPTIONS } from './useReadAloud.ts';
+import { AUDIO_BASE } from '../audioBase.ts';
 
 export type AudioReadAloudStatus = 'idle' | 'playing' | 'paused';
 
@@ -17,7 +18,6 @@ function loadRate(): number {
   return RATE_OPTIONS.includes(stored) ? stored : 1;
 }
 
-const AUDIO_BASE = `${import.meta.env.BASE_URL}domain-audio/`;
 
 // Plays pre-rendered per-segment audio files (scripts/generate-domain-audio.mjs)
 // through a real <audio> element -- same play/pause/rate API shape as

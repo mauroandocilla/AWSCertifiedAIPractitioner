@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
+import { AUDIO_BASE } from '../audioBase.ts';
 
-// public/domain-audio/ (see scripts/generate-domain-audio.mjs) is gitignored
-// -- present only on your own machine after you've generated it yourself,
-// never in the deployed site. Checked once per page load (module-level
-// cache, not per-component) via a HEAD request for one known file; every
+// Checked once per page load (module-level cache, not per-component) via a
+// HEAD request for one known file on the GitHub Release; every
 // GlossaryEntryContent instance shares the same result instead of each
-// re-checking on its own.
-const PROBE_URL = `${import.meta.env.BASE_URL}domain-audio/gloss-d1-t1-b1--bullet.mp3`;
+// re-checking on its own. Fails closed (falls back to the browser voice)
+// until the release has actually been published -- see audioBase.ts.
+const PROBE_URL = `${AUDIO_BASE}gloss-d1-t1-b1--bullet.mp3`;
 
 let cached: boolean | null = null;
 let inflight: Promise<boolean> | null = null;

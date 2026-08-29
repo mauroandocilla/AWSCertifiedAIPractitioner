@@ -976,6 +976,17 @@
     padding-bottom: 1.1rem;
     border-bottom: 1px dashed var(--border);
   }
+  @media (max-width: 720px) {
+    /* Same boxes as desktop, just one row instead of wrapping into many --
+       a 209-question grid wrapped is mostly scrolling past numbers before
+       reaching the question itself. */
+    .quiz-nav-grid {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .quiz-nav-btn { flex: none; }
+  }
   .quiz-nav-btn {
     position: relative;
     z-index: 0;

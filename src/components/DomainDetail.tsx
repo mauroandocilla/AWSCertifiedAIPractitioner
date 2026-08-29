@@ -33,13 +33,23 @@ export default function DomainDetail({ number }: { number: number }) {
   }, [mobileDetailActive, isMobile]);
 
   const explicitBulletParam = searchParams.get('b');
+  const explicitCardParam = searchParams.get('card');
+  const explicitCardIndex = explicitCardParam !== null ? Number(explicitCardParam) : null;
+  // Which (bullet, card) GlossaryEntryContent should scroll to and flash --
+  // only set for navigation that arrived from outside (see the effect
+  // below), and only actually used while it still matches what's on screen
+  // (see the `activeId` check where it's passed down), so it can't go stale
+  // and re-trigger on an unrelated later click.
+  const [highlight, setHighlight] = useState<{ glossId: string; cardIndex: number | null } | null>(null);
 
   // A bullet target arriving from outside this component (the search dialog,
   // a shared deep link, browser back/forward into a new domain) needs to
   // actually land on it -- on mobile that means switching from the sidebar
-  // to the detail pane, and on both layouts scrolling into view. selectBullet
-  // already handles its own pane switch/scroll for in-component clicks, so it
-  // marks the nav as internal beforehand and this effect skips those.
+  // to the detail pane, and on both layouts scrolling to and highlighting the
+  // exact card that matched (GlossaryEntryContent does that once it gets
+  // `highlight` below). selectBullet already handles its own pane switch for
+  // in-component clicks, so it marks the nav as internal beforehand and this
+  // effect skips those -- a plain sidebar click shouldn't flash anything.
   useEffect(() => {
     if (isInternalNav.current) {
       isInternalNav.current = false;
@@ -47,8 +57,8 @@ export default function DomainDetail({ number }: { number: number }) {
     }
     if (!explicitBulletParam) return;
     if (isMobile) setMobileDetailActive(true);
-    window.scrollTo(0, 0);
-  }, [number, explicitBulletParam, isMobile]);
+    setHighlight({ glossId: explicitBulletParam, cardIndex: explicitCardIndex });
+  }, [number, explicitBulletParam, explicitCardParam, isMobile]);
 
   if (!domain) return <p>Dominio no encontrado.</p>;
 
@@ -116,7 +126,11 @@ export default function DomainDetail({ number }: { number: number }) {
         </div>
         <span className="weight-badge">{domain.weight}</span>
       </div>
-      {activeId ? <GlossaryEntryContent id={activeId} /> : <p>Este dominio no tiene bullets.</p>}
+      {activeId ? (
+        <GlossaryEntryContent id={activeId} highlightCardIndex={highlight?.glossId === activeId ? highlight.cardIndex : undefined} />
+      ) : (
+        <p>Este dominio no tiene bullets.</p>
+      )}
     </div>
   );
 

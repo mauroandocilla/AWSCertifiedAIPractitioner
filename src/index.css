@@ -720,6 +720,19 @@
   .search-result-body { display: flex; flex-direction: column; gap: 0.15rem; min-width: 0; }
   .search-result-sub { font-size: 0.72rem; color: var(--ink-faint); }
   .search-result-text { font-size: 0.9rem; color: var(--ink); line-height: 1.4; }
+  .search-result-kind {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  .search-result-kind.card { color: var(--accent); font-weight: 600; }
+
+  @keyframes search-highlight-pulse {
+    0%, 45% { box-shadow: 0 0 0 3px var(--accent); }
+    100% { box-shadow: 0 0 0 3px transparent; }
+  }
+  .search-highlight { animation: search-highlight-pulse 2.2s ease-out; border-radius: 10px; }
 
   @media (max-width: 720px) {
     .search-trigger { right: 58px; width: 30px; height: 30px; }

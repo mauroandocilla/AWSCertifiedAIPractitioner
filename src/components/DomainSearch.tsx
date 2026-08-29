@@ -16,10 +16,10 @@ export default function DomainSearch() {
     () =>
       new Fuse(domainSearchIndex, {
         keys: [
-          { name: 'text', weight: 3 },
+          { name: 'matchText', weight: 2 },
+          { name: 'cardTitle', weight: 1.5 },
           { name: 'subsectionTitle', weight: 1 },
           { name: 'domainName', weight: 0.5 },
-          { name: 'detail', weight: 1 },
         ],
         threshold: 0.35,
         ignoreLocation: true,
@@ -54,7 +54,8 @@ export default function DomainSearch() {
   }
 
   function goToResult(entry: DomainSearchEntry) {
-    navigate(`/dominio/${entry.domainNumber}?b=${entry.glossId}`);
+    const cardParam = entry.cardIndex != null ? `&card=${entry.cardIndex}` : '';
+    navigate(`/dominio/${entry.domainNumber}?b=${entry.glossId}${cardParam}`);
     close();
   }
 
@@ -99,11 +100,26 @@ export default function DomainSearch() {
                   <p className="search-empty">Sin resultados para “{query.trim()}”.</p>
                 ) : (
                   results.map((r, i) => (
-                    <button key={`${r.glossId}-${i}`} type="button" className="search-result" onClick={() => goToResult(r)}>
+                    <button key={`${r.glossId}-${r.cardIndex}-${i}`} type="button" className="search-result" onClick={() => goToResult(r)}>
                       <span className={`quiz-domain-badge d${r.domainNumber}`}>D{r.domainNumber}</span>
                       <span className="search-result-body">
-                        <span className="search-result-sub">{r.subsectionTitle}</span>
-                        <span className="search-result-text">{r.text}</span>
+                        {r.cardIndex != null ? (
+                          <>
+                            <span className="search-result-sub">
+                              {r.subsectionTitle} · {r.bulletText}
+                              <span className="search-result-kind card"> · detalle</span>
+                            </span>
+                            <span className="search-result-text">{r.cardTitle}</span>
+                          </>
+                        ) : (
+                          <>
+                            <span className="search-result-sub">
+                              {r.subsectionTitle}
+                              <span className="search-result-kind bullet"> · resumen</span>
+                            </span>
+                            <span className="search-result-text">{r.bulletText}</span>
+                          </>
+                        )}
                       </span>
                     </button>
                   ))

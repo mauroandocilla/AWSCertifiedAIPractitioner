@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef, useState } from 'react';
+import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { domainByNumber } from '../domainData.ts';
 import GlossaryEntryContent from './GlossaryEntryContent.tsx';
@@ -15,6 +15,7 @@ export default function DomainDetail({ number }: { number: number }) {
   const listScrollY = useRef(0);
   const wasDetailActive = useRef(false);
   const hasInteracted = useRef(false);
+  const isInternalNav = useRef(false);
 
   // Only one pane is ever mounted on mobile (see render below), so there's nothing for
   // it to fight over height/scroll with. This just points the window scroll at the
@@ -31,14 +32,33 @@ export default function DomainDetail({ number }: { number: number }) {
     wasDetailActive.current = mobileDetailActive;
   }, [mobileDetailActive, isMobile]);
 
+  const explicitBulletParam = searchParams.get('b');
+
+  // A bullet target arriving from outside this component (the search dialog,
+  // a shared deep link, browser back/forward into a new domain) needs to
+  // actually land on it -- on mobile that means switching from the sidebar
+  // to the detail pane, and on both layouts scrolling into view. selectBullet
+  // already handles its own pane switch/scroll for in-component clicks, so it
+  // marks the nav as internal beforehand and this effect skips those.
+  useEffect(() => {
+    if (isInternalNav.current) {
+      isInternalNav.current = false;
+      return;
+    }
+    if (!explicitBulletParam) return;
+    if (isMobile) setMobileDetailActive(true);
+    window.scrollTo(0, 0);
+  }, [number, explicitBulletParam, isMobile]);
+
   if (!domain) return <p>Dominio no encontrado.</p>;
 
   const firstBulletId = domain.subsections[0]?.bullets[0]?.glossId;
-  const activeId = searchParams.get('b') || firstBulletId;
+  const activeId = explicitBulletParam || firstBulletId;
   const activeSubsection = domain.subsections.find((ss) => ss.bullets.some((b) => b.glossId === activeId));
 
   function selectBullet(glossId: string) {
     if (isMobile && !mobileDetailActive) listScrollY.current = window.scrollY;
+    isInternalNav.current = true;
     setSearchParams((prev) => {
       const next = new URLSearchParams(prev);
       next.set('b', glossId);

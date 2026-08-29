@@ -16,9 +16,10 @@ export default function DomainSearch() {
     () =>
       new Fuse(domainSearchIndex, {
         keys: [
-          { name: 'text', weight: 2 },
+          { name: 'text', weight: 3 },
           { name: 'subsectionTitle', weight: 1 },
           { name: 'domainName', weight: 0.5 },
+          { name: 'detail', weight: 1 },
         ],
         threshold: 0.35,
         ignoreLocation: true,

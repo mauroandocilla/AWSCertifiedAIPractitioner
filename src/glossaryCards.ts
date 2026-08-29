@@ -65,7 +65,7 @@ export function stripHtml(html: string): string {
   return html.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
 }
 
-export type ReadAloudSegmentKind = 'bullet' | 'title' | 'paragraph' | 'short-label' | 'short-text';
+export type ReadAloudSegmentKind = 'bullet' | 'title' | 'paragraph' | 'short-text';
 
 export interface ReadAloudSegmentSpec {
   /** Stable, filename-safe id -- also what scripts/generate-domain-audio.mjs
@@ -95,10 +95,7 @@ export function buildReadAloudSegments(glossId: string, html: string): ReadAloud
     const shortText = shortHtml ? stripHtml(shortHtml) : null;
     if (title) items.push({ id: `${glossId}--c${i}-title`, text: title, cardIndex: i, kind: 'title' });
     if (paragraph) items.push({ id: `${glossId}--c${i}-body`, text: paragraph, cardIndex: i, kind: 'paragraph' });
-    if (shortText) {
-      items.push({ id: `${glossId}--c${i}-shortlabel`, text: 'En corto.', cardIndex: i, kind: 'short-label' });
-      items.push({ id: `${glossId}--c${i}-short`, text: shortText, cardIndex: i, kind: 'short-text' });
-    }
+    if (shortText) items.push({ id: `${glossId}--c${i}-short`, text: shortText, cardIndex: i, kind: 'short-text' });
   });
   return items;
 }

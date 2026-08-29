@@ -29,7 +29,6 @@ const PAUSE_BY_KIND: Record<ReadAloudSegmentKind, number> = {
   bullet: 550,
   title: 350,
   paragraph: 450,
-  'short-label': 300,
   'short-text': 700,
 };
 

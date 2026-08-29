@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { glossaryById } from '../glossaryData.ts';
-import { parseGlossaryCards, extractBulletTextHtml, splitCardBody, stripHtml } from '../glossaryCards.ts';
+import { parseGlossaryCards, buildReadAloudSegments, stripHtml } from '../glossaryCards.ts';
+import type { ReadAloudSegmentKind } from '../glossaryCards.ts';
 import { useReadAloud, RATE_OPTIONS } from '../hooks/useReadAloud.ts';
 import type { ReadAloudSegment } from '../hooks/useReadAloud.ts';
 import SpeakerIcon from './SpeakerIcon.tsx';
@@ -24,36 +25,50 @@ interface QueueEntry extends ReadAloudSegment {
   displayTitle: string;
 }
 
+const PAUSE_BY_KIND: Record<ReadAloudSegmentKind, number> = {
+  bullet: 550,
+  title: 350,
+  paragraph: 450,
+  'short-label': 300,
+  'short-text': 700,
+};
+
 export default function GlossaryEntryContent({ id, highlightCardIndex }: Props) {
   const entry = glossaryById[id];
   const cards = useMemo(() => (entry ? parseGlossaryCards(entry.html) : []), [entry]);
-  const bulletTextHtml = useMemo(() => (entry ? extractBulletTextHtml(entry.html) : ''), [entry]);
+  const bulletTextHtml = useMemo(() => {
+    const m = entry?.html.match(/<p class="gloss-bullet-text">([\s\S]*?)<\/p>/);
+    return m ? m[1] : '';
+  }, [entry]);
+  const cardTitles = useMemo(() => cards.map((c) => stripHtml(c.titleHtml)), [cards]);
 
-  // Paced read-aloud queue: title -> pause -> paragraph -> pause -> "En
-  // corto." -> pause -> short summary -> longer pause -> next card's title.
-  // cardRanges[i] is where card i's own segments live in `queue`, so a
-  // single card's speaker button can play through all of them and stop.
+  // buildReadAloudSegments is the single source of truth for what gets read
+  // and in what pieces -- shared with scripts/generate-domain-audio.mjs so a
+  // future pre-rendered-audio player lines up with this exact same queue.
+  // Pacing (how long to pause between pieces) is a browser-voice-only
+  // concern, added here rather than in that shared builder.
   const { queue, cardRanges } = useMemo(() => {
-    const items: QueueEntry[] = [];
-    const ranges: { start: number; end: number }[] = [];
-    const bulletText = stripHtml(bulletTextHtml);
-    if (bulletText) items.push({ text: bulletText, pauseAfterMs: 550, cardIndex: null, displayTitle: 'Resumen' });
-    cards.forEach((card, i) => {
-      const start = items.length;
-      const title = stripHtml(card.titleHtml);
-      const { paragraphHtml, shortHtml } = splitCardBody(card.bodyHtml);
-      const paragraph = stripHtml(paragraphHtml);
-      const shortText = shortHtml ? stripHtml(shortHtml) : null;
-      if (title) items.push({ text: title, pauseAfterMs: 350, cardIndex: i, displayTitle: title });
-      if (paragraph) items.push({ text: paragraph, pauseAfterMs: shortText ? 450 : 700, cardIndex: i, displayTitle: title });
-      if (shortText) {
-        items.push({ text: 'En corto.', pauseAfterMs: 300, cardIndex: i, displayTitle: title });
-        items.push({ text: shortText, pauseAfterMs: 700, cardIndex: i, displayTitle: title });
+    const segments = entry ? buildReadAloudSegments(id, entry.html) : [];
+    const items: QueueEntry[] = segments.map((s, i) => {
+      let pauseAfterMs = PAUSE_BY_KIND[s.kind];
+      if (s.kind === 'paragraph') {
+        const next = segments[i + 1];
+        // No "en corto" follows (next segment belongs to a different card,
+        // or there isn't one) -- this is the card's last part, so it gets
+        // the longer "next concept" pause instead of the mid-card one.
+        if (!next || next.cardIndex !== s.cardIndex) pauseAfterMs = 700;
       }
-      ranges.push({ start, end: Math.max(start, items.length - 1) });
+      return { text: s.text, pauseAfterMs, cardIndex: s.cardIndex, displayTitle: s.cardIndex === null ? 'Resumen' : (cardTitles[s.cardIndex] ?? '') };
+    });
+    const ranges: { start: number; end: number }[] = cardTitles.map(() => ({ start: -1, end: -1 }));
+    items.forEach((item, idx) => {
+      if (item.cardIndex === null) return;
+      const r = ranges[item.cardIndex];
+      if (r.start === -1) r.start = idx;
+      r.end = idx;
     });
     return { queue: items, cardRanges: ranges };
-  }, [bulletTextHtml, cards]);
+  }, [entry, id, cardTitles]);
 
   const [flash, setFlash] = useState<number | 'bullet' | null>(null);
   const bulletRef = useRef<HTMLParagraphElement>(null);

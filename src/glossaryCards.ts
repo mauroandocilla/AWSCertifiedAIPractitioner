@@ -64,3 +64,41 @@ export function extractBulletTextHtml(html: string): string {
 export function stripHtml(html: string): string {
   return html.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
 }
+
+export type ReadAloudSegmentKind = 'bullet' | 'title' | 'paragraph' | 'short-label' | 'short-text';
+
+export interface ReadAloudSegmentSpec {
+  /** Stable, filename-safe id -- also what scripts/generate-domain-audio.mjs
+   *  names each pre-rendered audio file after, so the browser-voice queue
+   *  built here and the audio files generated there always line up. */
+  id: string;
+  text: string;
+  /** null = the bullet's own official text; else which term-card index. */
+  cardIndex: number | null;
+  kind: ReadAloudSegmentKind;
+}
+
+// The one place that decides what gets read aloud and in what pieces --
+// shared between GlossaryEntryContent.tsx (live browser-voice playback) and
+// scripts/generate-domain-audio.mjs (pre-rendering real audio files via
+// Azure), so both are always in sync on segment boundaries and ids. Pure
+// content, no pacing here -- each consumer decides its own pause lengths
+// (or, for pre-rendered audio, silence baked into the files/gaps instead).
+export function buildReadAloudSegments(glossId: string, html: string): ReadAloudSegmentSpec[] {
+  const items: ReadAloudSegmentSpec[] = [];
+  const bulletText = stripHtml(extractBulletTextHtml(html));
+  if (bulletText) items.push({ id: `${glossId}--bullet`, text: bulletText, cardIndex: null, kind: 'bullet' });
+  parseGlossaryCards(html).forEach((card, i) => {
+    const title = stripHtml(card.titleHtml);
+    const { paragraphHtml, shortHtml } = splitCardBody(card.bodyHtml);
+    const paragraph = stripHtml(paragraphHtml);
+    const shortText = shortHtml ? stripHtml(shortHtml) : null;
+    if (title) items.push({ id: `${glossId}--c${i}-title`, text: title, cardIndex: i, kind: 'title' });
+    if (paragraph) items.push({ id: `${glossId}--c${i}-body`, text: paragraph, cardIndex: i, kind: 'paragraph' });
+    if (shortText) {
+      items.push({ id: `${glossId}--c${i}-shortlabel`, text: 'En corto.', cardIndex: i, kind: 'short-label' });
+      items.push({ id: `${glossId}--c${i}-short`, text: shortText, cardIndex: i, kind: 'short-text' });
+    }
+  });
+  return items;
+}

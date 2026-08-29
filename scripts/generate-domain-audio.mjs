@@ -15,9 +15,18 @@
 // Spanish voice used here (silently ignored, everything came out Spanish).
 // The reliable fix: split each segment's text into runs of consecutive
 // Spanish/English (splitIntoRuns()), synthesize each run with its own
-// single-language voice (a real es-MX call, a real en-US call), and
-// concatenate the resulting audio -- correct pronunciation guaranteed
+// single-language voice (a real es-MX call, a real en-US call), and splice
+// the audio back together with ffmpeg -- correct pronunciation guaranteed
 // regardless of any one voice's cross-lingual support.
+//
+// Naively concatenating separate Azure calls left a very noticeable gap at
+// every splice point -- each call comes back with its own lead-in/lead-out
+// silence, and those stack up when several short calls (a single acronym,
+// say) are glued together back to back. trimSilence() cuts each run's own
+// padding down first, then a short *controlled* gap (SILENCE_GAP_SECONDS)
+// is inserted between runs instead, for a consistent, natural-feeling pace
+// regardless of how many pieces a given segment got split into. Requires
+// ffmpeg on PATH (brew install ffmpeg).
 //
 // Output is private/personal use only (others/ is gitignored, same as the
 // TutorialsDojo quiz images) -- these are your own Azure-generated files,
@@ -28,14 +37,17 @@
 //      https://portal.azure.com -> create a resource -> "Speech service"
 //   2. export AZURE_SPEECH_KEY=...
 //      export AZURE_SPEECH_REGION=...   (e.g. eastus -- must match your resource's region)
+//   3. Make sure ffmpeg is installed: brew install ffmpeg
 //
 // Usage:
 //   node scripts/generate-domain-audio.mjs test        # synthesize 3 sample segments, save to others/domain-audio-test/, print the runs
 //   node scripts/generate-domain-audio.mjs generate     # synthesize every segment into others/domain-audio/ (skips files that already exist -- safe to re-run)
 //   node scripts/generate-domain-audio.mjs stats        # no API calls: prints segment/character counts
 
-import { writeFileSync, mkdirSync, existsSync } from 'node:fs';
+import { writeFileSync, readFileSync, mkdirSync, existsSync, rmSync, mkdtempSync } from 'node:fs';
 import { join } from 'node:path';
+import { tmpdir } from 'node:os';
+import { execFileSync } from 'node:child_process';
 import { domains } from '../src/domainData.ts';
 import { glossaryEntries } from '../src/glossaryData.ts';
 import { buildReadAloudSegments } from '../src/glossaryCards.ts';
@@ -43,12 +55,17 @@ import { buildReadAloudSegments } from '../src/glossaryCards.ts';
 const ROOT = join(import.meta.dirname, '..');
 const OUT_DIR = join(ROOT, 'others', 'domain-audio');
 const TEST_OUT_DIR = join(ROOT, 'others', 'domain-audio-test');
+const SILENCE_GAP_SECONDS = 0.12;
+const SAMPLE_RATE = 24000;
 
-// Mexican Spanish neural voice (not es-ES) -- Dalia is one of Azure's
-// original, most stable neural voices for this locale. Jorge (male) is the
-// other standard option if you'd rather try that: es-MX-JorgeNeural.
-const ES_VOICE = 'es-MX-DaliaNeural';
-const EN_VOICE = 'en-US-JennyNeural';
+// Same multilingual voice for both -- one consistent persona for the whole
+// clip instead of an audible switch between two different voices at every
+// splice point. Andrew's supported-languages list includes Spanish
+// (Mexico), which is what makes this work; a single-locale voice like
+// es-MX-DaliaNeural can't do this (confirmed: its xml:lang="en-US" runs
+// still came out sounding Spanish-accented when tried).
+const ES_VOICE = 'en-US-AndrewMultilingualNeural';
+const EN_VOICE = 'en-US-AndrewMultilingualNeural';
 const OUTPUT_FORMAT = 'audio-24khz-48kbitrate-mono-mp3';
 
 // ---- English/technical term detection -------------------------------------
@@ -291,30 +308,118 @@ async function synthesizeRaw(ssml, { key, region }, attempt = 0) {
   return Buffer.from(await res.arrayBuffer());
 }
 
+// "relieved" style + a touch slower -- if the voice doesn't support this
+// particular style, Azure falls back to its default style silently rather
+// than erroring the whole request, so this is safe to just try.
+const SPEAKING_STYLE = 'relieved';
+const RATE_ADJUSTMENT = '-9%';
+
 function ssmlFor(text, lang) {
   const voice = lang === 'en' ? EN_VOICE : ES_VOICE;
   const xmlLang = lang === 'en' ? 'en-US' : 'es-MX';
-  return `<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" xml:lang="${xmlLang}"><voice name="${voice}">${escapeXml(text)}</voice></speak>`;
+  return (
+    `<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" xmlns:mstts="https://www.w3.org/2001/mstts" xml:lang="${xmlLang}">` +
+    `<voice name="${voice}"><mstts:express-as style="${SPEAKING_STYLE}"><prosody rate="${RATE_ADJUSTMENT}">${escapeXml(text)}</prosody></mstts:express-as></voice>` +
+    `</speak>`
+  );
+}
+
+// ---- ffmpeg splicing ------------------------------------------------------
+
+let tmpDir = null;
+function getTmpDir() {
+  if (!tmpDir) tmpDir = mkdtempSync(join(tmpdir(), 'domain-audio-'));
+  return tmpDir;
+}
+
+function runFfmpeg(args) {
+  try {
+    execFileSync('ffmpeg', ['-y', '-loglevel', 'error', ...args], { stdio: ['ignore', 'ignore', 'pipe'] });
+  } catch (err) {
+    if (err.code === 'ENOENT') {
+      console.error('\nFalta ffmpeg (se usa para recortar el silencio de sobra entre los pedazos en inglés/español).');
+      console.error('Instalalo con: brew install ffmpeg\n');
+      process.exit(1);
+    }
+    throw new Error(`ffmpeg falló: ${err.stderr?.toString().slice(0, 400) || err.message}`);
+  }
+}
+
+let silencePath = null;
+// A short, reusable silence clip -- the deliberate pause inserted between
+// spliced runs, replacing whatever inconsistent lead-in/lead-out padding
+// Azure's own response for each run happened to have.
+function getSilencePath() {
+  if (silencePath) return silencePath;
+  silencePath = join(getTmpDir(), 'silence.mp3');
+  runFfmpeg(['-f', 'lavfi', '-i', `anullsrc=r=${SAMPLE_RATE}:cl=mono`, '-t', String(SILENCE_GAP_SECONDS), '-b:a', '48k', silencePath]);
+  return silencePath;
+}
+
+// Trims near-silent audio off both ends of `inputPath` (the reverse-twice
+// trick: trim the start, reverse, trim what's now the start (the original
+// end), reverse back) -- Azure's per-utterance lead-in/lead-out silence is
+// what made runs.length > 1 segments have such a large gap at each splice.
+function trimSilence(inputPath, outputPath) {
+  runFfmpeg([
+    '-i',
+    inputPath,
+    '-af',
+    'silenceremove=start_periods=1:start_threshold=-45dB:start_silence=0.05:detection=peak,' +
+      'areverse,' +
+      'silenceremove=start_periods=1:start_threshold=-45dB:start_silence=0.05:detection=peak,' +
+      'areverse',
+    '-ar',
+    String(SAMPLE_RATE),
+    '-ac',
+    '1',
+    '-b:a',
+    '48k',
+    outputPath,
+  ]);
+}
+
+function concatWithGaps(paths, outputPath) {
+  const silence = getSilencePath();
+  const withGaps = paths.flatMap((p, i) => (i === 0 ? [p] : [silence, p]));
+  const listPath = join(getTmpDir(), `concat-${Date.now()}.txt`);
+  writeFileSync(listPath, withGaps.map((p) => `file '${p.replace(/'/g, "'\\''")}'`).join('\n'));
+  runFfmpeg(['-f', 'concat', '-safe', '0', '-i', listPath, '-ar', String(SAMPLE_RATE), '-ac', '1', '-b:a', '48k', outputPath]);
+  rmSync(listPath);
 }
 
 // Synthesizes one segment's full text, splicing in a real English voice for
-// any English runs. A short pause (silence-padded via a tiny gap between
-// concatenated MP3 buffers isn't reliable, so this just concatenates the
-// audio directly) happens between runs naturally from each utterance's own
-// leading/trailing silence.
+// any English runs, ffmpeg-trimmed and re-joined with a short controlled
+// pause instead of each run's own (much larger, inconsistent) padding.
 async function synthesizeSegment(text, creds) {
   const runs = splitIntoRuns(text);
   if (runs.length === 0) return { runs, audio: Buffer.alloc(0) };
-  if (runs.length === 1) {
-    const audio = await synthesizeRaw(ssmlFor(runs[0].text, runs[0].lang), creds);
-    return { runs, audio };
+
+  const workDir = getTmpDir();
+  const rawPaths = [];
+  for (let i = 0; i < runs.length; i++) {
+    const run = runs[i];
+    const audio = await synthesizeRaw(ssmlFor(run.text, run.lang), creds);
+    const rawPath = join(workDir, `raw-${i}.mp3`);
+    writeFileSync(rawPath, audio);
+    rawPaths.push(rawPath);
+    if (runs.length > 1) await sleep(120); // be gentle with the free tier's rate limit
   }
-  const buffers = [];
-  for (const run of runs) {
-    buffers.push(await synthesizeRaw(ssmlFor(run.text, run.lang), creds));
-    await sleep(120); // be gentle with the free tier's rate limit
+
+  const trimmedPaths = rawPaths.map((p, i) => {
+    const trimmedPath = join(workDir, `trimmed-${i}.mp3`);
+    trimSilence(p, trimmedPath);
+    return trimmedPath;
+  });
+
+  const outPath = join(workDir, 'segment-out.mp3');
+  if (trimmedPaths.length === 1) {
+    execFileSync('cp', [trimmedPaths[0], outPath]);
+  } else {
+    concatWithGaps(trimmedPaths, outPath);
   }
-  return { runs, audio: Buffer.concat(buffers) };
+  const audio = readFileSync(outPath);
+  return { runs, audio };
 }
 
 // ---- commands -------------------------------------------------------------

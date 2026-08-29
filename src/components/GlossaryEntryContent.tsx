@@ -3,7 +3,8 @@ import { glossaryById } from '../glossaryData.ts';
 import { parseGlossaryCards, buildReadAloudSegments, stripHtml } from '../glossaryCards.ts';
 import type { ReadAloudSegmentKind } from '../glossaryCards.ts';
 import { useReadAloud, RATE_OPTIONS } from '../hooks/useReadAloud.ts';
-import type { ReadAloudSegment } from '../hooks/useReadAloud.ts';
+import { useAudioReadAloud } from '../hooks/useAudioReadAloud.ts';
+import { useAudioAvailable } from '../hooks/useAudioAvailable.ts';
 import SpeakerIcon from './SpeakerIcon.tsx';
 import PlayIcon from './PlayIcon.tsx';
 import PauseIcon from './PauseIcon.tsx';
@@ -17,7 +18,10 @@ interface Props {
   highlightCardIndex?: number | null;
 }
 
-interface QueueEntry extends ReadAloudSegment {
+interface QueueEntry {
+  id: string;
+  text: string;
+  pauseAfterMs: number;
   /** null = the bullet/"resumen" segment; else which term-card this belongs
    *  to, so playback can highlight/scroll the right one regardless of
    *  whether it's currently on the title, body, or "en corto" part. */
@@ -42,10 +46,10 @@ export default function GlossaryEntryContent({ id, highlightCardIndex }: Props) 
   const cardTitles = useMemo(() => cards.map((c) => stripHtml(c.titleHtml)), [cards]);
 
   // buildReadAloudSegments is the single source of truth for what gets read
-  // and in what pieces -- shared with scripts/generate-domain-audio.mjs so a
-  // future pre-rendered-audio player lines up with this exact same queue.
-  // Pacing (how long to pause between pieces) is a browser-voice-only
-  // concern, added here rather than in that shared builder.
+  // and in what pieces -- shared with scripts/generate-domain-audio.mjs, so
+  // its `id`s are exactly what that script named the pre-rendered audio
+  // files after. Pacing (how long to pause between pieces) is added here,
+  // used by whichever engine below ends up playing.
   const { queue, cardRanges } = useMemo(() => {
     const segments = entry ? buildReadAloudSegments(id, entry.html) : [];
     const items: QueueEntry[] = segments.map((s, i) => {
@@ -57,7 +61,7 @@ export default function GlossaryEntryContent({ id, highlightCardIndex }: Props) 
         // the longer "next concept" pause instead of the mid-card one.
         if (!next || next.cardIndex !== s.cardIndex) pauseAfterMs = 700;
       }
-      return { text: s.text, pauseAfterMs, cardIndex: s.cardIndex, displayTitle: s.cardIndex === null ? 'Resumen' : (cardTitles[s.cardIndex] ?? '') };
+      return { id: s.id, text: s.text, pauseAfterMs, cardIndex: s.cardIndex, displayTitle: s.cardIndex === null ? 'Resumen' : (cardTitles[s.cardIndex] ?? '') };
     });
     const ranges: { start: number; end: number }[] = cardTitles.map(() => ({ start: -1, end: -1 }));
     items.forEach((item, idx) => {
@@ -73,7 +77,17 @@ export default function GlossaryEntryContent({ id, highlightCardIndex }: Props) 
   const bulletRef = useRef<HTMLParagraphElement>(null);
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
 
-  const { status, activeIndex, rate, setRate, playAll, playRange, pause, resume, stop } = useReadAloud();
+  // Both engines are always mounted (Rules of Hooks -- can't call a hook
+  // conditionally), but only one is actually driven: pre-rendered audio
+  // files when your own generate-domain-audio.mjs output is present
+  // (public/domain-audio/, gitignored -- only exists on your own machine),
+  // the browser's built-in voice otherwise. audioAvailable is null only
+  // for the one-time check right after mount.
+  const audioAvailable = useAudioAvailable();
+  const audioEngine = useAudioReadAloud();
+  const speechEngine = useReadAloud();
+  const engine = audioAvailable ? audioEngine : speechEngine;
+  const { status, activeIndex, rate, setRate, playAll, playRange, pause, resume, stop } = engine;
   const activeCardIndex = activeIndex !== null ? (queue[activeIndex]?.cardIndex ?? null) : null;
   const activeTitle = activeIndex !== null ? (queue[activeIndex]?.displayTitle ?? null) : null;
 
@@ -118,6 +132,24 @@ export default function GlossaryEntryContent({ id, highlightCardIndex }: Props) 
 
   const hasPrev = activeCardIndex !== null;
   const hasNext = activeCardIndex === null ? cardRanges.length > 0 : activeCardIndex + 1 < cardRanges.length;
+
+  // Lock-screen/notification controls only make sense for the real-audio
+  // engine (a speechSynthesis session isn't a MediaSession-backed player at
+  // all) -- play/pause come from the hook itself; prev/next need cardRanges,
+  // which only this component has.
+  useEffect(() => {
+    if (!audioAvailable || !('mediaSession' in navigator)) return;
+    navigator.mediaSession.setActionHandler('play', resume);
+    navigator.mediaSession.setActionHandler('pause', pause);
+    navigator.mediaSession.setActionHandler('previoustrack', () => stepCard(-1));
+    navigator.mediaSession.setActionHandler('nexttrack', () => stepCard(1));
+    return () => {
+      navigator.mediaSession.setActionHandler('play', null);
+      navigator.mediaSession.setActionHandler('pause', null);
+      navigator.mediaSession.setActionHandler('previoustrack', null);
+      navigator.mediaSession.setActionHandler('nexttrack', null);
+    };
+  });
 
   return (
     <div className="gloss-group" id={entry.id}>

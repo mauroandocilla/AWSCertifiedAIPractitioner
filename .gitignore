@@ -8,6 +8,7 @@ dist-ssr
 .quiz-domain-tag-batch.json
 others/
 public/quiz-other-images/
+public/domain-audio/
 *.tsbuildinfo
 .DS_Store
 

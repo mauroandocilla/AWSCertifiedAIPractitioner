@@ -53,7 +53,12 @@ import { glossaryEntries } from '../src/glossaryData.ts';
 import { buildReadAloudSegments } from '../src/glossaryCards.ts';
 
 const ROOT = join(import.meta.dirname, '..');
-const OUT_DIR = join(ROOT, 'others', 'domain-audio');
+// public/, not others/ -- Vite only serves static assets straight through
+// from public/, and the frontend audio player looks for files at
+// `${BASE_URL}domain-audio/<id>.mp3`. Still private: public/domain-audio/ is
+// gitignored (same as public/quiz-other-images/), so these never get
+// committed or deployed, only used when you run your own local build.
+const OUT_DIR = join(ROOT, 'public', 'domain-audio');
 const TEST_OUT_DIR = join(ROOT, 'others', 'domain-audio-test');
 const SILENCE_GAP_SECONDS = 0.12;
 const SAMPLE_RATE = 24000;

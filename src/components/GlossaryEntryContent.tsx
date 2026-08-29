@@ -22,7 +22,7 @@ export default function GlossaryEntryContent({ id, highlightCardIndex }: Props) 
     if (!target) return;
     target.scrollIntoView({ behavior: 'smooth', block: 'center' });
     target.classList.add('search-highlight');
-    const timer = setTimeout(() => target.classList.remove('search-highlight'), 2200);
+    const timer = setTimeout(() => target.classList.remove('search-highlight'), 2400);
     return () => clearTimeout(timer);
   }, [id, highlightCardIndex]);
 

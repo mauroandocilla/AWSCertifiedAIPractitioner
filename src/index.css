@@ -731,11 +731,16 @@
   @keyframes search-highlight-pulse {
     /* inset, not an outward ring -- an outward box-shadow gets clipped by the
        mobile pane's overflow-x: clip (needed there for the slide animation,
-       see the comment on .domain-split-body.mobile/.quiz-split-body.mobile). */
-    0%, 45% { box-shadow: inset 0 0 0 3px var(--accent); }
-    100% { box-shadow: inset 0 0 0 3px transparent; }
+       see the comment on .domain-split-body.mobile/.quiz-split-body.mobile).
+       --d2 is the same color as --accent, --d2-bg its pre-made soft tint --
+       reused here instead of color-mix() for a warm wash + thin ring rather
+       than a hard flashing outline. */
+    0% { background-color: transparent; box-shadow: inset 0 0 0 0 transparent; }
+    15% { background-color: var(--d2-bg); box-shadow: inset 0 0 0 2px var(--accent); }
+    55% { background-color: var(--d2-bg); box-shadow: inset 0 0 0 2px var(--accent); }
+    100% { background-color: transparent; box-shadow: inset 0 0 0 0 transparent; }
   }
-  .search-highlight { animation: search-highlight-pulse 2.2s ease-out; border-radius: 10px; }
+  .search-highlight { animation: search-highlight-pulse 2.4s cubic-bezier(0.4, 0, 0.2, 1); border-radius: 10px; }
 
   @media (max-width: 720px) {
     .search-trigger { right: 58px; width: 30px; height: 30px; }

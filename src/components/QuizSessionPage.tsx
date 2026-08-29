@@ -3,11 +3,18 @@ import type { ReactNode } from 'react';
 import { Link, useParams, useSearchParams } from 'react-router-dom';
 import QuizLangToggle from './QuizLangToggle.tsx';
 import BackArrowIcon from './BackArrowIcon.tsx';
+import CheckIcon from './CheckIcon.tsx';
+import CrossIcon from './CrossIcon.tsx';
+import ResetIcon from './ResetIcon.tsx';
+import ConfirmDialog from './ConfirmDialog.tsx';
+import ProgressRing from './ProgressRing.tsx';
 import { loadQuizSet } from '../quiz/loadSet.ts';
 import { quizSetsMeta } from '../quiz/meta.ts';
 import { useQuizLang } from '../quiz/useQuizLang.ts';
 import { useIsMobile } from '../hooks/useIsMobile.ts';
 import { isCorrectAnswer } from '../quiz/isCorrectAnswer.ts';
+import { getSetAnsweredCount } from '../quiz/getSetProgress.ts';
+import { domainByNumber } from '../domainData.ts';
 import type { QuizSet } from '../quiz/types.ts';
 
 interface StoredProgress {
@@ -30,23 +37,43 @@ function loadProgress(setNumber: number): StoredProgress {
   }
 }
 
-function QuizSidebar({ activeSet, onSelect }: { activeSet: number; onSelect: () => void }) {
+function QuizSidebar({
+  activeSet,
+  activeSetAnswered,
+  onSelect,
+}: {
+  activeSet: number;
+  activeSetAnswered: number;
+  onSelect: () => void;
+}) {
   return (
     <aside className="quiz-sidebar">
       <h3 className="ds-subtitle">Sets de práctica</h3>
       <ul className="ds-bullets">
-        {quizSetsMeta.map((s) => (
-          <li key={s.setNumber}>
-            <Link
-              to={`/quiz/${s.setNumber}`}
-              className={s.setNumber === activeSet ? 'quiz-sidebar-item active' : 'quiz-sidebar-item'}
-              onClick={onSelect}
-            >
-              <span>Set {s.setNumber}</span>
-              <span className="quiz-sidebar-count">{s.questionCount}</span>
-            </Link>
-          </li>
-        ))}
+        {quizSetsMeta.map((s) => {
+          // The active set's count comes straight from in-memory state (updates
+          // instantly). Every other set falls back to localStorage -- reading it
+          // for the active set instead would lag by one answer: the write effect
+          // that persists `revealed` only runs after this render already committed.
+          const answered = s.setNumber === activeSet ? activeSetAnswered : getSetAnsweredCount(s.setNumber);
+          return (
+            <li key={s.setNumber}>
+              <Link
+                to={`/quiz/${s.setNumber}`}
+                className={s.setNumber === activeSet ? 'quiz-sidebar-item active' : 'quiz-sidebar-item'}
+                onClick={onSelect}
+              >
+                <span className="quiz-sidebar-item-row">
+                  <span>Set {s.setNumber}</span>
+                  <span className="quiz-sidebar-meta">
+                    {answered > 0 && <ProgressRing percent={(answered / s.questionCount) * 100} />}
+                    <span className="quiz-sidebar-count">{s.questionCount}</span>
+                  </span>
+                </span>
+              </Link>
+            </li>
+          );
+        })}
       </ul>
     </aside>
   );
@@ -101,20 +128,41 @@ export default function QuizSessionPage() {
 
   const [quizSet, setQuizSet] = useState<QuizSet | null>(null);
   const [loadError, setLoadError] = useState(false);
+  const [showResetConfirm, setShowResetConfirm] = useState(false);
   const [answers, setAnswers] = useState<Record<string, number[]>>({});
   const [revealed, setRevealed] = useState<Record<string, boolean>>({});
 
+  // Resetting this *during* render (React's documented pattern for "clear state
+  // when a prop changes") instead of in an effect means the previous set's
+  // answers/revealed are never even painted for the new setNumber -- an effect
+  // runs a frame too late and lets that stale state flash once first.
+  const [renderedSetNumber, setRenderedSetNumber] = useState(setNumber);
+  if (setNumber !== renderedSetNumber) {
+    setRenderedSetNumber(setNumber);
+    setAnswers({});
+    setRevealed({});
+  }
+
+  // Guards the write effect below from firing with stale/default state before
+  // the stored progress for this exact set has actually been applied -- without
+  // it, a render in between "quizSet loaded" and "answers/revealed caught up"
+  // (React StrictMode's double-invoke in dev reliably produces one) writes an
+  // empty {} over real saved progress and wipes it.
+  const progressLoadedRef = useRef(false);
+
   useEffect(() => {
     let cancelled = false;
+    progressLoadedRef.current = false;
     setQuizSet(null);
     setLoadError(false);
     loadQuizSet(setNumber, lang)
       .then((set) => {
         if (cancelled) return;
-        setQuizSet(set);
         const stored = loadProgress(setNumber);
+        setQuizSet(set);
         setAnswers(stored.answers);
         setRevealed(stored.revealed);
+        progressLoadedRef.current = true;
       })
       .catch(() => {
         if (!cancelled) setLoadError(true);
@@ -125,7 +173,7 @@ export default function QuizSessionPage() {
   }, [setNumber, lang]);
 
   useEffect(() => {
-    if (!quizSet) return;
+    if (!quizSet || !progressLoadedRef.current) return;
     localStorage.setItem(progressKey(setNumber), JSON.stringify({ answers, revealed }));
   }, [quizSet, setNumber, answers, revealed]);
 
@@ -175,14 +223,23 @@ export default function QuizSessionPage() {
   }
 
   function restart() {
+    setShowResetConfirm(true);
+  }
+
+  function confirmRestart() {
     localStorage.removeItem(progressKey(setNumber));
     setAnswers({});
     setRevealed({});
     goTo(1);
+    setShowResetConfirm(false);
   }
 
   function renderBody(panel: ReactNode) {
-    const sidebar = <QuizSidebar activeSet={setNumber} onSelect={selectSet} />;
+    // Right after clicking into a set, in-memory `revealed` briefly starts empty
+    // (before the stored progress for that set finishes loading) -- taking the max
+    // against localStorage's last-saved count avoids a flash-to-0 jump in the bar.
+    const activeSetAnswered = Math.max(Object.keys(revealed).length, getSetAnsweredCount(setNumber));
+    const sidebar = <QuizSidebar activeSet={setNumber} activeSetAnswered={activeSetAnswered} onSelect={selectSet} />;
     if (isMobile) {
       return (
         <div className="quiz-split-body mobile">
@@ -244,7 +301,8 @@ export default function QuizSessionPage() {
   const allRevealed = quizSet.questions.every((q) => revealed[q.id]);
 
   return (
-    <section className="quiz-split">
+    <>
+      <section className="quiz-split">
       {renderBody(
         <div className="quiz-split-panel">
           <div className="mobile-panel-header">
@@ -255,18 +313,23 @@ export default function QuizSessionPage() {
             </div>
 
             <div className="quiz-session-head">
-              <div>
-                <span className="eyebrow">SET {quizSet.setNumber}</span>
-                <h2 style={{ marginTop: '0.4rem', fontSize: '1.3rem' }}>Pregunta {currentNumber} de {total}</h2>
+              <div className="quiz-session-head-row">
+                <div>
+                  <span className="eyebrow">SET {quizSet.setNumber}</span>
+                  <h2 style={{ marginTop: '0.4rem', fontSize: '1.3rem' }}>Pregunta {currentNumber} de {total}</h2>
+                </div>
+                <div className="quiz-session-head-right">
+                  <QuizLangToggle lang={lang} onChange={setLang} />
+                  <div className="quiz-score-badge">{score.correct}/{score.answered} correctas</div>
+                  <button type="button" className="quiz-reset-btn" title="Reiniciar set" onClick={restart}>
+                    <ResetIcon />
+                  </button>
+                </div>
               </div>
-              <div className="quiz-session-head-right">
-                <QuizLangToggle lang={lang} onChange={setLang} />
-                <div className="quiz-score-badge">{score.correct}/{score.answered} correctas</div>
-              </div>
-            </div>
 
-            <div className="quiz-progress-bar">
-              <div className="quiz-progress-fill" style={{ width: `${(score.answered / total) * 100}%` }} />
+              <div className="quiz-progress-bar">
+                <div className="quiz-progress-fill" style={{ width: `${(score.answered / total) * 100}%` }} />
+              </div>
             </div>
 
             <div className="quiz-nav-grid">
@@ -279,7 +342,12 @@ export default function QuizSessionPage() {
                 else if (qRevealed) cls += qCorrect ? ' correct' : ' incorrect';
                 return (
                   <button key={q.id} type="button" className={cls} onClick={() => goTo(i + 1)}>
-                    {i + 1}
+                    <span className="quiz-nav-number">{i + 1}</span>
+                    {qRevealed && (
+                      <span className={qCorrect ? 'quiz-nav-badge correct' : 'quiz-nav-badge incorrect'}>
+                        {qCorrect ? <CheckIcon /> : <CrossIcon />}
+                      </span>
+                    )}
                   </button>
                 );
               })}
@@ -335,7 +403,14 @@ export default function QuizSessionPage() {
 
             {isRevealed && (
               <div className={correct ? 'quiz-explanation correct' : 'quiz-explanation incorrect'}>
-                <p className="quiz-explanation-verdict">{correct ? '✓ Correcto' : '✗ Incorrecto'}</p>
+                <div className="quiz-explanation-head">
+                  <p className="quiz-explanation-verdict">{correct ? '✓ Correcto' : '✗ Incorrecto'}</p>
+                  {question.domain != null && domainByNumber[question.domain] && (
+                    <Link to={`/dominio/${question.domain}`} className={`quiz-domain-badge d${question.domain}`}>
+                      D{question.domain} · {domainByNumber[question.domain].name}
+                    </Link>
+                  )}
+                </div>
                 <div dangerouslySetInnerHTML={{ __html: question.explanationHtml }} />
               </div>
             )}
@@ -354,5 +429,13 @@ export default function QuizSessionPage() {
           </div>,
         )}
       </section>
+      <ConfirmDialog
+        open={showResetConfirm}
+        message="¿Reiniciar este set? Se borran tus respuestas."
+        confirmLabel="Reiniciar set"
+        onConfirm={confirmRestart}
+        onCancel={() => setShowResetConfirm(false)}
+      />
+    </>
   );
 }

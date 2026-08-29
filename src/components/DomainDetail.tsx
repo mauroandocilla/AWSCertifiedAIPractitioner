@@ -1,13 +1,18 @@
 import { useEffect, useLayoutEffect, useRef, useState } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { useLocation, useSearchParams } from 'react-router-dom';
 import { domainByNumber } from '../domainData.ts';
 import GlossaryEntryContent from './GlossaryEntryContent.tsx';
 import BackArrowIcon from './BackArrowIcon.tsx';
 import { useIsMobile } from '../hooks/useIsMobile.ts';
 
+interface HighlightState {
+  highlightCardIndex: number | null;
+}
+
 export default function DomainDetail({ number }: { number: number }) {
   const domain = domainByNumber[number];
   const [searchParams, setSearchParams] = useSearchParams();
+  const location = useLocation();
   const isMobile = useIsMobile();
   const [mobileDetailActive, setMobileDetailActive] = useState(false);
   const [animDirection, setAnimDirection] = useState<'forward' | 'back'>('forward');
@@ -15,7 +20,6 @@ export default function DomainDetail({ number }: { number: number }) {
   const listScrollY = useRef(0);
   const wasDetailActive = useRef(false);
   const hasInteracted = useRef(false);
-  const isInternalNav = useRef(false);
 
   // Only one pane is ever mounted on mobile (see render below), so there's nothing for
   // it to fight over height/scroll with. This just points the window scroll at the
@@ -33,49 +37,29 @@ export default function DomainDetail({ number }: { number: number }) {
   }, [mobileDetailActive, isMobile]);
 
   const explicitBulletParam = searchParams.get('b');
-  // `card` is only ever set by the search dialog (see DomainSearch.tsx's
-  // goToResult -- always present there, -1 standing in for a bullet-level
-  // "resumen" match). A plain sidebar click or a shared /dominio/N?b=X link
-  // never sets it. That makes its mere presence the actual signal for "this
-  // navigation came from search, highlight something" -- not just "b is set",
-  // which is also true for perfectly ordinary browsing.
-  const explicitCardParam = searchParams.get('card');
-  const explicitCardIndex = explicitCardParam !== null && explicitCardParam !== '-1' ? Number(explicitCardParam) : null;
-  // Which (bullet, card) GlossaryEntryContent should scroll to and flash --
-  // only set for navigation that arrived from outside (see the effect
-  // below), and only actually used while it still matches what's on screen
-  // (see the `activeId` check where it's passed down), so it can't go stale
-  // and re-trigger on an unrelated later click.
-  const [highlight, setHighlight] = useState<{ glossId: string; cardIndex: number | null } | null>(null);
 
-  // A bullet target arriving from outside this component (the search dialog,
-  // a shared deep link, browser back/forward into a new domain) needs to
-  // actually land on it -- on mobile that means switching from the sidebar
-  // to the detail pane. selectBullet already handles its own pane switch for
-  // in-component clicks, so it marks the nav as internal beforehand and this
-  // effect skips those. Highlighting is gated further, on `card` specifically
-  // (see above) -- a shared plain ?b= link should still open the right pane,
-  // just without flashing anything since nothing told it to.
+  // A bullet target arriving in the URL from outside this component (a
+  // shared deep link, browser back/forward into a new domain, or the search
+  // dialog) needs to actually land on it -- on mobile that means switching
+  // from the sidebar to the detail pane. selectBullet already does this
+  // itself for in-component clicks, so redoing it here on every b-change is
+  // harmless (same value) rather than something that needs guarding against.
   useEffect(() => {
-    if (isInternalNav.current) {
-      isInternalNav.current = false;
-      return;
-    }
-    if (!explicitBulletParam) return;
-    if (isMobile) setMobileDetailActive(true);
-    if (explicitCardParam === null) return;
-    setHighlight({ glossId: explicitBulletParam, cardIndex: explicitCardIndex });
-    // Consume the highlight request: strip `card` so reloading this same URL
-    // later just shows the bullet normally, instead of re-flashing it forever.
-    setSearchParams(
-      (prev) => {
-        const next = new URLSearchParams(prev);
-        next.delete('card');
-        return next;
-      },
-      { replace: true },
-    );
-  }, [number, explicitBulletParam, explicitCardParam, isMobile]);
+    if (explicitBulletParam && isMobile) setMobileDetailActive(true);
+  }, [explicitBulletParam, isMobile]);
+
+  // DomainSearch.tsx's goToResult passes { highlightCardIndex } as router
+  // navigation state -- never part of the URL, so unlike a query param it
+  // can't linger and re-fire on a later reload (a fresh page load has no
+  // navigation state at all) or leak into a shared link. Only actually used
+  // while it still matches what's on screen (the `activeId` check below), so
+  // it can't go stale and flash something after an unrelated later click.
+  const highlightState = location.state as HighlightState | null;
+  const [highlight, setHighlight] = useState<{ glossId: string; cardIndex: number | null } | null>(null);
+  useEffect(() => {
+    if (!highlightState || !explicitBulletParam) return;
+    setHighlight({ glossId: explicitBulletParam, cardIndex: highlightState.highlightCardIndex });
+  }, [highlightState, explicitBulletParam]);
 
   if (!domain) return <p>Dominio no encontrado.</p>;
 
@@ -85,7 +69,6 @@ export default function DomainDetail({ number }: { number: number }) {
 
   function selectBullet(glossId: string) {
     if (isMobile && !mobileDetailActive) listScrollY.current = window.scrollY;
-    isInternalNav.current = true;
     setSearchParams((prev) => {
       const next = new URLSearchParams(prev);
       next.set('b', glossId);

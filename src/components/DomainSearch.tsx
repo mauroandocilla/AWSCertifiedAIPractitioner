@@ -85,11 +85,12 @@ export default function DomainSearch() {
   }
 
   function goToResult(entry: DomainSearchEntry) {
-    // `card` is always present here (-1 for a bullet-level/"resumen" match) --
-    // its presence is exactly what tells DomainDetail this navigation came
-    // from search and should scroll to + flash something, as opposed to a
-    // plain ?b= from a normal sidebar click or a shared link. See DomainDetail.tsx.
-    navigate(`/dominio/${entry.domainNumber}?b=${entry.glossId}&card=${entry.cardIndex ?? -1}`);
+    // highlightCardIndex travels as router navigation state, not a URL param
+    // -- DomainDetail.tsx uses it to scroll to and flash the exact match.
+    // Keeping it out of the URL means a reload (which has no navigation
+    // state) never re-triggers it, and a shared /dominio/N?b=X link never
+    // carries an unwanted flash either.
+    navigate(`/dominio/${entry.domainNumber}?b=${entry.glossId}`, { state: { highlightCardIndex: entry.cardIndex } });
     close();
   }
 

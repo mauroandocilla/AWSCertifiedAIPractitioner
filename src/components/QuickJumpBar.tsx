@@ -17,6 +17,7 @@ const ITEMS = [
   { key: 'estudiar', label: 'Cómo estudiarlo', to: '/como-estudiarlo' },
   { key: 'formato', label: 'Formato del examen', to: '/formato-examen' },
   { key: 'quiz', label: 'Quiz', to: '/quiz' },
+  { key: 'quiz-v2', label: 'Quiz v2', to: '/quiz-v2' },
   { key: 'examen', label: 'Examen', to: '/examen' },
 ];
 

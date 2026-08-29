@@ -7,6 +7,7 @@ dist-ssr
 .quiz-scope-recheck-batch.json
 .quiz-domain-tag-batch.json
 others/
+public/quiz-other-images/
 *.tsbuildinfo
 .DS_Store
 

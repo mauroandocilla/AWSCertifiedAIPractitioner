@@ -11,8 +11,37 @@ export default function DomainSearch() {
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState('');
   const inputRef = useRef<HTMLInputElement>(null);
+  const overlayRef = useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
   useBodyScrollLock(open);
+
+  // iOS Safari never shrinks window.innerHeight/vh/dvh for the on-screen
+  // keyboard -- only window.visualViewport does. Without this, the overlay
+  // (sized via inset:0, i.e. the full un-shrunk layout viewport) extends
+  // behind the keyboard, and the results list inside it "has room" to
+  // scroll past where anything is actually visible.
+  useEffect(() => {
+    if (!open) return;
+    const vv = window.visualViewport;
+    const el = overlayRef.current;
+    if (!vv || !el) return;
+    function update() {
+      if (!vv) return;
+      el!.style.top = `${vv.offsetTop}px`;
+      el!.style.height = `${vv.height}px`;
+      el!.style.bottom = 'auto';
+    }
+    update();
+    vv.addEventListener('resize', update);
+    vv.addEventListener('scroll', update);
+    return () => {
+      vv.removeEventListener('resize', update);
+      vv.removeEventListener('scroll', update);
+      el.style.top = '';
+      el.style.height = '';
+      el.style.bottom = '';
+    };
+  }, [open]);
 
   const fuse = useMemo(
     () =>
@@ -77,7 +106,7 @@ export default function DomainSearch() {
       </button>
 
       {open && (
-        <div className="search-overlay" onClick={close}>
+        <div className="search-overlay" ref={overlayRef} onClick={close}>
           <div className="search-dialog" onClick={(e) => e.stopPropagation()}>
             <div className="search-input-row">
               <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">

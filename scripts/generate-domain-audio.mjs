@@ -10,9 +10,14 @@
 // what the frontend will look up later.
 //
 // English/technical terms (AWS service names, ML/AI vocabulary, acronyms)
-// get wrapped in SSML <lang xml:lang="en-US"> so Azure reads them in English
-// instead of a Spanish-accented reading of the English spelling -- see
-// wrapEnglishTerms() below for the term list.
+// need to actually be read in English -- Azure's SSML <lang> tag for
+// switching languages mid-utterance turned out not to work on the Mexican
+// Spanish voice used here (silently ignored, everything came out Spanish).
+// The reliable fix: split each segment's text into runs of consecutive
+// Spanish/English (splitIntoRuns()), synthesize each run with its own
+// single-language voice (a real es-MX call, a real en-US call), and
+// concatenate the resulting audio -- correct pronunciation guaranteed
+// regardless of any one voice's cross-lingual support.
 //
 // Output is private/personal use only (others/ is gitignored, same as the
 // TutorialsDojo quiz images) -- these are your own Azure-generated files,
@@ -25,11 +30,11 @@
 //      export AZURE_SPEECH_REGION=...   (e.g. eastus -- must match your resource's region)
 //
 // Usage:
-//   node scripts/generate-domain-audio.mjs test        # synthesize 3 sample segments, save to others/domain-audio-test/, print sizes+SSML
+//   node scripts/generate-domain-audio.mjs test        # synthesize 3 sample segments, save to others/domain-audio-test/, print the runs
 //   node scripts/generate-domain-audio.mjs generate     # synthesize every segment into others/domain-audio/ (skips files that already exist -- safe to re-run)
 //   node scripts/generate-domain-audio.mjs stats        # no API calls: prints segment/character counts
 
-import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
+import { writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { domains } from '../src/domainData.ts';
 import { glossaryEntries } from '../src/glossaryData.ts';
@@ -39,7 +44,11 @@ const ROOT = join(import.meta.dirname, '..');
 const OUT_DIR = join(ROOT, 'others', 'domain-audio');
 const TEST_OUT_DIR = join(ROOT, 'others', 'domain-audio-test');
 
-const VOICE = 'es-ES-ElviraNeural';
+// Mexican Spanish neural voice (not es-ES) -- Dalia is one of Azure's
+// original, most stable neural voices for this locale. Jorge (male) is the
+// other standard option if you'd rather try that: es-MX-JorgeNeural.
+const ES_VOICE = 'es-MX-DaliaNeural';
+const EN_VOICE = 'en-US-JennyNeural';
 const OUTPUT_FORMAT = 'audio-24khz-48kbitrate-mono-mp3';
 
 // ---- English/technical term detection -------------------------------------
@@ -51,7 +60,7 @@ const AWS_SERVICE_RE = /\b(Amazon|AWS|Bedrock|SageMaker|AgentCore)\s+[A-Z][A-Za-
 // Multi-word technical phrases, longest-first so e.g. "prompt engineering"
 // wins over a bare "prompt" also being in SINGLE_WORDS. Matched
 // case-insensitively (mid-sentence lowercase mentions are common) but the
-// original casing found in the text is what gets wrapped, not this list's.
+// original casing found in the text is what gets read, not this list's.
 const PHRASES = [
   'Retrieval Augmented Generation',
   'Model Context Protocol',
@@ -170,21 +179,16 @@ const SINGLE_WORDS = [
 const ACRONYM_EXCLUDE = new Set(['IA']);
 const ACRONYM_RE = /\b[A-Z]{2,6}s?\b/g;
 
-function escapeXml(s) {
-  return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
-}
-
-// Finds every span of `text` that should be read in English, merges
-// overlaps, and returns SSML-ready markup: plain segments XML-escaped,
-// English spans wrapped in <lang xml:lang="en-US">.
-function wrapEnglishTerms(text) {
+// Finds every span of `text` that should be read in English, merged so
+// overlapping/adjacent matches (e.g. an acronym inside an AWS service name)
+// collapse into one.
+function findEnglishSpans(text) {
   const spans = [];
   const addMatches = (re) => {
     re.lastIndex = 0;
     let m;
     while ((m = re.exec(text))) spans.push([m.index, m.index + m[0].length]);
   };
-
   addMatches(new RegExp(AWS_SERVICE_RE.source, 'g'));
   for (const phrase of PHRASES) addMatches(new RegExp(`\\b${phrase.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'gi'));
   for (const word of SINGLE_WORDS) addMatches(new RegExp(`\\b${word}\\b`, 'gi'));
@@ -195,7 +199,6 @@ function wrapEnglishTerms(text) {
       if (!ACRONYM_EXCLUDE.has(m[0])) spans.push([m.index, m.index + m[0].length]);
     }
   }
-
   spans.sort((a, b) => a[0] - b[0] || b[1] - a[1]);
   const merged = [];
   for (const [start, end] of spans) {
@@ -203,20 +206,29 @@ function wrapEnglishTerms(text) {
     if (last && start <= last[1]) last[1] = Math.max(last[1], end);
     else merged.push([start, end]);
   }
-
-  let out = '';
-  let cursor = 0;
-  for (const [start, end] of merged) {
-    out += escapeXml(text.slice(cursor, start));
-    out += `<lang xml:lang="en-US">${escapeXml(text.slice(start, end))}</lang>`;
-    cursor = end;
-  }
-  out += escapeXml(text.slice(cursor));
-  return out;
+  return merged;
 }
 
-function buildSsml(text) {
-  return `<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" xml:lang="es-ES"><voice name="${VOICE}">${wrapEnglishTerms(text)}</voice></speak>`;
+// Splits `text` into ordered { lang, text } runs covering the whole string --
+// English spans become 'en' runs, everything between/around them becomes
+// 'es' runs. Empty/whitespace-only runs are dropped.
+function splitIntoRuns(text) {
+  const spans = findEnglishSpans(text);
+  const runs = [];
+  let cursor = 0;
+  for (const [start, end] of spans) {
+    const before = text.slice(cursor, start);
+    if (before.trim()) runs.push({ lang: 'es', text: before });
+    runs.push({ lang: 'en', text: text.slice(start, end) });
+    cursor = end;
+  }
+  const rest = text.slice(cursor);
+  if (rest.trim()) runs.push({ lang: 'es', text: rest });
+  return runs;
+}
+
+function escapeXml(s) {
+  return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 }
 
 // ---- segment collection -----------------------------------------------
@@ -253,8 +265,11 @@ function requireAzureCreds() {
   return { key, region };
 }
 
-async function synthesize(text, { key, region }) {
-  const ssml = buildSsml(text);
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+async function synthesizeRaw(ssml, { key, region }, attempt = 0) {
   const res = await fetch(`https://${region}.tts.speech.microsoft.com/cognitiveservices/v1`, {
     method: 'POST',
     headers: {
@@ -265,11 +280,41 @@ async function synthesize(text, { key, region }) {
     },
     body: ssml,
   });
+  if (res.status === 429 && attempt < 4) {
+    await sleep(1000 * 2 ** attempt);
+    return synthesizeRaw(ssml, { key, region }, attempt + 1);
+  }
   if (!res.ok) {
     const body = await res.text().catch(() => '');
     throw new Error(`Azure TTS ${res.status}: ${body.slice(0, 300)}`);
   }
-  return { ssml, audio: Buffer.from(await res.arrayBuffer()) };
+  return Buffer.from(await res.arrayBuffer());
+}
+
+function ssmlFor(text, lang) {
+  const voice = lang === 'en' ? EN_VOICE : ES_VOICE;
+  const xmlLang = lang === 'en' ? 'en-US' : 'es-MX';
+  return `<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" xml:lang="${xmlLang}"><voice name="${voice}">${escapeXml(text)}</voice></speak>`;
+}
+
+// Synthesizes one segment's full text, splicing in a real English voice for
+// any English runs. A short pause (silence-padded via a tiny gap between
+// concatenated MP3 buffers isn't reliable, so this just concatenates the
+// audio directly) happens between runs naturally from each utterance's own
+// leading/trailing silence.
+async function synthesizeSegment(text, creds) {
+  const runs = splitIntoRuns(text);
+  if (runs.length === 0) return { runs, audio: Buffer.alloc(0) };
+  if (runs.length === 1) {
+    const audio = await synthesizeRaw(ssmlFor(runs[0].text, runs[0].lang), creds);
+    return { runs, audio };
+  }
+  const buffers = [];
+  for (const run of runs) {
+    buffers.push(await synthesizeRaw(ssmlFor(run.text, run.lang), creds));
+    await sleep(120); // be gentle with the free tier's rate limit
+  }
+  return { runs, audio: Buffer.concat(buffers) };
 }
 
 // ---- commands -------------------------------------------------------------
@@ -292,8 +337,8 @@ async function cmdTest() {
   for (const seg of sample) {
     console.log(`\n--- ${seg.id} ---`);
     console.log('Texto:', seg.text);
-    const { ssml, audio } = await synthesize(seg.text, creds);
-    console.log('SSML:', ssml);
+    const { runs, audio } = await synthesizeSegment(seg.text, creds);
+    console.log('Partes:', runs.map((r) => `[${r.lang}] ${r.text}`).join('  '));
     const path = join(TEST_OUT_DIR, `${seg.id}.mp3`);
     writeFileSync(path, audio);
     console.log(`Guardado: ${path} (${(audio.length / 1024).toFixed(1)} KB)`);
@@ -315,7 +360,7 @@ async function cmdGenerate() {
       continue;
     }
     try {
-      const { audio } = await synthesize(seg.text, creds);
+      const { audio } = await synthesizeSegment(seg.text, creds);
       writeFileSync(path, audio);
       done++;
       if (done % 25 === 0) console.log(`${done + skipped} / ${segments.length}...`);

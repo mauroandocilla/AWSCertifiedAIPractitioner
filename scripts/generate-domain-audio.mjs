@@ -582,7 +582,12 @@ function normalizeForSpeech(text) {
     .replace(/\s*⊃\s*/g, ' incluye a ')
     .replace(/USD\/hora/g, 'USD por hora')
     .replace(/IF\/THEN/g, 'IF, THEN')
-    .replace(/\s*\/\s*/g, ' o ');
+    .replace(/\s*\/\s*/g, ' o ')
+    // "vs." is lowercase, so none of the English-detection regexes tag it --
+    // left as plain Spanish text, the engine was spelling it out with
+    // Spanish letter names ("uve-ese") instead of reading it as a word.
+    // Spelling it out as "versus" sidesteps the whole detection question.
+    .replace(/\bvs\.?\b/gi, 'versus');
 }
 
 async function synthesizeSegment(text, creds) {

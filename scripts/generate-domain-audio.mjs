@@ -217,6 +217,20 @@ const SINGLE_WORDS = [
   'MySQL',
   'SigV4',
   'CloudTrail',
+  // Alphanumeric codes -- ACRONYM_RE requires pure letters, so these need
+  // their own entry (found the same way, auditing for terms with a digit
+  // that weren't being detected at all): "S3" alone (only "Amazon S3"
+  // matched before), "F1" (score), "EC2", "AIF-C01" (exam code),
+  // "Agent2Agent"/"A2A"/"A2I" (protocol/service names), "MP3", "G1".
+  'S3',
+  'F1',
+  'EC2',
+  'C01',
+  'Agent2Agent',
+  'A2A',
+  'A2I',
+  'MP3',
+  'G1',
 ];
 
 // Bare acronyms (2-6 uppercase letters, optionally plural: "LLMs", "FMs").

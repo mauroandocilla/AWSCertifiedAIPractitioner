@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { glossaryById } from '../glossaryData.ts';
+import { glossarySpokenById } from '../glossaryDataSpoken.ts';
 import { parseGlossaryCards, buildReadAloudSegments, stripHtml } from '../glossaryCards.ts';
 import type { ReadAloudSegmentKind } from '../glossaryCards.ts';
 import { useReadAloud, RATE_OPTIONS } from '../hooks/useReadAloud.ts';
@@ -45,8 +46,30 @@ function loadMode(): ReadAloudMode {
   return stored === 'content' || stored === 'short' ? stored : 'all';
 }
 
+type DisplayMode = 'tecnico' | 'profesor';
+const DISPLAY_MODE_KEY = 'glossary-display-mode';
+const DISPLAY_MODE_LABELS: Record<DisplayMode, string> = { tecnico: 'Técnico', profesor: 'Profesor' };
+
+function loadDisplayMode(): DisplayMode {
+  const stored = localStorage.getItem(DISPLAY_MODE_KEY);
+  return stored === 'profesor' ? 'profesor' : 'tecnico';
+}
+
 export default function GlossaryEntryContent({ id, highlightCardIndex }: Props) {
-  const entry = glossaryById[id];
+  const [displayMode, setDisplayModeState] = useState<DisplayMode>(loadDisplayMode);
+  const entry = displayMode === 'profesor' ? glossarySpokenById[id] : glossaryById[id];
+  // El audio SIEMPRE narra la versión "profesor" -- ver nota de diseño en
+  // others/wire-spoken-glossary-brief.md -- sin importar qué esté eligiendo
+  // mostrar `displayMode` en pantalla.
+  const audioEntry = glossarySpokenById[id];
+
+  function setDisplayMode(next: DisplayMode) {
+    setDisplayModeState(next);
+    localStorage.setItem(DISPLAY_MODE_KEY, next);
+    // No hace falta stop() acá -- a diferencia de setMode() (modo de audio),
+    // cambiar displayMode no toca `audioEntry`, así que la cola de
+    // reproducción actual sigue siendo válida.
+  }
   const cards = useMemo(() => (entry ? parseGlossaryCards(entry.html) : []), [entry]);
   const bulletTextHtml = useMemo(() => {
     const m = entry?.html.match(/<p class="gloss-bullet-text">([\s\S]*?)<\/p>/);
@@ -65,7 +88,7 @@ export default function GlossaryEntryContent({ id, highlightCardIndex }: Props) 
   // pre-rendered, id _resumen-label) is spliced in right before each
   // short-text piece so it's clear that's the condensed version.
   const { queue, cardRanges } = useMemo(() => {
-    const segments = entry ? buildReadAloudSegments(id, entry.html) : [];
+    const segments = audioEntry ? buildReadAloudSegments(id, audioEntry.html) : [];
     const filtered = segments.filter((s) => {
       if (mode === 'content') return s.kind !== 'short-text';
       if (mode === 'short') return s.kind !== 'paragraph';
@@ -98,7 +121,7 @@ export default function GlossaryEntryContent({ id, highlightCardIndex }: Props) 
       r.end = idx;
     });
     return { queue: items, cardRanges: ranges };
-  }, [entry, id, cardTitles, mode]);
+  }, [audioEntry, id, cardTitles, mode]);
 
   const [flash, setFlash] = useState<number | 'bullet' | null>(null);
   const bulletRef = useRef<HTMLParagraphElement>(null);
@@ -203,6 +226,16 @@ export default function GlossaryEntryContent({ id, highlightCardIndex }: Props) 
           {(Object.keys(MODE_LABELS) as ReadAloudMode[]).map((m) => (
             <button key={m} type="button" className={mode === m ? 'active' : ''} onClick={() => setMode(m)}>
               {MODE_LABELS[m]}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <div className="gloss-display-mode-row">
+        <div className="display-mode-toggle">
+          {(Object.keys(DISPLAY_MODE_LABELS) as DisplayMode[]).map((m) => (
+            <button key={m} type="button" className={displayMode === m ? 'active' : ''} onClick={() => setDisplayMode(m)}>
+              {DISPLAY_MODE_LABELS[m]}
             </button>
           ))}
         </div>

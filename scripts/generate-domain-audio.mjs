@@ -49,7 +49,7 @@ import { join } from 'node:path';
 import { tmpdir } from 'node:os';
 import { execFileSync } from 'node:child_process';
 import { domains } from '../src/domainData.ts';
-import { glossaryEntries } from '../src/glossaryData.ts';
+import { glossarySpokenEntries } from '../src/glossaryDataSpoken.ts';
 import { buildReadAloudSegments } from '../src/glossaryCards.ts';
 
 const ROOT = join(import.meta.dirname, '..');
@@ -323,7 +323,7 @@ function escapeXml(s) {
 // ---- segment collection -----------------------------------------------
 
 export function allSegments() {
-  const htmlById = new Map(glossaryEntries.map((g) => [g.id, g.html]));
+  const htmlById = new Map(glossarySpokenEntries.map((g) => [g.id, g.html]));
   const segments = [];
   for (const d of domains) {
     for (const ss of d.subsections) {

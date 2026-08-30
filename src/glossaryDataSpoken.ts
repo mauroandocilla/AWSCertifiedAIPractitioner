@@ -2177,3 +2177,7 @@ export const glossarySpokenEntries: GlossarySpokenEntry[] = [
           </div>`,
   },
 ];
+
+export const glossarySpokenById: Record<string, GlossarySpokenEntry> = Object.fromEntries(
+  glossarySpokenEntries.map((e) => [e.id, e]),
+);

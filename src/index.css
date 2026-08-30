@@ -466,6 +466,28 @@
     white-space: nowrap;
   }
   .read-aloud-mode-toggle button.active { background: var(--accent); color: var(--accent-ink); }
+  .gloss-display-mode-row { display: flex; justify-content: flex-end; margin-top: 0.5rem; }
+  .display-mode-toggle {
+    display: inline-flex;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 2px;
+    flex: none;
+  }
+  .display-mode-toggle button {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--ink-faint);
+    background: none;
+    border: none;
+    border-radius: 999px;
+    padding: 0.32rem 0.65rem;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .display-mode-toggle button.active { background: var(--accent); color: var(--accent-ink); }
   /* CrossIcon/PlayIcon are sized for other contexts (26px/14px) -- normalize
      to whatever fits each of these compact buttons regardless of which icon
      is currently swapped in (play vs. stop, etc). */

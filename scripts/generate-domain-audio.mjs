@@ -258,7 +258,16 @@ function splitIntoRuns(text) {
 // to just "Gen." Adding a space so it reads as two separate tokens fixed it.
 // Only applied to spans already tagged 'en' by findEnglishSpans -- never
 // touches actual Spanish text.
-const EN_PRONUNCIATION_FIXES = [[/\bGenAI\b/g, 'Gen AI']];
+// "ML" specifically (unlike longer acronyms like "AWS"/"LLM", which came out
+// fine) was being spelled out with Spanish letter names ("eme-ele") despite
+// the en-US language tag -- not an accent issue, the wrong language's letter
+// names entirely. Not yet confirmed by ear whether spacing the letters out
+// forces English letter-naming; verify with the same "test" command before
+// trusting this for the full run.
+const EN_PRONUNCIATION_FIXES = [
+  [/\bGenAI\b/g, 'Gen AI'],
+  [/\bML\b/g, 'M L'],
+];
 
 function fixEnglishPronunciation(text, lang) {
   if (lang !== 'en') return text;

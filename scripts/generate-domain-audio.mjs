@@ -256,7 +256,7 @@ function escapeXml(s) {
 
 // ---- segment collection -----------------------------------------------
 
-function allSegments() {
+export function allSegments() {
   const htmlById = new Map(glossaryEntries.map((g) => [g.id, g.html]));
   const segments = [];
   for (const d of domains) {
@@ -317,6 +317,47 @@ async function synthesizeRaw(ssml, { key, region }, attempt = 0) {
     throw new Error(`Azure TTS ${res.status}: ${body.slice(0, 300)}`);
   }
   return Buffer.from(await res.arrayBuffer());
+}
+
+// Azure's neural TTS (especially with an mstts:express-as style applied)
+// sometimes cuts a run's audio off early and still returns 200 OK with a
+// short-but-valid mp3 -- confirmed by comparing generated files' duration
+// against their source text length across the whole library: truncated
+// files clock in at 100-750+ chars/sec of "speech", versus ~15-40 chars/sec
+// for every normal file. Retquerying the same run a couple of times reliably
+// gets a full-length take, so treat a too-fast result as a transient failure
+// and retry before accepting it.
+// Exported (not just module-local) so scripts/check-audio-truncation.mjs can
+// re-run this exact same test against already-generated files, instead of
+// duplicating the threshold and risking it drifting out of sync.
+export const MIN_PLAUSIBLE_CHARS_PER_SEC = 60;
+const MAX_SYNTHESIS_ATTEMPTS = 4;
+
+function mp3DurationSeconds(path) {
+  try {
+    const out = execFileSync('ffprobe', ['-v', 'error', '-show_entries', 'format=duration', '-of', 'default=noprint_wrappers=1:nokey=1', path]).toString().trim();
+    return parseFloat(out);
+  } catch (err) {
+    if (err.code === 'ENOENT') {
+      console.error('\nFalta ffprobe (viene con ffmpeg, se usa para detectar audio truncado).');
+      console.error('Instalalo con: brew install ffmpeg\n');
+      process.exit(1);
+    }
+    throw err;
+  }
+}
+
+async function synthesizeRunChecked(run, creds, workDir, index) {
+  for (let attempt = 1; attempt <= MAX_SYNTHESIS_ATTEMPTS; attempt++) {
+    const audio = await synthesizeRaw(ssmlFor(run.text, run.lang), creds);
+    const probePath = join(workDir, `probe-${index}.mp3`);
+    writeFileSync(probePath, audio);
+    const dur = mp3DurationSeconds(probePath);
+    const charsPerSec = run.text.length / Math.max(dur, 0.05);
+    if (charsPerSec <= MIN_PLAUSIBLE_CHARS_PER_SEC || run.text.length < 15) return audio;
+    console.error(`  (run ${index} salió sospechosamente corto: "${run.text.slice(0, 50)}..." -> ${dur.toFixed(2)}s, reintento ${attempt}/${MAX_SYNTHESIS_ATTEMPTS})`);
+  }
+  throw new Error(`El run "${run.text.slice(0, 60)}" salió truncado tras ${MAX_SYNTHESIS_ATTEMPTS} intentos`);
 }
 
 // "relieved" style + a touch slower -- if the voice doesn't support this
@@ -411,7 +452,7 @@ async function synthesizeSegment(text, creds) {
   const rawBuffers = [];
   for (let i = 0; i < runs.length; i++) {
     const run = runs[i];
-    const audio = await synthesizeRaw(ssmlFor(run.text, run.lang), creds);
+    const audio = await synthesizeRunChecked(run, creds, workDir, i);
     rawBuffers.push(audio);
     const rawPath = join(workDir, `raw-${i}.mp3`);
     writeFileSync(rawPath, audio);
@@ -500,10 +541,16 @@ async function cmdGenerate() {
   console.log(`Archivos en ${OUT_DIR}`);
 }
 
-const cmd = process.argv[2];
-const commands = { stats: cmdStats, test: cmdTest, generate: cmdGenerate };
-if (!commands[cmd]) {
-  console.error('Uso: node scripts/generate-domain-audio.mjs <stats|test|generate>');
-  process.exit(1);
+// Only run the CLI dispatch when this file is executed directly -- guarded
+// so scripts/check-audio-truncation.mjs can import allSegments()/
+// MIN_PLAUSIBLE_CHARS_PER_SEC from here without triggering "Uso: ..." and a
+// process.exit(1).
+if (import.meta.url === `file://${process.argv[1]}`) {
+  const cmd = process.argv[2];
+  const commands = { stats: cmdStats, test: cmdTest, generate: cmdGenerate };
+  if (!commands[cmd]) {
+    console.error('Uso: node scripts/generate-domain-audio.mjs <stats|test|generate>');
+    process.exit(1);
+  }
+  await commands[cmd]();
 }
-await commands[cmd]();

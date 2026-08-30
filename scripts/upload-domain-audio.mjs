@@ -68,12 +68,18 @@ async function existingKeys() {
   return keys;
 }
 
+// Re-upload specific files even if the bucket already has them -- for when
+// a file was regenerated locally (fixing bad audio) and needs to overwrite
+// a stale copy already in R2, without re-uploading the other 990+ unchanged
+// files: FORCE_FILES=gloss-d1-t1-b1--c3-body.mp3,gloss-d3-t1-b3--c0-body.mp3
+const forceFiles = new Set((process.env.FORCE_FILES || '').split(',').map((s) => s.trim()).filter(Boolean));
+
 async function main() {
   const already = await existingKeys();
   const allFiles = readdirSync(AUDIO_DIR).filter((f) => f.endsWith('.mp3'));
-  const toUpload = allFiles.filter((f) => !already.has(f));
+  const toUpload = allFiles.filter((f) => !already.has(f) || forceFiles.has(f));
 
-  console.log(`Total: ${allFiles.length}. Ya en el bucket: ${already.size}. Por subir: ${toUpload.length}.`);
+  console.log(`Total: ${allFiles.length}. Ya en el bucket: ${already.size}. Por subir: ${toUpload.length}.${forceFiles.size ? ` (forzando ${forceFiles.size})` : ''}`);
   if (toUpload.length === 0) {
     console.log('Nada que subir.');
     return;

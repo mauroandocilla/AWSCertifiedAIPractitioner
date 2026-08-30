@@ -66,12 +66,14 @@ const SAMPLE_RATE = 24000;
 
 // Same multilingual voice for both -- one consistent persona for the whole
 // clip instead of an audible switch between two different voices at every
-// splice point. Andrew's supported-languages list includes Spanish
-// (Mexico), which is what makes this work; a single-locale voice like
-// es-MX-DaliaNeural can't do this (confirmed: its xml:lang="en-US" runs
-// still came out sounding Spanish-accented when tried).
-const ES_VOICE = 'en-US-AndrewMultilingualNeural';
-const EN_VOICE = 'en-US-AndrewMultilingualNeural';
+// splice point. Jorge's supported-languages list includes English, which
+// is what makes this work; a single-locale voice like es-MX-DaliaNeural
+// can't do this (confirmed: its xml:lang="en-US" runs still came out
+// sounding Spanish-accented when tried). Confirmed available via:
+//   curl -s -H "Ocp-Apim-Subscription-Key: $AZURE_SPEECH_KEY" \
+//     "https://$AZURE_SPEECH_REGION.tts.speech.microsoft.com/cognitiveservices/voices/list" | grep -i jorge
+const ES_VOICE = 'es-MX-JorgeMultilingualNeural';
+const EN_VOICE = 'es-MX-JorgeMultilingualNeural';
 const OUTPUT_FORMAT = 'audio-24khz-48kbitrate-mono-mp3';
 
 // ---- English/technical term detection -------------------------------------

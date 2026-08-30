@@ -396,12 +396,22 @@ async function synthesizeRunChecked(run, creds, workDir, index) {
 const SPEAKING_STYLE = 'relieved';
 const RATE_ADJUSTMENT = '-9%';
 
+// A parenthetical aside read at the same flat pace as the surrounding
+// sentence is indistinguishable from it by ear (confirmed: "tareas simples
+// (detectar spam)" just sounds like one run-on clause) -- a short pause on
+// each side is what a human reader would naturally do. Applied after
+// escapeXml, so it's only ever inserting real SSML around already-safe text.
+function addParentheticalPauses(escapedText) {
+  return escapedText.replace(/\(([^()]*)\)/g, '<break time="180ms"/>($1)<break time="180ms"/>');
+}
+
 function ssmlFor(text, lang) {
   const voice = lang === 'en' ? EN_VOICE : ES_VOICE;
   const xmlLang = lang === 'en' ? 'en-US' : 'es-MX';
+  const body = addParentheticalPauses(escapeXml(text));
   return (
     `<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" xmlns:mstts="https://www.w3.org/2001/mstts" xml:lang="${xmlLang}">` +
-    `<voice name="${voice}"><mstts:express-as style="${SPEAKING_STYLE}"><prosody rate="${RATE_ADJUSTMENT}">${escapeXml(text)}</prosody></mstts:express-as></voice>` +
+    `<voice name="${voice}"><mstts:express-as style="${SPEAKING_STYLE}"><prosody rate="${RATE_ADJUSTMENT}">${body}</prosody></mstts:express-as></voice>` +
     `</speak>`
   );
 }
@@ -511,8 +521,23 @@ function splitTextIntoChunks(text, maxLen) {
   return chunks;
 }
 
+// Symbols/punctuation that read badly literally, fixed before language-run
+// splitting since they're not English/Spanish-specific -- only affects what
+// gets spoken, never the on-screen glossary text (domainData.ts/
+// glossaryData.ts are untouched). Order matters: the two specific slash
+// idioms have to run before the generic "/" -> "o" rule, or that rule would
+// eat them first ("USD/hora" means "per hour", not "USD or hora"; "IF/THEN"
+// is a single construct, not alternatives).
+function normalizeForSpeech(text) {
+  return text
+    .replace(/\s*⊃\s*/g, ' incluye a ')
+    .replace(/USD\/hora/g, 'USD por hora')
+    .replace(/IF\/THEN/g, 'IF, THEN')
+    .replace(/\s*\/\s*/g, ' o ');
+}
+
 async function synthesizeSegment(text, creds) {
-  const runs = splitIntoRuns(text);
+  const runs = splitIntoRuns(normalizeForSpeech(text));
   if (runs.length === 0) return { runs, audio: Buffer.alloc(0) };
   const chunks = runs.flatMap((run) => splitTextIntoChunks(fixEnglishPronunciation(run.text, run.lang), MAX_RUN_CHARS).map((chunkText) => ({ lang: run.lang, text: chunkText })));
 

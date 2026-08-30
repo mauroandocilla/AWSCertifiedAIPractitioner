@@ -445,21 +445,60 @@ function concatWithGaps(paths, outputPath) {
 // Synthesizes one segment's full text, splicing in a real English voice for
 // any English runs, ffmpeg-trimmed and re-joined with a short controlled
 // pause instead of each run's own (much larger, inconsistent) padding.
+// Azure's neural TTS with an mstts:express-as style applied cuts audio off
+// early on longer inputs -- confirmed NOT transient (retrying the exact same
+// text via synthesizeRunChecked's retry loop reproduced the same cut every
+// time on several known-bad paragraphs, even after switching voices). The
+// actual fix is to never send it a run this long in the first place: split
+// each run further into sentence-sized chunks before synthesizing, and
+// splice them back together with the same trim+gap technique already used
+// for language switches.
+const MAX_RUN_CHARS = 220;
+
+// Splits `text` at sentence boundaries (keeping the punctuation) into chunks
+// no longer than maxLen, packing consecutive short sentences together
+// rather than making one Azure call per sentence. Falls back to a hard
+// space-split for any single "sentence" that's still too long on its own
+// (e.g. a long clause between semicolons).
+function splitTextIntoChunks(text, maxLen) {
+  if (text.length <= maxLen) return [text];
+  const sentences = text.match(/[^.!?;:]+[.!?;:]*\s*/g) || [text];
+  const chunks = [];
+  let current = '';
+  for (const sentence of sentences) {
+    if (current && (current + sentence).length > maxLen) {
+      chunks.push(current.trim());
+      current = sentence;
+    } else {
+      current += sentence;
+    }
+    while (current.length > maxLen) {
+      let cut = current.lastIndexOf(' ', maxLen);
+      if (cut <= 0) cut = maxLen;
+      chunks.push(current.slice(0, cut).trim());
+      current = current.slice(cut).trim();
+    }
+  }
+  if (current.trim()) chunks.push(current.trim());
+  return chunks;
+}
+
 async function synthesizeSegment(text, creds) {
   const runs = splitIntoRuns(text);
   if (runs.length === 0) return { runs, audio: Buffer.alloc(0) };
+  const chunks = runs.flatMap((run) => splitTextIntoChunks(run.text, MAX_RUN_CHARS).map((chunkText) => ({ lang: run.lang, text: chunkText })));
 
   const workDir = getTmpDir();
   const rawPaths = [];
   const rawBuffers = [];
-  for (let i = 0; i < runs.length; i++) {
-    const run = runs[i];
+  for (let i = 0; i < chunks.length; i++) {
+    const run = chunks[i];
     const audio = await synthesizeRunChecked(run, creds, workDir, i);
     rawBuffers.push(audio);
     const rawPath = join(workDir, `raw-${i}.mp3`);
     writeFileSync(rawPath, audio);
     rawPaths.push(rawPath);
-    if (runs.length > 1) await sleep(120); // be gentle with the free tier's rate limit
+    if (chunks.length > 1) await sleep(120); // be gentle with the free tier's rate limit
   }
 
   try {
@@ -475,7 +514,7 @@ async function synthesizeSegment(text, creds) {
     } else {
       concatWithGaps(trimmedPaths, outPath);
     }
-    return { runs, audio: readFileSync(outPath) };
+    return { runs: chunks, audio: readFileSync(outPath) };
   } catch (err) {
     // ffmpeg/libmp3lame occasionally chokes on a specific buffer ("inadequate
     // AVFrame plane padding", a known libmp3lame quirk, reproducibly on some
@@ -483,7 +522,7 @@ async function synthesizeSegment(text, creds) {
     // untrimmed audio concatenated directly. Bigger gap at the splice than
     // usual for this one segment, but "generate" never gets stuck on it.
     console.error(`  (ffmpeg falló recortando/pegando, uso audio sin recortar: ${String(err.message).split('\n')[0]})`);
-    return { runs, audio: Buffer.concat(rawBuffers) };
+    return { runs: chunks, audio: Buffer.concat(rawBuffers) };
   }
 }
 

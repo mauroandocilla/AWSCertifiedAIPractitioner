@@ -502,16 +502,32 @@ function cmdStats() {
 async function cmdTest() {
   const creds = requireAzureCreds();
   const segments = allSegments();
-  const sample = [segments.find((s) => s.kind === 'title'), segments.find((s) => s.kind === 'paragraph'), segments.find((s) => s.kind === 'short-text')].filter(Boolean);
+  // Pass specific segment ids as extra args to re-test known-bad ones (e.g.
+  // ones flagged earlier by check-audio-truncation.mjs) against the current
+  // voice/retry logic without spending quota on the other ~1000 segments:
+  //   node scripts/generate-domain-audio.mjs test gloss-d1-t1-b1--c3-body gloss-d1-t1-b2--c0-body
+  // With no ids, falls back to one sample of each kind (title/paragraph/short-text).
+  const requestedIds = process.argv.slice(3);
+  let sample;
+  if (requestedIds.length > 0) {
+    sample = requestedIds.map((id) => {
+      const seg = segments.find((s) => s.id === id);
+      if (!seg) console.error(`(no existe un segmento con id "${id}", lo salteo)`);
+      return seg;
+    }).filter(Boolean);
+  } else {
+    sample = [segments.find((s) => s.kind === 'title'), segments.find((s) => s.kind === 'paragraph'), segments.find((s) => s.kind === 'short-text')].filter(Boolean);
+  }
   if (!existsSync(TEST_OUT_DIR)) mkdirSync(TEST_OUT_DIR, { recursive: true });
   for (const seg of sample) {
-    console.log(`\n--- ${seg.id} ---`);
+    console.log(`\n--- ${seg.id} (${seg.text.length} chars) ---`);
     console.log('Texto:', seg.text);
     const { runs, audio } = await synthesizeSegment(seg.text, creds);
     console.log('Partes:', runs.map((r) => `[${r.lang}] ${r.text}`).join('  '));
     const path = join(TEST_OUT_DIR, `${seg.id}.mp3`);
     writeFileSync(path, audio);
-    console.log(`Guardado: ${path} (${(audio.length / 1024).toFixed(1)} KB)`);
+    const dur = mp3DurationSeconds(path);
+    console.log(`Guardado: ${path} (${(audio.length / 1024).toFixed(1)} KB, ${dur.toFixed(2)}s, ${(seg.text.length / dur).toFixed(1)} chars/s)`);
   }
   console.log(`\nEscuchá los archivos en ${TEST_OUT_DIR} antes de correr "generate" (que sí gasta tu cuota completa).`);
 }

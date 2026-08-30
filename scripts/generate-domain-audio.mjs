@@ -349,6 +349,19 @@ function mp3DurationSeconds(path) {
   }
 }
 
+// Unlike mp3DurationSeconds (which is meant to fail loudly), this is used
+// purely to sanity-check a file trimSilence just produced -- so any error
+// (corrupt/frame-less mp3, the exact failure mode being guarded against)
+// just means "not playable", not something to crash the whole run over.
+function isPlayableMp3(path) {
+  try {
+    const dur = mp3DurationSeconds(path);
+    return Number.isFinite(dur) && dur > 0.05;
+  } catch {
+    return false;
+  }
+}
+
 async function synthesizeRunChecked(run, creds, workDir, index) {
   for (let attempt = 1; attempt <= MAX_SYNTHESIS_ATTEMPTS; attempt++) {
     const audio = await synthesizeRaw(ssmlFor(run.text, run.lang), creds);
@@ -505,6 +518,15 @@ async function synthesizeSegment(text, creds) {
     const trimmedPaths = rawPaths.map((p, i) => {
       const trimmedPath = join(workDir, `trimmed-${i}.mp3`);
       trimSilence(p, trimmedPath);
+      // trimSilence's double-reverse silence-removal trick can wipe out a
+      // very short clip (a single word like "AWS") down to zero audio
+      // frames -- confirmed by hand: the resulting file is a bare ID3 tag,
+      // no sound. ffmpeg's concat demuxer then silently stops at that
+      // point in the list, discarding every chunk after it, without
+      // raising an error we'd catch -- that's what was producing
+      // segments that trailed off partway through. Guard against it by
+      // falling back to the untrimmed clip for just that one position.
+      if (!isPlayableMp3(trimmedPath)) return p;
       return trimmedPath;
     });
 

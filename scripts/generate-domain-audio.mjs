@@ -268,6 +268,11 @@ function allSegments() {
       }
     }
   }
+  // One shared file, reused before every short-summary segment in the
+  // frontend's "solo en corto" playback mode -- not part of
+  // buildReadAloudSegments() since it's a synthetic UI-mode label, not real
+  // bullet/glossary content.
+  segments.push({ id: '_resumen-label', text: 'Resumen.', kind: 'label' });
   return segments;
 }
 

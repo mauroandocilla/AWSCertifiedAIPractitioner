@@ -36,6 +36,15 @@ const PAUSE_BY_KIND: Record<ReadAloudSegmentKind, number> = {
   'short-text': 700,
 };
 
+type ReadAloudMode = 'all' | 'content' | 'short';
+const MODE_KEY = 'read-aloud-mode';
+const MODE_LABELS: Record<ReadAloudMode, string> = { all: 'Todo', content: 'Contenido', short: 'En corto' };
+
+function loadMode(): ReadAloudMode {
+  const stored = localStorage.getItem(MODE_KEY);
+  return stored === 'content' || stored === 'short' ? stored : 'all';
+}
+
 export default function GlossaryEntryContent({ id, highlightCardIndex }: Props) {
   const entry = glossaryById[id];
   const cards = useMemo(() => (entry ? parseGlossaryCards(entry.html) : []), [entry]);
@@ -45,24 +54,42 @@ export default function GlossaryEntryContent({ id, highlightCardIndex }: Props) 
   }, [entry]);
   const cardTitles = useMemo(() => cards.map((c) => stripHtml(c.titleHtml)), [cards]);
 
+  const [mode, setModeState] = useState<ReadAloudMode>(loadMode);
+
   // buildReadAloudSegments is the single source of truth for what gets read
   // and in what pieces -- shared with scripts/generate-domain-audio.mjs, so
   // its `id`s are exactly what that script named the pre-rendered audio
   // files after. Pacing (how long to pause between pieces) is added here,
-  // used by whichever engine below ends up playing.
+  // used by whichever engine below ends up playing. `mode` filters which
+  // kinds get included; in "short" mode, a shared "Resumen." label (also
+  // pre-rendered, id _resumen-label) is spliced in right before each
+  // short-text piece so it's clear that's the condensed version.
   const { queue, cardRanges } = useMemo(() => {
     const segments = entry ? buildReadAloudSegments(id, entry.html) : [];
-    const items: QueueEntry[] = segments.map((s, i) => {
+    const filtered = segments.filter((s) => {
+      if (mode === 'content') return s.kind !== 'short-text';
+      if (mode === 'short') return s.kind !== 'paragraph';
+      return true;
+    });
+
+    const items: QueueEntry[] = [];
+    filtered.forEach((s, i) => {
+      const displayTitle = s.cardIndex === null ? 'Resumen' : (cardTitles[s.cardIndex] ?? '');
+      if (mode === 'short' && s.kind === 'short-text') {
+        items.push({ id: '_resumen-label', text: 'Resumen.', pauseAfterMs: 300, cardIndex: s.cardIndex, displayTitle });
+      }
       let pauseAfterMs = PAUSE_BY_KIND[s.kind];
       if (s.kind === 'paragraph') {
-        const next = segments[i + 1];
+        const next = filtered[i + 1];
         // No "en corto" follows (next segment belongs to a different card,
-        // or there isn't one) -- this is the card's last part, so it gets
-        // the longer "next concept" pause instead of the mid-card one.
+        // filtered out by mode, or there isn't one) -- this is the card's
+        // last part, so it gets the longer "next concept" pause instead of
+        // the mid-card one.
         if (!next || next.cardIndex !== s.cardIndex) pauseAfterMs = 700;
       }
-      return { id: s.id, text: s.text, pauseAfterMs, cardIndex: s.cardIndex, displayTitle: s.cardIndex === null ? 'Resumen' : (cardTitles[s.cardIndex] ?? '') };
+      items.push({ id: s.id, text: s.text, pauseAfterMs, cardIndex: s.cardIndex, displayTitle });
     });
+
     const ranges: { start: number; end: number }[] = cardTitles.map(() => ({ start: -1, end: -1 }));
     items.forEach((item, idx) => {
       if (item.cardIndex === null) return;
@@ -71,7 +98,7 @@ export default function GlossaryEntryContent({ id, highlightCardIndex }: Props) 
       r.end = idx;
     });
     return { queue: items, cardRanges: ranges };
-  }, [entry, id, cardTitles]);
+  }, [entry, id, cardTitles, mode]);
 
   const [flash, setFlash] = useState<number | 'bullet' | null>(null);
   const bulletRef = useRef<HTMLParagraphElement>(null);
@@ -90,6 +117,12 @@ export default function GlossaryEntryContent({ id, highlightCardIndex }: Props) 
   const { status, activeIndex, rate, setRate, playAll, playRange, pause, resume, stop } = engine;
   const activeCardIndex = activeIndex !== null ? (queue[activeIndex]?.cardIndex ?? null) : null;
   const activeTitle = activeIndex !== null ? (queue[activeIndex]?.displayTitle ?? null) : null;
+
+  function setMode(next: ReadAloudMode) {
+    setModeState(next);
+    localStorage.setItem(MODE_KEY, next);
+    stop(); // the old queue's indices don't line up with the new one
+  }
 
   // Search-driven: scroll to and briefly flash whatever matched.
   useEffect(() => {
@@ -163,6 +196,16 @@ export default function GlossaryEntryContent({ id, highlightCardIndex }: Props) 
           {status === 'idle' ? <PlayIcon /> : <CrossIcon />}
           {status === 'idle' ? 'Escuchar' : 'Detener'}
         </button>
+      </div>
+
+      <div className="gloss-mode-row">
+        <div className="read-aloud-mode-toggle">
+          {(Object.keys(MODE_LABELS) as ReadAloudMode[]).map((m) => (
+            <button key={m} type="button" className={mode === m ? 'active' : ''} onClick={() => setMode(m)}>
+              {MODE_LABELS[m]}
+            </button>
+          ))}
+        </div>
       </div>
 
       {cards.map((card, i) => {

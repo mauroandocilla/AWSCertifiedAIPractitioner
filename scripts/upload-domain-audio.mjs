@@ -1,58 +1,94 @@
 #!/usr/bin/env node
-// Uploads public/domain-audio/*.mp3 to the domain-audio-v1 GitHub Release in
-// small batches with a pause between them -- uploading all ~999 files in one
-// `gh release upload` call trips GitHub's secondary rate limit (HTTP 403).
-// Safe to re-run: skips files the release already has.
+// Uploads public/domain-audio/*.mp3 to Cloudflare R2 with an explicit
+// audio/mpeg Content-Type -- the whole reason for switching away from
+// GitHub Releases: it serves every asset as Content-Disposition: attachment
+// + application/octet-stream regardless of file type, and iOS Safari
+// refuses to load/play audio served that way (confirmed via curl -I on an
+// actual release asset). Safe to re-run: skips keys the bucket already has.
+//
+// Setup:
+//   1. Create an R2 bucket (e.g. aws-ai-practitioner-audio) and enable its
+//      public r2.dev URL -- https://dash.cloudflare.com -> R2 -> your bucket
+//      -> Settings -> Public Development URL -> Enable. That URL is what
+//      src/audioBase.ts needs to point at.
+//   2. Create an Account API Token (Object Read & Write, scoped to that
+//      bucket) at R2 -> Manage API Tokens.
+//   3. export R2_ACCOUNT_ID=...
+//      export R2_ACCESS_KEY_ID=...
+//      export R2_SECRET_ACCESS_KEY=...
 //
 // Usage:
 //   node scripts/upload-domain-audio.mjs
-//
-// Requires: gh CLI, already authenticated (gh auth status), and the release
-// already created:
-//   gh release create domain-audio-v1 --repo mauroandocilla/AWSCertifiedAIPractitioner --title "Domain audio v1" --notes "Pre-rendered read-aloud audio"
 
-import { readdirSync } from 'node:fs';
-import { execFileSync } from 'node:child_process';
+import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
+import { S3Client, PutObjectCommand, ListObjectsV2Command } from '@aws-sdk/client-s3';
 
 const ROOT = join(import.meta.dirname, '..');
 const AUDIO_DIR = join(ROOT, 'public', 'domain-audio');
-const REPO = 'mauroandocilla/AWSCertifiedAIPractitioner';
-const TAG = 'domain-audio-v1';
-const BATCH_SIZE = 20;
-const PAUSE_MS = 8000;
+const BUCKET = process.env.R2_BUCKET || 'aws-ai-practitioner-audio';
 
-function sleep(ms) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
+function requireEnv(name) {
+  const v = process.env[name];
+  if (!v) {
+    console.error(
+      `Falta ${name}.\n` +
+        'Creá un Account API Token (Object Read & Write) en R2 -> Manage API Tokens y corré:\n' +
+        '  export R2_ACCOUNT_ID=...\n' +
+        '  export R2_ACCESS_KEY_ID=...\n' +
+        '  export R2_SECRET_ACCESS_KEY=...\n',
+    );
+    process.exit(1);
+  }
+  return v;
 }
 
-function existingAssetNames() {
-  const out = execFileSync('gh', ['release', 'view', TAG, '--repo', REPO, '--json', 'assets', '--jq', '.assets[].name'], {
-    encoding: 'utf8',
-  });
-  return new Set(out.split('\n').filter(Boolean));
+const accountId = requireEnv('R2_ACCOUNT_ID');
+const accessKeyId = requireEnv('R2_ACCESS_KEY_ID');
+const secretAccessKey = requireEnv('R2_SECRET_ACCESS_KEY');
+
+const client = new S3Client({
+  region: 'auto',
+  endpoint: `https://${accountId}.r2.cloudflarestorage.com`,
+  credentials: { accessKeyId, secretAccessKey },
+});
+
+async function existingKeys() {
+  const keys = new Set();
+  let ContinuationToken;
+  do {
+    const res = await client.send(new ListObjectsV2Command({ Bucket: BUCKET, ContinuationToken }));
+    for (const obj of res.Contents ?? []) if (obj.Key) keys.add(obj.Key);
+    ContinuationToken = res.IsTruncated ? res.NextContinuationToken : undefined;
+  } while (ContinuationToken);
+  return keys;
 }
 
 async function main() {
-  const already = existingAssetNames();
+  const already = await existingKeys();
   const allFiles = readdirSync(AUDIO_DIR).filter((f) => f.endsWith('.mp3'));
   const toUpload = allFiles.filter((f) => !already.has(f));
 
-  console.log(`Total: ${allFiles.length}. Ya en el release: ${already.size}. Por subir: ${toUpload.length}.`);
+  console.log(`Total: ${allFiles.length}. Ya en el bucket: ${already.size}. Por subir: ${toUpload.length}.`);
   if (toUpload.length === 0) {
     console.log('Nada que subir.');
     return;
   }
 
   let done = 0;
-  for (let i = 0; i < toUpload.length; i += BATCH_SIZE) {
-    const batch = toUpload.slice(i, i + BATCH_SIZE).map((f) => join(AUDIO_DIR, f));
-    execFileSync('gh', ['release', 'upload', TAG, ...batch, '--repo', REPO], { stdio: 'inherit' });
-    done += batch.length;
-    console.log(`${done} / ${toUpload.length}...`);
-    if (i + BATCH_SIZE < toUpload.length) await sleep(PAUSE_MS);
+  let failed = 0;
+  for (const file of toUpload) {
+    try {
+      const body = readFileSync(join(AUDIO_DIR, file));
+      await client.send(new PutObjectCommand({ Bucket: BUCKET, Key: file, Body: body, ContentType: 'audio/mpeg' }));
+      done++;
+    } catch (err) {
+      failed++;
+      console.error(`Falló ${file}: ${err.message}`);
+    }
+    if ((done + failed) % 25 === 0) console.log(`${done + failed} / ${toUpload.length}...`);
   }
-  console.log('\nListo.');
+  console.log(`\nSubidos: ${done}. Fallidos: ${failed}.`);
 }
 
 await main();

@@ -43,13 +43,17 @@ function requireEnv(name) {
   return v;
 }
 
+// R2_ACCOUNT_ID accepts either the bare account id or the full endpoint URL
+// Cloudflare's dashboard shows (labeled "Endpoint", easy to paste as-is by
+// mistake) -- normalized here instead of assuming one or the other.
 const accountId = requireEnv('R2_ACCOUNT_ID');
 const accessKeyId = requireEnv('R2_ACCESS_KEY_ID');
 const secretAccessKey = requireEnv('R2_SECRET_ACCESS_KEY');
+const endpoint = accountId.startsWith('http') ? accountId : `https://${accountId}.r2.cloudflarestorage.com`;
 
 const client = new S3Client({
   region: 'auto',
-  endpoint: `https://${accountId}.r2.cloudflarestorage.com`,
+  endpoint,
   credentials: { accessKeyId, secretAccessKey },
 });
 

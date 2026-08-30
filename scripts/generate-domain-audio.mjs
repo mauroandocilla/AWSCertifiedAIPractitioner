@@ -132,6 +132,7 @@ const PHRASES = [
   'computer vision',
   'neural networks',
   'machine learning',
+  'SHapley Additive exPlanations',
 ].sort((a, b) => b.length - a.length);
 
 const SINGLE_WORDS = [
@@ -196,6 +197,26 @@ const SINGLE_WORDS = [
   'Inferentia',
   'JumpStart',
   'OpenSearch',
+  'SageMaker',
+  'AgentCore',
+  // Found via a full-corpus audit for mixed-case technical terms that
+  // AWS_SERVICE_RE/PHRASES/ACRONYM_RE weren't catching at all (so they were
+  // being read as if they were Spanish text, not just mispronounced).
+  'PostgreSQL',
+  'PrivateLink',
+  'BERTScore',
+  'SuperGLUE',
+  'SQuAD',
+  'SkillCertPro',
+  'QuickSight',
+  'FedRAMP',
+  'OAuth',
+  'IoT',
+  'LangGraph',
+  'CrewAI',
+  'MySQL',
+  'SigV4',
+  'CloudTrail',
 ];
 
 // Bare acronyms (2-6 uppercase letters, optionally plural: "LLMs", "FMs").
@@ -252,27 +273,32 @@ function splitIntoRuns(text) {
   return runs;
 }
 
-// A few English terms don't come out clearly from Azure as a single fused
-// word -- confirmed by ear (transcribing the generated audio back with
-// Whisper): "GenAI" sent as-is came out "Gennai"/"Gyanai", or got cut short
-// to just "Gen." Adding a space so it reads as two separate tokens fixed it.
-// Only applied to spans already tagged 'en' by findEnglishSpans -- never
-// touches actual Spanish text.
-// "ML" specifically (unlike longer acronyms like "AWS"/"LLM", which came out
-// fine) was being spelled out with Spanish letter names ("eme-ele") despite
-// the en-US language tag -- not an accent issue, the wrong language's letter
-// names entirely. Not yet confirmed by ear whether spacing the letters out
-// forces English letter-naming; verify with the same "test" command before
-// trusting this for the full run.
-const EN_PRONUNCIATION_FIXES = [
-  [/\bGenAI\b/g, 'Gen AI'],
-  [/\bML\b/g, 'M L'],
-];
+// A few multi-letter English terms don't come out clearly from Azure as a
+// single fused word -- confirmed by ear (transcribing the generated audio
+// back with Whisper): "GenAI" sent as-is came out "Gennai"/"Gyanai", or got
+// cut short to just "Gen." Adding a space so it reads as two separate
+// tokens fixed it. Only applied to spans already tagged 'en' by
+// findEnglishSpans -- never touches actual Spanish text.
+const EN_PRONUNCIATION_FIXES = [[/\bGenAI\b/g, 'Gen AI']];
+
+// Bare uppercase acronyms (AWS, LLM, ML, IAM, RAG, ...) were coming out
+// spelled with SPANISH letter names despite the en-US language tag --
+// confirmed this isn't just "ML", it's general: any short fused acronym is
+// affected. Spacing the letters out (same trick as the GenAI fix) forces
+// the engine to read each letter on its own instead of trying to normalize
+// the whole token, which is what was triggering the wrong locale's
+// letter-naming. Deliberately only matches spans that are ENTIRELY
+// uppercase -- proper-noun/phrase spans like "SageMaker" or "Foundation
+// Models" must keep reading as actual words, not get spelled out.
+function spaceOutAcronyms(text) {
+  return text.replace(/\b([A-Z]{2,6})(s?)\b/g, (_, letters, plural) => letters.split('').join(' ') + (plural ? ' s' : ''));
+}
 
 function fixEnglishPronunciation(text, lang) {
   if (lang !== 'en') return text;
   let result = text;
   for (const [pattern, replacement] of EN_PRONUNCIATION_FIXES) result = result.replace(pattern, replacement);
+  result = spaceOutAcronyms(result);
   return result;
 }
 

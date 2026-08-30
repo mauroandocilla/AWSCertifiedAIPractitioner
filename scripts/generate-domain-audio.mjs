@@ -252,6 +252,21 @@ function splitIntoRuns(text) {
   return runs;
 }
 
+// A few English terms don't come out clearly from Azure as a single fused
+// word -- confirmed by ear (transcribing the generated audio back with
+// Whisper): "GenAI" sent as-is came out "Gennai"/"Gyanai", or got cut short
+// to just "Gen." Adding a space so it reads as two separate tokens fixed it.
+// Only applied to spans already tagged 'en' by findEnglishSpans -- never
+// touches actual Spanish text.
+const EN_PRONUNCIATION_FIXES = [[/\bGenAI\b/g, 'Gen AI']];
+
+function fixEnglishPronunciation(text, lang) {
+  if (lang !== 'en') return text;
+  let result = text;
+  for (const [pattern, replacement] of EN_PRONUNCIATION_FIXES) result = result.replace(pattern, replacement);
+  return result;
+}
+
 function escapeXml(s) {
   return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 }
@@ -499,7 +514,7 @@ function splitTextIntoChunks(text, maxLen) {
 async function synthesizeSegment(text, creds) {
   const runs = splitIntoRuns(text);
   if (runs.length === 0) return { runs, audio: Buffer.alloc(0) };
-  const chunks = runs.flatMap((run) => splitTextIntoChunks(run.text, MAX_RUN_CHARS).map((chunkText) => ({ lang: run.lang, text: chunkText })));
+  const chunks = runs.flatMap((run) => splitTextIntoChunks(fixEnglishPronunciation(run.text, run.lang), MAX_RUN_CHARS).map((chunkText) => ({ lang: run.lang, text: chunkText })));
 
   const workDir = getTmpDir();
   const rawPaths = [];

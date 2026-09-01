@@ -1,6 +1,6 @@
 # AWS Certified AI Practitioner (AIF-C01) — Study Guide
 
-SPA de guía de estudio, quiz de práctica bilingüe (ES/EN) (dos sistemas: el original y "quiz v2"), simulador de examen y glosario con lectura en voz alta, para el AWS Certified AI Practitioner, desplegada en GitHub Pages.
+SPA de guía de estudio, quiz de práctica bilingüe (ES/EN) (dos sistemas: el original y "quiz v2"), simulador de examen, glosario con lectura en voz alta, mapa conceptual, recorrido de estudio y mapa de experiencia, para el AWS Certified AI Practitioner, desplegada en GitHub Pages.
 
 ## Stack
 
@@ -8,6 +8,8 @@ SPA de guía de estudio, quiz de práctica bilingüe (ES/EN) (dos sistemas: el o
 - **Vite 6** — build y dev server (con `import.meta.glob` para carga perezosa de los sets de preguntas por idioma)
 - **React Router 7** (`HashRouter`) — enrutamiento del lado del cliente compatible con GitHub Pages sin configuración de servidor
 - **fuse.js** — búsqueda difusa (`Ctrl+K`) sobre el contenido de dominios/glosario
+- **lucide-react** — íconos, importados directo en cada componente (ver `docs/ARCHITECTURE.md`)
+- **d3-force** + **d3-zoom** + **d3-selection** — simulación de fuerzas y pan/zoom del mapa conceptual (`/mapa-conceptual`); el renderizado es SVG a mano, no una librería de gráficos todo-en-uno
 - CSS plano (`src/index.css`) con variables para tema claro/oscuro — sin framework de estilos
 - `@anthropic-ai/sdk`, `cheerio`, `zod` — solo como `devDependencies`, usados por los scripts one-off de los pipelines de contenido del quiz (original y v2) (no se incluyen en el bundle de la app)
 - `@aws-sdk/client-s3` — también solo como `devDependency`, usado por `scripts/upload-domain-audio.mjs` para subir el audio pre-generado del glosario a Cloudflare R2 (API compatible con S3)
@@ -50,8 +52,13 @@ src/
   glossaryDataSpoken.ts       # glosario versión "Profesor", reescrito para lectura en voz alta
   glossaryCards.ts            # parser HTML compartido: term-cards + segmentos de lectura en voz alta
   domainSearch.ts             # índice plano para la búsqueda global (Ctrl+K, fuse.js)
+  conceptGraph.ts             # conexiones curadas a mano entre términos del glosario (mapa conceptual)
   audioBase.ts               # URL del bucket R2 donde vive el audio pre-generado del glosario
   components/               # componentes de página y de UI (dominio, glosario, búsqueda, quiz, examen)
+    GlossaryAudioProvider.tsx   # sesión global de audio (motor + mini-reproductor + resumen + Now Playing)
+    ConceptMap.tsx, ConceptMapPage.tsx      # /mapa-conceptual
+    StudyJourneyPage.tsx                    # /recorrido
+    JourneyMapPage.tsx                      # /mapa-de-experiencia
   hooks/
     useReadAloud.ts, useAudioReadAloud.ts, useAudioAvailable.ts   # motores de lectura en voz alta
     useIsMobile.ts, useBodyScrollLock.ts

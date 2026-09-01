@@ -319,7 +319,17 @@ export default function QuizV2Page() {
         {isRevealed && (
           <div className={correct ? 'quiz-explanation correct' : 'quiz-explanation incorrect'}>
             <div className="quiz-explanation-head">
-              <p className="quiz-explanation-verdict">{correct ? '✓ Correcto' : '✗ Incorrecto'}</p>
+              <p className="quiz-explanation-verdict">
+                {correct ? (
+                  <>
+                    <Check size={15} strokeWidth={2.5} /> Correcto
+                  </>
+                ) : (
+                  <>
+                    <X size={15} strokeWidth={2.5} /> Incorrecto
+                  </>
+                )}
+              </p>
               {question.domain != null && domainByNumber[question.domain] && (
                 <Link to={`/dominio/${question.domain}`} className={`quiz-domain-badge d${question.domain}`}>
                   D{question.domain} · {domainByNumber[question.domain].name}

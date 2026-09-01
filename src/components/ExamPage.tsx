@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Check, X, Minus } from 'lucide-react';
 import QuizLangToggle from './QuizLangToggle.tsx';
 import ConfirmDialog from './ConfirmDialog.tsx';
 import { loadOriginalExamPool } from '../quiz/loadExamPool.ts';
@@ -318,7 +319,20 @@ export default function ExamPage() {
             <div key={q.id} className={correct ? 'quiz-explanation correct' : 'quiz-explanation incorrect'}>
               <div className="quiz-explanation-head">
                 <p className="quiz-explanation-verdict">
-                  {i + 1}. {correct ? '✓ Correcto' : !answered ? '— Sin responder' : '✗ Incorrecto'}
+                  {i + 1}.{' '}
+                  {correct ? (
+                    <>
+                      <Check size={15} strokeWidth={2.5} /> Correcto
+                    </>
+                  ) : !answered ? (
+                    <>
+                      <Minus size={15} strokeWidth={2.5} /> Sin responder
+                    </>
+                  ) : (
+                    <>
+                      <X size={15} strokeWidth={2.5} /> Incorrecto
+                    </>
+                  )}
                 </p>
                 {q.domain != null && domainByNumber[q.domain] && (
                   <Link to={`/dominio/${q.domain}`} className={`quiz-domain-badge d${q.domain}`}>

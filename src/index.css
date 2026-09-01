@@ -1701,7 +1701,7 @@
   .quiz-explanation.correct { border-color: var(--d1); }
   .quiz-explanation.incorrect { border-color: var(--d3); }
   .quiz-explanation-head { display: flex; align-items: center; justify-content: space-between; gap: 0.6rem; flex-wrap: wrap; margin: 0 0 0.6rem; }
-  .quiz-explanation-verdict { font-weight: 600; margin: 0; }
+  .quiz-explanation-verdict { display: flex; align-items: center; gap: 0.3rem; font-weight: 600; margin: 0; }
   .quiz-explanation.correct .quiz-explanation-verdict { color: var(--d1); }
   .quiz-explanation.incorrect .quiz-explanation-verdict { color: var(--d3); }
   .quiz-domain-badge {

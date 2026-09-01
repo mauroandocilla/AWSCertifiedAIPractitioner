@@ -1,9 +1,11 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { Volume2, Play, X } from 'lucide-react';
+import { Volume2, Play, X, ListChecks } from 'lucide-react';
 import { glossaryById } from '../glossaryData.ts';
 import { glossarySpokenById } from '../glossaryDataSpoken.ts';
-import { parseGlossaryCards } from '../glossaryCards.ts';
+import { parseGlossaryCards, stripHtml } from '../glossaryCards.ts';
 import { useGlossaryAudio } from './GlossaryAudioProvider.tsx';
+import { conceptIndex } from '../quiz/conceptIndex.ts';
+import RelatedQuestionsModal from './RelatedQuestionsModal.tsx';
 
 interface Props {
   id: string;
@@ -45,6 +47,7 @@ export default function GlossaryEntryContent({ id, highlightCardIndex, highlight
   const [flash, setFlash] = useState<number | 'bullet' | null>(null);
   const bulletRef = useRef<HTMLParagraphElement>(null);
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const [openConceptCard, setOpenConceptCard] = useState<number | null>(null);
 
   // The read-aloud engine and its player UI live in GlossaryAudioProvider,
   // mounted once above <Routes> -- not here. That's deliberate: this
@@ -148,14 +151,29 @@ export default function GlossaryEntryContent({ id, highlightCardIndex, highlight
           >
             <div className="term-card-head">
               <h4 dangerouslySetInnerHTML={{ __html: card.titleHtml }} />
-              <button type="button" className="term-card-speak-btn" onClick={() => session.playEntryRange(id, i)} aria-label="Escuchar este término">
-                <Volume2 size={15} strokeWidth={2} />
-              </button>
+              <div className="term-card-actions">
+                {(conceptIndex[`${id}#${i}`]?.length ?? 0) > 0 && (
+                  <button type="button" className="term-card-quiz-btn" onClick={() => setOpenConceptCard(i)} aria-label="Ver preguntas relacionadas">
+                    <ListChecks size={14} strokeWidth={2} />
+                    {conceptIndex[`${id}#${i}`].length}
+                  </button>
+                )}
+                <button type="button" className="term-card-speak-btn" onClick={() => session.playEntryRange(id, i)} aria-label="Escuchar este término">
+                  <Volume2 size={15} strokeWidth={2} />
+                </button>
+              </div>
             </div>
             <div dangerouslySetInnerHTML={{ __html: card.bodyHtml }} />
           </div>
         );
       })}
+
+      <RelatedQuestionsModal
+        open={openConceptCard !== null}
+        refs={openConceptCard !== null ? (conceptIndex[`${id}#${openConceptCard}`] ?? []) : []}
+        conceptTitle={openConceptCard !== null ? stripHtml(cards[openConceptCard]?.titleHtml ?? '') : ''}
+        onClose={() => setOpenConceptCard(null)}
+      />
     </div>
   );
 }

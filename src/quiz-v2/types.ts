@@ -8,6 +8,8 @@ interface QuizV2QuestionBase {
   text: string;
   explanationHtml: string;
   domain?: number | null;
+  /** Glossary term-card ids (`${glossId}#${cardIndex}`, see src/conceptGraph.ts) this question tests. See scripts/tag-quiz-v2-concepts.mjs. */
+  relatedConcepts?: string[];
 }
 
 export interface QuizV2SingleQuestion extends QuizV2QuestionBase {
@@ -52,6 +54,8 @@ interface QuizV2QuestionDataBase {
   text: Localized;
   explanationHtml: Localized;
   domain?: number | null;
+  /** Glossary term-card ids (`${glossId}#${cardIndex}`, see src/conceptGraph.ts) this question tests. See scripts/tag-quiz-v2-concepts.mjs. */
+  relatedConcepts?: string[];
 }
 
 export interface QuizV2SingleQuestionData extends QuizV2QuestionDataBase {

@@ -27,7 +27,10 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Las técnicas de procesamiento de imágenes son esenciales para mejorar la calidad de las imágenes modificando características como contraste y brillo. En contraste, los sistemas de visión por computadora interpretan y toman decisiones basadas en el contenido de la imagen, lo cual es útil en aplicaciones como monitoreo de inventario a través de detección y reconocimiento de objetos. Entender estas diferencias ayuda a elegir la tecnología de IA correcta para las tareas dentro de las operaciones minoristas.</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t1-b1#4"
+      ]
     },
     {
       "id": "20-2",
@@ -52,7 +55,10 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>AWS Identity and Access Management (IAM) permite la creación y gestión de usuarios y grupos de AWS, y el uso de permisos para permitir y denegar su acceso a recursos de AWS. Los roles de IAM ofrecen una forma de delegar acceso con permisos definidos, lo cual es más seguro y manejable en comparación con asignar permisos directamente a usuarios o compartir credenciales con privilegios más altos. Este enfoque respalda la práctica recomendada de AWS de seguir el principio del menor privilegio, donde los usuarios y roles reciben solo los permisos necesarios para realizar sus tareas.</p>"
+      "explanationHtml": "<p>AWS Identity and Access Management (IAM) permite la creación y gestión de usuarios y grupos de AWS, y el uso de permisos para permitir y denegar su acceso a recursos de AWS. Los roles de IAM ofrecen una forma de delegar acceso con permisos definidos, lo cual es más seguro y manejable en comparación con asignar permisos directamente a usuarios o compartir credenciales con privilegios más altos. Este enfoque respalda la práctica recomendada de AWS de seguir el principio del menor privilegio, donde los usuarios y roles reciben solo los permisos necesarios para realizar sus tareas.</p>",
+      "relatedConcepts": [
+        "gloss-d5-t1-b1#0"
+      ]
     },
     {
       "id": "20-4",
@@ -78,7 +84,12 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>La relación entre AI y ML es que ML es una rama específica bajo el paraguas de AI que se enfoca en aprender de datos para hacer predicciones o decisiones sin ser explícitamente programada para realizar esas tareas. Esta distinción es esencial para entender sus roles en las operaciones empresariales, donde AI podría impulsar la estrategia más amplia y ML maneja tareas específicas relacionadas con datos.</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t1-b1#0",
+        "gloss-d1-t1-b1#1",
+        "gloss-d1-t1-b2#0"
+      ]
     },
     {
       "id": "20-5",
@@ -104,7 +115,11 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>La respuesta correcta es computer vision, que se especializa específicamente en la interpretación y comprensión del contenido de imágenes para realizar acciones o tomar decisiones, como analizar imágenes de estantes de tiendas para gestionar el inventario de manera efectiva. A diferencia de image processing simple o image enhancement, computer vision puede analizar patrones, reconocer objetos y tomar decisiones basándose en los datos visuales, lo que respalda directamente las necesidades de la empresa de retail en este escenario.</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t1-b1#4",
+        "gloss-d1-t2-b4#0"
+      ]
     },
     {
       "id": "20-7",
@@ -130,7 +145,8 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>La característica Key Phrase Extraction de Amazon Comprehend es ideal para extraer frases significativas del texto, permitiendo a las empresas identificar temas frecuentes que aparecen repetidamente en datos como comentarios de clientes. Esta característica ayuda a entender temas u problemas comunes que mencionan los clientes, proporcionando así información útil para la mejora del negocio. Puedes encontrar más información sobre las características de Comprehend en la documentación oficial de AWS: <a href=\"https://aws.amazon.com/comprehend/features/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/comprehend/features/</a>\n\t\t\t\t\t\t</p>",
-      "domain": 3
+      "domain": 3,
+      "relatedConcepts": []
     },
     {
       "id": "20-8",
@@ -156,7 +172,11 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Amazon Textract es un servicio completamente gestionado de machine learning que extrae automáticamente texto, escritura manuscrita y datos de documentos escaneados. Es ideal para la tarea de procesar facturas y recibos debido a su capacidad para manejar varios formatos como PDFs, imágenes (JPEG, PNG), y extraer sin problemas datos estructurados como los de formularios y tablas sin necesidad de configuraciones de entrada manual. Esta capacidad facilita procesos eficientes y automatizados de entrada de datos. Para más información, puedes visitar la página oficial de Amazon Textract: <a href=\"https://aws.amazon.com/textract/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/textract/</a>\n\t\t\t\t\t\t</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t1-b1#4",
+        "gloss-d1-t2-b4#0"
+      ]
     },
     {
       "id": "20-9",
@@ -186,7 +206,11 @@
       ],
       "multiSelect": true,
       "explanationHtml": "<p>Para garantizar la precisión continua del modelo y el cumplimiento de estándares regulatorios, la empresa de servicios financieros debe utilizar Amazon SageMaker Model Monitor y Amazon Augmented AI (Amazon A2I). SageMaker Model Monitor monitorea continuamente los modelos de machine learning para detectar data drift y model drift, mientras que A2I facilita la revisión humana de las predicciones del modelo, asegurando alta precisión y cumplimiento normativo. Más información: <a href=\"https://aws.amazon.com/sagemaker/model-monitor/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/sagemaker/model-monitor/</a>, <a href=\"https://aws.amazon.com/augmented-ai/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/augmented-ai/</a></p>",
-      "domain": 5
+      "domain": 5,
+      "relatedConcepts": [
+        "gloss-d5-t2-b2#3",
+        "gloss-d5-t2-b2#4"
+      ]
     },
     {
       "id": "20-12",
@@ -212,7 +236,12 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Self-supervised learning es particularmente efectiva para tareas como la anotación automática de datos en Foundation Models porque genera etiquetas a partir de los propios datos. Este método es fundamental en el ámbito sanitario, donde anotar grandes cantidades de datos médicos como historiales de pacientes y notas clínicas puede ser costoso y llevar mucho tiempo. Al utilizar self-supervised learning, los modelos pueden crear anotaciones útiles que ayudan a mejorar análisis y predicciones posteriores.</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t1-b5#1",
+        "gloss-d1-t1-b5#0",
+        "gloss-d1-t2-b6#0"
+      ]
     },
     {
       "id": "20-13",
@@ -238,7 +267,8 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Entender las diferencias entre estos tipos de aprendizaje es clave para su aplicación en robótica. El aprendizaje por refuerzo es frecuentemente más adecuado para escenarios donde un agente debe tomar decisiones en un entorno dinámico y aprender de su propia experiencia, ya que implica aprender a maximizar recompensas en función de las acciones tomadas, algo similar a cómo un robot podría aprender a navegar o realizar tareas de manera autónoma. El aprendizaje supervisado, por otro lado, requeriría un conjunto de datos etiquetado de manera exhaustiva y precisa, y se utiliza típicamente para tareas de clasificación o regresión donde la relación entre entradas y salidas está bien definida y necesita ser generalizada a partir de ejemplos. </p>",
-      "domain": 3
+      "domain": 3,
+      "relatedConcepts": []
     },
     {
       "id": "20-14",
@@ -264,7 +294,12 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Entender la relación jerárquica entre las tecnologías de IA es fundamental para una implementación estratégica. IA es el concepto más amplio, que abarca ML, que a su vez incluye DL. Generative AI es una aplicación específica dentro de DL. Este conocimiento ayuda a priorizar inversiones e integrar efectivamente estas tecnologías en las estrategias empresariales.</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t1-b2#0",
+        "gloss-d1-t1-b1#2",
+        "gloss-d1-t1-b1#14"
+      ]
     },
     {
       "id": "20-15",
@@ -290,7 +325,12 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Amazon Comprehend es la opción óptima para análisis de sentimiento cuando se trata de analizar texto sin necesidad de desarrollar modelos específicos. Como servicio administrado de AWS, ofrece características de NLP previamente entrenadas que pueden analizar automáticamente texto, lo que la hace adecuada para aplicaciones que requieren análisis de sentimiento inmediato y efectivo. Este servicio admite varias tareas de NLP, incluyendo análisis de sentimiento, reconocimiento de entidades, detección de idioma y modelado de temas. Más detalles se pueden consultar en la página del producto Amazon Comprehend: <a href=\"https://aws.amazon.com/comprehend/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/comprehend/</a>\n\t\t\t\t\t\t</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t2-b5#3",
+        "gloss-d1-t1-b1#5",
+        "gloss-d1-t3-b3#0"
+      ]
     },
     {
       "id": "20-16",
@@ -316,7 +356,12 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Los Foundation Models, como los disponibles en el ecosistema de AWS, se entrenan previamente de manera extensiva en conjuntos de datos grandes y diversos. Este pre-entrenamiento les permite generalizar bien y realizar una amplia variedad de tareas que incluyen, entre otras, generación de texto, reconocimiento de imágenes y comprensión del lenguaje natural. Son efectivos para manejar tanto datos estructurados como no estructurados, lo que los hace altamente versátiles para diversas aplicaciones.</p>",
-      "domain": 2
+      "domain": 2,
+      "relatedConcepts": [
+        "gloss-d2-t1-b1#6",
+        "gloss-d2-t2-b4#0",
+        "gloss-d2-t1-b1#7"
+      ]
     },
     {
       "id": "20-17",
@@ -342,7 +387,10 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>La IA generativa se considera importante en aplicaciones tecnológicas modernas por su capacidad de generar autónomamente resultados de datos novedosos y complejos. Esta capacidad mejora la creatividad y la innovación, lo que la hace altamente valiosa para industrias como medios, entretenimiento y más allá. Las tecnologías de IA generativa pueden transformar la creación de contenido al proporcionar enfoques diversos e innovadores, lo que ayuda a elaborar materiales variados y atractivos.</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t1-b1#14"
+      ]
     },
     {
       "id": "20-19",
@@ -372,7 +420,12 @@
       ],
       "multiSelect": true,
       "explanationHtml": "<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<b>Incorrecto.</b> Amazon Bedrock es un servicio para acceder y personalizar foundation models (FMs). Si bien el análisis es importante para <em>evaluar</em> el desempeño de <em>aplicaciones</em> construidas usando FMs, Bedrock en sí no proporciona análisis en tiempo real para <em>entrenar y optimizar</em> los FMs en sí mismos. Esto generalmente lo manejan los proveedores de FMs.\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<b>Correcto.</b> Esta es una propuesta de valor central de Amazon Bedrock. Abstrae la complejidad de gestionar la infraestructura requerida para ejecutar grandes foundation models. Los usuarios pueden cambiar fácilmente entre diferentes FMs a través de una API unificada.\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<b>Incorrecto.</b> Amazon Bedrock está diseñado para ser flexible. Aunque proporciona acceso a FMs preentrenados, también soporta personalización para que puedas adaptarlos a casos de uso específicos, como recomendaciones personalizadas o chatbots, que es precisamente lo que describe la pregunta.\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<b>Incorrecto.</b> Un beneficio clave de Bedrock es que <em>se encarga de</em> la infraestructura. Los usuarios no necesitan implementar ni gestionar servidores, GPUs u otros recursos para los FMs.\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<b>Correcto.</b> Amazon Bedrock permite la personalización a través de técnicas como fine-tuning. Esto te permite incorporar tus datos específicos del dominio para mejorar el desempeño del modelo en tus tareas particulares. Críticamente, Bedrock está diseñado para hacer esto más accesible, reduciendo la necesidad de experiencia profunda en ML en comparación con entrenar un modelo desde cero.\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>",
-      "domain": 2
+      "domain": 2,
+      "relatedConcepts": [
+        "gloss-d2-t3-b1#0",
+        "gloss-d2-t3-b2#0",
+        "gloss-d2-t3-b2#1"
+      ]
     },
     {
       "id": "20-20",
@@ -398,7 +451,11 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>\n\t\t\t\t\t\t\t<strong>Correcto</strong>\n\t\t\t\t\t\t\t<b>Obtener y limpiar datos de alta calidad para entrenar modelos</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p>Este es casi universalmente reconocido como el <b>desafío más significativo</b> en proyectos de machine learning del mundo real, particularmente en entornos complejos y ricos en datos como el comercio minorista. </p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b>Heterogeneidad de datos:</b> Las empresas minoristas típicamente tienen datos dispersos en numerosos sistemas (POS, e-commerce, CRM, inventario, programas de lealtad, análisis web, cadena de suministro, redes sociales, etc.), cada uno con diferentes formatos, esquemas y frecuencias de actualización.\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b>Problemas de calidad de datos:</b> Estos datos a menudo sufren de inconsistencias, valores faltantes, duplicados, imprecisiones, información desactualizada y diferentes niveles de granularidad.\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b>Volumen y velocidad de datos:</b> El comercio minorista genera volúmenes enormes de datos a alta velocidad, lo que hace impráctica la limpieza manual.\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b>Complejidad de la ingeniería de características:</b> Convertir datos minoristas crudos y desorganizados en características significativas para modelos de ML (por ejemplo, valor de vida útil del cliente, probabilidad de abandono, afinidad de producto) requiere un esfuerzo significativo y experiencia en el dominio. El proceso de <b>adquisición, integración, limpieza y preparación de datos (a menudo referido como data wrangling o feature engineering)</b> consume la gran mayoría (a menudo 70-80%) del tiempo de un científico de datos y es frecuentemente el cuello de botella más grande y el punto de fallo para proyectos de ML. Sin datos de alta calidad, relevantes y bien preparados, incluso los modelos de ML más sofisticados producirán resultados poco confiables o pobres, haciendo que los pasos posteriores (ajuste de modelos, integración) sean menos efectivos.\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<strong>Incorrecto</strong>\n\t\t\t\t\t\t\t<b>Encontrar modelos de machine learning que se ajusten a los datos minoristas</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p>Generalmente este es un desafío <b>menos significativo</b> que la calidad de datos. Aunque seleccionar y ajustar el modelo correcto es importante, los algoritmos principales para tareas comunes de ML minorista (por ejemplo, clustering para segmentación, sistemas de recomendación para personalización, pronósticos) están bien establecidos y disponibles fácilmente a través de plataformas como Amazon SageMaker. El desafío radica más en adaptar estos modelos a la <i>calidad y estructura</i> de los datos minoristas disponibles, lo que vuelve al problema de calidad de datos. </p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<strong>Incorrecto</strong>\n\t\t\t\t\t\t\t<b>Integrar las salidas de machine learning en los sistemas de IT existentes</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p>Este es un <b>desafío significativo</b> a menudo referido como MLOps u operacionalización. Lograr que las predicciones del modelo (por ejemplo, recomendaciones personalizadas, insights de próxima mejor acción) lleguen a sistemas de producción en vivo (por ejemplo, plataformas de e-commerce, CRM, herramientas de automatización de marketing) requiere APIs robustas, pipelines de datos escalables y cambios en los flujos de trabajo existentes. Aunque crucial para materializar el valor empresarial, típicamente ocurre <i>después</i> de las fases de calidad de datos y construcción de modelos. La pobre calidad de datos a menudo significa que hay poco resultado valioso <i>para</i> integrar. </p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<strong>Incorrecto</strong>\n\t\t\t\t\t\t\t<b>Asegurar recursos computacionales suficientes para conjuntos de datos grandes</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p>En un entorno en la nube como AWS, <b>asegurar recursos computacionales suficientes generalmente no es el desafío más significativo</b> en términos de <i>disponibilidad</i>. AWS ofrece recursos de computación elásticos y escalables (por ejemplo, Amazon EC2, instancias de entrenamiento de SageMaker) y almacenamiento (por ejemplo, Amazon S3, Amazon Redshift) que pueden manejar prácticamente cualquier escala de datos. El desafío relacionado con recursos usualmente gira en torno a <b>optimización de costos y gestión eficiente de recursos</b>, en lugar de un obstáculo fundamental para obtener la potencia de cálculo necesaria, a diferencia de entornos on-premise. </p>",
-      "domain": 5
+      "domain": 5,
+      "relatedConcepts": [
+        "gloss-d5-t1-b3#0",
+        "gloss-d5-t1-b3#3"
+      ]
     },
     {
       "id": "20-21",
@@ -424,7 +481,10 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Proporcionar información sobre instancias de Amazon SageMaker subutilizadas para optimizar costos y asignación de recursos.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>Trusted Advisor incluye verificaciones específicamente dirigidas a <b>Optimización de costos</b> y <b>Rendimiento</b>. Si una instancia de Amazon SageMaker (usada para entrenamiento u hosting) está significativamente subutilizada, Trusted Advisor puede identificarla y recomendar un cambio en el tipo de instancia o una reducción de escala, impactando directamente en la <b>utilización de recursos</b> y <b>costos</b>. Esto se alinea con su función principal de proporcionar recomendaciones prácticas de mejores prácticas. </p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<strong>Incorrecto</strong>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Automatizar el despliegue y escalado de modelos de ML dentro de Amazon SageMaker.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>Trusted Advisor es una <b>herramienta de recomendación e inspección</b>, no un servicio de automatización u operacional. El despliegue y el escalado automatizado (por ejemplo, usando políticas de Auto Scaling para SageMaker Endpoints) son funciones manejadas por servicios como <b>Amazon SageMaker mismo</b> (Model Endpoints, Model Training Jobs), <b>AWS CloudFormation</b>, o <b>AWS CodePipeline/CodeDeploy</b>, no por Trusted Advisor. </p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Realizar verificaciones continuas de cumplimiento para configuraciones y ajustes de modelos de ML.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>Aunque Trusted Advisor realiza verificaciones de seguridad, las <b>verificaciones de cumplimiento</b> continuas y detalladas contra estándares específicos (como HIPAA, PCI DSS) y <b>reglas de configuración</b> complejas son principalmente responsabilidad de <b>AWS Config</b> y <b>AWS Security Hub</b>. Trusted Advisor ofrece mejores prácticas de seguridad de alto nivel, pero Config y Security Hub están diseñados para el monitoreo de cumplimiento granular y continuo de configuraciones de recursos como modelos y endpoints de ML. </p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Ofrecer orientación sobre actualizar Amazon SageMaker a los últimos algoritmos y características de ML automáticamente.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>Trusted Advisor no proporciona actualizaciones de características automatizadas ni orientación sobre qué <b>algoritmos de ML</b> usar. Se enfoca en la <b>salud y eficiencia de la infraestructura de AWS</b>. Las actualizaciones y la adopción de características generalmente son responsabilidad del usuario, informadas por la <b>documentación de SageMaker</b> y el ciclo de lanzamiento del servicio. Esto está fuera del alcance de las verificaciones de Trusted Advisor. </p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>",
-      "domain": 5
+      "domain": 5,
+      "relatedConcepts": [
+        "gloss-d5-t2-b1#5"
+      ]
     },
     {
       "id": "20-22",
@@ -450,7 +510,12 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Utilizar Retrieval Augmented Generation (RAG) con Knowledge Bases en Amazon Bedrock para complementar el Foundation Model usando información contextual de los datos privados de la empresa.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p>Para la tarea específica de \"enriquecer\" un Foundation Model (FM) con datos organizacionales propios sin alterar el modelo en sí, RAG es la técnica más efectiva y recomendada. Una Knowledge Base para Amazon Bedrock es un servicio completamente administrado de AWS que implementa el patrón RAG. Funciona de la siguiente manera: </p>\n\t\t\t\t\t\t<ol start=\"1\">\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<b>Ingiere</b>&nbsp;los datos propios de la empresa (por ejemplo, documentos de pólizas, información de clientes) en un vector store.\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<b>Recupera</b>&nbsp;el contexto más relevante de estos datos cuando un usuario hace una pregunta.\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<b>Aumenta</b>&nbsp;el prompt del usuario con este contexto recuperado antes de enviarlo al FM en Amazon Bedrock.\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ol>\n\t\t\t\t\t\t<p>Esto proporciona recomendaciones altamente personalizadas y precisas basadas en los datos específicos de la empresa, sin el costo, tiempo y barreras técnicas del fine-tuning. Es la solución ideal para integrar datos privados para enriquecimiento contextual. </p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Aprovechar un sistema de Control de Acceso Basado en Atributos (ABAC) con Amazon Bedrock para gestionar y complementar la privacidad de datos mientras se mejora el Foundation Model.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p>ABAC es una estrategia de autorización poderosa para controlar el <em>acceso</em>&nbsp;a recursos de AWS (como quién puede invocar un modelo de Bedrock) basándose en atributos (por ejemplo, departamento, proyecto). Sin embargo, es un <b>mecanismo de control de acceso y seguridad</b>. No tiene ninguna capacidad para \"complementar\" o \"mejorar\" el conocimiento o la salida de un Foundation Model con datos propios. Gestiona quién puede usar el modelo, no qué sabe el modelo. </p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Hacer fine-tuning del Foundation Model directamente dentro de Amazon Bedrock, utilizando los datos propios de la compañía aseguradora para refinar las predicciones.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p>Aunque fine-tuning es una técnica válida para adaptar un modelo, <b>no es la más efectiva</b>&nbsp;para este escenario. La pregunta pide la forma más efectiva de \"enriquecer\" o \"complementar\" el modelo. Fine-tuning implica continuar entrenando los pesos del modelo en un conjunto de datos nuevo, lo que es computacionalmente costoso, requiere mucho tiempo y necesita experiencia significativa. Más importante aún, está diseñado para enseñar a un modelo un nuevo <em>estilo</em>&nbsp;o <em>tarea</em>, no para integrar eficientemente un corpus grande y en evolución de datos propios para consultas contextuales. RAG es más adecuado, rentable y ágil para este caso de uso. </p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Usar Knowledge Bases en Amazon Bedrock para complementar el Foundation Model con contexto de los datos privados de la empresa a través de Direct Model Tuning.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p>Esta opción es un distractor porque combina incorrectamente dos conceptos distintos. La primera parte, \"Usar Knowledge Bases en Amazon Bedrock para complementar el Foundation Model con contexto\", describe correctamente el enfoque RAG (razón por la que la opción D es correcta). Sin embargo, la segunda parte, \"a través de Direct Model Tuning\", es incorrecta. Knowledge Bases no realizan ningún tuning del modelo; proporcionan contexto a un modelo base <em>sin entrenar</em> a través de RAG. \"Direct Model Tuning\" es sinónimo de fine-tuning, que es un proceso separado. </p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t2-b4#6",
+        "gloss-d1-t2-b6#0",
+        "gloss-d1-t3-b2#1"
+      ]
     },
     {
       "id": "20-23",
@@ -476,7 +541,12 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p><b>Amazon Rekognition</b></p>\n\t\t\t\t\t\t<p>Amazon Rekognition es el servicio de AWS para tareas de computer vision (CV). Cumple perfectamente con los requisitos al ofrecer: </p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<b>Modelos Preentrenados:</b>&nbsp;Proporciona un amplio conjunto de APIs listas para usar en tareas de CV como detección de objetos (para inventario), detección de personas y monitoreo de actividades sospechosas (para seguridad), que abordan directamente los casos de uso.\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<b>Capacidad de Personalización:</b>&nbsp;A través de Amazon Rekognition Custom Labels, el servicio te permite entrenar un modelo de CV personalizado usando tus propias imágenes etiquetadas. Esto realiza un fine-tuning de un modelo preentrenado para tus necesidades específicas (por ejemplo, identificar un producto único de la tienda o un escenario de seguridad particular) sin necesidad de construir un modelo desde cero.\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p><b>Amazon SageMaker</b></p>\n\t\t\t\t\t\t<p>Aunque Amazon SageMaker es un servicio potente para construir, entrenar e implementar <em>cualquier</em>&nbsp;tipo de modelo de machine learning, incluyendo modelos de computer vision personalizados, no es principalmente un servicio de&nbsp;<b>modelos preentrenados</b>. Usar SageMaker para esta tarea requeriría que la empresa encuentre o construya una arquitectura de modelo, prepare conjuntos de datos extensos y maneje todo el ciclo de vida del entrenamiento por su cuenta. Esto es mucho más complejo e intensivo en recursos que aprovechar un servicio especializado y preentrenado como Rekognition que además ofrece personalización. </p>\n\t\t\t\t\t\t<p><b>Amazon DeepRacer</b></p>\n\t\t\t\t\t\t<p>Amazon DeepRacer es un servicio enfocado exclusivamente en aprendizaje por refuerzo para el propósito específico de carreras autónomas. Es una herramienta educativa y divertida para aprender conceptos de ML pero no está diseñada para tareas generales de computer vision como gestión de inventario o seguridad en tienda. No proporciona modelos de CV preentrenados para estas aplicaciones comerciales. </p>\n\t\t\t\t\t\t<p><b>Amazon Textract</b></p>\n\t\t\t\t\t\t<p>Amazon Textract es un servicio altamente especializado para <b>análisis de texto en documentos</b>. Sus modelos preentrenados están diseñados para extraer texto, escritura a mano y datos de documentos escaneados, PDFs y formularios. No es un servicio de computer vision de propósito general y no puede usarse para monitoreo visual, detección de objetos en una tienda o mejora de seguridad mediante análisis de video. </p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t1-b1#4",
+        "gloss-d1-t2-b4#0",
+        "gloss-d1-t3-b2#0"
+      ]
     },
     {
       "id": "20-26",
@@ -502,7 +572,12 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Amazon OpenSearch Service es la opción más adecuada para una aplicación de IA que requiere recuperación rápida y clasificación basada en relevancia de documentos. Este servicio no solo ofrece capacidades de búsqueda de texto completo a gran escala, sino que también cuenta con características como indexación en tiempo real y control ajustado sobre la puntuación de relevancia, que son vitales para aplicaciones de Retrieval-Augmented Generation. Esto garantiza que la solución implementada sea eficiente al proporcionar respuestas contextualmente relevantes basadas en las consultas del usuario. Para obtener más información sobre las capacidades de Amazon OpenSearch Service, visita: <a href=\"https://aws.amazon.com/opensearch-service/the-elk-stack/what-is-opensearch/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/opensearch-service/the-elk-stack/what-is-opensearch/</a>\n\t\t\t\t\t\t</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t2-b4#6",
+        "gloss-d1-t2-b5#0",
+        "gloss-d1-t3-b4#0"
+      ]
     },
     {
       "id": "20-29",
@@ -528,7 +603,10 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Para un monitoreo efectivo de las invocaciones de modelos de machine learning, es crucial registrar y rastrear directamente los conjuntos de datos de entrada y salida involucrados en cada invocación. Aunque AWS CloudTrail y AWS Config son útiles para diferentes aspectos del monitoreo y cumplimiento, el registro detallado de invocaciones del modelo específicamente permite visibilidad sobre las transacciones operacionales de los modelos, lo cual es crucial para el cumplimiento normativo y la solución de problemas. Estos logs pueden ser auditados para garantizar el uso adecuado y solucionar cualquier problema que surja, manteniendo así una gobernanza y transparencia rigurosas.</p>",
-      "domain": 3
+      "domain": 3,
+      "relatedConcepts": [
+        "gloss-d3-t3-b3#1"
+      ]
     },
     {
       "id": "20-30",
@@ -554,7 +632,8 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>En el contexto de los servicios de AWS y el proceso de ciencia de datos, el Análisis Exploratorio de Datos (EDA) es una fase crucial donde se realiza una exploración inicial de los datos para entender sus características a través de estadísticas y visualizaciones. Este enfoque ayuda a identificar patrones e insights subyacentes que informan los pasos posteriores, como la construcción de modelos o predicciones. Se distingue de la preparación de datos, la ingeniería de características y la implementación del modelo, cada una cumpliendo funciones diferentes en el ciclo de vida de un proyecto de ciencia de datos.</p>",
-      "domain": 5
+      "domain": 5,
+      "relatedConcepts": []
     },
     {
       "id": "20-31",
@@ -580,7 +659,8 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>AWS Glue DataBrew permite a los científicos de datos limpiar y normalizar datos directamente dentro del servicio, utilizando una interfaz visual sin necesidad de escribir código personalizado. Esto incluye operaciones como manejar valores faltantes y eliminar redundancias, lo que simplifica el proceso de preparación de datos para machine learning. Más información: <a href=\"https://aws.amazon.com/glue/features/databrew/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/glue/features/databrew/</a>\n\t\t\t\t\t\t</p>",
-      "domain": 2
+      "domain": 2,
+      "relatedConcepts": []
     },
     {
       "id": "20-32",
@@ -606,7 +686,12 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Aumentar la cantidad de datos de entrenamiento ayuda a que un modelo de machine learning generalice mejor al aprender un espectro más amplio de patrones y reducir la sensibilidad del modelo al ruido dentro de un conjunto de datos limitado. Este enfoque es particularmente efectivo en análisis sanitario, donde la diversidad demográfica de los pacientes y los antecedentes médicos variados son críticos para hacer predicciones precisas. La generalización es un objetivo fundamental en machine learning, asegurando que un modelo tenga un buen desempeño con datos nuevos no vistos anteriormente, no solo con los datos en los que fue entrenado.</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t1-b1#12",
+        "gloss-d1-t1-b1#8",
+        "gloss-d1-t3-b5#8"
+      ]
     },
     {
       "id": "20-33",
@@ -632,7 +717,10 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>CloudWatch Alarms está específicamente diseñado para monitorear métricas y activar acciones como notificaciones cuando se superan ciertos umbrales. Esto es crucial para mantener el rendimiento y la confiabilidad de los modelos de machine learning en producción al proporcionar alertas oportunas que permiten tomar acciones preventivas. Más información: <a href=\"https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/AlarmThatSendsEmail.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/AlarmThatSendsEmail.html</a>\n\t\t\t\t\t\t</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t3-b5#5"
+      ]
     },
     {
       "id": "20-34",
@@ -658,7 +746,12 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Los Foundation Models, como los utilizados en tareas de IA generativa, se preentrenan usando self-supervised learning, lo que implica aprender a partir de datos sin etiquetar para generar una comprensión amplia que sea útil en una variedad de tareas. El fine-tuning de estos modelos para tareas o industrias específicas, como la generación de reportes financieros, generalmente requiere supervised learning, donde el modelo se entrena con datos etiquetados para realizar tareas específicas con precisión.</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t1-b5#0",
+        "gloss-d1-t1-b1#13",
+        "gloss-d1-t1-b1#8"
+      ]
     },
     {
       "id": "20-35",
@@ -684,7 +777,8 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>En IA generativa y procesamiento de lenguaje natural en AWS, los 'tokens' son las unidades fundamentales de datos de texto que procesan los modelos. Cada token típicamente representa una palabra, parte de una palabra o un carácter, lo que es crucial para entender y generar texto. Los tokens son esenciales para tareas como clasificación de texto, traducción automática y análisis de sentimiento. Entender el rol de los tokens ayuda a diseñar y entrenar mejor modelos de IA, incluyendo los que se usan en servicios de IA de AWS.</p>",
-      "domain": 3
+      "domain": 3,
+      "relatedConcepts": []
     },
     {
       "id": "20-36",
@@ -710,7 +804,11 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>La operación de API 'AnalyzeDocument' de Amazon Textract está diseñada para procesar tanto el texto del documento como su estructura, incluyendo tablas y formularios, automatizando eficientemente los procesos de extracción de datos y análisis de documentos para la industria legal y otros sectores con gran volumen documental. Al procesar documentos complejos para detectar y extraer pares clave-valor y tablas, ofrece una solución robusta para transformar tareas tradicionales de manejo de documentos en flujos de trabajo automatizados. Más información: <a href=\"https://aws.amazon.com/textract/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/textract/</a></p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t1-b1#4",
+        "gloss-d1-t2-b1#2"
+      ]
     },
     {
       "id": "20-37",
@@ -736,7 +834,11 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>AWS Step Functions es el servicio óptimo para orquestar workflows complejos que incluyen múltiples etapas como preprocesamiento de datos, entrenamiento de modelos, evaluación e implementación de modelos. Se integra perfectamente con otros servicios de AWS, proporcionando una solución robusta para gestionar pipelines de machine learning, asegurando que las operaciones se automaticen y coordinen efectivamente entre servicios. Más información: <a href=\"https://aws.amazon.com/step-functions/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/step-functions/</a>\n\t\t\t\t\t\t</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t3-b1#0",
+        "gloss-d1-t3-b5#1"
+      ]
     },
     {
       "id": "20-38",
@@ -762,7 +864,12 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Amazon Rekognition proporciona potentes capacidades de análisis de imágenes y video, lo que la hace adecuada para tareas como reconocimiento facial, detección de objetos y etiquetado de medios. Sin embargo, no maneja tareas relacionadas con procesamiento de lenguaje o interfaces multilingües, que requieren un conjunto diferente de herramientas como Amazon Translate o Amazon Comprehend.</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t1-b1#4",
+        "gloss-d1-t1-b1#5",
+        "gloss-d1-t2-b5#2"
+      ]
     },
     {
       "id": "20-39",
@@ -788,7 +895,10 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Amazon Translate es un servicio de traducción automática neuronal que utiliza modelos de aprendizaje profundo para proporcionar traducciones más precisas y naturales que los algoritmos de traducción estadísticos y basados en reglas tradicionales. Es especialmente efectivo en escenarios que involucran grandes volúmenes de contenido generado por usuarios, como traducir reseñas de usuarios en un sitio de comercio electrónico, donde puede ayudar a derribar barreras idiomáticas y hacer que el contenido sea accesible para una audiencia más amplia. Más información: <a href=\"https://aws.amazon.com/translate/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/translate/</a>\n\t\t\t\t\t\t</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t2-b5#2"
+      ]
     },
     {
       "id": "20-40",
@@ -814,7 +924,12 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Para un few-shot learning eficiente en el reconocimiento de intenciones, es vital utilizar ejemplos de entrenamiento que conecten claramente las consultas del usuario con sus respectivas intenciones. Este método asegura que el modelo aprenda la conexión entre frases específicas utilizadas por los usuarios y las intenciones correspondientes, mejorando así su capacidad para predecir con precisión la intención del usuario basándose en las consultas de entrada. Este enfoque de entrenamiento se alinea con las prácticas de aprendizaje supervisado, donde el etiquetado claro de puntos de datos ayuda sustancialmente en la precisión del modelo y su capacidad de generalización.</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t1-b5#0",
+        "gloss-d1-t1-b4#0",
+        "gloss-d1-t2-b3#1"
+      ]
     },
     {
       "id": "20-41",
@@ -840,7 +955,12 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>En Amazon Bedrock, el parámetro Temperature es crucial para influir en la creatividad de los resultados. Un valor más alto de Temperature promueve diversidad y novedad en las respuestas, lo cual es beneficioso para tareas creativas como publicidad o creación de contenido. Este setting ayuda a explorar caminos más únicos y menos comunes durante la generación de texto, lo que lo hace ideal para crear guiones creativos para marketing.</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t3-b4#0",
+        "gloss-d1-t1-b1#14",
+        "gloss-d1-t1-b1#13"
+      ]
     },
     {
       "id": "20-42",
@@ -866,7 +986,10 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Gestionar correctamente los permisos de acceso en AWS es fundamental para garantizar que los recursos se accedan y modifiquen de forma segura, apoyando tanto la eficiencia operativa como el cumplimiento normativo. Las IAM Policies de AWS proporcionan un método robusto para definir permisos granulares, lo que ayuda a prevenir accesos no autorizados a recursos sensibles como instancias de AWS SageMaker. Estas policies pueden asociarse a roles de IAM o directamente a usuarios e incluir condiciones como la hora del día, la IP de origen y muchas otras, ofreciendo un control muy granular. Más información: [AWS IAM Policies](<a href=\"https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html</a>) </p>",
-      "domain": 5
+      "domain": 5,
+      "relatedConcepts": [
+        "gloss-d5-t1-b1#0"
+      ]
     },
     {
       "id": "20-43",
@@ -892,7 +1015,12 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>En modelos de IA generativa como los utilizados para traducción de idiomas, los tokens y embeddings juegan roles críticos. Los tokens dividen el texto en partes manejables (como palabras o caracteres), que luego son representadas por embeddings como vectores numéricos en un espacio de alta dimensionalidad. Estos embeddings ayudan al modelo de IA a entender los matices y el significado en los datos, mejorando así sus capacidades de traducción. Comprender estos conceptos es fundamental para optimizar el rendimiento de los modelos de IA en el procesamiento del lenguaje natural.</p>",
-      "domain": 2
+      "domain": 2,
+      "relatedConcepts": [
+        "gloss-d2-t1-b1#0",
+        "gloss-d2-t1-b1#2",
+        "gloss-d2-t1-b1#3"
+      ]
     },
     {
       "id": "20-44",
@@ -918,7 +1046,11 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>El trade-off entre sesgo y varianza en machine learning implica equilibrar las complejidades y suposiciones de un modelo para minimizar errores. Un modelo con sesgo alto puede no ajustarse bien a los datos, falzando en capturar el patrón subyacente, mientras que un modelo con varianza alta puede sobreajustarse, capturando ruido en lugar del patrón. Encontrar el equilibrio correcto es crucial para construir modelos efectivos, especialmente en un entorno escalable como AWS donde diferentes tipos de datos y recursos computacionales pueden influir en el comportamiento del modelo.</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t1-b1#10",
+        "gloss-d1-t1-b1#12"
+      ]
     },
     {
       "id": "20-45",
@@ -944,7 +1076,12 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Amazon Rekognition Video es la opción más adecuada para este escenario, ya que proporciona capacidades integradas para analizar streams de video en tiempo real, ofreciendo insights como rango de edad y distribución de género sin almacenar ningún dato personal. Permite que los negocios obtengan valiosos insights demográficos mientras aseguran privacidad y cumplimiento con regulaciones de protección de datos. Esta capacidad de procesamiento en tiempo real es crucial para entender dinámicamente los patrones de clientes a lo largo del día. Para más detalles, consulta la documentación de Amazon Rekognition Video: <a href=\"https://docs.aws.amazon.com/rekognition/latest/dg/streaming-video.html\" rel=\"noopener\" target=\"_blank\">https://docs.aws.amazon.com/rekognition/latest/dg/streaming-video.html</a>\n\t\t\t\t\t\t</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t1-b1#4",
+        "gloss-d1-t1-b3#1",
+        "gloss-d1-t2-b4#0"
+      ]
     },
     {
       "id": "20-46",
@@ -970,7 +1107,10 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Amazon Translate es la mejor opción para integrar traducción de idiomas en tiempo real en aplicaciones. Admite múltiples idiomas y puede manejar grandes volúmenes de texto. Esto la hace particularmente útil en escenarios de atención al cliente donde los agentes necesitan interactuar con clientes que hablan diferentes idiomas. Al proporcionar traducciones de alta calidad, garantiza una comunicación efectiva entre barreras de idiomas, mejorando la satisfacción del cliente y la eficiencia del operador.</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t2-b5#2"
+      ]
     },
     {
       "id": "20-47",
@@ -996,7 +1136,8 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>El servicio Neural Text-to-Speech (NTTS) de Amazon Polly ofrece una selección de voces realistas y admite múltiples idiomas, lo que lo hace ideal para aplicaciones como audiolibros donde la voz de alta calidad y sonido natural es crucial. Las voces NTTS utilizan aprendizaje profundo para producir voz que puede transmitir diversas emociones y estilos de habla, mejorando la experiencia del oyente.</p>",
-      "domain": 2
+      "domain": 2,
+      "relatedConcepts": []
     },
     {
       "id": "20-49",
@@ -1022,7 +1163,12 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>La solución más adecuada para integrar información contextual y propietaria en un Foundation Model (FM) utilizado en Amazon Bedrock es a través de Retrieval Augmented Generation (RAG). RAG complementa las capacidades generativas del FM incorporando datos externos directamente durante el proceso de generación de resultados, lo que la hace particularmente útil para mejorar las recomendaciones de productos con detalles específicos de la empresa. Este enfoque aprovecha la flexibilidad de Amazon Bedrock para manejar diversas fuentes de datos sin problemas y mejorar los sistemas de recomendación.</p>",
-      "domain": 3
+      "domain": 3,
+      "relatedConcepts": [
+        "gloss-d3-t1-b3#0",
+        "gloss-d3-t1-b5#3",
+        "gloss-d3-t1-b5#1"
+      ]
     },
     {
       "id": "20-50",
@@ -1048,7 +1194,12 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>El fine-tuning es un proceso donde un modelo pre-entrenado se ajusta o se «afina» adicionalente en un dataset específico del dominio. Esta técnica modifica los pesos del modelo a través de entrenamiento adicional para hacerlo más efectivo en tareas específicas, lo cual es esencial para aplicaciones como recomendaciones de productos personalizadas en e-commerce. Esto la convierte en la mejor opción para actualizar directamente los pesos del modelo y lograr un desempeño superior en un área de aplicación específica.</p>",
-      "domain": 3
+      "domain": 3,
+      "relatedConcepts": [
+        "gloss-d3-t3-b1#1",
+        "gloss-d3-t1-b5#1",
+        "gloss-d3-t3-b2#2"
+      ]
     }
   ]
 }

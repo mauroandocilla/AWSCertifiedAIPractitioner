@@ -27,7 +27,12 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Los guardrails ayudan a prevenir contenido inapropiado o no deseado.</p>",
-      "domain": 2
+      "domain": 2,
+      "relatedConcepts": [
+        "gloss-d2-t3-b1#0",
+        "gloss-d2-t3-b3#0",
+        "gloss-d2-t3-b3#2"
+      ]
     },
     {
       "id": "1-2",
@@ -53,7 +58,10 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>El contexto proporciona información relevante que mejora la calidad y precisión de las respuestas.</p>",
-      "domain": 3
+      "domain": 3,
+      "relatedConcepts": [
+        "gloss-d3-t2-b1#0"
+      ]
     },
     {
       "id": "1-3",
@@ -78,7 +86,11 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Amazon Rekognition mejora la seguridad y la vigilancia analizando imágenes y videos para detectar amenazas.</p>"
+      "explanationHtml": "<p>Amazon Rekognition mejora la seguridad y la vigilancia analizando imágenes y videos para detectar amenazas.</p>",
+      "relatedConcepts": [
+        "gloss-d1-t1-b1#4",
+        "gloss-d1-t2-b4#0"
+      ]
     },
     {
       "id": "1-4",
@@ -104,7 +116,11 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>SageMaker Data Wrangler simplifica la preparación de datos e ingeniería de características, pasos cruciales en el desarrollo de modelos de IA generativa.</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t2-b5#0",
+        "gloss-d1-t3-b1#0"
+      ]
     },
     {
       "id": "1-5",
@@ -130,7 +146,11 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Los playgrounds permiten experimentar con prompts y configuraciones de modelos.</p>",
-      "domain": 2
+      "domain": 2,
+      "relatedConcepts": [
+        "gloss-d2-t3-b1#0",
+        "gloss-d2-t1-b1#4"
+      ]
     },
     {
       "id": "1-6",
@@ -156,7 +176,11 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>El descenso de gradiente se utiliza para minimizar la función de pérdida en los modelos de machine learning.</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t1-b1#8",
+        "gloss-d1-t3-b5#7"
+      ]
     },
     {
       "id": "1-7",
@@ -182,7 +206,10 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Una época se refiere a un pase completo a través de todo el conjunto de datos de entrenamiento.</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t3-b5#7"
+      ]
     },
     {
       "id": "1-8",
@@ -208,7 +235,8 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>La maldición de la dimensionalidad se refiere al fenómeno donde espacios de alta dimensionalidad complican el análisis de datos y el desempeño del modelo.</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": []
     },
     {
       "id": "1-10",
@@ -234,7 +262,11 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>El fine-tuning de modelos base con datos específicos del dominio optimiza su rendimiento.</p>",
-      "domain": 3
+      "domain": 3,
+      "relatedConcepts": [
+        "gloss-d3-t3-b1#1",
+        "gloss-d3-t3-b2#1"
+      ]
     },
     {
       "id": "1-11",
@@ -260,7 +292,11 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>AWS aborda el impacto social de la IA priorizando la equidad, la privacidad y la seguridad.</p>",
-      "domain": 4
+      "domain": 4,
+      "relatedConcepts": [
+        "gloss-d4-t1-b1#1",
+        "gloss-d4-t1-b1#4"
+      ]
     },
     {
       "id": "1-13",
@@ -285,7 +321,12 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Las marcas de agua ayudan a identificar contenido generado por IA y reducir la propagación de desinformación.</p>"
+      "explanationHtml": "<p>Las marcas de agua ayudan a identificar contenido generado por IA y reducir la propagación de desinformación.</p>",
+      "relatedConcepts": [
+        "gloss-d4-t1-b1#5",
+        "gloss-d4-t2-b4#1",
+        "gloss-d4-t1-b1#4"
+      ]
     },
     {
       "id": "1-14",
@@ -311,7 +352,12 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Amazon SageMaker Ground Truth proporciona servicios de etiquetado de datos para crear conjuntos de datos de entrenamiento de alta calidad.</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t1-b4#0",
+        "gloss-d1-t2-b5#0",
+        "gloss-d1-t1-b1#8"
+      ]
     },
     {
       "id": "1-15",
@@ -337,7 +383,11 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Un buen modelo de machine learning típicamente tiene sesgo bajo y varianza baja, lo que asegura que generalice bien a nuevos datos.</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t1-b1#10",
+        "gloss-d1-t1-b1#12"
+      ]
     },
     {
       "id": "1-16",
@@ -363,7 +413,11 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Ensemble learning se refiere a combinar múltiples modelos para mejorar el desempeño predictivo.</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t1-b1#6",
+        "gloss-d1-t1-b1#7"
+      ]
     },
     {
       "id": "1-18",
@@ -389,7 +443,12 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>\n\t\t\t\t\t\t\t<b><span>Over-sampling aleatorio de la clase minoritaria</span></b><span> es una técnica comúnmente utilizada para manejar datasets desbalanceados.</span><span>&nbsp;</span>Así es cómo funciona:\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ol>\n\t\t\t\t\t\t\t<li><b>Identificar la clase minoritaria:</b> Determina la clase que tiene menos muestras.</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b><span>Muestreo aleatorio:</span></b><span> Selecciona aleatoriamente muestras de la clase minoritaria con reemplazo y agrégalas al dataset de entrenamiento.</span><span> &nbsp;</span>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li><b>Balancear el dataset:</b> Repite el proceso de muestreo hasta que la cantidad de muestras de la clase minoritaria sea igual o cercana a la cantidad de muestras de la clase mayoritaria.</li>\n\t\t\t\t\t\t</ol>\n\t\t\t\t\t\t<p><span>Esta técnica ayuda a balancear el dataset e impide que el modelo tenga sesgo hacia la clase mayoritaria.</span><span>&nbsp;</span>Otras técnicas para manejar datasets desbalanceados incluyen:</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b><span>Under-sampling de la clase mayoritaria:</span></b><span> Remover aleatoriamente muestras de la clase mayoritaria.</span><span> &nbsp;</span>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b><span>Usar una combinación de técnicas de oversampling y undersampling.</span></b><span>&nbsp;</span>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b><span>Usar técnicas avanzadas como SMOTE (Synthetic Minority Over-sampling Technique).</span></b><span>&nbsp; &nbsp;</span><b>Ajustar los pesos de las clases en el modelo.</b>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>La mejor técnica a utilizar depende del dataset específico y del problema en cuestión. Es importante experimentar con diferentes técnicas y evaluar su desempeño utilizando métricas apropiadas como F1-score, precision y recall.</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t1-b1#10",
+        "gloss-d1-t3-b6#3",
+        "gloss-d1-t3-b6#1"
+      ]
     },
     {
       "id": "1-20",
@@ -415,7 +474,10 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>El objetivo principal del aprendizaje reforzado es <b>maximizar la recompensa acumulada</b>.</p>\n\t\t\t\t\t\t<p>Aquí te detallamos:</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b>Reinforcement Learning (RL):</b>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li><span>RL implica que un agente aprenda a tomar decisiones en un entorno interactuando con él.</span><span>&nbsp;</span></li>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<span>El agente recibe retroalimentación en forma de recompensas o penalizaciones.</span>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t<li>El objetivo es aprender una política (un conjunto de reglas) que maximice la recompensa total recibida a lo largo del tiempo.</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>Aquí te explicamos por qué las otras opciones son incorrectas:</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b><span>Reducir la dimensionalidad de los datos:</span></b><span> Este es el objetivo principal de las técnicas de reducción de dimensionalidad (por ejemplo, PCA).</span><span>&nbsp;</span>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li><b>Agrupar puntos de datos similares:</b> Este es el objetivo principal de los algoritmos de clustering (por ejemplo, k-means).</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<b><span>Predecir valores futuros:</span></b><span> Este es el objetivo principal de tareas de aprendizaje supervisado como la regresión.</span>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t1-b5#2"
+      ]
     },
     {
       "id": "1-21",
@@ -441,7 +503,12 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p><b>Gradient Boosting</b></p>\n\t\t\t\t\t\t<p>Los algoritmos de Gradient Boosting (como XGBoost, que se usa ampliamente en AWS, por ejemplo, en el contenedor XGBoost integrado de SageMaker) son particularmente adecuados para conjuntos de datos grandes con muchas características (datos de alta dimensionalidad). Destacan porque son métodos de ensemble potentes que corrigen secuencialmente los errores de modelos anteriores, lo que genera una precisión predictiva muy alta. Manejan efectivamente relaciones complejas y no lineales en los datos e incluyen regularización integrada para prevenir el sobreajuste, que es un riesgo común con muchas características. En el contexto de los servicios de AWS AI, Gradient Boosting es la opción preferida para problemas con datos estructurados/tabulares que involucran conjuntos de datos a gran escala y ricos en características. </p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p><b>Naive Bayes</b></p>\n\t\t\t\t\t\t<p>Naive Bayes generalmente <b>no</b>&nbsp;es la mejor opción para conjuntos de datos con \"muchas características\". Su suposición central es que todas las características son independientes entre sí, lo que rara vez es cierto en conjuntos de datos complejos de alta dimensionalidad. Esta suposición \"ingenua\" a menudo falla cuando hay muchas características correlacionadas, lo que genera un desempeño subóptimo y una precisión pobre comparado con algoritmos más sofisticados como Gradient Boosting. </p>\n\t\t\t\t\t\t<p><b>Random Forest</b></p>\n\t\t\t\t\t\t<p>Aunque Random Forest es un algoritmo de ensemble robusto que puede manejar conjuntos de datos grandes y es menos propenso al sobreajuste que los árboles de decisión individuales, a menudo es superado por <b>Gradient Boosting</b>&nbsp;en términos de precisión predictiva pura, especialmente en datos estructurados con muchas características. Random Forest construye árboles en paralelo y puede ser más eficiente computacionalmente para el entrenamiento, pero el enfoque de corrección secuencial de errores de Gradient Boosting típicamente logra mayor precisión, lo que lo convierte en la opción \"más adecuada\" entre las opciones para maximizar el desempeño con este tipo de datos. </p>\n\t\t\t\t\t\t<p><b>K-means</b></p>\n\t\t\t\t\t\t<p>K-means es un algoritmo de <b>aprendizaje no supervisado</b>&nbsp;utilizado para clustering, no para modelado predictivo en conjuntos de datos etiquetados. La pregunta sobre un \"conjunto de datos grande con muchas características\" implica un contexto de aprendizaje supervisado (como clasificación o regresión), para el cual K-means no es aplicable. Por lo tanto, es una opción incorrecta para este escenario.</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t2-b3#0",
+        "gloss-d1-t2-b3#2",
+        "gloss-d1-t1-b5#1"
+      ]
     },
     {
       "id": "1-22",
@@ -467,7 +534,12 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Anclar la respuesta usando un flujo de trabajo Retrieval Augmented Generation (RAG) basado en datos privados de la empresa.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>Grounding</b> es el proceso de asegurar que la salida de un modelo de IA generativa se base en una fuente de conocimiento específica y verificada, en lugar de los datos de entrenamiento general del modelo.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>Amazon Q Business implementa grounding a través de una arquitectura completamente administrada de <b>Retrieval Augmented Generation (RAG)</b>. Se conecta a tus fuentes de datos empresariales (por ejemplo, Amazon S3, SharePoint), recupera fragmentos de documentos relevantes y los proporciona al Foundation Model (FM) junto con la consulta del usuario.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>Al <b>confinar las respuestas a datos empresariales existentes</b>, el FM se ve obligado a sintetizar una respuesta <i>solo</i> a partir del contexto verificado proporcionado, reduciendo drásticamente el riesgo de generar información inexacta, fabricada o \"alucinada\". Amazon Q también proporciona <b>citas</b> a los documentos fuente para total trazabilidad.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>Incorrecto</p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Usar configuraciones de Temperature altas para aumentar la aleatoriedad y creatividad de la salida generada.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>Temperature</b> es un hiperparámetro que controla la <b>aleatoriedad</b> de la salida del modelo. Una temperatura <i>más alta</i> fomenta respuestas más creativas y diversas, lo que en realidad <i>aumenta</i> el riesgo de que el modelo se desvíe de los hechos y, por lo tanto, <b>aumenta la probabilidad de alucinación</b>, contradiciendo directamente el objetivo de precisión.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Depender de guardrails posteriores a la generación para filtrar lenguaje sensible o abusivo.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>Los guardrails de AWS (como los de Amazon Bedrock o los controles integrados de Amazon Q) son esenciales para <b>IA Responsable</b>. Filtran la salida para evitar la generación de <b>contenido dañino, ilegal o abusivo</b>, y se pueden usar para bloquear temas. Sin embargo, su función principal no es verificar la <i>precisión factual</i> de una declaración contra datos corporativos internos; ese es el trabajo de RAG/Grounding.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Realizar fine-tuning en el Foundation Model (FM) subyacente con una copia completa de los datos empresariales.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<b>Fine-tuning</b> modifica los pesos reales del Foundation Model para enseñarle un nuevo estilo o habilidad. Aunque puede introducir nuevo conocimiento, es un proceso costoso, lento y estático. El conocimiento queda baked into el modelo y no se actualiza en tiempo real. De manera crítica, los modelos con fine-tuning aún pueden alucinar u olvidar información. RAG/Grounding es el enfoque estándar de la industria, rentable y dinámico utilizado por Amazon Q Business para garantizar <b>precisión actualizada y citada en las fuentes</b> para el conocimiento empresarial.\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>",
-      "domain": 3
+      "domain": 3,
+      "relatedConcepts": [
+        "gloss-d3-t1-b3#0",
+        "gloss-d3-t1-b2#0",
+        "gloss-d3-t3-b1#1"
+      ]
     },
     {
       "id": "1-23",
@@ -493,7 +565,12 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p><b>Ajustar los hiperparámetros</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>El <b>conjunto de validación</b> (o conjunto de desarrollo) es un subconjunto de datos que se utiliza <b>después de cada iteración de entrenamiento o época</b> para evaluar el desempeño del modelo en datos no vistos.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>Esta evaluación es crítica para tomar decisiones sobre la configuración del modelo, específicamente para ajustar <b>hiperparámetros</b> (por ejemplo, tasa de aprendizaje, número de capas, intensidad de regularización) y encontrar la combinación que resulte en el mejor desempeño de generalización.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<span>Al utilizar el conjunto de validación para este ajuste iterativo, evitas que el modelo se </span><b><span>sobreajuste</span></b><span> a los datos de entrenamiento mientras garantizas que el </span><b><span>conjunto de prueba</span></b><span> final permanezca realmente no visto para la verificación de desempeño final e imparcial.</span>\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>Incorrecto</p>\n\t\t\t\t\t\t<p>Probar el desempeño final del modelo</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>El rol de proporcionar una medida final e imparcial del desempeño del modelo en datos completamente no vistos está reservado para el <b>conjunto de prueba</b>. Si se utilizara el conjunto de validación para la prueba de desempeño final, el proceso de ajuste de hiperparámetros habría introducido inadvertidamente una <b>fuga de datos</b> del conjunto de validación en el proceso de selección del modelo, resultando en una estimación demasiado optimista del verdadero error de generalización del modelo.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>Visualizar los datos</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<span>La visualización de datos es parte del </span><b><span>Análisis Exploratorio de Datos (EDA)</span></b><span>, que se realiza en los datos crudos </span><i><span>antes</span></i><span> de que se dividan en conjuntos de entrenamiento, validación y prueba.</span> La visualización ayuda a entender la distribución de datos, las características e identificar valores atípicos, pero no es el propósito previsto de la división del conjunto de validación.\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>Entrenar el modelo</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>El <b>conjunto de entrenamiento</b> es el subconjunto más grande de los datos y es utilizado por el algoritmo para <b>aprender los patrones y relaciones</b> ajustando los parámetros internos del modelo (pesos y sesgos). El conjunto de validación se excluye específicamente de este proceso de aprendizaje para garantizar que proporcione una medida imparcial del desempeño del modelo durante el ajuste.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t3-b5#7",
+        "gloss-d1-t1-b1#8",
+        "gloss-d1-t1-b1#12"
+      ]
     },
     {
       "id": "1-24",
@@ -519,7 +596,8 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<div>\n\t\t\t\t\t\t\t<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t<b>Garantizar que todas las características contribuyan equitativamente al modelo</b>\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<p>Las características con <b>escalas diferentes</b> (por ejemplo, edad 0-100 vs. ingresos $0-1M) hacen que los <b>algoritmos basados en distancia</b> (KNN, SVM, Redes Neuronales) sean dominados por características con rangos más grandes. La normalización (Min-Max, Z-score) <b>escala todas las características al mismo rango</b> para que cada una contribuya proporcionalmente. </p>\n\t\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t<b>Dividir los datos en conjuntos de entrenamiento y prueba</b>\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t<b>Train/test split</b> = técnica de particionamiento de datos. La normalización = <b>escalado de características</b>.\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t<b>Aumentar la cantidad de características</b>\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t<b>Feature engineering</b> (PCA, características polinómicas). La normalización = <b>escalado de características existentes</b>.\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t<b>Eliminar valores atípicos de los datos</b>\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t<b>Detección/eliminación de valores atípicos</b> (IQR, umbralización Z-score). La normalización <b>no elimina puntos de datos</b>.\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t</div>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": []
     },
     {
       "id": "1-25",
@@ -545,7 +623,10 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p><b>bedrock-runtime</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>La API <b><code>bedrock-runtime</code></b> es la API correcta de Amazon Bedrock utilizada para <b>realizar solicitudes de inferencia</b>. </li>\n\t\t\t\t\t\t\t<li>Permite que los desarrolladores envíen prompts a modelos base alojados en Bedrock y reciban respuestas.</li>\n\t\t\t\t\t\t\t<li>Esta API está diseñada específicamente para cargas de trabajo de inferencia, como generación de texto, resumen o respuesta a preguntas.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p><b>bedrock-agent-runtime</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Esta API se utiliza para <b>ejecutar Bedrock Agents</b>, que orquestan tareas y flujos de trabajo usando modelos base.</li>\n\t\t\t\t\t\t\t<li>No está diseñada para solicitudes de inferencia directa a modelos.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>bedrock</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>No es un nombre de API válido.</li>\n\t\t\t\t\t\t\t<li>Puede referirse al servicio en general (Amazon Bedrock), pero no representa la API específica utilizada para inferencia.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>bedrock-agent</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Esta API se utiliza para <b>crear y administrar Bedrock Agents</b>, no para solicitudes de inferencia.</li>\n\t\t\t\t\t\t\t<li>Los agentes amplían las capacidades del modelo, pero no son la interfaz directa para inferencia.</li>\n\t\t\t\t\t\t</ul>",
-      "domain": 2
+      "domain": 2,
+      "relatedConcepts": [
+        "gloss-d2-t3-b1#0"
+      ]
     },
     {
       "id": "1-27",
@@ -571,7 +652,11 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Registra y compara experimentos de ML</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li><b>Es correcto porque</b> SageMaker Experiments está diseñado para <b>organizar, registrar y comparar diferentes ejecuciones de entrenamiento</b>.</li>\n\t\t\t\t\t\t\t<li>Esto ayuda a los profesionales a optimizar modelos fundacionales evaluando variaciones en hiperparámetros, conjuntos de datos o configuraciones.</li>\n\t\t\t\t\t\t\t<li>Se alinea con el enfoque del examen en entender cómo los servicios de AWS apoyan <b>flujos de trabajo de MLOps y optimización de modelos</b>.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p><b>Reduce el uso de datos</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Es incorrecto porque SageMaker Experiments no reduce la cantidad de datos utilizados.</li>\n\t\t\t\t\t\t\t<li>La reducción de datos implicaría preprocesamiento o muestreo, no registro de experimentos.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>Mejora las características de seguridad</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Es incorrecto porque la seguridad se maneja a través de roles de IAM, cifrado y controles de red, no por SageMaker Experiments.</li>\n\t\t\t\t\t\t\t<li>Los experimentos se centran en registrar ejecuciones de ML, no en seguridad.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>Aumenta la complejidad del modelo</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Es incorrecto porque SageMaker Experiments no aumenta inherentemente la complejidad.</li>\n\t\t\t\t\t\t\t<li>Su propósito es <b>gestionar y comparar experimentos</b>, no hacer los modelos más complejos.</li>\n\t\t\t\t\t\t</ul>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t3-b5#0",
+        "gloss-d1-t2-b5#0"
+      ]
     },
     {
       "id": "1-28",
@@ -597,7 +682,12 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Los agents en Amazon Bedrock gestionan y ejecutan tareas de múltiples pasos.</p>",
-      "domain": 2
+      "domain": 2,
+      "relatedConcepts": [
+        "gloss-d2-t3-b1#0",
+        "gloss-d2-t1-b6#5",
+        "gloss-d2-t1-b6#4"
+      ]
     },
     {
       "id": "1-29",
@@ -622,7 +712,8 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Imputation se utiliza para manejar y completar los valores de datos faltantes en conjuntos de datos.</p>"
+      "explanationHtml": "<p>Imputation se utiliza para manejar y completar los valores de datos faltantes en conjuntos de datos.</p>",
+      "relatedConcepts": []
     },
     {
       "id": "1-30",
@@ -648,7 +739,11 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Las funciones de activación introducen no-linealidad en la red neuronal, permitiéndole aprender patrones complejos.</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t1-b1#3",
+        "gloss-d1-t1-b1#2"
+      ]
     },
     {
       "id": "1-31",
@@ -674,7 +769,12 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Una matriz de confusión se utiliza para evaluar el desempeño de un modelo de clasificación mostrando los valores reales versus los predichos.</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t3-b6#0",
+        "gloss-d1-t3-b6#1",
+        "gloss-d1-t3-b6#2"
+      ]
     },
     {
       "id": "1-32",
@@ -700,7 +800,11 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>SageMaker Studio Lab proporciona un entorno gratuito para la experimentación con machine learning.</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t2-b5#0",
+        "gloss-d1-t3-b5#0"
+      ]
     },
     {
       "id": "1-33",
@@ -726,7 +830,10 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>La consola de Amazon Bedrock permite probar agentes.</p>",
-      "domain": 2
+      "domain": 2,
+      "relatedConcepts": [
+        "gloss-d2-t3-b1#0"
+      ]
     },
     {
       "id": "1-35",
@@ -751,7 +858,11 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Amazon Textract extrae texto y datos de documentos, facilitando el procesamiento automatizado de documentos.</p>"
+      "explanationHtml": "<p>Amazon Textract extrae texto y datos de documentos, facilitando el procesamiento automatizado de documentos.</p>",
+      "relatedConcepts": [
+        "gloss-d1-t1-b1#4",
+        "gloss-d1-t1-b1#5"
+      ]
     },
     {
       "id": "1-36",
@@ -777,7 +888,10 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>La API de Amazon Bedrock proporciona acceso programático a los servicios de Bedrock.</p>",
-      "domain": 2
+      "domain": 2,
+      "relatedConcepts": [
+        "gloss-d2-t3-b1#0"
+      ]
     },
     {
       "id": "1-37",
@@ -803,7 +917,11 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Los modelos base pre-entrenados en JumpStart aceleran el proceso de desarrollo.</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t3-b2#0",
+        "gloss-d1-t3-b2#1"
+      ]
     },
     {
       "id": "1-38",
@@ -829,7 +947,11 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Implementar templates dinámicas y conscientes del contexto mejora la robustez contra ataques.</p>",
-      "domain": 3
+      "domain": 3,
+      "relatedConcepts": [
+        "gloss-d3-t2-b2#4",
+        "gloss-d3-t2-b4#3"
+      ]
     },
     {
       "id": "1-39",
@@ -855,7 +977,12 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Las instrucciones claras y específicas en los prompts mejoran la efectividad de las respuestas generadas por IA.</p>",
-      "domain": 3
+      "domain": 3,
+      "relatedConcepts": [
+        "gloss-d3-t2-b3#4",
+        "gloss-d3-t2-b1#1",
+        "gloss-d3-t2-b3#0"
+      ]
     },
     {
       "id": "1-40",
@@ -881,7 +1008,8 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>SageMaker Debugger proporciona métricas en tiempo real durante el entrenamiento para ayudar a optimizar modelos base.</p>",
-      "domain": 3
+      "domain": 3,
+      "relatedConcepts": []
     },
     {
       "id": "1-41",
@@ -907,7 +1035,11 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>La curva ROC representa el equilibrio entre sensibilidad (tasa de verdaderos positivos) y especificidad (tasa de falsos positivos).</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t3-b6#5",
+        "gloss-d1-t3-b6#2"
+      ]
     },
     {
       "id": "1-42",
@@ -933,7 +1065,11 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>SageMaker Debugger ayuda a depurar modelos de aprendizaje automático.</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t2-b5#0",
+        "gloss-d1-t3-b5#5"
+      ]
     },
     {
       "id": "1-43",
@@ -959,7 +1095,11 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Los árboles de decisión se utilizan comúnmente para tareas de regresión y clasificación.</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t2-b3#0",
+        "gloss-d1-t2-b3#1"
+      ]
     },
     {
       "id": "1-45",
@@ -985,7 +1125,12 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>La Precision-Recall Curve es la métrica más adecuada para evaluar problemas de clasificación desbalanceada.</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t3-b6#1",
+        "gloss-d1-t3-b6#2",
+        "gloss-d1-t3-b6#0"
+      ]
     },
     {
       "id": "1-46",
@@ -1011,7 +1156,12 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Amazon SageMaker Clarify ayuda a evaluar y comparar modelos de AI para un uso responsable.</p>",
-      "domain": 4
+      "domain": 4,
+      "relatedConcepts": [
+        "gloss-d4-t1-b1#0",
+        "gloss-d4-t1-b1#1",
+        "gloss-d4-t2-b2#1"
+      ]
     },
     {
       "id": "1-48",
@@ -1037,7 +1187,11 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>La API bedrock-agent-runtime se utiliza para invocar agentes y consultar knowledge bases.</p>",
-      "domain": 3
+      "domain": 3,
+      "relatedConcepts": [
+        "gloss-d3-t1-b6#0",
+        "gloss-d3-t1-b3#0"
+      ]
     },
     {
       "id": "1-49",
@@ -1063,7 +1217,10 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Los mecanismos de retroalimentación mejoran continuamente el diseño y la efectividad de los prompts.</p>",
-      "domain": 2
+      "domain": 2,
+      "relatedConcepts": [
+        "gloss-d2-t1-b1#4"
+      ]
     },
     {
       "id": "1-50",
@@ -1089,7 +1246,11 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>K-means se utiliza comúnmente para clustering en el aprendizaje no supervisado.</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t2-b3#2",
+        "gloss-d1-t1-b5#1"
+      ]
     },
     {
       "id": "1-51",
@@ -1115,7 +1276,11 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Bedrock crea una copia privada y personalizada del modelo para tus datos.</p>",
-      "domain": 3
+      "domain": 3,
+      "relatedConcepts": [
+        "gloss-d3-t3-b1#1",
+        "gloss-d3-t1-b1#6"
+      ]
     },
     {
       "id": "1-53",
@@ -1141,7 +1306,11 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>SageMaker JumpStart acelera el desarrollo de ML al proporcionar acceso a modelos y soluciones pre-construidos.</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t3-b2#0",
+        "gloss-d1-t2-b5#0"
+      ]
     }
   ]
 }

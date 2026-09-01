@@ -27,7 +27,11 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Batch transform in Amazon SageMaker allows you to run inference on large datasets at once, rather than processing data in real-time. This can significantly reduce costs by utilizing resources efficiently during off-peak times.</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t1-b3#0",
+        "gloss-d1-t1-b1#9"
+      ]
     },
     {
       "id": "4-3",
@@ -53,7 +57,12 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Overfitting occurs when a model learns the training data too well, including noise and outliers, resulting in poor generalization to new, unseen data.</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t1-b1#12",
+        "gloss-d1-t1-b1#8",
+        "gloss-d1-t3-b5#7"
+      ]
     },
     {
       "id": "4-4",
@@ -79,7 +88,11 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Amazon SageMaker Data Wrangler streamlines the data preparation and feature engineering process, enabling users to quickly and efficiently prepare data for machine learning models using a visual interface.</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t2-b5#0",
+        "gloss-d1-t3-b1#0"
+      ]
     },
     {
       "id": "4-5",
@@ -105,7 +118,8 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Feature scaling involves normalizing the range of features in a dataset to ensure that all features contribute equally to the model‘s performance, often by standardizing or normalizing feature values.</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": []
     },
     {
       "id": "4-6",
@@ -130,7 +144,11 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Amazon SageMaker Data Wrangler provides various techniques to handle missing values, including dropping rows with missing values, filling missing values with statistical measures like the mean, and using forward fill or backward fill methods to propagate the next or previous valid observation.</p>"
+      "explanationHtml": "<p>Amazon SageMaker Data Wrangler provides various techniques to handle missing values, including dropping rows with missing values, filling missing values with statistical measures like the mean, and using forward fill or backward fill methods to propagate the next or previous valid observation.</p>",
+      "relatedConcepts": [
+        "gloss-d1-t2-b5#0",
+        "gloss-d1-t3-b3#0"
+      ]
     },
     {
       "id": "4-7",
@@ -156,7 +174,12 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Transfer learning involves taking a pre-trained model and fine-tuning it with your specific dataset. Amazon SageMaker supports transfer learning, allowing you to adapt the pre-trained model to your specific use case efficiently.</p>",
-      "domain": 3
+      "domain": 3,
+      "relatedConcepts": [
+        "gloss-d3-t3-b2#2",
+        "gloss-d3-t3-b1#1",
+        "gloss-d3-t3-b2#1"
+      ]
     },
     {
       "id": "4-8",
@@ -182,7 +205,12 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>SageMaker Ground Truth provides data labeling capabilities that help in creating high-quality training datasets for supervised learning by leveraging human labelers, automated labeling, and active learning.</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t1-b4#0",
+        "gloss-d1-t1-b5#0",
+        "gloss-d1-t2-b5#0"
+      ]
     },
     {
       "id": "4-10",
@@ -208,7 +236,11 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Amazon SageMaker Pipelines, AWS Glue, and Amazon SageMaker Endpoints provide a comprehensive, fully managed solution for building an end-to-end machine learning pipeline, covering data preprocessing, model training, and deployment.</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t3-b1#0",
+        "gloss-d1-t2-b5#0"
+      ]
     },
     {
       "id": "4-11",
@@ -233,7 +265,12 @@
         }
       ],
       "multiSelect": false,
-      "explanationHtml": "<p>Amazon SageMaker Neo enables developers to optimize machine learning models to run efficiently on multiple hardware platforms, such as CPUs, GPUs, and edge devices. This optimization can significantly improve model performance and reduce inference latency.</p>"
+      "explanationHtml": "<p>Amazon SageMaker Neo enables developers to optimize machine learning models to run efficiently on multiple hardware platforms, such as CPUs, GPUs, and edge devices. This optimization can significantly improve model performance and reduce inference latency.</p>",
+      "relatedConcepts": [
+        "gloss-d1-t2-b5#0",
+        "gloss-d1-t1-b1#9",
+        "gloss-d3-t1-b1#2"
+      ]
     },
     {
       "id": "4-12",
@@ -259,7 +296,11 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>SageMaker Training with Pipe Mode allows you to stream data directly from Amazon S3 to the training instances, eliminating the need to download the entire dataset to the instance storage. This speeds up training and reduces storage costs.</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t2-b5#0",
+        "gloss-d1-t1-b1#8"
+      ]
     },
     {
       "id": "4-13",
@@ -285,7 +326,11 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Amazon SageMaker Clarify offers feature importance analysis, which helps in identifying the most important features influencing model predictions. This insight can be used to improve model interpretability and performance.</p>",
-      "domain": 4
+      "domain": 4,
+      "relatedConcepts": [
+        "gloss-d4-t2-b1#0",
+        "gloss-d4-t2-b3#0"
+      ]
     },
     {
       "id": "4-14",
@@ -311,7 +356,12 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Dropout is a regularization technique used in neural networks to prevent overfitting by randomly deactivating a subset of neurons during each training iteration, thus making the network more robust.</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t1-b1#3",
+        "gloss-d1-t1-b1#12",
+        "gloss-d1-t1-b1#8"
+      ]
     },
     {
       "id": "4-15",
@@ -337,7 +387,10 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Amazon Lex is a service for building conversational interfaces into any application using voice and text. It provides the deep learning functionalities of automatic speech recognition (ASR) for converting speech to text and natural language understanding (NLU) for recognizing the intent of the text.</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t2-b5#4"
+      ]
     },
     {
       "id": "4-16",
@@ -363,7 +416,11 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Feature engineering involves selecting, modifying, and creating new features from raw data to improve the performance of machine learning models.</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t3-b1#0",
+        "gloss-d1-t3-b5#7"
+      ]
     },
     {
       "id": "4-17",
@@ -389,7 +446,10 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Amazon SageMaker is a fully managed service that provides every developer and data scientist with the ability to build, train, and deploy machine learning (ML) models quickly. It integrates with other AWS services and provides tools for labeling, building, training, and deploying models, making it the go-to service for ML projects.</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t2-b5#0"
+      ]
     },
     {
       "id": "4-19",
@@ -415,7 +475,11 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Mean Squared Error (MSE) is a common metric used to evaluate the performance of regression models by measuring the average squared difference between the predicted and actual values.</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t3-b6#4",
+        "gloss-d1-t2-b3#0"
+      ]
     },
     {
       "id": "4-21",
@@ -441,7 +505,12 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>\n\t\t\t\t\t\t\t<b>Terminating the training when the validation error starts to increase</b> best describes the concept of “early stopping” in model training.\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p>Early stopping <span>is a technique used to prevent overfitting in machine learning models. Overfitting occurs when a model becomes too complex and starts to</span> learn the noise in the training data rather than the underlying patterns. This can lead to poor performance on new, unseen data. </p>\n\t\t\t\t\t\t<p>By monitoring the validation error during training and stopping the process when it starts to increase, early stopping helps to prevent overfitting and improve the model’s generalization performance.</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t1-b1#12",
+        "gloss-d1-t1-b1#8",
+        "gloss-d1-t3-b5#7"
+      ]
     },
     {
       "id": "4-22",
@@ -467,7 +536,8 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p><span></span><span>SageMaker Multi-Model Endpoints</span></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<span>The core mechanism for A/B testing in Amazon SageMaker is achieved by deploying multiple </span><span>Production Variants</span><span> behind a single real-time endpoint.</span>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li><span>Each </span><span>Production Variant</span><span> hosts a different model version (or even different algorithms/instance types).</span></li>\n\t\t\t\t\t\t\t\t\t<li><span>SageMaker allows you to define an initial_weight for each variant.By setting the weights, you can </span><span>split the live production traffic</span><span> between the models (e.g., 90% to the old model/champion and 10% to the new model/challenger) to monitor and compare their performance metrics (like accuracy, click-through rate, or latency) under real-world conditions.</span></li>\n\t\t\t\t\t\t\t\t\t<li><span>While the term “Multi-Model Endpoints” technically refers to hosting </span><span>many</span><span> models on shared infrastructure, the </span><span>underlying capability</span><span> of an endpoint hosting multiple </span><span>Production Variants</span><span> is the key SageMaker feature used for A/B testing, canary deployments, and traffic splitting.</span></li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p></p>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p><span>SageMaker Pipelines</span></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<span>SageMaker Pipelines</span><span> is an </span><span>MLOps service</span><span> used to define, automate, and manage the complete ML workflow (data preparation, training, registration). It defines </span><span>how</span><span> a model is trained and deployed, but it does </span><span>not</span><span> handle the runtime traffic splitting and comparison of models in a live production environment; that is the role of the endpoint configuration.</span>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><span>SageMaker Experiments</span></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<span>SageMaker Experiments</span><span> is a tool used during the </span><span>training phase</span><span> to track, compare, and manage different training runs (e.g., different hyperparameters or datasets). It helps you select the </span><span>best</span><span> model to deploy, but it does </span><span>not</span><span> facilitate the final, live A/B testing with production inference traffic.</span>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><span>SageMaker Model Monitor</span></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<span>SageMaker Model Monitor</span><span> is a service that </span><span>observes</span><span> a live deployed endpoint. It is used to detect </span><span>data drift, model quality degradation, and bias drift</span><span> in the deployed models. While essential for A/B testing (since you need to monitor the challenger model for errors), Model Monitor is a </span><span>monitoring tool</span><span>, not the </span><span>deployment feature</span><span> that performs the traffic splitting itself.</span>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>",
-      "domain": 3
+      "domain": 3,
+      "relatedConcepts": []
     },
     {
       "id": "4-23",
@@ -493,7 +563,12 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p><b>Amazon Lex</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>Amazon Lex is an AWS service for building <b>conversational interfaces (chatbots and voice bots)</b>. </li>\n\t\t\t\t\t\t\t\t\t<li>It uses <b>automatic speech recognition (ASR)</b> and <b>natural language understanding (NLU)</b> to interact with customers. </li>\n\t\t\t\t\t\t\t\t\t<li>In call centers, Lex can automate routine queries, reduce wait times, and improve efficiency by handling customer interactions without human agents.</li>\n\t\t\t\t\t\t\t\t\t<li>This is the <b>primary AWS service</b> highlighted in exam scenarios for <b>call center efficiency</b>. </li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>Incorrect</p>\n\t\t\t\t\t\t<p><b>Amazon Rekognition</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>Rekognition is for <b>image and video analysis</b> (e.g., facial recognition, object detection). </li>\n\t\t\t\t\t\t\t\t\t<li>It has no direct role in improving call center efficiency.</li>\n\t\t\t\t\t\t\t\t\t<li>More relevant to security, media, or surveillance use cases.</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>Amazon Polly</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>Polly converts text into <b>lifelike speech</b>.</li>\n\t\t\t\t\t\t\t\t\t<li>While it can be used in call centers to provide voice responses, it is not the <b>main service for efficiency improvements</b>. </li>\n\t\t\t\t\t\t\t\t\t<li>Polly is often used alongside Lex, but Lex is the core service for automation.</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>Amazon Translate</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>Translate provides <b>real-time language translation</b>. </li>\n\t\t\t\t\t\t\t\t\t<li>Useful for multilingual support, but it does not directly improve overall <b>call center efficiency</b>.</li>\n\t\t\t\t\t\t\t\t\t<li>It’s a supporting tool, not the primary solution.</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t2-b5#4",
+        "gloss-d1-t2-b4#7",
+        "gloss-d1-t2-b4#2"
+      ]
     },
     {
       "id": "4-24",
@@ -519,7 +594,10 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<div>\n\t\t\t\t\t\t\t<p><strong>Correct</strong></p>\n\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t<b>Amazon SageMaker</b>\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t<b>SageMaker Studio</b> and <b>Notebook Instances</b> deliver <b>fully managed JupyterLab/Jupyter Notebook environments</b>. Pre-configured with data science libraries (Pandas, NumPy, scikit-learn), ML frameworks (TensorFlow, PyTorch), and elastic compute scaling.\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t<b>Amazon QuickSight</b>\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t<b>BI visualization tool</b>. Dashboards and charts – <b>no Jupyter notebook support</b>.\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t<b>Amazon Lex</b>\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t<b>Chatbot service</b> for conversational AI. <b>No notebook functionality</b>.\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t<b>Amazon EMR</b>\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t<b>Big data Hadoop/Spark clusters</b>. Supports JupyterHub but requires <b>manual cluster management</b> – not “managed Jupyter notebooks”.\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t</div>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t2-b5#0"
+      ]
     },
     {
       "id": "4-25",
@@ -545,7 +623,12 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p><b>Sentiment analysis</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Correct because: Amazon Rekognition is designed for <b>image and video analysis</b>. It provides features such as facial analysis, object detection, and celebrity recognition. <b>Sentiment analysis</b>, however, is a text-based natural language processing (NLP) capability, typically offered by <b>Amazon Comprehend</b>, not Rekognition. </li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p><b>Facial analysis</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because: Rekognition can detect faces, analyze facial attributes (age range, emotions, gender), and identify individuals in images and videos.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>Object detection</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because: Rekognition supports object and scene detection, identifying thousands of objects (e.g., cars, animals, furniture) within images and videos.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>Celebrity recognition</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because: Rekognition includes celebrity recognition, allowing identification of well-known public figures in images and videos.</li>\n\t\t\t\t\t\t</ul>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t1-b1#4",
+        "gloss-d1-t1-b1#5",
+        "gloss-d1-t2-b5#3"
+      ]
     },
     {
       "id": "4-26",
@@ -571,7 +654,11 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Amazon SageMaker Experiments</b> Correct because <b>SageMaker Experiments</b> is specifically designed to track, organize, and compare different versions of datasets, models, and training runs. It allows data scientists and ML engineers to capture metadata, parameters, and results, making it easy to reproduce experiments and analyze variations. This is the feature that directly addresses version tracking across the ML lifecycle.\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Amazon SageMaker Model Registry</b> Incorrect because the <b>Model Registry</b> is used to manage and deploy trained models, including versioning of models for production. While it tracks model versions, it does not track datasets or experiments, so it does not fully meet the requirement.\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p><b>Amazon SageMaker Pipelines</b> Incorrect because <b>Pipelines</b> automate ML workflows (training, evaluation, deployment). They help streamline processes but are not designed to track versions of datasets and experiments.</p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Amazon SageMaker Data Wrangler</b> Incorrect because <b>Data Wrangler</b> is used for preparing and transforming data. It simplifies data preprocessing but does not provide experiment tracking or dataset/model versioning.\n\t\t\t\t\t\t</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t2-b5#0",
+        "gloss-d1-t3-b5#0"
+      ]
     },
     {
       "id": "4-27",
@@ -597,7 +684,12 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Amazon SageMaker Model Registry helps manage the lifecycle of machine learning models by providing model versioning, metadata tracking, and deployment management. It ensures that models can be easily tracked, shared, and deployed consistently across environments.</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t2-b5#0",
+        "gloss-d1-t3-b1#0",
+        "gloss-d1-t3-b5#4"
+      ]
     },
     {
       "id": "4-28",
@@ -623,7 +715,10 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>RAG stands for Retrieval-Augmented Generation.</p>",
-      "domain": 3
+      "domain": 3,
+      "relatedConcepts": [
+        "gloss-d3-t1-b3#0"
+      ]
     },
     {
       "id": "4-30",
@@ -649,7 +744,11 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Principal Component Analysis (PCA) is used to reduce the dimensionality of data.</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t2-b3#2",
+        "gloss-d1-t1-b1#1"
+      ]
     },
     {
       "id": "4-35",
@@ -675,7 +774,10 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Amazon Personalize is used to develop applications that provide personalized recommendations.</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t2-b4#3"
+      ]
     },
     {
       "id": "4-37",
@@ -701,7 +803,10 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>SageMaker Studio offers a unified development environment for generative AI solutions.</p>",
-      "domain": 2
+      "domain": 2,
+      "relatedConcepts": [
+        "gloss-d2-t3-b1#1"
+      ]
     },
     {
       "id": "4-38",
@@ -727,7 +832,10 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Amazon SageMaker Data Wrangler provides built-in capabilities to split datasets into training and test sets, ensuring that there is no overlap. This helps in maintaining the integrity of the model evaluation process.</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t2-b5#0"
+      ]
     },
     {
       "id": "4-39",
@@ -753,7 +861,10 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Active learning is a technique where the model identifies the most informative data points that need labeling. By focusing on these data points, Amazon SageMaker Ground Truth can reduce the amount of labeled data required, thereby lowering the overall cost of the labeling process.</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t1-b4#0"
+      ]
     },
     {
       "id": "4-42",
@@ -779,7 +890,10 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Amazon SageMaker Studio is an integrated development environment (IDE) for machine learning. It provides a web-based interface for building, training, and deploying models, and supports collaboration among data science teams by allowing them to share notebooks, experiments, and models.</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t2-b5#0"
+      ]
     },
     {
       "id": "4-43",
@@ -805,7 +919,12 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Amazon SageMaker Distributed Training allows you to perform distributed training of deep learning models across multiple GPU instances. It supports popular frameworks like TensorFlow and helps reduce training time for large-scale models.</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t2-b5#0",
+        "gloss-d1-t1-b1#8",
+        "gloss-d1-t1-b1#2"
+      ]
     },
     {
       "id": "4-44",
@@ -831,7 +950,10 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Amazon Macie is a data security service that uses machine learning to automatically discover, classify, and protect sensitive data in AWS. It helps ensure compliance with data privacy regulations by identifying sensitive information in datasets.</p>",
-      "domain": 5
+      "domain": 5,
+      "relatedConcepts": [
+        "gloss-d5-t1-b1#2"
+      ]
     },
     {
       "id": "4-45",
@@ -857,7 +979,11 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Amazon SageMaker Model Monitor continuously monitors the data being processed by deployed models and detects issues such as data drift and prediction errors. This helps maintain model accuracy and reliability over time.</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t3-b5#5",
+        "gloss-d1-t3-b5#8"
+      ]
     },
     {
       "id": "4-46",
@@ -883,7 +1009,11 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Automatic model tuning, also known as hyperparameter optimization (HPO), in Amazon SageMaker allows you to automatically search for the best hyperparameters for your machine learning models. It uses techniques like Bayesian optimization to efficiently find optimal values.</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t3-b5#7",
+        "gloss-d1-t2-b5#0"
+      ]
     },
     {
       "id": "4-47",
@@ -909,7 +1039,12 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>To handle imbalanced datasets, oversampling the minority class is a common technique. Amazon SageMaker Data Wrangler provides tools to preprocess data, including techniques to balance datasets through oversampling or undersampling.</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t2-b3#1",
+        "gloss-d1-t2-b5#0",
+        "gloss-d1-t3-b1#0"
+      ]
     },
     {
       "id": "4-48",
@@ -935,7 +1070,11 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Amazon SageMaker Feature Store is a repository that makes it easy to store, manage, and retrieve features used in machine learning models. It helps in creating consistent and reusable features for training and inference.</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t2-b5#0",
+        "gloss-d1-t3-b1#0"
+      ]
     },
     {
       "id": "4-49",
@@ -961,7 +1100,12 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Amazon SageMaker Clarify offers tools to detect bias in data and machine learning models and provides model explainability, helping ensure that models are fair and transparent.</p>",
-      "domain": 4
+      "domain": 4,
+      "relatedConcepts": [
+        "gloss-d4-t1-b1#0",
+        "gloss-d4-t1-b1#1",
+        "gloss-d4-t2-b1#0"
+      ]
     },
     {
       "id": "4-51",
@@ -987,7 +1131,11 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Amazon SageMaker Debugger provides tools to debug and analyze machine learning training jobs in real-time. It helps in understanding model behavior, identifying bottlenecks, and diagnosing issues during the training process.</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t1-b1#8",
+        "gloss-d1-t2-b5#0"
+      ]
     },
     {
       "id": "4-52",
@@ -1013,7 +1161,11 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Amazon SageMaker Pipelines is a fully managed service that enables the automation and orchestration of machine learning workflows. It integrates various stages of the ML lifecycle, from data ingestion and preprocessing to model training, evaluation, and deployment.</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t3-b1#0",
+        "gloss-d1-t2-b5#0"
+      ]
     }
   ]
 }

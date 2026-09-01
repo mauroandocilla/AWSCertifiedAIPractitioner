@@ -27,7 +27,8 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Amazon Kinesis is the apt choice for real-time data streaming requirements in machine learning pipelines. It facilitates the collection, processing, and analysis of large streams of data records in real time, which is crucial for immediate decision making and responsive actions in retail analytics. Other mentioned services like Amazon RDS, S3, and EC2 do not specialize in real-time data handling and streaming capabilities. More about Amazon Kinesis can be found on the AWS official documentation at: <a href=\"https://aws.amazon.com/kinesis/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/kinesis/</a>\n\t\t\t\t\t\t</p>",
-      "domain": 4
+      "domain": 4,
+      "relatedConcepts": []
     },
     {
       "id": "21-2",
@@ -53,7 +54,10 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Amazon SageMaker Studio</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Amazon SageMaker Studio</b> is a <b>unified, web-based integrated development environment (IDE)</b> for machine learning that provides a <b>single pane of glass</b> for the entire ML workflow. It is the most suitable service for providing a <b>centralized view to track, manage, and monitor multiple machine learning models effectively</b> because it offers comprehensive capabilities across the ML lifecycle, including:\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li><b>Experiment Management:</b> Tracking model training runs, hyperparameters, and performance metrics.</li>\n\t\t\t\t\t\t\t<li><b>Model Registry:</b> A centralized repository to catalog models, track versions, and manage their status (e.g., approved for deployment).</li>\n\t\t\t\t\t\t\t<li><b>Pipelines:</b> Orchestrating and managing end-to-end ML workflows.</li>\n\t\t\t\t\t\t\t<li><b>Monitoring Integration:</b> While Model Monitor does the actual drift detection, Studio provides the interface to view and manage these monitoring jobs and their results in a centralized manner.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>Essentially, SageMaker Studio acts as the central hub for ML practitioners to organize, manage, and observe their various models throughout their lifecycle.</p>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Amazon SageMaker Clarify</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p><b>Amazon SageMaker Clarify</b> is designed to help detect potential <b>bias</b> in machine learning models and to <b>explain predictions</b>. While crucial for model fairness and transparency, it does not provide a centralized solution for tracking, managing, and general monitoring of multiple models across their lifecycle. Its focus is on specific aspects of model understanding and accountability.</p>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Amazon SageMaker Model Monitor</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Amazon SageMaker Model Monitor</b> is a service specifically focused on <b>monitoring the performance of deployed machine learning models in production</b>. It helps detect issues like data drift and model quality drift. While it’s part of “monitoring” models, it’s typically for <i>deployed</i> models and is more about detecting issues <i>after</i> deployment rather than providing a centralized management and tracking view for models at all stages of their lifecycle. SageMaker Studio integrates with Model Monitor to display these monitoring results.\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Amazon SageMaker Ground Truth</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p><b>Amazon SageMaker Ground Truth</b> is a service that helps you <b>build high-quality training datasets</b> for machine learning by providing tools for human data labeling. Its purpose is to prepare data for model training, not to manage, track, or monitor the machine learning models themselves.</p>",
-      "domain": 2
+      "domain": 2,
+      "relatedConcepts": [
+        "gloss-d2-t3-b1#1"
+      ]
     },
     {
       "id": "21-4",
@@ -79,7 +83,12 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<b>Reducing the quantity of data used for training the model.</b> Overfitting generally occurs when a model learns the training data <em>too well</em>, including noise and irrelevant details. <em>Reducing</em> the training data would likely <em>worsen</em> overfitting. With less data, the model has a higher chance of memorizing specific examples rather than learning generalizable patterns.\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<b>Avoiding any form of model validation or testing.</b> Validation and testing are <em>essential</em> to detect overfitting. Without these steps, you have no way of knowing if your model is generalizing well or just memorizing the training data. Avoiding validation and testing is the <em>opposite</em> of what you should do.\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<b>Employing a more complex model to capture intricate data patterns.</b> While a more complex model <em>might</em> be necessary in some cases, increasing model complexity is a <em>common cause</em> of overfitting. A more complex model has more capacity to memorize noise in the training data. If overfitting is a concern, <em>simplifying</em> the model or using regularization techniques (as in option D) is often the better approach.\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><strong>Correct</strong></p>\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<b>Utilizing techniques such as cross-validation, regularization, and pruning.</b> This option describes several effective strategies to combat overfitting:\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li><b>Cross-validation:</b> Helps to assess how well the model generalizes to unseen data by partitioning the data into multiple folds for training and validation.</li>\n\t\t\t\t\t\t\t\t\t<li><b>Regularization:</b> Adds a penalty to the model’s loss function to discourage overly complex models, effectively preventing it from memorizing noise. Examples include L1 and L2 regularization.</li>\n\t\t\t\t\t\t\t\t\t<li><b>Pruning:</b> Especially relevant for decision trees, pruning involves removing branches of the tree that contribute little to predictive power, thus simplifying the model and reducing overfitting.</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t1-b1#12",
+        "gloss-d1-t1-b1#8",
+        "gloss-d1-t3-b5#0"
+      ]
     },
     {
       "id": "21-5",
@@ -105,7 +114,10 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Chain-of-thought prompting is effective for complex tasks as it guides the AI model to consider and articulate each step involved in solving a problem. This technique helps in creating clear, logical flows, especially useful in generating comprehensive reports or structured business processes. For more details on prompt engineering techniques, one can visit official AI model documentation or AI research papers.</p>",
-      "domain": 2
+      "domain": 2,
+      "relatedConcepts": [
+        "gloss-d2-t1-b1#4"
+      ]
     },
     {
       "id": "21-7",
@@ -131,7 +143,11 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Understanding the distinction between model parameters and hyperparameters is essential for effectively training AI models. Model parameters are weights and biases adjusted through the training process based on the input data, aiming to minimize the model‘s error. Hyperparameters, such as learning rate or epochs, are set before training starts and determine the structure and dynamics of the training process. Proper tuning of hyperparameters can significantly affect model performance and efficiency. </p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t3-b5#7",
+        "gloss-d1-t1-b1#8"
+      ]
     },
     {
       "id": "21-9",
@@ -161,7 +177,8 @@
       ],
       "multiSelect": true,
       "explanationHtml": "<p>Transparent and explainable machine learning models are particularly valuable in fields like healthcare, where understanding how predictions are made is crucial for trust, compliance, and accountability. These models facilitate easier debugging and optimization, and they help foster trust and confidence in the model‘s predictions by making the decision-making process clear. More info: <a href=\"https://aws.amazon.com/machine-learning/explainable-ai/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/machine-learning/explainable-ai/</a>\n\t\t\t\t\t\t</p>",
-      "domain": 3
+      "domain": 3,
+      "relatedConcepts": []
     },
     {
       "id": "21-10",
@@ -187,7 +204,10 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>In situations where controlling the output size of a model is necessary, adjusting the ‘Max Tokens‘ parameter is the appropriate approach. This setting directly limits the maximum number of tokens the model is allowed to generate, providing a straightforward way to control output length. This is particularly useful in applications where output brevity is critical, or where system constraints limit the acceptable size of responses. </p>",
-      "domain": 3
+      "domain": 3,
+      "relatedConcepts": [
+        "gloss-d3-t1-b2#2"
+      ]
     },
     {
       "id": "21-12",
@@ -213,7 +233,12 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>In Amazon SageMaker Autopilot, setting the target attribute is fundamental as it defines what the built model will try to predict. This decision impacts the entire learning process, influencing model selection and subsequent prediction accuracy. Understanding this is critical for setting up machine learning projects effectively on SageMaker Autopilot.</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t2-b5#0",
+        "gloss-d1-t1-b1#6",
+        "gloss-d1-t1-b5#0"
+      ]
     },
     {
       "id": "21-13",
@@ -239,7 +264,12 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>The primary challenge in implementing machine learning for enhancing customer segmentation and personalizing marketing campaigns is collecting and preparing high-quality data. High-quality data is crucial for training accurate and effective machine learning models. AWS provides services such as AWS Glue for data ETL operations and Amazon SageMaker for building, training, and deploying machine learning models, which can help overcome some of the challenges related to data processing and model training. </p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t2-b3#2",
+        "gloss-d1-t1-b1#8",
+        "gloss-d1-t1-b4#0"
+      ]
     },
     {
       "id": "21-15",
@@ -265,7 +295,11 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Amazon SageMaker Ground Truth is the optimal choice for companies needing efficient, scalable, and accurate data labeling. It supports both automated annotations through pre-trained models and human verification workflows, making it versatile for complex datasets like those used in optimizing delivery routes. This service reduces labeling costs while increasing labeling accuracy, crucial for training effective machine learning models. </p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t1-b4#0",
+        "gloss-d1-t2-b5#0"
+      ]
     },
     {
       "id": "21-16",
@@ -291,7 +325,12 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>The Transformer model, represented here by BERT, utilizes self-attention mechanisms to process words in relation to all other words in a sentence, unlike traditional models which process words sequentially. This architecture makes it powerful for applications that require understanding of context and relationships in text, such as language translation and content generation. For more details on BERT and its applications in NLP, see: <a href=\"https://arxiv.org/abs/1810.04805\" rel=\"noopener\" target=\"_blank\">https://arxiv.org/abs/1810.04805</a>\n\t\t\t\t\t\t</p>",
-      "domain": 2
+      "domain": 2,
+      "relatedConcepts": [
+        "gloss-d2-t1-b1#5",
+        "gloss-d2-t1-b2#3",
+        "gloss-d2-t1-b2#4"
+      ]
     },
     {
       "id": "21-18",
@@ -317,7 +356,12 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>SageMaker Model Cards and AI Service Cards are integral for managing AI model deployment and understanding within AWS environments, especially in regulated industries like healthcare. The key distinction lies in the scope and detail provided by each card. SageMaker Model Cards are focused on providing detailed, specific information about individual models like their performance metrics, bias assessments, and use cases. In contrast, AI Service Cards give a broader view of the AI service being implemented, addressing its intended use, any usage limitations, and its potential impacts. This ensures that stakeholders have a clear and comprehensive understanding of AI functionalities and their implications. Understanding these differences allows teams to more effectively document and manage their AI solutions. </p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t2-b5#0",
+        "gloss-d1-t1-b1#10",
+        "gloss-d1-t1-b1#11"
+      ]
     },
     {
       "id": "21-19",
@@ -343,7 +387,8 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>AWS CloudTrail is an essential service for compliance and governance, providing a detailed event log for all changes and user activity in your AWS account. It helps to ensure visibility into actions at the API-level, including who made what calls to which services from what source IP address, making it an indispensable tool for auditing ML pipelines and other AWS resources. More details can be found in the AWS documentation: <a href=\"https://aws.amazon.com/cloudtrail/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/cloudtrail/</a>\n\t\t\t\t\t\t</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": []
     },
     {
       "id": "21-21",
@@ -369,7 +414,11 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>For handling multi-modal data such as text and images simultaneously, a multi-modal embedding model is most effective. These models facilitate the integration of different types of information into a single, uniform format that the machine learning model can understand and process. This capacity not only enhances the chatbot‘s understanding but also its ability to provide relevant and context-aware responses. AWS offers multiple tools that can be configured to support such models though direct services under AWS for multi-modal embeddings might require combining tools like Amazon Lex for textual interpretation and AWS Rekognition or custom neural models for image analysis. </p>",
-      "domain": 2
+      "domain": 2,
+      "relatedConcepts": [
+        "gloss-d2-t1-b1#7",
+        "gloss-d2-t1-b1#2"
+      ]
     },
     {
       "id": "21-22",
@@ -395,7 +444,12 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Neural networks are a fundamental component of deep learning, designed to mimic human brain functionality. They learn from large amounts of data by adjusting the weights of connections (synapses) between nodes (neurons) based on the input they receive, which enables them to make informed predictions or decisions. This architecture makes them exceptionally good at pattern recognition, which is crucial for tasks such as real-time fraud detection in financial transactions. </p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t1-b1#3",
+        "gloss-d1-t1-b1#2",
+        "gloss-d1-t2-b4#4"
+      ]
     },
     {
       "id": "21-25",
@@ -421,7 +475,10 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Multimodal models integrate and learn from different types of data inputs such as text, audio, and visual, making them incredibly effective for complex tasks that involve various forms of data. These models are highly beneficial in scenarios like recommendation systems where the analysis of multiple input types can significantly improve the relevance and accuracy of the recommendations provided.</p>",
-      "domain": 2
+      "domain": 2,
+      "relatedConcepts": [
+        "gloss-d2-t1-b1#7"
+      ]
     }
   ]
 }

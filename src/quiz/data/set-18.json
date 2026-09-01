@@ -27,7 +27,10 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>In Amazon Bedrock, Guardrails are used to ensure that the AI models are being used responsibly by filtering out undesirable interactions or content. On the other hand, watermark detection is a method of embedding information into an image to identify if it was created by the bedrock's AI, adding a layer of authenticity and traceability to AI-generated content. These tools play distinct roles in maintaining ethical use of AI and content security within AI applications. </p>",
-      "domain": 4
+      "domain": 4,
+      "relatedConcepts": [
+        "gloss-d4-t1-b2#0"
+      ]
     },
     {
       "id": "18-2",
@@ -53,7 +56,12 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>In AI content generation using models like those provided by Amazon Bedrock, the ‘Temperature‘ parameter crucially impacts how the model selects its next tokens. A higher ‘Temperature‘ value leads to a higher chance of choosing less likely tokens, making the model‘s output more diverse and creative. This parameter helps customize the level of creativity versus accuracy in generated content, according to the goals of a project. </p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t3-b4#0",
+        "gloss-d1-t1-b1#14",
+        "gloss-d1-t1-b1#13"
+      ]
     },
     {
       "id": "18-4",
@@ -79,7 +87,8 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Amazon Textract‘s Document Analysis feature is specifically designed to handle complex documents where both context and the structured extraction of data such as forms, tables, and other content types are necessary. This capability allows detailed and accurate extraction of specific data types such as dates and currency, which are essential for applications like automated compliance checks. This selection is particularly relevant for extracting structured information precisely and efficiently from legal and other document types. For more information, visit the official AWS Textract documentation: <a href=\"https://aws.amazon.com/textract/features/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/textract/features/</a>\n\t\t\t\t\t\t</p>",
-      "domain": 3
+      "domain": 3,
+      "relatedConcepts": []
     },
     {
       "id": "18-6",
@@ -105,7 +114,10 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Amazon Personalize is designed specifically to enable the creation of applications that deliver personalized experiences and recommendations to end users. It uses machine learning algorithms optimized for dealing with complex data patterns and user behaviors, adapting over time to provide increasingly relevant and tailored recommendations.</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t2-b4#3"
+      ]
     },
     {
       "id": "18-7",
@@ -131,7 +143,11 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Amazon Polly is the best choice for the e-learning platform‘s requirements of converting educational material text into natural-sounding, multilingual speech. It delivers advanced deep learning technologies to synthesize speech that sounds like a human voice, making it suitable for creating applications that talk. This service supports a variety of languages and allows customization of voices, making it ideal for an educational setting that requires a wide range of accessible learning materials. More information can be found here: [Amazon Polly](<a href=\"https://aws.amazon.com/polly/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/polly/</a>). </p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t2-b5#5",
+        "gloss-d1-t2-b4#2"
+      ]
     },
     {
       "id": "18-8",
@@ -157,7 +173,8 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Amazon Forecast is the most appropriate service for the described scenario. It utilizes machine learning to build forecasts of trends based on time-series data, which is crucial in planning and optimizing retail operations. This ability to predict future consumer behavior can greatly enhance operational efficiency and strategic planning.</p>",
-      "domain": 3
+      "domain": 3,
+      "relatedConcepts": []
     },
     {
       "id": "18-9",
@@ -183,7 +200,8 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Amazon S3 is the most suitable storage option for storing large datasets needed for training and validating machine learning models using Amazon Bedrock. It offers scalable, durable, and secure object storage, which supports the demands of large-scale machine learning applications where vast amounts of unstructured data are processed and stored.</p>",
-      "domain": 3
+      "domain": 3,
+      "relatedConcepts": []
     },
     {
       "id": "18-10",
@@ -213,7 +231,12 @@
       ],
       "multiSelect": true,
       "explanationHtml": "<p>Model evaluation on Amazon Bedrock involves both human and automatic methods. Human evaluation is critical for assessing qualitative factors such as fairness and interpretability, while automatic evaluation provides quantitative metrics like accuracy and F1 scores. Combining these approaches ensures a comprehensive understanding of model performance. More info: <a href=\"https://aws.amazon.com/bedrock/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/bedrock/</a>\n\t\t\t\t\t\t</p>",
-      "domain": 3
+      "domain": 3,
+      "relatedConcepts": [
+        "gloss-d3-t4-b1#2",
+        "gloss-d3-t4-b1#0",
+        "gloss-d3-t4-b2#2"
+      ]
     },
     {
       "id": "18-13",
@@ -239,7 +262,8 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>For filling in missing words in sentences, a model that understands the context is needed, and BERT (Bidirectional Encoder Representations from Transformers) models are particularly well-suited for this. They process words in relation to all the other words in a sentence, rather than one-by-one in order. Amazon SageMaker allows the deployment of custom models like BERT and provides the necessary computational resources and tools to train and deploy such advanced NLP models efficiently. </p>",
-      "domain": 4
+      "domain": 4,
+      "relatedConcepts": []
     },
     {
       "id": "18-14",
@@ -265,7 +289,12 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Amazon Bedrock allows users to build or customize their own AI models built on top of AWS‘s pre-trained models. In this particular case, the best approach is to create a private copy of the pre-existing Foundation Model. This method preserves the integrity and generality of the original model while allowing the company to benefit from a custom model tailored to their specific training dataset, enhancing predictive performance specific to their products and consumer behaviors. This is essential when companies want to leverage the power of big data while maintaining their competitive advantages encapsulated in proprietary data. </p>",
-      "domain": 2
+      "domain": 2,
+      "relatedConcepts": [
+        "gloss-d2-t3-b1#0",
+        "gloss-d2-t3-b4#7",
+        "gloss-d2-t1-b1#6"
+      ]
     },
     {
       "id": "18-17",
@@ -291,7 +320,12 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>The crucial difference lies in the annotations: labeled data has labels that are directly associated with the input data and serve as a guide for the algorithm during the training phase. This primarily supports supervised learning techniques where the model learns to predict outputs based on inputs. Conversely, unlabeled data lacks these specific labels, which shifts its utility towards unsupervised learning where the algorithm tries to identify patterns and structures in the data independently. Understanding these distinctions helps in selecting the most suitable machine learning algorithm for different data types. </p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t1-b4#0",
+        "gloss-d1-t1-b5#0",
+        "gloss-d1-t1-b5#1"
+      ]
     },
     {
       "id": "18-18",
@@ -317,7 +351,10 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>AWS Glue DataBrew is a visual data preparation tool that enables users to clean, normalize, and transform data directly in Amazon S3 without loading it into specialized data systems. This integrates seamlessly with AWS ecosystem, streamlining the data cleaning process and ensuring data remains secure and cost-effective to manage. For more information on Glue DataBrew capabilities and benefits, refer to the official AWS documentation: <a href=\"https://aws.amazon.com/glue/databrew/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/glue/databrew/</a>\n\t\t\t\t\t\t</p>",
-      "domain": 3
+      "domain": 3,
+      "relatedConcepts": [
+        "gloss-d3-t3-b3#0"
+      ]
     },
     {
       "id": "18-19",
@@ -343,7 +380,8 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p><b>Tuning Strategy</b></p>\n\t\t\t\t\t\t<p>The Tuning Strategy is the core, essential parameter that defines <em>how</em>&nbsp;the hyperparameter tuning job will search for the best model.</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>Defines the Search Algorithm:</b>&nbsp;In Amazon SageMaker, the Tuning Strategy determines the algorithm used to choose the next set of hyperparameters to evaluate. The primary strategies are:</p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p><b>Bayesian:</b>&nbsp;Intelligently chooses hyperparameters based on previous results, which is more efficient and is the recommended default.</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p><b>Random Search:</b>&nbsp;Chooses hyperparameters at random, which can still be effective.</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p><b>Hyperband:</b>&nbsp;Used for early stopping to automatically terminate underperforming training jobs.</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>Directly Impacts Effectiveness:</b>&nbsp;The choice of strategy directly influences how quickly and effectively the tuning job converges on the optimal set of hyperparameters, making it the most critical parameter for the job’s success.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p><b>Maximum Number of Jobs</b></p>\n\t\t\t\t\t\t<p>While this is an important parameter for controlling cost and time, it is not the most essential for <em>effectiveness</em>. It is a resource constraint.</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>Function:</b>&nbsp;It sets the total number of training jobs the tuning job will launch. Setting it too low might prevent the search from finding a good result, but it doesn’t define&nbsp;<em>how</em>&nbsp;the search is conducted.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>Resource Limits</b></p>\n\t\t\t\t\t\t<p>This is an incorrect answer. “Resource Limits” is a general concept, not a specific, configurable parameter within the Automatic Model Tuning job itself.</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>Clarification:</b>&nbsp;You configure resource limits for individual&nbsp;<em>training jobs</em>&nbsp;(e.g., instance type and count), but the tuning job’s configuration focuses on the search strategy and the number of jobs, not a direct “Resource Limits” parameter.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>Learning Rate</b></p>\n\t\t\t\t\t\t<p>This is incorrect. The Learning Rate is a <b>hyperparameter that is being&nbsp;<em>tuned</em></b>, not a parameter for configuring the tuning job itself. </p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>Key Distinction:</b>&nbsp;The entire purpose of Automatic Model Tuning is to find the best values for model hyperparameters&nbsp;<em>like</em>&nbsp;the learning rate, number of layers, etc. You specify these as the search space; you do not set a fixed learning rate for the tuning process.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>",
-      "domain": 2
+      "domain": 2,
+      "relatedConcepts": []
     },
     {
       "id": "18-20",
@@ -369,7 +407,11 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Batch inference, allowing multiple inference tasks to be combined and processed at once.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p><b>Cost Efficiency:</b> Amazon Bedrock offers a <b>Batch mode</b> for certain Foundation Models at a <b>significantly lower price</b> (e.g., up to 50% less) compared to On-Demand inference pricing for the same model. This is the <b>most direct way to reduce costs</b> for high-volume, non-time-critical processing.</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p><b>Performance/Delay Balance:</b> Batch inference is inherently asynchronous; you submit a set of prompts in an S3 file and receive the responses later in an S3 output file. This pattern perfectly matches the company’s requirement to <b>tolerate slight delays</b>.</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p><b>High-Volume Processing:</b> Batching tasks together allows for the most efficient use of underlying compute resources, which is ideal for analyzing “vast amounts of user-generated content.”</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Real-time inference for immediate response requirements.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>Real-time inference is designed for <b>low-latency</b> requirements where an immediate response is critical. It is typically the <b>most expensive</b> inference option because it keeps resources ready for immediate execution, directly contradicting the goal of <b>cost reduction</b> for a workload that can tolerate delays. </p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>On-demand inference, providing payment flexibility strictly based on the resources used during each inference computation.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>On-Demand</b> is the default, pay-as-you-go pricing for Bedrock, where you pay per token. While flexible, it is <b>more expensive</b> than the dedicated <b>Batch mode</b> for processing large, non-urgent volumes. On-Demand pricing is best for unpredictable, intermittent traffic or low-volume, time-sensitive API calls, not for maximizing cost efficiency on vast, delay-tolerant volumes.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Serverless inference, which dynamically adjusts computing resources according to demand.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>In the context of <b>Amazon Bedrock</b>, the primary inference options are <b>On-Demand</b> (pay-per-token/pay-as-you-go) and <b>Provisioned Throughput</b> (reserved capacity). Bedrock’s standard On-Demand API model already offers a serverless experience (no infrastructure management), but there is a dedicated <b>Batch</b> option that offers a better cost optimization for this specific use case than the standard token-based On-Demand billing. <i>Note: SageMaker offers “Serverless Inference,” but this question is scoped to Amazon Bedrock.</i>\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>",
-      "domain": 3
+      "domain": 3,
+      "relatedConcepts": [
+        "gloss-d3-t1-b1#0",
+        "gloss-d3-t1-b1#2"
+      ]
     },
     {
       "id": "18-22",
@@ -395,7 +437,11 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p><b>Use AWS Glue DataBrew for preprocessing the data.</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>AWS Glue DataBrew</b> is a visual data preparation tool specifically designed for data analysts and data scientists to <b>clean, normalize, and transform data without writing code</b>.</p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p><b>Complex Data Handling:</b> DataBrew offers over 350 pre-built transformations, including specialized functions like <b>Unnest</b> and <b>Flatten</b> that are highly effective for converting <b>nested JSON structures</b> into a flat, tabular format suitable for ML model training.</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p><b>Diverse Data Handling:</b> It can easily connect to and blend data from various sources, including relational databases (via JDBC) and semi-structured files (JSON, CSV) in S3.</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p><b>ML Focus:</b> DataBrew is ideal for the preprocessing stage of the ML pipeline, as it allows for visual data quality checks, statistical analysis, and feature engineering, which are crucial before training.</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Deploy AWS Lambda functions to preprocess the JSON and relational data.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>While technically possible, using Lambda for <b>large dataset transformations</b> is generally <b>inefficient, complex, and expensive</b>. Lambda has hard limits on execution time and memory, making it unsuitable for a large-scale Extract, Transform, Load (ETL) workload involving <b>several gigabytes of complex data</b>. AWS Glue’s native Spark-based jobs (or DataBrew) are the recommended, scalable solution for this task. </p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Utilize AWS Glue Crawlers to discover the data schema.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>AWS Glue Crawlers</b> are used for <b>data discovery</b>—they scan the data source, infer the schema, and populate the <b>AWS Glue Data Catalog</b> with metadata. They perform <b>discovery (D)</b>, not the heavy <b>transformation (T)</b> required to flatten nested JSON or join diverse data sources. They are a <i>prerequisite</i> for the transformation job, not the tool for the transformation itself.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Implement Amazon Athena for the JSON parsing and transformation.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<b>Amazon Athena</b> is an <b>interactive query service</b> that uses standard SQL to analyze data directly in S3. While it can query and read nested JSON structures, using it to perform <b>large-scale, complex ETL</b> (like repeatedly writing back and reading transformed data) is <b>not its primary purpose</b> and can be less efficient than a dedicated ETL engine like AWS Glue/DataBrew. It’s best used for ad-hoc querying, not full-scale production ETL for model training.\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t3-b1#0",
+        "gloss-d1-t1-b4#5"
+      ]
     },
     {
       "id": "18-26",
@@ -421,7 +467,12 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p><b>Asynchronous inference</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Correct because <b>Asynchronous inference</b> in SageMaker is designed for <b>large payloads (up to gigabytes)</b> and workloads where responses can be delayed.</li>\n\t\t\t\t\t\t\t<li>It allows requests to be queued and processed without requiring an immediate response, making it ideal for scenarios where inference jobs are heavy and time‑consuming.</li>\n\t\t\t\t\t\t\t<li>This matches the company’s requirement: large payloads and tolerance for delayed responses.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p><b>Serverless inference</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because serverless inference is optimized for <b>small, lightweight requests</b> with fast response times. </li>\n\t\t\t\t\t\t\t<li>It is not suitable for multi‑gigabyte payloads, as it has strict limits on request size and execution time.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>Real‑time inference</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because real‑time endpoints are designed for <b>low‑latency predictions</b> with relatively small payloads. </li>\n\t\t\t\t\t\t\t<li>Large payloads would overwhelm real‑time endpoints and are not supported efficiently.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>Batch inference</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because batch transform is used for <b>offline batch processing of datasets</b>, not for handling individual large inference requests. </li>\n\t\t\t\t\t\t\t<li>While batch can process large files, it is not the right fit for handling <b>per‑request inference workloads</b> with queued responses. </li>\n\t\t\t\t\t\t</ul>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t1-b3#2",
+        "gloss-d1-t1-b3#0",
+        "gloss-d1-t1-b3#1"
+      ]
     },
     {
       "id": "18-27",
@@ -451,7 +502,12 @@
       ],
       "multiSelect": true,
       "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p><b>Fine‑tuning</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Correct because <b>fine‑tuning</b> is a supported customization method in Amazon Bedrock.</li>\n\t\t\t\t\t\t\t<li>It allows you to adjust the foundation model using domain‑specific data, improving accuracy and relevance for tasks like product recommendations.</li>\n\t\t\t\t\t\t\t<li>This is ideal when the company wants the model to learn patterns unique to its retail data.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Retrieval Augmented Generation (RAG)</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Correct because <b>RAG</b> is another valid customization method in Bedrock.</li>\n\t\t\t\t\t\t\t<li>It enhances generative AI by combining the foundation model with external knowledge sources (e.g., product catalogs, customer history).</li>\n\t\t\t\t\t\t\t<li>This ensures responses are grounded in up‑to‑date, company‑specific information without retraining the model.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p><b>Chain‑of‑thought prompting</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because while prompting strategies can influence model outputs, they are <b>not considered customization methods</b> in Bedrock. </li>\n\t\t\t\t\t\t\t<li>Chain‑of‑thought prompting is a technique for reasoning, not a supported customization option.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>Continued Pre‑training</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because Bedrock does not allow direct continued pre‑training of foundation models.</li>\n\t\t\t\t\t\t\t<li>Instead, customization is achieved through fine‑tuning or RAG, not by extending the original pre‑training process.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>Zero‑shot prompting</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrect because zero‑shot prompting is a usage technique, not a customization method.</li>\n\t\t\t\t\t\t\t<li>It leverages the model’s general capabilities but does not tailor or adapt the model to specific business needs.</li>\n\t\t\t\t\t\t</ul>",
-      "domain": 3
+      "domain": 3,
+      "relatedConcepts": [
+        "gloss-d3-t1-b5#1",
+        "gloss-d3-t1-b5#3",
+        "gloss-d3-t1-b3#0"
+      ]
     },
     {
       "id": "18-28",
@@ -485,7 +541,11 @@
       ],
       "multiSelect": true,
       "explanationHtml": "<p><strong>Correct</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Deploy applications globally in minutes to improve user experience</b> This is correct because cloud platforms like AWS allow rapid global deployment of applications. This improves latency and user experience by serving customers closer to their geographic location, something that traditional infrastructure cannot achieve easily.\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Pay only for the resources you consume, avoiding upfront costs</b> This is also correct because cloud computing follows a <b>pay‑as‑you‑go model</b>, eliminating the need for large upfront investments in hardware. This is especially beneficial for startups, as they can scale resources up or down depending on workload demand, ensuring cost efficiency.\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p><strong>Incorrect</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Reserve compute resources months in advance to ensure availability</b> Incorrect because one of the main advantages of cloud computing is <b>on‑demand resource provisioning</b>. You do not need to reserve resources months in advance; instead, you can provision them instantly when needed.\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Require long‑term contracts to access cloud resources</b> Incorrect because cloud services are designed to be flexible. Long‑term contracts are not required; customers can use resources on demand and stop paying when they no longer need them.\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Manage on‑premises hardware to run AI workloads</b> Incorrect because cloud computing removes the need to manage physical infrastructure. AWS handles hardware management, allowing developers to focus on building and deploying AI/ML workloads.\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p>&nbsp;</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t2-b1#1",
+        "gloss-d1-t2-b6#0"
+      ]
     },
     {
       "id": "18-29",
@@ -511,7 +571,12 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Amazon SageMaker Feature Store is the optimal choice for a financial services company looking to manage, share, and reuse features across various machine learning models and teams. It not only helps in ensuring consistency and reducing redundancy but also enhances productivity by providing a centralized store for features. This service allows for features to be defined once and used in multiple models, ensuring that all teams have access to the same set of features and thereby, maintaining uniformity across the company‘s AI solutions. </p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t2-b5#0",
+        "gloss-d1-t3-b1#0",
+        "gloss-d1-t2-b4#4"
+      ]
     },
     {
       "id": "18-30",
@@ -537,7 +602,12 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>To optimize the performance of a Foundation Model in AWS Bedrock, it is imperative to understand the relative complexities of different enhancement techniques. Prompt engineering, involving the simplest alterations to input prompts, is the least complex. Retrieval Augmented Generation (RAG) adds a layer of complexity by integrating search capabilities within the generation process. Fine-tuning, which adjusts model parameters based on additional specialized training data, ranks as the most complex due to its intensive computational requirements and the nuanced understanding of the model it requires. </p>",
-      "domain": 3
+      "domain": 3,
+      "relatedConcepts": [
+        "gloss-d3-t1-b5#2",
+        "gloss-d3-t1-b5#3",
+        "gloss-d3-t1-b5#1"
+      ]
     },
     {
       "id": "18-31",
@@ -563,7 +633,12 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Guardrails in Amazon Bedrock are particularly vital for controlling AI behavior, especially in sensitive areas such as content generation. They help ensure that the AI does not produce harmful or unwanted outputs and is compliant with data privacy standards concerning PII. This makes them an essential feature for companies looking to deploy safe and reliable AI solutions.</p>",
-      "domain": 5
+      "domain": 5,
+      "relatedConcepts": [
+        "gloss-d5-t1-b1#7",
+        "gloss-d5-t1-b4#9",
+        "gloss-d5-t1-b4#7"
+      ]
     },
     {
       "id": "18-34",
@@ -589,7 +664,11 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Amazon Textract Document Analysis is the most suitable AWS service for a use case involving extraction of structured data from scanned documents. It enables precise extraction of data like key-value pairs and tables, which are common in business documents such as invoices and receipts. This facilitates the automation of tasks in the accounts payable process by making structured data available for easier processing and integration. </p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t1-b4#5",
+        "gloss-d1-t2-b4#0"
+      ]
     },
     {
       "id": "18-36",
@@ -615,7 +694,8 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>The term ‘inference‘ specifically refers to the operational phase in machine learning workflows, particularly when a trained model is used in real-world scenarios to make predictions based on new and unseen data. In the Amazon SageMaker context, this involves deploying the model and using it to make health predictions based on patient data such as age, blood pressure, and cholesterol levels. Understanding this term and its application is crucial for effectively leveraging AWS SageMaker in healthcare predictive analytics. </p>",
-      "domain": 2
+      "domain": 2,
+      "relatedConcepts": []
     },
     {
       "id": "18-37",
@@ -641,7 +721,10 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>The ‘Response Length‘ parameter in AI-driven applications like Amazon Bedrock directly impacts the length of the responses generated by the chatbot. It sets limits on the number of tokens that constitute the responses, ensuring that outputs are neither too brief to be unclear nor too lengthy to be cumbersome. This parameter is crucial for tailoring interactions to be concise and relevant, enhancing customer experience.</p>",
-      "domain": 3
+      "domain": 3,
+      "relatedConcepts": [
+        "gloss-d3-t1-b2#2"
+      ]
     },
     {
       "id": "18-39",
@@ -667,7 +750,11 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Natural Language Processing (NLP) and Computer Vision each have distinct applications relevant to the data they process. NLP is crucial for dealing with textual and spoken data, aiding in tasks such as sentiment analysis, text generation, and language translation. On the other hand, Computer Vision is tailored to analyze and interpret visual data from sources like photos and videos, used in tasks such as object detection, image classification, and facial recognition. Understanding these differences allows the team to choose the appropriate technology based on content type and required outcome. </p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t1-b1#5",
+        "gloss-d1-t1-b1#4"
+      ]
     },
     {
       "id": "18-41",
@@ -693,7 +780,12 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>For a financial services company needing to uphold industry regulations and ensure model transparency, an appropriate toolset within Amazon SageMaker would include Model Cards for creating comprehensive metadata about models, Model Dashboard for continuous performance monitoring, and Clarify for enhancing model transparency through explainability and bias detection capabilities. These tools collectively aid in aligning machine learning operations with regulatory requirements and ethical standards, supporting responsible deployment of AI in sensitive areas like loan approvals and fraud detection. </p>",
-      "domain": 4
+      "domain": 4,
+      "relatedConcepts": [
+        "gloss-d4-t2-b2#0",
+        "gloss-d4-t2-b4#1",
+        "gloss-d4-t1-b1#1"
+      ]
     },
     {
       "id": "18-42",
@@ -719,7 +811,8 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Stable Diffusion is the optimal choice for a media production company looking to generate images from text descriptions. This model is engineered to interpret text inputs and render detailed, realistic images, which is precisely what the company requires for their marketing and content creation workflows. Unlike the other models mentioned, Stable Diffusion‘s core functionality aligns with the company‘s specific use case for AI-enhanced visual content creation. </p>",
-      "domain": 4
+      "domain": 4,
+      "relatedConcepts": []
     },
     {
       "id": "18-43",
@@ -745,7 +838,10 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>In the scope of the AWS Certified AI Practitioner AIF-C01, risk management is a crucial security discipline within the Generative AI Security Scoping Matrix. This discipline is essential for identifying, evaluating, and mitigating risks associated with generative AI technologies. It aims to implement strategies that prevent potential threats and vulnerabilities, ensuring that the AI systems operate within a secure and controlled environment. </p>",
-      "domain": 5
+      "domain": 5,
+      "relatedConcepts": [
+        "gloss-d5-t2-b3#2"
+      ]
     },
     {
       "id": "18-44",
@@ -771,7 +867,8 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Model Cards in Amazon SageMaker are designed primarily to provide detailed, accountable, and transparent documentation for machine learning models. They aim to facilitate better understanding and trust among users by clearly outlining an AI model‘s purpose, performance, training data, and any ethical considerations.</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": []
     },
     {
       "id": "18-46",
@@ -797,7 +894,12 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>In the context of a healthcare analytics company needing to make immediate risk assessments during patient check-ins, Amazon SageMaker Real-time Inference is the most fitting service. It ensures that endpoints are always available to handle incoming requests at low latency, providing an immediate response as required by the healthcare scenario. This service is particularly designed to meet the demands for real-time predictions, unlike the other options which are better suited for handling non-immediate batch processing or larger, less time-sensitive inference tasks. </p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t1-b3#1",
+        "gloss-d1-t1-b3#0",
+        "gloss-d1-t1-b3#2"
+      ]
     },
     {
       "id": "18-51",
@@ -823,7 +925,8 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Amazon Polly is the most appropriate AWS service for converting text to lifelike speech, supporting multiple languages and natural sounding voices, which suits the requirement to offer audio courses in various languages. It provides a straightforward API to convert text into audio files that can be played directly to end-users, beneficial for educational platforms looking to expand accessibility and engagement through audio learning. [More about Amazon Polly](<a href=\"https://aws.amazon.com/polly/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/polly/</a>) </p>",
-      "domain": 2
+      "domain": 2,
+      "relatedConcepts": []
     },
     {
       "id": "18-52",
@@ -849,7 +952,11 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Object detection is a computer vision technique that detects instances of semantic objects of a certain class (like animals, humans, or vehicles) in digital images and videos. It‘s widely used in various applications such as image annotation, vehicle counting, surveillance, and in this case, wildlife monitoring. By using this technique, the organization can accurately identify and categorize each animal species captured in the camera trap images. More information about object detection can be found on AWS documentation and related machine learning resources. </p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t1-b1#4",
+        "gloss-d1-t2-b3#1"
+      ]
     },
     {
       "id": "18-54",
@@ -875,7 +982,8 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Amazon Textract is the most suitable AWS service for extracting text from documents such as invoices and receipts. It uses machine learning to read and process document texts, even from scanned images, which makes it useful for automating data extraction in business processes. This functionality supports reducing manual data entry and improving operational efficiency.</p>",
-      "domain": 2
+      "domain": 2,
+      "relatedConcepts": []
     },
     {
       "id": "18-55",
@@ -901,7 +1009,11 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Amazon Transcribe offers the feature of custom vocabularies, which is crucial for applications requiring specialized vocabulary and handling of diverse accents. This feature allows developers to include specific terms that are unique to their business, ensuring that these terms are recognized and transcribed accurately. In scenarios such as customer support calls, where clarity is critical, incorporating custom vocabularies improves the performance and accuracy of the transcription service, making it better suited for real-time application needs. </p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t2-b5#1",
+        "gloss-d1-t1-b1#5"
+      ]
     }
   ]
 }

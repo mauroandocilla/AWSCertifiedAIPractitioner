@@ -27,7 +27,10 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>En Amazon Bedrock, Guardrails se utilizan para garantizar que los modelos de IA se utilicen de manera responsable filtrando interacciones o contenido indeseable. Por otro lado, la detección de watermarks es un método para incrustar información en una imagen a fin de identificar si fue creada por la IA de Bedrock, agregando una capa de autenticidad y trazabilidad al contenido generado por IA. Estas herramientas juegan roles distintos en el mantenimiento del uso ético de la IA y la seguridad del contenido dentro de aplicaciones de IA.</p>",
-      "domain": 4
+      "domain": 4,
+      "relatedConcepts": [
+        "gloss-d4-t1-b2#0"
+      ]
     },
     {
       "id": "18-2",
@@ -53,7 +56,12 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>En la generación de contenido de IA usando modelos como los proporcionados por Amazon Bedrock, el parámetro 'Temperature' impacta críticamente cómo el modelo selecciona sus próximos tokens. Un valor de 'Temperature' más alto conduce a una mayor probabilidad de elegir tokens menos probables, haciendo que el resultado del modelo sea más diverso y creativo. Este parámetro ayuda a personalizar el nivel de creatividad versus precisión en el contenido generado, de acuerdo con los objetivos de un proyecto. </p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t3-b4#0",
+        "gloss-d1-t1-b1#14",
+        "gloss-d1-t1-b1#13"
+      ]
     },
     {
       "id": "18-4",
@@ -79,7 +87,8 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>La característica Document Analysis de Amazon Textract está diseñada específicamente para manejar documentos complejos donde tanto el contexto como la extracción estructurada de datos como formularios, tablas y otros tipos de contenido son necesarios. Esta capacidad permite la extracción detallada y precisa de tipos de datos específicos como fechas y moneda, que son esenciales para aplicaciones como verificaciones automatizadas de cumplimiento normativo. Esta opción es particularmente relevante para extraer información estructurada de manera precisa y eficiente de documentos legales y otros tipos de documentos. Para más información, consulta la documentación oficial de AWS Textract: <a href=\"https://aws.amazon.com/textract/features/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/textract/features/</a></p>",
-      "domain": 3
+      "domain": 3,
+      "relatedConcepts": []
     },
     {
       "id": "18-6",
@@ -105,7 +114,10 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Amazon Personalize está diseñado específicamente para crear aplicaciones que ofrezcan experiencias personalizadas y recomendaciones a los usuarios finales. Utiliza algoritmos de machine learning optimizados para manejar patrones de datos complejos y comportamientos de usuarios, adaptándose con el tiempo para proporcionar recomendaciones cada vez más relevantes y personalizadas.</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t2-b4#3"
+      ]
     },
     {
       "id": "18-7",
@@ -131,7 +143,11 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Amazon Polly es la mejor opción para los requisitos de la plataforma de e-learning de convertir el material educativo de texto a habla que suene natural y en múltiples idiomas. Utiliza tecnologías avanzadas de deep learning para sintetizar voz que suene como la de un ser humano, lo que la hace ideal para crear aplicaciones que hablen. Este servicio admite una variedad de idiomas y permite personalizar las voces, lo que lo hace perfecto para un entorno educativo que requiere un amplio rango de materiales de aprendizaje accesibles. Puedes encontrar más información aquí: [Amazon Polly](<a href=\"https://aws.amazon.com/polly/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/polly/</a>). </p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t2-b5#5",
+        "gloss-d1-t2-b4#2"
+      ]
     },
     {
       "id": "18-8",
@@ -157,7 +173,8 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Amazon Forecast es el servicio más apropiado para el escenario descrito. Utiliza machine learning para construir pronósticos de tendencias basados en datos de series temporales, lo que es crucial para la planificación y optimización de operaciones minoristas. Esta capacidad de predecir el comportamiento futuro de los consumidores puede mejorar significativamente la eficiencia operacional y la planificación estratégica.</p>",
-      "domain": 3
+      "domain": 3,
+      "relatedConcepts": []
     },
     {
       "id": "18-9",
@@ -183,7 +200,8 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Amazon S3 es la opción de almacenamiento más adecuada para guardar grandes conjuntos de datos necesarios para entrenar y validar modelos de machine learning usando Amazon Bedrock. Ofrece almacenamiento de objetos escalable, duradero y seguro, que respalda las demandas de aplicaciones de machine learning a gran escala donde se procesan y almacenan vastas cantidades de datos no estructurados.</p>",
-      "domain": 3
+      "domain": 3,
+      "relatedConcepts": []
     },
     {
       "id": "18-10",
@@ -213,7 +231,12 @@
       ],
       "multiSelect": true,
       "explanationHtml": "<p>La evaluación de modelos en Amazon Bedrock implica métodos tanto humanos como automáticos. La evaluación humana es crítica para evaluar factores cualitativos como equidad e interpretabilidad, mientras que la evaluación automática proporciona métricas cuantitativas como accuracy y F1 scores. Combinar estos enfoques asegura una comprensión integral del desempeño del modelo. Más información: <a href=\"https://aws.amazon.com/bedrock/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/bedrock/</a>\n\t\t\t\t\t\t</p>",
-      "domain": 3
+      "domain": 3,
+      "relatedConcepts": [
+        "gloss-d3-t4-b1#2",
+        "gloss-d3-t4-b1#0",
+        "gloss-d3-t4-b2#2"
+      ]
     },
     {
       "id": "18-13",
@@ -239,7 +262,8 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Para completar palabras faltantes en oraciones se necesita un modelo que entienda el contexto, y los modelos BERT (Bidirectional Encoder Representations from Transformers) son particularmente adecuados para esto. Procesan las palabras en relación con todas las demás palabras de una oración, en lugar de procesarlas una por una en orden. Amazon SageMaker permite desplegar modelos personalizados como BERT y proporciona los recursos computacionales y herramientas necesarios para entrenar e implementar de manera eficiente estos modelos avanzados de NLP.</p>",
-      "domain": 4
+      "domain": 4,
+      "relatedConcepts": []
     },
     {
       "id": "18-14",
@@ -265,7 +289,12 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Amazon Bedrock permite a los usuarios construir o personalizar sus propios modelos de IA construidos sobre los modelos preentrenados de AWS. En este caso particular, el mejor enfoque es crear una copia privada del Foundation Model preexistente. Este método preserva la integridad y generalidad del modelo original mientras permite que la empresa se beneficie de un modelo personalizado adaptado a su conjunto de datos de entrenamiento específico, mejorando el desempeño predictivo particular para sus productos y comportamientos de los consumidores. Esto es esencial cuando las empresas quieren aprovechar el poder de big data manteniendo sus ventajas competitivas encapsuladas en datos propietarios. </p>",
-      "domain": 2
+      "domain": 2,
+      "relatedConcepts": [
+        "gloss-d2-t3-b1#0",
+        "gloss-d2-t3-b4#7",
+        "gloss-d2-t1-b1#6"
+      ]
     },
     {
       "id": "18-17",
@@ -291,7 +320,12 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>La diferencia crucial radica en las anotaciones: los datos etiquetados tienen etiquetas directamente asociadas con los datos de entrada y actúan como guía para el algoritmo durante la fase de entrenamiento. Esto respalda principalmente técnicas de aprendizaje supervisado donde el modelo aprende a predecir salidas basándose en entradas. Por el contrario, los datos sin etiquetar carecen de estas etiquetas específicas, lo que reorienta su utilidad hacia aprendizaje no supervisado donde el algoritmo intenta identificar patrones y estructuras en los datos de forma independiente. Entender estas distinciones ayuda a seleccionar el algoritmo de machine learning más adecuado para diferentes tipos de datos.</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t1-b4#0",
+        "gloss-d1-t1-b5#0",
+        "gloss-d1-t1-b5#1"
+      ]
     },
     {
       "id": "18-18",
@@ -317,7 +351,10 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>AWS Glue DataBrew es una herramienta visual de preparación de datos que permite limpiar, normalizar y transformar datos directamente en Amazon S3 sin necesidad de cargarlos en sistemas especializados. Esto se integra sin problemas con el ecosistema de AWS, simplificando el proceso de limpieza de datos y asegurando que los datos se mantengan seguros y de manera rentable. Para más información sobre las capacidades y ventajas de Glue DataBrew, consulta la documentación oficial de AWS: <a href=\"https://aws.amazon.com/glue/databrew/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/glue/databrew/</a>\n\t\t\t\t\t\t</p>",
-      "domain": 3
+      "domain": 3,
+      "relatedConcepts": [
+        "gloss-d3-t3-b3#0"
+      ]
     },
     {
       "id": "18-19",
@@ -343,7 +380,8 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p><b>Estrategia de sintonización</b></p>\n\t\t\t\t\t\t<p>La Estrategia de sintonización es el parámetro esencial y fundamental que define <em>cómo</em>&nbsp;el trabajo de sintonización de hiperparámetros buscará el mejor modelo.</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>Define el algoritmo de búsqueda:</b>&nbsp;En Amazon SageMaker, la Estrategia de sintonización determina el algoritmo utilizado para elegir el siguiente conjunto de hiperparámetros a evaluar. Las estrategias principales son:</p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p><b>Bayesiana:</b>&nbsp;Elige inteligentemente los hiperparámetros basándose en resultados anteriores, lo que es más eficiente y es la opción predeterminada recomendada.</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p><b>Búsqueda aleatoria:</b>&nbsp;Elige hiperparámetros al azar, lo que también puede ser efectivo.</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p><b>Hyperband:</b>&nbsp;Se utiliza para parada temprana y termina automáticamente trabajos de entrenamiento que están teniendo bajo desempeño.</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>Impacta directamente la efectividad:</b>&nbsp;La elección de la estrategia influye directamente en la velocidad y eficacia con que el trabajo de sintonización converge hacia el conjunto óptimo de hiperparámetros, lo que la convierte en el parámetro más crítico para el éxito del trabajo.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p><b>Número máximo de trabajos</b></p>\n\t\t\t\t\t\t<p>Aunque este es un parámetro importante para controlar el costo y el tiempo, no es el más esencial para la <em>efectividad</em>. Es una restricción de recursos.</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>Función:</b>&nbsp;Establece el número total de trabajos de entrenamiento que el trabajo de sintonización ejecutará. Si lo estableces demasiado bajo, podría impedir que la búsqueda encuentre un buen resultado, pero no define <em>cómo</em>&nbsp;se realiza la búsqueda.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>Límites de recursos</b></p>\n\t\t\t\t\t\t<p>Esta es una respuesta incorrecta. \"Límites de recursos\" es un concepto general, no un parámetro específico y configurable dentro del trabajo Automatic Model Tuning.</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>Aclaración:</b>&nbsp;Configuras los límites de recursos para trabajos de entrenamiento <em>individuales</em>&nbsp;(por ejemplo, tipo e instancia y cantidad), pero la configuración del trabajo de sintonización se enfoca en la estrategia de búsqueda y el número de trabajos, no en un parámetro directo de \"Límites de recursos\".</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>Tasa de aprendizaje</b></p>\n\t\t\t\t\t\t<p>Esta es incorrecta. La Tasa de aprendizaje es un <b>hiperparámetro que está siendo <em>sintonizado</em></b>, no un parámetro para configurar el trabajo de sintonización en sí.</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>Distinción clave:</b>&nbsp;El propósito completo de Automatic Model Tuning es encontrar los mejores valores para hiperparámetros del modelo <em>como</em>&nbsp;la tasa de aprendizaje, número de capas, etc. Especificas estos como el espacio de búsqueda; no estableces una tasa de aprendizaje fija para el proceso de sintonización.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>",
-      "domain": 2
+      "domain": 2,
+      "relatedConcepts": []
     },
     {
       "id": "18-20",
@@ -369,7 +407,11 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Batch inference, permitiendo que múltiples tareas de inferencia se combinen y procesen de una sola vez.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p><b>Eficiencia de costos:</b> Amazon Bedrock ofrece un <b>modo Batch</b> para ciertos Foundation Models a un <b>precio significativamente más bajo</b> (por ejemplo, hasta 50% menos) en comparación con los precios de inferencia bajo demanda para el mismo modelo. Esta es la <b>forma más directa de reducir costos</b> para procesamiento de alto volumen y no urgente.</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p><b>Balance de rendimiento/retraso:</b> Batch inference es inherentemente asincrónico; envías un conjunto de prompts en un archivo S3 y recibes las respuestas posteriormente en un archivo de salida S3. Este patrón se ajusta perfectamente al requisito de la empresa de <b>tolerar pequeños retrasos</b>.</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p><b>Procesamiento de alto volumen:</b> Agrupar tareas permite el uso más eficiente de los recursos de cómputo subyacentes, lo cual es ideal para analizar \"grandes volúmenes de contenido generado por usuarios\".</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Inferencia en tiempo real para requisitos de respuesta inmediata.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>La inferencia en tiempo real está diseñada para requisitos de <b>baja latencia</b> donde una respuesta inmediata es crítica. Generalmente es la opción de inferencia <b>más costosa</b> porque mantiene recursos listos para ejecución inmediata, lo que contradice directamente el objetivo de <b>reducción de costos</b> para una carga de trabajo que puede tolerar retrasos. </p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Inferencia bajo demanda, proporcionando flexibilidad de pago basada estrictamente en los recursos utilizados durante cada cálculo de inferencia.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>La opción <b>bajo demanda</b> es el modelo de precios predeterminado de Bedrock, de pago por uso, donde pagas por token. Si bien es flexible, es <b>más costosa</b> que el <b>modo Batch</b> dedicado para procesar grandes volúmenes no urgentes. El precio bajo demanda es mejor para tráfico impredecible e intermitente o para llamadas API de bajo volumen y sensibles al tiempo, no para maximizar la eficiencia de costos en volúmenes grandes y tolerantes a retrasos.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Inferencia serverless, que ajusta dinámicamente los recursos informáticos según la demanda.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>En el contexto de <b>Amazon Bedrock</b>, las opciones principales de inferencia son <b>bajo demanda</b> (pago por token/pago por uso) y <b>Provisioned Throughput</b> (capacidad reservada). El modelo API estándar de Bedrock bajo demanda ya ofrece una experiencia serverless (sin gestión de infraestructura), pero existe una opción dedicada de <b>Batch</b> que ofrece mejor optimización de costos para este caso de uso específico que el modelo estándar de facturación por token. <i>Nota: SageMaker ofrece \"Serverless Inference\", pero esta pregunta se enfoca en Amazon Bedrock.</i>\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>",
-      "domain": 3
+      "domain": 3,
+      "relatedConcepts": [
+        "gloss-d3-t1-b1#0",
+        "gloss-d3-t1-b1#2"
+      ]
     },
     {
       "id": "18-22",
@@ -395,7 +437,11 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p><b>Usar AWS Glue DataBrew para preprocesar los datos.</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>AWS Glue DataBrew</b> es una herramienta visual de preparación de datos diseñada específicamente para analistas de datos y científicos de datos para <b>limpiar, normalizar y transformar datos sin escribir código</b>.</p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p><b>Manejo de datos complejos:</b> DataBrew ofrece más de 350 transformaciones predefinidas, incluyendo funciones especializadas como <b>Unnest</b> y <b>Flatten</b> que son altamente efectivas para convertir <b>estructuras JSON anidadas</b> en un formato tabular plano adecuado para el entrenamiento de modelos de ML.</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p><b>Manejo de datos diversos:</b> Puede conectarse fácilmente y combinar datos de varias fuentes, incluyendo bases de datos relacionales (vía JDBC) y archivos semiestructurados (JSON, CSV) en S3.</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p><b>Enfoque en ML:</b> DataBrew es ideal para la etapa de preprocesamiento del pipeline de ML, ya que permite verificaciones visuales de calidad de datos, análisis estadísticos e ingeniería de características, que son cruciales antes del entrenamiento.</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Implementar funciones de AWS Lambda para preprocesar los datos JSON y relacionales.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>Aunque técnicamente es posible, usar Lambda para <b>transformaciones de conjuntos de datos grandes</b> es generalmente <b>ineficiente, complejo y costoso</b>. Lambda tiene límites estrictos en tiempo de ejecución y memoria, lo que la hace inadecuada para cargas de trabajo Extract, Transform, Load (ETL) a gran escala que involucren <b>varios gigabytes de datos complejos</b>. Los trabajos nativos de AWS Glue basados en Spark (o DataBrew) son la solución recomendada y escalable para esta tarea.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Utilizar AWS Glue Crawlers para descubrir el esquema de los datos.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><b>AWS Glue Crawlers</b> se utilizan para <b>descubrimiento de datos</b>: escanean la fuente de datos, deducen el esquema y populan el <b>AWS Glue Data Catalog</b> con metadatos. Realizan <b>descubrimiento (D)</b>, no la pesada <b>transformación (T)</b> necesaria para aplanar JSON anidado o combinar fuentes de datos diversas. Son un <i>requisito previo</i> para el trabajo de transformación, no la herramienta para la transformación en sí.</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Implementar Amazon Athena para el análisis y transformación de JSON.</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<b>Amazon Athena</b> es un <b>servicio de consulta interactiva</b> que utiliza SQL estándar para analizar datos directamente en S3. Si bien puede consultar y leer estructuras JSON anidadas, usarlo para realizar <b>ETL a gran escala y complejo</b> (como escribir y leer repetidamente datos transformados) <b>no es su propósito principal</b> y puede ser menos eficiente que un motor ETL dedicado como AWS Glue/DataBrew. Se utiliza mejor para consultas ad hoc, no para ETL a escala de producción para el entrenamiento de modelos.\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t3-b1#0",
+        "gloss-d1-t1-b4#5"
+      ]
     },
     {
       "id": "18-26",
@@ -421,7 +467,12 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p><b>Asynchronous inference</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Correcto porque <b>Asynchronous inference</b> en SageMaker está diseñado para <b>payloads grandes (hasta varios gigabytes)</b> y cargas de trabajo donde las respuestas pueden demorarse.</li>\n\t\t\t\t\t\t\t<li>Permite que las solicitudes se pongan en cola y se procesen sin requerir una respuesta inmediata, lo que lo hace ideal para escenarios donde los trabajos de inferencia son pesados y requieren mucho tiempo.</li>\n\t\t\t\t\t\t\t<li>Esto se alinea con los requisitos de la empresa: payloads grandes y tolerancia a respuestas demoradas.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p><b>Serverless inference</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrecto porque serverless inference está optimizado para <b>solicitudes pequeñas y ligeras</b> con tiempos de respuesta rápidos.</li>\n\t\t\t\t\t\t\t<li>No es adecuado para payloads de varios gigabytes, ya que tiene límites estrictos en el tamaño de solicitud y el tiempo de ejecución.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>Real-time inference</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrecto porque los endpoints de real-time están diseñados para <b>predicciones de baja latencia</b> con payloads relativamente pequeños.</li>\n\t\t\t\t\t\t\t<li>Los payloads grandes abrumarían los endpoints de real-time y no son soportados de manera eficiente.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>Batch inference</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Incorrecto porque batch transform se utiliza para <b>procesamiento offline por lotes de conjuntos de datos</b>, no para manejar solicitudes de inferencia grandes individuales.</li>\n\t\t\t\t\t\t\t<li>Aunque batch puede procesar archivos grandes, no es la opción adecuada para manejar <b>cargas de trabajo de inferencia por solicitud</b> con respuestas en cola.</li>\n\t\t\t\t\t\t</ul>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t1-b3#2",
+        "gloss-d1-t1-b3#0",
+        "gloss-d1-t1-b3#1"
+      ]
     },
     {
       "id": "18-27",
@@ -451,7 +502,12 @@
       ],
       "multiSelect": true,
       "explanationHtml": "<p><strong>Correctas</strong></p>\n\t\t\t\t\t\t<p><b>Fine‑tuning</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Es correcta porque <b>fine‑tuning</b> es un método de personalización compatible en Amazon Bedrock.</li>\n\t\t\t\t\t\t\t<li>Te permite ajustar el modelo fundacional utilizando datos específicos del dominio, mejorando la precisión y relevancia para tareas como recomendaciones de productos.</li>\n\t\t\t\t\t\t\t<li>Es ideal cuando la empresa desea que el modelo aprenda patrones únicos de sus datos de retail.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Retrieval Augmented Generation (RAG)</b>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Es correcta porque <b>RAG</b> es otro método de personalización válido en Bedrock.</li>\n\t\t\t\t\t\t\t<li>Mejora la IA generativa al combinar el modelo fundacional con fuentes de conocimiento externas (por ejemplo, catálogos de productos, historial de clientes).</li>\n\t\t\t\t\t\t\t<li>Esto asegura que las respuestas se basen en información actualizada y específica de la empresa sin necesidad de reentrenar el modelo.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><strong>Incorrectas</strong></p>\n\t\t\t\t\t\t<p><b>Chain‑of‑thought prompting</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Es incorrecta porque aunque las estrategias de prompting pueden influir en los resultados del modelo, <b>no se consideran métodos de personalización</b> en Bedrock.</li>\n\t\t\t\t\t\t\t<li>Chain‑of‑thought prompting es una técnica de razonamiento, no una opción de personalización compatible.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>Continued Pre‑training</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Es incorrecta porque Bedrock no permite el continued pre‑training directo de modelos fundacionales.</li>\n\t\t\t\t\t\t\t<li>En su lugar, la personalización se logra mediante fine‑tuning o RAG, no extendiendo el proceso de pre‑training original.</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<p><b>Zero‑shot prompting</b></p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>Es incorrecta porque zero‑shot prompting es una técnica de uso, no un método de personalización.</li>\n\t\t\t\t\t\t\t<li>Aprovecha las capacidades generales del modelo pero no adapta ni personaliza el modelo para necesidades comerciales específicas.</li>\n\t\t\t\t\t\t</ul>",
-      "domain": 3
+      "domain": 3,
+      "relatedConcepts": [
+        "gloss-d3-t1-b5#1",
+        "gloss-d3-t1-b5#3",
+        "gloss-d3-t1-b3#0"
+      ]
     },
     {
       "id": "18-28",
@@ -485,7 +541,11 @@
       ],
       "multiSelect": true,
       "explanationHtml": "<p><strong>Correcto</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Desplegar aplicaciones globalmente en minutos para mejorar la experiencia del usuario</b> Esta opción es correcta porque plataformas en la nube como AWS permiten desplegar aplicaciones rápidamente en todo el mundo. Esto mejora la latencia y la experiencia del usuario al servir a clientes más cerca de su ubicación geográfica, algo que la infraestructura tradicional no puede lograr fácilmente.\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Pagar solo por los recursos que consumes, evitando costos iniciales</b> También es correcta porque la computación en la nube sigue un <b>modelo de pago por consumo</b>, eliminando la necesidad de inversiones iniciales grandes en hardware. Esto es especialmente beneficioso para startups, ya que pueden escalar recursos hacia arriba o hacia abajo según la demanda de carga de trabajo, garantizando eficiencia de costos.\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p><strong>Incorrecto</strong></p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Reservar recursos de cómputo con meses de anticipación para garantizar disponibilidad</b> Incorrecto porque una de las principales ventajas de la computación en la nube es el <b>aprovisionamiento de recursos bajo demanda</b>. No necesitas reservar recursos con meses de anticipación; en su lugar, puedes aprovisionarlos instantáneamente cuando los necesites.\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Requerir contratos a largo plazo para acceder a recursos en la nube</b> Incorrecto porque los servicios en la nube están diseñados para ser flexibles. No se requieren contratos a largo plazo; los clientes pueden usar recursos bajo demanda y dejar de pagar cuando ya no los necesitan.\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<b>Gestionar hardware en las instalaciones para ejecutar cargas de trabajo de IA</b> Incorrecto porque la computación en la nube elimina la necesidad de gestionar infraestructura física. AWS se encarga de la administración del hardware, permitiendo que los desarrolladores se enfoquen en construir e implementar cargas de trabajo de IA/ML.\n\t\t\t\t\t\t</p>\n\t\t\t\t\t\t<p>&nbsp;</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t2-b1#1",
+        "gloss-d1-t2-b6#0"
+      ]
     },
     {
       "id": "18-29",
@@ -511,7 +571,12 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Amazon SageMaker Feature Store es la opción ideal para una empresa de servicios financieros que busca administrar, compartir y reutilizar features en varios modelos de machine learning y equipos. No solo ayuda a garantizar la consistencia y reducir la redundancia, sino que también mejora la productividad al proporcionar un almacén centralizado de features. Este servicio permite que los features se definan una sola vez y se utilicen en múltiples modelos, asegurando que todos los equipos tengan acceso al mismo conjunto de features y, de este modo, manteniendo uniformidad en todas las soluciones de IA de la empresa.</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t2-b5#0",
+        "gloss-d1-t3-b1#0",
+        "gloss-d1-t2-b4#4"
+      ]
     },
     {
       "id": "18-30",
@@ -537,7 +602,12 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Para optimizar el rendimiento de un Foundation Model en AWS Bedrock, es fundamental entender la complejidad relativa de las diferentes técnicas de mejora. El prompt engineering, que implica cambios simples en los prompts de entrada, es la menos compleja. Retrieval Augmented Generation (RAG) añade una capa de complejidad al integrar capacidades de búsqueda dentro del proceso de generación. El fine-tuning, que ajusta los parámetros del modelo basándose en datos de entrenamiento adicionales especializados, se clasifica como el más complejo debido a sus exigentes requisitos computacionales y a la comprensión matizada del modelo que requiere.</p>",
-      "domain": 3
+      "domain": 3,
+      "relatedConcepts": [
+        "gloss-d3-t1-b5#2",
+        "gloss-d3-t1-b5#3",
+        "gloss-d3-t1-b5#1"
+      ]
     },
     {
       "id": "18-31",
@@ -563,7 +633,12 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Guardrails en Amazon Bedrock son especialmente vitales para controlar el comportamiento de la IA, especialmente en áreas sensibles como la generación de contenido. Ayudan a garantizar que la IA no produzca resultados dañinos o no deseados y que cumpla con los estándares de privacidad de datos relacionados con PII. Esto los convierte en una característica esencial para las empresas que buscan desplegar soluciones de IA seguras y confiables.</p>",
-      "domain": 5
+      "domain": 5,
+      "relatedConcepts": [
+        "gloss-d5-t1-b1#7",
+        "gloss-d5-t1-b4#9",
+        "gloss-d5-t1-b4#7"
+      ]
     },
     {
       "id": "18-34",
@@ -589,7 +664,11 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Amazon Textract Document Analysis es el servicio de AWS más adecuado para casos de uso que requieren extraer datos estructurados de documentos escaneados. Permite extraer con precisión datos como pares clave-valor y tablas, que son comunes en documentos comerciales como facturas y recibos. Esto facilita la automatización de tareas en el proceso de cuentas por pagar al hacer que los datos estructurados estén disponibles para un procesamiento e integración más sencillos.</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t1-b4#5",
+        "gloss-d1-t2-b4#0"
+      ]
     },
     {
       "id": "18-36",
@@ -615,7 +694,8 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>El término 'inference' se refiere específicamente a la fase operativa en flujos de trabajo de machine learning, particularmente cuando un modelo entrenado se utiliza en escenarios del mundo real para hacer predicciones basadas en datos nuevos e inéditos. En el contexto de Amazon SageMaker, esto implica implementar el modelo y usarlo para realizar predicciones de salud basadas en datos del paciente como edad, presión arterial y niveles de colesterol. Entender este término y su aplicación es crucial para aprovechar efectivamente Amazon SageMaker en análisis predictivo de salud.</p>",
-      "domain": 2
+      "domain": 2,
+      "relatedConcepts": []
     },
     {
       "id": "18-37",
@@ -641,7 +721,10 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>El parámetro 'Response Length' en aplicaciones impulsadas por IA como Amazon Bedrock impacta directamente en la extensión de las respuestas generadas por el chatbot. Establece límites en la cantidad de tokens que constituyen las respuestas, asegurando que los resultados no sean demasiado breves como para ser poco claros ni demasiado largos como para ser engorrosos. Este parámetro es crucial para adaptar las interacciones de modo que sean concisas y relevantes, mejorando la experiencia del cliente.</p>",
-      "domain": 3
+      "domain": 3,
+      "relatedConcepts": [
+        "gloss-d3-t1-b2#2"
+      ]
     },
     {
       "id": "18-39",
@@ -667,7 +750,11 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Procesamiento del Lenguaje Natural (NLP) y Visión por Computadora tienen aplicaciones distintas y relevantes según el tipo de datos que procesan. NLP es fundamental para trabajar con datos textuales y hablados, facilitando tareas como análisis de sentimientos, generación de texto y traducción de idiomas. Por otro lado, Visión por Computadora está diseñada para analizar e interpretar datos visuales de fuentes como fotos y videos, utilizándose en tareas como detección de objetos, clasificación de imágenes y reconocimiento facial. Comprender estas diferencias permite que el equipo seleccione la tecnología apropiada según el tipo de contenido y el resultado requerido.</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t1-b1#5",
+        "gloss-d1-t1-b1#4"
+      ]
     },
     {
       "id": "18-41",
@@ -693,7 +780,12 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Para una empresa de servicios financieros que necesita cumplir con regulaciones industriales y asegurar la transparencia del modelo, un conjunto de herramientas adecuado dentro de Amazon SageMaker incluiría Model Cards para crear metadatos completos sobre los modelos, Model Dashboard para monitoreo continuo del desempeño, y Clarify para mejorar la transparencia del modelo a través de capacidades de explainability y detección de sesgos. Estas herramientas en conjunto ayudan a alinear las operaciones de machine learning con requisitos regulatorios y estándares éticos, apoyando el despliegue responsable de IA en áreas sensibles como aprobaciones de préstamos y detección de fraudes.</p>",
-      "domain": 4
+      "domain": 4,
+      "relatedConcepts": [
+        "gloss-d4-t2-b2#0",
+        "gloss-d4-t2-b4#1",
+        "gloss-d4-t1-b1#1"
+      ]
     },
     {
       "id": "18-42",
@@ -719,7 +811,8 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Stable Diffusion es la opción óptima para una empresa de producción de medios que busca generar imágenes a partir de descripciones en texto. Este modelo está diseñado para interpretar inputs de texto y renderizar imágenes detalladas y realistas, que es exactamente lo que la empresa necesita para sus flujos de trabajo de marketing y creación de contenido. A diferencia de los otros modelos mencionados, la funcionalidad principal de Stable Diffusion se alinea con el caso de uso específico de la empresa para la creación de contenido visual mejorado con IA.</p>",
-      "domain": 4
+      "domain": 4,
+      "relatedConcepts": []
     },
     {
       "id": "18-43",
@@ -745,7 +838,10 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>En el contexto de la certificación AWS Certified AI Practitioner AIF-C01, risk management es una disciplina de seguridad fundamental dentro de la Matriz de Alcance de Seguridad para IA Generativa. Esta disciplina es esencial para identificar, evaluar y mitigar riesgos asociados con tecnologías de IA generativa. Su objetivo es implementar estrategias que prevengan posibles amenazas y vulnerabilidades, asegurando que los sistemas de IA operen dentro de un entorno seguro y controlado.</p>",
-      "domain": 5
+      "domain": 5,
+      "relatedConcepts": [
+        "gloss-d5-t2-b3#2"
+      ]
     },
     {
       "id": "18-44",
@@ -771,7 +867,8 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Model Cards en Amazon SageMaker están diseñadas principalmente para proporcionar documentación detallada, responsable y transparente para modelos de machine learning. Tienen como objetivo facilitar una mejor comprensión y confianza entre los usuarios, dejando clara la finalidad del modelo de IA, su rendimiento, los datos de entrenamiento y cualquier consideración ética.</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": []
     },
     {
       "id": "18-46",
@@ -797,7 +894,12 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>En el contexto de una empresa de análisis sanitario que necesita realizar evaluaciones de riesgo inmediatas durante la consulta de pacientes, Amazon SageMaker Real-time Inference es el servicio más apropiado. Garantiza que los endpoints estén siempre disponibles para manejar solicitudes entrantes con baja latencia, proporcionando una respuesta inmediata como lo requiere el escenario de atención sanitaria. Este servicio está diseñado específicamente para satisfacer las demandas de predicciones en tiempo real, a diferencia de las otras opciones que son más adecuadas para procesar tareas de batch no inmediatas o tareas de inferencia más grandes y menos sensibles al tiempo.</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t1-b3#1",
+        "gloss-d1-t1-b3#0",
+        "gloss-d1-t1-b3#2"
+      ]
     },
     {
       "id": "18-51",
@@ -823,7 +925,8 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Amazon Polly es el servicio de AWS más apropiado para convertir texto en voz natural, compatible con múltiples idiomas y voces que suenan de forma realista, lo que se alinea perfectamente con el requisito de ofrecer cursos en audio en varios idiomas. Proporciona una API directa para convertir texto en archivos de audio que pueden reproducirse directamente a los usuarios finales, lo cual es beneficioso para plataformas educativas que buscan expandir la accesibilidad e incrementar el engagement a través del aprendizaje por audio. [Más sobre Amazon Polly](<a href=\"https://aws.amazon.com/polly/\" rel=\"noopener\" target=\"_blank\">https://aws.amazon.com/polly/</a>) </p>",
-      "domain": 2
+      "domain": 2,
+      "relatedConcepts": []
     },
     {
       "id": "18-52",
@@ -849,7 +952,11 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Object detection es una técnica de visión por computadora que detecta instancias de objetos semánticos de una clase determinada (como animales, personas o vehículos) en imágenes y videos digitales. Se utiliza ampliamente en diversas aplicaciones como anotación de imágenes, conteo de vehículos, vigilancia y en este caso, monitoreo de vida silvestre. Al usar esta técnica, la organización puede identificar y categorizar con precisión cada especie animal capturada en las imágenes de las cámaras trampa. Puedes encontrar más información sobre object detection en la documentación de AWS y en recursos relacionados con machine learning.</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t1-b1#4",
+        "gloss-d1-t2-b3#1"
+      ]
     },
     {
       "id": "18-54",
@@ -875,7 +982,8 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Amazon Textract es el servicio de AWS más adecuado para extraer texto de documentos como facturas y recibos. Utiliza aprendizaje automático para leer y procesar textos de documentos, incluso desde imágenes escaneadas, lo que lo hace útil para automatizar la extracción de datos en procesos empresariales. Esta funcionalidad ayuda a reducir la entrada manual de datos y mejorar la eficiencia operativa.</p>",
-      "domain": 2
+      "domain": 2,
+      "relatedConcepts": []
     },
     {
       "id": "18-55",
@@ -901,7 +1009,11 @@
       ],
       "multiSelect": false,
       "explanationHtml": "<p>Amazon Transcribe ofrece la característica de vocabularios personalizados, que es crucial para aplicaciones que requieren vocabulario especializado y manejo de acentos diversos. Esta característica permite a los desarrolladores incluir términos específicos que son únicos para su negocio, garantizando que estos términos se reconozcan y transcriban con precisión. En escenarios como llamadas de atención al cliente, donde la claridad es crítica, la incorporación de vocabularios personalizados mejora el rendimiento y la precisión del servicio de transcripción, lo que lo hace más adecuado para necesidades de aplicaciones en tiempo real.</p>",
-      "domain": 1
+      "domain": 1,
+      "relatedConcepts": [
+        "gloss-d1-t2-b5#1",
+        "gloss-d1-t1-b1#5"
+      ]
     }
   ]
 }

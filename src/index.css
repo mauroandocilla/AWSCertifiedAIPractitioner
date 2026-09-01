@@ -922,15 +922,13 @@
     cursor: pointer;
   }
   .gap-expand-btn,
-  .gap-goto { border: 1px solid var(--border); background: var(--surface); color: var(--ink-faint); font-size: 0.85rem; line-height: 1; }
+  .gap-goto { border: 1px solid var(--border); background: var(--surface); color: var(--ink-faint); }
   .gap-expand-btn:hover,
   .gap-goto:hover { color: var(--accent); border-color: var(--accent); }
   .gap-step {
     color: var(--ink-soft);
     background: none;
     border: none;
-    font-size: 1.2rem;
-    line-height: 1;
   }
   .gap-step:hover:not(:disabled) { color: var(--accent); }
   .gap-step:disabled { color: var(--border); cursor: default; }
@@ -1127,7 +1125,8 @@
   .now-playing-card .gap-scrub-track { height: 6px; }
   .now-playing-card .gap-scrub-thumb { width: 14px; height: 14px; }
   .now-playing-card .gap-controls-row { gap: 1.4rem; margin-top: 0.3rem; }
-  .now-playing-card .gap-step { width: 34px; height: 34px; font-size: 1.5rem; }
+  .now-playing-card .gap-step { width: 34px; height: 34px; }
+  .now-playing-card .gap-step svg { width: 24px; height: 24px; }
   .now-playing-card .gap-skip { width: 40px; height: 40px; }
   .now-playing-card .gap-skip svg { width: 22px; height: 22px; }
   .now-playing-card .gap-play-lg { width: 54px; height: 54px; }
@@ -1192,12 +1191,11 @@
     border: 1px solid var(--border);
     background: var(--surface-2);
     color: var(--ink-faint);
-    font-size: 0.85rem;
     cursor: pointer;
   }
   .landing-resume-goto:hover,
   .landing-resume-dismiss:hover { color: var(--ink); border-color: var(--ink-faint); }
-  .landing-resume-dismiss svg, .landing-resume-play svg { width: 12px; height: 12px; }
+  .landing-resume-dismiss svg, .landing-resume-play svg, .landing-resume-goto svg { width: 12px; height: 12px; }
 
   .landing-hint {
     color: var(--ink-faint);

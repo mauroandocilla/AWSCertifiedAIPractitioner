@@ -1,6 +1,6 @@
 import { createContext, useContext, useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Play, Pause, X } from 'lucide-react';
+import { Play, Pause, X, ArrowUpRight, ChevronDown, ChevronUp, ChevronLeft, ChevronRight } from 'lucide-react';
 import { domains } from '../domainData.ts';
 import { glossaryById } from '../glossaryData.ts';
 import { glossarySpokenById } from '../glossaryDataSpoken.ts';
@@ -511,7 +511,7 @@ export function GlossaryAudioProvider({ children }: { children: ReactNode }) {
     return (
       <div className="gap-controls-row">
         <button type="button" className="gap-step" onClick={() => stepCard(-1)} disabled={!hasPrev} aria-label="Concepto anterior">
-          ‹
+          <ChevronLeft size={20} strokeWidth={2.25} />
         </button>
         <button type="button" className="gap-skip" onClick={() => seek(-SKIP_SECONDS)} disabled={!canSeek} aria-label={`Retroceder ${SKIP_SECONDS} segundos`}>
           <SkipBackIcon seconds={SKIP_SECONDS} />
@@ -527,7 +527,7 @@ export function GlossaryAudioProvider({ children }: { children: ReactNode }) {
           <SkipForwardIcon seconds={SKIP_SECONDS} />
         </button>
         <button type="button" className="gap-step" onClick={() => stepCard(1)} disabled={!hasNext} aria-label="Siguiente concepto">
-          ›
+          <ChevronRight size={20} strokeWidth={2.25} />
         </button>
       </div>
     );
@@ -545,7 +545,7 @@ export function GlossaryAudioProvider({ children }: { children: ReactNode }) {
                 {activeTitle && <span className="gap-title-content"> · {activeTitle}</span>}
               </span>
               <button type="button" className="gap-goto" onClick={goToContent} aria-label="Ir al contenido">
-                ↗
+                <ArrowUpRight size={15} strokeWidth={2.25} />
               </button>
               <button type="button" className="gap-close" onClick={handleStop} aria-label="Detener lectura">
                 <X size={22} strokeWidth={2.5} />
@@ -557,7 +557,7 @@ export function GlossaryAudioProvider({ children }: { children: ReactNode }) {
                 aria-expanded={expanded}
                 aria-label={expanded ? 'Menos opciones' : 'Más opciones'}
               >
-                {expanded ? '⌃' : '⌄'}
+                {expanded ? <ChevronUp size={15} strokeWidth={2.25} /> : <ChevronDown size={15} strokeWidth={2.25} />}
               </button>
             </div>
 
@@ -607,7 +607,7 @@ export function GlossaryAudioProvider({ children }: { children: ReactNode }) {
                     setNowPlayingOpen(false);
                   }}
                 >
-                  Ir al contenido ↗
+                  Ir al contenido <ArrowUpRight size={14} strokeWidth={2.25} />
                 </button>
               </>
             ) : resumeState ? (
@@ -634,7 +634,7 @@ export function GlossaryAudioProvider({ children }: { children: ReactNode }) {
                     setNowPlayingOpen(false);
                   }}
                 >
-                  Ir al contenido ↗
+                  Ir al contenido <ArrowUpRight size={14} strokeWidth={2.25} />
                 </button>
               </>
             ) : (

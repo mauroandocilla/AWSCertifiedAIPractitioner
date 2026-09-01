@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import { Play, X } from 'lucide-react';
+import { Play, X, ArrowUpRight } from 'lucide-react';
 import { useGlossaryAudio, entryTopicLabel, contentNavTarget, formatTime } from './GlossaryAudioProvider.tsx';
 
 // Only the single most recent listening position across the whole app, not
@@ -32,7 +32,7 @@ export default function ResumeListeningBanner() {
         </span>
       </div>
       <button type="button" className="landing-resume-goto" onClick={goToContent} aria-label="Ir al contenido">
-        ↗
+        <ArrowUpRight size={15} strokeWidth={2.25} />
       </button>
       <button type="button" className="landing-resume-dismiss" onClick={dismissResume} aria-label="Descartar">
         <X size={22} strokeWidth={2.5} />

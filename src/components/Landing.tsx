@@ -46,6 +46,24 @@ export default function Landing() {
           <div className="landing-card-meta">~90 términos explicados</div>
         </Link>
 
+        <Link to="/mapa-conceptual" className="landing-card ref accent">
+          <div className="landing-card-top"><span className="mono">REFERENCIA</span></div>
+          <div className="landing-card-name">Mapa conceptual</div>
+          <div className="landing-card-meta">cómo se conectan los términos entre sí</div>
+        </Link>
+
+        <Link to="/recorrido" className="landing-card ref accent">
+          <div className="landing-card-top"><span className="mono">GUÍA</span></div>
+          <div className="landing-card-name">Recorrido de estudio</div>
+          <div className="landing-card-meta">marcá tu avance dominio por dominio</div>
+        </Link>
+
+        <Link to="/mapa-de-experiencia" className="landing-card ref">
+          <div className="landing-card-top"><span className="mono">GUÍA</span></div>
+          <div className="landing-card-name">Mapa de experiencia</div>
+          <div className="landing-card-meta">cómo se siente prepararse, paso a paso</div>
+        </Link>
+
         <Link to="/como-estudiarlo" className="landing-card ref">
           <div className="landing-card-top"><span className="mono">GUÍA</span></div>
           <div className="landing-card-name">Cómo estudiarlo</div>

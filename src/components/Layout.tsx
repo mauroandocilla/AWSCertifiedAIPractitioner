@@ -5,6 +5,9 @@ function currentFromPath(pathname: string, domainNumber?: string): string {
   if (pathname.startsWith('/dominio/')) return domainNumber ? `d${domainNumber}` : '';
   if (pathname === '/servicios') return 'servicios';
   if (pathname === '/glosario') return 'glosario';
+  if (pathname === '/mapa-conceptual') return 'mapa';
+  if (pathname === '/recorrido') return 'recorrido';
+  if (pathname === '/mapa-de-experiencia') return 'experiencia';
   if (pathname === '/como-estudiarlo') return 'estudiar';
   if (pathname === '/formato-examen') return 'formato';
   if (pathname === '/examen') return 'examen';

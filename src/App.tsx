@@ -4,6 +4,9 @@ import Layout from './components/Layout.tsx';
 import DomainPage from './components/DomainPage.tsx';
 import ServiceScopePage from './components/ServiceScopePage.tsx';
 import GlossaryPage from './components/GlossaryPage.tsx';
+import ConceptMapPage from './components/ConceptMapPage.tsx';
+import StudyJourneyPage from './components/StudyJourneyPage.tsx';
+import JourneyMapPage from './components/JourneyMapPage.tsx';
 import ResourcesPage from './components/ResourcesPage.tsx';
 import ExamFormatPage from './components/ExamFormatPage.tsx';
 import QuizListPage from './components/QuizListPage.tsx';
@@ -37,6 +40,9 @@ export default function App() {
               <Route path="/dominio/:n" element={<DomainPage />} />
               <Route path="/servicios" element={<ServiceScopePage />} />
               <Route path="/glosario" element={<GlossaryPage />} />
+              <Route path="/mapa-conceptual" element={<ConceptMapPage />} />
+              <Route path="/recorrido" element={<StudyJourneyPage />} />
+              <Route path="/mapa-de-experiencia" element={<JourneyMapPage />} />
               <Route path="/como-estudiarlo" element={<ResourcesPage />} />
               <Route path="/formato-examen" element={<ExamFormatPage />} />
               <Route path="/quiz" element={<QuizListPage />} />

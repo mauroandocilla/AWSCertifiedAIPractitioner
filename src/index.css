@@ -359,7 +359,7 @@
   .domain-split-panel .gloss-group { margin-top: 0; }
 
   /* Scope appendix */
-  section.scope { margin-top: 2.75rem; }
+  section.scope, section.concept-map-page { margin-top: 2.75rem; }
   .scope-note {
     color: var(--ink-soft);
     font-size: 0.92rem;
@@ -1329,7 +1329,7 @@
        overflow-x: clip doesn't have that pairing quirk, so it clips the slide
        animation horizontally without touching the vertical axis at all. */
     .domain-split, .quiz-split { overflow-x: clip; margin-top: 1rem; }
-    .quiz-list, section.scope, section.glossary, section.resources { margin-top: 1rem; }
+    .quiz-list, section.scope, section.glossary, section.resources, section.concept-map-page { margin-top: 1rem; }
 
     .domain-split-body.mobile,
     .quiz-split-body.mobile {
@@ -1771,4 +1771,256 @@
   @keyframes gloss-flash {
     0% { box-shadow: 0 0 0 3px var(--accent); }
     100% { box-shadow: 0 0 0 0 transparent; }
+  }
+
+  /* Concept map (ConceptMap.tsx) -- nodes/edges are plain SVG reading these
+     custom properties directly (no canvas/WebGL anywhere in this app), same
+     pattern ProgressRing.tsx already uses, so theming is automatic. */
+  .concept-legend {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.4rem 1.1rem;
+    margin: 0.9rem 0 0;
+    font-size: 0.78rem;
+    color: var(--ink-faint);
+  }
+  .concept-legend-item { display: flex; align-items: center; gap: 0.35rem; white-space: nowrap; }
+  .concept-legend-dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; flex: none; }
+  .concept-legend-dot.d1 { background: var(--d1); }
+  .concept-legend-dot.d2 { background: var(--d2); }
+  .concept-legend-dot.d3 { background: var(--d3); }
+  .concept-legend-dot.d4 { background: var(--d4); }
+  .concept-legend-dot.d5 { background: var(--d5); }
+  .concept-legend-sep { width: 1px; height: 0.9rem; background: var(--border); }
+
+  .concept-map-wrap { position: relative; margin-top: 1rem; }
+  .concept-map-svg {
+    display: block;
+    width: 100%;
+    height: 70vh;
+    min-height: 420px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    cursor: grab;
+    transition: opacity 0.3s ease;
+    touch-action: none;
+  }
+  .concept-map-svg:active { cursor: grabbing; }
+
+  .concept-link { stroke: var(--border); stroke-width: 1; }
+  .concept-link.rel-contrasta-con { stroke-dasharray: 3 3; stroke: var(--ink-faint); }
+  .concept-link.rel-se-usa-con { stroke: var(--ink-faint); }
+  .concept-arrow-fill { fill: var(--border); }
+
+  .concept-node { stroke: var(--surface); stroke-width: 1.5px; cursor: pointer; }
+  .concept-node.d1 { fill: var(--d1); }
+  .concept-node.d2 { fill: var(--d2); }
+  .concept-node.d3 { fill: var(--d3); }
+  .concept-node.d4 { fill: var(--d4); }
+  .concept-node.d5 { fill: var(--d5); }
+  .concept-node.selected { stroke: var(--accent); stroke-width: 3px; }
+  .concept-label {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 9px;
+    fill: var(--ink-soft);
+    text-anchor: middle;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .concept-panel {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: min(320px, calc(100% - 2rem));
+    max-height: calc(100% - 2rem);
+    overflow-y: auto;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    padding: 1rem 1.1rem;
+  }
+  .concept-panel-close {
+    position: absolute;
+    top: 0.6rem;
+    right: 0.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--ink-faint);
+    cursor: pointer;
+  }
+  .concept-panel-close:hover { color: var(--ink); border-color: var(--ink-faint); }
+  .concept-panel-domain {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+  .concept-panel h3 { margin: 0.3rem 1.6rem 0.6rem 0; font-size: 1.05rem; }
+
+  @media (max-width: 720px) {
+    .concept-map-svg { height: 60vh; min-height: 340px; }
+    .concept-panel { top: auto; bottom: 1rem; left: 1rem; right: 1rem; width: auto; max-height: 45%; }
+  }
+
+  /* Study journey (StudyJourneyPage.tsx) -- a manual checklist over the same
+     domains/subsections/bullets data domain pages already render, reusing
+     .kicker/.tcode/ProgressRing rather than inventing parallel styles. */
+  section.journey-page { margin-top: 2.75rem; }
+  .journey-total {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin-top: 1.1rem;
+    padding: 0.8rem 1rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+  }
+  .journey-total-text { font-size: 0.92rem; font-weight: 600; }
+
+  .journey-domain {
+    margin-top: 2.2rem;
+    padding-top: 1.4rem;
+    border-top: 2px solid var(--dcolor);
+  }
+  .journey-domain-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; }
+  .journey-domain-name { margin: 0.3rem 0 0; font-size: 1.15rem; }
+  .journey-domain-progress {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex: none;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.85rem;
+    color: var(--ink-faint);
+  }
+
+  .journey-subsection { margin-top: 1.3rem; }
+  .journey-subsection-title {
+    display: flex;
+    gap: 0.5rem;
+    align-items: baseline;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.92rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem;
+  }
+  .journey-bullets { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.4rem; }
+  .journey-bullet-row { display: flex; align-items: flex-start; gap: 0.6rem; }
+  .journey-check {
+    flex: none;
+    margin-top: 0.15rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 19px;
+    height: 19px;
+    border-radius: 5px;
+    border: 1.5px solid var(--border);
+    background: var(--surface);
+    color: var(--accent-ink);
+    cursor: pointer;
+  }
+  .journey-check:hover { border-color: var(--dcolor); }
+  .journey-check.done { background: var(--dcolor); border-color: var(--dcolor); }
+  .journey-bullet-text {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--ink-soft);
+    text-decoration: none;
+  }
+  .journey-bullet-text:hover { color: var(--ink); text-decoration: underline; }
+  .journey-bullet-text.done { color: var(--ink-faint); text-decoration: line-through; }
+
+  @media (max-width: 720px) {
+    section.journey-page { margin-top: 1rem; }
+  }
+
+  /* Journey map (JourneyMapPage.tsx) -- a classic UX-research journey-map
+     layout (stages x {actions, behavior, feelings, mood, opportunities}),
+     adapted to this app: "opportunities" are literal links to the app's own
+     features at that stage. One flat grid, not nested per-row grids -- see
+     the comment in the component for why. */
+  section.journey-map-page { margin-top: 2.75rem; }
+  .jmap-persona {
+    display: flex;
+    gap: 0.8rem;
+    align-items: flex-start;
+    margin-top: 1.1rem;
+    padding: 0.9rem 1.1rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+  }
+  .jmap-persona-avatar { font-size: 1.6rem; line-height: 1; flex: none; }
+  .jmap-persona strong { font-size: 0.95rem; }
+  .jmap-persona p { margin: 0.25rem 0 0; font-size: 0.85rem; color: var(--ink-soft); }
+
+  .jmap-grid {
+    display: grid;
+    grid-template-columns: 110px repeat(6, minmax(150px, 1fr));
+    gap: 0.7rem 0.6rem;
+    margin-top: 1.6rem;
+    overflow-x: auto;
+    align-items: stretch;
+  }
+  .jmap-row-label {
+    display: flex;
+    align-items: center;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+  }
+  .jmap-cell {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.6rem 0.7rem;
+    font-size: 0.8rem;
+    color: var(--ink-soft);
+    margin: 0;
+  }
+  .jmap-action { font-weight: 600; color: var(--ink); background: var(--surface-2); border-color: var(--accent); }
+  ul.jmap-list { padding-left: 1.1rem; }
+  .jmap-list li { margin: 0.2rem 0; }
+
+  .jmap-mood-chart-wrap { grid-column: 2 / -1; display: flex; align-items: center; }
+  .jmap-mood-chart { width: 100%; height: 60px; display: block; overflow: visible; }
+  .jmap-mood-line { fill: none; stroke: var(--accent); stroke-width: 2px; stroke-linecap: round; stroke-linejoin: round; }
+  .jmap-mood-dot { fill: var(--accent); stroke: var(--surface); stroke-width: 1px; }
+  .jmap-mood-quote {
+    font-style: italic;
+    font-size: 0.76rem;
+    color: var(--ink-faint);
+    text-align: center;
+    background: none;
+    border: none;
+    padding: 0.2rem 0.3rem;
+  }
+
+  .jmap-opportunity { display: inline-block; font-size: 0.8rem; font-weight: 600; color: var(--accent); text-decoration: none; }
+  .jmap-opportunity:hover { text-decoration: underline; }
+  .jmap-opportunity-none { color: var(--ink-faint); }
+
+  @media (max-width: 720px) {
+    section.journey-map-page { margin-top: 1rem; }
   }

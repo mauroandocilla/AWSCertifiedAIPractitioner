@@ -1,11 +1,9 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
+import { Volume2, Play, X } from 'lucide-react';
 import { glossaryById } from '../glossaryData.ts';
 import { glossarySpokenById } from '../glossaryDataSpoken.ts';
 import { parseGlossaryCards } from '../glossaryCards.ts';
 import { useGlossaryAudio } from './GlossaryAudioProvider.tsx';
-import SpeakerIcon from './SpeakerIcon.tsx';
-import PlayIcon from './PlayIcon.tsx';
-import CrossIcon from './CrossIcon.tsx';
 
 interface Props {
   id: string;
@@ -55,24 +53,49 @@ export default function GlossaryEntryContent({ id, highlightCardIndex }: Props) 
   const isActiveEntry = session.entryId === id;
   const activeCardIndex = isActiveEntry ? session.activeCardIndex : null;
   const isReading = isActiveEntry && session.status !== 'idle';
+  // Pressing "Escuchar" already flips this button to "Detener" the instant
+  // it's clicked (status goes 'playing' synchronously) -- but the real
+  // pre-rendered audio can still take a beat to actually start producing
+  // sound (segment metadata not loaded yet, duration === 0), which read as
+  // "did that even work?" with no visible difference from a normal playing
+  // state. This makes that specific window visible instead of silent.
+  const isLoadingAudio = isReading && session.audioAvailable && session.duration === 0;
 
-  // Search-driven: scroll to and briefly flash whatever matched.
+  // Search-driven: scroll to and briefly flash whatever matched. Delayed
+  // past .mobile-pane's 280ms slide-in animation (index.css) -- this effect
+  // fires right on mount, which on mobile is often WHILE that pane is still
+  // sliding in. scrollIntoView measures the target's position at call time,
+  // so calling it mid-animation scrolls to wherever the (still-moving)
+  // element happened to be that instant, not its final resting spot --
+  // landing a card or two off from the real target once the slide settles.
+  // The delay is a no-op in cases with no such animation (desktop, or
+  // /glosario's single static page), just an imperceptible extra beat.
+  const SCROLL_SETTLE_MS = 320;
   useEffect(() => {
     if (highlightCardIndex === undefined) return;
-    const target = highlightCardIndex === null ? bulletRef.current : cardRefs.current[highlightCardIndex];
-    if (!target) return;
-    target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    const scrollTimer = setTimeout(() => {
+      const target = highlightCardIndex === null ? bulletRef.current : cardRefs.current[highlightCardIndex];
+      target?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }, SCROLL_SETTLE_MS);
     setFlash(highlightCardIndex === null ? 'bullet' : highlightCardIndex);
-    const timer = setTimeout(() => setFlash(null), 2400);
-    return () => clearTimeout(timer);
+    const flashTimer = setTimeout(() => setFlash(null), SCROLL_SETTLE_MS + 2400);
+    return () => {
+      clearTimeout(scrollTimer);
+      clearTimeout(flashTimer);
+    };
   }, [id, highlightCardIndex]);
 
   // Keep the currently-read card in view -- only while this instance is the
-  // one actually playing.
+  // one actually playing. Same settle delay, for the same reason: this can
+  // also fire right as a fresh mobile pane mounts (e.g. "siguiente" landing
+  // on the next bullet).
   useEffect(() => {
     if (!isReading) return;
-    const target = activeCardIndex === null ? bulletRef.current : cardRefs.current[activeCardIndex];
-    target?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    const timer = setTimeout(() => {
+      const target = activeCardIndex === null ? bulletRef.current : cardRefs.current[activeCardIndex];
+      target?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }, SCROLL_SETTLE_MS);
+    return () => clearTimeout(timer);
   }, [isReading, activeCardIndex]);
 
   if (!entry) return <p>Entrada de glosario no encontrada ({id}).</p>;
@@ -85,9 +108,13 @@ export default function GlossaryEntryContent({ id, highlightCardIndex }: Props) 
           className={flash === 'bullet' ? 'gloss-bullet-text search-highlight' : activeCardIndex === null && isReading ? 'gloss-bullet-text reading-highlight' : 'gloss-bullet-text'}
           dangerouslySetInnerHTML={{ __html: bulletTextHtml }}
         />
-        <button type="button" className="gloss-read-all-btn" onClick={() => (isReading ? session.stop() : session.playEntry(id))}>
-          {isReading ? <CrossIcon /> : <PlayIcon />}
-          {isReading ? 'Detener' : 'Escuchar'}
+        <button
+          type="button"
+          className={isLoadingAudio ? 'gloss-read-all-btn loading' : 'gloss-read-all-btn'}
+          onClick={() => (isReading ? session.stop() : session.playEntry(id))}
+        >
+          {isReading ? <X size={22} strokeWidth={2.5} /> : <Play size={14} strokeWidth={0} fill="currentColor" />}
+          {isLoadingAudio ? 'Cargando…' : isReading ? 'Detener' : 'Escuchar'}
         </button>
       </div>
 
@@ -116,7 +143,7 @@ export default function GlossaryEntryContent({ id, highlightCardIndex }: Props) 
             <div className="term-card-head">
               <h4 dangerouslySetInnerHTML={{ __html: card.titleHtml }} />
               <button type="button" className="term-card-speak-btn" onClick={() => session.playEntryRange(id, i)} aria-label="Escuchar este término">
-                <SpeakerIcon />
+                <Volume2 size={15} strokeWidth={2} />
               </button>
             </div>
             <div dangerouslySetInnerHTML={{ __html: card.bodyHtml }} />

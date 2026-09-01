@@ -1,14 +1,12 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
+import { Check, X, RefreshCcw } from 'lucide-react';
 import { isCorrectAnswer } from '../quiz/isCorrectAnswer.ts';
 import { isMatchingCorrect } from '../quiz/isMatchingCorrect.ts';
 import { loadQuizV2Questions } from '../quiz-v2/loadQuestions.ts';
 import { resolveQuizV2Question } from '../quiz-v2/resolveLang.ts';
 import { useQuizLang } from '../quiz/useQuizLang.ts';
 import { domainByNumber } from '../domainData.ts';
-import CheckIcon from './CheckIcon.tsx';
-import CrossIcon from './CrossIcon.tsx';
-import ResetIcon from './ResetIcon.tsx';
 import ConfirmDialog from './ConfirmDialog.tsx';
 import QuizLangToggle from './QuizLangToggle.tsx';
 import { withBasePath } from '../quiz-v2/withBasePath.ts';
@@ -172,7 +170,7 @@ export default function QuizV2Page() {
                 <QuizLangToggle lang={lang} onChange={setLang} />
                 <div className="quiz-score-badge">0/0 correctas</div>
                 <button type="button" className="quiz-reset-btn" title="Reiniciar" disabled>
-                  <ResetIcon />
+                  <RefreshCcw size={14} strokeWidth={2.25} />
                 </button>
               </div>
             </div>
@@ -206,7 +204,7 @@ export default function QuizV2Page() {
               <QuizLangToggle lang={lang} onChange={setLang} />
               <div className="quiz-score-badge">{score.correct}/{score.answered} correctas</div>
               <button type="button" className="quiz-reset-btn" title="Reiniciar" onClick={restart}>
-                <ResetIcon />
+                <RefreshCcw size={14} strokeWidth={2.25} />
               </button>
             </div>
           </div>
@@ -229,7 +227,7 @@ export default function QuizV2Page() {
                 <span className="quiz-nav-number">{i + 1}</span>
                 {qRevealed && (
                   <span className={qCorrect ? 'quiz-nav-badge correct' : 'quiz-nav-badge incorrect'}>
-                    {qCorrect ? <CheckIcon /> : <CrossIcon />}
+                    {qCorrect ? <Check size={22} strokeWidth={2.5} /> : <X size={22} strokeWidth={2.5} />}
                   </span>
                 )}
               </button>

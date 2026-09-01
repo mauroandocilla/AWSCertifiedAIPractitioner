@@ -14,6 +14,7 @@ import Footer from './components/Footer.tsx';
 import ThemeToggle from './components/ThemeToggle.tsx';
 import DomainSearch from './components/DomainSearch.tsx';
 import ScrollToTop from './components/ScrollToTop.tsx';
+import NowPlayingButton from './components/NowPlayingButton.tsx';
 import { GlossaryAudioProvider } from './components/GlossaryAudioProvider.tsx';
 
 export default function App() {
@@ -27,6 +28,7 @@ export default function App() {
       <GlossaryAudioProvider>
         <ScrollToTop />
         <DomainSearch />
+        <NowPlayingButton />
         <ThemeToggle />
         <div className="wrap">
           <Routes>

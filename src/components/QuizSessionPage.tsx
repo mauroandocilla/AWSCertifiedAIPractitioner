@@ -1,11 +1,8 @@
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import type { ReactNode } from 'react';
 import { Link, useParams, useSearchParams } from 'react-router-dom';
+import { ChevronLeft, Check, X, RefreshCcw } from 'lucide-react';
 import QuizLangToggle from './QuizLangToggle.tsx';
-import BackArrowIcon from './BackArrowIcon.tsx';
-import CheckIcon from './CheckIcon.tsx';
-import CrossIcon from './CrossIcon.tsx';
-import ResetIcon from './ResetIcon.tsx';
 import ConfirmDialog from './ConfirmDialog.tsx';
 import ProgressRing from './ProgressRing.tsx';
 import { loadQuizSet } from '../quiz/loadSet.ts';
@@ -264,7 +261,7 @@ export default function QuizSessionPage() {
           <div className="quiz-split-panel">
             <div className="mobile-panel-header">
               <button type="button" className="mobile-back-btn" onClick={backToSets}>
-                <BackArrowIcon /> Ver sets
+                <ChevronLeft size={16} strokeWidth={2.25} /> Ver sets
               </button>
               <span className="mobile-panel-crumb">SET {setNumber}</span>
             </div>
@@ -283,7 +280,7 @@ export default function QuizSessionPage() {
           <div className="quiz-split-panel">
             <div className="mobile-panel-header">
               <button type="button" className="mobile-back-btn" onClick={backToSets}>
-                <BackArrowIcon /> Ver sets
+                <ChevronLeft size={16} strokeWidth={2.25} /> Ver sets
               </button>
               <span className="mobile-panel-crumb">SET {setNumber}</span>
             </div>
@@ -307,7 +304,7 @@ export default function QuizSessionPage() {
         <div className="quiz-split-panel">
           <div className="mobile-panel-header">
             <button type="button" className="mobile-back-btn" onClick={backToSets}>
-              <BackArrowIcon /> Ver sets
+              <ChevronLeft size={16} strokeWidth={2.25} /> Ver sets
               </button>
               <span className="mobile-panel-crumb">SET {quizSet.setNumber} · P{currentNumber}</span>
             </div>
@@ -322,7 +319,7 @@ export default function QuizSessionPage() {
                   <QuizLangToggle lang={lang} onChange={setLang} />
                   <div className="quiz-score-badge">{score.correct}/{score.answered} correctas</div>
                   <button type="button" className="quiz-reset-btn" title="Reiniciar set" onClick={restart}>
-                    <ResetIcon />
+                    <RefreshCcw size={14} strokeWidth={2.25} />
                   </button>
                 </div>
               </div>
@@ -345,7 +342,7 @@ export default function QuizSessionPage() {
                     <span className="quiz-nav-number">{i + 1}</span>
                     {qRevealed && (
                       <span className={qCorrect ? 'quiz-nav-badge correct' : 'quiz-nav-badge incorrect'}>
-                        {qCorrect ? <CheckIcon /> : <CrossIcon />}
+                        {qCorrect ? <Check size={22} strokeWidth={2.5} /> : <X size={22} strokeWidth={2.5} />}
                       </span>
                     )}
                   </button>

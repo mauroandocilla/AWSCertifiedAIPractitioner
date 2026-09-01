@@ -1,11 +1,25 @@
+import { RotateCcw } from 'lucide-react';
+
+// Composite, not a plain library icon -- there's no "skip N seconds"
+// variant in lucide, so the seconds count is overlaid as text centered on
+// top of the rotate-arrow glyph (same idea the old hand-drawn version used,
+// just built from a library icon instead of a custom arc+arrowhead path).
 export default function SkipBackIcon({ seconds }: { seconds: number }) {
   return (
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-      <path d="M17.5 12A5.5 5.5 0 1 1 12 6.5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-      <path d="M12 3.2 12 7.4 8.3 5.7" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-      <text x="12" y="16.3" fontSize="7.2" fontWeight="700" textAnchor="middle" fill="currentColor" fontFamily="'IBM Plex Mono', monospace">
+    <span style={{ position: 'relative', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>
+      <RotateCcw size={20} strokeWidth={1.75} />
+      <span
+        style={{
+          position: 'absolute',
+          fontSize: '7px',
+          fontWeight: 700,
+          fontFamily: "'IBM Plex Mono', monospace",
+          lineHeight: 1,
+          transform: 'translateY(0.5px)',
+        }}
+      >
         {seconds}
-      </text>
-    </svg>
+      </span>
+    </span>
   );
 }

@@ -1,8 +1,8 @@
 import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { useLocation, useSearchParams } from 'react-router-dom';
+import { ChevronLeft } from 'lucide-react';
 import { domainByNumber } from '../domainData.ts';
 import GlossaryEntryContent from './GlossaryEntryContent.tsx';
-import BackArrowIcon from './BackArrowIcon.tsx';
 import { useIsMobile } from '../hooks/useIsMobile.ts';
 
 interface HighlightState {
@@ -114,7 +114,7 @@ export default function DomainDetail({ number }: { number: number }) {
     <div className="domain-split-panel">
       <div className="mobile-panel-header">
         <button type="button" className="mobile-back-btn" onClick={backToList}>
-          <BackArrowIcon /> Ver lista
+          <ChevronLeft size={16} strokeWidth={2.25} /> Ver lista
         </button>
         <span className="mobile-panel-crumb">D{domain.number}{activeSubsection ? ` · ${activeSubsection.id}` : ''}</span>
       </div>

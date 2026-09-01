@@ -2,6 +2,34 @@ import { Link } from 'react-router-dom';
 import Header from './Header.tsx';
 import DomainWeights from './DomainWeights.tsx';
 import IntroNote from './IntroNote.tsx';
+import { useGlossaryAudio, formatTime } from './GlossaryAudioProvider.tsx';
+import PlayIcon from './PlayIcon.tsx';
+import CrossIcon from './CrossIcon.tsx';
+
+// Only the single most recent listening position across the whole app, not
+// a completion tracker -- see ResumeState in GlossaryAudioProvider.tsx.
+// Hidden once something is actually playing (the floating player already
+// shows this same info then) and while nothing has been listened to yet.
+function ResumeListeningBanner() {
+  const { resumeState, resumeEntry, dismissResume, status } = useGlossaryAudio();
+  if (!resumeState || status !== 'idle') return null;
+  return (
+    <div className="landing-resume">
+      <button type="button" className="landing-resume-play" onClick={resumeEntry} aria-label="Continuar escuchando">
+        <PlayIcon />
+      </button>
+      <div className="landing-resume-text">
+        <span className="landing-resume-kicker">Continuar escuchando</span>
+        <span className="landing-resume-title">
+          {resumeState.displayTitle} · {formatTime(resumeState.timeSeconds)}
+        </span>
+      </div>
+      <button type="button" className="landing-resume-dismiss" onClick={dismissResume} aria-label="Descartar">
+        <CrossIcon />
+      </button>
+    </div>
+  );
+}
 
 const DOMAINS = [
   { n: 1, weight: '20%', name: 'Fundamentos de IA y ML', tasks: 3 },
@@ -17,6 +45,7 @@ export default function Landing() {
       <Header />
       <DomainWeights />
       <IntroNote />
+      <ResumeListeningBanner />
 
       <p className="landing-hint">Elegí un dominio, o entrá directo al glosario o los recursos.</p>
 

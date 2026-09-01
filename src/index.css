@@ -469,7 +469,7 @@
   /* CrossIcon/PlayIcon are sized for other contexts (26px/14px) -- normalize
      to whatever fits each of these compact buttons regardless of which icon
      is currently swapped in (play vs. stop, etc). */
-  .gloss-read-all-btn svg, .gap-close svg, .gap-play svg, .gap-play-lg svg { width: 12px; height: 12px; }
+  .gloss-read-all-btn svg, .gap-close svg, .gap-play-lg svg { width: 12px; height: 12px; }
   .term-card {
     background: var(--surface);
     border: 1px solid var(--border);
@@ -834,68 +834,22 @@
     transform: translateX(-50%);
     z-index: 90;
     width: min(22rem, calc(100vw - 2rem));
+  }
+  .gap-bar {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+    padding: 0.65rem 0.8rem 0.75rem;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
   }
-  .gap-collapsed {
-    display: flex;
-    align-items: center;
-    gap: 0.65rem;
-    background: var(--bg);
-    border: 1px solid var(--border);
-    border-radius: 999px;
-    box-shadow: var(--shadow);
-    padding: 0.4rem 0.4rem 0.4rem 0.9rem;
-    cursor: pointer;
-  }
-  .gap-track {
-    flex: 1;
-    min-width: 0;
-    height: 3px;
-    border-radius: 999px;
-    background: var(--border);
-    position: relative;
-    overflow: hidden;
-  }
-  .gap-fill { position: absolute; inset: 0 auto 0 0; background: var(--accent); border-radius: 999px; }
-  .gap-title {
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: var(--ink);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    flex: none;
-    max-width: 8rem;
-  }
-  .gap-play {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex: none;
-    width: 34px;
-    height: 34px;
-    padding: 0;
-    border-radius: 999px;
-    border: none;
-    background: var(--accent);
-    color: var(--accent-ink);
-    cursor: pointer;
-  }
 
-  .gap-expanded {
-    background: var(--bg);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    box-shadow: var(--shadow);
-    padding: 0.7rem 0.85rem 0.8rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.65rem;
-  }
-  .gap-expanded-head { display: flex; align-items: center; gap: 0.5rem; }
-  .gap-expanded-title {
+  /* Title gets its own row -- doesn't fight play/skip buttons for space, so
+     a long term name doesn't get clipped down to almost nothing. */
+  .gap-title-row { display: flex; align-items: center; gap: 0.4rem; }
+  .gap-title {
     flex: 1;
     min-width: 0;
     font-size: 0.85rem;
@@ -905,18 +859,21 @@
     overflow: hidden;
     text-overflow: ellipsis;
   }
+  .gap-expand-btn,
   .gap-step,
   .gap-close {
     display: flex;
     align-items: center;
     justify-content: center;
     flex: none;
-    width: 28px;
-    height: 28px;
+    width: 26px;
+    height: 26px;
     padding: 0;
     border-radius: 999px;
     cursor: pointer;
   }
+  .gap-expand-btn { border: 1px solid var(--border); background: var(--surface); color: var(--ink-faint); font-size: 0.85rem; line-height: 1; }
+  .gap-expand-btn:hover { color: var(--accent); border-color: var(--accent); }
   .gap-step {
     color: var(--ink-soft);
     background: none;
@@ -929,7 +886,16 @@
   .gap-close { color: var(--ink-faint); background: var(--surface); border: 1px solid var(--border); }
   .gap-close:hover { color: var(--ink); border-color: var(--ink-faint); }
 
-  .gap-scrub-row { display: flex; align-items: center; gap: 0.5rem; }
+  /* Progress is a real row of the collapsed bar, not something hidden behind
+     the expand toggle -- seeking/skipping shouldn't require opening a panel
+     first. This row's shape (time/track/time vs. the fallback note) is keyed
+     off `usingRealAudio`, which is stable for the whole session -- NOT off
+     `duration`, which resets to 0 between every segment and used to swap
+     this row's markup (and height) many times over a single listen. The
+     min-height + centering below just cover the one remaining legitimate
+     transition: a first playback attempt failing over from real audio to
+     the browser voice. */
+  .gap-progress-row { display: flex; align-items: center; gap: 0.5rem; min-height: 2.2rem; }
   .gap-time { font-family: 'IBM Plex Mono', monospace; font-variant-numeric: tabular-nums; font-size: 0.68rem; color: var(--ink-faint); flex: none; }
   .gap-scrub-track {
     flex: 1;
@@ -938,6 +904,13 @@
     border-radius: 999px;
     background: var(--border);
     cursor: pointer;
+  }
+  /* Segment metadata hasn't loaded yet -- same track, same height, just a
+     quiet pulse instead of a stale "0:00" that looks like real progress. */
+  .gap-scrub-track-loading { cursor: default; animation: gap-track-pulse 1.1s ease-in-out infinite; }
+  @keyframes gap-track-pulse { 0%, 100% { opacity: 0.4; } 50% { opacity: 0.9; } }
+  @media (prefers-reduced-motion: reduce) {
+    .gap-scrub-track-loading { animation: none; opacity: 0.65; }
   }
   .gap-scrub-fill { position: absolute; inset: 0 auto 0 0; background: var(--accent); border-radius: 999px; }
   .gap-scrub-thumb {
@@ -951,7 +924,7 @@
     transform: translate(-50%, -50%);
     box-shadow: 0 0 0 1px var(--accent);
   }
-  .gap-no-scrub { margin: 0; font-size: 0.76rem; color: var(--ink-faint); font-style: italic; }
+  .gap-no-scrub { margin: 0; font-size: 0.76rem; line-height: 1.35; color: var(--ink-faint); font-style: italic; }
 
   .gap-controls-row { display: flex; align-items: center; justify-content: center; gap: 1rem; }
   .gap-skip {
@@ -1011,6 +984,64 @@
   }
 
   /* Landing */
+  .landing-resume {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    padding: 0.75rem 0.9rem;
+    margin-top: 1.4rem;
+  }
+  .landing-resume-play {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: none;
+    width: 34px;
+    height: 34px;
+    border-radius: 999px;
+    border: none;
+    background: var(--accent);
+    color: var(--accent-ink);
+    cursor: pointer;
+  }
+  .landing-resume-text { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 0.1rem; }
+  .landing-resume-kicker {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+  .landing-resume-title {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--ink);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .landing-resume-dismiss {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: none;
+    width: 26px;
+    height: 26px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: var(--surface-2);
+    color: var(--ink-faint);
+    cursor: pointer;
+  }
+  .landing-resume-dismiss:hover { color: var(--ink); border-color: var(--ink-faint); }
+  .landing-resume-dismiss svg, .landing-resume-play svg { width: 12px; height: 12px; }
+
   .landing-hint {
     color: var(--ink-faint);
     font-size: 0.85rem;

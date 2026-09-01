@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useMemo, useState, type ReactNode } from 'react';
+import { createContext, useContext, useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 import { glossarySpokenById } from '../glossaryDataSpoken.ts';
 import { parseGlossaryCards, buildReadAloudSegments, stripHtml } from '../glossaryCards.ts';
 import type { ReadAloudSegmentKind } from '../glossaryCards.ts';
@@ -8,6 +8,8 @@ import { useAudioAvailable } from '../hooks/useAudioAvailable.ts';
 import PlayIcon from './PlayIcon.tsx';
 import PauseIcon from './PauseIcon.tsx';
 import CrossIcon from './CrossIcon.tsx';
+import SkipBackIcon from './SkipBackIcon.tsx';
+import SkipForwardIcon from './SkipForwardIcon.tsx';
 
 interface QueueEntry {
   id: string;
@@ -31,6 +33,31 @@ const MODE_LABELS: Record<ReadAloudMode, string> = { all: 'Todo', content: 'Cont
 function loadMode(): ReadAloudMode {
   const stored = localStorage.getItem(MODE_KEY);
   return stored === 'content' || stored === 'short' ? stored : 'all';
+}
+
+// "Continuar escuchando" -- not a completion tracker, just the single most
+// recent playback position across the whole app (any entry, any page),
+// restorable to the exact second for the real-audio engine. segmentId (not
+// a queue index) is what makes this stable across mode changes -- resuming
+// re-derives the queue from (glossId, mode) and looks the segment up by id.
+export interface ResumeState {
+  glossId: string;
+  mode: ReadAloudMode;
+  segmentId: string;
+  displayTitle: string;
+  timeSeconds: number;
+  savedAt: number;
+}
+const RESUME_KEY = 'glossary-audio-resume';
+
+function loadResume(): ResumeState | null {
+  try {
+    const raw = localStorage.getItem(RESUME_KEY);
+    if (!raw) return null;
+    return JSON.parse(raw) as ResumeState;
+  } catch {
+    return null;
+  }
 }
 
 // Builds the audio queue for one glossary entry -- pure function of (id,
@@ -109,6 +136,11 @@ interface GlossaryAudioSession {
   pause: () => void;
   resume: () => void;
   stop: () => void;
+  /** The most recent playback position across the whole app -- null once
+   *  dismissed or never played anything yet. See ResumeState above. */
+  resumeState: ResumeState | null;
+  resumeEntry: () => void;
+  dismissResume: () => void;
 }
 
 const GlossaryAudioContext = createContext<GlossaryAudioSession | null>(null);
@@ -119,7 +151,7 @@ export function useGlossaryAudio(): GlossaryAudioSession {
   return ctx;
 }
 
-const SKIP_SECONDS = 10;
+const SKIP_SECONDS = 5;
 
 // Mounted once, above <Routes> (see App.tsx) -- deliberately NOT nested
 // inside any per-page component. Two bugs this fixes structurally rather
@@ -143,6 +175,7 @@ export function GlossaryAudioProvider({ children }: { children: ReactNode }) {
   const [cardRanges, setCardRanges] = useState<{ start: number; end: number }[]>([]);
   const [queue, setQueue] = useState<QueueEntry[]>([]);
   const [expanded, setExpanded] = useState(false);
+  const [resumeState, setResumeState] = useState<ResumeState | null>(loadResume);
 
   const [audioAvailable, markAudioUnavailable] = useAudioAvailable();
   const audioEngine = useAudioReadAloud(markAudioUnavailable);
@@ -183,6 +216,95 @@ export function GlossaryAudioProvider({ children }: { children: ReactNode }) {
     playRange(built.queue, r.start, r.end);
   }
 
+  // Kept in sync every render (cheap -- just an assignment) rather than
+  // recomputed only on some subset of changes, so persistSnapshot() below
+  // always has a fresh position to write regardless of which event
+  // triggered it.
+  const snapshotRef = useRef<Omit<ResumeState, 'savedAt'> | null>(null);
+  useEffect(() => {
+    if (entryId !== null && activeIndex !== null && queue[activeIndex]) {
+      snapshotRef.current = {
+        glossId: entryId,
+        mode,
+        segmentId: queue[activeIndex].id,
+        displayTitle: queue[activeIndex].displayTitle,
+        timeSeconds: currentTime,
+      };
+    }
+  });
+
+  function persistSnapshot() {
+    if (!snapshotRef.current) return;
+    const payload: ResumeState = { ...snapshotRef.current, savedAt: Date.now() };
+    try {
+      localStorage.setItem(RESUME_KEY, JSON.stringify(payload));
+    } catch {
+      // localStorage can throw (private browsing, quota) -- resuming is a
+      // convenience, not worth surfacing an error over.
+    }
+    setResumeState(payload);
+  }
+
+  function handlePause() {
+    persistSnapshot();
+    pause();
+  }
+
+  function handleStop() {
+    persistSnapshot();
+    stop();
+  }
+
+  function resumeEntry() {
+    if (!resumeState) return;
+    const built = buildQueue(resumeState.glossId, resumeState.mode);
+    const startIndex = built.queue.findIndex((q) => q.id === resumeState.segmentId);
+    setEntryId(resumeState.glossId);
+    setQueue(built.queue);
+    setCardRanges(built.cardRanges);
+    if (resumeState.mode !== mode) {
+      // Restore the mode it was actually recorded under -- setMode() also
+      // calls stop(), which would immediately kill the playback we're
+      // starting, so update the preference directly instead.
+      setModeState(resumeState.mode);
+      localStorage.setItem(MODE_KEY, resumeState.mode);
+    }
+    playAll(built.queue, startIndex === -1 ? 0 : startIndex);
+    // Queued by the browser until the segment's metadata loads (standard
+    // <audio> behavior) -- a no-op on the browser-voice fallback, which just
+    // restarts the segment from its start instead.
+    seekTo(resumeState.timeSeconds);
+  }
+
+  function dismissResume() {
+    localStorage.removeItem(RESUME_KEY);
+    setResumeState(null);
+  }
+
+  // Covers the two moments a session can end without an explicit
+  // pause/stop click: backgrounding the tab (visibilitychange) and actually
+  // closing/navigating away from the page (pagehide). Also flushes every 4s
+  // while playing, so a hard crash/kill doesn't lose more than a few
+  // seconds of position. No dependency array (matches the mediaSession
+  // effect below) -- persistSnapshot always reads the latest ref either way.
+  useEffect(() => {
+    function onVisibilityChange() {
+      if (document.hidden) persistSnapshot();
+    }
+    document.addEventListener('visibilitychange', onVisibilityChange);
+    window.addEventListener('pagehide', persistSnapshot);
+    return () => {
+      document.removeEventListener('visibilitychange', onVisibilityChange);
+      window.removeEventListener('pagehide', persistSnapshot);
+    };
+  });
+
+  useEffect(() => {
+    if (status !== 'playing') return;
+    const id = setInterval(persistSnapshot, 4000);
+    return () => clearInterval(id);
+  }, [status]);
+
   function stepCard(delta: number) {
     if (activeIndex === null) return;
     if (delta > 0) {
@@ -201,7 +323,7 @@ export function GlossaryAudioProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     if (!audioAvailable || !('mediaSession' in navigator)) return;
     navigator.mediaSession.setActionHandler('play', resume);
-    navigator.mediaSession.setActionHandler('pause', pause);
+    navigator.mediaSession.setActionHandler('pause', handlePause);
     navigator.mediaSession.setActionHandler('previoustrack', () => stepCard(-1));
     navigator.mediaSession.setActionHandler('nexttrack', () => stepCard(1));
     return () => {
@@ -234,102 +356,94 @@ export function GlossaryAudioProvider({ children }: { children: ReactNode }) {
       stepCard,
       seek,
       seekTo,
-      pause,
+      pause: handlePause,
       resume,
-      stop,
+      stop: handleStop,
+      resumeState,
+      resumeEntry,
+      dismissResume,
     }),
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [entryId, status, activeCardIndex, activeTitle, mode, rate, currentTime, duration, audioAvailable, expanded, hasPrev, hasNext, queue, cardRanges],
+    [entryId, status, activeCardIndex, activeTitle, mode, rate, currentTime, duration, audioAvailable, expanded, hasPrev, hasNext, queue, cardRanges, resumeState],
   );
 
   const pct = duration > 0 ? Math.min(100, (currentTime / duration) * 100) : 0;
-  const showScrubber = audioAvailable && duration > 0;
+  // Whether we're even trying to use the real pre-rendered audio -- true for
+  // the whole session once resolved, so switching on this (rather than on
+  // `duration > 0`) means the progress row's layout never changes shape
+  // mid-playback. `duration` briefly resets to 0 between every segment (see
+  // playIndex in useAudioReadAloud.ts), so keying the track-vs-fallback-note
+  // choice on it instead used to swap the whole row's markup (and height)
+  // dozens of times during a single listen -- the "ugly jump" this replaces.
+  const usingRealAudio = audioAvailable;
+  // Separately: whether seeking/skipping can actually do anything right now
+  // -- not yet, if this specific segment's metadata hasn't loaded.
+  const canSeek = audioAvailable && duration > 0;
 
   return (
     <GlossaryAudioContext.Provider value={value}>
       {children}
       {status !== 'idle' && (
         <div className="glossary-audio-player">
-          <div
-            className="gap-collapsed"
-            role="button"
-            tabIndex={0}
-            onClick={() => setExpanded(!expanded)}
-            onKeyDown={(e) => {
-              if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                setExpanded(!expanded);
-              }
-            }}
-            aria-expanded={expanded}
-            aria-label={expanded ? 'Minimizar reproductor' : 'Expandir reproductor'}
-          >
-            {showScrubber && (
-              <span className="gap-track">
-                <span className="gap-fill" style={{ width: `${pct}%` }} />
-              </span>
-            )}
-            <span className="gap-title">{activeTitle}</span>
-            <button
-              type="button"
-              className="gap-play"
-              onClick={(e) => {
-                e.stopPropagation();
-                status === 'playing' ? pause() : resume();
-              }}
-              aria-label={status === 'playing' ? 'Pausar' : 'Reanudar'}
-            >
-              {status === 'playing' ? <PauseIcon /> : <PlayIcon />}
-            </button>
-          </div>
+          <div className="gap-bar">
+            <div className="gap-title-row">
+              <span className="gap-title">{activeTitle}</span>
+              <button type="button" className="gap-close" onClick={handleStop} aria-label="Detener lectura">
+                <CrossIcon />
+              </button>
+              <button
+                type="button"
+                className="gap-expand-btn"
+                onClick={() => setExpanded(!expanded)}
+                aria-expanded={expanded}
+                aria-label={expanded ? 'Menos opciones' : 'Más opciones'}
+              >
+                {expanded ? '⌃' : '⌄'}
+              </button>
+            </div>
 
-          {expanded && (
-            <div className="gap-expanded">
-              <div className="gap-expanded-head">
-                <button type="button" className="gap-step" onClick={() => stepCard(-1)} disabled={!hasPrev} aria-label="Concepto anterior">
-                  ‹
-                </button>
-                <span className="gap-expanded-title">{activeTitle}</span>
-                <button type="button" className="gap-step" onClick={() => stepCard(1)} disabled={!hasNext} aria-label="Siguiente concepto">
-                  ›
-                </button>
-                <button type="button" className="gap-close" onClick={stop} aria-label="Detener lectura">
-                  <CrossIcon />
-                </button>
-              </div>
-
-              {showScrubber ? (
-                <div className="gap-scrub-row">
-                  <span className="gap-time">{formatTime(currentTime)}</span>
+            <div className="gap-progress-row">
+              {usingRealAudio ? (
+                <>
+                  <span className="gap-time">{canSeek ? formatTime(currentTime) : '--:--'}</span>
                   <span
-                    className="gap-scrub-track"
+                    className={canSeek ? 'gap-scrub-track' : 'gap-scrub-track gap-scrub-track-loading'}
                     onClick={(e) => {
+                      if (!canSeek) return;
                       const rect = e.currentTarget.getBoundingClientRect();
                       const ratio = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
                       seekTo(ratio * duration);
                     }}
                   >
                     <span className="gap-scrub-fill" style={{ width: `${pct}%` }} />
-                    <span className="gap-scrub-thumb" style={{ left: `${pct}%` }} />
+                    {canSeek && <span className="gap-scrub-thumb" style={{ left: `${pct}%` }} />}
                   </span>
-                  <span className="gap-time">{formatTime(duration)}</span>
-                </div>
+                  <span className="gap-time">{canSeek ? formatTime(duration) : '--:--'}</span>
+                </>
               ) : (
                 <p className="gap-no-scrub">Usando la voz del dispositivo — sin progreso ni salto disponibles.</p>
               )}
+            </div>
 
-              <div className="gap-controls-row">
-                <button type="button" className="gap-skip" onClick={() => seek(-SKIP_SECONDS)} disabled={!showScrubber} aria-label="Retroceder 10 segundos">
-                  −10s
-                </button>
-                <button type="button" className="gap-play-lg" onClick={status === 'playing' ? pause : resume} aria-label={status === 'playing' ? 'Pausar' : 'Reanudar'}>
-                  {status === 'playing' ? <PauseIcon /> : <PlayIcon />}
-                </button>
-                <button type="button" className="gap-skip" onClick={() => seek(SKIP_SECONDS)} disabled={!showScrubber} aria-label="Adelantar 10 segundos">
-                  +10s
-                </button>
-              </div>
+            <div className="gap-controls-row">
+              <button type="button" className="gap-step" onClick={() => stepCard(-1)} disabled={!hasPrev} aria-label="Concepto anterior">
+                ‹
+              </button>
+              <button type="button" className="gap-skip" onClick={() => seek(-SKIP_SECONDS)} disabled={!canSeek} aria-label={`Retroceder ${SKIP_SECONDS} segundos`}>
+                <SkipBackIcon seconds={SKIP_SECONDS} />
+              </button>
+              <button type="button" className="gap-play-lg" onClick={status === 'playing' ? handlePause : resume} aria-label={status === 'playing' ? 'Pausar' : 'Reanudar'}>
+                {status === 'playing' ? <PauseIcon /> : <PlayIcon />}
+              </button>
+              <button type="button" className="gap-skip" onClick={() => seek(SKIP_SECONDS)} disabled={!canSeek} aria-label={`Adelantar ${SKIP_SECONDS} segundos`}>
+                <SkipForwardIcon seconds={SKIP_SECONDS} />
+              </button>
+              <button type="button" className="gap-step" onClick={() => stepCard(1)} disabled={!hasNext} aria-label="Siguiente concepto">
+                ›
+              </button>
+            </div>
 
+            {expanded && (
               <div className="gap-settings-row">
                 <div className="gap-rates">
                   {RATE_OPTIONS.map((r) => (
@@ -346,15 +460,15 @@ export function GlossaryAudioProvider({ children }: { children: ReactNode }) {
                   ))}
                 </div>
               </div>
-            </div>
-          )}
+            )}
+          </div>
         </div>
       )}
     </GlossaryAudioContext.Provider>
   );
 }
 
-function formatTime(totalSeconds: number): string {
+export function formatTime(totalSeconds: number): string {
   const s = Math.max(0, Math.round(totalSeconds));
   const m = Math.floor(s / 60);
   const rem = s % 60;

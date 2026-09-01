@@ -13,17 +13,21 @@ npm run preview      # serve the production build locally
 
 There is no test suite and no lint script configured — don't invent one.
 
-The quiz content pipeline (`scripts/extract-quiz.mjs`, `translate-quiz.mjs`, `classify-quiz-scope.mjs`, `apply-quiz-scope-cleanup.mjs`) is **not** wired into `package.json` and is **not part of normal development** — see "Quiz content pipeline" below before touching it.
+Every script in `scripts/` (the original quiz pipeline, the quiz-v2 pipeline, and the domain-audio pipeline) is **not** wired into `package.json` and is **not part of normal development** — see "Quiz content pipeline", "Quiz v2", and "Spoken glossary + read-aloud audio" below before touching any of them.
 
 ## Architecture
 
-This is a React 19 + TypeScript + Vite 6 single-page app: a study guide **and practice-quiz/exam-simulator** for the AWS Certified AI Practitioner (AIF-C01) exam. All content and UI copy is in Spanish by default; the quiz has an ES/EN toggle. Code/identifiers are in English.
+This is a React 19 + TypeScript + Vite 6 single-page app: a study guide **and practice-quiz/exam-simulator** for the AWS Certified AI Practitioner (AIF-C01) exam, with a read-aloud audio mode on the glossary. All content and UI copy is in Spanish by default; the quiz has an ES/EN toggle. Code/identifiers are in English.
 
 ### Routing
 
 `HashRouter` (from `react-router-dom`), not `BrowserRouter` — deliberate, because the app is a static GitHub Pages deploy with no server-side rewrite rules, so hash-based routes work without a 404-redirect trick. `vite.config.ts` sets `base: '/AWSCertifiedAIPractitioner/'` to match the GitHub Pages project-site path.
 
-`src/App.tsx`: `/` (`Landing`, outside the layout) plus a shared `<Route element={<Layout />}>` wrapping every other route: `/dominio/:n`, `/servicios`, `/glosario`, `/como-estudiarlo`, `/formato-examen`, `/quiz` (set list), `/quiz/:setNumber` (a quiz session), `/examen` (timed exam simulation). `Layout.tsx` renders `QuickJumpBar` + `<Outlet/>` **once** — `current` for the pill highlight is derived from the URL (`useLocation`/`useParams`) inside `QuickJumpBar` itself, not passed in by each page. This exists specifically so `QuickJumpBar` doesn't unmount/remount on every navigation (it used to, per-page, which reset the pill row's scroll position — don't go back to that pattern). `ThemeToggle` and `ScrollToTop` also mount once in `App.tsx`, outside `Routes`.
+`src/App.tsx`: `/` (`Landing`, outside the layout) plus a shared `<Route element={<Layout />}>` wrapping every other route: `/dominio/:n`, `/servicios`, `/glosario`, `/como-estudiarlo`, `/formato-examen`, `/quiz` (set list), `/quiz/:setNumber` (a quiz session), `/quiz-v2` (the newer single-set bilingual quiz, see "Quiz v2" below), `/examen` (timed exam simulation). `Layout.tsx` renders `QuickJumpBar` + `<Outlet/>` **once** — `current` for the pill highlight is derived from the URL (`useLocation`/`useParams`) inside `QuickJumpBar` itself, not passed in by each page. This exists specifically so `QuickJumpBar` doesn't unmount/remount on every navigation (it used to, per-page, which reset the pill row's scroll position — don't go back to that pattern). `ThemeToggle`, `ScrollToTop`, and `DomainSearch` (the global Ctrl+K search overlay) also mount once in `App.tsx`, outside `Routes`.
+
+### Global search (`Ctrl+K`)
+
+`DomainSearch.tsx` is a fuse.js-powered overlay searching `domainSearchIndex` (`src/domainSearch.ts`), which flattens every domain bullet plus every term-card inside its glossary explanation (via `glossaryCards.ts`'s shared HTML parser) into one flat, fuzzy-searchable list — built once at module load since domain/glossary content is static. Selecting a result navigates to `/dominio/:n?b=<glossId>` and passes `highlightCardIndex` as router *navigation state* (not a URL param), so `DomainDetail.tsx` can scroll to and flash the exact match — deliberately kept out of the URL so a page reload or a shared link never re-triggers the flash.
 
 ### Content is data-driven, not hand-authored JSX
 
@@ -37,6 +41,25 @@ Content-accuracy convention: this content was audited bullet-by-bullet against t
 
 `/glosario` reuses the same `GlossaryEntryContent` renderer, plus an index and a `?t=<glossId>` deep-link that scrolls to and highlights one entry.
 
+### Spoken glossary + read-aloud audio
+
+Every glossary entry exists in two versions: `src/glossaryData.ts` ("Técnico", the official audited text) and `src/glossaryDataSpoken.ts` ("Profesor", prose rewritten for being read aloud — generated from the técnico version per `others/spoken-glossary-brief.md`, gitignored). `GlossaryEntryContent.tsx` has a Técnico/Profesor toggle (`localStorage` key `glossary-display-mode`) controlling which one is *displayed* — but **read-aloud audio always narrates the Profesor version**, regardless of that toggle; this is a deliberate design decision, not a bug.
+
+`src/glossaryCards.ts`'s `buildReadAloudSegments()` is the single source of truth for how an entry is split into speakable pieces (bullet text, then each term-card's title/paragraph/short-summary) and how each piece's stable id is built — shared between the live browser-voice path and `scripts/generate-domain-audio.mjs`, so the frontend's queue and the pre-rendered audio files always line up by id.
+
+Two interchangeable playback engines share one hook API (`status/activeIndex/rate/setRate/playAll/playRange/pause/resume/stop`), picked at runtime by `useAudioAvailable.ts`:
+- `useReadAloud.ts` — the browser's `window.speechSynthesis` (`es-ES`), always available, no setup needed.
+- `useAudioReadAloud.ts` — plays pre-rendered MP3s through a real `<audio>` element from `AUDIO_BASE` (`src/audioBase.ts`) + `${segmentId}.mp3`, and wires `navigator.mediaSession` for lock-screen play/pause/prev/next — this is what makes playback survive a locked screen, which `speechSynthesis` can't do reliably on iOS.
+
+`useAudioAvailable` is optimistic by default (assumes the real audio exists) and only falls back to the browser voice the first time an actual playback attempt errors — cached at module scope so one failure disables audio for the rest of the session. This is deliberately *not* an upfront probe: iOS Safari won't reliably fire load events for an `<audio>.load()` not triggered by a user gesture, so an upfront check could hang forever and permanently fall back even when the audio is genuinely there.
+
+The pre-rendered audio itself is **not built or served through this repo's normal `npm run build`/`dev` flow** — it's a manual, personal pipeline, run outside Claude Code:
+1. `scripts/generate-domain-audio.mjs` — synthesizes every segment via **Azure neural TTS** (voice `es-MX-JorgeMultilingualNeural`, used for both Spanish and English runs since it's multilingual — needed because Azure's SSML `<lang>` mid-utterance switching silently didn't work). Splits each segment into Spanish/English runs, synthesizes each separately, and splices them with `ffmpeg` (`brew install ffmpeg` required). Needs `AZURE_SPEECH_KEY` + `AZURE_SPEECH_REGION` env vars (Azure Speech resource, free tier). Subcommands: `test` (3 samples → `others/domain-audio-test/`), `generate` (full run → `public/domain-audio/`, skips existing files, safe to re-run), `stats` (no API calls).
+2. `scripts/check-audio-truncation.mjs` — no network calls, uses `ffprobe` to flag locally-generated files that are suspiciously short for their source text (an Azure TTS truncation bug). `--delete` removes flagged files and prints the matching `FORCE_FILES=...` line for re-upload.
+3. `scripts/upload-domain-audio.mjs` — uploads `public/domain-audio/*.mp3` to a **Cloudflare R2** bucket (not GitHub Releases — Releases forces `Content-Disposition: attachment` + `application/octet-stream` on every asset, which iOS Safari refuses to play; R2 lets each file get a real `Content-Type: audio/mpeg`). Needs `R2_ACCOUNT_ID`, `R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY`; optional `R2_BUCKET`. `FORCE_FILES=a.mp3,b.mp3` re-uploads specific files even if already present; `FORCE_ALL=1` re-uploads everything (needed after swapping the underlying source text without changing filenames).
+
+`others/` (gitignored) holds all raw/staging audio and the spoken-glossary brief — none of it is committed or bundled into the deployed app; only the small `AUDIO_BASE` URL pointer in `src/audioBase.ts` is. **Same rule as the quiz content pipeline below: run these manually when the user explicitly asks, never proactively — they cost real money on the configured Azure/Cloudflare accounts.**
+
 ### Quiz system
 
 Practice quiz content lives in `src/quiz/data/set-N.json` (English) and `src/quiz/data-es/set-N.json` (Spanish) — 21 sets, numbered 1–5 and 9–24 (sets 6–8 were dropped for being off-topic). `src/quiz/meta.ts` is an auto-generated index of `{setNumber, questionCount}` per set — **regenerated by the pipeline scripts, don't hand-edit**. `loadSet.ts` uses `import.meta.glob` scoped per language directory so opening `/quiz/:n` only fetches that one set's JSON chunk. `useQuizLang.ts` is a small `localStorage`-backed `es|en` toggle (key `quiz-lang`) read by every quiz/exam page. `QuizSessionPage.tsx` persists per-set answered/revealed state to `localStorage` under `quiz-progress-{setNumber}`.
@@ -45,9 +68,20 @@ Practice quiz content lives in `src/quiz/data/set-N.json` (English) and `src/qui
 
 ### Exam simulation mode (`/examen`)
 
-`ExamPage.tsx` runs a `setup → active → results` flow (local component state, no route param for phase). 65 questions, a 90-minute countdown that auto-finishes at zero, and — unlike the practice quiz — **no per-question feedback during the exam**, only flag-for-review and a question-navigator grid. `examSampling.ts` samples the 65 from the full question pool (`loadAllQuestions.ts`, which concatenates every set) proportionally to each domain's real weight from `domainData.ts`, bucketing by each question's tagged `.domain`; it falls back to a plain shuffle if fewer than half the pool is domain-tagged yet. The results screen shows score + a full review with explanations, with an explicit disclaimer that this is an approximation, **not** AWS's real 100–1000 compensatory-scored scale.
+`ExamPage.tsx` runs a `setup → active → results` flow (local component state, no route param for phase). A `source: 'original' | 'v2'` toggle on the setup screen (default `'original'`) picks which question bank to sample from — "SkillCertPro" (the original quiz, `loadOriginalExamPool`) or "TutorialsDojo" (quiz-v2, `loadQuizV2ExamPool`) — both normalize into the same `ExamQuestion[]` shape (`quiz/examTypes.ts`) so the rest of the exam flow doesn't care which source was picked. 65 questions, a 90-minute countdown that auto-finishes at zero, and — unlike the practice quiz — **no per-question feedback during the exam**, only flag-for-review and a question-navigator grid. `examSampling.ts` samples the 65 from the full question pool (`loadAllQuestions.ts`, which concatenates every set) proportionally to each domain's real weight from `domainData.ts`, bucketing by each question's tagged `.domain`; it falls back to a plain shuffle if fewer than half the pool is domain-tagged yet. The results screen shows score + a full review with explanations, with an explicit disclaimer that this is an approximation, **not** AWS's real 100–1000 compensatory-scored scale.
 
-### Quiz content pipeline (manual, outside Claude Code)
+### Quiz v2 (`/quiz-v2`)
+
+A second, newer practice-quiz system that coexists with (does not replace) the original one above. Key differences: all content lives in **one bilingual JSON file**, `src/quiz-v2/data/questions.json` — every field is a `{en, es}` `Localized` pair (`quiz-v2/types.ts`) so the two languages can never drift into separate out-of-sync files the way the original quiz's `data/`/`data-es/` folders can. It's a single continuous set (no set list/selection), rendered by `QuizV2Page.tsx`, with its own `localStorage` progress key `quiz-v2-progress`. It adds a third question type beyond single/multiple: `matching` (several prompts, each answered by picking from a shared pool of choices). `quiz-v2/resolveLang.ts` projects the raw bilingual shape down to one language at render/sampling time; `quiz-v2/withBasePath.ts` rewrites root-relative `/quiz-other-images/...` image `src`s in explanations to respect Vite's base path.
+
+Source content is TutorialsDojo's practice tests (vs. the original quiz's SkillCertPro source). Pipeline (manual, outside Claude Code, mirrors the rules below):
+1. `scripts/build-quiz-other.mjs` — dedupes/cleans raw TutorialsDojo exports from `others/quiz-other/` into `others/quiz-other/merged.json`. Pure text parsing, no LLM calls, no cost.
+2. `scripts/export-quiz-v2.mjs` — additively merges `merged.json` into `questions.json` (English only; ids already translated/tagged are left untouched).
+3. `scripts/translate-quiz-v2.mjs` — Anthropic Batch API (`claude-haiku-4-5`), adds the `{en, es}` pairs. Subcommands `test|submit|status|collect|retry`.
+4. Alternative free-MT path: `scripts/export-quiz-v2-for-matecat.mjs` (exports English text for MateCat) + `scripts/build-quiz-v2-glossary-tmx.mjs` (builds a TMX glossary of AWS/technical terms so MateCat's MT stops mistranslating them) → `scripts/fix-quiz-v2-service-names.mjs` + `scripts/fix-quiz-v2-service-names-manual.mjs` (mechanical/hand-curated fixes for AWS service names MateCat still mangled).
+5. `scripts/tag-quiz-v2-domains.mjs` — Anthropic Batch API, tags each question's exam domain (1–5); quiz-v2 content is pre-confirmed in-scope, so unlike the original quiz's pipeline there's no separate scope-classification step. Subcommands `test|submit|status|collect`.
+
+### Quiz content pipeline (manual, outside Claude Code — original quiz only, see "Quiz v2" above for that system's own pipeline)
 
 `scripts/extract-quiz.mjs`, `translate-quiz.mjs`, `classify-quiz-scope.mjs`, and `apply-quiz-scope-cleanup.mjs` build the quiz content from raw source material in `others/quiz/` (gitignored — third-party practice-test HTML, not ours to redistribute):
 

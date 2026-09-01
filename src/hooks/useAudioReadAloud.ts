@@ -33,6 +33,8 @@ export function useAudioReadAloud(onError?: () => void) {
   const [status, setStatus] = useState<AudioReadAloudStatus>('idle');
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const [rate, setRateState] = useState(loadRate);
+  const [currentTime, setCurrentTime] = useState(0);
+  const [duration, setDuration] = useState(0);
   const rateRef = useRef(rate);
   const queueRef = useRef<AudioReadAloudSegment[]>([]);
   const stopAtRef = useRef<number | null>(null);
@@ -68,7 +70,11 @@ export function useAudioReadAloud(onError?: () => void) {
     };
   }, []);
 
-  function playIndex(i: number, generation: number) {
+  // seekOnLoad: where to land once the new segment's metadata is known --
+  // used by seek() when a +/-10s skip overshoots past the current segment's
+  // start/end, so it can hand off into the neighboring segment at the right
+  // offset instead of always restarting it from 0.
+  function playIndex(i: number, generation: number, seekOnLoad?: { fromEnd: boolean; offsetSeconds: number }) {
     const queue = queueRef.current;
     const el = audioElRef.current;
     if (!el || i >= queue.length) {
@@ -79,6 +85,20 @@ export function useAudioReadAloud(onError?: () => void) {
     const segment = queue[i];
     el.src = `${AUDIO_BASE}${segment.id}.mp3`;
     el.playbackRate = rateRef.current;
+    setCurrentTime(0);
+    setDuration(0);
+    el.onloadedmetadata = () => {
+      if (generation !== generationRef.current) return;
+      const d = el.duration || 0;
+      setDuration(d);
+      if (seekOnLoad) {
+        el.currentTime = seekOnLoad.fromEnd ? Math.max(0, d - seekOnLoad.offsetSeconds) : Math.min(seekOnLoad.offsetSeconds, d);
+      }
+    };
+    el.ontimeupdate = () => {
+      if (generation !== generationRef.current) return;
+      setCurrentTime(el.currentTime);
+    };
     el.onended = () => {
       if (generation !== generationRef.current) return;
       if (stopAtRef.current !== null && i >= stopAtRef.current) {
@@ -157,5 +177,42 @@ export function useAudioReadAloud(onError?: () => void) {
     setRateState(newRate);
   }
 
-  return { status, activeIndex, rate, setRate, playAll, playRange, pause, resume, stop };
+  // Jump forward/back within the current segment; a skip that overshoots
+  // past its start or end hands off into the previous/next segment at the
+  // matching offset instead of clamping, so a 10s skip near a segment
+  // boundary still moves roughly 10s of actual audio.
+  function seek(deltaSeconds: number) {
+    const el = audioElRef.current;
+    if (!el || activeIndex === null) return;
+    const generation = generationRef.current;
+    const target = el.currentTime + deltaSeconds;
+    if (target < 0) {
+      if (activeIndex === 0) {
+        el.currentTime = 0;
+        return;
+      }
+      cancelPending();
+      playIndex(activeIndex - 1, generation, { fromEnd: true, offsetSeconds: -target });
+    } else if (duration > 0 && target > duration) {
+      if (activeIndex + 1 >= queueRef.current.length) {
+        el.currentTime = duration;
+        return;
+      }
+      cancelPending();
+      playIndex(activeIndex + 1, generation, { fromEnd: false, offsetSeconds: target - duration });
+    } else {
+      el.currentTime = target;
+    }
+  }
+
+  // Absolute seek within the current segment only (used by dragging/clicking
+  // the progress track) -- crossing into another segment there would need to
+  // know that segment's duration up front, which isn't worth prefetching.
+  function seekTo(targetSeconds: number) {
+    const el = audioElRef.current;
+    if (!el) return;
+    el.currentTime = Math.max(0, Math.min(targetSeconds, duration || targetSeconds));
+  }
+
+  return { status, activeIndex, rate, setRate, currentTime, duration, seek, seekTo, playAll, playRange, pause, resume, stop };
 }

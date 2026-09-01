@@ -1,14 +1,10 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { glossaryById } from '../glossaryData.ts';
 import { glossarySpokenById } from '../glossaryDataSpoken.ts';
-import { parseGlossaryCards, buildReadAloudSegments, stripHtml } from '../glossaryCards.ts';
-import type { ReadAloudSegmentKind } from '../glossaryCards.ts';
-import { useReadAloud, RATE_OPTIONS } from '../hooks/useReadAloud.ts';
-import { useAudioReadAloud } from '../hooks/useAudioReadAloud.ts';
-import { useAudioAvailable } from '../hooks/useAudioAvailable.ts';
+import { parseGlossaryCards } from '../glossaryCards.ts';
+import { useGlossaryAudio } from './GlossaryAudioProvider.tsx';
 import SpeakerIcon from './SpeakerIcon.tsx';
 import PlayIcon from './PlayIcon.tsx';
-import PauseIcon from './PauseIcon.tsx';
 import CrossIcon from './CrossIcon.tsx';
 
 interface Props {
@@ -17,33 +13,6 @@ interface Props {
    *  official-text paragraph. A number = flash the Nth term-card in this
    *  bullet's explanation. See DomainDetail.tsx. */
   highlightCardIndex?: number | null;
-}
-
-interface QueueEntry {
-  id: string;
-  text: string;
-  pauseAfterMs: number;
-  /** null = the bullet/"resumen" segment; else which term-card this belongs
-   *  to, so playback can highlight/scroll the right one regardless of
-   *  whether it's currently on the title, body, or "en corto" part. */
-  cardIndex: number | null;
-  displayTitle: string;
-}
-
-const PAUSE_BY_KIND: Record<ReadAloudSegmentKind, number> = {
-  bullet: 550,
-  title: 350,
-  paragraph: 450,
-  'short-text': 700,
-};
-
-type ReadAloudMode = 'all' | 'content' | 'short';
-const MODE_KEY = 'read-aloud-mode';
-const MODE_LABELS: Record<ReadAloudMode, string> = { all: 'Todo', content: 'Contenido', short: 'En corto' };
-
-function loadMode(): ReadAloudMode {
-  const stored = localStorage.getItem(MODE_KEY);
-  return stored === 'content' || stored === 'short' ? stored : 'all';
 }
 
 type DisplayMode = 'tecnico' | 'profesor';
@@ -58,94 +27,34 @@ function loadDisplayMode(): DisplayMode {
 export default function GlossaryEntryContent({ id, highlightCardIndex }: Props) {
   const [displayMode, setDisplayModeState] = useState<DisplayMode>(loadDisplayMode);
   const entry = displayMode === 'profesor' ? glossarySpokenById[id] : glossaryById[id];
-  // El audio SIEMPRE narra la versión "profesor" -- ver nota de diseño en
-  // others/wire-spoken-glossary-brief.md -- sin importar qué esté eligiendo
-  // mostrar `displayMode` en pantalla.
-  const audioEntry = glossarySpokenById[id];
 
   function setDisplayMode(next: DisplayMode) {
     setDisplayModeState(next);
     localStorage.setItem(DISPLAY_MODE_KEY, next);
-    // No hace falta stop() acá -- a diferencia de setMode() (modo de audio),
-    // cambiar displayMode no toca `audioEntry`, así que la cola de
-    // reproducción actual sigue siendo válida.
   }
   const cards = useMemo(() => (entry ? parseGlossaryCards(entry.html) : []), [entry]);
   const bulletTextHtml = useMemo(() => {
     const m = entry?.html.match(/<p class="gloss-bullet-text">([\s\S]*?)<\/p>/);
     return m ? m[1] : '';
   }, [entry]);
-  const cardTitles = useMemo(() => cards.map((c) => stripHtml(c.titleHtml)), [cards]);
-
-  const [mode, setModeState] = useState<ReadAloudMode>(loadMode);
-
-  // buildReadAloudSegments is the single source of truth for what gets read
-  // and in what pieces -- shared with scripts/generate-domain-audio.mjs, so
-  // its `id`s are exactly what that script named the pre-rendered audio
-  // files after. Pacing (how long to pause between pieces) is added here,
-  // used by whichever engine below ends up playing. `mode` filters which
-  // kinds get included; in "short" mode, a shared "Resumen." label (also
-  // pre-rendered, id _resumen-label) is spliced in right before each
-  // short-text piece so it's clear that's the condensed version.
-  const { queue, cardRanges } = useMemo(() => {
-    const segments = audioEntry ? buildReadAloudSegments(id, audioEntry.html) : [];
-    const filtered = segments.filter((s) => {
-      if (mode === 'content') return s.kind !== 'short-text';
-      if (mode === 'short') return s.kind !== 'paragraph';
-      return true;
-    });
-
-    const items: QueueEntry[] = [];
-    filtered.forEach((s, i) => {
-      const displayTitle = s.cardIndex === null ? 'Resumen' : (cardTitles[s.cardIndex] ?? '');
-      if (mode === 'short' && s.kind === 'short-text') {
-        items.push({ id: '_resumen-label', text: 'Resumen.', pauseAfterMs: 300, cardIndex: s.cardIndex, displayTitle });
-      }
-      let pauseAfterMs = PAUSE_BY_KIND[s.kind];
-      if (s.kind === 'paragraph') {
-        const next = filtered[i + 1];
-        // No "en corto" follows (next segment belongs to a different card,
-        // filtered out by mode, or there isn't one) -- this is the card's
-        // last part, so it gets the longer "next concept" pause instead of
-        // the mid-card one.
-        if (!next || next.cardIndex !== s.cardIndex) pauseAfterMs = 700;
-      }
-      items.push({ id: s.id, text: s.text, pauseAfterMs, cardIndex: s.cardIndex, displayTitle });
-    });
-
-    const ranges: { start: number; end: number }[] = cardTitles.map(() => ({ start: -1, end: -1 }));
-    items.forEach((item, idx) => {
-      if (item.cardIndex === null) return;
-      const r = ranges[item.cardIndex];
-      if (r.start === -1) r.start = idx;
-      r.end = idx;
-    });
-    return { queue: items, cardRanges: ranges };
-  }, [audioEntry, id, cardTitles, mode]);
 
   const [flash, setFlash] = useState<number | 'bullet' | null>(null);
   const bulletRef = useRef<HTMLParagraphElement>(null);
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
 
-  // Both engines are always mounted (Rules of Hooks -- can't call a hook
-  // conditionally), but only one is actually driven: the pre-rendered audio
-  // (GitHub Release, see audioBase.ts) by default, optimistically, falling
-  // back to the browser's built-in voice the first time a real playback
-  // attempt actually fails to load -- see useAudioAvailable.ts for why this
-  // is reactive rather than an upfront check.
-  const [audioAvailable, markAudioUnavailable] = useAudioAvailable();
-  const audioEngine = useAudioReadAloud(markAudioUnavailable);
-  const speechEngine = useReadAloud();
-  const engine = audioAvailable ? audioEngine : speechEngine;
-  const { status, activeIndex, rate, setRate, playAll, playRange, pause, resume, stop } = engine;
-  const activeCardIndex = activeIndex !== null ? (queue[activeIndex]?.cardIndex ?? null) : null;
-  const activeTitle = activeIndex !== null ? (queue[activeIndex]?.displayTitle ?? null) : null;
-
-  function setMode(next: ReadAloudMode) {
-    setModeState(next);
-    localStorage.setItem(MODE_KEY, next);
-    stop(); // the old queue's indices don't line up with the new one
-  }
+  // The read-aloud engine and its player UI live in GlossaryAudioProvider,
+  // mounted once above <Routes> -- not here. That's deliberate: this
+  // component (re)mounts constantly (every domain bullet click builds a new
+  // instance, /glosario mounts ~70 of these at once, and DomainDetail.tsx
+  // fully remounts its panel when isMobile flips, e.g. on a phone rotation),
+  // and none of that should be able to interrupt playback. See that file for
+  // the full rationale. `session.entryId === id` is how this instance knows
+  // whether IT is the one currently playing, as opposed to some other entry
+  // (possibly on a page you've since navigated away from).
+  const session = useGlossaryAudio();
+  const isActiveEntry = session.entryId === id;
+  const activeCardIndex = isActiveEntry ? session.activeCardIndex : null;
+  const isReading = isActiveEntry && session.status !== 'idle';
 
   // Search-driven: scroll to and briefly flash whatever matched.
   useEffect(() => {
@@ -158,77 +67,28 @@ export default function GlossaryEntryContent({ id, highlightCardIndex }: Props) 
     return () => clearTimeout(timer);
   }, [id, highlightCardIndex]);
 
-  // Stop reading (and let the floating player disappear) whenever the bullet
-  // changes -- deliberately only depending on `id`: stop isn't memoized, so
-  // including it here would re-run (and call stop()) on every unrelated
-  // re-render, killing playback almost immediately.
-  useEffect(() => stop, [id]);
-
-  // Keep the currently-read card in view.
+  // Keep the currently-read card in view -- only while this instance is the
+  // one actually playing.
   useEffect(() => {
-    if (activeIndex === null) return;
+    if (!isReading) return;
     const target = activeCardIndex === null ? bulletRef.current : cardRefs.current[activeCardIndex];
     target?.scrollIntoView({ behavior: 'smooth', block: 'center' });
-  }, [activeIndex]);
+  }, [isReading, activeCardIndex]);
 
   if (!entry) return <p>Entrada de glosario no encontrada ({id}).</p>;
-
-  function stepCard(delta: number) {
-    if (activeIndex === null) return;
-    if (delta > 0) {
-      const nextCard = activeCardIndex === null ? 0 : activeCardIndex + 1;
-      if (nextCard >= cardRanges.length) return;
-      playAll(queue, cardRanges[nextCard].start);
-    } else {
-      if (activeCardIndex === null) return;
-      const target = activeCardIndex === 0 ? 0 : cardRanges[activeCardIndex - 1].start;
-      playAll(queue, target);
-    }
-  }
-
-  const hasPrev = activeCardIndex !== null;
-  const hasNext = activeCardIndex === null ? cardRanges.length > 0 : activeCardIndex + 1 < cardRanges.length;
-
-  // Lock-screen/notification controls only make sense for the real-audio
-  // engine (a speechSynthesis session isn't a MediaSession-backed player at
-  // all) -- play/pause come from the hook itself; prev/next need cardRanges,
-  // which only this component has.
-  useEffect(() => {
-    if (!audioAvailable || !('mediaSession' in navigator)) return;
-    navigator.mediaSession.setActionHandler('play', resume);
-    navigator.mediaSession.setActionHandler('pause', pause);
-    navigator.mediaSession.setActionHandler('previoustrack', () => stepCard(-1));
-    navigator.mediaSession.setActionHandler('nexttrack', () => stepCard(1));
-    return () => {
-      navigator.mediaSession.setActionHandler('play', null);
-      navigator.mediaSession.setActionHandler('pause', null);
-      navigator.mediaSession.setActionHandler('previoustrack', null);
-      navigator.mediaSession.setActionHandler('nexttrack', null);
-    };
-  });
 
   return (
     <div className="gloss-group" id={entry.id}>
       <div className="gloss-bullet-row">
         <p
           ref={bulletRef}
-          className={flash === 'bullet' ? 'gloss-bullet-text search-highlight' : activeCardIndex === null && activeIndex !== null ? 'gloss-bullet-text reading-highlight' : 'gloss-bullet-text'}
+          className={flash === 'bullet' ? 'gloss-bullet-text search-highlight' : activeCardIndex === null && isReading ? 'gloss-bullet-text reading-highlight' : 'gloss-bullet-text'}
           dangerouslySetInnerHTML={{ __html: bulletTextHtml }}
         />
-        <button type="button" className="gloss-read-all-btn" onClick={() => (status === 'idle' ? playAll(queue) : stop())}>
-          {status === 'idle' ? <PlayIcon /> : <CrossIcon />}
-          {status === 'idle' ? 'Escuchar' : 'Detener'}
+        <button type="button" className="gloss-read-all-btn" onClick={() => (isReading ? session.stop() : session.playEntry(id))}>
+          {isReading ? <CrossIcon /> : <PlayIcon />}
+          {isReading ? 'Detener' : 'Escuchar'}
         </button>
-      </div>
-
-      <div className="gloss-mode-row">
-        <div className="read-aloud-mode-toggle">
-          {(Object.keys(MODE_LABELS) as ReadAloudMode[]).map((m) => (
-            <button key={m} type="button" className={mode === m ? 'active' : ''} onClick={() => setMode(m)}>
-              {MODE_LABELS[m]}
-            </button>
-          ))}
-        </div>
       </div>
 
       <div className="gloss-display-mode-row">
@@ -255,7 +115,7 @@ export default function GlossaryEntryContent({ id, highlightCardIndex }: Props) 
           >
             <div className="term-card-head">
               <h4 dangerouslySetInnerHTML={{ __html: card.titleHtml }} />
-              <button type="button" className="term-card-speak-btn" onClick={() => playRange(queue, cardRanges[i].start, cardRanges[i].end)} aria-label="Escuchar este término">
+              <button type="button" className="term-card-speak-btn" onClick={() => session.playEntryRange(id, i)} aria-label="Escuchar este término">
                 <SpeakerIcon />
               </button>
             </div>
@@ -263,31 +123,6 @@ export default function GlossaryEntryContent({ id, highlightCardIndex }: Props) 
           </div>
         );
       })}
-
-      {status !== 'idle' && (
-        <div className="read-aloud-player">
-          <button type="button" className="read-aloud-step" onClick={() => stepCard(-1)} disabled={!hasPrev} aria-label="Concepto anterior">
-            ‹
-          </button>
-          <button type="button" className="read-aloud-toggle" onClick={status === 'playing' ? pause : resume} aria-label={status === 'playing' ? 'Pausar' : 'Reanudar'}>
-            {status === 'playing' ? <PauseIcon /> : <PlayIcon />}
-          </button>
-          <button type="button" className="read-aloud-step" onClick={() => stepCard(1)} disabled={!hasNext} aria-label="Siguiente concepto">
-            ›
-          </button>
-          <span className="read-aloud-title">{activeTitle}</span>
-          <div className="read-aloud-rates">
-            {RATE_OPTIONS.map((r) => (
-              <button key={r} type="button" className={rate === r ? 'active' : ''} onClick={() => setRate(r)}>
-                {r}x
-              </button>
-            ))}
-          </div>
-          <button type="button" className="read-aloud-stop" onClick={stop} aria-label="Detener lectura">
-            <CrossIcon />
-          </button>
-        </div>
-      )}
     </div>
   );
 }

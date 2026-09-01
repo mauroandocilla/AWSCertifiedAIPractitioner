@@ -444,28 +444,6 @@
     white-space: nowrap;
   }
   .gloss-read-all-btn:hover { border-color: var(--accent); }
-  .gloss-mode-row { display: flex; justify-content: flex-end; margin-top: 0.5rem; }
-  .read-aloud-mode-toggle {
-    display: inline-flex;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 999px;
-    padding: 2px;
-    flex: none;
-  }
-  .read-aloud-mode-toggle button {
-    font-family: 'IBM Plex Sans', sans-serif;
-    font-size: 0.72rem;
-    font-weight: 600;
-    color: var(--ink-faint);
-    background: none;
-    border: none;
-    border-radius: 999px;
-    padding: 0.32rem 0.65rem;
-    cursor: pointer;
-    white-space: nowrap;
-  }
-  .read-aloud-mode-toggle button.active { background: var(--accent); color: var(--accent-ink); }
   .gloss-display-mode-row { display: flex; justify-content: flex-end; margin-top: 0.5rem; }
   .display-mode-toggle {
     display: inline-flex;
@@ -491,7 +469,7 @@
   /* CrossIcon/PlayIcon are sized for other contexts (26px/14px) -- normalize
      to whatever fits each of these compact buttons regardless of which icon
      is currently swapped in (play vs. stop, etc). */
-  .gloss-read-all-btn svg, .read-aloud-stop svg, .read-aloud-toggle svg { width: 12px; height: 12px; }
+  .gloss-read-all-btn svg, .gap-close svg, .gap-play svg, .gap-play-lg svg { width: 12px; height: 12px; }
   .term-card {
     background: var(--surface);
     border: 1px solid var(--border);
@@ -837,57 +815,175 @@
      length rather than a fixed duration. */
   .reading-highlight { background-color: var(--d2-bg); box-shadow: inset 0 0 0 2px var(--accent); border-radius: 10px; transition: background-color 0.25s ease, box-shadow 0.25s ease; }
 
-  .read-aloud-player {
+  /* Global read-aloud mini-player (GlossaryAudioProvider.tsx) -- rendered
+     once above <Routes>, so it's never a descendant of any page's own
+     layout. Deliberate: a mobile page's own slide-transition container
+     (.mobile-pane, see its rule below) leaves a permanent
+     `transform: translateX(0)` on itself after the animation ends
+     (animation-fill-mode: both) -- and per spec, ANY non-none transform on
+     an ancestor -- even a no-op one -- makes that ancestor the containing
+     block for a `position: fixed` descendant instead of the viewport. A
+     player nested in there would end up pinned to the bottom of the pane's
+     *content*, not the screen (this bit us once: the player would visibly
+     "travel" to the end of the page instead of staying put). Mounting it as
+     a sibling of `.wrap` sidesteps the whole class of bug structurally. */
+  .glossary-audio-player {
     position: fixed;
     left: 50%;
     bottom: 1rem;
     transform: translateX(-50%);
     z-index: 90;
+    width: min(22rem, calc(100vw - 2rem));
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .gap-collapsed {
     display: flex;
     align-items: center;
-    gap: 0.7rem;
+    gap: 0.65rem;
     background: var(--bg);
     border: 1px solid var(--border);
     border-radius: 999px;
     box-shadow: var(--shadow);
-    padding: 0.5rem 0.6rem 0.5rem 0.5rem;
-    max-width: calc(100vw - 2rem);
+    padding: 0.4rem 0.4rem 0.4rem 0.9rem;
+    cursor: pointer;
   }
-  .read-aloud-toggle,
-  .read-aloud-stop,
-  .read-aloud-step {
+  .gap-track {
+    flex: 1;
+    min-width: 0;
+    height: 3px;
+    border-radius: 999px;
+    background: var(--border);
+    position: relative;
+    overflow: hidden;
+  }
+  .gap-fill { position: absolute; inset: 0 auto 0 0; background: var(--accent); border-radius: 999px; }
+  .gap-title {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--ink);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex: none;
+    max-width: 8rem;
+  }
+  .gap-play {
     display: flex;
     align-items: center;
     justify-content: center;
     flex: none;
-    width: 30px;
-    height: 30px;
+    width: 34px;
+    height: 34px;
+    padding: 0;
+    border-radius: 999px;
+    border: none;
+    background: var(--accent);
+    color: var(--accent-ink);
+    cursor: pointer;
+  }
+
+  .gap-expanded {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    padding: 0.7rem 0.85rem 0.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+  }
+  .gap-expanded-head { display: flex; align-items: center; gap: 0.5rem; }
+  .gap-expanded-title {
+    flex: 1;
+    min-width: 0;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--ink);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .gap-step,
+  .gap-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: none;
+    width: 28px;
+    height: 28px;
     padding: 0;
     border-radius: 999px;
     cursor: pointer;
   }
-  .read-aloud-toggle { color: var(--accent-ink); background: var(--accent); border: none; }
-  .read-aloud-stop { color: var(--ink-faint); background: var(--surface); border: 1px solid var(--border); }
-  .read-aloud-stop:hover { color: var(--ink); border-color: var(--ink-faint); }
-  .read-aloud-step {
+  .gap-step {
     color: var(--ink-soft);
     background: none;
     border: none;
     font-size: 1.2rem;
     line-height: 1;
   }
-  .read-aloud-step:hover:not(:disabled) { color: var(--accent); }
-  .read-aloud-step:disabled { color: var(--border); cursor: default; }
-  .read-aloud-title {
-    font-size: 0.82rem;
-    color: var(--ink);
-    font-weight: 600;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 11rem;
+  .gap-step:hover:not(:disabled) { color: var(--accent); }
+  .gap-step:disabled { color: var(--border); cursor: default; }
+  .gap-close { color: var(--ink-faint); background: var(--surface); border: 1px solid var(--border); }
+  .gap-close:hover { color: var(--ink); border-color: var(--ink-faint); }
+
+  .gap-scrub-row { display: flex; align-items: center; gap: 0.5rem; }
+  .gap-time { font-family: 'IBM Plex Mono', monospace; font-variant-numeric: tabular-nums; font-size: 0.68rem; color: var(--ink-faint); flex: none; }
+  .gap-scrub-track {
+    flex: 1;
+    position: relative;
+    height: 4px;
+    border-radius: 999px;
+    background: var(--border);
+    cursor: pointer;
   }
-  .read-aloud-rates {
+  .gap-scrub-fill { position: absolute; inset: 0 auto 0 0; background: var(--accent); border-radius: 999px; }
+  .gap-scrub-thumb {
+    position: absolute;
+    top: 50%;
+    width: 11px;
+    height: 11px;
+    background: var(--accent);
+    border: 2px solid var(--bg);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 0 1px var(--accent);
+  }
+  .gap-no-scrub { margin: 0; font-size: 0.76rem; color: var(--ink-faint); font-style: italic; }
+
+  .gap-controls-row { display: flex; align-items: center; justify-content: center; gap: 1rem; }
+  .gap-skip {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--ink-soft);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 0.4rem 0.6rem;
+    cursor: pointer;
+  }
+  .gap-skip:hover:not(:disabled) { border-color: var(--accent); color: var(--accent); }
+  .gap-skip:disabled { color: var(--border); cursor: default; }
+  .gap-play-lg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: none;
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    border-radius: 999px;
+    border: none;
+    background: var(--accent);
+    color: var(--accent-ink);
+    cursor: pointer;
+  }
+
+  .gap-settings-row { display: flex; align-items: center; justify-content: space-between; gap: 0.6rem; }
+  .gap-rates, .gap-mode-toggle {
     display: inline-flex;
     background: var(--surface);
     border: 1px solid var(--border);
@@ -895,7 +991,7 @@
     padding: 2px;
     flex: none;
   }
-  .read-aloud-rates button {
+  .gap-rates button, .gap-mode-toggle button {
     font-family: 'IBM Plex Mono', monospace;
     font-size: 0.68rem;
     font-weight: 600;
@@ -906,11 +1002,8 @@
     padding: 0.28rem 0.5rem;
     cursor: pointer;
   }
-  .read-aloud-rates button.active { background: var(--accent); color: var(--accent-ink); }
-
-  @media (max-width: 720px) {
-    .read-aloud-title { display: none; }
-  }
+  .gap-mode-toggle button { font-family: 'IBM Plex Sans', sans-serif; white-space: nowrap; }
+  .gap-rates button.active, .gap-mode-toggle button.active { background: var(--accent); color: var(--accent-ink); }
 
   @media (max-width: 720px) {
     .search-trigger { right: 58px; width: 30px; height: 30px; }

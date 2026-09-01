@@ -170,5 +170,14 @@ export function useReadAloud() {
     }
   }
 
-  return { status, activeIndex, rate, setRate, playAll, playRange, pause, resume, stop };
+  // The Web Speech API exposes no per-utterance position or duration, so
+  // there's nothing real to report here -- currentTime/duration stay at 0
+  // and seek/seekTo are no-ops. Same return shape as useAudioReadAloud.ts so
+  // GlossaryAudioProvider.tsx can use either engine interchangeably; it
+  // hides the scrubber/skip controls itself when this engine is the one
+  // actually driving playback (see its `audioAvailable` check).
+  function seek() {}
+  function seekTo() {}
+
+  return { status, activeIndex, rate, setRate, currentTime: 0, duration: 0, seek, seekTo, playAll, playRange, pause, resume, stop };
 }

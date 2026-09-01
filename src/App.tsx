@@ -14,30 +14,38 @@ import Footer from './components/Footer.tsx';
 import ThemeToggle from './components/ThemeToggle.tsx';
 import DomainSearch from './components/DomainSearch.tsx';
 import ScrollToTop from './components/ScrollToTop.tsx';
+import { GlossaryAudioProvider } from './components/GlossaryAudioProvider.tsx';
 
 export default function App() {
   return (
     <HashRouter>
-      <ScrollToTop />
-      <DomainSearch />
-      <ThemeToggle />
-      <div className="wrap">
-        <Routes>
-          <Route path="/" element={<Landing />} />
-          <Route element={<Layout />}>
-            <Route path="/dominio/:n" element={<DomainPage />} />
-            <Route path="/servicios" element={<ServiceScopePage />} />
-            <Route path="/glosario" element={<GlossaryPage />} />
-            <Route path="/como-estudiarlo" element={<ResourcesPage />} />
-            <Route path="/formato-examen" element={<ExamFormatPage />} />
-            <Route path="/quiz" element={<QuizListPage />} />
-            <Route path="/quiz/:setNumber" element={<QuizSessionPage />} />
-            <Route path="/quiz-v2" element={<QuizV2Page />} />
-            <Route path="/examen" element={<ExamPage />} />
-          </Route>
-        </Routes>
-        <Footer />
-      </div>
+      {/* Wraps everything so GlossaryEntryContent (arbitrarily deep inside
+          Routes) can reach the read-aloud session -- and so its own mini-
+          player renders as a DOM sibling of .wrap, never nested inside a
+          page's own layout. See GlossaryAudioProvider.tsx for why that
+          nesting specifically matters on mobile. */}
+      <GlossaryAudioProvider>
+        <ScrollToTop />
+        <DomainSearch />
+        <ThemeToggle />
+        <div className="wrap">
+          <Routes>
+            <Route path="/" element={<Landing />} />
+            <Route element={<Layout />}>
+              <Route path="/dominio/:n" element={<DomainPage />} />
+              <Route path="/servicios" element={<ServiceScopePage />} />
+              <Route path="/glosario" element={<GlossaryPage />} />
+              <Route path="/como-estudiarlo" element={<ResourcesPage />} />
+              <Route path="/formato-examen" element={<ExamFormatPage />} />
+              <Route path="/quiz" element={<QuizListPage />} />
+              <Route path="/quiz/:setNumber" element={<QuizSessionPage />} />
+              <Route path="/quiz-v2" element={<QuizV2Page />} />
+              <Route path="/examen" element={<ExamPage />} />
+            </Route>
+          </Routes>
+          <Footer />
+        </div>
+      </GlossaryAudioProvider>
     </HashRouter>
   );
 }

@@ -11,6 +11,12 @@ interface Props {
    *  official-text paragraph. A number = flash the Nth term-card in this
    *  bullet's explanation. See DomainDetail.tsx. */
   highlightCardIndex?: number | null;
+  /** Changes on every navigation that requests a highlight, even ones
+   *  targeting the exact same card as last time (e.g. "ir al contenido" for
+   *  something already on screen) -- exists purely so the effect below has
+   *  something to key its re-run on that isn't just highlightCardIndex's
+   *  value, which React would otherwise see as unchanged and skip. */
+  highlightNonce?: number;
 }
 
 type DisplayMode = 'tecnico' | 'profesor';
@@ -22,7 +28,7 @@ function loadDisplayMode(): DisplayMode {
   return stored === 'profesor' ? 'profesor' : 'tecnico';
 }
 
-export default function GlossaryEntryContent({ id, highlightCardIndex }: Props) {
+export default function GlossaryEntryContent({ id, highlightCardIndex, highlightNonce }: Props) {
   const [displayMode, setDisplayModeState] = useState<DisplayMode>(loadDisplayMode);
   const entry = displayMode === 'profesor' ? glossarySpokenById[id] : glossaryById[id];
 
@@ -83,7 +89,7 @@ export default function GlossaryEntryContent({ id, highlightCardIndex }: Props) 
       clearTimeout(scrollTimer);
       clearTimeout(flashTimer);
     };
-  }, [id, highlightCardIndex]);
+  }, [id, highlightCardIndex, highlightNonce]);
 
   // Keep the currently-read card in view -- only while this instance is the
   // one actually playing. Same settle delay, for the same reason: this can

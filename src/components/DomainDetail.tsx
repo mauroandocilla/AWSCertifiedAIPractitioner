@@ -48,17 +48,29 @@ export default function DomainDetail({ number }: { number: number }) {
     if (explicitBulletParam && isMobile) setMobileDetailActive(true);
   }, [explicitBulletParam, isMobile]);
 
-  // DomainSearch.tsx's goToResult passes { highlightCardIndex } as router
-  // navigation state -- never part of the URL, so unlike a query param it
-  // can't linger and re-fire on a later reload (a fresh page load has no
-  // navigation state at all) or leak into a shared link. Only actually used
-  // while it still matches what's on screen (the `activeId` check below), so
-  // it can't go stale and flash something after an unrelated later click.
+  // DomainSearch.tsx's goToResult (and "ir al contenido" in
+  // GlossaryAudioProvider.tsx/ResumeListeningBanner.tsx) pass
+  // { highlightCardIndex } as router navigation state -- never part of the
+  // URL, so unlike a query param it can't linger and re-fire on a later
+  // reload (a fresh page load has no navigation state at all) or leak into a
+  // shared link. Only actually used while it still matches what's on screen
+  // (the `activeId` check below), so it can't go stale and flash something
+  // after an unrelated later click.
   const highlightState = location.state as HighlightState | null;
-  const [highlight, setHighlight] = useState<{ glossId: string; cardIndex: number | null } | null>(null);
+  const [highlight, setHighlight] = useState<{ glossId: string; cardIndex: number | null; nonce: number } | null>(null);
   useEffect(() => {
     if (!highlightState || !explicitBulletParam) return;
-    setHighlight({ glossId: explicitBulletParam, cardIndex: highlightState.highlightCardIndex });
+    // `nonce` (not just glossId+cardIndex) is what GlossaryEntryContent's
+    // effect keys its re-run on below -- without it, clicking "ir al
+    // contenido" for the exact same bullet+card you were already sitting on
+    // (its most common case: opening the resume banner/Now Playing view for
+    // something already on screen) passes an identical cardIndex to last
+    // time, so React sees no change in that effect's dependencies and skips
+    // the scroll/flash entirely. This effect itself always re-runs fine --
+    // `location.state` is a genuinely new object on every navigate() call --
+    // the value derived from it just wasn't carrying that "it's fresh" fact
+    // any further downstream.
+    setHighlight({ glossId: explicitBulletParam, cardIndex: highlightState.highlightCardIndex, nonce: Date.now() });
   }, [highlightState, explicitBulletParam]);
 
   if (!domain) return <p>Dominio no encontrado.</p>;
@@ -127,7 +139,11 @@ export default function DomainDetail({ number }: { number: number }) {
         <span className="weight-badge">{domain.weight}</span>
       </div>
       {activeId ? (
-        <GlossaryEntryContent id={activeId} highlightCardIndex={highlight?.glossId === activeId ? highlight.cardIndex : undefined} />
+        <GlossaryEntryContent
+          id={activeId}
+          highlightCardIndex={highlight?.glossId === activeId ? highlight.cardIndex : undefined}
+          highlightNonce={highlight?.glossId === activeId ? highlight.nonce : undefined}
+        />
       ) : (
         <p>Este dominio no tiene bullets.</p>
       )}

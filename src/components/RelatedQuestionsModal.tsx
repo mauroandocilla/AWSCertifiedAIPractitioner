@@ -16,7 +16,15 @@ interface RelatedQuestionsModalProps {
   onClose: () => void;
 }
 
-type ResolvedItem = { key: string; bank: 'v1'; question: QuizQuestion } | { key: string; bank: 'v2'; question: QuizV2Question };
+type ResolvedItem =
+  | { key: string; bank: 'v1'; setNumber: number; question: QuizQuestion }
+  | { key: string; bank: 'v2'; question: QuizV2Question };
+
+// Short label so the reader knows which question bank/set this came from --
+// "Quiz"/"Quiz v2" match the app's own nav labels for these two banks.
+function bankLabel(item: ResolvedItem): string {
+  return item.bank === 'v1' ? `Quiz · Set ${item.setNumber}` : 'Quiz v2';
+}
 
 // Read-only review: no interactivity, always shows the correct option(s) --
 // reuses QuizSessionPage.tsx/QuizV2Page.tsx's own CSS classes (.quiz-option
@@ -42,9 +50,12 @@ function RelatedQuestion({ item, index, isOpen, onToggle }: { item: ResolvedItem
   return (
     <div className="related-question">
       <button type="button" className="related-question-head" onClick={onToggle} aria-expanded={isOpen}>
-        <span className="related-question-index">{index + 1}</span>
+        <div className="related-question-meta">
+          <span className="related-question-index">{index + 1}</span>
+          <span className="related-question-bank">{bankLabel(item)}</span>
+          {isOpen ? <ChevronUp size={16} strokeWidth={2.25} /> : <ChevronDown size={16} strokeWidth={2.25} />}
+        </div>
         <span className="related-question-summary">{summarize(item.question.text)}</span>
-        {isOpen ? <ChevronUp size={16} strokeWidth={2.25} /> : <ChevronDown size={16} strokeWidth={2.25} />}
       </button>
       {isOpen && (
         <div className="related-question-body">
@@ -121,7 +132,7 @@ export default function RelatedQuestionsModal({ open, refs, conceptTitle, onClos
       for (const ref of refs) {
         if (ref.bank === 'v1') {
           const q = setByNumber.get(ref.setNumber)?.questions.find((candidate) => candidate.id === ref.id);
-          if (q) resolved.push({ key: `v1-${q.id}`, bank: 'v1', question: q });
+          if (q) resolved.push({ key: `v1-${q.id}`, bank: 'v1', setNumber: ref.setNumber, question: q });
         } else {
           const raw = v2Questions.find((candidate) => candidate.id === ref.id);
           if (raw) resolved.push({ key: `v2-${raw.id}`, bank: 'v2', question: resolveQuizV2Question(raw, lang) });

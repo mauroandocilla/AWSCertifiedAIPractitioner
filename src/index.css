@@ -1713,6 +1713,16 @@
     border-radius: 10px;
     border: 1px solid var(--border);
     background: var(--surface);
+    /* Reference links render as raw, unbroken URLs (see explanationHtml) --
+       min-width: 0 lets this shrink inside a flex column (.quiz-split-panel,
+       .related-question-body) instead of stretching to the URL's intrinsic
+       width, and overflow-wrap: anywhere (inherited by the injected <a>/<p>
+       below) is what actually lets a URL that long break mid-word instead of
+       overflowing the card -- word-break: break-word alone doesn't shrink
+       minimum sizing the way this does, and iOS Safari in particular will
+       let the overflow spill past the container without it. */
+    min-width: 0;
+    overflow-wrap: anywhere;
   }
   .quiz-explanation.correct { border-color: var(--d1); }
   .quiz-explanation.incorrect { border-color: var(--d3); }
@@ -1825,8 +1835,9 @@
   .related-question:first-child { margin-top: 0; }
   .related-question-head {
     display: flex;
-    align-items: center;
-    gap: 0.6rem;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.3rem;
     width: 100%;
     padding: 0.7rem 0.9rem;
     background: none;
@@ -1837,9 +1848,22 @@
     text-align: left;
     cursor: pointer;
   }
+  .related-question-meta { display: flex; align-items: center; gap: 0.5rem; }
   .related-question-index { flex: none; color: var(--ink-faint); font-weight: 600; }
-  .related-question-summary { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-  .related-question-head svg { flex: none; color: var(--ink-faint); }
+  .related-question-bank {
+    flex: none;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.66rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: var(--ink-faint);
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 0.1rem 0.5rem;
+  }
+  .related-question-summary { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .related-question-meta svg { flex: none; margin-left: auto; color: var(--ink-faint); }
   .related-question-body {
     display: flex;
     flex-direction: column;

@@ -1,5 +1,8 @@
 import { useLayoutEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import { Play, X } from 'lucide-react';
+import { useGlossaryAudio } from './GlossaryAudioProvider.tsx';
+import { useStickyListen } from './StickyListen.tsx';
 
 // Each page mounts its own QuickJumpBar instance, so the pill row's horizontal
 // scroll would otherwise reset to 0 on every navigation. Module-level (not React
@@ -26,10 +29,15 @@ const ITEMS = [
 
 export default function QuickJumpBar({ current }: { current: string }) {
   const pillsRef = useRef<HTMLDivElement>(null);
+  const session = useGlossaryAudio();
+  const { activeId, show } = useStickyListen();
 
   useLayoutEffect(() => {
     if (pillsRef.current) pillsRef.current.scrollLeft = savedScrollLeft;
   }, []);
+
+  const isReading = activeId !== null && session.entryId === activeId && session.status !== 'idle';
+  const isLoadingAudio = isReading && session.audioAvailable && session.duration === 0;
 
   return (
     <div className="quickjump">
@@ -40,6 +48,18 @@ export default function QuickJumpBar({ current }: { current: string }) {
         </svg>
         <span className="quickjump-back-label">Resumen</span>
       </Link>
+      {activeId && (
+        <button
+          type="button"
+          className={`quickjump-listen${show ? ' visible' : ''}${isLoadingAudio ? ' loading' : ''}`}
+          onClick={() => (isReading ? session.stop() : session.playEntry(activeId))}
+          aria-hidden={!show}
+          tabIndex={show ? 0 : -1}
+        >
+          {isReading ? <X size={15} strokeWidth={2.5} /> : <Play size={11} strokeWidth={0} fill="currentColor" />}
+          <span>{isLoadingAudio ? 'Cargando…' : isReading ? 'Detener' : 'Escuchar'}</span>
+        </button>
+      )}
       <div
         className="quickjump-pills"
         ref={pillsRef}

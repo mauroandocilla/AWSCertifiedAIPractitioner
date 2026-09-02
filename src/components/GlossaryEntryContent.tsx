@@ -4,6 +4,7 @@ import { glossaryById } from '../glossaryData.ts';
 import { glossarySpokenById } from '../glossaryDataSpoken.ts';
 import { parseGlossaryCards, stripHtml } from '../glossaryCards.ts';
 import { useGlossaryAudio } from './GlossaryAudioProvider.tsx';
+import { useStickyListenRegister } from './StickyListen.tsx';
 import { conceptIndex } from '../quiz/conceptIndex.ts';
 import RelatedQuestionsModal from './RelatedQuestionsModal.tsx';
 
@@ -48,6 +49,12 @@ export default function GlossaryEntryContent({ id, highlightCardIndex, highlight
   const bulletRef = useRef<HTMLParagraphElement>(null);
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
   const [openConceptCard, setOpenConceptCard] = useState<number | null>(null);
+
+  // groupRef is state (not a plain ref) so the effect inside
+  // useStickyListenRegister re-runs once the node actually exists -- a plain
+  // ref object stays the same reference across renders and wouldn't retrigger.
+  const [groupEl, setGroupEl] = useState<HTMLDivElement | null>(null);
+  useStickyListenRegister(id, groupEl);
 
   // The read-aloud engine and its player UI live in GlossaryAudioProvider,
   // mounted once above <Routes> -- not here. That's deliberate: this
@@ -110,7 +117,7 @@ export default function GlossaryEntryContent({ id, highlightCardIndex, highlight
   if (!entry) return <p>Entrada de glosario no encontrada ({id}).</p>;
 
   return (
-    <div className="gloss-group" id={entry.id}>
+    <div className="gloss-group" id={entry.id} ref={setGroupEl}>
       <div className="gloss-bullet-row">
         <p
           ref={bulletRef}

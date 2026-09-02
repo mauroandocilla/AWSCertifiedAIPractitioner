@@ -246,6 +246,47 @@
     white-space: nowrap;
     flex: none;
   }
+  .domain-head-right {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    flex: none;
+  }
+
+  /* Compact duplicate of GlossaryEntryContent's own "Escuchar" button,
+     surfaced once that inline button has scrolled out of view -- see
+     DomainDetail.tsx's inlineButtonVisible/onButtonVisibleChange. Lives
+     inside whichever of this page's own sticky bars applies at the current
+     breakpoint (.mobile-panel-header's "Ver lista" crumb, or here in
+     .domain-head-right) rather than the global .quickjump header, so it only
+     rides along with a bar that's already pinned for this specific page --
+     no separate scroll-direction logic needed. */
+  .sticky-listen-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    flex: none;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.76rem;
+    font-weight: 600;
+    color: var(--accent);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 0.35rem 0.7rem;
+    cursor: pointer;
+    white-space: nowrap;
+    animation: sticky-listen-fade-in 0.2s ease;
+  }
+  .sticky-listen-btn:hover { border-color: var(--accent); }
+  .sticky-listen-btn.loading { animation: gap-track-pulse 1.1s ease-in-out infinite; }
+  @keyframes sticky-listen-fade-in {
+    from { opacity: 0; transform: translateY(-4px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .sticky-listen-btn { animation: none; }
+  }
 
   .task {
     margin-top: 1.6rem;
@@ -691,52 +732,6 @@
     .quickjump { padding: 0.6rem 1rem; gap: 0.6rem; }
     .quickjump-back-label { display: none; }
     .quickjump-pills { padding-right: 8.75rem; }
-  }
-
-  /* Compact "Escuchar" pill that surfaces in the sticky header once the
-     inline button inside the currently-read glossary entry has scrolled out
-     of view (see StickyListen.tsx) -- hidden while reading forward, revealed
-     on scroll-up so it's reachable without scrolling back to the entry. Kept
-     mounted (not conditionally rendered) whenever there's an active entry so
-     the opacity/transform transition can actually animate instead of
-     popping in. */
-  .quickjump-listen {
-    display: flex;
-    align-items: center;
-    gap: 0.35rem;
-    flex: none;
-    font-family: 'IBM Plex Sans', sans-serif;
-    font-size: 0.78rem;
-    font-weight: 600;
-    color: var(--accent);
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 999px;
-    padding: 0.4rem 0.8rem;
-    cursor: pointer;
-    white-space: nowrap;
-    opacity: 0;
-    transform: translateY(-8px);
-    pointer-events: none;
-    transition: opacity 0.2s ease, transform 0.2s ease;
-  }
-  .quickjump-listen.visible {
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: auto;
-  }
-  .quickjump-listen:hover { border-color: var(--accent); }
-  /* Scoped to .visible too -- otherwise the pulse's own opacity keyframes
-     (0.4-0.9) would override the hidden state's opacity:0 while an entry is
-     mid-load but the button hasn't been scrolled/revealed yet. */
-  .quickjump-listen.visible.loading { animation: gap-track-pulse 1.1s ease-in-out infinite; }
-  @media (prefers-reduced-motion: reduce) {
-    .quickjump-listen { transition: none; }
-    .quickjump-listen.visible.loading { animation: none; opacity: 0.75; }
-  }
-  @media (max-width: 720px) {
-    .quickjump-listen span { display: none; }
-    .quickjump-listen { padding: 0.4rem 0.55rem; }
   }
 
   .theme-toggle {
@@ -1450,6 +1445,17 @@
       background: var(--bg);
       padding: 0.5rem 0;
     }
+    .mobile-panel-header-left {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      min-width: 0;
+    }
+    /* Text label dropped here (icon-only) -- next to "‹ Ver lista" it's tight
+       on a phone-width crumb bar; the icon alone (play/stop) is unambiguous
+       given the only other control right next to it. */
+    .mobile-panel-header-left .sticky-listen-btn span { display: none; }
+    .mobile-panel-header-left .sticky-listen-btn { padding: 0.35rem 0.5rem; }
     /* .quiz-split-panel's flex gap (1.3rem) is too much right after this sticky
        crumb bar -- claw back the difference so it stays as tight as before. */
     .mobile-panel-header + .quiz-session-head { margin-top: -0.9rem; }

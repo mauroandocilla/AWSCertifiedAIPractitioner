@@ -4,7 +4,6 @@ import { glossaryById } from '../glossaryData.ts';
 import { glossarySpokenById } from '../glossaryDataSpoken.ts';
 import { parseGlossaryCards, stripHtml } from '../glossaryCards.ts';
 import { useGlossaryAudio } from './GlossaryAudioProvider.tsx';
-import { useStickyListenRegister } from './StickyListen.tsx';
 import { conceptIndex } from '../quiz/conceptIndex.ts';
 import RelatedQuestionsModal from './RelatedQuestionsModal.tsx';
 
@@ -20,6 +19,14 @@ interface Props {
    *  something to key its re-run on that isn't just highlightCardIndex's
    *  value, which React would otherwise see as unchanged and skip. */
   highlightNonce?: number;
+  /** Reports whether this entry's own inline "Escuchar" button is currently
+   *  visible below the fixed .quickjump header. DomainDetail.tsx uses this to
+   *  decide when to show a compact duplicate of the button in its own sticky
+   *  bars (the mobile "Ver lista" crumb, the desktop domain-title bar) --
+   *  those are the only two places design asked for it, not the global
+   *  header. Optional because /glosario's list view (Glossary.tsx) has no
+   *  such sticky bar to mirror it into. */
+  onButtonVisibleChange?: (visible: boolean) => void;
 }
 
 type DisplayMode = 'tecnico' | 'profesor';
@@ -31,7 +38,7 @@ function loadDisplayMode(): DisplayMode {
   return stored === 'profesor' ? 'profesor' : 'tecnico';
 }
 
-export default function GlossaryEntryContent({ id, highlightCardIndex, highlightNonce }: Props) {
+export default function GlossaryEntryContent({ id, highlightCardIndex, highlightNonce, onButtonVisibleChange }: Props) {
   const [displayMode, setDisplayModeState] = useState<DisplayMode>(loadDisplayMode);
   const entry = displayMode === 'profesor' ? glossarySpokenById[id] : glossaryById[id];
 
@@ -50,11 +57,24 @@ export default function GlossaryEntryContent({ id, highlightCardIndex, highlight
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
   const [openConceptCard, setOpenConceptCard] = useState<number | null>(null);
 
-  // groupRef is state (not a plain ref) so the effect inside
-  // useStickyListenRegister re-runs once the node actually exists -- a plain
-  // ref object stays the same reference across renders and wouldn't retrigger.
-  const [groupEl, setGroupEl] = useState<HTMLDivElement | null>(null);
-  useStickyListenRegister(id, groupEl);
+  // buttonEl is state (not a plain ref) so the observer effect below re-runs
+  // once the node actually exists -- a plain ref object stays the same
+  // reference across renders and wouldn't retrigger it.
+  const [buttonEl, setButtonEl] = useState<HTMLButtonElement | null>(null);
+  useEffect(() => {
+    if (!buttonEl || !onButtonVisibleChange) return;
+    // Shrinks the observed viewport by the fixed header's real height so
+    // "visible" means "actually readable below .quickjump", not just
+    // "somewhere on screen" -- a hardcoded px value would drift at the
+    // 720px breakpoint where the header's padding shrinks.
+    const header = document.querySelector('.quickjump');
+    const headerHeight = header ? header.getBoundingClientRect().height : 0;
+    const observer = new IntersectionObserver(([e]) => onButtonVisibleChange(e.isIntersecting), {
+      rootMargin: `-${headerHeight}px 0px 0px 0px`,
+    });
+    observer.observe(buttonEl);
+    return () => observer.disconnect();
+  }, [buttonEl, onButtonVisibleChange]);
 
   // The read-aloud engine and its player UI live in GlossaryAudioProvider,
   // mounted once above <Routes> -- not here. That's deliberate: this
@@ -117,7 +137,7 @@ export default function GlossaryEntryContent({ id, highlightCardIndex, highlight
   if (!entry) return <p>Entrada de glosario no encontrada ({id}).</p>;
 
   return (
-    <div className="gloss-group" id={entry.id} ref={setGroupEl}>
+    <div className="gloss-group" id={entry.id}>
       <div className="gloss-bullet-row">
         <p
           ref={bulletRef}
@@ -125,6 +145,7 @@ export default function GlossaryEntryContent({ id, highlightCardIndex, highlight
           dangerouslySetInnerHTML={{ __html: bulletTextHtml }}
         />
         <button
+          ref={setButtonEl}
           type="button"
           className={isLoadingAudio ? 'gloss-read-all-btn loading' : 'gloss-read-all-btn'}
           onClick={() => (isReading ? session.stop() : session.playEntry(id))}

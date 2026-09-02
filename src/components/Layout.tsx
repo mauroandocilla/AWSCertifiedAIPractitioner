@@ -1,6 +1,5 @@
 import { Outlet, useLocation, useParams } from 'react-router-dom';
 import QuickJumpBar from './QuickJumpBar.tsx';
-import { StickyListenProvider } from './StickyListen.tsx';
 
 function currentFromPath(pathname: string, domainNumber?: string): string {
   if (pathname.startsWith('/dominio/')) return domainNumber ? `d${domainNumber}` : '';
@@ -26,9 +25,9 @@ export default function Layout() {
   const current = currentFromPath(location.pathname, n);
 
   return (
-    <StickyListenProvider>
+    <>
       <QuickJumpBar current={current} />
       <Outlet />
-    </StickyListenProvider>
+    </>
   );
 }

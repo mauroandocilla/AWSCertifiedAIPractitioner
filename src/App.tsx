@@ -1,4 +1,4 @@
-import { HashRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Landing from './components/Landing.tsx';
 import Layout from './components/Layout.tsx';
 import DomainPage from './components/DomainPage.tsx';
@@ -52,6 +52,11 @@ export default function App() {
               <Route path="/quiz-v2/categorias" element={<QuizV2CategoryGuidePage />} />
               <Route path="/examen" element={<ExamPage />} />
             </Route>
+            {/* Catches stray/old hashes (e.g. a since-fixed in-page anchor
+                link that briefly wrote #chuleta straight to the URL, which
+                HashRouter reads as a route, not a fragment) so they land on
+                the home page instead of rendering nothing. */}
+            <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
           <Footer />
         </div>

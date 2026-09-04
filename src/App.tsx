@@ -12,6 +12,7 @@ import ExamFormatPage from './components/ExamFormatPage.tsx';
 import QuizListPage from './components/QuizListPage.tsx';
 import QuizSessionPage from './components/QuizSessionPage.tsx';
 import QuizV2Page from './components/QuizV2Page.tsx';
+import QuizV2CategoryGuidePage from './components/QuizV2CategoryGuidePage.tsx';
 import ExamPage from './components/ExamPage.tsx';
 import Footer from './components/Footer.tsx';
 import ThemeToggle from './components/ThemeToggle.tsx';
@@ -48,6 +49,7 @@ export default function App() {
               <Route path="/quiz" element={<QuizListPage />} />
               <Route path="/quiz/:setNumber" element={<QuizSessionPage />} />
               <Route path="/quiz-v2" element={<QuizV2Page />} />
+              <Route path="/quiz-v2/categorias" element={<QuizV2CategoryGuidePage />} />
               <Route path="/examen" element={<ExamPage />} />
             </Route>
           </Routes>

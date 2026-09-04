@@ -1968,6 +1968,77 @@
     border-top: 1px solid var(--border);
   }
 
+  /* Quiz v2 category guide (QuizV2CategoryGuidePage.tsx) -- per-category card
+     with a collapsible question list. Reuses .related-question* (above) for
+     each individual question row rather than a second near-identical set of
+     classes. */
+  .category-guide-list { display: flex; flex-direction: column; gap: 0.9rem; margin-top: 1.2rem; }
+  .category-guide-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1rem 1.1rem 1.1rem;
+  }
+  .category-guide-head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0.8rem;
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    text-align: left;
+    color: var(--ink);
+  }
+  .category-guide-head h3 { font-size: 1.02rem; margin: 0; }
+  .category-guide-count {
+    display: inline-block;
+    margin-top: 0.25rem;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.72rem;
+    color: var(--ink-faint);
+  }
+  .category-guide-head svg { flex: none; margin-top: 0.2rem; color: var(--ink-faint); }
+  .category-guide-summary { font-size: 0.88rem; color: var(--ink-soft); margin: 0.6rem 0 0; }
+  .category-guide-pattern {
+    display: flex;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    background: var(--dbg, var(--bg));
+    border-left: 3px solid var(--accent);
+    border-radius: 6px;
+    padding: 0.55rem 0.7rem;
+    margin: 0.7rem 0 0;
+  }
+  .category-guide-pattern strong { color: var(--ink); flex: none; }
+  .category-guide-keywords { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.7rem; }
+  .category-guide-keyword {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--accent);
+    background: var(--dbg, var(--bg));
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 0.15rem 0.55rem;
+  }
+  .category-guide-questions { margin-top: 0.9rem; }
+
+  .category-cheatsheet-title { margin-top: 2.5rem; }
+  .category-cheatsheet-wrap { overflow-x: auto; margin-top: 0.8rem; }
+  .category-cheatsheet { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+  .category-cheatsheet th, .category-cheatsheet td {
+    border: 1px solid var(--border);
+    padding: 0.55rem 0.7rem;
+    text-align: left;
+    vertical-align: top;
+  }
+  .category-cheatsheet th { background: var(--surface); font-family: 'IBM Plex Mono', monospace; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.03em; color: var(--ink-faint); }
+  .category-cheatsheet td:last-child { font-family: 'IBM Plex Mono', monospace; font-size: 0.8rem; color: var(--accent); }
+
   /* Glossary deep-link highlight */
   .gloss-highlight {
     animation: gloss-flash 2.2s ease-out;

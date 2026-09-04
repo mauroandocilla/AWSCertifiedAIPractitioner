@@ -203,6 +203,7 @@ export default function QuizV2Page() {
             <div className="quiz-session-head-right">
               <QuizLangToggle lang={lang} onChange={setLang} />
               <div className="quiz-score-badge">{score.correct}/{score.answered} correctas</div>
+              <Link to="/quiz-v2/categorias" className="quiz-btn">Guía de categorías</Link>
               <button type="button" className="quiz-reset-btn" title="Reiniciar" onClick={restart}>
                 <RefreshCcw size={14} strokeWidth={2.25} />
               </button>

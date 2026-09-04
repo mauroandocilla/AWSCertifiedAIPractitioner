@@ -1553,6 +1553,50 @@
   }
   .exam-timer.low { color: var(--d3); border-color: var(--d3); background: var(--d3-bg); }
 
+  .exam-pause-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--ink-soft);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 0.35rem 0.8rem;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .exam-pause-btn:hover { color: var(--ink); border-color: var(--ink-faint); }
+
+  /* Screen-lock overlay while the exam is paused -- fixed (not absolute) so
+     it covers the full viewport regardless of scroll position, and opaque
+     (not just blurred) so the question/options underneath aren't legible
+     even glanced at while stepping away. */
+  .exam-pause-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg);
+    padding: 1.5rem;
+  }
+  .exam-pause-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.6rem;
+    max-width: 26rem;
+    color: var(--ink-soft);
+  }
+  .exam-pause-card h3 { color: var(--ink); font-size: 1.2rem; margin: 0; }
+  .exam-pause-card p { font-size: 0.9rem; margin: 0; }
+  .exam-pause-card .quiz-btn { margin-top: 0.6rem; }
+
   .quiz-score-badge {
     font-family: 'IBM Plex Mono', monospace;
     font-size: 0.82rem;

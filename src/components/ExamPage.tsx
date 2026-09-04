@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Check, X, Minus } from 'lucide-react';
+import { Check, X, Minus, Pause, Play } from 'lucide-react';
 import QuizLangToggle from './QuizLangToggle.tsx';
 import ConfirmDialog from './ConfirmDialog.tsx';
 import { loadOriginalExamPool } from '../quiz/loadExamPool.ts';
@@ -49,9 +49,13 @@ export default function ExamPage() {
   const [flagged, setFlagged] = useState<Set<string>>(new Set());
   const [secondsLeft, setSecondsLeft] = useState(TIME_LIMIT_SECONDS);
   const [unansweredCount, setUnansweredCount] = useState(0);
+  // Screen-lock pause: freezes the countdown and covers the question/options
+  // with an opaque overlay so stepping away doesn't leave the exam content
+  // (or the answer you're mid-picking) visible on screen.
+  const [paused, setPaused] = useState(false);
 
   useEffect(() => {
-    if (phase !== 'active') return;
+    if (phase !== 'active' || paused) return;
     const interval = setInterval(() => {
       setSecondsLeft((s) => {
         if (s <= 1) {
@@ -62,7 +66,7 @@ export default function ExamPage() {
       });
     }, 1000);
     return () => clearInterval(interval);
-  }, [phase]);
+  }, [phase, paused]);
 
   async function startExam() {
     setLoading(true);
@@ -72,6 +76,7 @@ export default function ExamPage() {
     setFlagged(new Set());
     setIndex(0);
     setSecondsLeft(TIME_LIMIT_SECONDS);
+    setPaused(false);
     setLoading(false);
     setPhase('active');
   }
@@ -181,6 +186,9 @@ export default function ExamPage() {
               <div className="quiz-session-head-right">
                 <div className={secondsLeft <= 300 ? 'exam-timer low' : 'exam-timer'}>{formatTime(secondsLeft)}</div>
                 <div className="quiz-score-badge">{answeredCount}/{examQuestions.length} respondidas</div>
+                <button type="button" className="exam-pause-btn" onClick={() => setPaused(true)}>
+                  <Pause size={14} strokeWidth={2.5} /> Pausar
+                </button>
               </div>
             </div>
           </div>
@@ -276,6 +284,18 @@ export default function ExamPage() {
           </div>
         </div>
       </section>
+      {paused && (
+        <div className="exam-pause-overlay">
+          <div className="exam-pause-card">
+            <Pause size={28} strokeWidth={2} />
+            <h3>Examen en pausa</h3>
+            <p>El cronómetro está detenido en {formatTime(secondsLeft)}. Las preguntas quedan ocultas hasta que reanudes.</p>
+            <button type="button" className="quiz-btn accent" onClick={() => setPaused(false)}>
+              <Play size={14} strokeWidth={0} fill="currentColor" /> Reanudar
+            </button>
+          </div>
+        </div>
+      )}
       <ConfirmDialog
         open={unansweredCount > 0}
         message={`Te quedan ${unansweredCount} preguntas sin responder. ¿Terminar igual?`}

@@ -23,6 +23,15 @@ function toggleInSet(set: Set<string>, id: string): Set<string> {
   return next;
 }
 
+// A real `<a href="#chuleta">` would break here: this app uses HashRouter,
+// which treats the entire URL hash as the route path -- clicking it would
+// navigate to a nonexistent "/chuleta" route instead of scrolling to the
+// table on this same page, landing on a blank page (see the linked
+// #/quiz-v2/categorias#chuleta bug report). A plain scroll, no URL change.
+function scrollToCheatsheet() {
+  document.getElementById('chuleta')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
 const totalQuestions = categoryGuide.reduce((sum, cat) => sum + cat.questionIds.length, 0);
 
 export default function QuizV2CategoryGuidePage() {
@@ -72,7 +81,8 @@ export default function QuizV2CategoryGuidePage() {
         Las {totalQuestions} preguntas del banco de Quiz v2 (TutorialsDojo), agrupadas por el concepto real que
         evalúan -- en vez de memorizar cada pregunta suelta, el objetivo es reconocer el patrón de la categoría en
         el enunciado. Cada categoría trae un &ldquo;truco&rdquo; con la frase típica que la delata, y las palabras
-        clave de cada una están juntas al final en la <a href="#chuleta">chuleta rápida ↓</a>.
+        clave de cada una están juntas al final en la{' '}
+        <button type="button" className="inline-link-btn" onClick={scrollToCheatsheet}>chuleta rápida ↓</button>.
       </p>
 
       {loadError && <p className="scope-note">No se pudo cargar el banco de preguntas.</p>}

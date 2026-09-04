@@ -23,6 +23,46 @@ function toggleInSet(set: Set<string>, id: string): Set<string> {
   return next;
 }
 
+function renderQuestionDetail(q: QuizV2Question) {
+  return (
+    <>
+      <div className="quiz-question">
+        {q.text.split('\n\n').map((para, pi) => (
+          <p key={pi}>{para}</p>
+        ))}
+      </div>
+      {q.type === 'matching' ? (
+        <div className="quiz-matching-list">
+          {q.prompts.map((p, pi) => (
+            <div key={pi} className="quiz-matching-block">
+              <p className="quiz-matching-prompt">{p.text}</p>
+              <div className="quiz-matching-chips">
+                {q.optionPool.map((opt, oi) => (
+                  <span key={oi} className={oi === p.correctIndex ? 'quiz-matching-chip correct' : 'quiz-matching-chip'}>
+                    {opt}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      ) : (
+        <div className="quiz-options">
+          {q.options.map((opt, oi) => (
+            <div key={oi} className={opt.correct ? 'quiz-option correct' : 'quiz-option'}>
+              <span className="quiz-option-letter">{String.fromCharCode(65 + oi)}</span>
+              <span>{opt.text}</span>
+            </div>
+          ))}
+        </div>
+      )}
+      <div className="quiz-explanation correct">
+        <div dangerouslySetInnerHTML={{ __html: withBasePath(q.explanationHtml) }} />
+      </div>
+    </>
+  );
+}
+
 // A real `<a href="#chuleta">` would break here: this app uses HashRouter,
 // which treats the entire URL hash as the route path -- clicking it would
 // navigate to a nonexistent "/chuleta" route instead of scrolling to the
@@ -39,7 +79,11 @@ export default function QuizV2CategoryGuidePage() {
   const [rawQuestions, setRawQuestions] = useState<QuizV2QuestionData[] | null>(null);
   const [loadError, setLoadError] = useState(false);
   const [openCategories, setOpenCategories] = useState<Set<string>>(new Set());
-  const [openQuestions, setOpenQuestions] = useState<Set<string>>(new Set());
+  // Menu + detail, not a stack of accordions: at most one question shown per
+  // category at a time, so opening another one always replaces it instead of
+  // piling up. Keyed by category id -- falls back to that category's first
+  // question until the reader picks one.
+  const [selectedQuestion, setSelectedQuestion] = useState<Record<string, string>>({});
 
   useEffect(() => {
     let cancelled = false;
@@ -120,67 +164,39 @@ export default function QuizV2CategoryGuidePage() {
               </div>
 
               {isOpen && (
-                <div className="category-guide-questions">
-                  {questionById === null
-                    ? <p className="related-questions-loading">Cargando…</p>
-                    : cat.questionIds.map((qid, i) => {
-                        const q = questionById.get(qid);
-                        if (!q) return null;
-                        const qOpen = openQuestions.has(qid);
-                        return (
-                          <div key={qid} className="related-question">
+                <div className="category-guide-split">
+                  {questionById === null ? (
+                    <p className="related-questions-loading">Cargando…</p>
+                  ) : (
+                    <>
+                      <div className="category-guide-menu">
+                        {cat.questionIds.map((qid, i) => {
+                          const q = questionById.get(qid);
+                          const activeId = selectedQuestion[cat.id] ?? cat.questionIds[0];
+                          const isActive = qid === activeId;
+                          return (
                             <button
+                              key={qid}
                               type="button"
-                              className="related-question-head"
-                              onClick={() => setOpenQuestions((prev) => toggleInSet(prev, qid))}
-                              aria-expanded={qOpen}
+                              className={isActive ? 'category-guide-menu-item active' : 'category-guide-menu-item'}
+                              onClick={() => setSelectedQuestion((prev) => ({ ...prev, [cat.id]: qid }))}
+                              aria-current={isActive}
                             >
-                              <div className="related-question-meta">
-                                <span className="related-question-index">{i + 1}</span>
-                                {qOpen ? <ChevronUp size={16} strokeWidth={2.25} /> : <ChevronDown size={16} strokeWidth={2.25} />}
-                              </div>
-                              <span className="related-question-summary">{summarize(q.text)}</span>
+                              <span className="category-guide-menu-index">{i + 1}</span>
+                              <span className="category-guide-menu-summary">{q ? summarize(q.text) : '…'}</span>
                             </button>
-                            {qOpen && (
-                              <div className="related-question-body">
-                                <div className="quiz-question">
-                                  {q.text.split('\n\n').map((para, pi) => (
-                                    <p key={pi}>{para}</p>
-                                  ))}
-                                </div>
-                                {q.type === 'matching' ? (
-                                  <div className="quiz-matching-list">
-                                    {q.prompts.map((p, pi) => (
-                                      <div key={pi} className="quiz-matching-block">
-                                        <p className="quiz-matching-prompt">{p.text}</p>
-                                        <div className="quiz-matching-chips">
-                                          {q.optionPool.map((opt, oi) => (
-                                            <span key={oi} className={oi === p.correctIndex ? 'quiz-matching-chip correct' : 'quiz-matching-chip'}>
-                                              {opt}
-                                            </span>
-                                          ))}
-                                        </div>
-                                      </div>
-                                    ))}
-                                  </div>
-                                ) : (
-                                  <div className="quiz-options">
-                                    {q.options.map((opt, oi) => (
-                                      <div key={oi} className={opt.correct ? 'quiz-option correct' : 'quiz-option'}>
-                                        <span className="quiz-option-letter">{String.fromCharCode(65 + oi)}</span>
-                                        <span>{opt.text}</span>
-                                      </div>
-                                    ))}
-                                  </div>
-                                )}
-                                <div className="quiz-explanation correct">
-                                  <div dangerouslySetInnerHTML={{ __html: withBasePath(q.explanationHtml) }} />
-                                </div>
-                              </div>
-                            )}
-                          </div>
-                        );
-                      })}
+                          );
+                        })}
+                      </div>
+                      <div className="category-guide-detail">
+                        {(() => {
+                          const activeId = selectedQuestion[cat.id] ?? cat.questionIds[0];
+                          const activeQuestion = questionById.get(activeId);
+                          return activeQuestion ? renderQuestionDetail(activeQuestion) : <p>Pregunta no encontrada.</p>;
+                        })()}
+                      </div>
+                    </>
+                  )}
                 </div>
               )}
             </div>

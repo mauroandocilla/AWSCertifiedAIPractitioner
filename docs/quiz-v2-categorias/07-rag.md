@@ -25,6 +25,13 @@ Palabras como "evoluciona / cambia con el tiempo", "sin reentrenar", "bajo costo
 - ✅ **C.** RAG (Retrieval Augmented Generation)
 - · **D.** Knowledge Graph Integration
 
+**Por qué:** Retrieval Augmented Generation (RAG) mejora las respuestas del LLM haciendo referencia a fuentes de datos externas como la base de conocimiento de una empresa.
+
+**Por qué no las demás:**
+- **A.** Puede funcionar, pero exige reentrenar el modelo con datos del producto: más lento y más esfuerzo que RAG.
+- **B.** Active Learning es una técnica útil para mejorar de forma iterativa el rendimiento de modelos de machine learning, incluyendo sistemas de IA conversacional.
+- **D.** Integrar grafos de conocimiento con LLMs puede ser un enfoque poderoso, pero requiere principalmente un esfuerzo significativo en la construcción del grafo de conocimiento.
+
 ### 2. Un equipo de soporte en un negocio de comercio electrónico global busca desplegar un chatbot impulsado por un Modelo de Lenguaje Grande (LLM) para entregar respuestas reales, relevantes y en tiempo real a las preguntas de los clientes.
 
 El chatbot aprovechará documentos de políticas internas, indexados por Amazon Kendra, como base de conocimiento para garantizar que las respuestas sean precisas y se alineen con las directrices.
@@ -36,6 +43,13 @@ El chatbot aprovechará documentos de políticas internas, indexados por Amazon 
 - · **C.** Reentrenar el LLM usando los documentos de políticas para ajustar su comprensión.
 - · **D.** Activar la función de sugerencia de consultas de Amazon Kendra para ayudar a refinar los resultados de búsqueda del chatbot.
 
+**Por qué:** Esta integración garantiza que la información recuperada por RAG sea tanto relevante como precisa, proporcionando respuestas confiables a consultas de usuarios.
+
+**Por qué no las demás:**
+- **A.** Amazon Lex se utiliza principalmente para construir interfaces conversacionales, como chatbots.
+- **C.** Reentrenarlo con datos específicos, como documentos de políticas, requeriría recursos computacionales significativos y tiempo.
+- **D.** La función de sugerencia de consultas de Kendra simplemente se usa para sugerir posibles términos de búsqueda basados en la entrada del usuario.
+
 ### 3. Una empresa ha implementado una solución basada en IA para responder consultas dinámicas relacionadas con sus productos y servicios. Estas consultas evolucionan con el tiempo, y la solución debe adaptarse rápidamente a nueva información. La empresa requiere un sistema eficiente y escalable que proporcione respuestas precisas en tiempo real, minimizando costos operativos.
 
 ¿Cuál de las siguientes opciones satisface mejor los requisitos especificados?
@@ -44,6 +58,13 @@ El chatbot aprovechará documentos de políticas internas, indexados por Amazon 
 - · **B.** Almacenar datos de contexto en una knowledge base y actualizarla periódicamente a medida que nueva información esté disponible.
 - · **C.** Reentrenar continuamente el modelo de IA con nuevos datos para garantizar que el modelo siga siendo relevante y preciso.
 - ✅ **D.** Recuperar datos relevantes usando Retrieval Augmented Generation (RAG) y aplicar técnicas de prompt engineering.
+
+**Por qué:** RAG recupera información actualizada en el momento de la consulta sin necesidad de reentrenar el modelo.
+
+**Por qué no las demás:**
+- **A.** Las actualizaciones por lotes introducen retraso y no dan la agilidad de una respuesta en tiempo real.
+- **B.** Mantener la knowledge base al día no basta sin recuperación dinámica integrada al modelo generativo.
+- **C.** Reentrenar continuamente es costoso, lento y no escala para consultas en tiempo real.
 
 ---
 

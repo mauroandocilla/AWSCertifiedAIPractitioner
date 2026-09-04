@@ -2038,6 +2038,16 @@
     border-radius: 999px;
     padding: 0.15rem 0.55rem;
   }
+  .category-guide-md-links { display: flex; gap: 1rem; margin-top: 0.6rem; }
+  .category-guide-md-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.76rem;
+    color: var(--ink-faint);
+    text-decoration: none;
+  }
+  .category-guide-md-links a:hover { color: var(--accent); }
   /* Menu + detail (not a stack of accordions): the question list acts as a
      left-hand menu, the selected question's full text/options/explanation
      render once on the right -- picking another question replaces it

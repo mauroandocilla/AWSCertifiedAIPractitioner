@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronDown, ChevronUp } from 'lucide-react';
+import { ChevronDown, ChevronUp, FileDown, ExternalLink } from 'lucide-react';
 import { loadQuizV2Questions } from '../quiz-v2/loadQuestions.ts';
 import { resolveQuizV2Question } from '../quiz-v2/resolveLang.ts';
 import { withBasePath } from '../quiz-v2/withBasePath.ts';
@@ -74,6 +74,17 @@ function scrollToCheatsheet() {
 
 const totalQuestions = categoryGuide.reduce((sum, cat) => sum + cat.questionIds.length, 0);
 
+// The same 13 files (plus a README index) committed under
+// docs/quiz-v2-categorias/ are also copied into public/quiz-v2-guia/ so they
+// deploy as plain static files -- lets a reader view or download the raw
+// Markdown straight from this page instead of only reading it rendered here.
+// Filename order/numbering must match scripts/gen-category-md.mjs's
+// `${index+1}-${cat.id}.md` scheme (the array's own order, 1-indexed).
+const MD_GUIDE_BASE = `${import.meta.env.BASE_URL}quiz-v2-guia/`;
+function categoryMdFile(index: number, catId: string): string {
+  return `${MD_GUIDE_BASE}${String(index + 1).padStart(2, '0')}-${catId}.md`;
+}
+
 export default function QuizV2CategoryGuidePage() {
   const [lang, setLang] = useQuizLang();
   const [rawQuestions, setRawQuestions] = useState<QuizV2QuestionData[] | null>(null);
@@ -128,12 +139,17 @@ export default function QuizV2CategoryGuidePage() {
         clave de cada una están juntas al final en la{' '}
         <button type="button" className="inline-link-btn" onClick={scrollToCheatsheet}>chuleta rápida ↓</button>.
       </p>
+      <p className="scope-note">
+        Cada categoría también está disponible como archivo Markdown (para leer o descargar aparte) --{' '}
+        <a href={`${MD_GUIDE_BASE}README.md`} target="_blank" rel="noopener noreferrer">ver el índice completo</a>.
+      </p>
 
       {loadError && <p className="scope-note">No se pudo cargar el banco de preguntas.</p>}
 
       <div className="category-guide-list">
-        {categoryGuide.map((cat) => {
+        {categoryGuide.map((cat, catIndex) => {
           const isOpen = openCategories.has(cat.id);
+          const mdFile = categoryMdFile(catIndex, cat.id);
           return (
             <div key={cat.id} className="category-guide-card">
               <button
@@ -161,6 +177,15 @@ export default function QuizV2CategoryGuidePage() {
                 {cat.keywords.map((kw) => (
                   <span key={kw} className="category-guide-keyword">{kw}</span>
                 ))}
+              </div>
+
+              <div className="category-guide-md-links">
+                <a href={mdFile} target="_blank" rel="noopener noreferrer">
+                  <ExternalLink size={13} strokeWidth={2.25} /> Ver .md
+                </a>
+                <a href={mdFile} download>
+                  <FileDown size={13} strokeWidth={2.25} /> Descargar
+                </a>
               </div>
 
               {isOpen && (
